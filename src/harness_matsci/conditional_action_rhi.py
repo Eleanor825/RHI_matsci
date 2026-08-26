@@ -132,25 +132,34 @@ def _split_trajectories(records: list[ActionRecord], seed: int) -> dict[str, lis
     groups: dict[str, list[ActionRecord]] = defaultdict(list)
     for record in records:
         groups[str(record.metadata["trajectory_id"])].append(record)
-    ids = list(groups)
-    random.Random(seed).shuffle(ids)
-    n = len(ids)
-    boundaries = (max(1, int(n * 0.60)), max(2, int(n * 0.75)), max(3, int(n * 0.85)))
-    if boundaries[-1] >= n:
-        boundaries = (max(1, n - 3), max(2, n - 2), max(3, n - 1))
     names = ("train", "feedback", "acceptance", "test")
     output = {name: [] for name in names}
-    for index, trajectory_id in enumerate(ids):
-        bucket = 0 if index < boundaries[0] else 1 if index < boundaries[1] else 2 if index < boundaries[2] else 3
-        output[names[bucket]].extend(groups[trajectory_id])
+    by_task: dict[str, list[str]] = defaultdict(list)
+    for trajectory_id, rows in groups.items():
+        by_task[str(rows[0].metadata["task"])].append(trajectory_id)
+    rng = random.Random(seed)
+    for task, task_ids in sorted(by_task.items()):
+        rng.shuffle(task_ids)
+        n = len(task_ids)
+        if n < 4:
+            raise ValueError(f"task {task} needs at least four trajectories")
+        n_train = max(1, int(round(n * 0.60)))
+        n_feedback = max(1, int(round(n * 0.15)))
+        n_acceptance = max(1, int(round(n * 0.10)))
+        if n_train + n_feedback + n_acceptance >= n:
+            n_train, n_feedback, n_acceptance = n - 3, 1, 1
+        boundaries = (n_train, n_train + n_feedback, n_train + n_feedback + n_acceptance)
+        for index, trajectory_id in enumerate(task_ids):
+            bucket = 0 if index < boundaries[0] else 1 if index < boundaries[1] else 2 if index < boundaries[2] else 3
+            output[names[bucket]].extend(groups[trajectory_id])
     if any(not output[name] for name in names):
         raise ValueError(f"trajectory split is too small: { {name: len(rows) for name, rows in output.items()} }")
     return output
 
 
 def feature_policy(task: str, stage: str, active_signals: set[str]) -> list[str]:
-    selected = set(active_signals)
-    selected.update(TASK_SIGNAL_PRIORS.get(task, ()))
+    selected = {name for name in active_signals if "::" not in name}
+    selected.update(name.split("::", 1)[1] for name in active_signals if name.startswith(f"{task}::"))
     if stage == "proposal":
         selected -= {"tool_agreement"}
     if stage == "verification":
@@ -171,8 +180,9 @@ def add_policy_features(records: list[ActionRecord], active_signals: set[str]) -
         task = str(record.metadata["task"])
         stage = str(record.metadata["stage"])
         features = dict(record.features)
-        selected = feature_policy(task, stage, active_signals)
-        for name in active_signals | set(BASE_SIGNALS) | set(TASK_SIGNAL_PRIORS.get(task, ())):
+        task_specific = {name.split("::", 1)[1] for name in active_signals if name.startswith(f"{task}::")}
+        global_signals = {name for name in active_signals if "::" not in name}
+        for name in global_signals | task_specific:
             value = _scalar(features.get(name))
             features[f"{name}__task__{task}"] = value
             features[f"{name}__stage__{stage}"] = value
@@ -217,12 +227,12 @@ def _stable_failure_patterns(records: list[ActionRecord], probabilities: list[fl
         group_error = sum(residuals[i] for i in indices) / len(indices)
         if group_error < global_error + 0.02:
             continue
-        effects = {}
-        for signal in ALL_CANDIDATE_SIGNALS:
+        candidate_signals = []
+        for signal in TASK_SIGNAL_PRIORS.get(task, ()):
             values = [records[i].features.get(signal, 0.0) for i in indices]
-            if values:
-                effects[signal] = abs(sum(records[i].features.get(signal, 0.0) * residuals[i] for i in indices) / len(indices) - sum(values) / len(values) * group_error)
-        patterns.append({"task": task, "stage": stage, "n": len(indices), "mean_abs_error": group_error, "global_mean_abs_error": global_error, "threshold": threshold, "effects": effects})
+            if signal not in {"cost", "reversibility", "verbal_confidence"} and values and max(values) - min(values) > 1e-6:
+                candidate_signals.append(f"{task}::{signal}")
+        patterns.append({"task": task, "stage": stage, "n": len(indices), "mean_abs_error": group_error, "global_mean_abs_error": global_error, "threshold": threshold, "candidate_signals": candidate_signals})
     return patterns
 
 
@@ -234,35 +244,51 @@ def _score(report: dict[str, Any]) -> float:
 
 def run_conditional_action_rhi(records: list[ActionRecord], *, iterations: int = 3, seed: int = 1729, alpha: float = 0.10, budget_fraction: float = 0.10, epochs: int = 120) -> dict[str, Any]:
     splits = _split_trajectories(records, seed)
-    active_signals = {"evidence_support", "verbal_confidence", "cost", "reversibility"}
+    active_signals = {"verbal_confidence", "cost", "reversibility"}
     versions = []
     patterns_by_round = []
-    current = None
+    accepted_rounds = [0]
+    mutations: list[dict[str, Any]] = []
+    final_gate = None
     for round_index in range(iterations + 1):
         prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
         names = _feature_names(prepared["train"] + prepared["feedback"], active_signals)
         gate = train_gate_with_features(prepared["train"], prepared["feedback"], feature_names=names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
         acceptance = _report(prepared["acceptance"], gate, budget_fraction)
-        test = _report(prepared["test"], gate, budget_fraction)
         feedback_probabilities = _predict(prepared["feedback"], gate)
         patterns = _stable_failure_patterns(prepared["feedback"], feedback_probabilities, gate.threshold) if round_index < iterations else []
-        versions.append({"round": round_index, "active_signals": sorted(active_signals), "feature_count": len(names), "acceptance": acceptance, "test": test, "score": _score(test)})
+        versions.append({"round": round_index, "active_signals": sorted(active_signals), "feature_count": len(names), "acceptance": acceptance, "patterns": patterns})
+        final_gate = gate
         patterns_by_round.append(patterns)
         if not patterns:
+            mutations.append({"round": round_index + 1, "candidate_signals": [], "accepted": False, "reason": "no_stable_pattern"})
             continue
         candidate = set(active_signals)
         for pattern in patterns:
-            ranked = sorted(pattern["effects"].items(), key=lambda item: item[1], reverse=True)
-            candidate.update(name for name, effect in ranked[:2] if effect >= 0.03)
+            candidate.update(name for name in pattern["candidate_signals"] if name not in active_signals)
+        if candidate == active_signals:
+            mutations.append({"round": round_index + 1, "candidate_signals": [], "accepted": False, "reason": "no_new_observed_signal"})
+            continue
         candidate_prepared = {name: add_policy_features(rows, candidate) for name, rows in splits.items()}
         candidate_names = _feature_names(candidate_prepared["train"] + candidate_prepared["feedback"], candidate)
         candidate_gate = train_gate_with_features(candidate_prepared["train"], candidate_prepared["feedback"], feature_names=candidate_names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
         candidate_acceptance = _report(candidate_prepared["acceptance"], candidate_gate, budget_fraction)
-        if _score(candidate_acceptance) >= _score(acceptance) and candidate_acceptance["metrics"]["selective_risk"] <= alpha + 0.05:
+        accepted = _score(candidate_acceptance) >= _score(acceptance) and candidate_acceptance["metrics"]["selective_risk"] <= alpha + 0.05
+        mutations.append({"round": round_index + 1, "candidate_signals": sorted(candidate - active_signals), "accepted": accepted, "predecessor_score": _score(acceptance), "candidate_score": _score(candidate_acceptance), "predecessor_risk": acceptance["metrics"]["selective_risk"], "candidate_risk": candidate_acceptance["metrics"]["selective_risk"]})
+        if accepted:
             active_signals = candidate
-        else:
-            break
-    return {"method": "Conditional Action-Worthiness RHI", "single_agent": True, "split_sizes": {name: len(rows) for name, rows in splits.items()}, "iterations": iterations, "budget_fraction": budget_fraction, "alpha": alpha, "versions": versions, "stable_failure_patterns": patterns_by_round, "final_signals": sorted(active_signals)}
+            accepted_rounds.append(round_index + 1)
+    final_prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
+    final_names = _feature_names(final_prepared["train"] + final_prepared["feedback"], active_signals)
+    final_gate = train_gate_with_features(final_prepared["train"], final_prepared["feedback"], feature_names=final_names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
+    final_test = _report(final_prepared["test"], final_gate, budget_fraction)
+    for version in versions:
+        version["accepted"] = version["round"] in accepted_rounds
+    by_task = {}
+    for task in sorted({str(row.metadata["task"]) for row in final_prepared["test"]}):
+        task_rows = [row for row in final_prepared["test"] if str(row.metadata["task"]) == task]
+        by_task[task] = _report(task_rows, final_gate, budget_fraction)
+    return {"method": "Conditional Action-Worthiness RHI", "single_agent": True, "split_sizes": {name: len(rows) for name, rows in splits.items()}, "iterations": iterations, "budget_fraction": budget_fraction, "alpha": alpha, "versions": versions, "stable_failure_patterns": patterns_by_round, "mutations": mutations, "accepted_rounds": accepted_rounds, "final_test": final_test, "final_test_by_task": by_task, "final_signals": sorted(active_signals)}
 
 
 def run_experiment(input_path: str | Path, out_dir: str | Path, *, seed: int = 1729, iterations: int = 3, epochs: int = 120) -> dict[str, Any]:
@@ -271,12 +297,86 @@ def run_experiment(input_path: str | Path, out_dir: str | Path, *, seed: int = 1
     destination = Path(out_dir)
     destination.mkdir(parents=True, exist_ok=True)
     (destination / "summary.json").write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    lines = ["# Conditional Action-Worthiness RHI", "", f"- Single agent action units: {result['single_agent']}", f"- Split sizes: {result['split_sizes']}", f"- Final active signals: {', '.join(result['final_signals'])}", "- Test is evaluated only after acceptance; benchmark labels are offline proxies.", "", "| Round | Features | Acceptance score | Test score | Test risk | Test coverage |", "|---:|---:|---:|---:|---:|---:|"]
+    final_metrics = result["final_test"]["metrics"]
+    lines = ["# Conditional Action-Worthiness RHI", "", f"- Single agent action units: {result['single_agent']}", f"- Split sizes: {result['split_sizes']}", f"- Accepted rounds: {result['accepted_rounds']}", f"- Final active signals: {', '.join(result['final_signals'])}", "- Test is evaluated only after acceptance; benchmark labels are offline proxies.", "", "| Round | Features | Acceptance score | Accepted |", "|---:|---:|---:|:---:|"]
     for version in result["versions"]:
-        metrics = version["test"]["metrics"]
-        lines.append(f"| {version['round']} | {version['feature_count']} | {_score(version['acceptance']):.4f} | {version['score']:.4f} | {metrics['selective_risk']:.4f} | {metrics['coverage']:.4f} |")
+        lines.append(f"| {version['round']} | {version['feature_count']} | {_score(version['acceptance']):.4f} | {version['accepted']} |")
+    lines += ["", "## Mutations", "", "| Round | Added signals | Accepted |", "|---:|---|:---:|"]
+    for mutation in result["mutations"]:
+        lines.append(f"| {mutation['round']} | {', '.join(mutation['candidate_signals']) or '-'} | {mutation['accepted']} |")
+    lines += ["", f"Final test: risk={final_metrics['selective_risk']:.4f}, coverage={final_metrics['coverage']:.4f}, ECE={final_metrics['ece']:.4f}, Brier={final_metrics['brier']:.4f}.", "", "## Per-task test", "", "| Task | Risk | Coverage | ECE |", "|---|---:|---:|---:|"]
+    for task, report in result["final_test_by_task"].items():
+        metrics = report["metrics"]
+        lines.append(f"| {task} | {metrics['selective_risk']:.4f} | {metrics['coverage']:.4f} | {metrics['ece']:.4f} |")
     (destination / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return result
+
+
+def run_seed_suite(input_path: str | Path, out_dir: str | Path, *, seeds: list[int], iterations: int = 3, epochs: int = 80) -> dict[str, Any]:
+    records = load_action_records(input_path)
+    rows = []
+    for seed in seeds:
+        result = run_conditional_action_rhi(records, seed=seed, iterations=iterations, epochs=epochs)
+        splits = _split_trajectories(records, seed)
+        static_signals = set(ALL_CANDIDATE_SIGNALS)
+        static_prepared = {name: add_policy_features(value, static_signals) for name, value in splits.items()}
+        static_names = _feature_names(static_prepared["train"] + static_prepared["feedback"], static_signals)
+        static_gate = train_gate_with_features(
+            static_prepared["train"],
+            static_prepared["feedback"],
+            feature_names=static_names,
+            alpha=0.10,
+            epochs=epochs,
+            learning_rate=0.08,
+            l2=0.01,
+            min_coverage=0.10,
+        )
+        static_test = _report(static_prepared["test"], static_gate, 0.10)
+        rows.append({
+            "seed": seed,
+            "accepted_rounds": result["accepted_rounds"],
+            "final_signals": result["final_signals"],
+            "final_test": result["final_test"],
+            "final_test_by_task": result["final_test_by_task"],
+            "mutations": result["mutations"],
+            "static_full_test": static_test,
+        })
+    def mean(path: str) -> float:
+        return sum(float(row["final_test"]["metrics"][path]) for row in rows) / len(rows)
+    summary = {
+        "method": "Conditional Action-Worthiness RHI",
+        "seeds": seeds,
+        "n_seeds": len(seeds),
+        "rows": rows,
+        "aggregate": {
+            "risk_mean": mean("selective_risk"),
+            "risk_std": math.sqrt(sum((float(row["final_test"]["metrics"]["selective_risk"]) - mean("selective_risk")) ** 2 for row in rows) / len(rows)),
+            "coverage_mean": mean("coverage"),
+            "ece_mean": mean("ece"),
+            "brier_mean": mean("brier"),
+            "accepted_mutation_rate": sum(len(row["accepted_rounds"]) > 1 for row in rows) / len(rows),
+            "static_full_risk_mean": sum(float(row["static_full_test"]["metrics"]["selective_risk"]) for row in rows) / len(rows),
+            "static_full_coverage_mean": sum(float(row["static_full_test"]["metrics"]["coverage"]) for row in rows) / len(rows),
+            "static_full_ece_mean": sum(float(row["static_full_test"]["metrics"]["ece"]) for row in rows) / len(rows),
+        },
+    }
+    destination = Path(out_dir)
+    destination.mkdir(parents=True, exist_ok=True)
+    (destination / "seed_suite.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    lines = [
+        "# Conditional Action-Worthiness RHI: five-seed suite",
+        "",
+        "All methods use the same task-stratified trajectory split and 10% action budget.",
+        "",
+        "| Method | Risk | Coverage | ECE | Brier | Accepted mutation rate |",
+        "|---|---:|---:|---:|---:|---:|",
+        f"| Conditional RHI | {summary['aggregate']['risk_mean']:.4f} | {summary['aggregate']['coverage_mean']:.4f} | {summary['aggregate']['ece_mean']:.4f} | {summary['aggregate']['brier_mean']:.4f} | {summary['aggregate']['accepted_mutation_rate']:.2f} |",
+        f"| Static full | {summary['aggregate']['static_full_risk_mean']:.4f} | {summary['aggregate']['static_full_coverage_mean']:.4f} | {summary['aggregate']['static_full_ece_mean']:.4f} | - | - |",
+        "",
+        "The conditional RHI mutation rate is reported rather than assuming that every proposed mutation is beneficial.",
+    ]
+    (destination / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return summary
 
 
 def main() -> None:
@@ -286,9 +386,15 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=1729)
     parser.add_argument("--iterations", type=int, default=3)
     parser.add_argument("--epochs", type=int, default=120)
+    parser.add_argument("--seeds", default="", help="comma-separated seeds for a multi-seed suite")
     args = parser.parse_args()
-    result = run_experiment(args.actions, args.out_dir, seed=args.seed, iterations=args.iterations, epochs=args.epochs)
-    print(json.dumps({"split_sizes": result["split_sizes"], "final_signals": result["final_signals"], "versions": result["versions"]}, ensure_ascii=False))
+    if args.seeds:
+        seeds = [int(value) for value in args.seeds.split(",") if value.strip()]
+        result = run_seed_suite(args.actions, args.out_dir, seeds=seeds, iterations=args.iterations, epochs=min(args.epochs, 80))
+        print(json.dumps({"seeds": result["seeds"], "aggregate": result["aggregate"]}, ensure_ascii=False))
+    else:
+        result = run_experiment(args.actions, args.out_dir, seed=args.seed, iterations=args.iterations, epochs=args.epochs)
+        print(json.dumps({"split_sizes": result["split_sizes"], "final_signals": result["final_signals"], "versions": result["versions"]}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

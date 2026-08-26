@@ -21,8 +21,17 @@ active harness unchanged.
 ```bash
 PYTHONPATH=src python3 -m harness_matsci.conditional_action_rhi \
   --actions benchmarks/materials_action_trajectories_v1/actions.jsonl.gz \
-  --out-dir runs/conditional_action_rhi_v1 \
+  --out-dir runs/conditional_action_rhi_v6_seed_suite \
   --iterations 3 --epochs 120
+
+For the confirmatory five-seed run:
+
+```bash
+PYTHONPATH=src python3 -m harness_matsci.conditional_action_rhi \
+  --actions benchmarks/materials_action_trajectories_v1/actions.jsonl.gz \
+  --out-dir runs/conditional_action_rhi_v6_seed_suite \
+  --iterations 3 --epochs 60 --seeds 1,7,13,21,42
+```
 ```
 
 The benchmark contains 20,987 reconstructed action records from three task
@@ -33,20 +42,25 @@ acceptance, and test partitions.
 
 ## Current run
 
-The first full run uses seed 1729, a 60/15/10/15 trajectory split, three RHI
-rounds, a 10% action budget, and target selective risk 0.10. It produced:
+The confirmatory run uses five seeds (`1, 7, 13, 21, 42`), a task-stratified
+trajectory split, three RHI rounds, a 10% action budget, and target selective
+risk 0.10. It compares the conditional RHI against a static-full signal
+baseline using the same split for every seed.
 
-- train: 14,349 actions from 27 trajectories;
-- feedback: 2,504 actions from 6 trajectories;
-- acceptance: 860 actions from 5 trajectories;
-- test: 3,274 actions from 7 trajectories;
-- initial active signals: evidence support, verbal confidence, cost, and reversibility;
-- the candidate mutation did not pass acceptance, so the active harness remained H0;
-- test coverage: 0.0412;
-- test selective risk: 0.4296;
-- test ECE: 0.0244;
-- fixed-budget hit rate: 0.6483.
+| Method | Selective risk | Coverage | ECE | Brier | Accepted mutation rate |
+|---|---:|---:|---:|---:|---:|
+| Conditional Action-Worthiness RHI | 0.3452 ± 0.0202 | 0.1285 | 0.0759 | 0.1745 | 0.00 |
+| Static-full signal baseline | 0.1946 | 0.1285 | 0.0786 | not reported | not applicable |
 
-The high held-out risk relative to the nominal 0.10 target is a distribution
-shift warning, not a positive risk-guarantee result. It motivates regime-wise
-calibration and more independent runtime trajectories before a paper claim.
+The RHI loop generated a task-stage candidate (`materials_pairwise_preference`
+verification → `evidence_support`) but rejected it on the held-out acceptance
+set in all five seeds. This is a valid safety outcome, but it means this run
+does not demonstrate a positive self-improvement gain. The conditional H0 is
+also weaker than the static-full baseline, so the current benchmark is not
+evidence for an ICLR-level performance claim yet.
+
+The high risk and low effective coverage indicate that the historical
+benchmark-derived signals and trajectory split are not sufficient to support a
+strong runtime risk guarantee. The next required experiment is to add real
+task-stage trajectory variation and a policy that learns evidence value, then
+retest the same frozen acceptance protocol.

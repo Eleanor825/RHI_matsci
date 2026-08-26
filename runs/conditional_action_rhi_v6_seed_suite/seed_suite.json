@@ -1,0 +1,1144 @@
+{
+  "method": "Conditional Action-Worthiness RHI",
+  "seeds": [
+    1,
+    7,
+    13,
+    21,
+    42
+  ],
+  "n_seeds": 5,
+  "rows": [
+    {
+      "seed": 1,
+      "accepted_rounds": [
+        0
+      ],
+      "final_signals": [
+        "cost",
+        "reversibility",
+        "verbal_confidence"
+      ],
+      "final_test": {
+        "metrics": {
+          "n": 3138.0,
+          "coverage": 0.1201402166985341,
+          "selective_accuracy": 0.6551724137931034,
+          "selective_risk": 0.3448275862068966,
+          "confidently_wrong_rate": 0.041427660930529,
+          "accuracy_at_threshold": 0.5761631612492033,
+          "ece": 0.10745044370541129,
+          "brier": 0.18486913898134574,
+          "log_loss": 0.5531991083969237,
+          "aurc": 0.3794561129759704,
+          "coverage_at_risk_0.05": 0.0,
+          "coverage_at_risk_0.10": 0.0
+        },
+        "discovery_gain": {
+          "budget": 313.0,
+          "hit_rate": 0.65814696485623,
+          "mean_utility": 0.09530604153354627,
+          "best_utility": 0.555873,
+          "random_hit_rate": 0.4611217335882728,
+          "random_mean_utility": 0.23389922243467146,
+          "hit_rate_lift": 0.19702523126795723,
+          "mean_utility_lift": -0.13859318090112518,
+          "normalized_hit_lift": 2.9836568556406995,
+          "normalized_utility_lift": -0.30197764308140923,
+          "oracle_hit_rate": 0.5271565495207667,
+          "oracle_mean_utility": 0.6928510159744411,
+          "hit_efficiency": 1.2484848484848485,
+          "utility_efficiency": 0.13755632789179897
+        },
+        "threshold": 0.7642711227050983,
+        "n": 3138
+      },
+      "final_test_by_task": {
+        "extreme_property_discovery": {
+          "metrics": {
+            "n": 200.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.67,
+            "ece": 0.27607738074181537,
+            "brier": 0.23350954202780774,
+            "log_loss": 0.6668222165883568,
+            "aurc": 0.3257293830002834,
+            "coverage_at_risk_0.05": 0.325,
+            "coverage_at_risk_0.10": 0.365
+          },
+          "discovery_gain": {
+            "budget": 20.0,
+            "hit_rate": 0.95,
+            "mean_utility": 0.9451644000000003,
+            "best_utility": 1.0,
+            "random_hit_rate": 0.33,
+            "random_mean_utility": 0.7842912500000004,
+            "hit_rate_lift": 0.6199999999999999,
+            "mean_utility_lift": 0.1608731499999999,
+            "normalized_hit_lift": 0.9253731343283581,
+            "normalized_utility_lift": 0.8070327916181,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.9836303000000003,
+            "hit_efficiency": 0.95,
+            "utility_efficiency": 0.9608939456216427
+          },
+          "threshold": 0.7642711227050983,
+          "n": 200
+        },
+        "materials_pairwise_preference": {
+          "metrics": {
+            "n": 1979.0,
+            "coverage": 0.19050025265285497,
+            "selective_accuracy": 0.6551724137931034,
+            "selective_risk": 0.3448275862068966,
+            "confidently_wrong_rate": 0.06568974229408793,
+            "accuracy_at_threshold": 0.39464375947448205,
+            "ece": 0.09098495154458142,
+            "brier": 0.2313292671999823,
+            "log_loss": 0.6592307247579591,
+            "aurc": 0.3421452913503908,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 197.0,
+            "hit_rate": 0.6345177664974619,
+            "mean_utility": 0.0877582588832487,
+            "best_utility": 0.555873,
+            "random_hit_rate": 0.6644770085901971,
+            "random_mean_utility": 0.10701926882263786,
+            "hit_rate_lift": -0.02995924209273515,
+            "mean_utility_lift": -0.01926100993938916,
+            "normalized_hit_lift": -0.08929117485169107,
+            "normalized_utility_lift": -0.07007339192896779,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.38188836548223326,
+            "hit_efficiency": 0.6345177664974619,
+            "utility_efficiency": 0.22980081829000237
+          },
+          "threshold": 0.7642711227050983,
+          "n": 1979
+        },
+        "unique_materials_screening": {
+          "metrics": {
+            "n": 959.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.9311783107403545,
+            "ece": 0.12015462179557086,
+            "brier": 0.07884966624519059,
+            "log_loss": 0.31069526020424926,
+            "aurc": 0.9498155820051774,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 95.0,
+            "hit_rate": 0.031578947368421054,
+            "mean_utility": 0.3602913157894737,
+            "best_utility": 0.540094,
+            "random_hit_rate": 0.06882168925964546,
+            "random_mean_utility": 0.3809451272158498,
+            "hit_rate_lift": -0.03724274189122441,
+            "mean_utility_lift": -0.020653811426376067,
+            "normalized_hit_lift": -0.059501262626262624,
+            "normalized_utility_lift": -0.1826038454544434,
+            "oracle_hit_rate": 0.6947368421052632,
+            "oracle_mean_utility": 0.49405233684210514,
+            "hit_efficiency": 0.045454545454545456,
+            "utility_efficiency": 0.7292573861554665
+          },
+          "threshold": 0.7642711227050983,
+          "n": 959
+        }
+      },
+      "mutations": [
+        {
+          "round": 1,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6559525075222092,
+          "candidate_score": 0.6520498045185539,
+          "predecessor_risk": 0.34536082474226804,
+          "candidate_risk": 0.3451776649746193
+        },
+        {
+          "round": 2,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6559525075222092,
+          "candidate_score": 0.6520498045185539,
+          "predecessor_risk": 0.34536082474226804,
+          "candidate_risk": 0.3451776649746193
+        },
+        {
+          "round": 3,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6559525075222092,
+          "candidate_score": 0.6520498045185539,
+          "predecessor_risk": 0.34536082474226804,
+          "candidate_risk": 0.3451776649746193
+        },
+        {
+          "round": 4,
+          "candidate_signals": [],
+          "accepted": false,
+          "reason": "no_stable_pattern"
+        }
+      ],
+      "static_full_test": {
+        "metrics": {
+          "n": 3138.0,
+          "coverage": 0.1089866156787763,
+          "selective_accuracy": 0.8362573099415205,
+          "selective_risk": 0.16374269005847952,
+          "confidently_wrong_rate": 0.017845761631612493,
+          "accuracy_at_threshold": 0.6121733588272785,
+          "ece": 0.11875686461404399,
+          "brier": 0.18234365006976797,
+          "log_loss": 0.546394556254739,
+          "aurc": 0.3152956370749469,
+          "coverage_at_risk_0.05": 0.03919694072657744,
+          "coverage_at_risk_0.10": 0.058954748247291265
+        },
+        "discovery_gain": {
+          "budget": 313.0,
+          "hit_rate": 0.8434504792332268,
+          "mean_utility": 0.18041751757188498,
+          "best_utility": 0.634877,
+          "random_hit_rate": 0.4611217335882728,
+          "random_mean_utility": 0.23389922243467146,
+          "hit_rate_lift": 0.382328745644954,
+          "mean_utility_lift": -0.05348170486278647,
+          "normalized_hit_lift": 5.789805578254371,
+          "normalized_utility_lift": -0.11653011408953587,
+          "oracle_hit_rate": 0.5271565495207667,
+          "oracle_mean_utility": 0.6928510159744411,
+          "hit_efficiency": 1.6,
+          "utility_efficiency": 0.2603987198000161
+        },
+        "threshold": 0.777982752024394,
+        "n": 3138
+      }
+    },
+    {
+      "seed": 7,
+      "accepted_rounds": [
+        0
+      ],
+      "final_signals": [
+        "cost",
+        "reversibility",
+        "verbal_confidence"
+      ],
+      "final_test": {
+        "metrics": {
+          "n": 3109.0,
+          "coverage": 0.1653264715342554,
+          "selective_accuracy": 0.6712062256809338,
+          "selective_risk": 0.3287937743190662,
+          "confidently_wrong_rate": 0.05435831457060148,
+          "accuracy_at_threshold": 0.6696687037632679,
+          "ece": 0.033625835553107594,
+          "brier": 0.1661060081503062,
+          "log_loss": 0.5100567009542387,
+          "aurc": 0.42195972538209675,
+          "coverage_at_risk_0.05": 0.0,
+          "coverage_at_risk_0.10": 0.0
+        },
+        "discovery_gain": {
+          "budget": 310.0,
+          "hit_rate": 0.6870967741935484,
+          "mean_utility": 0.11251344516129032,
+          "best_utility": 0.834592,
+          "random_hit_rate": 0.3869411386297845,
+          "random_mean_utility": 0.28275242811193346,
+          "hit_rate_lift": 0.3001556355637639,
+          "mean_utility_lift": -0.17023898295064316,
+          "normalized_hit_lift": 1.602946717496343,
+          "normalized_utility_lift": -0.5574604031268183,
+          "oracle_hit_rate": 0.5741935483870968,
+          "oracle_mean_utility": 0.5881355225806449,
+          "hit_efficiency": 1.196629213483146,
+          "utility_efficiency": 0.19130530437542567
+        },
+        "threshold": 0.7336897771215258,
+        "n": 3109
+      },
+      "final_test_by_task": {
+        "extreme_property_discovery": {
+          "metrics": {
+            "n": 200.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 1.0,
+            "ece": 0.2005959822728316,
+            "brier": 0.04081454560626044,
+            "log_loss": 0.22443645627495648,
+            "aurc": 1.0,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 20.0,
+            "hit_rate": 0.0,
+            "mean_utility": 0.7527815499999999,
+            "best_utility": 0.785712,
+            "random_hit_rate": 0.0,
+            "random_mean_utility": 0.5870237000000001,
+            "hit_rate_lift": 0.0,
+            "mean_utility_lift": 0.16575784999999976,
+            "normalized_hit_lift": 0.0,
+            "normalized_utility_lift": 1.0,
+            "oracle_hit_rate": 0.0,
+            "oracle_mean_utility": 0.7527815499999999,
+            "hit_efficiency": 0.0,
+            "utility_efficiency": 1.0
+          },
+          "threshold": 0.7336897771215258,
+          "n": 200
+        },
+        "materials_pairwise_preference": {
+          "metrics": {
+            "n": 1464.0,
+            "coverage": 0.3510928961748634,
+            "selective_accuracy": 0.6712062256809338,
+            "selective_risk": 0.3287937743190662,
+            "confidently_wrong_rate": 0.11543715846994536,
+            "accuracy_at_threshold": 0.4453551912568306,
+            "ece": 0.05010174547672791,
+            "brier": 0.22223768806620445,
+            "log_loss": 0.6377187302988804,
+            "aurc": 0.3240573716519533,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 146.0,
+            "hit_rate": 0.6986301369863014,
+            "mean_utility": 0.10544021917808216,
+            "best_utility": 0.550252,
+            "random_hit_rate": 0.674863387978142,
+            "random_mean_utility": 0.11547610177595635,
+            "hit_rate_lift": 0.023766749008159338,
+            "mean_utility_lift": -0.01003588259787419,
+            "normalized_hit_lift": 0.0730977322435825,
+            "normalized_utility_lift": -0.032354736445663335,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.42565889726027406,
+            "hit_efficiency": 0.6986301369863014,
+            "utility_efficiency": 0.24771059610580515
+          },
+          "threshold": 0.7336897771215258,
+          "n": 1464
+        },
+        "unique_materials_screening": {
+          "metrics": {
+            "n": 1445.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.8512110726643599,
+            "ece": 0.006626578886860361,
+            "brier": 0.12657764352188583,
+            "log_loss": 0.42024828432815137,
+            "aurc": 0.8488041526875156,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 144.0,
+            "hit_rate": 0.14583333333333334,
+            "mean_utility": 0.40730875694444457,
+            "best_utility": 0.545276,
+            "random_hit_rate": 0.14878892733564014,
+            "random_mean_utility": 0.41011456470588187,
+            "hit_rate_lift": -0.0029555940023067995,
+            "mean_utility_lift": -0.0028058077614372956,
+            "normalized_hit_lift": -0.003472222222222216,
+            "normalized_utility_lift": -0.025672854293527555,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.5194054027777777,
+            "hit_efficiency": 0.14583333333333334,
+            "utility_efficiency": 0.7841827496713727
+          },
+          "threshold": 0.7336897771215258,
+          "n": 1445
+        }
+      },
+      "mutations": [
+        {
+          "round": 1,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6458817477013303,
+          "candidate_score": 0.6590184546485779,
+          "predecessor_risk": 0.43023255813953487,
+          "candidate_risk": 0.3648648648648649
+        },
+        {
+          "round": 2,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6458817477013303,
+          "candidate_score": 0.6590184546485779,
+          "predecessor_risk": 0.43023255813953487,
+          "candidate_risk": 0.3648648648648649
+        },
+        {
+          "round": 3,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6458817477013303,
+          "candidate_score": 0.6590184546485779,
+          "predecessor_risk": 0.43023255813953487,
+          "candidate_risk": 0.3648648648648649
+        },
+        {
+          "round": 4,
+          "candidate_signals": [],
+          "accepted": false,
+          "reason": "no_stable_pattern"
+        }
+      ],
+      "static_full_test": {
+        "metrics": {
+          "n": 3109.0,
+          "coverage": 0.17336764232872307,
+          "selective_accuracy": 0.7866419294990723,
+          "selective_risk": 0.2133580705009277,
+          "confidently_wrong_rate": 0.0369893856545513,
+          "accuracy_at_threshold": 0.7124477323898359,
+          "ece": 0.03519032647713685,
+          "brier": 0.16362802552634526,
+          "log_loss": 0.5038937029606209,
+          "aurc": 0.38086817089467345,
+          "coverage_at_risk_0.05": 0.022836925056288194,
+          "coverage_at_risk_0.10": 0.03473785783210035
+        },
+        "discovery_gain": {
+          "budget": 310.0,
+          "hit_rate": 0.8290322580645161,
+          "mean_utility": 0.19177857096774198,
+          "best_utility": 0.834592,
+          "random_hit_rate": 0.3869411386297845,
+          "random_mean_utility": 0.28275242811193346,
+          "hit_rate_lift": 0.44209111943473156,
+          "mean_utility_lift": -0.09097385714419148,
+          "normalized_hit_lift": 2.3609368766346024,
+          "normalized_utility_lift": -0.2979007639648905,
+          "oracle_hit_rate": 0.5741935483870968,
+          "oracle_mean_utility": 0.5881355225806449,
+          "hit_efficiency": 1.443820224719101,
+          "utility_efficiency": 0.3260788774094926
+        },
+        "threshold": 0.734451780837709,
+        "n": 3109
+      }
+    },
+    {
+      "seed": 13,
+      "accepted_rounds": [
+        0
+      ],
+      "final_signals": [
+        "cost",
+        "reversibility",
+        "verbal_confidence"
+      ],
+      "final_test": {
+        "metrics": {
+          "n": 3203.0,
+          "coverage": 0.07368092413362473,
+          "selective_accuracy": 0.6567796610169492,
+          "selective_risk": 0.3432203389830508,
+          "confidently_wrong_rate": 0.025288791757727132,
+          "accuracy_at_threshold": 0.6846706212925382,
+          "ece": 0.08402428415930421,
+          "brier": 0.1580778020774945,
+          "log_loss": 0.4919654392925828,
+          "aurc": 0.4584614130197218,
+          "coverage_at_risk_0.05": 0.0,
+          "coverage_at_risk_0.10": 0.0
+        },
+        "discovery_gain": {
+          "budget": 320.0,
+          "hit_rate": 0.659375,
+          "mean_utility": 0.10058926249999997,
+          "best_utility": 0.602521,
+          "random_hit_rate": 0.33843271932563224,
+          "random_mean_utility": 0.3012878270371529,
+          "hit_rate_lift": 0.3209422806743678,
+          "mean_utility_lift": -0.20069856453715293,
+          "normalized_hit_lift": 0.9361904978740602,
+          "normalized_utility_lift": -0.5463189651430471,
+          "oracle_hit_rate": 0.68125,
+          "oracle_mean_utility": 0.6686530062500005,
+          "hit_efficiency": 0.9678899082568808,
+          "utility_efficiency": 0.15043566926309607
+        },
+        "threshold": 0.7675695780426374,
+        "n": 3203
+      },
+      "final_test_by_task": {
+        "extreme_property_discovery": {
+          "metrics": {
+            "n": 200.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.755,
+            "ece": 0.0028626268748813597,
+            "brier": 0.17726040261437156,
+            "log_loss": 0.5364668100995766,
+            "aurc": 0.4137384192596181,
+            "coverage_at_risk_0.05": 0.245,
+            "coverage_at_risk_0.10": 0.26
+          },
+          "discovery_gain": {
+            "budget": 20.0,
+            "hit_rate": 1.0,
+            "mean_utility": 0.9693698000000003,
+            "best_utility": 1.0,
+            "random_hit_rate": 0.245,
+            "random_mean_utility": 0.7177254649999993,
+            "hit_rate_lift": 0.755,
+            "mean_utility_lift": 0.25164433500000094,
+            "normalized_hit_lift": 1.0,
+            "normalized_utility_lift": 1.0,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.9693698000000003,
+            "hit_efficiency": 1.0,
+            "utility_efficiency": 1.0
+          },
+          "threshold": 0.7675695780426374,
+          "n": 200
+        },
+        "materials_pairwise_preference": {
+          "metrics": {
+            "n": 1305.0,
+            "coverage": 0.18084291187739462,
+            "selective_accuracy": 0.6567796610169492,
+            "selective_risk": 0.3432203389830508,
+            "confidently_wrong_rate": 0.06206896551724138,
+            "accuracy_at_threshold": 0.3954022988505747,
+            "ece": 0.09483668540592283,
+            "brier": 0.23300973206923548,
+            "log_loss": 0.6629956060803961,
+            "aurc": 0.34353528296222163,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 130.0,
+            "hit_rate": 0.6076923076923076,
+            "mean_utility": 0.09268770769230769,
+            "best_utility": 0.550252,
+            "random_hit_rate": 0.6613026819923372,
+            "random_mean_utility": 0.11429715708812246,
+            "hit_rate_lift": -0.05361037430002957,
+            "mean_utility_lift": -0.021609449395814773,
+            "normalized_hit_lift": -0.15828402366863936,
+            "normalized_utility_lift": -0.07052941392691653,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.42068633846153863,
+            "hit_efficiency": 0.6076923076923076,
+            "utility_efficiency": 0.22032497663525075
+          },
+          "threshold": 0.7675695780426374,
+          "n": 1305
+        },
+        "unique_materials_screening": {
+          "metrics": {
+            "n": 1698.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.8987043580683156,
+            "ece": 0.08527407675650524,
+            "brier": 0.09822933991813128,
+            "log_loss": 0.3552783710832199,
+            "aurc": 0.8977553884078977,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 169.0,
+            "hit_rate": 0.08875739644970414,
+            "mean_utility": 0.39217839053254433,
+            "best_utility": 0.579855,
+            "random_hit_rate": 0.10129564193168433,
+            "random_mean_utility": 0.39594936808009473,
+            "hit_rate_lift": -0.012538245481980195,
+            "mean_utility_lift": -0.0037709775475504026,
+            "normalized_hit_lift": -0.013951468432766954,
+            "normalized_utility_lift": -0.034980824497905655,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.5037506449704143,
+            "hit_efficiency": 0.08875739644970414,
+            "utility_efficiency": 0.7785169000737999
+          },
+          "threshold": 0.7675695780426374,
+          "n": 1698
+        }
+      },
+      "mutations": [
+        {
+          "round": 1,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 17.082447739048142,
+          "candidate_score": 16.57745518188692,
+          "predecessor_risk": 0.3866666666666667,
+          "candidate_risk": 0.39751552795031053
+        },
+        {
+          "round": 2,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 17.082447739048142,
+          "candidate_score": 16.57745518188692,
+          "predecessor_risk": 0.3866666666666667,
+          "candidate_risk": 0.39751552795031053
+        },
+        {
+          "round": 3,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 17.082447739048142,
+          "candidate_score": 16.57745518188692,
+          "predecessor_risk": 0.3866666666666667,
+          "candidate_risk": 0.39751552795031053
+        },
+        {
+          "round": 4,
+          "candidate_signals": [],
+          "accepted": false,
+          "reason": "no_stable_pattern"
+        }
+      ],
+      "static_full_test": {
+        "metrics": {
+          "n": 3203.0,
+          "coverage": 0.07742741180143616,
+          "selective_accuracy": 0.8306451612903226,
+          "selective_risk": 0.16935483870967738,
+          "confidently_wrong_rate": 0.013112706837339994,
+          "accuracy_at_threshold": 0.712769278801124,
+          "ece": 0.08917372586896218,
+          "brier": 0.15626318697736913,
+          "log_loss": 0.48710580267983655,
+          "aurc": 0.41778069444399046,
+          "coverage_at_risk_0.05": 0.01685919450515142,
+          "coverage_at_risk_0.10": 0.025288791757727132
+        },
+        "discovery_gain": {
+          "budget": 320.0,
+          "hit_rate": 0.815625,
+          "mean_utility": 0.17643111250000004,
+          "best_utility": 0.718301,
+          "random_hit_rate": 0.33843271932563224,
+          "random_mean_utility": 0.3012878270371529,
+          "hit_rate_lift": 0.4771922806743678,
+          "mean_utility_lift": -0.12485671453715286,
+          "normalized_hit_lift": 1.391972655916488,
+          "normalized_utility_lift": -0.3398708467816221,
+          "oracle_hit_rate": 0.68125,
+          "oracle_mean_utility": 0.6686530062500005,
+          "hit_efficiency": 1.1972477064220184,
+          "utility_efficiency": 0.2638604939346295
+        },
+        "threshold": 0.7772324679014777,
+        "n": 3203
+      }
+    },
+    {
+      "seed": 21,
+      "accepted_rounds": [
+        0
+      ],
+      "final_signals": [
+        "cost",
+        "reversibility",
+        "verbal_confidence"
+      ],
+      "final_test": {
+        "metrics": {
+          "n": 1474.0,
+          "coverage": 0.17367706919945725,
+          "selective_accuracy": 0.6171875,
+          "selective_risk": 0.3828125,
+          "confidently_wrong_rate": 0.06648575305291723,
+          "accuracy_at_threshold": 0.46200814111261873,
+          "ece": 0.08560635730995408,
+          "brier": 0.22202303038207225,
+          "log_loss": 0.6369039891580697,
+          "aurc": 0.3616777000544253,
+          "coverage_at_risk_0.05": 0.0006784260515603799,
+          "coverage_at_risk_0.10": 0.0006784260515603799
+        },
+        "discovery_gain": {
+          "budget": 147.0,
+          "hit_rate": 0.5986394557823129,
+          "mean_utility": 0.10409688435374152,
+          "best_utility": 0.56719,
+          "random_hit_rate": 0.578697421981004,
+          "random_mean_utility": 0.2233070658073274,
+          "hit_rate_lift": 0.019942033801308878,
+          "mean_utility_lift": -0.11921018145358588,
+          "normalized_hit_lift": 0.0,
+          "normalized_utility_lift": -0.1783675889590106,
+          "oracle_hit_rate": 0.4557823129251701,
+          "oracle_mean_utility": 0.891646993197279,
+          "hit_efficiency": 1.3134328358208955,
+          "utility_efficiency": 0.11674674523431028
+        },
+        "threshold": 0.746386086308621,
+        "n": 1474
+      },
+      "final_test_by_task": {
+        "extreme_property_discovery": {
+          "metrics": {
+            "n": 200.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.67,
+            "ece": 0.20418641655275513,
+            "brier": 0.2254371856594437,
+            "log_loss": 0.6438599414320588,
+            "aurc": 0.3068731417801458,
+            "coverage_at_risk_0.05": 0.335,
+            "coverage_at_risk_0.10": 0.365
+          },
+          "discovery_gain": {
+            "budget": 20.0,
+            "hit_rate": 1.0,
+            "mean_utility": 0.9836303000000003,
+            "best_utility": 1.0,
+            "random_hit_rate": 0.33,
+            "random_mean_utility": 0.7842912500000004,
+            "hit_rate_lift": 0.6699999999999999,
+            "mean_utility_lift": 0.19933904999999985,
+            "normalized_hit_lift": 1.0,
+            "normalized_utility_lift": 1.0,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.9836303000000003,
+            "hit_efficiency": 1.0,
+            "utility_efficiency": 1.0
+          },
+          "threshold": 0.746386086308621,
+          "n": 200
+        },
+        "materials_pairwise_preference": {
+          "metrics": {
+            "n": 1160.0,
+            "coverage": 0.2206896551724138,
+            "selective_accuracy": 0.6171875,
+            "selective_risk": 0.3828125,
+            "confidently_wrong_rate": 0.08448275862068966,
+            "accuracy_at_threshold": 0.3896551724137931,
+            "ece": 0.07388119278729396,
+            "brier": 0.22956547464099936,
+            "log_loss": 0.6539216179594948,
+            "aurc": 0.3601086395680075,
+            "coverage_at_risk_0.05": 0.0008620689655172414,
+            "coverage_at_risk_0.10": 0.0008620689655172414
+          },
+          "discovery_gain": {
+            "budget": 116.0,
+            "hit_rate": 0.5948275862068966,
+            "mean_utility": 0.09475872413793107,
+            "best_utility": 0.471444,
+            "random_hit_rate": 0.6620689655172414,
+            "random_mean_utility": 0.10914090603448273,
+            "hit_rate_lift": -0.0672413793103448,
+            "mean_utility_lift": -0.01438218189655166,
+            "normalized_hit_lift": -0.19897959183673458,
+            "normalized_utility_lift": -0.05440437991212286,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.37349796551724135,
+            "hit_efficiency": 0.5948275862068966,
+            "utility_efficiency": 0.25370613199111747
+          },
+          "threshold": 0.746386086308621,
+          "n": 1160
+        },
+        "unique_materials_screening": {
+          "metrics": {
+            "n": 114.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.8333333333333334,
+            "ece": 0.0031201427099976746,
+            "brier": 0.13928560585724842,
+            "log_loss": 0.4515387271892066,
+            "aurc": 0.8506576745900792,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 11.0,
+            "hit_rate": 0.09090909090909091,
+            "mean_utility": 0.37249672727272726,
+            "best_utility": 0.476122,
+            "random_hit_rate": 0.16666666666666666,
+            "random_mean_utility": 0.4008150350877193,
+            "hit_rate_lift": -0.07575757575757575,
+            "mean_utility_lift": -0.02831830781499206,
+            "normalized_hit_lift": -0.0909090909090909,
+            "normalized_utility_lift": -0.27569943893461246,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.5035294545454546,
+            "hit_efficiency": 0.09090909090909091,
+            "utility_efficiency": 0.7397714749556944
+          },
+          "threshold": 0.746386086308621,
+          "n": 114
+        }
+      },
+      "mutations": [
+        {
+          "round": 1,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6506961608030605,
+          "candidate_score": 0.6510526878686475,
+          "predecessor_risk": 0.3924050632911392,
+          "candidate_risk": 0.3908045977011494
+        },
+        {
+          "round": 2,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6506961608030605,
+          "candidate_score": 0.6510526878686475,
+          "predecessor_risk": 0.3924050632911392,
+          "candidate_risk": 0.3908045977011494
+        },
+        {
+          "round": 3,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.6506961608030605,
+          "candidate_score": 0.6510526878686475,
+          "predecessor_risk": 0.3924050632911392,
+          "candidate_risk": 0.3908045977011494
+        },
+        {
+          "round": 4,
+          "candidate_signals": [],
+          "accepted": false,
+          "reason": "no_stable_pattern"
+        }
+      ],
+      "static_full_test": {
+        "metrics": {
+          "n": 1474.0,
+          "coverage": 0.17639077340569878,
+          "selective_accuracy": 0.7884615384615384,
+          "selective_risk": 0.21153846153846156,
+          "confidently_wrong_rate": 0.03731343283582089,
+          "accuracy_at_threshold": 0.5230664857530529,
+          "ece": 0.08118864003309369,
+          "brier": 0.2186011043664272,
+          "log_loss": 0.6281464497371099,
+          "aurc": 0.2816603275513771,
+          "coverage_at_risk_0.05": 0.014925373134328358,
+          "coverage_at_risk_0.10": 0.036635006784260515
+        },
+        "discovery_gain": {
+          "budget": 147.0,
+          "hit_rate": 0.8435374149659864,
+          "mean_utility": 0.18990778231292513,
+          "best_utility": 0.59243,
+          "random_hit_rate": 0.578697421981004,
+          "random_mean_utility": 0.2233070658073274,
+          "hit_rate_lift": 0.2648399929849824,
+          "mean_utility_lift": -0.03339928349440227,
+          "normalized_hit_lift": 0.0,
+          "normalized_utility_lift": -0.04997349720648221,
+          "oracle_hit_rate": 0.4557823129251701,
+          "oracle_mean_utility": 0.891646993197279,
+          "hit_efficiency": 1.8507462686567164,
+          "utility_efficiency": 0.21298538969099354
+        },
+        "threshold": 0.7558358264224938,
+        "n": 1474
+      }
+    },
+    {
+      "seed": 42,
+      "accepted_rounds": [
+        0
+      ],
+      "final_signals": [
+        "cost",
+        "reversibility",
+        "verbal_confidence"
+      ],
+      "final_test": {
+        "metrics": {
+          "n": 3097.0,
+          "coverage": 0.10978366160800775,
+          "selective_accuracy": 0.6735294117647059,
+          "selective_risk": 0.32647058823529407,
+          "confidently_wrong_rate": 0.03584113658379077,
+          "accuracy_at_threshold": 0.7219890216338392,
+          "ece": 0.06890058677430225,
+          "brier": 0.14134859997810909,
+          "log_loss": 0.4515289234851026,
+          "aurc": 0.47118955861016526,
+          "coverage_at_risk_0.05": 0.00032289312237649337,
+          "coverage_at_risk_0.10": 0.00032289312237649337
+        },
+        "discovery_gain": {
+          "budget": 309.0,
+          "hit_rate": 0.6699029126213593,
+          "mean_utility": 0.11591748543689323,
+          "best_utility": 0.834592,
+          "random_hit_rate": 0.316112366806587,
+          "random_mean_utility": 0.2972826319018407,
+          "hit_rate_lift": 0.35379054581477226,
+          "mean_utility_lift": -0.18136514646494745,
+          "normalized_hit_lift": 1.1590309229647433,
+          "normalized_utility_lift": -0.6480648348106715,
+          "oracle_hit_rate": 0.6213592233009708,
+          "oracle_mean_utility": 0.5771391165048546,
+          "hit_efficiency": 1.0781250000000002,
+          "utility_efficiency": 0.20084842999186694
+        },
+        "threshold": 0.7357510906786165,
+        "n": 3097
+      },
+      "final_test_by_task": {
+        "extreme_property_discovery": {
+          "metrics": {
+            "n": 200.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 1.0,
+            "ece": 0.21817469799662795,
+            "brier": 0.04802612531128727,
+            "log_loss": 0.24653174619631849,
+            "aurc": 1.0,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 20.0,
+            "hit_rate": 0.0,
+            "mean_utility": 0.7854691500000001,
+            "best_utility": 0.785704,
+            "random_hit_rate": 0.0,
+            "random_mean_utility": 0.5760302600000002,
+            "hit_rate_lift": 0.0,
+            "mean_utility_lift": 0.20943888999999982,
+            "normalized_hit_lift": 0.0,
+            "normalized_utility_lift": 1.0,
+            "oracle_hit_rate": 0.0,
+            "oracle_mean_utility": 0.7854691500000001,
+            "hit_efficiency": 0.0,
+            "utility_efficiency": 1.0
+          },
+          "threshold": 0.7357510906786165,
+          "n": 200
+        },
+        "materials_pairwise_preference": {
+          "metrics": {
+            "n": 1199.0,
+            "coverage": 0.2835696413678065,
+            "selective_accuracy": 0.6735294117647059,
+            "selective_risk": 0.32647058823529407,
+            "confidently_wrong_rate": 0.09257714762301918,
+            "accuracy_at_threshold": 0.42535446205170974,
+            "ece": 0.05321395140323864,
+            "brier": 0.22276166953301402,
+            "log_loss": 0.6386494851006365,
+            "aurc": 0.32506349572124327,
+            "coverage_at_risk_0.05": 0.0008340283569641367,
+            "coverage_at_risk_0.10": 0.0008340283569641367
+          },
+          "discovery_gain": {
+            "budget": 119.0,
+            "hit_rate": 0.6722689075630253,
+            "mean_utility": 0.11547115126050422,
+            "best_utility": 0.496152,
+            "random_hit_rate": 0.6730608840700584,
+            "random_mean_utility": 0.11105607339449547,
+            "hit_rate_lift": -0.0007919765070331097,
+            "mean_utility_lift": 0.004415077866008754,
+            "normalized_hit_lift": -0.0024223975304405575,
+            "normalized_utility_lift": 0.01521305978156513,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.40127236974789926,
+            "hit_efficiency": 0.6722689075630253,
+            "utility_efficiency": 0.2877625273154226
+          },
+          "threshold": 0.7357510906786165,
+          "n": 1199
+        },
+        "unique_materials_screening": {
+          "metrics": {
+            "n": 1698.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.8987043580683156,
+            "ece": 0.0623949646102505,
+            "brier": 0.09485285471134439,
+            "log_loss": 0.3435441661710467,
+            "aurc": 0.897711415940956,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 169.0,
+            "hit_rate": 0.08875739644970414,
+            "mean_utility": 0.39217839053254433,
+            "best_utility": 0.579855,
+            "random_hit_rate": 0.10129564193168433,
+            "random_mean_utility": 0.39594936808009473,
+            "hit_rate_lift": -0.012538245481980195,
+            "mean_utility_lift": -0.0037709775475504026,
+            "normalized_hit_lift": -0.013951468432766954,
+            "normalized_utility_lift": -0.034980824497905655,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.5037506449704143,
+            "hit_efficiency": 0.08875739644970414,
+            "utility_efficiency": 0.7785169000737999
+          },
+          "threshold": 0.7357510906786165,
+          "n": 1698
+        }
+      },
+      "mutations": [
+        {
+          "round": 1,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.5714239684257146,
+          "candidate_score": 0.5773621111834614,
+          "predecessor_risk": 0.3521505376344086,
+          "candidate_risk": 0.34905660377358494
+        },
+        {
+          "round": 2,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.5714239684257146,
+          "candidate_score": 0.5773621111834614,
+          "predecessor_risk": 0.3521505376344086,
+          "candidate_risk": 0.34905660377358494
+        },
+        {
+          "round": 3,
+          "candidate_signals": [
+            "materials_pairwise_preference::evidence_support"
+          ],
+          "accepted": false,
+          "predecessor_score": 0.5714239684257146,
+          "candidate_score": 0.5773621111834614,
+          "predecessor_risk": 0.3521505376344086,
+          "candidate_risk": 0.34905660377358494
+        },
+        {
+          "round": 4,
+          "candidate_signals": [],
+          "accepted": false,
+          "reason": "no_stable_pattern"
+        }
+      ],
+      "static_full_test": {
+        "metrics": {
+          "n": 3097.0,
+          "coverage": 0.10655473038424282,
+          "selective_accuracy": 0.7848484848484848,
+          "selective_risk": 0.2151515151515152,
+          "confidently_wrong_rate": 0.02292541168873103,
+          "accuracy_at_threshold": 0.7445915402001937,
+          "ece": 0.06891951078476526,
+          "brier": 0.1395577160903003,
+          "log_loss": 0.4469558862570505,
+          "aurc": 0.4368673344244557,
+          "coverage_at_risk_0.05": 0.020665159832095575,
+          "coverage_at_risk_0.10": 0.029060381013884404
+        },
+        "discovery_gain": {
+          "budget": 309.0,
+          "hit_rate": 0.7961165048543689,
+          "mean_utility": 0.16455364724919108,
+          "best_utility": 0.834592,
+          "random_hit_rate": 0.316112366806587,
+          "random_mean_utility": 0.2972826319018407,
+          "hit_rate_lift": 0.4800041380477819,
+          "mean_utility_lift": -0.1327289846526496,
+          "normalized_hit_lift": 1.5725113226730754,
+          "normalized_utility_lift": -0.4742751801550364,
+          "oracle_hit_rate": 0.6213592233009708,
+          "oracle_mean_utility": 0.5771391165048546,
+          "hit_efficiency": 1.28125,
+          "utility_efficiency": 0.2851195535761384
+        },
+        "threshold": 0.7425185231196701,
+        "n": 3097
+      }
+    }
+  ],
+  "aggregate": {
+    "risk_mean": 0.34522495754886157,
+    "risk_std": 0.020192621908879157,
+    "coverage_mean": 0.12852166863477585,
+    "ece_mean": 0.07592150150041588,
+    "brier_mean": 0.17448491591386556,
+    "accepted_mutation_rate": 0.0,
+    "static_full_risk_mean": 0.19462911519181228,
+    "static_full_coverage_mean": 0.12854543471977542,
+    "static_full_ece_mean": 0.07864581355560038
+  }
+}
