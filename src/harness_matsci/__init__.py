@@ -12,6 +12,7 @@ from .training import train_gate, evaluate_gate
 from .voi import VOI_SEED_HARNESS, fit_voi_model, train_voi_rhi, evaluate_voi
 from .voi_experiments import VoIExperimentConfig, run_voi_experiment_suite, save_voi_experiment_suite
 from .evolving_harness import fit_numeric_critic, run_evolving_harness, score_action_records
+from .conditional_action_rhi import load_action_records, run_conditional_action_rhi, run_experiment as run_conditional_action_rhi_experiment
 
 __all__ = [
     "ActionRecord",
@@ -43,4 +44,7 @@ __all__ = [
     "run_evolving_harness",
     "fit_numeric_critic",
     "score_action_records",
+    "load_action_records",
+    "run_conditional_action_rhi",
+    "run_conditional_action_rhi_experiment",
 ]

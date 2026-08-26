@@ -1,0 +1,127 @@
+{
+  "method": "Conditional Action-Worthiness RHI",
+  "single_agent": true,
+  "split_sizes": {
+    "train": 14349,
+    "feedback": 2504,
+    "acceptance": 860,
+    "test": 3274
+  },
+  "iterations": 3,
+  "budget_fraction": 0.1,
+  "alpha": 0.1,
+  "versions": [
+    {
+      "round": 0,
+      "active_signals": [
+        "cost",
+        "evidence_support",
+        "reversibility",
+        "verbal_confidence"
+      ],
+      "feature_count": 75,
+      "acceptance": {
+        "metrics": {
+          "n": 860.0,
+          "coverage": 0.10232558139534884,
+          "selective_accuracy": 0.6818181818181818,
+          "selective_risk": 0.31818181818181823,
+          "confidently_wrong_rate": 0.03255813953488372,
+          "accuracy_at_threshold": 0.363953488372093,
+          "ece": 0.0420425286382873,
+          "brier": 0.22174285263283836,
+          "log_loss": 0.6365850445193135,
+          "aurc": 0.31612252117531653,
+          "coverage_at_risk_0.05": 0.0,
+          "coverage_at_risk_0.10": 0.0
+        },
+        "discovery_gain": {
+          "budget": 86.0,
+          "hit_rate": 0.6744186046511628,
+          "mean_utility": 0.12148334883720929,
+          "best_utility": 0.54785,
+          "random_hit_rate": 0.6732558139534883,
+          "random_mean_utility": 0.10923742558139539,
+          "hit_rate_lift": 0.0011627906976744429,
+          "mean_utility_lift": 0.012245923255813904,
+          "normalized_hit_lift": 0.0035587188612100384,
+          "normalized_utility_lift": 0.039981661309036035,
+          "oracle_hit_rate": 1.0,
+          "oracle_mean_utility": 0.4155259302325583,
+          "hit_efficiency": 0.6744186046511628,
+          "utility_efficiency": 0.29236045213644896
+        },
+        "threshold": 0.7351489611991735,
+        "n": 860
+      },
+      "test": {
+        "metrics": {
+          "n": 3274.0,
+          "coverage": 0.04123396456933415,
+          "selective_accuracy": 0.5703703703703704,
+          "selective_risk": 0.4296296296296296,
+          "confidently_wrong_rate": 0.0177153329260843,
+          "accuracy_at_threshold": 0.6747098350641417,
+          "ece": 0.024366393348535097,
+          "brier": 0.1584695588747949,
+          "log_loss": 0.48927608018304325,
+          "aurc": 0.46513824576099766,
+          "coverage_at_risk_0.05": 0.0006108735491753207,
+          "coverage_at_risk_0.10": 0.0006108735491753207
+        },
+        "discovery_gain": {
+          "budget": 327.0,
+          "hit_rate": 0.6483180428134556,
+          "mean_utility": 0.11254573700305814,
+          "best_utility": 0.627754,
+          "random_hit_rate": 0.33109346365302383,
+          "random_mean_utility": 0.3398879547953572,
+          "hit_rate_lift": 0.3172245791604318,
+          "mean_utility_lift": -0.22734221779229907,
+          "normalized_hit_lift": 2.824000931299995,
+          "normalized_utility_lift": -0.4326598180010589,
+          "oracle_hit_rate": 0.4434250764525994,
+          "oracle_mean_utility": 0.8653405351681958,
+          "hit_efficiency": 1.4620689655172414,
+          "utility_efficiency": 0.13005947650560792
+        },
+        "threshold": 0.7351489611991735,
+        "n": 3274
+      },
+      "score": 0.6934182204553883
+    }
+  ],
+  "stable_failure_patterns": [
+    [
+      {
+        "task": "materials_pairwise_preference",
+        "stage": "verification",
+        "n": 2294,
+        "mean_abs_error": 0.4276689228818156,
+        "global_mean_abs_error": 0.40765210675378105,
+        "threshold": 0.7351489611991735,
+        "effects": {
+          "evidence_support": 0.001722223668596784,
+          "evidence_conflict": 0.0,
+          "source_reliability": 0.0,
+          "tool_agreement": 0.0,
+          "perturbation_stability": 0.0057675085015578,
+          "verbal_confidence": 0.00045456897932572016,
+          "ood_score": 0.0,
+          "cost": 3.094746681142624e-15,
+          "reversibility": 1.459943277382081e-14,
+          "preference_margin": 0.0,
+          "candidate_novelty": 0.0,
+          "candidate_diversity": 0.0,
+          "tail_score": 0.0
+        }
+      }
+    ]
+  ],
+  "final_signals": [
+    "cost",
+    "evidence_support",
+    "reversibility",
+    "verbal_confidence"
+  ]
+}
