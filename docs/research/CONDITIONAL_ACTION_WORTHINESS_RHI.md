@@ -172,3 +172,15 @@ there is no genuine two-parent merge yet. The result is useful because it
 exposes the required next experiment: construct trajectory-level feedback in
 which the two failure modes are complementary, then test whether a two-parent
 merge improves the Pareto frontier over linear RHI and branch-only selection.
+
+### Clarification: harness graph semantics
+
+In the graph formulation, `H0`, `H1`, `H2`, and `H3` denote complete harness
+versions. They are not independent classifiers or collections of signals. A
+harness node contains the shared agent interface, action/decision unit,
+calibration rule, acceptance rule, budget, signal contract, and routing policy.
+H1 and H2 inherit the shared components from H0 while modifying different
+components. H3 reuses the compatible shared components and combines only
+non-conflicting parent modifications; any conflict is explicitly recorded and
+blocks activation. The v2 implementation and result artifact reflect this
+component-level definition.

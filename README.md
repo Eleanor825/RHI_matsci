@@ -379,3 +379,9 @@ PYTHONPATH=src python3 -m harness_matsci.cli graph-rhi-external \
   --folds 5 --epochs 80 \
   --out-dir runs/graph_rhi_external_five_fold_v1
 ```
+
+Graph-RHI nodes are complete harness versions, not isolated feature branches.
+H0/H1/H2 share the agent interface, action unit, calibration, acceptance rule,
+and budget. Each branch modifies a different harness component; H3 performs a
+conflict-checked component-wise merge only when both parent harnesses pass
+acceptance. The current pilot is in `runs/graph_rhi_external_five_fold_v2/`.

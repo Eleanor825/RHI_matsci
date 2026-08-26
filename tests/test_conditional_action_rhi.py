@@ -3,7 +3,7 @@ import unittest
 from harness_matsci.conditional_action_rhi import _stable_failure_patterns, add_policy_features, feature_policy
 from harness_matsci.conditional_action_rhi import _fixed_budget_report
 from harness_matsci.schema import ActionRecord
-from harness_matsci.graph_rhi import BRANCHES
+from harness_matsci.graph_rhi import BRANCHES, SHARED_COMPONENTS, _merge_harness_contracts
 
 
 def _record(record_id: str, task: str, stage: str, label: int = 1) -> ActionRecord:
@@ -56,3 +56,17 @@ class ConditionalActionRHITests(unittest.TestCase):
     def test_graph_has_two_disjoint_mutation_branches(self):
         self.assertEqual(set(BRANCHES), {"H1_evidence_source", "H2_ood_stability"})
         self.assertTrue(set(BRANCHES["H1_evidence_source"]).isdisjoint(BRANCHES["H2_ood_stability"]))
+
+    def test_harness_merge_preserves_shared_components(self):
+        merged, conflicts = _merge_harness_contracts(
+            ["H1", "H2"],
+            [
+                {"active_signals": ["verbal_confidence"], "routing_policy": "verify"},
+                {"active_signals": ["cost"], "evidence_policy": "abstain"},
+            ],
+        )
+        self.assertFalse(conflicts)
+        self.assertEqual(merged["routing_policy"], "verify")
+        self.assertEqual(merged["evidence_policy"], "abstain")
+        self.assertEqual(merged["agent_interface"], SHARED_COMPONENTS["agent_interface"])
+        self.assertEqual(set(merged["active_signals"]), {"verbal_confidence", "cost"})

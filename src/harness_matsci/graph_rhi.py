@@ -19,6 +19,14 @@ from .conditional_action_rhi import (
 
 INITIAL_SIGNALS = {"verbal_confidence", "cost", "reversibility"}
 
+SHARED_COMPONENTS = {
+    "agent_interface": "single_agent_action_level",
+    "decision_unit": "action_worthiness",
+    "calibration": "feedback_only_threshold",
+    "acceptance": "held_out_risk_guard",
+    "budget": "fixed_top_10_percent",
+}
+
 BRANCHES = {
     "H1_evidence_source": {
         "materials_pairwise_preference::evidence_support",
@@ -34,15 +42,51 @@ BRANCHES = {
     },
 }
 
+BRANCH_COMPONENTS = {
+    "H1_evidence_source": {
+        "signal_contract": "evidence_and_source_reliability",
+        "routing_policy": "conflict_or_weak_source_to_verify",
+    },
+    "H2_ood_stability": {
+        "signal_contract": "ood_and_perturbation_stability",
+        "routing_policy": "instability_or_ood_to_abstain_or_verify",
+    },
+}
 
-def _fit_node(rows: dict[str, list[Any]], signals: set[str], *, alpha: float, budget_fraction: float, epochs: int, conditional: bool = True) -> tuple[Any, dict[str, Any]]:
+
+def _harness_contract(signals: set[str], components: dict[str, str] | None = None) -> dict[str, Any]:
+    contract = dict(SHARED_COMPONENTS)
+    contract["active_signals"] = sorted(signals)
+    contract.update(components or {})
+    return contract
+
+
+def _merge_harness_contracts(parent_ids: list[str], contracts: list[dict[str, Any]]) -> tuple[dict[str, Any], list[str]]:
+    """Merge complete harness contracts while rejecting conflicting components."""
+    merged = dict(SHARED_COMPONENTS)
+    conflicts: list[str] = []
+    signal_sets = []
+    for contract in contracts:
+        signal_sets.append(set(contract.get("active_signals", [])))
+        for key, value in contract.items():
+            if key in {"active_signals", *SHARED_COMPONENTS}:
+                continue
+            if key in merged and merged[key] != value:
+                conflicts.append(key)
+            else:
+                merged[key] = value
+    merged["active_signals"] = sorted(set().union(*signal_sets) if signal_sets else set(INITIAL_SIGNALS))
+    return merged, conflicts
+
+
+def _fit_node(rows: dict[str, list[Any]], signals: set[str], *, alpha: float, budget_fraction: float, epochs: int, conditional: bool = True, components: dict[str, str] | None = None) -> tuple[Any, dict[str, Any]]:
     prepared = {split: add_policy_features(items, signals) for split, items in rows.items()}
     names = _feature_names(prepared["train"] + prepared["feedback"], signals)
     if conditional:
         gate = _train_task_conditional_gate(prepared["train"], prepared["feedback"], signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
     else:
         gate = _train_external_gate(prepared["train"], prepared["feedback"], names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
-    return gate, {"gate": gate, "signals": sorted(signals), "features": len(names), "prepared": prepared, "acceptance": _report(prepared["acceptance"], gate, budget_fraction), "test": _report(prepared["test"], gate, budget_fraction)}
+    return gate, {"gate": gate, "signals": sorted(signals), "features": len(names), "components": _harness_contract(signals, components), "prepared": prepared, "acceptance": _report(prepared["acceptance"], gate, budget_fraction), "test": _report(prepared["test"], gate, budget_fraction)}
 
 
 def _accept(candidate: dict[str, Any], parent: dict[str, Any], *, alpha: float) -> bool:
@@ -76,21 +120,23 @@ def run_external_graph_rhi(
     branches: dict[str, dict[str, Any]] = {}
     for node_id, additions in BRANCHES.items():
         signals = INITIAL_SIGNALS | additions
-        _, node = _fit_node(rows, signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs, conditional=True)
+        _, node = _fit_node(rows, signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs, conditional=True, components=BRANCH_COMPONENTS[node_id])
         accepted = _accept(node, h0, alpha=alpha)
         branches[node_id] = {key: value for key, value in node.items() if key not in {"gate", "prepared"}}
-        branches[node_id].update({"parent_ids": ["H0"], "mutation": sorted(additions), "accepted": accepted})
+        branches[node_id].update({"parent_ids": ["H0"], "mutation": sorted(additions), "modified_components": BRANCH_COMPONENTS[node_id], "shared_components": sorted(SHARED_COMPONENTS), "accepted": accepted})
         nodes[node_id] = branches[node_id]
 
     accepted_branches = [node_id for node_id, node in branches.items() if node["accepted"]]
-    merge_signals = set(INITIAL_SIGNALS)
-    for node_id in accepted_branches:
-        merge_signals.update(BRANCHES[node_id])
-    _, merged = _fit_node(rows, merge_signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs, conditional=True)
+    merge_contract, merge_conflicts = _merge_harness_contracts(
+        accepted_branches,
+        [branches[node_id]["components"] for node_id in accepted_branches],
+    )
+    merge_signals = set(merge_contract.get("active_signals", INITIAL_SIGNALS))
+    _, merged = _fit_node(rows, merge_signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs, conditional=True, components={key: value for key, value in merge_contract.items() if key != "active_signals"})
     merge_parent = {"acceptance": h0["acceptance"]}
-    merge_accepted = len(accepted_branches) >= 2 and _accept(merged, merge_parent, alpha=alpha)
+    merge_accepted = len(accepted_branches) >= 2 and not merge_conflicts and _accept(merged, merge_parent, alpha=alpha)
     merge_node = {key: value for key, value in merged.items() if key not in {"gate", "prepared"}}
-    merge_node.update({"parent_ids": accepted_branches, "mutation": "merge", "accepted": merge_accepted})
+    merge_node.update({"parent_ids": accepted_branches, "mutation": "componentwise_merge", "shared_components": sorted(SHARED_COMPONENTS), "conflicts": merge_conflicts, "accepted": merge_accepted})
     nodes["H3_merge"] = merge_node
 
     active_id = "H3_merge" if merge_accepted else (accepted_branches[0] if accepted_branches else "H0")
@@ -105,6 +151,7 @@ def run_external_graph_rhi(
         ] + ([{"parent": node_id, "child": "H3_merge", "type": "merge"} for node_id in accepted_branches]),
         "accepted_branches": accepted_branches,
         "merge_accepted": merge_accepted,
+        "merge_conflicts": merge_conflicts,
         "active_node": active_id,
         "final_test": nodes[active_id]["test"],
         "branch_gain": {node_id: _score(node["acceptance"]) - _score(nodes["H0"]["acceptance"]) for node_id, node in branches.items()},
