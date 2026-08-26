@@ -1,0 +1,278 @@
+{
+  "best_by_primary_utility": "local_voi_harness",
+  "best_by_risk_adjusted_utility": "local_voi_harness",
+  "config": {
+    "alpha": 0.1,
+    "budget_fraction": 0.1,
+    "cost_weight": 0.15,
+    "epochs": 700,
+    "judge_cache_path": "runs/direct_judge_cache/subset500_gpt55_scores.json",
+    "l2": 0.001,
+    "learning_rate": 0.08,
+    "out_dir": "runs/direct_judge_subset500_v1/evaluation_local_rhi",
+    "records_path": "runs/direct_judge_subset500_v1/records.jsonl",
+    "rhi_iterations": 3,
+    "seed": 1729,
+    "validation_fraction": 0.5
+  },
+  "data": {
+    "schema": "direct-judge-subset-split-v1",
+    "seed": 1729,
+    "splits": {
+      "test": 251,
+      "validation": 249
+    },
+    "tasks": {
+      "discover_unique": {
+        "positive_rate": 0.07784431137724551,
+        "positive_records": 13,
+        "records": 167,
+        "splits": {
+          "test": 84,
+          "validation": 83
+        }
+      },
+      "extreme_properties": {
+        "positive_rate": 0.1377245508982036,
+        "positive_records": 23,
+        "records": 167,
+        "splits": {
+          "test": 84,
+          "validation": 83
+        }
+      },
+      "preferential_bo": {
+        "positive_rate": 0.5120481927710844,
+        "positive_records": 85,
+        "records": 166,
+        "splits": {
+          "test": 83,
+          "validation": 83
+        }
+      }
+    },
+    "total_records": 500,
+    "validation_fraction": 0.5
+  },
+  "interpretation": [
+    "The direct LLM judge is calibrated on validation records and ranked by one-shot p_success on the held-out test split.",
+    "Sci-VoI-RHI uses the same validation records, but recursively mutates the executable harness using train, feedback, and acceptance partitions before touching test.",
+    "Primary utility is oracle-normalized net scientific utility at a fixed top-10% action budget; higher is better."
+  ],
+  "method_summary": {
+    "evidence_heuristic": {
+      "budget": 25,
+      "confidently_wrong_execute_rate": 0.11155378486055777,
+      "coverage": 0.12350597609561753,
+      "diagnostic_score": 0.8161053633710148,
+      "discovery_gain": {
+        "best_utility": 0.43801871930684716,
+        "budget": 25.0,
+        "hit_efficiency": 0.2,
+        "hit_rate": 0.12,
+        "hit_rate_lift": -0.12302788844621515,
+        "mean_utility": 0.30623227777364065,
+        "mean_utility_lift": -0.023078307130272202,
+        "normalized_hit_lift": -0.3446428571428572,
+        "normalized_utility_lift": -0.04834309031769823,
+        "oracle_hit_rate": 0.6,
+        "oracle_mean_utility": 0.8066964321595923,
+        "random_hit_rate": 0.24302788844621515,
+        "random_mean_utility": 0.32931058490391285,
+        "utility_efficiency": 0.37961278315540803
+      },
+      "execute_selective_risk": 0.9032258064516129,
+      "hit_efficiency": 0.2,
+      "hit_rate": 0.12,
+      "metrics": {
+        "accuracy_at_threshold": 0.6573705179282868,
+        "aurc": 0.8275530689419935,
+        "brier": 0.5510826074951116,
+        "confidently_wrong_rate": 0.11155378486055777,
+        "coverage": 0.12350597609561753,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.5879226201552881,
+        "log_loss": 1.5251563995249442,
+        "n": 251.0,
+        "selective_accuracy": 0.0967741935483871,
+        "selective_risk": 0.9032258064516129
+      },
+      "n_records": 251,
+      "oracle_normalized_net_utility": 0.3796127831554079,
+      "oracle_utility": 0.8066964321595924,
+      "outcome_conditioned_oracle_normalized_net_utility": -0.048628624409041754,
+      "regime_coverage": 0.3684210526315789,
+      "risk_adjusted_utility": 0.036736720950523355,
+      "scientific_discovery": {
+        "positive_recall": 0.04918032786885246,
+        "regime_coverage": 0.3684210526315789,
+        "selected_regimes": 7.0,
+        "simple_regret": 0.47651,
+        "task": "mixed"
+      },
+      "selected_utility": 0.3062322777736406,
+      "threshold": 0.9254,
+      "utility_efficiency": 0.37961278315540803
+    },
+    "llm_direct_judge": {
+      "budget": 25,
+      "confidently_wrong_execute_rate": 0.05179282868525897,
+      "coverage": 0.13147410358565736,
+      "diagnostic_score": 0.362757398454684,
+      "discovery_gain": {
+        "best_utility": 0.6660782398628529,
+        "budget": 25.0,
+        "hit_efficiency": 1.1333333333333335,
+        "hit_rate": 0.68,
+        "hit_rate_lift": 0.4369721115537849,
+        "mean_utility": 0.04499512490504723,
+        "mean_utility_lift": -0.28431545999886565,
+        "normalized_hit_lift": 1.224107142857143,
+        "normalized_utility_lift": -0.5955674254553074,
+        "oracle_hit_rate": 0.6,
+        "oracle_mean_utility": 0.8066964321595923,
+        "random_hit_rate": 0.24302788844621515,
+        "random_mean_utility": 0.32931058490391285,
+        "utility_efficiency": 0.055777022323740294
+      },
+      "execute_selective_risk": 0.3939393939393939,
+      "hit_efficiency": 1.1333333333333335,
+      "hit_rate": 0.68,
+      "metrics": {
+        "accuracy_at_threshold": 0.7848605577689243,
+        "aurc": 0.5739992102562016,
+        "brier": 0.16734872111553817,
+        "confidently_wrong_rate": 0.05179282868525897,
+        "coverage": 0.13147410358565736,
+        "coverage_at_risk_0.05": 0.0398406374501992,
+        "coverage_at_risk_0.10": 0.06374501992031872,
+        "ece": 0.154792828685259,
+        "log_loss": 0.5876441973140747,
+        "n": 251.0,
+        "selective_accuracy": 0.6060606060606061,
+        "selective_risk": 0.3939393939393939
+      },
+      "n_records": 251,
+      "oracle_normalized_net_utility": 0.055777022323740294,
+      "oracle_utility": 0.8066964321595924,
+      "outcome_conditioned_oracle_normalized_net_utility": 0.06627499335073679,
+      "regime_coverage": 0.15789473684210525,
+      "risk_adjusted_utility": 0.033804255953781996,
+      "scientific_discovery": {
+        "positive_recall": 0.2786885245901639,
+        "regime_coverage": 0.15789473684210525,
+        "selected_regimes": 3.0,
+        "simple_regret": 0.29430426904786744,
+        "task": "mixed"
+      },
+      "selected_utility": 0.044995124905047236,
+      "threshold": 0.68,
+      "utility_efficiency": 0.055777022323740294
+    },
+    "local_voi_harness": {
+      "budget": 25,
+      "confidently_wrong_execute_rate": 0.00398406374501992,
+      "coverage": 0.01195219123505976,
+      "diagnostic_score": 0.415256511625573,
+      "execute_selective_risk": 0.3333333333333333,
+      "hit_efficiency": 0.6666666666666667,
+      "hit_rate": 0.2,
+      "n_records": 251,
+      "oracle_normalized_net_utility": 0.8356918121944303,
+      "oracle_utility": 0.8267579918074968,
+      "outcome_conditioned_oracle_normalized_net_utility": 0.10639259797839073,
+      "regime_coverage": 0.3684210526315789,
+      "risk_adjusted_utility": 0.557127874796287,
+      "selected_utility": 0.690914884419835,
+      "stop_rate": 0.9880478087649402,
+      "utility_efficiency": 0.10658102514768034,
+      "verify_rate": 0.0
+    },
+    "scivoi_rhi": {
+      "accepted_versions": [
+        "H0_reliability_only"
+      ],
+      "budget": 25,
+      "confidently_wrong_execute_rate": 0.055776892430278883,
+      "coverage": 0.09561752988047809,
+      "diagnostic_score": 0.415256511625573,
+      "execute_selective_risk": 0.5833333333333334,
+      "hit_efficiency": 0.6666666666666667,
+      "hit_rate": 0.4,
+      "n_accepted": 0,
+      "n_records": 251,
+      "oracle_normalized_net_utility": 0.08609419333267589,
+      "oracle_utility": 0.8267579918074968,
+      "outcome_conditioned_oracle_normalized_net_utility": 0.10239305301589938,
+      "regime_coverage": 0.15789473684210525,
+      "risk_adjusted_utility": 0.035872580555281613,
+      "selected_utility": 0.07117906238600949,
+      "stop_rate": 0.9043824701195219,
+      "utility_efficiency": 0.10658102514768034,
+      "verify_rate": 0.0
+    },
+    "verbal_confidence": {
+      "budget": 25,
+      "confidently_wrong_execute_rate": 0.38247011952191234,
+      "coverage": 0.4701195219123506,
+      "diagnostic_score": 0.47840998048039957,
+      "discovery_gain": {
+        "best_utility": 0.6660782398628529,
+        "budget": 25.0,
+        "hit_efficiency": 1.0,
+        "hit_rate": 0.6,
+        "hit_rate_lift": 0.35697211155378483,
+        "mean_utility": 0.03445573432059084,
+        "mean_utility_lift": -0.294854850583322,
+        "normalized_hit_lift": 1.0,
+        "normalized_utility_lift": -0.6176447254947693,
+        "oracle_hit_rate": 0.6,
+        "oracle_mean_utility": 0.8066964321595923,
+        "random_hit_rate": 0.24302788844621515,
+        "random_mean_utility": 0.32931058490391285,
+        "utility_efficiency": 0.042712144180866184
+      },
+      "execute_selective_risk": 0.8135593220338984,
+      "hit_efficiency": 1.0,
+      "hit_rate": 0.6,
+      "metrics": {
+        "accuracy_at_threshold": 0.46215139442231074,
+        "aurc": 0.6990402351292303,
+        "brier": 0.2668953291834491,
+        "confidently_wrong_rate": 0.38247011952191234,
+        "coverage": 0.4701195219123506,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.30168587058655805,
+        "log_loss": 0.7285945979433672,
+        "n": 251.0,
+        "selective_accuracy": 0.1864406779661017,
+        "selective_risk": 0.8135593220338984
+      },
+      "n_records": 251,
+      "oracle_normalized_net_utility": 0.04271214418086619,
+      "oracle_utility": 0.8066964321595924,
+      "outcome_conditioned_oracle_normalized_net_utility": 0.0507511328796369,
+      "regime_coverage": 0.15789473684210525,
+      "risk_adjusted_utility": 0.007963281118466576,
+      "scientific_discovery": {
+        "positive_recall": 0.2459016393442623,
+        "regime_coverage": 0.15789473684210525,
+        "selected_regimes": 3.0,
+        "simple_regret": 0.29430426904786744,
+        "task": "mixed"
+      },
+      "selected_utility": 0.034455734320590854,
+      "threshold": 0.56,
+      "utility_efficiency": 0.042712144180866184
+    }
+  },
+  "schema": "direct-judge-main-materials-subset-eval-v1",
+  "train_feedback_acceptance_split": {
+    "acceptance": 51,
+    "feedback": 51,
+    "test": 251,
+    "train": 147
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "confirmatory_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "experiment": "h20_perovskite_multitool_external_validation",
+  "methods": {
+    "fixed_high_fidelity_expected": {
+      "certified_folds": 5,
+      "deployed_test_gains": [
+        0.0017676330279755986,
+        0.0015460962575470703,
+        0.00126679475323563,
+        0.001735082172378519,
+        0.0006363608861818851
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0013903934194637406,
+      "non_high_fidelity_folds": 0,
+      "selected_tool_subsets": [
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ]
+      ],
+      "test_selective_risks": [
+        0.029166666666666667,
+        0.0703125,
+        0.009852216748768473,
+        0.02564102564102564,
+        0.026595744680851064
+      ]
+    },
+    "no_source_multitool_expected": {
+      "certified_folds": 5,
+      "deployed_test_gains": [
+        0.0017671645423512285,
+        0.0014399042059571967,
+        0.0012746009553699978,
+        0.0018706275169241978,
+        0.0006954151612342479
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0014095424763673737,
+      "non_high_fidelity_folds": 0,
+      "selected_tool_subsets": [
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ]
+      ],
+      "test_selective_risks": [
+        0.02880658436213992,
+        0.08759124087591241,
+        0.009900990099009901,
+        0.021505376344086023,
+        0.026737967914438502
+      ]
+    },
+    "source_multitool_expected": {
+      "certified_folds": 5,
+      "deployed_test_gains": [
+        0.0017676330279755986,
+        0.0015460962575470703,
+        0.00126679475323563,
+        0.001735082172378519,
+        0.0006363608861818851
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0013903934194637406,
+      "non_high_fidelity_folds": 0,
+      "selected_tool_subsets": [
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ],
+        [
+          "high_fidelity"
+        ]
+      ],
+      "test_selective_risks": [
+        0.029166666666666667,
+        0.0703125,
+        0.009852216748768473,
+        0.02564102564102564,
+        0.026595744680851064
+      ]
+    },
+    "static_reliability_high_fidelity": {
+      "certified_folds": 0,
+      "deployed_test_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0,
+      "non_high_fidelity_folds": 0,
+      "selected_tool_subsets": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "test_selective_risks": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "preregistered_primary": "source_multitool_expected",
+  "primary_confirmatory_pass": false,
+  "protocol_hash": "6e29eb36b0065749fcdd0c7f908875750a5a7a56470557bbe9b92e9cd7f91c03",
+  "success_criteria": {
+    "beats_fixed_high_fidelity": false,
+    "beats_no_source": false,
+    "deploys_at_least_four_of_five": true,
+    "observed_test_risk_within_alpha": true,
+    "positive_mean_gain": true,
+    "uses_non_high_fidelity_on_two_folds": false
+  }
+}

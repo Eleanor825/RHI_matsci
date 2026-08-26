@@ -1,0 +1,168 @@
+{
+  "aggregate": {
+    "acquisition_fraction": {
+      "maximum": 0.688082235785416,
+      "mean": 0.280051397365885,
+      "median": 0.1814969482814006,
+      "minimum": 0.10664953421137166,
+      "population_std": 0.2107800624961242
+    },
+    "coverage": {
+      "maximum": 0.017346610986186957,
+      "mean": 0.014262769033087054,
+      "median": 0.015419209765499518,
+      "minimum": 0.008673305493093478,
+      "population_std": 0.002976224817706513
+    },
+    "paired_net_gain_delta": {
+      "maximum": 0.006350985022070677,
+      "mean": 0.001352906471636796,
+      "median": 0.00011679717216244562,
+      "minimum": -3.392500945125214e-05,
+      "population_std": 0.002502921805191203
+    },
+    "population_net_gain": {
+      "maximum": 0.004974820550499845,
+      "mean": 0.0014021733641655005,
+      "median": 0.0006538700502608345,
+      "minimum": 0.0002016279423366592,
+      "population_std": 0.0017943498555052957
+    },
+    "selected_mean_gain": {
+      "maximum": 0.3661225254390003,
+      "mean": 0.12457860714895931,
+      "median": 0.06509880683311187,
+      "minimum": 0.06244786388462454,
+      "population_std": 0.1207798377526925
+    },
+    "selective_risk": {
+      "maximum": 0.1111111111111111,
+      "mean": 0.04945200302343159,
+      "median": 0.041666666666666664,
+      "minimum": 0.0,
+      "population_std": 0.03938971613531673
+    },
+    "shortfall_coverage": {
+      "maximum": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "population_std": 0.0
+    },
+    "worst_regime_risk_min5": {
+      "maximum": 0.2222222222222222,
+      "mean": 0.1158080808080808,
+      "median": 0.13333333333333333,
+      "minimum": 0.0,
+      "population_std": 0.08354268163721602
+    },
+    "worst_task_risk": {
+      "maximum": 0.2222222222222222,
+      "mean": 0.09137377527621429,
+      "median": 0.07692307692307693,
+      "minimum": 0.0,
+      "population_std": 0.07990832690896989
+    }
+  },
+  "alpha": 0.2,
+  "confirmatory_criteria": {
+    "beats_continuous_mean_seeds": 3,
+    "h5_2_confirmatory_pass": true,
+    "nonzero_coverage_seeds": 5,
+    "positive_mean_paired_difference": true,
+    "positive_population_net_gain_seeds": 5,
+    "risk_at_most_0.20_seeds": 5,
+    "source_nonzero_two_tasks_every_seed": true
+  },
+  "experiment": "h5_2_stratified_acquisition_five_seeds",
+  "paired_inference": {
+    "bootstrap_mean_difference_ci_95": [
+      8.825314117915772e-07,
+      0.003874394495652676
+    ],
+    "interpretation": "directionally positive but not conventionally significant",
+    "wilcoxon_two_sided": {
+      "pvalue": 0.3125,
+      "statistic": 3.0
+    }
+  },
+  "primary_method": "task_sparse_continuous_sd_worth",
+  "rows": [
+    {
+      "ablation_population_net_gain": 0.0005375353202941022,
+      "acquisition_fraction": 0.2695149373594603,
+      "coverage": 0.01574044330228076,
+      "paired_net_gain_delta": -3.392500945125214e-05,
+      "population_net_gain": 0.0005036103108428501,
+      "seed": 1,
+      "selected_mean_gain": 0.06623956933987331,
+      "selective_risk": 0.02040816326530612,
+      "shortfall_coverage": 0.0,
+      "shortfall_test_loss": 0.0,
+      "source_positive_tasks": 3,
+      "worst_regime_risk_min5": 0.041666666666666664,
+      "worst_task_risk": 0.024390243902439025
+    },
+    {
+      "ablation_population_net_gain": 0.0003239955453847119,
+      "acquisition_fraction": 0.10664953421137166,
+      "coverage": 0.014134275618374558,
+      "paired_net_gain_delta": 0.0003529424215026018,
+      "population_net_gain": 0.0006769379668873137,
+      "seed": 7,
+      "selected_mean_gain": 0.06298427024818654,
+      "selective_risk": 0.0,
+      "shortfall_coverage": 0.0,
+      "shortfall_test_loss": 0.0,
+      "source_positive_tasks": 3,
+      "worst_regime_risk_min5": 0.0,
+      "worst_task_risk": 0.0
+    },
+    {
+      "ablation_population_net_gain": -0.001376164471570832,
+      "acquisition_fraction": 0.688082235785416,
+      "coverage": 0.017346610986186957,
+      "paired_net_gain_delta": 0.006350985022070677,
+      "population_net_gain": 0.004974820550499845,
+      "seed": 13,
+      "selected_mean_gain": 0.3661225254390003,
+      "selective_risk": 0.1111111111111111,
+      "shortfall_coverage": 0.0,
+      "shortfall_test_loss": 0.0,
+      "source_positive_tasks": 3,
+      "worst_regime_risk_min5": 0.2222222222222222,
+      "worst_task_risk": 0.2222222222222222
+    },
+    {
+      "ablation_population_net_gain": 0.00022389519043715094,
+      "acquisition_fraction": 0.1814969482814006,
+      "coverage": 0.008673305493093478,
+      "paired_net_gain_delta": -2.2267248100491725e-05,
+      "population_net_gain": 0.0002016279423366592,
+      "seed": 21,
+      "selected_mean_gain": 0.06509880683311187,
+      "selective_risk": 0.07407407407407407,
+      "shortfall_coverage": 0.0,
+      "shortfall_test_loss": 0.0,
+      "source_positive_tasks": 3,
+      "worst_regime_risk_min5": 0.18181818181818182,
+      "worst_task_risk": 0.07692307692307693
+    },
+    {
+      "ablation_population_net_gain": 0.0005370728780983889,
+      "acquisition_fraction": 0.15451333119177643,
+      "coverage": 0.015419209765499518,
+      "paired_net_gain_delta": 0.00011679717216244562,
+      "population_net_gain": 0.0006538700502608345,
+      "seed": 42,
+      "selected_mean_gain": 0.06244786388462454,
+      "selective_risk": 0.041666666666666664,
+      "shortfall_coverage": 0.0,
+      "shortfall_test_loss": 0.0,
+      "source_positive_tasks": 3,
+      "worst_regime_risk_min5": 0.13333333333333333,
+      "worst_task_risk": 0.13333333333333333
+    }
+  ],
+  "verification_cost": 0.002
+}

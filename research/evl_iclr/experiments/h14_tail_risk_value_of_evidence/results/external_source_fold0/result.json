@@ -1,0 +1,1783 @@
+{
+  "acquisition_assumption": "oracle_selected_only_upper_bound",
+  "development_only": true,
+  "evidence_sources": [
+    "composition",
+    "structure",
+    "combined"
+  ],
+  "experiment": "h14_external_source_decomposition_pilot",
+  "methods": {
+    "no_source_mean_0.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_mean_0.25": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_mean_0.50": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_mean_1.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_p_0.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_p_0.25": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_p_0.50": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_p_1.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_tail_0.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_tail_0.25": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_tail_0.50": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "no_source_tail_1.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_mean_0.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_mean_0.25": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_mean_0.50": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_mean_1.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_p_0.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_p_0.25": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_p_0.50": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_p_1.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_tail_0.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_tail_0.25": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_tail_0.50": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    },
+    "source_tail_1.00": {
+      "acceptance_by_task": {
+        "external_extreme_phonons": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_pairwise_dielectric": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        },
+        "external_unique_jdft2d": {
+          "alpha": 0.2,
+          "candidate_prefixes": 7,
+          "delta": 0.016666666666666666,
+          "empirical_risk": 0.0,
+          "risk_upper_bound": 0.0,
+          "selected_count": 0,
+          "selected_fraction": 0.0,
+          "threshold": 1.000000000001
+        }
+      },
+      "test": {
+        "aggregate": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0
+        },
+        "external_extreme_phonons": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_pairwise_dielectric": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        },
+        "external_unique_jdft2d": {
+          "coverage": 0.0,
+          "population_gain_after_cost": 0.0,
+          "selected_count": 0,
+          "selected_mean_gain": 0.0,
+          "selective_risk": 0.0
+        }
+      },
+      "thresholds": {
+        "external_extreme_phonons": 1.000000000001,
+        "external_pairwise_dielectric": 1.000000000001,
+        "external_unique_jdft2d": 1.000000000001
+      }
+    }
+  },
+  "no_source_model": {
+    "beta": 0.1,
+    "gain_bounds": [
+      -1.4,
+      1.0
+    ],
+    "parameters_by_task": {
+      "external_extreme_phonons": {
+        "negative_gain": {
+          "base_variance": 0.00946342668064817,
+          "external_weight": 2.1269280110429727,
+          "internal_weight": 2.1269280110429727,
+          "mean_bias": -0.05602671782598694,
+          "mean_slope": 0.9149629939839486
+        },
+        "positive_gain": {
+          "base_variance": 0.0004059502968261269,
+          "external_weight": 0.018149927917809738,
+          "internal_weight": 0.018149927917809738,
+          "mean_bias": 0.06741759401212934,
+          "mean_slope": 0.08208595084229228
+        },
+        "positive_probability": {
+          "base_variance": 0.01871030079175056,
+          "external_weight": 0.6931471805599453,
+          "internal_weight": 0.6931471805599453,
+          "mean_bias": 0.08076101287360472,
+          "mean_slope": 0.9934911668378187
+        }
+      },
+      "external_pairwise_dielectric": {
+        "negative_gain": {
+          "base_variance": 0.020484926430609937,
+          "external_weight": 0.6931471805599453,
+          "internal_weight": 0.6931471805599453,
+          "mean_bias": -0.31237753972151105,
+          "mean_slope": 0.1075924189563691
+        },
+        "positive_gain": {
+          "base_variance": 0.0006981521276046397,
+          "external_weight": 2.1269280110429727,
+          "internal_weight": 2.1269280110429727,
+          "mean_bias": 0.11459591820299664,
+          "mean_slope": 0.18968699338246153
+        },
+        "positive_probability": {
+          "base_variance": 0.01323844324309534,
+          "external_weight": 0.018149927917809738,
+          "internal_weight": 0.018149927917809738,
+          "mean_bias": 0.177240749911969,
+          "mean_slope": 0.9690466921540479
+        }
+      },
+      "external_unique_jdft2d": {
+        "negative_gain": {
+          "base_variance": 0.06613643829525157,
+          "external_weight": 0.6931471805599453,
+          "internal_weight": 0.6931471805599453,
+          "mean_bias": -0.17748376676015995,
+          "mean_slope": 0.8158822197271258
+        },
+        "positive_gain": {
+          "base_variance": 0.0003941080414617441,
+          "external_weight": 2.1269280110429727,
+          "internal_weight": 2.1269280110429727,
+          "mean_bias": 0.08779211104714012,
+          "mean_slope": 0.14684509219247946
+        },
+        "positive_probability": {
+          "base_variance": 0.02351648586772095,
+          "external_weight": 2.1269280110429727,
+          "internal_weight": 2.1269280110429727,
+          "mean_bias": 0.1155309628112083,
+          "mean_slope": 0.9867361384168062
+        }
+      }
+    },
+    "tail_weight": 0.5,
+    "type": "source_decomposed_hurdle_gain_calibrator",
+    "uses_source_variance": false
+  },
+  "source_model": {
+    "beta": 0.1,
+    "gain_bounds": [
+      -1.4,
+      1.0
+    ],
+    "parameters_by_task": {
+      "external_extreme_phonons": {
+        "negative_gain": {
+          "base_variance": 0.009100899470902675,
+          "external_weight": 1.2283163031815283,
+          "internal_weight": 0.004153448184586259,
+          "mean_bias": -0.05280678250893786,
+          "mean_slope": 0.9202908047054736
+        },
+        "positive_gain": {
+          "base_variance": 0.00021966958243780952,
+          "external_weight": 0.944828417037186,
+          "internal_weight": 2.8264067708040796,
+          "mean_bias": 0.06799151676676814,
+          "mean_slope": 0.11188173386607866
+        },
+        "positive_probability": {
+          "base_variance": 0.015435956304984231,
+          "external_weight": 0.156550086333061,
+          "internal_weight": 0.14400984274554504,
+          "mean_bias": 0.07457246696699613,
+          "mean_slope": 0.9074696077504688
+        }
+      },
+      "external_pairwise_dielectric": {
+        "negative_gain": {
+          "base_variance": 0.02044710084027278,
+          "external_weight": 0.0852241229382312,
+          "internal_weight": 0.07309875347830914,
+          "mean_bias": -0.31238284393903815,
+          "mean_slope": 0.10758513087963645
+        },
+        "positive_gain": {
+          "base_variance": 0.000678216259655218,
+          "external_weight": 8.373009267704484e-07,
+          "internal_weight": 0.37104756893640733,
+          "mean_bias": 0.11460679479061438,
+          "mean_slope": 0.18963214198676195
+        },
+        "positive_probability": {
+          "base_variance": 0.01323862469702183,
+          "external_weight": 3.942979434246615e-05,
+          "internal_weight": 0.0026134479968934355,
+          "mean_bias": 0.17725624285488142,
+          "mean_slope": 0.9691027299902094
+        }
+      },
+      "external_unique_jdft2d": {
+        "negative_gain": {
+          "base_variance": 0.05943067052815186,
+          "external_weight": 1.9155308373194218,
+          "internal_weight": 0.017203046276933944,
+          "mean_bias": -0.17197894371215733,
+          "mean_slope": 0.8341132689965356
+        },
+        "positive_gain": {
+          "base_variance": 0.0003940375558382644,
+          "external_weight": 3.059022737137205e-07,
+          "internal_weight": 3.059022737137205e-07,
+          "mean_bias": 0.08779979519504677,
+          "mean_slope": 0.14686955580924396
+        },
+        "positive_probability": {
+          "base_variance": 0.022010793666325468,
+          "external_weight": 3.059022737137205e-07,
+          "internal_weight": 0.12910913315173644,
+          "mean_bias": 0.1120280270919057,
+          "mean_slope": 0.9556904623226481
+        }
+      }
+    },
+    "tail_weight": 0.5,
+    "type": "source_decomposed_hurdle_gain_calibrator",
+    "uses_source_variance": true
+  },
+  "tool_cost_per_selected_action": 0.006
+}

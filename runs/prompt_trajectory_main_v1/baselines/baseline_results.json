@@ -1,0 +1,374 @@
+{
+  "schema_version": "prompt-trajectory-baselines-v1",
+  "trajectory_path": "runs/prompt_trajectory_main_v1/trajectories.jsonl",
+  "n_trajectories": 900,
+  "budget_fraction": 0.1,
+  "seed": 1729,
+  "results": {
+    "always_execute": {
+      "n_trajectories": 900,
+      "n_selected": 900,
+      "coverage": 1.0,
+      "selective_risk": 0.9411111111111111,
+      "hit_rate": 0.058888888888888886,
+      "mean_utility_selected": 0.022893527777777777,
+      "mean_cost_selected": 0.6743333333333333,
+      "net_utility_selected": -0.07825647222222223,
+      "total_utility_per_trajectory": 0.02289352777777778,
+      "total_net_utility_per_trajectory": -0.07825647222222298,
+      "kind": "all",
+      "by_task": {
+        "discover_unique": {
+          "n_trajectories": 300,
+          "n_selected": 300,
+          "coverage": 1.0,
+          "selective_risk": 0.9033333333333333,
+          "hit_rate": 0.09666666666666666,
+          "mean_utility_selected": 0.04825362,
+          "mean_cost_selected": 0.49833333333333335,
+          "net_utility_selected": -0.02649638,
+          "total_utility_per_trajectory": 0.048253620000000004,
+          "total_net_utility_per_trajectory": -0.02649638
+        },
+        "extreme_properties": {
+          "n_trajectories": 300,
+          "n_selected": 300,
+          "coverage": 1.0,
+          "selective_risk": 1.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 1.504,
+          "net_utility_selected": -0.2256,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": -0.22560000000000116
+        },
+        "matbench_pairwise": {
+          "n_trajectories": 300,
+          "n_selected": 300,
+          "coverage": 1.0,
+          "selective_risk": 0.92,
+          "hit_rate": 0.08,
+          "mean_utility_selected": 0.020426963333333333,
+          "mean_cost_selected": 0.020666666666666667,
+          "net_utility_selected": 0.017326963333333334,
+          "total_utility_per_trajectory": 0.020426963333333336,
+          "total_net_utility_per_trajectory": 0.017326963333333334
+        }
+      }
+    },
+    "random_top10": {
+      "n_trajectories": 900,
+      "n_selected": 90,
+      "coverage": 0.1,
+      "selective_risk": 0.9777777777777777,
+      "hit_rate": 0.022222222222222223,
+      "mean_utility_selected": 0.012350544444444445,
+      "mean_cost_selected": 0.7055555555555556,
+      "net_utility_selected": -0.09348278888888889,
+      "total_utility_per_trajectory": 0.0012350544444444445,
+      "total_net_utility_per_trajectory": -0.009348278888888893,
+      "kind": "budget",
+      "by_task": {
+        "discover_unique": {
+          "n_trajectories": 300,
+          "n_selected": 35,
+          "coverage": 0.11666666666666667,
+          "selective_risk": 1.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 0.5,
+          "net_utility_selected": -0.075,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": -0.00875
+        },
+        "extreme_properties": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 1.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 1.52,
+          "net_utility_selected": -0.22799999999999998,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": -0.02280000000000001
+        },
+        "matbench_pairwise": {
+          "n_trajectories": 300,
+          "n_selected": 25,
+          "coverage": 0.08333333333333333,
+          "selective_risk": 0.92,
+          "hit_rate": 0.08,
+          "mean_utility_selected": 0.04446196,
+          "mean_cost_selected": 0.016,
+          "net_utility_selected": 0.04206196,
+          "total_utility_per_trajectory": 0.0037051633333333336,
+          "total_net_utility_per_trajectory": 0.0035051633333333335
+        }
+      }
+    },
+    "verbal_confidence_top10": {
+      "n_trajectories": 900,
+      "n_selected": 90,
+      "coverage": 0.1,
+      "selective_risk": 0.9666666666666667,
+      "hit_rate": 0.03333333333333333,
+      "mean_utility_selected": 0.006601088888888889,
+      "mean_cost_selected": 0.648888888888889,
+      "net_utility_selected": -0.09073224444444446,
+      "total_utility_per_trajectory": 0.0006601088888888889,
+      "total_net_utility_per_trajectory": -0.009073224444444448,
+      "kind": "budget",
+      "by_task": {
+        "discover_unique": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.9666666666666667,
+          "hit_rate": 0.03333333333333333,
+          "mean_utility_selected": 0.0163961,
+          "mean_cost_selected": 0.5,
+          "net_utility_selected": -0.0586039,
+          "total_utility_per_trajectory": 0.0016396100000000001,
+          "total_net_utility_per_trajectory": -0.00586039
+        },
+        "extreme_properties": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 1.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 1.4133333333333333,
+          "net_utility_selected": -0.212,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": -0.02120000000000001
+        },
+        "matbench_pairwise": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.9333333333333333,
+          "hit_rate": 0.06666666666666667,
+          "mean_utility_selected": 0.0034071666666666664,
+          "mean_cost_selected": 0.03333333333333333,
+          "net_utility_selected": -0.0015928333333333337,
+          "total_utility_per_trajectory": 0.00034071666666666666,
+          "total_net_utility_per_trajectory": -0.00015928333333333332
+        }
+      }
+    },
+    "evidence_heuristic_top10": {
+      "n_trajectories": 900,
+      "n_selected": 90,
+      "coverage": 0.1,
+      "selective_risk": 0.7,
+      "hit_rate": 0.3,
+      "mean_utility_selected": 0.10358763333333333,
+      "mean_cost_selected": 0.7533333333333334,
+      "net_utility_selected": -0.009412366666666672,
+      "total_utility_per_trajectory": 0.010358763333333333,
+      "total_net_utility_per_trajectory": -0.0009412366666666709,
+      "kind": "budget",
+      "by_task": {
+        "discover_unique": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.7666666666666666,
+          "hit_rate": 0.23333333333333334,
+          "mean_utility_selected": 0.11856773333333333,
+          "mean_cost_selected": 0.5,
+          "net_utility_selected": 0.04356773333333333,
+          "total_utility_per_trajectory": 0.011856773333333332,
+          "total_net_utility_per_trajectory": 0.004356773333333332
+        },
+        "extreme_properties": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 1.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 1.6,
+          "net_utility_selected": -0.24,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": -0.02400000000000001
+        },
+        "matbench_pairwise": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.33333333333333337,
+          "hit_rate": 0.6666666666666666,
+          "mean_utility_selected": 0.19219516666666667,
+          "mean_cost_selected": 0.16,
+          "net_utility_selected": 0.16819516666666667,
+          "total_utility_per_trajectory": 0.019219516666666665,
+          "total_net_utility_per_trajectory": 0.016819516666666666
+        }
+      }
+    },
+    "static_reliability_top10": {
+      "n_trajectories": 900,
+      "n_selected": 90,
+      "coverage": 0.1,
+      "selective_risk": 0.6555555555555556,
+      "hit_rate": 0.34444444444444444,
+      "mean_utility_selected": 0.10761245555555556,
+      "mean_cost_selected": 0.7666666666666667,
+      "net_utility_selected": -0.007387544444444449,
+      "total_utility_per_trajectory": 0.010761245555555556,
+      "total_net_utility_per_trajectory": -0.0007387544444444454,
+      "kind": "budget",
+      "by_task": {
+        "discover_unique": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.7666666666666666,
+          "hit_rate": 0.23333333333333334,
+          "mean_utility_selected": 0.11856773333333333,
+          "mean_cost_selected": 0.5,
+          "net_utility_selected": 0.04356773333333333,
+          "total_utility_per_trajectory": 0.011856773333333332,
+          "total_net_utility_per_trajectory": 0.004356773333333332
+        },
+        "extreme_properties": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 1.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 1.6,
+          "net_utility_selected": -0.24,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": -0.02400000000000001
+        },
+        "matbench_pairwise": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.19999999999999996,
+          "hit_rate": 0.8,
+          "mean_utility_selected": 0.20426963333333334,
+          "mean_cost_selected": 0.2,
+          "net_utility_selected": 0.17426963333333334,
+          "total_utility_per_trajectory": 0.020426963333333336,
+          "total_net_utility_per_trajectory": 0.017426963333333337
+        }
+      }
+    },
+    "prompt_policy": {
+      "n_trajectories": 900,
+      "n_selected": 330,
+      "coverage": 0.36666666666666664,
+      "selective_risk": 0.8393939393939394,
+      "hit_rate": 0.1606060606060606,
+      "mean_utility_selected": 0.06243689393939394,
+      "mean_cost_selected": 0.4718181818181818,
+      "net_utility_selected": -0.008335833333333327,
+      "total_utility_per_trajectory": 0.02289352777777778,
+      "total_net_utility_per_trajectory": -0.003056472222222217,
+      "kind": "trajectory",
+      "by_task": {
+        "discover_unique": {
+          "n_trajectories": 300,
+          "n_selected": 299,
+          "coverage": 0.9966666666666667,
+          "selective_risk": 0.903010033444816,
+          "hit_rate": 0.09698996655518395,
+          "mean_utility_selected": 0.04841500334448161,
+          "mean_cost_selected": 0.5,
+          "net_utility_selected": -0.02658499665551839,
+          "total_utility_per_trajectory": 0.048253620000000004,
+          "total_net_utility_per_trajectory": -0.02649638
+        },
+        "extreme_properties": {
+          "n_trajectories": 300,
+          "n_selected": 0,
+          "coverage": 0.0,
+          "selective_risk": 0.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 0.0,
+          "net_utility_selected": 0.0,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": 0.0
+        },
+        "matbench_pairwise": {
+          "n_trajectories": 300,
+          "n_selected": 31,
+          "coverage": 0.10333333333333333,
+          "selective_risk": 0.22580645161290325,
+          "hit_rate": 0.7741935483870968,
+          "mean_utility_selected": 0.19768029032258064,
+          "mean_cost_selected": 0.2,
+          "net_utility_selected": 0.16768029032258064,
+          "total_utility_per_trajectory": 0.020426963333333336,
+          "total_net_utility_per_trajectory": 0.017326963333333334
+        }
+      }
+    },
+    "oracle_top10_reference": {
+      "n_trajectories": 900,
+      "n_selected": 90,
+      "coverage": 0.1,
+      "selective_risk": 0.4222222222222223,
+      "hit_rate": 0.5777777777777777,
+      "mean_utility_selected": 0.22893527777777778,
+      "mean_cost_selected": 0.6911111111111111,
+      "net_utility_selected": 0.1252686111111111,
+      "total_utility_per_trajectory": 0.02289352777777778,
+      "total_net_utility_per_trajectory": 0.01252686111111111,
+      "kind": "oracle_reference",
+      "by_task": {
+        "discover_unique": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.033333333333333326,
+          "hit_rate": 0.9666666666666667,
+          "mean_utility_selected": 0.48253619999999997,
+          "mean_cost_selected": 0.5,
+          "net_utility_selected": 0.40753619999999996,
+          "total_utility_per_trajectory": 0.048253620000000004,
+          "total_net_utility_per_trajectory": 0.040753620000000004
+        },
+        "extreme_properties": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 1.0,
+          "hit_rate": 0.0,
+          "mean_utility_selected": 0.0,
+          "mean_cost_selected": 1.4133333333333333,
+          "net_utility_selected": -0.212,
+          "total_utility_per_trajectory": 0.0,
+          "total_net_utility_per_trajectory": -0.02120000000000001
+        },
+        "matbench_pairwise": {
+          "n_trajectories": 300,
+          "n_selected": 30,
+          "coverage": 0.1,
+          "selective_risk": 0.23333333333333328,
+          "hit_rate": 0.7666666666666667,
+          "mean_utility_selected": 0.20426963333333334,
+          "mean_cost_selected": 0.16,
+          "net_utility_selected": 0.18026963333333335,
+          "total_utility_per_trajectory": 0.020426963333333336,
+          "total_net_utility_per_trajectory": 0.018026963333333333
+        }
+      }
+    }
+  },
+  "direct_llm_judge": {
+    "status": "pending_provider_run",
+    "included": false
+  },
+  "scivoi_rhi": {
+    "status": "pending_trajectory_policy_replay",
+    "included": false
+  }
+}

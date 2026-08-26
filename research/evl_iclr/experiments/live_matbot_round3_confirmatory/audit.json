@@ -1,0 +1,76 @@
+{
+  "baseline_gains": {
+    "base_numeric": 4.8370201696041795,
+    "real_tool_numeric": 59.69381509150336,
+    "static_reliability": -12.19173433099002
+  },
+  "baseline_risks": {
+    "base_numeric": 0.6707317073170732,
+    "real_tool_numeric": 0.04878048780487805,
+    "static_reliability": 0.8536585365853658
+  },
+  "checks": {
+    "all_trajectories_complete": true,
+    "beats_every_baseline": true,
+    "fresh_fingerprint_overlap_zero": true,
+    "frozen_hashes_match": true,
+    "hidden_outcome_absent_pre_action": true,
+    "live_runtime_only": true,
+    "no_higher_empirical_risk_than_best_gain_baseline": true,
+    "numeric_output_no_route": true,
+    "positive_trajectory_gain": true,
+    "risk_ucb_le_0.10": true,
+    "selected_nonempty": true
+  },
+  "current_hashes": {
+    "experiments/sd_worth/capture_live_matbot_tool_trajectories.py": "5597779cf8a35cdc0c40a07ed60695d13f5cf936762f472c9a74631f29c1ba9a",
+    "experiments/sd_worth/evaluate_learned_live_matbot_harness.py": "d1b4d65df2d365ce95701d7df1ff0b6e91b638e2707b3bc10d34fd93cb538349",
+    "src/harness_matsci/matbot_strict_gain_runtime.py": "a60949fd6c28ead9fe393a17d0b64d71ff59aafd11294ead6e7f33b4afaf9d73",
+    "src/harness_matsci/real_scientific_tools.py": "5138afd84cdbee7c195befc3c6b61f49e1b7c9396452a4cece7f2cc3f2667561"
+  },
+  "forbidden_route_count": 0,
+  "frozen_hashes": {
+    "experiments/sd_worth/capture_live_matbot_tool_trajectories.py": "5597779cf8a35cdc0c40a07ed60695d13f5cf936762f472c9a74631f29c1ba9a",
+    "experiments/sd_worth/evaluate_learned_live_matbot_harness.py": "d1b4d65df2d365ce95701d7df1ff0b6e91b638e2707b3bc10d34fd93cb538349",
+    "src/harness_matsci/matbot_strict_gain_runtime.py": "a60949fd6c28ead9fe393a17d0b64d71ff59aafd11294ead6e7f33b4afaf9d73",
+    "src/harness_matsci/real_scientific_tools.py": "5138afd84cdbee7c195befc3c6b61f49e1b7c9396452a4cece7f2cc3f2667561"
+  },
+  "gate_passed": true,
+  "hidden_pre_action_count": 0,
+  "primary": {
+    "budget": 82,
+    "coverage": 0.10110974106041924,
+    "errors": 0,
+    "evidence_cost_penalty": 3.0412500000000207,
+    "risk_upper_bound_95": 0.03587403171067115,
+    "selected": 82,
+    "selected_total_strict_gain": 66.4679849707765,
+    "selective_risk": 0.0,
+    "task_breakdown": {
+      "discover_unique": {
+        "count": 332,
+        "positive_count": 23,
+        "selected": 0,
+        "selected_gain": 0,
+        "selective_risk": 0.0
+      },
+      "extreme_properties": {
+        "count": 199,
+        "positive_count": 7,
+        "selected": 0,
+        "selected_gain": 0,
+        "selective_risk": 0.0
+      },
+      "matbench_pairwise": {
+        "count": 280,
+        "positive_count": 186,
+        "selected": 82,
+        "selected_gain": 66.4679849707765,
+        "selective_risk": 0.0
+      }
+    },
+    "trajectory_total_strict_gain": 63.42673497077648
+  },
+  "schema_version": "live-matbot-round3-audit-v1",
+  "trajectory_count": 811
+}

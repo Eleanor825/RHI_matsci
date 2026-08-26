@@ -1,0 +1,39 @@
+{
+  "schema": "direct-judge-subset-split-v1",
+  "seed": 20260816,
+  "splits": {
+    "test": 250,
+    "validation": 250
+  },
+  "tasks": {
+    "discover_unique": {
+      "positive_rate": 0.10778443113772455,
+      "positive_records": 18,
+      "records": 167,
+      "splits": {
+        "test": 84,
+        "validation": 83
+      }
+    },
+    "extreme_properties": {
+      "positive_rate": 0.14457831325301204,
+      "positive_records": 24,
+      "records": 166,
+      "splits": {
+        "test": 83,
+        "validation": 83
+      }
+    },
+    "matbench_pairwise": {
+      "positive_rate": 0.5508982035928144,
+      "positive_records": 92,
+      "records": 167,
+      "splits": {
+        "test": 83,
+        "validation": 84
+      }
+    }
+  },
+  "total_records": 500,
+  "validation_fraction": 0.5
+}

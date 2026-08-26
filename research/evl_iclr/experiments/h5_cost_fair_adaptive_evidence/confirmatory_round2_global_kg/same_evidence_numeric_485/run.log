@@ -1,0 +1,2572 @@
+{
+  "acceptance": {
+    "adaptive_ambiguity_voi": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.10103092783505155,
+      "errors": 3,
+      "macro_task_population_mean_gain": 0.051661926880840446,
+      "macro_task_selective_risk": 0.3333333333333333,
+      "population_mean_strict_gain": 0.06283794086346105,
+      "risk_upper_bound": 0.15070639698269922,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.655564312628136,
+      "selected_total_strict_gain": 32.122651318778665,
+      "selective_risk": 0.061224489795918366,
+      "stage_counts": {
+        "base": 330,
+        "screening": 53,
+        "verification": 102
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 2.1750000000000007,
+          "population_mean_gain": 0.004528302693266382,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.3849057289276425
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.02,
+          "errors": 2,
+          "evidence_cost": 3.275,
+          "population_mean_gain": 0.0034330084947602384,
+          "selected": 4,
+          "selective_risk": 0.5,
+          "total_gain": 0.6866016989520477
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.215,
+          "errors": 0,
+          "evidence_cost": 6.074999999999998,
+          "population_mean_gain": 0.1470244694544947,
+          "selected": 43,
+          "selective_risk": 0.0,
+          "total_gain": 29.404893890898943
+        }
+      },
+      "total_acquired_evidence_cost": 11.524999999999991,
+      "trajectory_total_strict_gain": 30.476401318778606,
+      "worst_task_population_mean_gain": 0.0034330084947602384,
+      "worst_task_selective_risk": 0.5
+    },
+    "adaptive_conservative_calibrated_p": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.10103092783505155,
+      "errors": 13,
+      "macro_task_population_mean_gain": 0.03217265004665936,
+      "macro_task_selective_risk": 0.08843537414965986,
+      "population_mean_strict_gain": 0.039884903635648894,
+      "risk_upper_bound": 0.3883632826632171,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.4062587400671374,
+      "selected_total_strict_gain": 19.906678263289734,
+      "selective_risk": 0.2653061224489796,
+      "stage_counts": {
+        "base": 415,
+        "screening": 42,
+        "verification": 28
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.19999999999999998,
+          "population_mean_gain": -0.0003529411764705882,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -0.03
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 3.2,
+          "population_mean_gain": -0.0024,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -0.4799999999999999
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.245,
+          "errors": 13,
+          "evidence_cost": 0.45000000000000007,
+          "population_mean_gain": 0.09927089131644866,
+          "selected": 49,
+          "selective_risk": 0.2653061224489796,
+          "total_gain": 19.854178263289732
+        }
+      },
+      "total_acquired_evidence_cost": 3.85,
+      "trajectory_total_strict_gain": 19.344178263289713,
+      "worst_task_population_mean_gain": -0.0024,
+      "worst_task_selective_risk": 0.2653061224489796
+    },
+    "adaptive_conservative_ltt": {
+      "available": false,
+      "certified": false,
+      "reason": "no simultaneously certified LTT threshold on policy feedback"
+    },
+    "adaptive_conservative_voi": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.10103092783505155,
+      "errors": 2,
+      "macro_task_population_mean_gain": 0.05642496373627288,
+      "macro_task_selective_risk": 0.27777777777777773,
+      "population_mean_strict_gain": 0.0679039476464097,
+      "risk_upper_bound": 0.12296750440536461,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6836666246634424,
+      "selected_total_strict_gain": 33.49966460850868,
+      "selective_risk": 0.04081632653061224,
+      "stage_counts": {
+        "base": 415,
+        "screening": 42,
+        "verification": 28
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.19999999999999998,
+          "population_mean_gain": 0.008013596810913442,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.6811557289276425
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.015,
+          "errors": 1,
+          "evidence_cost": 3.2,
+          "population_mean_gain": 0.0049017584947602475,
+          "selected": 3,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 0.9803516989520495
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.22,
+          "errors": 0,
+          "evidence_cost": 0.45000000000000007,
+          "population_mean_gain": 0.15635953590314497,
+          "selected": 44,
+          "selective_risk": 0.0,
+          "total_gain": 31.271907180628993
+        }
+      },
+      "total_acquired_evidence_cost": 3.85,
+      "trajectory_total_strict_gain": 32.933414608508706,
+      "worst_task_population_mean_gain": 0.0049017584947602475,
+      "worst_task_selective_risk": 0.5
+    },
+    "adaptive_mean_voi": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.10103092783505155,
+      "errors": 4,
+      "macro_task_population_mean_gain": 0.05137145343847158,
+      "macro_task_selective_risk": 0.34108527131782945,
+      "population_mean_strict_gain": 0.06165218232954201,
+      "risk_upper_bound": 0.17714788196748052,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6376287434658761,
+      "selected_total_strict_gain": 31.243808429827926,
+      "selective_risk": 0.08163265306122448,
+      "stage_counts": {
+        "base": 300,
+        "screening": 122,
+        "verification": 63
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.19999999999999998,
+          "population_mean_gain": 0.008013596810913442,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.6811557289276425
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.02,
+          "errors": 2,
+          "evidence_cost": 5.750000000000004,
+          "population_mean_gain": 0.001576758494760236,
+          "selected": 4,
+          "selective_risk": 0.5,
+          "total_gain": 0.3153516989520472
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.215,
+          "errors": 1,
+          "evidence_cost": 3.3999999999999995,
+          "population_mean_gain": 0.14452400500974108,
+          "selected": 43,
+          "selective_risk": 0.023255813953488372,
+          "total_gain": 28.904801001948215
+        }
+      },
+      "total_acquired_evidence_cost": 9.350000000000017,
+      "trajectory_total_strict_gain": 29.901308429827875,
+      "worst_task_population_mean_gain": 0.001576758494760236,
+      "worst_task_selective_risk": 0.5
+    },
+    "base_factorized_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.05742934836150576,
+      "macro_task_selective_risk": 0.16666666666666666,
+      "population_mean_strict_gain": 0.06906279824402947,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6835807581296794,
+      "selected_total_strict_gain": 33.49545714835429,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 485,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.00836653798738403,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.7111557289276427
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.235,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.16392150709713324,
+          "selected": 47,
+          "selective_risk": 0.0,
+          "total_gain": 32.78430141942665
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 33.49545714835429,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.5
+    },
+    "base_factorized_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.05979381443298969,
+      "errors": 6,
+      "macro_task_population_mean_gain": 0.03201748127673348,
+      "macro_task_selective_risk": 0.2222222222222222,
+      "population_mean_strict_gain": 0.03563751128796392,
+      "risk_upper_bound": 0.36799558626831724,
+      "selected_count": 29,
+      "selected_mean_strict_gain": 0.596006654298707,
+      "selected_total_strict_gain": 17.284192974662503,
+      "selective_risk": 0.20689655172413793,
+      "stage_counts": {
+        "base": 485,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.10588235294117647,
+          "errors": 6,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.016750398185892072,
+          "selected": 9,
+          "selective_risk": 0.6666666666666666,
+          "total_gain": 1.423783845800826
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.1,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.07930204564430836,
+          "selected": 20,
+          "selective_risk": 0.0,
+          "total_gain": 15.860409128861672
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 17.284192974662503,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.6666666666666666
+    },
+    "decision_consistent_kg_mean": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.10103092783505155,
+      "errors": 2,
+      "macro_task_population_mean_gain": 0.05732386079509642,
+      "macro_task_selective_risk": 0.27777777777777773,
+      "population_mean_strict_gain": 0.06893229816187368,
+      "risk_upper_bound": 0.12296750440536461,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6836666246634424,
+      "selected_total_strict_gain": 33.49966460850868,
+      "selective_risk": 0.04081632653061224,
+      "stage_counts": {
+        "base": 464,
+        "screening": 21,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.00836653798738403,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.7111557289276427
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.015,
+          "errors": 1,
+          "evidence_cost": 0.5250000000000001,
+          "population_mean_gain": 0.006908008494760245,
+          "selected": 3,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 1.381601698952049
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.22,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.15669703590314496,
+          "selected": 44,
+          "selective_risk": 0.0,
+          "total_gain": 31.339407180628992
+        }
+      },
+      "total_acquired_evidence_cost": 0.5250000000000001,
+      "trajectory_total_strict_gain": 33.432164608508735,
+      "worst_task_population_mean_gain": 0.006908008494760245,
+      "worst_task_selective_risk": 0.5
+    },
+    "decision_consistent_safe_kg": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.05742934836150576,
+      "macro_task_selective_risk": 0.16666666666666666,
+      "population_mean_strict_gain": 0.06906279824402947,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6835807581296794,
+      "selected_total_strict_gain": 33.49545714835429,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 485,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.00836653798738403,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.7111557289276427
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.235,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.16392150709713324,
+          "selected": 47,
+          "selective_risk": 0.0,
+          "total_gain": 32.78430141942665
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 33.49545714835429,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.5
+    },
+    "fixed_full_evidence_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.04773550591628839,
+      "macro_task_selective_risk": 0.1111111111111111,
+      "population_mean_strict_gain": 0.06261093515417086,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.7531898683627161,
+      "selected_total_strict_gain": 36.906303549773085,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 0,
+        "screening": 0,
+        "verification": 485
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 8.499999999999986,
+          "population_mean_gain": -0.014999999999999989,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -1.274999999999999
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.015,
+          "errors": 1,
+          "evidence_cost": 20.000000000000014,
+          "population_mean_gain": -0.007698241505239718,
+          "selected": 3,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": -1.5396483010479436
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.23,
+          "errors": 0,
+          "evidence_cost": 20.000000000000014,
+          "population_mean_gain": 0.16590475925410486,
+          "selected": 46,
+          "selective_risk": 0.0,
+          "total_gain": 33.180951850820975
+        }
+      },
+      "total_acquired_evidence_cost": 48.50000000000042,
+      "trajectory_total_strict_gain": 30.366303549772866,
+      "worst_task_population_mean_gain": -0.014999999999999989,
+      "worst_task_selective_risk": 0.3333333333333333
+    },
+    "fixed_full_evidence_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.061855670103092786,
+      "errors": 4,
+      "macro_task_population_mean_gain": 0.02881283363752449,
+      "macro_task_selective_risk": 0.25396825396825395,
+      "population_mean_strict_gain": 0.03114352677310482,
+      "risk_upper_bound": 0.2796151658934822,
+      "selected_count": 30,
+      "selected_mean_strict_gain": 0.7309870161652009,
+      "selected_total_strict_gain": 21.929610484956026,
+      "selective_risk": 0.13333333333333333,
+      "stage_counts": {
+        "base": 0,
+        "screening": 0,
+        "verification": 485
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.08235294117647059,
+          "errors": 3,
+          "evidence_cost": 8.499999999999986,
+          "population_mean_gain": 0.018983388674423417,
+          "selected": 7,
+          "selective_risk": 0.42857142857142855,
+          "total_gain": 1.6135880373259903
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.015,
+          "errors": 1,
+          "evidence_cost": 20.000000000000014,
+          "population_mean_gain": -0.007698241505239718,
+          "selected": 3,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": -1.5396483010479436
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.1,
+          "errors": 0,
+          "evidence_cost": 20.000000000000014,
+          "population_mean_gain": 0.07515335374338977,
+          "selected": 20,
+          "selective_risk": 0.0,
+          "total_gain": 15.030670748677954
+        }
+      },
+      "total_acquired_evidence_cost": 48.50000000000042,
+      "trajectory_total_strict_gain": 15.104610484955838,
+      "worst_task_population_mean_gain": -0.007698241505239718,
+      "worst_task_selective_risk": 0.42857142857142855
+    },
+    "fixed_screening_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.05557783822911897,
+      "macro_task_selective_risk": 0.1111111111111111,
+      "population_mean_strict_gain": 0.06964526378860278,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.722713325254518,
+      "selected_total_strict_gain": 35.41295293747138,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 0,
+        "screening": 485,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 2.1249999999999964,
+          "population_mean_gain": -0.0037499999999999973,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -0.31874999999999976
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.015,
+          "errors": 1,
+          "evidence_cost": 5.0000000000000036,
+          "population_mean_gain": 0.0035517584947602253,
+          "selected": 3,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 0.7103516989520451
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.23,
+          "errors": 0,
+          "evidence_cost": 5.0000000000000036,
+          "population_mean_gain": 0.1669317561925967,
+          "selected": 46,
+          "selective_risk": 0.0,
+          "total_gain": 33.38635123851934
+        }
+      },
+      "total_acquired_evidence_cost": 12.125000000000105,
+      "trajectory_total_strict_gain": 33.77795293747235,
+      "worst_task_population_mean_gain": -0.0037499999999999973,
+      "worst_task_selective_risk": 0.3333333333333333
+    },
+    "fixed_screening_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.06804123711340206,
+      "errors": 8,
+      "macro_task_population_mean_gain": 0.03070312983148561,
+      "macro_task_selective_risk": 0.38888888888888884,
+      "population_mean_strict_gain": 0.034900684757760286,
+      "risk_upper_bound": 0.3950714750490789,
+      "selected_count": 33,
+      "selected_mean_strict_gain": 0.5642979426519334,
+      "selected_total_strict_gain": 18.621832107513804,
+      "selective_risk": 0.24242424242424243,
+      "stage_counts": {
+        "base": 0,
+        "screening": 485,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.10588235294117647,
+          "errors": 6,
+          "evidence_cost": 2.1249999999999964,
+          "population_mean_gain": 0.013000398185892078,
+          "selected": 9,
+          "selective_risk": 0.6666666666666666,
+          "total_gain": 1.1050338458008266
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.02,
+          "errors": 2,
+          "evidence_cost": 5.0000000000000036,
+          "population_mean_gain": 0.0021392584947602313,
+          "selected": 4,
+          "selective_risk": 0.5,
+          "total_gain": 0.4278516989520462
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.1,
+          "errors": 0,
+          "evidence_cost": 5.0000000000000036,
+          "population_mean_gain": 0.07696973281380451,
+          "selected": 20,
+          "selective_risk": 0.0,
+          "total_gain": 15.3939465627609
+        }
+      },
+      "total_acquired_evidence_cost": 12.125000000000105,
+      "trajectory_total_strict_gain": 16.92683210751374,
+      "worst_task_population_mean_gain": 0.0021392584947602313,
+      "worst_task_selective_risk": 0.6666666666666666
+    },
+    "learned_portfolio_kg_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.05140937471008441,
+      "macro_task_selective_risk": 0.3333333333333333,
+      "population_mean_strict_gain": 0.06656314397123862,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6764413229806253,
+      "selected_total_strict_gain": 33.14562482605064,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 402,
+        "screening": 34,
+        "verification": 49
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.011764705882352941,
+          "errors": 1,
+          "evidence_cost": 5.750000000000003,
+          "population_mean_gain": -0.0125,
+          "selected": 1,
+          "selective_risk": 1.0,
+          "total_gain": -1.0625
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.24,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.16672812413025323,
+          "selected": 48,
+          "selective_risk": 0.0,
+          "total_gain": 33.345624826050646
+        }
+      },
+      "total_acquired_evidence_cost": 5.750000000000003,
+      "trajectory_total_strict_gain": 32.28312482605073,
+      "worst_task_population_mean_gain": -0.0125,
+      "worst_task_selective_risk": 1.0
+    },
+    "learned_portfolio_kg_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.05979381443298969,
+      "errors": 6,
+      "macro_task_population_mean_gain": 0.03250007590517767,
+      "macro_task_selective_risk": 0.2222222222222222,
+      "population_mean_strict_gain": 0.036234535570575294,
+      "risk_upper_bound": 0.36799558626831724,
+      "selected_count": 29,
+      "selected_mean_strict_gain": 0.6109051638527249,
+      "selected_total_strict_gain": 17.71624975172902,
+      "selective_risk": 0.20689655172413793,
+      "stage_counts": {
+        "base": 462,
+        "screening": 10,
+        "verification": 13
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.10588235294117647,
+          "errors": 6,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.016750398185892072,
+          "selected": 9,
+          "selective_risk": 0.6666666666666666,
+          "total_gain": 1.423783845800826
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.1,
+          "errors": 0,
+          "evidence_cost": 1.5499999999999998,
+          "population_mean_gain": 0.08074982952964094,
+          "selected": 20,
+          "selective_risk": 0.0,
+          "total_gain": 16.149965905928187
+        }
+      },
+      "total_acquired_evidence_cost": 1.5499999999999998,
+      "trajectory_total_strict_gain": 17.573749751729018,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.6666666666666666
+    },
+    "learned_portfolio_kg_mean": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.05139062471008441,
+      "macro_task_selective_risk": 0.3333333333333333,
+      "population_mean_strict_gain": 0.06653994809494997,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6762117311438908,
+      "selected_total_strict_gain": 33.134374826050646,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 399,
+        "screening": 37,
+        "verification": 49
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.011764705882352941,
+          "errors": 1,
+          "evidence_cost": 5.750000000000002,
+          "population_mean_gain": -0.0125,
+          "selected": 1,
+          "selective_risk": 1.0,
+          "total_gain": -1.0625
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.24,
+          "errors": 0,
+          "evidence_cost": 0.07500000000000001,
+          "population_mean_gain": 0.16667187413025325,
+          "selected": 48,
+          "selective_risk": 0.0,
+          "total_gain": 33.33437482605065
+        }
+      },
+      "total_acquired_evidence_cost": 5.825000000000002,
+      "trajectory_total_strict_gain": 32.271874826050734,
+      "worst_task_population_mean_gain": -0.0125,
+      "worst_task_selective_risk": 1.0
+    },
+    "learned_portfolio_kg_mean_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.05979381443298969,
+      "errors": 6,
+      "macro_task_population_mean_gain": 0.03263250818089899,
+      "macro_task_selective_risk": 0.2222222222222222,
+      "population_mean_strict_gain": 0.03639836931373568,
+      "risk_upper_bound": 0.36799558626831724,
+      "selected_count": 29,
+      "selected_mean_strict_gain": 0.6155847971435108,
+      "selected_total_strict_gain": 17.85195911716181,
+      "selective_risk": 0.20689655172413793,
+      "stage_counts": {
+        "base": 445,
+        "screening": 20,
+        "verification": 20
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.10588235294117647,
+          "errors": 6,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.016750398185892072,
+          "selected": 9,
+          "selective_risk": 0.6666666666666666,
+          "total_gain": 1.423783845800826
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.1,
+          "errors": 0,
+          "evidence_cost": 2.5000000000000004,
+          "population_mean_gain": 0.08114712635680489,
+          "selected": 20,
+          "selective_risk": 0.0,
+          "total_gain": 16.229425271360977
+        }
+      },
+      "total_acquired_evidence_cost": 2.5000000000000004,
+      "trajectory_total_strict_gain": 17.653209117161808,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.6666666666666666
+    },
+    "learned_portfolio_kg_risk_controlled": {
+      "available": false,
+      "certified": false,
+      "reason": "no simultaneously risk-certified worthiness threshold"
+    },
+    "oracle_stage_and_execution": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 0,
+      "macro_task_population_mean_gain": 0.07879297921322334,
+      "macro_task_selective_risk": 0.0,
+      "population_mean_strict_gain": 0.08525110767419229,
+      "risk_upper_bound": 0.05930601418969708,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.8438119841221075,
+      "selected_total_strict_gain": 41.34678722198326,
+      "selective_risk": 0.0,
+      "stage_counts": {
+        "base": 485,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.058823529411764705,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.05155652439957167,
+          "selected": 5,
+          "selective_risk": 0.0,
+          "total_gain": 4.382304573963592
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.01,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.00871425849476024,
+          "selected": 2,
+          "selective_risk": 0.0,
+          "total_gain": 1.7428516989520482
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.21,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.1761081547453381,
+          "selected": 42,
+          "selective_risk": 0.0,
+          "total_gain": 35.221630949067624
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 41.34678722198326,
+      "worst_task_population_mean_gain": 0.00871425849476024,
+      "worst_task_selective_risk": 0.0
+    },
+    "shadow_price_adaptive_conservative": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.05741684836150576,
+      "macro_task_selective_risk": 0.16666666666666666,
+      "population_mean_strict_gain": 0.06904733432650369,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6835807581296794,
+      "selected_total_strict_gain": 33.49545714835429,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 483,
+        "screening": 2,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.00836653798738403,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.7111557289276427
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.235,
+          "errors": 0,
+          "evidence_cost": 0.05,
+          "population_mean_gain": 0.16388400709713324,
+          "selected": 47,
+          "selective_risk": 0.0,
+          "total_gain": 32.77680141942665
+        }
+      },
+      "total_acquired_evidence_cost": 0.05,
+      "trajectory_total_strict_gain": 33.48795714835429,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.5
+    },
+    "shadow_price_adaptive_mean": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.10103092783505155,
+      "errors": 2,
+      "macro_task_population_mean_gain": 0.05737286212120437,
+      "macro_task_selective_risk": 0.27777777777777773,
+      "population_mean_strict_gain": 0.06900337924450582,
+      "risk_upper_bound": 0.12296750440536461,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6868191619099023,
+      "selected_total_strict_gain": 33.654138933585216,
+      "selective_risk": 0.04081632653061224,
+      "stage_counts": {
+        "base": 431,
+        "screening": 54,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.025,
+          "population_mean_gain": 0.00832242034032521,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.7074057289276428
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.015,
+          "errors": 1,
+          "evidence_cost": 1.15,
+          "population_mean_gain": 0.006439258494760251,
+          "selected": 3,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 1.28785169895205
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.22,
+          "errors": 0,
+          "evidence_cost": 0.175,
+          "population_mean_gain": 0.15735690752852763,
+          "selected": 44,
+          "selective_risk": 0.0,
+          "total_gain": 31.471381505705526
+        }
+      },
+      "total_acquired_evidence_cost": 1.3499999999999992,
+      "trajectory_total_strict_gain": 33.46663893358532,
+      "worst_task_population_mean_gain": 0.006439258494760251,
+      "worst_task_selective_risk": 0.5
+    },
+    "shadow_price_successive_halving": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10103092783505155,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.05590434836150576,
+      "macro_task_selective_risk": 0.16666666666666666,
+      "population_mean_strict_gain": 0.0671762003058854,
+      "risk_upper_bound": 0.09319247143420122,
+      "selected_count": 49,
+      "selected_mean_strict_gain": 0.6835807581296794,
+      "selected_total_strict_gain": 33.49545714835429,
+      "selective_risk": 0.02040816326530612,
+      "stage_counts": {
+        "base": 388,
+        "screening": 48,
+        "verification": 49
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.00836653798738403,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.7111557289276427
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 6.025000000000002,
+          "population_mean_gain": -0.0045187500000000045,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -0.9037500000000009
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.235,
+          "errors": 0,
+          "evidence_cost": 0.07500000000000001,
+          "population_mean_gain": 0.16386525709713326,
+          "selected": 47,
+          "selective_risk": 0.0,
+          "total_gain": 32.77305141942665
+        }
+      },
+      "total_acquired_evidence_cost": 6.100000000000003,
+      "trajectory_total_strict_gain": 32.58045714835442,
+      "worst_task_population_mean_gain": -0.0045187500000000045,
+      "worst_task_selective_risk": 0.5
+    },
+    "static_reliability": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.10103092783505155,
+      "errors": 45,
+      "macro_task_population_mean_gain": -0.02356316454349906,
+      "macro_task_selective_risk": 0.3125,
+      "population_mean_strict_gain": -0.011434673765553283,
+      "risk_upper_bound": 0.9716353005799502,
+      "selected_count": 49,
+      "selected_mean_strict_gain": -0.11317993421006822,
+      "selected_total_strict_gain": -5.545816776293343,
+      "selective_risk": 0.9183673469387755,
+      "stage_counts": {
+        "base": 485,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.5647058823529412,
+          "errors": 45,
+          "evidence_cost": 0.0,
+          "population_mean_gain": -0.07471375608527034,
+          "selected": 48,
+          "selective_risk": 0.9375,
+          "total_gain": -6.350669267247978
+        },
+        "extreme_properties": {
+          "count": 200,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 200,
+          "coverage": 0.005,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0040242624547731694,
+          "selected": 1,
+          "selective_risk": 0.0,
+          "total_gain": 0.804852490954634
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": -5.545816776293343,
+      "worst_task_population_mean_gain": -0.07471375608527034,
+      "worst_task_selective_risk": 0.9375
+    }
+  },
+  "calibration": {
+    "acceptance": {
+      "base": {
+        "brier": 0.08187644296118275,
+        "ece_10": 0.02340873703241856,
+        "positive_rate": 0.2865979381443299
+      },
+      "screening": {
+        "brier": 0.07968614352073497,
+        "ece_10": 0.03350399879953975,
+        "positive_rate": 0.2865979381443299
+      },
+      "verification": {
+        "brier": 0.059727597788920936,
+        "ece_10": 0.016109288201359234,
+        "positive_rate": 0.2865979381443299
+      }
+    },
+    "feedback": {
+      "base": {
+        "brier": 0.08176329567690074,
+        "ece_10": 0.012014096480084,
+        "positive_rate": 0.2568730908081089
+      },
+      "screening": {
+        "brier": 0.07806943471039948,
+        "ece_10": 0.006979874087967471,
+        "positive_rate": 0.2568730908081089
+      },
+      "verification": {
+        "brier": 0.06619519638826146,
+        "ece_10": 0.0075266183054919795,
+        "positive_rate": 0.2568730908081089
+      }
+    }
+  },
+  "feedback_partition": {
+    "evidence_calibration": 1353,
+    "gain_calibration": 1090,
+    "policy_ltt": 1158
+  },
+  "policy_feedback": {
+    "adaptive_ambiguity_voi": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 16,
+      "macro_task_population_mean_gain": 0.06593173938091798,
+      "macro_task_selective_risk": 0.22775649212430818,
+      "population_mean_strict_gain": 0.06384800039636553,
+      "risk_upper_bound": 0.2019286111460243,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6682520211981988,
+      "selected_total_strict_gain": 77.51723445899107,
+      "selective_risk": 0.13793103448275862,
+      "stage_counts": {
+        "base": 815,
+        "screening": 122,
+        "verification": 221
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 2.2,
+          "population_mean_gain": 0.05722438918912109,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.537848475655995
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.012987012987012988,
+          "errors": 2,
+          "evidence_cost": 9.05,
+          "population_mean_gain": 0.003378338167391988,
+          "selected": 6,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 1.5607922333350985
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.19901719901719903,
+          "errors": 6,
+          "evidence_cost": 13.899999999999983,
+          "population_mean_gain": 0.13719249078624085,
+          "selected": 81,
+          "selective_risk": 0.07407407407407407,
+          "total_gain": 55.837343750000024
+        }
+      },
+      "total_acquired_evidence_cost": 25.15,
+      "trajectory_total_strict_gain": 73.93598445899127,
+      "worst_task_population_mean_gain": 0.003378338167391988,
+      "worst_task_selective_risk": 0.3333333333333333
+    },
+    "adaptive_conservative_calibrated_p": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 32,
+      "macro_task_population_mean_gain": 0.04042129421592043,
+      "macro_task_selective_risk": 0.09195402298850575,
+      "population_mean_strict_gain": 0.04249140088923143,
+      "risk_upper_bound": 0.3522927430212046,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.43665984680801534,
+      "selected_total_strict_gain": 50.65254222972978,
+      "selective_risk": 0.27586206896551724,
+      "stage_counts": {
+        "base": 988,
+        "screening": 92,
+        "verification": 78
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.19999999999999998,
+          "population_mean_gain": -0.00010380622837370242,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -0.03
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 9.05,
+          "population_mean_gain": -0.0029383116883116836,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -1.3574999999999977
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.28501228501228504,
+          "errors": 32,
+          "evidence_cost": 0.8500000000000004,
+          "population_mean_gain": 0.12430600056444668,
+          "selected": 116,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 50.5925422297298
+        }
+      },
+      "total_acquired_evidence_cost": 10.099999999999998,
+      "trajectory_total_strict_gain": 49.20504222973,
+      "worst_task_population_mean_gain": -0.0029383116883116836,
+      "worst_task_selective_risk": 0.27586206896551724
+    },
+    "adaptive_conservative_ltt": {
+      "available": false,
+      "certified": false,
+      "reason": "no simultaneously certified LTT threshold on policy feedback"
+    },
+    "adaptive_conservative_voi": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 15,
+      "macro_task_population_mean_gain": 0.0698287270335022,
+      "macro_task_selective_risk": 0.22364126578685964,
+      "population_mean_strict_gain": 0.06785122196313956,
+      "risk_upper_bound": 0.19211178902063927,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.690176422700995,
+      "selected_total_strict_gain": 80.06046503331542,
+      "selective_risk": 0.12931034482758622,
+      "stage_counts": {
+        "base": 988,
+        "screening": 92,
+        "verification": 78
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.19999999999999998,
+          "population_mean_gain": 0.05826245147285814,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.837848475656003
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.012987012987012988,
+          "errors": 2,
+          "evidence_cost": 9.05,
+          "population_mean_gain": 0.003378338167391988,
+          "selected": 6,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 1.5607922333350985
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.19901719901719903,
+          "errors": 5,
+          "evidence_cost": 0.8500000000000004,
+          "population_mean_gain": 0.14784539146025646,
+          "selected": 81,
+          "selective_risk": 0.06172839506172839,
+          "total_gain": 60.17307432432438
+        }
+      },
+      "total_acquired_evidence_cost": 10.099999999999998,
+      "trajectory_total_strict_gain": 78.57171503331561,
+      "worst_task_population_mean_gain": 0.003378338167391988,
+      "worst_task_selective_risk": 0.3333333333333333
+    },
+    "adaptive_mean_voi": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 17,
+      "macro_task_population_mean_gain": 0.06746884060266982,
+      "macro_task_selective_risk": 0.23187171846175678,
+      "population_mean_strict_gain": 0.06533519071168085,
+      "risk_upper_bound": 0.21168075585907178,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6746284555528123,
+      "selected_total_strict_gain": 78.25690084412622,
+      "selective_risk": 0.14655172413793102,
+      "stage_counts": {
+        "base": 903,
+        "screening": 104,
+        "verification": 151
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.19999999999999998,
+          "population_mean_gain": 0.05826245147285814,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.837848475656003
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.012987012987012988,
+          "errors": 2,
+          "evidence_cost": 10.849999999999996,
+          "population_mean_gain": 0.0027939225829764053,
+          "selected": 6,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 1.2907922333350992
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.19901719901719903,
+          "errors": 7,
+          "evidence_cost": 6.6499999999999995,
+          "population_mean_gain": 0.14135014775217494,
+          "selected": 81,
+          "selective_risk": 0.08641975308641975,
+          "total_gain": 57.529510135135205
+        }
+      },
+      "total_acquired_evidence_cost": 17.69999999999998,
+      "trajectory_total_strict_gain": 75.65815084412642,
+      "worst_task_population_mean_gain": 0.0027939225829764053,
+      "worst_task_selective_risk": 0.3333333333333333
+    },
+    "base_factorized_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 13,
+      "macro_task_population_mean_gain": 0.07168865810616092,
+      "macro_task_selective_risk": 0.11417748917748917,
+      "population_mean_strict_gain": 0.06995186718861061,
+      "risk_upper_bound": 0.17226235722653288,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6983126052104405,
+      "selected_total_strict_gain": 81.00426220441109,
+      "selective_risk": 0.11206896551724138,
+      "stage_counts": {
+        "base": 1158,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.09688581314878893,
+          "errors": 8,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.05531855375602835,
+          "selected": 28,
+          "selective_risk": 0.2857142857142857,
+          "total_gain": 15.987062035492194
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.21621621621621623,
+          "errors": 5,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.1597474205624544,
+          "selected": 88,
+          "selective_risk": 0.056818181818181816,
+          "total_gain": 65.01720016891893
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 81.00426220441109,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.2857142857142857
+    },
+    "base_factorized_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.06044905008635579,
+      "errors": 9,
+      "macro_task_population_mean_gain": 0.0470939161458895,
+      "macro_task_selective_risk": 0.10008410428931876,
+      "population_mean_strict_gain": 0.043708508812941006,
+      "risk_upper_bound": 0.2136365213193448,
+      "selected_count": 70,
+      "selected_mean_strict_gain": 0.7230636172197955,
+      "selected_total_strict_gain": 50.614453205385686,
+      "selective_risk": 0.12857142857142856,
+      "stage_counts": {
+        "base": 1158,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.05836625770123185,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.867848475656004
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.10073710073710074,
+          "errors": 1,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.08291549073643664,
+          "selected": 41,
+          "selective_risk": 0.024390243902439025,
+          "total_gain": 33.74660472972971
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 50.614453205385686,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.27586206896551724
+    },
+    "decision_consistent_kg_mean": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 13,
+      "macro_task_population_mean_gain": 0.07199012694219267,
+      "macro_task_selective_risk": 0.1111111111111111,
+      "population_mean_strict_gain": 0.0699595080310711,
+      "risk_upper_bound": 0.17226235722653288,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6986151749998302,
+      "selected_total_strict_gain": 81.0393602999803,
+      "selective_risk": 0.11206896551724138,
+      "stage_counts": {
+        "base": 1150,
+        "screening": 8,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.05,
+          "population_mean_gain": 0.05834030614413842,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.860348475656004
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.15,
+          "population_mean_gain": -4.87012987012987e-05,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -0.0225
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.21375921375921375,
+          "errors": 5,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.15767877598114088,
+          "selected": 87,
+          "selective_risk": 0.05747126436781609,
+          "total_gain": 64.17526182432434
+        }
+      },
+      "total_acquired_evidence_cost": 0.19999999999999998,
+      "trajectory_total_strict_gain": 81.01311029998033,
+      "worst_task_population_mean_gain": -4.87012987012987e-05,
+      "worst_task_selective_risk": 0.27586206896551724
+    },
+    "decision_consistent_safe_kg": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 13,
+      "macro_task_population_mean_gain": 0.07201068596794201,
+      "macro_task_selective_risk": 0.1111111111111111,
+      "population_mean_strict_gain": 0.06998217642485345,
+      "risk_upper_bound": 0.17226235722653288,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6986151749998302,
+      "selected_total_strict_gain": 81.0393602999803,
+      "selective_risk": 0.11206896551724138,
+      "stage_counts": {
+        "base": 1157,
+        "screening": 1,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.025,
+          "population_mean_gain": 0.058353281922685137,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.864098475656004
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.21375921375921375,
+          "errors": 5,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.15767877598114088,
+          "selected": 87,
+          "selective_risk": 0.05747126436781609,
+          "total_gain": 64.17526182432434
+        }
+      },
+      "total_acquired_evidence_cost": 0.025,
+      "trajectory_total_strict_gain": 81.0393602999803,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.27586206896551724
+    },
+    "fixed_full_evidence_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.1001727115716753,
+      "errors": 1,
+      "macro_task_population_mean_gain": 0.06289952293459412,
+      "macro_task_selective_risk": 0.0030864197530864196,
+      "population_mean_strict_gain": 0.06621348633583038,
+      "risk_upper_bound": 0.040241331893681516,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.7957346308352771,
+      "selected_total_strict_gain": 92.30521717689214,
+      "selective_risk": 0.008620689655172414,
+      "stage_counts": {
+        "base": 0,
+        "screening": 0,
+        "verification": 1158
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.01384083044982699,
+          "errors": 0,
+          "evidence_cost": 28.90000000000014,
+          "population_mean_gain": -0.0024171358214148345,
+          "selected": 4,
+          "selective_risk": 0.0,
+          "total_gain": -0.6985522523888872
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.008658008658008658,
+          "errors": 0,
+          "evidence_cost": 46.20000000000039,
+          "population_mean_gain": -0.0074604064213526725,
+          "selected": 4,
+          "selective_risk": 0.0,
+          "total_gain": -3.4467077666649346
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.26535626535626533,
+          "errors": 1,
+          "evidence_cost": 40.70000000000031,
+          "population_mean_gain": 0.19857611104654987,
+          "selected": 108,
+          "selective_risk": 0.009259259259259259,
+          "total_gain": 80.8204771959458
+        }
+      },
+      "total_acquired_evidence_cost": 115.7999999999977,
+      "trajectory_total_strict_gain": 76.67521717689158,
+      "worst_task_population_mean_gain": -0.0074604064213526725,
+      "worst_task_selective_risk": 0.009259259259259259
+    },
+    "fixed_full_evidence_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.06476683937823834,
+      "errors": 12,
+      "macro_task_population_mean_gain": 0.03351497520294717,
+      "macro_task_selective_risk": 0.1931034482758621,
+      "population_mean_strict_gain": 0.03163991907006966,
+      "risk_upper_bound": 0.24630829299210155,
+      "selected_count": 75,
+      "selected_mean_strict_gain": 0.705120350441882,
+      "selected_total_strict_gain": 52.884026283141154,
+      "selective_risk": 0.16,
+      "stage_counts": {
+        "base": 0,
+        "screening": 0,
+        "verification": 1158
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 11,
+          "evidence_cost": 28.90000000000014,
+          "population_mean_gain": 0.03253224689917011,
+          "selected": 29,
+          "selective_risk": 0.3793103448275862,
+          "total_gain": 9.40181935386016
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.010822510822510822,
+          "errors": 1,
+          "evidence_cost": 46.20000000000039,
+          "population_mean_gain": -0.00807187828282454,
+          "selected": 5,
+          "selective_risk": 0.2,
+          "total_gain": -3.729207766664937
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.10073710073710074,
+          "errors": 0,
+          "evidence_cost": 40.70000000000031,
+          "population_mean_gain": 0.07608455699249594,
+          "selected": 41,
+          "selective_risk": 0.0,
+          "total_gain": 30.96641469594585
+        }
+      },
+      "total_acquired_evidence_cost": 115.7999999999977,
+      "trajectory_total_strict_gain": 36.639026283140666,
+      "worst_task_population_mean_gain": -0.00807187828282454,
+      "worst_task_selective_risk": 0.3793103448275862
+    },
+    "fixed_screening_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 16,
+      "macro_task_population_mean_gain": 0.06611718275614988,
+      "macro_task_selective_risk": 0.23073945025164536,
+      "population_mean_strict_gain": 0.06459425181728613,
+      "risk_upper_bound": 0.2019286111460243,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6785141690035736,
+      "selected_total_strict_gain": 78.70764360441454,
+      "selective_risk": 0.13793103448275862,
+      "stage_counts": {
+        "base": 0,
+        "screening": 1158,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.09688581314878893,
+          "errors": 8,
+          "evidence_cost": 7.225000000000035,
+          "population_mean_gain": 0.051441544770404954,
+          "selected": 28,
+          "selective_risk": 0.2857142857142857,
+          "total_gain": 14.866606438647032
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.012987012987012988,
+          "errors": 2,
+          "evidence_cost": 11.550000000000097,
+          "population_mean_gain": 0.0025666498557036853,
+          "selected": 6,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 1.1857922333351025
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.20147420147420148,
+          "errors": 6,
+          "evidence_cost": 10.175000000000077,
+          "population_mean_gain": 0.144343353642341,
+          "selected": 82,
+          "selective_risk": 0.07317073170731707,
+          "total_gain": 58.74774493243278
+        }
+      },
+      "total_acquired_evidence_cost": 28.949999999999424,
+      "trajectory_total_strict_gain": 74.80014360441734,
+      "worst_task_population_mean_gain": 0.0025666498557036853,
+      "worst_task_selective_risk": 0.3333333333333333
+    },
+    "fixed_screening_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.0690846286701209,
+      "errors": 16,
+      "macro_task_population_mean_gain": 0.04439218805149234,
+      "macro_task_selective_risk": 0.30821418559013175,
+      "population_mean_strict_gain": 0.04124765555670905,
+      "risk_upper_bound": 0.28778087129013913,
+      "selected_count": 80,
+      "selected_mean_strict_gain": 0.6475910641833343,
+      "selected_total_strict_gain": 51.80728513466675,
+      "selective_risk": 0.2,
+      "stage_counts": {
+        "base": 0,
+        "screening": 1158,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 7.225000000000035,
+          "population_mean_gain": 0.05461625770123174,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 15.784098475655973
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.021645021645021644,
+          "errors": 6,
+          "evidence_cost": 11.550000000000097,
+          "population_mean_gain": 0.00012076240981623407,
+          "selected": 10,
+          "selective_risk": 0.6,
+          "total_gain": 0.05579223333510014
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.10073710073710074,
+          "errors": 2,
+          "evidence_cost": 10.175000000000077,
+          "population_mean_gain": 0.07843954404342904,
+          "selected": 41,
+          "selective_risk": 0.04878048780487805,
+          "total_gain": 31.92489442567562
+        }
+      },
+      "total_acquired_evidence_cost": 28.949999999999424,
+      "trajectory_total_strict_gain": 47.764785134669076,
+      "worst_task_population_mean_gain": 0.00012076240981623407,
+      "worst_task_selective_risk": 0.6
+    },
+    "learned_portfolio_kg_lcb": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 14,
+      "macro_task_population_mean_gain": 0.0710034409428378,
+      "macro_task_selective_risk": 0.1149425287356322,
+      "population_mean_strict_gain": 0.06892145532486751,
+      "risk_upper_bound": 0.1822250740400281,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6907417695361769,
+      "selected_total_strict_gain": 80.12604526619653,
+      "selective_risk": 0.1206896551724138,
+      "stage_counts": {
+        "base": 996,
+        "screening": 149,
+        "verification": 13
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.05,
+          "population_mean_gain": 0.05834030614413842,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.860348475656004
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.21375921375921375,
+          "errors": 6,
+          "evidence_cost": 4.975000000000001,
+          "population_mean_gain": 0.154670016684375,
+          "selected": 87,
+          "selective_risk": 0.06896551724137931,
+          "total_gain": 62.95069679054062
+        }
+      },
+      "total_acquired_evidence_cost": 5.025000000000002,
+      "trajectory_total_strict_gain": 79.81104526619659,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.27586206896551724
+    },
+    "learned_portfolio_kg_lcb_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.06044905008635579,
+      "errors": 8,
+      "macro_task_population_mean_gain": 0.04789180210002545,
+      "macro_task_selective_risk": 0.09195402298850575,
+      "population_mean_strict_gain": 0.04454980307028125,
+      "risk_upper_bound": 0.1967722734203974,
+      "selected_count": 70,
+      "selected_mean_strict_gain": 0.7391238850769385,
+      "selected_total_strict_gain": 51.73867195538569,
+      "selective_risk": 0.11428571428571428,
+      "stage_counts": {
+        "base": 1106,
+        "screening": 31,
+        "verification": 21
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.05836625770123185,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.867848475656004
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.10073710073710074,
+          "errors": 0,
+          "evidence_cost": 2.8749999999999996,
+          "population_mean_gain": 0.08530914859884452,
+          "selected": 41,
+          "selective_risk": 0.0,
+          "total_gain": 34.72082347972972
+        }
+      },
+      "total_acquired_evidence_cost": 2.8749999999999996,
+      "trajectory_total_strict_gain": 51.58867195538569,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.27586206896551724
+    },
+    "learned_portfolio_kg_mean": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 10,
+      "macro_task_population_mean_gain": 0.07359150787000723,
+      "macro_task_selective_risk": 0.10997150997150996,
+      "population_mean_strict_gain": 0.07258486933269832,
+      "risk_upper_bound": 0.1418382690891389,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.7348127473040047,
+      "selected_total_strict_gain": 85.23827868726454,
+      "selective_risk": 0.08620689655172414,
+      "stage_counts": {
+        "base": 926,
+        "screening": 116,
+        "verification": 116
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.08996539792387544,
+          "errors": 8,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.04916908832215357,
+          "selected": 26,
+          "selective_risk": 0.3076923076923077,
+          "total_gain": 14.209866525102381
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.22113022113022113,
+          "errors": 2,
+          "evidence_cost": 14.499999999999998,
+          "population_mean_gain": 0.17160543528786812,
+          "selected": 90,
+          "selective_risk": 0.022222222222222223,
+          "total_gain": 69.84341216216232
+        }
+      },
+      "total_acquired_evidence_cost": 14.499999999999998,
+      "trajectory_total_strict_gain": 84.05327868726467,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.3076923076923077
+    },
+    "learned_portfolio_kg_mean_task_balanced": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.06044905008635579,
+      "errors": 9,
+      "macro_task_population_mean_gain": 0.047836861947956916,
+      "macro_task_selective_risk": 0.10008410428931876,
+      "population_mean_strict_gain": 0.044491873946208994,
+      "risk_upper_bound": 0.2136365213193448,
+      "selected_count": 70,
+      "selected_mean_strict_gain": 0.7414334289958574,
+      "selected_total_strict_gain": 51.900340029710016,
+      "selective_risk": 0.12857142857142856,
+      "stage_counts": {
+        "base": 1076,
+        "screening": 41,
+        "verification": 41
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.05836625770123185,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.867848475656004
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.10073710073710074,
+          "errors": 1,
+          "evidence_cost": 5.124999999999998,
+          "population_mean_gain": 0.0851443281426389,
+          "selected": 41,
+          "selective_risk": 0.024390243902439025,
+          "total_gain": 34.65374155405404
+        }
+      },
+      "total_acquired_evidence_cost": 5.124999999999998,
+      "trajectory_total_strict_gain": 51.52159002971001,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.27586206896551724
+    },
+    "learned_portfolio_kg_risk_controlled": {
+      "available": false,
+      "certified": false,
+      "reason": "no simultaneously risk-certified worthiness threshold"
+    },
+    "oracle_stage_and_execution": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.1001727115716753,
+      "errors": 0,
+      "macro_task_population_mean_gain": 0.09151304309731816,
+      "macro_task_selective_risk": 0.0,
+      "population_mean_strict_gain": 0.08759360793959574,
+      "risk_upper_bound": 0.025494657957392274,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.8744258447763092,
+      "selected_total_strict_gain": 101.43339799405187,
+      "selective_risk": 0.0,
+      "stage_counts": {
+        "base": 1158,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10380622837370242,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.09083648537795933,
+          "selected": 30,
+          "selective_risk": 0.0,
+          "total_gain": 26.251744274230244
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.008658008658008658,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.007539593578647396,
+          "selected": 4,
+          "selective_risk": 0.0,
+          "total_gain": 3.483292233335097
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.20147420147420148,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.1761630503353477,
+          "selected": 82,
+          "selective_risk": 0.0,
+          "total_gain": 71.69836148648652
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 101.43339799405187,
+      "worst_task_population_mean_gain": 0.007539593578647396,
+      "worst_task_selective_risk": 0.0
+    },
+    "shadow_price_adaptive_conservative": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 13,
+      "macro_task_population_mean_gain": 0.07168865810616092,
+      "macro_task_selective_risk": 0.11417748917748917,
+      "population_mean_strict_gain": 0.06995186718861061,
+      "risk_upper_bound": 0.17226235722653288,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6983126052104405,
+      "selected_total_strict_gain": 81.00426220441109,
+      "selective_risk": 0.11206896551724138,
+      "stage_counts": {
+        "base": 1158,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.09688581314878893,
+          "errors": 8,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.05531855375602835,
+          "selected": 28,
+          "selective_risk": 0.2857142857142857,
+          "total_gain": 15.987062035492194
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.21621621621621623,
+          "errors": 5,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.1597474205624544,
+          "selected": 88,
+          "selective_risk": 0.056818181818181816,
+          "total_gain": 65.01720016891893
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": 81.00426220441109,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.2857142857142857
+    },
+    "shadow_price_adaptive_mean": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 15,
+      "macro_task_population_mean_gain": 0.07064289375381076,
+      "macro_task_selective_risk": 0.22364126578685964,
+      "population_mean_strict_gain": 0.0688000561600309,
+      "risk_upper_bound": 0.19211178902063927,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.690176422700995,
+      "selected_total_strict_gain": 80.06046503331542,
+      "selective_risk": 0.12931034482758622,
+      "stage_counts": {
+        "base": 1047,
+        "screening": 111,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.10034602076124567,
+          "errors": 8,
+          "evidence_cost": 0.05,
+          "population_mean_gain": 0.05834030614413842,
+          "selected": 29,
+          "selective_risk": 0.27586206896551724,
+          "total_gain": 16.860348475656004
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.012987012987012988,
+          "errors": 2,
+          "evidence_cost": 2.6749999999999945,
+          "population_mean_gain": 0.005448143362197179,
+          "selected": 6,
+          "selective_risk": 0.3333333333333333,
+          "total_gain": 2.517042233335097
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.19901719901719903,
+          "errors": 5,
+          "evidence_cost": 0.05,
+          "population_mean_gain": 0.1481402317550967,
+          "selected": 81,
+          "selective_risk": 0.06172839506172839,
+          "total_gain": 60.29307432432436
+        }
+      },
+      "total_acquired_evidence_cost": 2.774999999999994,
+      "trajectory_total_strict_gain": 79.67046503331578,
+      "worst_task_population_mean_gain": 0.005448143362197179,
+      "worst_task_selective_risk": 0.3333333333333333
+    },
+    "shadow_price_successive_halving": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 13,
+      "macro_task_population_mean_gain": 0.07011939403689685,
+      "macro_task_selective_risk": 0.11417748917748917,
+      "population_mean_strict_gain": 0.06807362884664199,
+      "risk_upper_bound": 0.17226235722653288,
+      "selected_count": 116,
+      "selected_mean_strict_gain": 0.6983126052104405,
+      "selected_total_strict_gain": 81.00426220441109,
+      "selective_risk": 0.11206896551724138,
+      "stage_counts": {
+        "base": 926,
+        "screening": 116,
+        "verification": 116
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.09688581314878893,
+          "errors": 8,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.05531855375602835,
+          "selected": 28,
+          "selective_risk": 0.2857142857142857,
+          "total_gain": 15.987062035492194
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 14.499999999999998,
+          "population_mean_gain": -0.004707792207792192,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": -2.1749999999999927
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.21621621621621623,
+          "errors": 5,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.1597474205624544,
+          "selected": 88,
+          "selective_risk": 0.056818181818181816,
+          "total_gain": 65.01720016891893
+        }
+      },
+      "total_acquired_evidence_cost": 14.499999999999998,
+      "trajectory_total_strict_gain": 78.82926220441142,
+      "worst_task_population_mean_gain": -0.004707792207792192,
+      "worst_task_selective_risk": 0.2857142857142857
+    },
+    "static_reliability": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": false,
+      "coverage": 0.1001727115716753,
+      "errors": 96,
+      "macro_task_population_mean_gain": -0.0017716703833414603,
+      "macro_task_selective_risk": 0.27586206896551724,
+      "population_mean_strict_gain": -0.001326457877683114,
+      "risk_upper_bound": 0.8827124908402241,
+      "selected_count": 116,
+      "selected_mean_strict_gain": -0.01324170881342281,
+      "selected_total_strict_gain": -1.536038222357046,
+      "selective_risk": 0.8275862068965517,
+      "stage_counts": {
+        "base": 1158,
+        "screening": 0,
+        "verification": 0
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 289,
+          "coverage": 0.4013840830449827,
+          "errors": 96,
+          "evidence_cost": 0.0,
+          "population_mean_gain": -0.005315011150024381,
+          "selected": 116,
+          "selective_risk": 0.8275862068965517,
+          "total_gain": -1.536038222357046
+        },
+        "extreme_properties": {
+          "count": 462,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 407,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        }
+      },
+      "total_acquired_evidence_cost": 0.0,
+      "trajectory_total_strict_gain": -1.536038222357046,
+      "worst_task_population_mean_gain": -0.005315011150024381,
+      "worst_task_selective_risk": 0.8275862068965517
+    }
+  },
+  "portfolio_kg_audit": {
+    "calibration_examples": 664,
+    "fit_examples": 689,
+    "fit_heads": {
+      "discover_unique::base->screening": {
+        "count": 248,
+        "mean_realized_incremental_gain": -0.005228822521874404,
+        "positive_rate": 0.020161290322580645
+      },
+      "discover_unique::screening->verification": {
+        "count": 248,
+        "mean_realized_incremental_gain": 0.01709565498421805,
+        "positive_rate": 0.05241935483870968
+      },
+      "extreme_properties::base->screening": {
+        "count": 240,
+        "mean_realized_incremental_gain": -0.003750000000000008,
+        "positive_rate": 0.0
+      },
+      "extreme_properties::screening->verification": {
+        "count": 240,
+        "mean_realized_incremental_gain": -0.011249999999999986,
+        "positive_rate": 0.0
+      },
+      "matbench_pairwise::base->screening": {
+        "count": 201,
+        "mean_realized_incremental_gain": 0.045201000907623586,
+        "positive_rate": 0.0945273631840796
+      },
+      "matbench_pairwise::screening->verification": {
+        "count": 201,
+        "mean_realized_incremental_gain": 0.04648802020303955,
+        "positive_rate": 0.19402985074626866
+      }
+    },
+    "heads": {
+      "discover_unique::base->screening": {
+        "count": 256,
+        "mean_absolute_error": 0.02829307880964867,
+        "mean_realized_incremental_gain": 0.014427672851194066,
+        "positive_rate": 0.0234375
+      },
+      "discover_unique::screening->verification": {
+        "count": 256,
+        "mean_absolute_error": 0.06057989703205809,
+        "mean_realized_incremental_gain": 0.008269753972612703,
+        "positive_rate": 0.046875
+      },
+      "extreme_properties::base->screening": {
+        "count": 201,
+        "mean_absolute_error": 9.107298248878237e-18,
+        "mean_realized_incremental_gain": -0.0037500000000000033,
+        "positive_rate": 0.0
+      },
+      "extreme_properties::screening->verification": {
+        "count": 201,
+        "mean_absolute_error": 1.5612511283791264e-17,
+        "mean_realized_incremental_gain": -0.011249999999999987,
+        "positive_rate": 0.0
+      },
+      "matbench_pairwise::base->screening": {
+        "count": 207,
+        "mean_absolute_error": 0.10340897472788593,
+        "mean_realized_incremental_gain": 0.04398140667841699,
+        "positive_rate": 0.0821256038647343
+      },
+      "matbench_pairwise::screening->verification": {
+        "count": 207,
+        "mean_absolute_error": 0.07984296900733115,
+        "mean_realized_incremental_gain": 0.022034677340384556,
+        "positive_rate": 0.14492753623188406
+      }
+    },
+    "portfolio_context_examples": 1353,
+    "task_balanced": false
+  },
+  "task_balanced_portfolio_kg_audit": {
+    "calibration_examples": 663,
+    "fit_examples": 690,
+    "fit_heads": {
+      "discover_unique::base->screening": {
+        "count": 241,
+        "mean_realized_incremental_gain": -0.052403938258419484,
+        "positive_rate": 0.008298755186721992
+      },
+      "discover_unique::screening->verification": {
+        "count": 241,
+        "mean_realized_incremental_gain": -0.02038281595656902,
+        "positive_rate": 0.02074688796680498
+      },
+      "extreme_properties::base->screening": {
+        "count": 234,
+        "mean_realized_incremental_gain": -0.0037500000000000072,
+        "positive_rate": 0.0
+      },
+      "extreme_properties::screening->verification": {
+        "count": 234,
+        "mean_realized_incremental_gain": -0.011249999999999986,
+        "positive_rate": 0.0
+      },
+      "matbench_pairwise::base->screening": {
+        "count": 215,
+        "mean_realized_incremental_gain": 0.008711993243243293,
+        "positive_rate": 0.07906976744186046
+      },
+      "matbench_pairwise::screening->verification": {
+        "count": 215,
+        "mean_realized_incremental_gain": -0.02434710873664381,
+        "positive_rate": 0.06046511627906977
+      }
+    },
+    "heads": {
+      "discover_unique::base->screening": {
+        "count": 263,
+        "mean_absolute_error": 0.06934547890418492,
+        "mean_realized_incremental_gain": -0.04882192788295459,
+        "positive_rate": 0.0
+      },
+      "discover_unique::screening->verification": {
+        "count": 263,
+        "mean_absolute_error": 0.09280576064414953,
+        "mean_realized_incremental_gain": -0.0023067377890709966,
+        "positive_rate": 0.034220532319391636
+      },
+      "extreme_properties::base->screening": {
+        "count": 207,
+        "mean_absolute_error": 9.107298248878237e-18,
+        "mean_realized_incremental_gain": -0.003750000000000004,
+        "positive_rate": 0.0
+      },
+      "extreme_properties::screening->verification": {
+        "count": 207,
+        "mean_absolute_error": 1.5612511283791264e-17,
+        "mean_realized_incremental_gain": -0.011249999999999986,
+        "positive_rate": 0.0
+      },
+      "matbench_pairwise::base->screening": {
+        "count": 193,
+        "mean_absolute_error": 0.02456199311904616,
+        "mean_realized_incremental_gain": 0.006206041695841009,
+        "positive_rate": 0.05699481865284974
+      },
+      "matbench_pairwise::screening->verification": {
+        "count": 193,
+        "mean_absolute_error": 0.03025583314402409,
+        "mean_realized_incremental_gain": -0.013640465270970516,
+        "positive_rate": 0.046632124352331605
+      }
+    },
+    "portfolio_context_examples": 1353,
+    "task_balanced": true
+  },
+  "test": null
+}

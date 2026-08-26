@@ -1,0 +1,87 @@
+{
+  "audit": {
+    "audited_records": 3,
+    "mutations": "nontraining labels and hidden task-native margins",
+    "passed": true,
+    "task_passes": {
+      "discover_unique": true,
+      "extreme_properties": true,
+      "matbench_pairwise": true
+    }
+  },
+  "experiment": "h9_train_only_surrogate_diagnostic",
+  "replicas": [
+    101,
+    211,
+    307
+  ],
+  "seed": 7,
+  "tasks": {
+    "discover_unique": {
+      "screening": {
+        "base_worthy_rate": 0.10070671378091872,
+        "external_replica_variance_mean": 6.857632434639713e-07,
+        "margin_mae": 0.056568566021831794,
+        "margin_pearson": 0.09558856491132503,
+        "margin_sign_accuracy": 0.8992932862190812,
+        "n": 1698,
+        "top10_worthy_rate": 0.21176470588235294,
+        "worthiness_auc": 0.5514845835391797
+      },
+      "verification": {
+        "base_worthy_rate": 0.10070671378091872,
+        "external_replica_variance_mean": 2.727180258943442e-06,
+        "margin_mae": 0.05584719004721449,
+        "margin_pearson": 0.18925974624588568,
+        "margin_sign_accuracy": 0.8992932862190812,
+        "n": 1698,
+        "top10_worthy_rate": 0.18823529411764706,
+        "worthiness_auc": 0.5809005158607061
+      }
+    },
+    "extreme_properties": {
+      "screening": {
+        "base_worthy_rate": 0.11,
+        "external_replica_variance_mean": 0.6401294053487243,
+        "margin_mae": 21.40146004552618,
+        "margin_pearson": 0.3316803554872383,
+        "margin_sign_accuracy": 0.755,
+        "n": 200,
+        "top10_worthy_rate": 0.15,
+        "worthiness_auc": 0.5715015321756896
+      },
+      "verification": {
+        "base_worthy_rate": 0.11,
+        "external_replica_variance_mean": 0.8935147131205353,
+        "margin_mae": 22.688511928508674,
+        "margin_pearson": -0.09620863078722416,
+        "margin_sign_accuracy": 0.755,
+        "n": 200,
+        "top10_worthy_rate": 0.1,
+        "worthiness_auc": 0.5298774259448418
+      }
+    },
+    "matbench_pairwise": {
+      "screening": {
+        "base_worthy_rate": 0.10781893004115227,
+        "external_replica_variance_mean": 1.6614431399182002e-06,
+        "margin_mae": 0.13229086991430972,
+        "margin_pearson": 0.23727374803736895,
+        "margin_sign_accuracy": 0.6650205761316872,
+        "n": 1215,
+        "top10_worthy_rate": 0.1721311475409836,
+        "worthiness_auc": 0.6381299118334695
+      },
+      "verification": {
+        "base_worthy_rate": 0.10781893004115227,
+        "external_replica_variance_mean": 1.2098523225853738e-05,
+        "margin_mae": 0.1307583879621197,
+        "margin_pearson": 0.24600231584784343,
+        "margin_sign_accuracy": 0.6650205761316872,
+        "n": 1215,
+        "top10_worthy_rate": 0.1885245901639344,
+        "worthiness_auc": 0.6448691586152502
+      }
+    }
+  }
+}

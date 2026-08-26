@@ -1,0 +1,19 @@
+{
+  "action_id": "proposed-experiment::f834ac13dcf22e06",
+  "agent_backend": "mimorouter-openai/gpt-5.6-sol",
+  "capture_mode": "live_runtime",
+  "complete": false,
+  "step_count": 1,
+  "tool_call_count": 29,
+  "tool_error_count": 7,
+  "trajectory_count": 1,
+  "uncertainty_output": {
+    "expected_net_scientific_gain": 0.2520000000000001,
+    "expected_scientific_utility": 0.92,
+    "expected_value_of_evidence": 0.95,
+    "irreversible_risk": 0.12,
+    "p_success": 0.8,
+    "reported_external_uncertainty": 0.9,
+    "reported_internal_uncertainty": 0.24
+  }
+}

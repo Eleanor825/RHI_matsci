@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_external_h15_unique_voe.py", line 621, in <module>
+    main()
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_external_h15_unique_voe.py", line 60, in main
+    result = run_unique_voe(
+             ^^^^^^^^^^^^^^^
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_external_h15_unique_voe.py", line 87, in run_unique_voe
+    return run_single_task_voe(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_external_h15_unique_voe.py", line 246, in run_single_task_voe
+    "source": cross_fitted_tail_voi_predictions(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huan/Desktop/harness_matsci/src/harness_matsci/tail_voi.py", line 182, in cross_fitted_tail_voi_predictions
+    model = fit_tail_voi_model(
+            ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huan/Desktop/harness_matsci/src/harness_matsci/tail_voi.py", line 113, in fit_tail_voi_model
+    raise ValueError(f"task {task} has insufficient hurdle components")
+ValueError: task external_unique_log_kvrh has insufficient hurdle components

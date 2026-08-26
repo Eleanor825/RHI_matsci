@@ -1,0 +1,2695 @@
+{
+  "model": "gpt-5.6-sol",
+  "prompt_version": "strict-realized-gain-v1",
+  "reasoning_effort": "medium",
+  "predictions": {
+    "matbench-pairwise::01307e73d2ac::sequential-v2::base": {
+      "p_positive_gain": 0.58,
+      "expected_gain": 0.326,
+      "p_success": 0.58,
+      "expected_normalized_utility": 0.377,
+      "assessment_confidence": 0.58,
+      "rationale": "The medium-versus-low surrogate separation favors A, but the high estimated noise makes the follow-up outcome materially uncertain. Conditional scientific utility is estimated at 0.65 if A is the better high-bulk-modulus choice; the low action cost and high reversibility limit downside. Using an estimated irreversible-failure harm of 0.20 gives an expected strict gain of about 0.326."
+    },
+    "matbench-pairwise::01d74466a854::sequential-v2::base": {
+      "p_positive_gain": 0.8,
+      "expected_gain": 0.76,
+      "p_success": 0.8,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.73,
+      "rationale": "High surrogate tier and a substantial margin favor A, but the estimated noise is also high. Using approximately 0.80 success probability, normalized action cost 0.20, and residual irreversible-failure harm implied by reversibility 0.80 gives an expected strict gain near 0.76."
+    },
+    "matbench-pairwise::026a1a7887a4::sequential-v2::base": {
+      "p_positive_gain": 0.86,
+      "expected_gain": 0.823,
+      "p_success": 0.86,
+      "expected_normalized_utility": 0.86,
+      "assessment_confidence": 0.76,
+      "rationale": "The high-versus-low surrogate separation and substantial margin support a high probability that A is the scientifically correct choice, though the estimated noise leaves meaningful uncertainty. Assuming unit normalized utility for a successful selection, the visible action cost is 0.03 and the residual irreversible-failure penalty is modest because reversibility is high."
+    },
+    "matbench-pairwise::029902383663::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.655,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-low surrogate contrast favors A, but the large estimated noise relative to the margin leaves substantial uncertainty. I estimate a 0.70 probability that A is the better high-bulk-modulus choice. A successful follow-up is assigned near-unit normalized scientific value; the cost contributes 0.03, while the mostly reversible action makes the expected failure-harm penalty modest."
+    },
+    "matbench-pairwise::087d69eff699::sequential-v2::base": {
+      "p_positive_gain": 0.7943,
+      "expected_gain": 0.7537,
+      "p_success": 0.7943,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.74,
+      "rationale": ""
+    },
+    "matbench-pairwise::094e87d6ce37::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.464,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.72,
+      "rationale": "0.64*0.80 - 0.1500*0.20 - 0.2500*(1-0.64)*(1-0.80) = 0.464. The medium-versus-low surrogate ordering favors A, but the small margin relative to estimated noise limits confidence."
+    },
+    "matbench-pairwise::098ca3b18412::sequential-v2::base": {
+      "p_positive_gain": 0.5355,
+      "expected_gain": 0.3418,
+      "p_success": 0.5355,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.52,
+      "rationale": "Both candidates have the same high surrogate tier, while the small margin relative to the high estimated noise provides only weak evidence that B is the better follow-up target. The action is fairly reversible, so expected failure harm is limited; the main deduction is the explicit action cost."
+    },
+    "matbench-pairwise::09a5b206a2fd::sequential-v2::base": {
+      "p_positive_gain": 0.6,
+      "expected_gain": 0.2805,
+      "p_success": 0.6,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.67,
+      "rationale": "Surrogate evidence favors B, but the 0.1449 margin is small relative to 0.6703 estimated noise, so success is only moderately more likely than chance. Using normalized utility 0.55, action cost 0.20, and irreversible harm 0.20 from reversibility 0.80 gives expected gain = 0.60×0.55 − 0.15×0.20 − 0.25×0.40×0.20 = 0.2805."
+    },
+    "matbench-pairwise::0ae683473061::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.29,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.57,
+      "rationale": "The small surrogate margin relative to the very high estimated noise makes A only modestly more likely than B to be the better elasticity choice. Both low surrogate tiers also limit the expected scientific value, while the action is substantially reversible and has low normalized cost."
+    },
+    "matbench-pairwise::0b70f2db4fa9::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.286,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.58,
+      "rationale": "Weak positive evidence for A: both candidates share the same surrogate tier, while the small 0.105 margin is substantially below the 0.6923 estimated noise. A modest chemistry-based prior favors the refractory rhenium nitride over the copper-containing Hf-Si intermetallic. With action cost 0.03 and irreversible failure harm inferred as 0.20 from reversibility 0.80, the posterior mean gain is 0.61*0.55-0.03-0.25*0.39*0.20=0.286."
+    },
+    "matbench-pairwise::0be63bee9965::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.808,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.84,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate margin is approximately one estimated-noise unit, supporting a moderately strong but uncertain probability that A has the higher true elasticity-related target. Assuming normalized scientific utility near 1 conditional on a correct selection, the main deductions are the visible action cost and a small failure-harm contribution given high reversibility."
+    },
+    "matbench-pairwise::0e34d9acb8f3::sequential-v2::base": {
+      "p_positive_gain": 0.8,
+      "expected_gain": 0.56,
+      "p_success": 0.8,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.67,
+      "rationale": "High surrogate tier and a margin approximately equal to estimated noise support a moderately strong but uncertain success probability; high reversibility limits failure harm, while action cost remains modest."
+    },
+    "matbench-pairwise::0e6ae52a1c42::sequential-v2::base": {
+      "p_positive_gain": 0.58,
+      "expected_gain": 0.528,
+      "p_success": 0.58,
+      "expected_normalized_utility": 0.58,
+      "assessment_confidence": 0.62,
+      "rationale": "Both candidates have the same high surrogate tier, while the modest surrogate margin relative to the high estimated noise supports only a slight advantage for A. Assuming unit scientific value for a correct selection and an irreversible-failure harm of 0.20 implied by the visible reversibility, the estimated gain is approximately 0.58 - 0.15(0.20) - 0.25(0.42)(0.20) = 0.528."
+    },
+    "matbench-pairwise::0eca076c8ad7::sequential-v2::base": {
+      "p_positive_gain": 0.925,
+      "expected_gain": 0.8913,
+      "p_success": 0.925,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.8,
+      "rationale": ""
+    },
+    "matbench-pairwise::10f9848a2ed7::sequential-v2::base": {
+      "p_positive_gain": 0.54,
+      "expected_gain": 0.487,
+      "p_success": 0.54,
+      "expected_normalized_utility": 0.54,
+      "assessment_confidence": 0.45,
+      "rationale": "Both candidates have the same surrogate tier, while the small positive margin favoring B is overwhelmed by the high estimated noise. I therefore assign only a modestly-above-chance probability that choosing B is scientifically successful. Conditional success is treated as providing approximately unit normalized utility; the visible action cost contributes 0.030, and limited irreversibility contributes a smaller expected failure penalty."
+    },
+    "matbench-pairwise::13075ab39942::sequential-v2::base": {
+      "p_positive_gain": 0.69,
+      "expected_gain": 0.6445,
+      "p_success": 0.69,
+      "expected_normalized_utility": 0.69,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and moderate margin support a roughly 0.69 probability that A is the better high-bulk-modulus choice, despite substantial estimated noise. Conditional scientific utility is treated as approximately 1.0 on the normalized scale; the visible action cost contributes 0.03, and reversibility implies a modest expected irreversible-failure penalty."
+    },
+    "matbench-pairwise::13a0a3821c75::sequential-v2::base": {
+      "p_positive_gain": 0.57,
+      "expected_gain": 0.319,
+      "p_success": 0.57,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.58,
+      "rationale": "The positive surrogate margin modestly favors A, but the margin is small relative to the high estimated noise and both candidates share the same surrogate tier. I therefore assign only a modestly-above-chance probability that A is the better high-bulk-modulus follow-up target. Conditional scientific utility is moderate, while the high reversibility limits failure harm; the action remains expected-positive after the normalized cost penalty."
+    },
+    "matbench-pairwise::15b4c64b6f3c::sequential-v2::base": {
+      "p_positive_gain": 0.5413,
+      "expected_gain": 0.4881,
+      "p_success": 0.5413,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.68,
+      "rationale": "0.0737 surrogate margin relative to 0.7095 noise implies a 0.5413 success probability; cost penalty is 0.0300 and expected irreversible-failure penalty is 0.0229."
+    },
+    "matbench-pairwise::176689111007::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.4346,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.56,
+      "rationale": "Moderate success probability from the high-versus-medium surrogate margin, substantially discounted by the estimated noise; successful selection has high utility, while reversibility limits failure harm."
+    },
+    "matbench-pairwise::18442e25870d::sequential-v2::base": {
+      "p_positive_gain": 0.5086,
+      "expected_gain": 0.454,
+      "p_success": 0.5086,
+      "expected_normalized_utility": 0.5086,
+      "assessment_confidence": 0.52,
+      "rationale": ""
+    },
+    "matbench-pairwise::1b5241ead8f2::sequential-v2::base": {
+      "p_positive_gain": 0.46,
+      "expected_gain": 0.2775,
+      "p_success": 0.46,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.48,
+      "rationale": "Both candidates have the same surrogate tier, the margin is very small relative to the estimated noise, and therefore selecting A has only modest evidence of producing the desired high-bulk-modulus outcome. The action is substantially reversible, limiting failure harm, but its positive expected gain is mainly driven by the moderate chance of useful scientific confirmation."
+    },
+    "matbench-pairwise::1cf1218ca52d::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.585,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.9,
+      "assessment_confidence": 0.66,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the substantial estimated noise makes the follow-up outcome only moderately reliable. The action is highly reversible, so irreversible-failure harm is assessed as low; the main downside is the normalized action cost."
+    },
+    "matbench-pairwise::1d109a7044e1::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.39,
+      "p_success": 0.55,
+      "expected_normalized_utility": 0.44,
+      "assessment_confidence": 0.64,
+      "rationale": "The high surrogate tier modestly favors candidate B, but the very small surrogate margin relative to the high estimated noise leaves only a slight probability advantage. Conditional scientific value is estimated as moderately high, while action cost is low and reversibility limits failure harm."
+    },
+    "matbench-pairwise::1d655f05d0f0::sequential-v2::base": {
+      "p_positive_gain": 0.88,
+      "expected_gain": 0.756,
+      "p_success": 0.88,
+      "expected_normalized_utility": 0.9,
+      "assessment_confidence": 0.76,
+      "rationale": "The large surrogate separation relative to estimated noise supports a high probability that A is the stronger elasticity candidate; allowing for surrogate error, the estimated success probability is 0.88. Conditional scientific utility is estimated at 0.90, with the visible action cost and modest irreversibility-adjusted failure harm included in the expected gain."
+    },
+    "matbench-pairwise::1e4edde845b4::sequential-v2::base": {
+      "p_positive_gain": 0.57,
+      "expected_gain": 0.319,
+      "p_success": 0.57,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.56,
+      "rationale": ""
+    },
+    "matbench-pairwise::1f2c501cf808::sequential-v2::base": {
+      "p_positive_gain": 0.573,
+      "expected_gain": 0.264,
+      "p_success": 0.573,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.58,
+      "rationale": "Both candidates share the same surrogate tier, while the small positive surrogate margin relative to high estimated noise provides only weak support for candidate B. The cost penalty is 0.030, and 0.800 reversibility implies limited expected irreversible failure harm."
+    },
+    "matbench-pairwise::1f4ced26f66c::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.226,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.38,
+      "rationale": ""
+    },
+    "matbench-pairwise::20d4a7f91a45::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.3325,
+      "p_success": 0.55,
+      "expected_normalized_utility": 0.385,
+      "assessment_confidence": 0.58,
+      "rationale": "Both candidates have the same high surrogate tier, while the modest margin is substantially smaller than the estimated noise, so the probability that choosing B is the scientifically successful choice is only slightly above chance. Conditional scientific utility is estimated as moderate-high; the action is fairly reversible, making failure harm limited. The expected scientific benefit therefore exceeds the normalized action-cost penalty, but with substantial uncertainty."
+    },
+    "matbench-pairwise::21f57c4fb0d1::sequential-v2::base": {
+      "p_positive_gain": 0.517,
+      "expected_gain": 0.463,
+      "p_success": 0.517,
+      "expected_normalized_utility": 0.517,
+      "assessment_confidence": 0.73,
+      "rationale": "0.0315/0.7327=0.0430; normal-error calibration gives p_success=0.517. Cost penalty=0.1500*0.2000=0.0300; irreversible harm=1-0.8000=0.2000; expected failure penalty=0.2500*(1-0.517)*0.2000=0.0242; expected gain=0.517-0.0300-0.0242=0.463."
+    },
+    "matbench-pairwise::224ef025cdd1::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.368,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.34,
+      "rationale": "Weak positive surrogate margin (0.131) relative to high estimated noise (0.678) supports only modest confidence that B is the superior high-bulk-modulus choice; reversibility is high and normalized action cost is 0.20."
+    },
+    "matbench-pairwise::231313020054::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.592,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.7,
+      "rationale": "The high-versus-low surrogate separation is substantial, but the estimated noise is also sizable. This supports a relatively high probability that A is the correct high-bulk-modulus choice, while leaving meaningful uncertainty. The action has modest cost and high reversibility, so expected strict gain remains positive; positive realized gain is expected primarily when the choice succeeds."
+    },
+    "matbench-pairwise::235d5f53cf99::sequential-v2::base": {
+      "p_positive_gain": 0.1,
+      "expected_gain": 0.005,
+      "p_success": 0.1,
+      "expected_normalized_utility": 0.07,
+      "assessment_confidence": 0.62,
+      "rationale": "Low surrogate tiers, small margin, and high estimated noise imply low success probability; high reversibility limits failure harm."
+    },
+    "matbench-pairwise::23a790601c67::sequential-v2::base": {
+      "p_positive_gain": 0.08,
+      "expected_gain": -0.012,
+      "p_success": 0.08,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.76,
+      "rationale": "Both candidates have low surrogate bulk-modulus tiers, the margin is negligible, and estimated noise is high, so the probability that A is a successful high-bulk-modulus selection is low. Conditional scientific utility is substantial if successful, but action cost and the residual failure harm under imperfect reversibility make the posterior expected strict gain slightly negative."
+    },
+    "matbench-pairwise::2417935afbea::sequential-v2::base": {
+      "p_positive_gain": 0.955,
+      "expected_gain": 0.597,
+      "p_success": 0.955,
+      "expected_normalized_utility": 0.6591,
+      "assessment_confidence": 0.84,
+      "rationale": "0.6591 margin relative to 0.3875 estimated noise implies a high probability that A truly exceeds B; gain includes 0.030 action-cost penalty and expected failure harm using 0.200 irreversibility."
+    },
+    "matbench-pairwise::24df677d77b5::sequential-v2::base": {
+      "p_positive_gain": 0.553,
+      "expected_gain": 0.2131,
+      "p_success": 0.553,
+      "expected_normalized_utility": 0.48,
+      "assessment_confidence": 0.47,
+      "rationale": "0.553; 0.480; 0.200; 0.800"
+    },
+    "matbench-pairwise::2549f4f22459::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.4385,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.58,
+      "rationale": "The medium-versus-low surrogate ranking supports choosing B, but the large estimated noise relative to the surrogate margin leaves substantial uncertainty. Using a 0.61 success probability, 0.80 normalized utility conditional on success, normalized action cost 0.20, and an inferred irreversible-failure harm of 0.20 from the 0.80 reversibility, the posterior mean strict gain is approximately 0.4385. Failure remains slightly negative, so positive gain is expected primarily when the follow-up succeeds."
+    },
+    "matbench-pairwise::264b70e00b68::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.739,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.72,
+      "rationale": "High surrogate tier and a large margin support selecting A, but estimated noise lowers confidence. Using success utility 1.0, action-cost penalty 0.1500*0.2000=0.0300, and irreversible-failure harm 1-0.8000=0.2000, expected gain is 0.78-0.03-0.25*0.22*0.20=0.739."
+    },
+    "matbench-pairwise::266b7cb9e90e::sequential-v2::base": {
+      "p_positive_gain": 0.66,
+      "expected_gain": 0.435,
+      "p_success": 0.66,
+      "expected_normalized_utility": 0.495,
+      "assessment_confidence": 0.62,
+      "rationale": "High surrogate tier and positive margin support success, but estimated noise materially reduces confidence; assumed conditional utility 0.75 and irreversible-failure harm 0.20 from reversibility."
+    },
+    "matbench-pairwise::276282e45c52::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.3776,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.68,
+      "assessment_confidence": 0.58,
+      "rationale": "0.61,0.68,0.20,0.200000"
+    },
+    "matbench-pairwise::276e0e4d5c5b::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.062,
+      "p_success": 0.569,
+      "expected_normalized_utility": 0.2,
+      "assessment_confidence": 0.57,
+      "rationale": ""
+    },
+    "matbench-pairwise::281ab4621af9::sequential-v2::base": {
+      "p_positive_gain": 0.58,
+      "expected_gain": 0.355,
+      "p_success": 0.58,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.55,
+      "rationale": "Moderate positive surrogate evidence is substantially weakened by high estimated noise; using p_success=0.58, conditional utility=0.70, action-cost deduction=0.1500*0.2000=0.0300, and irreversible-failure harm=1-0.8000=0.2000 gives expected gain 0.58*0.70-0.0300-0.2500*0.42*0.2000=0.3550. Positive gain is expected primarily when the follow-up succeeds."
+    },
+    "matbench-pairwise::28f25618b3bf::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.389,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.72,
+      "rationale": "The positive surrogate margin favors A, but the estimated noise is larger than the margin, implying moderate rather than decisive confidence. With action cost 0.2 and reversibility 0.8, the expected cost and irreversible-failure deductions are modest."
+    },
+    "matbench-pairwise::29ca6467f436::sequential-v2::base": {
+      "p_positive_gain": 0.77,
+      "expected_gain": 0.459,
+      "p_success": 0.77,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.7,
+      "rationale": "0.3944 margin / 0.5331 noise supports p_success 0.77; cost penalty 0.0300 and estimated failure-harm penalty 0.0115 yield expected gain 0.4590."
+    },
+    "matbench-pairwise::2a33ef6dbbf6::sequential-v2::base": {
+      "p_positive_gain": 0.59,
+      "expected_gain": 0.392,
+      "p_success": 0.59,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.56,
+      "rationale": "Both candidates have high surrogate tiers, while the modest margin relative to the high estimated noise leaves only moderate confidence that B is the better true elasticity choice. The high reversibility limits failure harm; with conditional scientific utility estimated at 0.75, the expected gain remains positive after action cost and failure-risk penalties."
+    },
+    "matbench-pairwise::2b943328ea42::sequential-v2::base": {
+      "p_positive_gain": 0.68,
+      "expected_gain": 0.543,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.85,
+      "assessment_confidence": 0.64,
+      "rationale": "Candidate B has a meaningful high-versus-medium surrogate advantage, but the large estimated noise materially limits confidence that it is truly superior. The action is highly reversible, so the failure-harm contribution is modest; the main deduction is the visible action cost."
+    },
+    "matbench-pairwise::2cd90f50dc80::sequential-v2::base": {
+      "p_positive_gain": 0.51,
+      "expected_gain": 0.342,
+      "p_success": 0.51,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.62,
+      "rationale": "p_success=0.51; expected_normalized_utility=0.78; normalized_action_cost=0.20; irreversible_failure_harm=0.20; expected_gain=0.51*0.78-0.15*0.20-0.25*0.49*0.20=0.342."
+    },
+    "matbench-pairwise::3024351b2b0a::sequential-v2::base": {
+      "p_positive_gain": 0.514,
+      "expected_gain": 0.4597,
+      "p_success": 0.514,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.55,
+      "rationale": "Medium-vs-medium surrogate evidence with margin 0.0408 relative to noise 0.7276 implies near-chance success probability; using 0.514, normalized success utility 1.000, action-cost deduction 0.0300, and reversibility-implied failure harm 0.200 gives expected gain 0.4597."
+    },
+    "matbench-pairwise::32e9c7a4f6bd::sequential-v2::base": {
+      "p_positive_gain": 0.812,
+      "expected_gain": 0.7726,
+      "p_success": 0.812,
+      "expected_normalized_utility": 0.812,
+      "assessment_confidence": 0.68,
+      "rationale": "The surrogate margin relative to estimated noise implies approximately 0.812 probability that A is the scientifically preferable high-bulk-modulus choice. Using unit normalized utility on success, 0.200 action cost, and 0.200 irreversible-harm exposure from 0.800 reversibility gives expected gain 0.812 - 0.1500*0.200 - 0.2500*0.188*0.200 = 0.7726."
+    },
+    "matbench-pairwise::338bff4bf055::sequential-v2::base": {
+      "p_positive_gain": 0.748,
+      "expected_gain": 0.705,
+      "p_success": 0.748,
+      "expected_normalized_utility": 0.748,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and margin support candidate B, but the substantial estimated noise leaves meaningful uncertainty. Using a Gaussian signal-to-noise interpretation, the probability that B is genuinely preferable is approximately Phi(0.3664/0.5485)=0.748. With normalized utility near one on success, action cost 0.200, and reversibility 0.800 implying limited irreversible-failure harm, the posterior mean strict gain is approximately 0.705."
+    },
+    "matbench-pairwise::344045a8a7b5::sequential-v2::base": {
+      "p_positive_gain": 0.63,
+      "expected_gain": 0.424,
+      "p_success": 0.63,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.58,
+      "rationale": "Medium-versus-low surrogate evidence supports a moderately likely successful high-bulk-modulus selection, but the substantial estimated noise limits confidence; expected gain includes the 0.03 action-cost penalty and a small residual failure-harm penalty from high reversibility."
+    },
+    "matbench-pairwise::3470f5d188d1::sequential-v2::base": {
+      "p_positive_gain": 0.985,
+      "expected_gain": 0.808,
+      "p_success": 0.985,
+      "expected_normalized_utility": 0.84,
+      "assessment_confidence": 0.96,
+      "rationale": ""
+    },
+    "matbench-pairwise::359133e01ba1::sequential-v2::base": {
+      "p_positive_gain": 0.82,
+      "expected_gain": 0.591,
+      "p_success": 0.82,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.74,
+      "rationale": "The medium-versus-low surrogate separation favors A, but the substantial estimated noise makes the pairwise choice uncertain. Assuming normalized utility of 0.8 when the choice is correct and irreversible-failure harm of 0.2 from the stated reversibility, the posterior expected strict gain is approximately 0.82*0.8 - 0.15*0.2 - 0.25*0.18*0.2 = 0.591."
+    },
+    "matbench-pairwise::35d878d814e0::sequential-v2::base": {
+      "p_positive_gain": 0.97,
+      "expected_gain": 0.9385,
+      "p_success": 0.97,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.91,
+      "rationale": ""
+    },
+    "matbench-pairwise::3618686c52fe::sequential-v2::base": {
+      "p_positive_gain": 0.65,
+      "expected_gain": 0.3484,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.58,
+      "assessment_confidence": 0.64,
+      "rationale": "B's high surrogate tier and substantial margin favor success, but the margin is smaller than the estimated noise, leaving meaningful uncertainty. The action is highly reversible, so expected failure harm is limited; the main deduction is the normalized action cost."
+    },
+    "matbench-pairwise::364a2cbd5030::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.515,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-medium surrogate margin supports roughly 70% success probability, but the substantial estimated noise prevents high confidence. Conditional scientific utility is estimated at 0.8; the 0.2 action cost contributes 0.03 loss, and high reversibility limits failure harm to about 0.2."
+    },
+    "matbench-pairwise::366145f274a7::sequential-v2::base": {
+      "p_positive_gain": 0.589,
+      "expected_gain": 0.539,
+      "p_success": 0.589,
+      "expected_normalized_utility": 0.589,
+      "assessment_confidence": 0.67,
+      "rationale": "Surrogate margin relative to estimated noise gives a modest probability that A truly exceeds B. Using reversibility 0.8 implies irreversible failure harm 0.2; thus the expected strict gain is approximately 0.589 - 0.1500×0.2000 - 0.2500×(1-0.589)×0.2000 = 0.539."
+    },
+    "matbench-pairwise::369541bb6c40::sequential-v2::base": {
+      "p_positive_gain": 0.67,
+      "expected_gain": 0.2675,
+      "p_success": 0.67,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.56,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the estimated noise is substantial, so the probability that B is truly superior is only moderately high. Conditional scientific utility is estimated as moderate; the action cost and limited irreversible-failure harm reduce but do not eliminate positive expected gain."
+    },
+    "matbench-pairwise::36e82daee855::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.4346,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.46,
+      "rationale": "The positive surrogate margin supports A, but the high noise level leaves only moderate confidence. Using 0.62 success probability, 0.78 conditional normalized scientific utility, 0.20 irreversible-failure harm, and 0.0300 action-cost penalty gives an expected strict gain of 0.4346; positive gain is expected primarily when the selection succeeds."
+    },
+    "matbench-pairwise::376416c367ca::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.34,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.56,
+      "rationale": "Candidate B has the favorable surrogate tier, but the small margin relative to the very high estimated noise makes the probability that it is the scientifically superior target only modestly above chance. Successful follow-up is assigned substantial utility; with high reversibility, the modeled irreversible-failure harm is limited."
+    },
+    "matbench-pairwise::385d32711f79::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.305,
+      "p_success": 0.55,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.48,
+      "rationale": "Both candidates have the same high surrogate tier, while the modest margin (0.1396) is small relative to estimated noise (0.6732), giving only a slight edge to B. The action remains moderately likely to realize useful scientific information, with low normalized cost and limited irreversibility; failure is therefore mildly harmful rather than strongly penalized."
+    },
+    "matbench-pairwise::389cb5a94708::sequential-v2::base": {
+      "p_positive_gain": 0.57,
+      "expected_gain": 0.376,
+      "p_success": 0.57,
+      "expected_normalized_utility": 0.4275,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-medium surrogate signal supports selecting A, but the small margin relative to estimated noise makes success only moderately likely. Conditional scientific utility is estimated at 0.75; the action cost and limited irreversibility-adjusted failure harm reduce the expected net gain."
+    },
+    "matbench-pairwise::3afb6dcd16e4::sequential-v2::base": {
+      "p_positive_gain": 0.588,
+      "expected_gain": 0.4492,
+      "p_success": 0.588,
+      "expected_normalized_utility": 0.85,
+      "assessment_confidence": 0.46,
+      "rationale": "Both candidates are in the same surrogate tier; the modest margin relative to estimated noise supports only a modest advantage for B. Cost is 0.03, and high reversibility keeps failure harm limited."
+    },
+    "matbench-pairwise::3b56f56a6d24::sequential-v2::base": {
+      "p_positive_gain": 0.58,
+      "expected_gain": 0.413,
+      "p_success": 0.58,
+      "expected_normalized_utility": 0.464,
+      "assessment_confidence": 0.56,
+      "rationale": "The high surrogate tier favors candidate B, but the modest margin relative to the substantial estimated noise makes the true-selection success probability only moderately above chance. Conditional on success, the follow-up has substantial scientific value; the high reversibility implies limited irreversible-failure harm. The action cost modestly reduces the posterior mean gain."
+    },
+    "matbench-pairwise::3cef1ab88209::sequential-v2::base": {
+      "p_positive_gain": 0.86,
+      "expected_gain": 0.522,
+      "p_success": 0.86,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.68,
+      "rationale": "The large positive surrogate margin relative to estimated noise supports a high probability that candidate A is the better high-bulk-modulus choice. The action has modest cost and high reversibility, so failure harm is limited; conditional scientific utility is estimated as moderate-to-high rather than maximal because A is only in the medium surrogate tier."
+    },
+    "matbench-pairwise::3d69cc5aeb08::sequential-v2::base": {
+      "p_positive_gain": 0.74,
+      "expected_gain": 0.697,
+      "p_success": 0.74,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.62,
+      "rationale": "High surrogate tier and substantial margin support success, but the noise level leaves meaningful uncertainty; cost and limited irreversibility penalty are included."
+    },
+    "matbench-pairwise::3e81ea3710dd::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.3287,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.62,
+      "rationale": ""
+    },
+    "matbench-pairwise::412a3b60b61b::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.482,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate separation supports candidate A, but the substantial estimated noise limits confidence. With high reversibility, assumed failure harm is modest; applying the specified cost and failure penalties gives an expected strict gain of approximately 0.482."
+    },
+    "matbench-pairwise::4152998aabfa::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.323,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.56,
+      "rationale": "The positive surrogate margin favors B, but the large estimated noise substantially limits confidence that it is truly the high-bulk-modulus choice. With 0.8 reversibility, the implied irreversible-failure harm is modest; using normalized utility 0.60 and action cost 0.20 gives an expected strict gain of about 0.323 after cost and failure-harm penalties."
+    },
+    "matbench-pairwise::4233aef4fedc::sequential-v2::base": {
+      "p_positive_gain": 0.63,
+      "expected_gain": 0.43,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.62,
+      "rationale": "The high surrogate tier supports choosing B, but the modest margin and high estimated noise leave substantial uncertainty. Conditional scientific utility is estimated as moderately high; the visible action cost is small, and high reversibility limits failure harm. The resulting expected strict gain is positive but not highly certain."
+    },
+    "matbench-pairwise::43091083bcea::sequential-v2::base": {
+      "p_positive_gain": 0.624,
+      "expected_gain": 0.354,
+      "p_success": 0.624,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.64,
+      "rationale": "Both candidates share the same low surrogate tier, while the positive margin weakly favors B but is small relative to estimated noise. This implies a modestly above-chance success probability. The expected gain includes the 0.030 normalized action-cost penalty and an expected irreversible-failure penalty based on 0.200 irreversibility."
+    },
+    "matbench-pairwise::43bbbc8f5e26::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.519,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.56,
+      "assessment_confidence": 0.64,
+      "rationale": "The high-versus-medium surrogate signal favors A, but the small margin relative to the estimated noise makes the probability that A is truly the better elasticity choice only modestly above 0.5. With normalized successful scientific utility treated as approximately 1, the action cost is 0.03 and the low irreversible-harm exposure from high reversibility adds only a small expected penalty."
+    },
+    "matbench-pairwise::43dd72ae2b92::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.363,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.53,
+      "rationale": "The medium-versus-low surrogate ordering favors A, but the small margin relative to the high estimated noise leaves substantial uncertainty. Assuming successful selection provides moderate normalized scientific value and failure is only mildly irreversible given high reversibility, the action has a positive but uncertain expected strict gain after cost and failure-harm penalties."
+    },
+    "matbench-pairwise::448bdedbc239::sequential-v2::base": {
+      "p_positive_gain": 0.1,
+      "expected_gain": -0.0075,
+      "p_success": 0.1,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.62,
+      "rationale": "Both candidates are in the low surrogate tier, while the substantial noise weakens discrimination; selecting B therefore has a low probability of yielding the targeted high-bulk-modulus result. Conditional on success, the scientific utility is meaningful, but the expected benefit is slightly outweighed by action cost and residual failure harm."
+    },
+    "matbench-pairwise::4536077496d1::sequential-v2::base": {
+      "p_positive_gain": 0.67,
+      "expected_gain": 0.456,
+      "p_success": 0.67,
+      "expected_normalized_utility": 0.503,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-medium surrogate margin favors A, but the relatively high estimated noise materially limits confidence. Assuming conditional scientific utility of about 0.75 on success and irreversible-failure harm of 0.20 implied by reversibility 0.80, the expected strict gain is approximately 0.67*0.75 - 0.15*0.20 - 0.25*0.33*0.20 = 0.456."
+    },
+    "matbench-pairwise::454f6aac0925::sequential-v2::base": {
+      "p_positive_gain": 0.5,
+      "expected_gain": 0.27,
+      "p_success": 0.5,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.52,
+      "rationale": "Near-tied surrogate tiers, modest margin, and high estimated noise imply approximately chance-level selection success; conditional scientific utility is moderate, while the action cost is modest and failure harm is limited by high reversibility."
+    },
+    "matbench-pairwise::467141c839dd::sequential-v2::base": {
+      "p_positive_gain": 0.516,
+      "expected_gain": 0.3586,
+      "p_success": 0.516,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.72,
+      "rationale": "The surrogate margin is very small relative to the estimated noise, so candidate A is only slightly more likely than not to be the higher-bulk-modulus choice. Conditional scientific utility is estimated as moderate-high, while the visible action cost and high reversibility keep failure harm limited."
+    },
+    "matbench-pairwise::469e9e28a2e0::sequential-v2::base": {
+      "p_positive_gain": 0.73,
+      "expected_gain": 0.3215,
+      "p_success": 0.73,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.64,
+      "rationale": "The high-versus-medium surrogate margin implies about a 0.73 probability that B is the scientifically preferable choice after accounting for the reported noise. Conditional utility is estimated at 0.50; the visible action cost contributes 0.0300, and limited irreversibility contributes an expected failure penalty of about 0.0135."
+    },
+    "matbench-pairwise::46c0ab4aad33::sequential-v2::base": {
+      "p_positive_gain": 0.95,
+      "expected_gain": 0.7085,
+      "p_success": 0.95,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.84,
+      "rationale": ""
+    },
+    "matbench-pairwise::46de09487a2c::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.3063,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.58,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin favor candidate A, but the substantial estimated noise limits confidence. Conditional scientific utility is expected to be moderate-to-high, while the action cost and residual failure harm reduce net gain."
+    },
+    "matbench-pairwise::4713d4595d83::sequential-v2::base": {
+      "p_positive_gain": 0.595,
+      "expected_gain": 0.426,
+      "p_success": 0.595,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.62,
+      "rationale": "The surrogate margin favors A only modestly relative to the estimated noise, implying roughly a 0.60 probability that A is the better high-bulk-modulus choice. Conditional scientific utility is estimated as high, while the visible action cost and high reversibility keep expected failure harm limited."
+    },
+    "matbench-pairwise::47aa5f184e80::sequential-v2::base": {
+      "p_positive_gain": 0.67,
+      "expected_gain": 0.4895,
+      "p_success": 0.67,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-low surrogate separation supports A, but the substantial estimated noise makes the choice only moderately reliable; reversibility limits the expected failure harm."
+    },
+    "matbench-pairwise::483a29541124::sequential-v2::base": {
+      "p_positive_gain": 0.6,
+      "expected_gain": 0.5515,
+      "p_success": 0.6,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.56,
+      "rationale": "The medium-versus-low surrogate ranking supports B, but the 0.2019 margin is small relative to 0.6390 estimated noise. Using 0.6000 success probability, 0.6000 normalized utility conditional on success, 0.2000 normalized irreversible-failure harm, and the stated 0.2000 action cost gives an expected strict gain of 0.5515."
+    },
+    "matbench-pairwise::494ef8196384::sequential-v2::base": {
+      "p_positive_gain": 0.504,
+      "expected_gain": 0.1932,
+      "p_success": 0.504,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.46,
+      "rationale": "Both candidates have the same surrogate tier, the margin is negligible, and estimated noise is high, so success probability is near chance. Conditional scientific utility is moderate, action cost is modest, and high reversibility limits failure harm."
+    },
+    "matbench-pairwise::4afd5a013a6e::sequential-v2::base": {
+      "p_positive_gain": 0.76,
+      "expected_gain": 0.55,
+      "p_success": 0.76,
+      "expected_normalized_utility": 0.76,
+      "assessment_confidence": 0.68,
+      "rationale": "The high surrogate tier and substantial margin support a moderately strong probability that A has the higher true elasticity target, but the estimated noise materially limits confidence. A successful follow-up would provide substantial scientific utility; the action is relatively reversible, so failure harm is modest, while the visible action cost is small."
+    },
+    "matbench-pairwise::4b53d5f4f35b::sequential-v2::base": {
+      "p_positive_gain": 0.609,
+      "expected_gain": 0.5594,
+      "p_success": 0.609,
+      "expected_normalized_utility": 0.609,
+      "assessment_confidence": 0.62,
+      "rationale": "0.1803/0.6508=0.277; success probability estimated as 0.609. Cost penalty=0.030; irreversibility=0.200; expected failure-harm penalty=0.0196."
+    },
+    "matbench-pairwise::4bc10a08b4e1::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.528,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.9,
+      "assessment_confidence": 0.62,
+      "rationale": "The medium surrogate tier and positive margin favor candidate B, but the relatively high estimated noise substantially limits confidence that it is truly the higher-bulk-modulus choice. Assuming successful selection yields high normalized scientific value, the modest action cost and high reversibility leave a positive expected net gain."
+    },
+    "matbench-pairwise::4d1f5ae1e71b::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.3325,
+      "p_success": 0.55,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.55,
+      "rationale": "The two candidates have identical high surrogate tiers, while the small margin relative to the estimated noise supports only a modest advantage for A, yielding approximately 0.55 success probability. Conditional scientific utility is estimated at 0.70. The action cost contributes 0.0300, and limited irreversibility implies an estimated failure harm of 0.20, contributing 0.0225 in expectation."
+    },
+    "matbench-pairwise::4dfdf866cba3::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.447,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the margin is small relative to the estimated noise (0.1994 versus 0.6403), implying only moderate success probability. With high reversibility, the irreversible-failure penalty is limited; after the action-cost deduction, successful execution is likely to have positive net scientific gain."
+    },
+    "matbench-pairwise::4e73d9dd4aaf::sequential-v2::base": {
+      "p_positive_gain": 0.54,
+      "expected_gain": 0.487,
+      "p_success": 0.54,
+      "expected_normalized_utility": 0.54,
+      "assessment_confidence": 0.62,
+      "rationale": "The high surrogate tier and small positive margin favor A, but the margin is weak relative to the estimated noise, so success probability is only modestly above chance. Assuming near-unit utility for a successful high-bulk-modulus selection, the expected gain remains positive after the visible action cost and the reduced irreversible-failure harm implied by high reversibility."
+    },
+    "matbench-pairwise::4e88cf0ea333::sequential-v2::base": {
+      "p_positive_gain": 0.824,
+      "expected_gain": 0.579,
+      "p_success": 0.824,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.78,
+      "rationale": "The surrogate margin relative to estimated noise gives an approximately 0.824 probability that B truly has the higher bulk modulus. Using normalized utility 0.75, action cost 0.20, and irreversible harm 0.20 implied by reversibility 0.80 yields expected gain 0.824×0.75−0.150×0.20−0.250×0.176×0.20≈0.579."
+    },
+    "matbench-pairwise::4f68a8c55e10::sequential-v2::base": {
+      "p_positive_gain": 0.5108,
+      "expected_gain": 0.4563,
+      "p_success": 0.5108,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.78,
+      "rationale": "Both candidates share the same surrogate tier; the 0.0200 margin is negligible relative to 0.7390 estimated noise, so B is only slightly more likely than chance to be correct. Using normalized utility 1.0 on success, action-cost penalty 0.0300, and irreversible failure harm 0.2000 from reversibility 0.8000 gives the stated expected gain."
+    },
+    "matbench-pairwise::5013a426c52e::sequential-v2::base": {
+      "p_positive_gain": 0.598,
+      "expected_gain": 0.3386,
+      "p_success": 0.598,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.56,
+      "rationale": "The positive surrogate margin modestly favors B, but its magnitude is small relative to the estimated noise, implying only a moderate success probability. Conditional scientific utility is estimated as substantial, while the visible reversibility limits irreversible-failure harm; the fixed action cost remains modest."
+    },
+    "matbench-pairwise::5055aa42ba11::sequential-v2::base": {
+      "p_positive_gain": 0.637,
+      "expected_gain": 0.366,
+      "p_success": 0.637,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.68,
+      "rationale": "The medium-versus-low surrogate separation favors candidate A, but the large estimated noise substantially limits confidence; using a normal-noise interpretation gives approximately 0.637 probability that A is the better high-bulk-modulus choice. Conditional scientific utility is estimated at 0.65. The action-cost penalty is 0.03, and the high reversibility implies a relatively small irreversible-failure harm estimate of 0.20."
+    },
+    "matbench-pairwise::512b5a523fa0::sequential-v2::base": {
+      "p_positive_gain": 0.6,
+      "expected_gain": 0.358,
+      "p_success": 0.6,
+      "expected_normalized_utility": 0.68,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin favor candidate A, but the substantial estimated noise limits confidence that it is truly the better elasticity target. The action has modest cost and high reversibility, so failure harm is relatively limited; the posterior mean strict gain remains positive but uncertain."
+    },
+    "matbench-pairwise::516e98097d53::sequential-v2::base": {
+      "p_positive_gain": 0.638,
+      "expected_gain": 0.3028,
+      "p_success": 0.638,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.62,
+      "rationale": "The signed surrogate margin favors A, but it is small relative to estimated noise (0.2213/0.6283≈0.35), implying only moderate success probability. Both candidates are medium-tier, so successful follow-up has moderate normalized scientific utility. The fixed cost penalty is 0.03, and reversibility 0.8 implies an estimated irreversible-failure-harm fraction of 0.2, giving a 0.05 penalty on failure."
+    },
+    "matbench-pairwise::522007452a60::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.6152,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.6552,
+      "assessment_confidence": 0.68,
+      "rationale": "The large surrogate margin favors B, but the nontrivial estimated noise leaves meaningful uncertainty; success is expected to provide substantial scientific utility, with modest cost and failure harm."
+    },
+    "matbench-pairwise::527ebbbc27e8::sequential-v2::base": {
+      "p_positive_gain": 0.46,
+      "expected_gain": 0.196,
+      "p_success": 0.46,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.55,
+      "rationale": "The equal surrogate tiers, very small margin, and high estimated noise make A only slightly more likely than not to be the higher-bulk-modulus choice. Conditional scientific utility is moderate, while the low action cost and high reversibility keep failure harm limited."
+    },
+    "matbench-pairwise::530ef9658f85::sequential-v2::base": {
+      "p_positive_gain": 0.697,
+      "expected_gain": 0.652,
+      "p_success": 0.697,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.66,
+      "rationale": "0.3008 / 0.5846 = 0.515; Gaussian calibration gives p_success ≈ 0.697. With irreversible_failure_harm = 1 - 0.8 = 0.2, expected_gain = 0.697 - 0.15(0.2) - 0.25(0.303)(0.2) ≈ 0.652."
+    },
+    "matbench-pairwise::5438590699ab::sequential-v2::base": {
+      "p_positive_gain": 0.52,
+      "expected_gain": 0.33,
+      "p_success": 0.52,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.56,
+      "rationale": "Both candidates have the same high surrogate tier, while the small margin relative to the estimated noise provides only weak evidence favoring candidate B. The action is highly reversible, so failure harm is limited; conditional scientific utility is nevertheless substantial if B is confirmed as the better target. The resulting expected gain is modestly positive, with positive realized gain occurring mainly when the follow-up succeeds."
+    },
+    "matbench-pairwise::554b58fb324e::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.397,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.46,
+      "rationale": "Candidate B has a favorable but weak surrogate advantage over A; the large estimated noise substantially limits confidence that it is truly the better high-bulk-modulus follow-up. With high reversibility, failure harm is modest, so the action has a moderate probability of positive strict gain despite uncertainty."
+    },
+    "matbench-pairwise::561d39a05cd1::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.312,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.58,
+      "rationale": "Both candidates have the same high surrogate tier, while the modest surrogate margin is small relative to the estimated noise, giving only a slight advantage to choosing B. If B is the better true elasticity candidate, the follow-up has substantial scientific value; reversibility limits the downside if the choice is wrong."
+    },
+    "matbench-pairwise::563d62d649c0::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.432,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.56,
+      "rationale": "The high surrogate tier favors B, but the modest margin relative to the high estimated noise leaves substantial uncertainty. Conditional on success, the follow-up has moderately high scientific utility; the action cost is small and reversibility makes irreversible-failure harm limited."
+    },
+    "matbench-pairwise::56b5ce39eeb5::sequential-v2::base": {
+      "p_positive_gain": 0.5,
+      "expected_gain": 0.3,
+      "p_success": 0.5,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.45,
+      "rationale": "Both candidates have the same high surrogate tier, while the very small margin relative to the high estimated noise provides essentially no reliable basis for preferring A. Conditional scientific utility is moderately high if A is the correct follow-up choice, but the action incurs a 0.03 cost and only limited failure harm because reversibility is high."
+    },
+    "matbench-pairwise::577af485dfd3::sequential-v2::base": {
+      "p_positive_gain": 0.532,
+      "expected_gain": 0.4786,
+      "p_success": 0.532,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": ""
+    },
+    "matbench-pairwise::5879ebe54357::sequential-v2::base": {
+      "p_positive_gain": 0.628,
+      "expected_gain": 0.579,
+      "p_success": 0.628,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.76,
+      "rationale": "Gaussian interpretation of the 0.2082 surrogate margin relative to 0.6355 noise gives p_success≈0.628. With failure harm estimated as 1−reversibility=0.2, expected gain is 0.628−0.15(0.2)−0.25(1−0.628)(0.2)≈0.579."
+    },
+    "matbench-pairwise::5d2cb1de55ae::sequential-v2::base": {
+      "p_positive_gain": 0.68,
+      "expected_gain": 0.43,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.61,
+      "rationale": "The medium-versus-low surrogate gap favors B, but the margin is modest relative to estimated noise, implying about a 0.68 success probability. Conditional scientific utility is estimated at 0.70; the visible action cost contributes 0.03, while high reversibility limits expected irreversible-failure harm."
+    },
+    "matbench-pairwise::5e4be1ab15ee::sequential-v2::base": {
+      "p_positive_gain": 0.92,
+      "expected_gain": 0.628,
+      "p_success": 0.92,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.78,
+      "rationale": "The surrogate margin is large relative to the estimated pairwise noise, supporting a high probability that A truly has the higher bulk modulus. Expected gain includes the 0.030 normalized action-cost penalty and a small failure-harm penalty given 0.8 reversibility."
+    },
+    "matbench-pairwise::5e819ca47f0d::sequential-v2::base": {
+      "p_positive_gain": 0.539,
+      "expected_gain": 0.4859,
+      "p_success": 0.539,
+      "expected_normalized_utility": 0.539,
+      "assessment_confidence": 0.56,
+      "rationale": "The small positive surrogate margin favors A only weakly relative to the very high estimated noise, implying roughly a 0.539 success probability. Taking successful scientific utility as normalized to 1 and irreversible-failure harm as 1 minus reversibility (0.2), the expected gain is 0.539 - 0.1500*0.2 - 0.2500*0.461*0.2 = 0.4859."
+    },
+    "matbench-pairwise::5f49e92d6c5d::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.34,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.45,
+      "rationale": "Estimated success probability is modestly above chance because B has a medium rather than low surrogate tier, but the small surrogate margin and high noise materially reduce confidence; normalized success utility is estimated at 0.70 and irreversible-failure harm at 0.20."
+    },
+    "matbench-pairwise::5f9968a30fe6::sequential-v2::base": {
+      "p_positive_gain": 0.85,
+      "expected_gain": 0.6,
+      "p_success": 0.85,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.72,
+      "rationale": "0.5125/0.4681=1.095; cost penalty=0.1500×0.2000=0.0300; inferred irreversible harm=1−0.8000=0.2000; expected failure penalty=0.2500×0.1500×0.2000=0.0075; expected gain=0.8500×0.7500−0.0300−0.0075=0.6000."
+    },
+    "matbench-pairwise::6065cbcbb4c8::sequential-v2::base": {
+      "p_positive_gain": 0.52,
+      "expected_gain": 0.1644,
+      "p_success": 0.52,
+      "expected_normalized_utility": 0.2184,
+      "assessment_confidence": 0.42,
+      "rationale": "Both candidates have the same high surrogate tier, while the modest margin (0.1308) is small relative to estimated noise (0.6781), leaving only slightly better-than-chance confidence that choosing B is scientifically preferable. Conditional successful follow-up utility is estimated at 0.42; the visible cost contributes 0.03, and limited irreversibility implies a relatively small failure harm."
+    },
+    "matbench-pairwise::60a42db58f9d::sequential-v2::base": {
+      "p_positive_gain": 0.52,
+      "expected_gain": 0.18,
+      "p_success": 0.52,
+      "expected_normalized_utility": 0.45,
+      "assessment_confidence": 0.34,
+      "rationale": "Both candidates have the same surrogate tier, the margin is small, and estimated noise is high, so the evidence only weakly favors choosing B. The oxide composition provides a modest domain-based positive signal for high bulk modulus, but uncertainty remains substantial. The action has low normalized cost and high reversibility, limiting downside if the choice is unsuccessful."
+    },
+    "matbench-pairwise::61f82ccaf035::sequential-v2::base": {
+      "p_positive_gain": 0.76,
+      "expected_gain": 0.528,
+      "p_success": 0.76,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-medium surrogate margin supports candidate A, but the estimated noise is substantial, so the probability that A is the scientifically preferable choice is moderately high rather than decisive. Conditional scientific utility is estimated at 0.75; the action cost contributes -0.03, and high reversibility limits expected irreversible-failure harm."
+    },
+    "matbench-pairwise::62335f07a960::sequential-v2::base": {
+      "p_positive_gain": 0.8,
+      "expected_gain": 0.76,
+      "p_success": 0.8,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate separation supports a moderately strong probability that A is the better elasticity choice, but the comparable estimated noise materially limits confidence. With normalized action cost 0.20 and reversibility 0.80, the expected scientific benefit substantially exceeds expected cost."
+    },
+    "matbench-pairwise::626e173dce32::sequential-v2::base": {
+      "p_positive_gain": 0.37,
+      "expected_gain": 0.163,
+      "p_success": 0.37,
+      "expected_normalized_utility": 0.58,
+      "assessment_confidence": 0.62,
+      "rationale": "The nearly tied medium surrogate tiers and high estimated noise make selecting B only modestly better than chance, with some domain-based downside for the ionic bromide composition. A successful follow-up could provide useful screening information, but the action cost and residual failure risk reduce its expected net gain."
+    },
+    "matbench-pairwise::63d7935cae27::sequential-v2::base": {
+      "p_positive_gain": 0.662,
+      "expected_gain": 0.615,
+      "p_success": 0.662,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.68,
+      "rationale": ""
+    },
+    "matbench-pairwise::655754c8c24a::sequential-v2::base": {
+      "p_positive_gain": 0.545,
+      "expected_gain": 0.3288,
+      "p_success": 0.545,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.58,
+      "rationale": "The small surrogate margin relative to the estimated noise implies only a slight advantage for B, so success is near a coin flip. Conditional scientific utility is moderate because both candidates are already in the high-bulk-modulus tier. Accounting for the 0.03 normalized action cost and modest irreversibility penalty yields a positive posterior mean, but with substantial uncertainty."
+    },
+    "matbench-pairwise::664a042ce441::sequential-v2::base": {
+      "p_positive_gain": 0.5,
+      "expected_gain": 0.42,
+      "p_success": 0.5,
+      "expected_normalized_utility": 0.95,
+      "assessment_confidence": 0.56,
+      "rationale": "Both candidates have identical high surrogate tiers and zero margin, while estimated noise is high, so selecting A is effectively an uncertain 50/50 choice. Conditional scientific utility is high if successful; the visible cost is modest and reversibility is substantial, making failure harm limited."
+    },
+    "matbench-pairwise::676dfd39d55d::sequential-v2::base": {
+      "p_positive_gain": 0.86,
+      "expected_gain": 0.737,
+      "p_success": 0.86,
+      "expected_normalized_utility": 0.9,
+      "assessment_confidence": 0.74,
+      "rationale": "Margin-to-noise ratio=1.134; estimated success probability=0.860. Cost penalty=0.030 and irreversible-failure penalty conditional on failure=0.050, using irreversible harm=1-0.800=0.200. Expected gain=0.860*0.900-0.030-0.250*0.140*0.200=0.737."
+    },
+    "matbench-pairwise::6b9b6dfaa660::sequential-v2::base": {
+      "p_positive_gain": 0.59,
+      "expected_gain": 0.36,
+      "p_success": 0.59,
+      "expected_normalized_utility": 0.41,
+      "assessment_confidence": 0.62,
+      "rationale": "The small surrogate margin relative to estimated noise supports only modest confidence that A is the better true elasticity choice; successful follow-up has substantial scientific value, while high reversibility limits failure harm."
+    },
+    "matbench-pairwise::6c5ffdb6c663::sequential-v2::base": {
+      "p_positive_gain": 0.6,
+      "expected_gain": 0.31,
+      "p_success": 0.6,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.55,
+      "rationale": "The high surrogate tier and positive margin favor candidate A, but the margin is modest relative to the estimated noise, giving only moderate success probability. The action cost is small and reversibility is high, so the expected net gain remains positive."
+    },
+    "matbench-pairwise::6e3084b6e2a6::sequential-v2::base": {
+      "p_positive_gain": 0.43,
+      "expected_gain": 0.221,
+      "p_success": 0.43,
+      "expected_normalized_utility": 0.28,
+      "assessment_confidence": 0.62,
+      "rationale": "Both candidates have low surrogate tiers, while the modest margin and high estimated noise make selecting A only weakly better than chance. I assign moderate conditional scientific utility if correct, low irreversible-failure harm given high reversibility, and include the stated action cost."
+    },
+    "matbench-pairwise::70335b1a6224::sequential-v2::base": {
+      "p_positive_gain": 0.537,
+      "expected_gain": 0.484,
+      "p_success": 0.537,
+      "expected_normalized_utility": 0.537,
+      "assessment_confidence": 0.72,
+      "rationale": ""
+    },
+    "matbench-pairwise::710e3f0eae6b::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.508,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.56,
+      "assessment_confidence": 0.55,
+      "rationale": "Small surrogate margin relative to estimated noise implies only modestly better-than-chance success probability for A; using 0.56 success probability, 0.20 irreversible-harm exposure from 0.80 reversibility, and 0.030 action-cost penalty gives expected gain 0.56 - 0.030 - 0.250*(0.44)*0.20 = 0.508."
+    },
+    "matbench-pairwise::711688432cb0::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.478,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.527,
+      "assessment_confidence": 0.56,
+      "rationale": "Both candidates have the same high surrogate tier, and the modest surrogate margin is substantially smaller than the estimated noise, so B has only a moderate success probability. Assuming the margin favors B, the action retains positive expected scientific value after the visible action cost and limited irreversible-failure penalty."
+    },
+    "matbench-pairwise::71f86540b281::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.5605,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.61,
+      "assessment_confidence": 0.48,
+      "rationale": "The surrogate margin modestly favors A, but the high estimated noise and both candidates being in the low tier make the selection uncertain. The action is largely reversible, so failure harm is limited; the main deduction is the normalized action cost."
+    },
+    "matbench-pairwise::72308a4fd3c5::sequential-v2::base": {
+      "p_positive_gain": 0.68,
+      "expected_gain": 0.305,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.68,
+      "rationale": ""
+    },
+    "matbench-pairwise::72c8f824069a::sequential-v2::base": {
+      "p_positive_gain": 0.63,
+      "expected_gain": 0.587,
+      "p_success": 0.63,
+      "expected_normalized_utility": 0.63,
+      "assessment_confidence": 0.66,
+      "rationale": "The high surrogate tier supports candidate B, but the modest margin relative to estimated noise leaves only moderate confidence. Using normalized success utility 1, action cost 0.03, and irreversible-failure harm 0.20 implied by 0.80 reversibility gives expected gain about 0.587."
+    },
+    "matbench-pairwise::73402433dd9e::sequential-v2::base": {
+      "p_positive_gain": 0.559,
+      "expected_gain": 0.507,
+      "p_success": 0.559,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.62,
+      "rationale": "The surrogate favors A only weakly relative to the stated noise: 0.1033/0.6932≈0.149, giving an estimated pairwise success probability near 0.559 under a Gaussian comparison model. With normalized utility 1 for a correct selection, action-cost penalty 0.1500×0.2000=0.0300, and irreversible failure harm estimated as 1−0.8000=0.2000, the posterior mean gain is 0.559−0.0300−0.2500×0.441×0.2000≈0.507. Gain is positive on success and negative on failure, so p_positive_gain equals p_success."
+    },
+    "matbench-pairwise::74ae277cc0ef::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.402,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.74,
+      "assessment_confidence": 0.57,
+      "rationale": "The medium-versus-low surrogate preference favors A, but the small margin relative to estimated noise leaves substantial uncertainty; conditional scientific utility is estimated as moderately high, with low irreversible-failure exposure due to high reversibility."
+    },
+    "matbench-pairwise::78c6068013c2::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.565,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.85,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate separation supports selecting A, but the margin is only moderately larger than the estimated noise, leaving substantial uncertainty. Assuming successful identification yields substantial normalized scientific value and reversibility limits irreversible downside, the action has a moderately positive expected strict gain after cost and failure-harm penalties."
+    },
+    "matbench-pairwise::7a8a3e0f3457::sequential-v2::base": {
+      "p_positive_gain": 0.76,
+      "expected_gain": 0.566,
+      "p_success": 0.76,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-low surrogate separation supports selecting A, but the substantial estimated noise leaves meaningful risk that the withheld elasticity ranking disagrees. Conditional on success, the follow-up has high normalized scientific value; the action is mostly reversible, so failure harm is limited. Positive gain is therefore expected primarily when the selection is correct."
+    },
+    "matbench-pairwise::7afa159af4f0::sequential-v2::base": {
+      "p_positive_gain": 0.5,
+      "expected_gain": 0.445,
+      "p_success": 0.5,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.68,
+      "rationale": "0.5000*1.0000-0.1500*0.2000-0.2500*0.5000*0.2000=0.4450"
+    },
+    "matbench-pairwise::7c1e56a7def5::sequential-v2::base": {
+      "p_positive_gain": 0.59,
+      "expected_gain": 0.276,
+      "p_success": 0.59,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.53,
+      "rationale": ""
+    },
+    "matbench-pairwise::7d47536b3604::sequential-v2::base": {
+      "p_positive_gain": 0.58,
+      "expected_gain": 0.413,
+      "p_success": 0.58,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the large estimated noise substantially limits confidence. Assuming successful selection yields moderate normalized scientific utility and that the high reversibility limits irreversible failure harm, the posterior expected strict gain remains positive after action cost."
+    },
+    "matbench-pairwise::7df33b833bd3::sequential-v2::base": {
+      "p_positive_gain": 0.556,
+      "expected_gain": 0.337,
+      "p_success": 0.556,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.61,
+      "rationale": "The positive surrogate margin weakly favors B, but it is small relative to the estimated noise, giving only a modest probability of correct pairwise selection. Cost contributes 0.030 expected loss, and 0.800 reversibility implies limited irreversible failure harm."
+    },
+    "matbench-pairwise::7f387b05c16f::sequential-v2::base": {
+      "p_positive_gain": 0.82,
+      "expected_gain": 0.593,
+      "p_success": 0.82,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.74,
+      "rationale": "The high-versus-low surrogate separation is meaningful but only modestly larger than estimated noise, supporting moderately high success probability. Conditional scientific utility is substantial; action cost is small and reversibility makes failure harm limited."
+    },
+    "matbench-pairwise::80332266428b::sequential-v2::base": {
+      "p_positive_gain": 0.63,
+      "expected_gain": 0.3925,
+      "p_success": 0.63,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.66,
+      "rationale": "High surrogate tier and substantial margin support success, but the estimated noise is large; the action is moderately reversible and incurs a modest normalized cost."
+    },
+    "matbench-pairwise::816a799356e0::sequential-v2::base": {
+      "p_positive_gain": 0.594,
+      "expected_gain": 0.539,
+      "p_success": 0.594,
+      "expected_normalized_utility": 0.95,
+      "assessment_confidence": 0.63,
+      "rationale": "The medium-versus-low surrogate ranking favors A, but the modest margin relative to the high estimated noise implies only moderate confidence that A is truly superior. Assuming near-unit scientific value for a correct pairwise choice, the high reversibility makes the failure penalty small; the action therefore has positive expected strict gain, with positivity occurring primarily when the selection succeeds."
+    },
+    "matbench-pairwise::81cf70416548::sequential-v2::base": {
+      "p_positive_gain": 0.535,
+      "expected_gain": 0.2945,
+      "p_success": 0.535,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.63,
+      "rationale": "0.0877 surrogate margin relative to 0.7018 estimated noise implies only a slight advantage for A; cost penalty=0.0300 and estimated irreversible failure-harm penalty=0.0500 on failure."
+    },
+    "matbench-pairwise::83378234ccd4::sequential-v2::base": {
+      "p_positive_gain": 0.8,
+      "expected_gain": 0.76,
+      "p_success": 0.8,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate separation supports selecting A, but the substantial estimated noise materially reduces confidence. Assuming normalized scientific utility near 1 on success and irreversible-failure harm of 0.2 from the stated reversibility, the expected gain is approximately 0.80 - 0.030 - 0.010 = 0.76."
+    },
+    "matbench-pairwise::83adec2ea050::sequential-v2::base": {
+      "p_positive_gain": 0.51,
+      "expected_gain": 0.3535,
+      "p_success": 0.51,
+      "expected_normalized_utility": 0.408,
+      "assessment_confidence": 0.58,
+      "rationale": "The surrogate margin is small relative to the estimated noise, so selecting A has only slightly better than even odds of being the scientifically preferable high-bulk-modulus candidate. Conditional on success, the follow-up has substantial normalized utility; the high reversibility limits irreversible-failure harm, while the action cost is modest."
+    },
+    "matbench-pairwise::83b76d472063::sequential-v2::base": {
+      "p_positive_gain": 0.79,
+      "expected_gain": 0.5757,
+      "p_success": 0.79,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.72,
+      "rationale": "Using p_success=0.79, utility=0.78, cost penalty=0.1500×0.2000=0.0300, and irreversible harm=1−0.8000=0.2000 gives expected gain 0.79×0.78−0.0300−0.2500×0.21×0.2000=0.5757."
+    },
+    "matbench-pairwise::8463d5751bda::sequential-v2::base": {
+      "p_positive_gain": 0.76,
+      "expected_gain": 0.604,
+      "p_success": 0.76,
+      "expected_normalized_utility": 0.85,
+      "assessment_confidence": 0.67,
+      "rationale": "Candidate B has a meaningful surrogate advantage over A, but the margin is only modestly larger than the estimated noise, so success is more likely than not but not highly certain. Conditional scientific utility is estimated to be high if the follow-up correctly identifies the higher-bulk-modulus candidate. The action cost is modest and reversibility limits expected failure harm."
+    },
+    "matbench-pairwise::84aac14fae9a::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.25,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.56,
+      "assessment_confidence": 0.48,
+      "rationale": "Candidate A has a weak favorable surrogate signal over B, but the large estimated noise substantially limits confidence that it is the better elasticity target. With high reversibility, failure harm is modest; the main deduction is the normalized action cost."
+    },
+    "matbench-pairwise::852007266b0c::sequential-v2::base": {
+      "p_positive_gain": 0.82,
+      "expected_gain": 0.658,
+      "p_success": 0.82,
+      "expected_normalized_utility": 0.697,
+      "assessment_confidence": 0.68,
+      "rationale": "High surrogate tier and a substantial margin favor success, though the estimated noise materially reduces confidence; cost is modest and reversibility is high."
+    },
+    "matbench-pairwise::86226ea651af::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.655,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-medium surrogate margin is meaningful but moderated by the relatively large estimated noise; success probability is estimated at about 0.70. Assuming unit normalized utility upon a correct selection, the visible action cost contributes 0.030, and limited irreversibility contributes an expected failure harm of about 0.015."
+    },
+    "matbench-pairwise::869f85478117::sequential-v2::base": {
+      "p_positive_gain": 0.727,
+      "expected_gain": 0.538,
+      "p_success": 0.727,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.68,
+      "rationale": "The medium-versus-low surrogate margin relative to estimated noise implies approximately 0.727 probability that A is the better high-bulk-modulus choice. Assuming 0.8 normalized utility conditional on success, normalized failure harm of 0.2 from the stated reversibility, and the specified action cost, the posterior mean strict gain is approximately 0.538."
+    },
+    "matbench-pairwise::88528597dee7::sequential-v2::base": {
+      "p_positive_gain": 0.692,
+      "expected_gain": 0.159,
+      "p_success": 0.692,
+      "expected_normalized_utility": 0.295,
+      "assessment_confidence": 0.72,
+      "rationale": "The surrogate margin-to-noise ratio is approximately 0.502, implying about 0.692 probability that A truly exceeds B under a Gaussian error model. Using the 0.2949 margin as normalized scientific utility, the visible action cost contributes a 0.030 penalty, while 0.800 reversibility implies 0.200 irreversible failure harm and an expected failure penalty of about 0.0154."
+    },
+    "matbench-pairwise::88c968b51869::sequential-v2::base": {
+      "p_positive_gain": 0.895,
+      "expected_gain": 0.636,
+      "p_success": 0.895,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.76,
+      "rationale": "0.5641/0.4397=1.283; cost penalty=0.1500×0.2000=0.0300; inferred irreversible harm=1−0.8000=0.2000; expected failure penalty=0.2500×0.105×0.2000=0.00525."
+    },
+    "matbench-pairwise::8affb094ca37::sequential-v2::base": {
+      "p_positive_gain": 0.43,
+      "expected_gain": 0.1425,
+      "p_success": 0.43,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.48,
+      "rationale": "Both candidates have low surrogate tiers, the margin favoring B is small relative to the high estimated noise, so success is only moderately likely. Assuming reversibility 0.8 implies limited irreversible-failure harm, the expected scientific benefit modestly exceeds the action-cost and failure penalties."
+    },
+    "matbench-pairwise::8b2dcdd3e095::sequential-v2::base": {
+      "p_positive_gain": 0.944,
+      "expected_gain": 0.567,
+      "p_success": 0.944,
+      "expected_normalized_utility": 0.6356,
+      "assessment_confidence": 0.82,
+      "rationale": "The surrogate margin-to-noise ratio is about 1.59, implying a high probability that candidate A truly exceeds candidate B. Using irreversible failure harm of 0.20 from reversibility 0.80, the expected gain is approximately 0.944×0.6356 - 0.1500×0.2000 - 0.2500×(1-0.944)×0.20 = 0.567."
+    },
+    "matbench-pairwise::8b2f308fe788::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.416,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.58,
+      "rationale": "The medium-versus-low surrogate separation supports A, but the 0.583 estimated noise makes the ranking only moderately reliable. Conditional scientific utility is estimated at 0.75; using reversibility 0.8 implies irreversible-failure harm of about 0.2, while action cost contributes 0.03."
+    },
+    "matbench-pairwise::8d1476597c98::sequential-v2::base": {
+      "p_positive_gain": 0.86,
+      "expected_gain": 0.8212,
+      "p_success": 0.86,
+      "expected_normalized_utility": 0.86,
+      "assessment_confidence": 0.78,
+      "rationale": "The high surrogate tier and substantial margin favor candidate B, though the estimated noise materially reduces certainty. Using a success utility near one, the visible action cost, and low residual irreversible harm implied by high reversibility yields a strongly positive expected strict gain."
+    },
+    "matbench-pairwise::8de3bf8c8f7b::sequential-v2::base": {
+      "p_positive_gain": 0.79,
+      "expected_gain": 0.749,
+      "p_success": 0.79,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": ""
+    },
+    "matbench-pairwise::8f12071b9df7::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.508,
+      "p_success": 0.56,
+      "expected_normalized_utility": 0.56,
+      "assessment_confidence": 0.58,
+      "rationale": "Equal surrogate tiers and high estimated noise make the selection only modestly better than chance; composition provides a weak qualitative advantage to B. Using normalized success utility 1.0, action cost 0.2000, and irreversible-failure harm approximated by 1 minus reversibility (0.2), the posterior mean strict gain is 0.56 - 0.1500*0.2 - 0.2500*0.44*0.2 = 0.508."
+    },
+    "matbench-pairwise::8f14ade9c7ea::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.46,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.68,
+      "assessment_confidence": 0.68,
+      "rationale": "Medium-over-low surrogate separation supports a moderately high probability that A is the superior high-bulk-modulus choice, but the estimated noise materially reduces certainty. With low irreversible-failure exposure from high reversibility, expected strict gain remains positive after action cost."
+    },
+    "matbench-pairwise::8f3cdad59a6e::sequential-v2::base": {
+      "p_positive_gain": 0.516,
+      "expected_gain": 0.2296,
+      "p_success": 0.516,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.62,
+      "rationale": "The surrogate favors A, but the margin is very small relative to the estimated noise, so success is only slightly more likely than chance. Using action cost 0.20 and irreversible failure harm 0.20 implied by reversibility 0.80 yields a modest positive expected strict gain."
+    },
+    "matbench-pairwise::9187cbd94e06::sequential-v2::base": {
+      "p_positive_gain": 0.86,
+      "expected_gain": 0.5822,
+      "p_success": 0.86,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.76,
+      "rationale": "Signal-to-noise ratio is 0.5441/0.4507=1.207, supporting a high probability that A truly exceeds B. Using irreversible failure harm 1-0.8000=0.2000 gives expected gain 0.86*0.72-0.1500*0.2000-0.2500*(1-0.86)*0.2000=0.5822."
+    },
+    "matbench-pairwise::94997c1bfbed::sequential-v2::base": {
+      "p_positive_gain": 0.52,
+      "expected_gain": 0.466,
+      "p_success": 0.52,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.62,
+      "rationale": "The surrogate margin is small relative to the estimated noise, so A is only slightly more likely than B to be the higher-bulk-modulus choice. A successful selection is assigned full normalized scientific utility; the visible action cost contributes 0.03, and high reversibility implies only modest irreversible-failure harm."
+    },
+    "matbench-pairwise::956ba821c90c::sequential-v2::base": {
+      "p_positive_gain": 0.659,
+      "expected_gain": 0.612,
+      "p_success": 0.659,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.68,
+      "rationale": "The surrogate margin-to-noise ratio is 0.2502/0.6124=0.409, implying approximately 0.659 probability that A is truly superior under a Gaussian error model. Using irreversible failure harm 1-0.8=0.2, the expected gain is 0.659-0.15(0.2)-0.25(1-0.659)(0.2)=0.612."
+    },
+    "matbench-pairwise::9591fa31b89f::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.703,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.62,
+      "rationale": "High-versus-low surrogate separation supports success, but the substantial estimated noise reduces confidence; cost and limited irreversibility penalty are included."
+    },
+    "matbench-pairwise::960abad64ac9::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.592,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.64,
+      "assessment_confidence": 0.62,
+      "rationale": "0.640 - 0.150×0.200 - 0.250×0.360×0.200 = 0.592"
+    },
+    "matbench-pairwise::96661ce4131c::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.4263,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.4758,
+      "assessment_confidence": 0.64,
+      "rationale": "Estimated success probability 0.61 from the high-versus-medium surrogate margin moderated by noise 0.5884; conditional normalized scientific utility 0.78; irreversible-failure harm 0.20 from reversibility 0.80; expected gain = 0.61*0.78 - 0.15*0.20 - 0.25*0.39*0.20 = 0.4263."
+    },
+    "matbench-pairwise::9723564e7742::sequential-v2::base": {
+      "p_positive_gain": 0.805,
+      "expected_gain": 0.765,
+      "p_success": 0.805,
+      "expected_normalized_utility": 0.805,
+      "assessment_confidence": 0.72,
+      "rationale": "The high-versus-low surrogate separation supports selecting A, but the margin is only modest relative to the estimated noise (0.4373 versus 0.5095), implying roughly 0.81 probability that the selection is scientifically correct. Assuming unit normalized utility on success and irreversible-failure harm equal to the unreversible fraction (0.20), the expected gain is approximately 0.805 - 0.1500*0.20 - 0.2500*0.195*0.20 = 0.765. The action is positive-gain primarily when successful."
+    },
+    "matbench-pairwise::980322c4f3e7::sequential-v2::base": {
+      "p_positive_gain": 0.5955,
+      "expected_gain": 0.5452,
+      "p_success": 0.5955,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": "0.5955*1.0000 - 0.1500*0.2000 - 0.2500*(1-0.5955)*(1-0.8000) = 0.5452"
+    },
+    "matbench-pairwise::9afa89eea65f::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.661,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.9,
+      "assessment_confidence": 0.63,
+      "rationale": "Medium-versus-low surrogate separation supports a moderately high probability that A is the correct high-bulk-modulus choice, but the substantial estimated noise limits confidence. Conditional success utility is estimated at 0.9; action cost is 0.03 and expected irreversible-failure harm uses 0.2 from reversibility 0.8."
+    },
+    "matbench-pairwise::9b3952122713::sequential-v2::base": {
+      "p_positive_gain": 0.28,
+      "expected_gain": 0.214,
+      "p_success": 0.28,
+      "expected_normalized_utility": 0.28,
+      "assessment_confidence": 0.52,
+      "rationale": "Both candidates have low surrogate tiers, and the modest margin is outweighed by high estimated noise. A therefore has only a low-to-moderate chance of being the correct high-bulk-modulus choice; reversibility limits the downside of failure."
+    },
+    "matbench-pairwise::9bc8f56ed255::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.642,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.66,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the margin is only about one estimated noise unit, leaving meaningful uncertainty. A successful follow-up is assigned substantial scientific utility; the action cost is modest and high reversibility limits failure harm."
+    },
+    "matbench-pairwise::9c9212eac561::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.655,
+      "p_success": 0.7,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": "Posterior estimates based on the high-versus-low surrogate tiers, the 0.2997 margin relative to 0.5852 estimated noise, and the stated cost and reversibility."
+    },
+    "matbench-pairwise::9cb997673268::sequential-v2::base": {
+      "p_positive_gain": 0.739,
+      "expected_gain": 0.4373,
+      "p_success": 0.739,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.7,
+      "rationale": ""
+    },
+    "matbench-pairwise::9d7e5d56cf49::sequential-v2::base": {
+      "p_positive_gain": 0.77,
+      "expected_gain": 0.6361,
+      "p_success": 0.77,
+      "expected_normalized_utility": 0.6776,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-low surrogate separation is meaningful but moderated by the substantial estimated noise. Using 0.77 success probability, 0.88 scientific utility conditional on success, 0.20 irreversible-failure harm from the reversibility level, and the specified action-cost penalty gives the stated posterior mean gain."
+    },
+    "matbench-pairwise::9ebd75c4c83d::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.25,
+      "p_success": 0.55,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.48,
+      "rationale": "The high-versus-medium surrogate ranking supports selecting A, but the small margin relative to the high estimated noise makes the probability that A is truly superior only modestly above chance. Conditional scientific utility is moderate, while the action cost is limited and high reversibility keeps irreversible-failure harm low."
+    },
+    "matbench-pairwise::9f64add21d7b::sequential-v2::base": {
+      "p_positive_gain": 0.814,
+      "expected_gain": 0.612,
+      "p_success": 0.814,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.78,
+      "rationale": ""
+    },
+    "matbench-pairwise::9f7d32703d16::sequential-v2::base": {
+      "p_positive_gain": 0.514,
+      "expected_gain": 0.3055,
+      "p_success": 0.514,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.42,
+      "rationale": "The near-tied medium surrogate tiers, very small margin, and high estimated noise imply approximately chance-level success; reversibility limits failure harm."
+    },
+    "matbench-pairwise::9f801e096351::sequential-v2::base": {
+      "p_positive_gain": 0.61,
+      "expected_gain": 0.3469999999999999,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.3965,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier favors B, but the modest margin relative to substantial estimated noise makes the true superiority probability only moderately favorable. Assuming conditional scientific utility of 0.65 if successful, reversibility 0.8 implies irreversible-failure harm of about 0.2; applying the specified action and failure penalties gives an expected strict gain of about 0.347."
+    },
+    "matbench-pairwise::a3d1abba0dfe::sequential-v2::base": {
+      "p_positive_gain": 0.515,
+      "expected_gain": 0.2805,
+      "p_success": 0.515,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.55,
+      "rationale": "The equal surrogate tiers, modest margin, and high estimated noise imply only a slight edge for A. Assuming moderate utility if the follow-up is correct and low irreversible harm given high reversibility, the expected gain remains positive but uncertain."
+    },
+    "matbench-pairwise::a628944da160::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.676,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.714,
+      "assessment_confidence": 0.65,
+      "rationale": "The large surrogate margin relative to estimated noise supports a moderately high probability that B is the scientifically correct high-bulk-modulus choice. Assuming normalized utility 0.85 conditional on success, action cost 0.20, and irreversible-failure harm 0.20 implied by reversibility 0.80, the posterior mean net gain is approximately 0.676."
+    },
+    "matbench-pairwise::a785cca2ebb2::sequential-v2::base": {
+      "p_positive_gain": 0.17,
+      "expected_gain": 0.027,
+      "p_success": 0.17,
+      "expected_normalized_utility": 0.58,
+      "assessment_confidence": 0.58,
+      "rationale": "Both candidates have low surrogate tiers, the margin is small, and estimated noise is high, so the probability that choosing B yields the desired high-bulk-modulus result is low. Conditional on success, the follow-up has moderate scientific utility. The visible action cost contributes 0.030 normalized units, while limited irreversibility produces a smaller expected failure penalty; these effects leave only a modest positive expected gain."
+    },
+    "matbench-pairwise::a95e30cf1190::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.488,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.64,
+      "rationale": "The medium-versus-low surrogate ranking supports selecting A, but the margin is below the estimated noise, so success is only moderately likely. Conditional scientific utility is estimated as substantial but not maximal; the action cost and modest irreversibility penalty reduce expected gain."
+    },
+    "matbench-pairwise::aa75b95bb7df::sequential-v2::base": {
+      "p_positive_gain": 0.28,
+      "expected_gain": 0.145,
+      "p_success": 0.28,
+      "expected_normalized_utility": 0.238,
+      "assessment_confidence": 0.61,
+      "rationale": "Both candidates have low surrogate tiers, the margin is modest relative to the high estimated noise, and no direct elasticity evidence is available. I estimate a 0.28 probability that choosing A yields the desired high-bulk-modulus outcome, with conditional normalized scientific utility of about 0.85. Applying the visible action cost and an estimated moderate irreversible-failure harm of 0.35 gives a positive but uncertain expected net gain; positive gain is expected primarily when the selection succeeds."
+    },
+    "matbench-pairwise::ab40ae7f9894::sequential-v2::base": {
+      "p_positive_gain": 0.68,
+      "expected_gain": 0.43,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.63,
+      "rationale": "The high-versus-medium surrogate ranking and moderate margin support a meaningful but uncertain chance that A is the better high-bulk-modulus choice; the relatively high estimated noise prevents stronger confidence. Conditional scientific utility is estimated as moderately high, while the visible action cost and limited irreversibility-related failure harm reduce net gain modestly."
+    },
+    "matbench-pairwise::aba9d1334318::sequential-v2::base": {
+      "p_positive_gain": 0.18,
+      "expected_gain": 0.055,
+      "p_success": 0.18,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.48,
+      "rationale": "Both candidates are assigned a low surrogate tier, and the modest margin relative to the high estimated noise provides weak evidence that A is genuinely high-bulk-modulus. I estimate a low success probability, with substantial conditional scientific value if the selection is correct. The expected gain remains only modestly positive after the action-cost and limited irreversible-failure penalty."
+    },
+    "matbench-pairwise::ac420a068ed0::sequential-v2::base": {
+      "p_positive_gain": 0.65,
+      "expected_gain": 0.4375,
+      "p_success": 0.65,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.56,
+      "rationale": "The medium-versus-low surrogate ranking favors candidate A, but the relatively large estimated noise makes the ranking only moderately reliable. If successful, the follow-up has substantial normalized scientific value; the visible action cost is modest and reversibility limits failure harm."
+    },
+    "matbench-pairwise::ad96eac44a3f::sequential-v2::base": {
+      "p_positive_gain": 0.65,
+      "expected_gain": 0.44,
+      "p_success": 0.65,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.58,
+      "rationale": "High surrogate tier favors B, but the substantial estimated noise makes the success probability only moderately above even odds; the 0.8 reversibility limits failure harm."
+    },
+    "matbench-pairwise::ae8310d840ac::sequential-v2::base": {
+      "p_positive_gain": 0.57,
+      "expected_gain": 0.51,
+      "p_success": 0.57,
+      "expected_normalized_utility": 0.57,
+      "assessment_confidence": 0.62,
+      "rationale": "The medium-versus-low surrogate ordering favors candidate B, but the small margin relative to the high estimated noise makes success only moderately likely. With high reversibility, irreversible-failure harm is limited; the main deduction is the action-cost penalty."
+    },
+    "matbench-pairwise::aedadfb530af::sequential-v2::base": {
+      "p_positive_gain": 0.5078,
+      "expected_gain": 0.1993,
+      "p_success": 0.5078,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.62,
+      "rationale": "0.5078*0.5000 - 0.1500*0.2000 - 0.2500*0.4922*0.2000 = 0.1993"
+    },
+    "matbench-pairwise::b0a3f1ab2110::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.555,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.68,
+      "rationale": "High surrogate tier and substantial margin support success; moderate noise limits certainty. The action has low cost and high reversibility, so failure harm is limited."
+    },
+    "matbench-pairwise::b0cdeccef342::sequential-v2::base": {
+      "p_positive_gain": 0.72,
+      "expected_gain": 0.676,
+      "p_success": 0.72,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate margin relative to estimated noise implies approximately 0.72 probability that B is the scientifically preferable choice; conditional utility is treated as approximately 1, with modest cost and low irreversible-harm penalties."
+    },
+    "matbench-pairwise::b0f8fa2357d7::sequential-v2::base": {
+      "p_positive_gain": 0.57,
+      "expected_gain": 0.319,
+      "p_success": 0.57,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.58,
+      "rationale": "Candidate B has a favorable surrogate-tier advantage over A, but the modest margin and high estimated noise make the probability of a scientifically successful high-bulk-modulus selection only moderate. The action is fairly reversible, so expected failure harm is limited; the main downside is the explicit action cost."
+    },
+    "matbench-pairwise::b2e5ceca2766::sequential-v2::base": {
+      "p_positive_gain": 0.09,
+      "expected_gain": -0.018,
+      "p_success": 0.09,
+      "expected_normalized_utility": 0.066,
+      "assessment_confidence": 0.68,
+      "rationale": "Both candidates have low surrogate tiers, the margin is small, and estimated noise is high, so selecting A for a high-bulk-modulus follow-up has a low probability of achieving the intended scientific outcome. The action cost and residual irreversible-failure penalty therefore outweigh the modest expected scientific utility."
+    },
+    "matbench-pairwise::b3304c0ee4ac::sequential-v2::base": {
+      "p_positive_gain": 0.505,
+      "expected_gain": 0.223,
+      "p_success": 0.505,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.53,
+      "rationale": "The equal surrogate tiers, very small margin, and high estimated noise provide little basis for preferring B, so success probability is near chance. Conditional scientific utility is moderate if the choice is correct. The action cost contributes 0.0300, while high reversibility implies relatively low irreversible failure harm, estimated at 0.20."
+    },
+    "matbench-pairwise::b36b99dd6ae8::sequential-v2::base": {
+      "p_positive_gain": 0.72,
+      "expected_gain": 0.426,
+      "p_success": 0.72,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and moderate margin support a better-than-even chance that candidate A is the stronger high-bulk-modulus choice, but the substantial estimated noise limits confidence. Conditional scientific utility is moderate-to-high, while the visible action cost is small and high reversibility implies limited failure harm."
+    },
+    "matbench-pairwise::b45cdd3275d0::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.571,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.58,
+      "rationale": ""
+    },
+    "matbench-pairwise::b47b75efa34a::sequential-v2::base": {
+      "p_positive_gain": 0.65,
+      "expected_gain": 0.4075,
+      "p_success": 0.65,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin favor A, but the substantial estimated noise materially limits confidence. Assuming irreversible-failure harm is approximately 1 minus reversibility, the expected gain is 0.65*0.70 - 0.1500*0.20 - 0.2500*0.35*0.20 = 0.4075."
+    },
+    "matbench-pairwise::b765e244a057::sequential-v2::base": {
+      "p_positive_gain": 0.738,
+      "expected_gain": 0.695,
+      "p_success": 0.738,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.65,
+      "rationale": "The surrogate margin is positive but moderate relative to estimated noise (0.3538/0.5554), implying approximately 0.74 probability that A is the higher-bulk-modulus choice. With normalized success utility near 1, the visible action cost contributes 0.03, while high reversibility implies only modest failure harm; the resulting posterior mean strict gain is approximately 0.695."
+    },
+    "matbench-pairwise::b7f41b33d5f2::sequential-v2::base": {
+      "p_positive_gain": 0.52,
+      "expected_gain": 0.466,
+      "p_success": 0.52,
+      "expected_normalized_utility": 0.52,
+      "assessment_confidence": 0.58,
+      "rationale": "The two candidates have indistinguishable surrogate tiers, only a small margin, and high estimated noise, so A has only a slight probability advantage over a random choice. Assuming unit normalized utility conditional on success and irreversible-failure harm of 0.20 implied by reversibility 0.80, the expected gain is 0.52 - 0.15×0.20 - 0.25×0.48×0.20 = 0.466."
+    },
+    "matbench-pairwise::b7f94acb1e9e::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.739,
+      "p_success": 0.78,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate separation supports selecting B, but the substantial estimated noise leaves meaningful uncertainty. Assuming unit normalized utility on a successful identification, action cost 0.03, and irreversible-failure harm equal to 1 minus reversibility (0.20), the posterior mean strict gain is approximately 0.78 - 0.03 - 0.25*0.22*0.20 = 0.739."
+    },
+    "matbench-pairwise::b87eae73d59b::sequential-v2::base": {
+      "p_positive_gain": 0.518,
+      "expected_gain": 0.464,
+      "p_success": 0.518,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.58,
+      "rationale": ""
+    },
+    "matbench-pairwise::b8d9562255b2::sequential-v2::base": {
+      "p_positive_gain": 0.69,
+      "expected_gain": 0.47,
+      "p_success": 0.69,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.62,
+      "rationale": "The high surrogate tier and substantial margin favor Candidate A, but the estimated noise is also large, so the probability that A is truly the preferable high-bulk-modulus follow-up target is only moderately high. With normalized utility around 0.72 on success, the modest action-cost penalty and limited irreversible-failure harm from high reversibility leave a positive expected net gain."
+    },
+    "matbench-pairwise::b97f4cb2c62d::sequential-v2::base": {
+      "p_positive_gain": 0.77,
+      "expected_gain": 0.5705,
+      "p_success": 0.77,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.65,
+      "rationale": "The high-versus-low surrogate separation is substantial, although the estimated noise is also material. I estimate a moderately high probability that A is the genuinely preferable high-bulk-modulus candidate. Successful follow-up has substantial normalized scientific value; the action cost is modest and reversibility makes irreversible failure harm relatively small."
+    },
+    "matbench-pairwise::ba13f25f6d25::sequential-v2::base": {
+      "p_positive_gain": 0.6,
+      "expected_gain": 0.268,
+      "p_success": 0.61,
+      "expected_normalized_utility": 0.52,
+      "assessment_confidence": 0.56,
+      "rationale": "0.610×0.520 − 0.150×0.200 − 0.250×0.390×0.200 = 0.268"
+    },
+    "matbench-pairwise::ba60e7ee4e95::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.55,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.68,
+      "rationale": "The high-versus-low surrogate separation supports a strong but not certain probability that A is the higher-elasticity choice; substantial estimated noise prevents near certainty. Assuming successful selection yields substantial normalized scientific value, the low action cost and high reversibility make expected strict gain positive."
+    },
+    "matbench-pairwise::bb2b7cd602da::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.634,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.672,
+      "assessment_confidence": 0.62,
+      "rationale": "High surrogate tier and large margin support a high success probability, while moderate noise leaves meaningful uncertainty; cost and low irreversible-failure exposure modestly reduce net gain."
+    },
+    "matbench-pairwise::bb32395c6348::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.592,
+      "p_success": 0.64,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.56,
+      "rationale": "The high-versus-medium surrogate margin supports A, but the large estimated noise materially limits confidence. Assuming successful selection yields unit normalized scientific utility, the expected gain is 0.64 - 0.15(0.20) - 0.25(0.36)(0.20) = 0.592."
+    },
+    "matbench-pairwise::bb821a6d92bd::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.622,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.663,
+      "assessment_confidence": 0.62,
+      "rationale": "The high surrogate tier and sizable margin support a moderately strong probability that B is the scientifically preferable follow-up, but the substantial estimated noise limits confidence. Using p_success=0.78, normalized success utility=0.85, action cost=0.20, and irreversible-failure harm=1-0.80=0.20 gives expected gain 0.78*0.85 - 0.15*0.20 - 0.25*0.22*0.20 = 0.622."
+    },
+    "matbench-pairwise::bc8d68c441d2::sequential-v2::base": {
+      "p_positive_gain": 0.53,
+      "expected_gain": 0.4225,
+      "p_success": 0.53,
+      "expected_normalized_utility": 0.9,
+      "assessment_confidence": 0.56,
+      "rationale": "The two candidates have identical surrogate tiers, and the small surrogate margin relative to estimated noise leaves only a slight probability advantage for A. Assuming high utility if A is the superior target and modest irreversible harm due to high reversibility, the expected gain remains positive but uncertain."
+    },
+    "matbench-pairwise::bca45f55822f::sequential-v2::base": {
+      "p_positive_gain": 0.63,
+      "expected_gain": 0.43,
+      "p_success": 0.63,
+      "expected_normalized_utility": 0.74,
+      "assessment_confidence": 0.56,
+      "rationale": "The medium-versus-low surrogate separation supports choosing A, but the relatively high estimated noise materially limits confidence. Assuming success yields substantial normalized scientific value and reversibility keeps failure harm modest, the posterior mean gain remains positive after the action-cost penalty."
+    },
+    "matbench-pairwise::be7cabc4d306::sequential-v2::base": {
+      "p_positive_gain": 0.57,
+      "expected_gain": 0.326,
+      "p_success": 0.57,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "The high surrogate tier favors candidate A, but the modest margin relative to the substantial estimated noise leaves only a moderate probability that A is truly the better high-bulk-modulus choice. Assuming successful identification yields substantial normalized scientific utility and that the high reversibility limits irreversible failure harm, the expected net gain remains positive after the 0.030 action-cost penalty."
+    },
+    "matbench-pairwise::bf103de4f7a7::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.655,
+      "p_success": 0.7,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.58,
+      "rationale": "The medium-versus-low surrogate separation favors A, but the relatively high estimated noise substantially limits confidence. Using the margin-to-noise ratio gives an estimated success probability near 0.70. Conditional scientific utility is treated as fully normalized, with the visible reversibility implying a low irreversible-failure harm estimate."
+    },
+    "matbench-pairwise::bf1e9f8c3b3e::sequential-v2::base": {
+      "p_positive_gain": 0.63,
+      "expected_gain": 0.348,
+      "p_success": 0.639,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.68,
+      "rationale": ""
+    },
+    "matbench-pairwise::bf5fa724600a::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.452,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the margin is small relative to the estimated noise, implying only moderate success probability. A successful selection would have substantial scientific utility; action cost and the low irreversibility-related failure penalty modestly reduce the expected gain."
+    },
+    "matbench-pairwise::bf9f4aab6c3b::sequential-v2::base": {
+      "p_positive_gain": 0.57,
+      "expected_gain": 0.085,
+      "p_success": 0.57,
+      "expected_normalized_utility": 0.24,
+      "assessment_confidence": 0.62,
+      "rationale": ""
+    },
+    "matbench-pairwise::bfdd03655510::sequential-v2::base": {
+      "p_positive_gain": 0.52,
+      "expected_gain": 0.326,
+      "p_success": 0.52,
+      "expected_normalized_utility": 0.38,
+      "assessment_confidence": 0.32,
+      "rationale": "Both candidates have low surrogate tiers, the margin is very small, and estimated noise is high, so the evidence provides only weak discrimination. B receives a modest prior advantage for the high-bulk-modulus objective, with substantial uncertainty. Conditional scientific value is positive and the action is largely reversible; expected gain remains positive mainly because the cost is modest, but confidence is limited by the withheld target and noisy surrogate."
+    },
+    "matbench-pairwise::c01762643355::sequential-v2::base": {
+      "p_positive_gain": 0.8,
+      "expected_gain": 0.696,
+      "p_success": 0.8,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.64,
+      "rationale": "The high surrogate tier and margin support B, but the noise estimate leaves substantial uncertainty; success is estimated at about 0.80. With normalized action cost 0.20 and reversibility 0.80, the expected strict gain remains positive."
+    },
+    "matbench-pairwise::c36a81bc24ce::sequential-v2::base": {
+      "p_positive_gain": 0.508,
+      "expected_gain": 0.4534,
+      "p_success": 0.508,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": "Both candidates share the same surrogate tier, and the surrogate margin is negligible relative to estimated noise, so candidate B is only marginally more likely than chance to be the successful choice. Using normalized action cost 0.20 and irreversible failure harm 0.20 implied by reversibility 0.80 gives expected gain = 0.508 - 0.1500(0.20) - 0.2500(0.492)(0.20) = 0.4534."
+    },
+    "matbench-pairwise::c392ba5caf96::sequential-v2::base": {
+      "p_positive_gain": 0.5555,
+      "expected_gain": 0.5033,
+      "p_success": 0.5555,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": "The small positive surrogate margin relative to estimated noise implies only a slight advantage for candidate A (approximately Phi(0.0972/0.6966)). Using normalized utility 1 for a correct pairwise selection, cost penalty 0.03, and irreversible failure harm 0.20 from reversibility 0.80 gives an expected strict realized gain of about 0.5033."
+    },
+    "matbench-pairwise::c3d89ce7d74a::sequential-v2::base": {
+      "p_positive_gain": 0.72,
+      "expected_gain": 0.454,
+      "p_success": 0.72,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "The high-versus-medium surrogate ranking and margin relative to estimated noise support a moderate-to-good probability that A is the higher-target material, but the noise leaves substantial uncertainty. Conditional scientific utility is estimated at 0.70; the weighted action cost is 0.030, and failure harm is assumed modest given 0.80 reversibility, yielding an expected strict gain of approximately 0.454."
+    },
+    "matbench-pairwise::c42098bbb4f8::sequential-v2::base": {
+      "p_positive_gain": 0.24,
+      "expected_gain": 0.088,
+      "p_success": 0.24,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.34,
+      "rationale": "Both candidates have low surrogate tiers, and the modest margin combined with high estimated noise makes B only modestly more likely to yield a successful high-bulk-modulus follow-up. Conditional scientific utility is substantial if successful; the action is fairly reversible, so irreversible-failure harm is limited, but the action cost and failure penalty keep the expected gain modestly positive."
+    },
+    "matbench-pairwise::c4eb5983b384::sequential-v2::base": {
+      "p_positive_gain": 0.2,
+      "expected_gain": 0.145,
+      "p_success": 0.2,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.58,
+      "rationale": "Both candidates have low surrogate tiers, the surrogate margin is small, and estimated noise is high, so the probability that choosing B yields the intended high-bulk-modulus scientific result is low. The action is mostly reversible and has modest cost, but its expected scientific benefit remains below the level needed for strong positive expected gain."
+    },
+    "matbench-pairwise::c52c91f112cb::sequential-v2::base": {
+      "p_positive_gain": 0.88,
+      "expected_gain": 0.7104,
+      "p_success": 0.88,
+      "expected_normalized_utility": 0.85,
+      "assessment_confidence": 0.76,
+      "rationale": "The high surrogate tier and large surrogate margin strongly support A being the higher-elasticity candidate, though the nontrivial estimated noise leaves meaningful misranking risk. Assuming normalized utility of 0.85 upon a successful selection, action cost of 0.20, and limited irreversible-failure harm consistent with reversibility 0.80, the posterior mean strict gain is positive and substantial."
+    },
+    "matbench-pairwise::c5404b186de3::sequential-v2::base": {
+      "p_positive_gain": 0.695,
+      "expected_gain": 0.6498,
+      "p_success": 0.695,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.62,
+      "rationale": "The surrogate margin is positive but only about half an estimated-noise standard deviation, implying roughly 0.695 probability that B is truly the stronger elasticity candidate under a symmetric-noise model. A successful pairwise choice is assigned full normalized scientific utility; the visible cost contributes 0.03, while the residual irreversible-failure harm is limited by high reversibility."
+    },
+    "matbench-pairwise::c66b4b7a66aa::sequential-v2::base": {
+      "p_positive_gain": 0.544,
+      "expected_gain": 0.491,
+      "p_success": 0.544,
+      "expected_normalized_utility": 0.544,
+      "assessment_confidence": 0.62,
+      "rationale": "Both candidates share the high surrogate tier, and the small surrogate margin relative to estimated noise provides only weak evidence that B is the superior choice. Using a success probability of about 0.544, unit normalized utility on success, action cost 0.200, and irreversible-failure harm approximated by 1 - reversibility = 0.200 yields an expected strict gain of about 0.491."
+    },
+    "matbench-pairwise::c691237557c7::sequential-v2::base": {
+      "p_positive_gain": 0.5,
+      "expected_gain": 0.195,
+      "p_success": 0.5,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.68,
+      "rationale": "The equal surrogate tiers, very small margin, and high estimated noise provide little evidence that B is the better high-bulk-modulus choice, so success probability is near 0.5. Conditional utility is moderate, while the visible action cost and limited irreversibility impose modest penalties."
+    },
+    "matbench-pairwise::c79eace02974::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.571,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.56,
+      "rationale": "The high-versus-medium surrogate ranking supports selecting A, but the large estimated noise substantially limits confidence. Using reversibility 0.8 implies a relatively small irreversible-failure harm, while the visible action cost contributes 0.03 to expected loss."
+    },
+    "matbench-pairwise::c7a3e4f9f532::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.655,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.64,
+      "rationale": ""
+    },
+    "matbench-pairwise::c90677e43a2f::sequential-v2::base": {
+      "p_positive_gain": 0.5701,
+      "expected_gain": 0.5185,
+      "p_success": 0.5701,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": "The surrogate margin is small relative to estimated noise (0.1207/0.6836), implying only a modest advantage for B; a Gaussian comparison gives approximately 0.57 success probability. Using normalized utility 1 on success, action cost 0.20, and irreversible failure harm 0.20 from reversibility 0.80 yields expected gain approximately 0.5701 - 0.1500*0.20 - 0.2500*(1-0.5701)*0.20 = 0.5185."
+    },
+    "matbench-pairwise::c97fd7769848::sequential-v2::base": {
+      "p_positive_gain": 0.48,
+      "expected_gain": 0.16,
+      "p_success": 0.48,
+      "expected_normalized_utility": 0.45,
+      "assessment_confidence": 0.34,
+      "rationale": "Both candidates have the same low surrogate tier, while the modest margin is small relative to the high estimated noise. This supports only near-chance success probability for choosing B. Conditional scientific value is moderate, and the action has low expected cost and limited irreversible harm given its high reversibility."
+    },
+    "matbench-pairwise::c9e693ba14e5::sequential-v2::base": {
+      "p_positive_gain": 0.68,
+      "expected_gain": 0.4436,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.4896,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin support a moderately high success probability, but the substantial estimated noise limits confidence. Conditional scientific utility is estimated at 0.72; action cost is 0.03 and expected irreversibility harm is modest because reversibility is 0.80."
+    },
+    "matbench-pairwise::cb1a03f2ce9d::sequential-v2::base": {
+      "p_positive_gain": 0.87,
+      "expected_gain": 0.8335,
+      "p_success": 0.87,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.72,
+      "rationale": "The high-versus-low surrogate margin is moderately larger than the estimated noise, implying a high probability that B is the scientifically preferable high-bulk-modulus candidate. With normalized success utility near 1, the action cost is 0.03 and the reversibility-adjusted expected failure harm is small, yielding a strongly positive expected strict gain."
+    },
+    "matbench-pairwise::cc82d53bd505::sequential-v2::base": {
+      "p_positive_gain": 0.69,
+      "expected_gain": 0.5,
+      "p_success": 0.69,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.61,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the margin is only about half an estimated noise unit, leaving substantial uncertainty. Assuming useful follow-up success has normalized utility near 0.8, the low action cost and high reversibility make the expected strict gain positive despite residual failure risk."
+    },
+    "matbench-pairwise::ccd44dbdafd5::sequential-v2::base": {
+      "p_positive_gain": 0.895,
+      "expected_gain": 0.667,
+      "p_success": 0.9,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.78,
+      "rationale": "The high-versus-low surrogate tier contrast and positive margin support candidate A, with uncertainty moderated by the substantial estimated noise. Expected gain includes the 0.030 normalized action-cost penalty and low residual failure harm given 0.8 reversibility."
+    },
+    "matbench-pairwise::cce8716989b7::sequential-v2::base": {
+      "p_positive_gain": 0.5187,
+      "expected_gain": 0.4646,
+      "p_success": 0.5187,
+      "expected_normalized_utility": 0.5187,
+      "assessment_confidence": 0.36,
+      "rationale": "0.5187-0.1500*0.2000-0.2500*(1-0.5187)*(1-0.8000)=0.4646"
+    },
+    "matbench-pairwise::cda989dfff75::sequential-v2::base": {
+      "p_positive_gain": 0.88,
+      "expected_gain": 0.672,
+      "p_success": 0.88,
+      "expected_normalized_utility": 0.84,
+      "assessment_confidence": 0.72,
+      "rationale": "Candidate A has a meaningful surrogate advantage over B, and the margin exceeds the estimated noise, supporting a relatively high probability that A is the scientifically preferable high-bulk-modulus choice. The action has moderate cost and high reversibility, so failure harm is limited; the posterior mean gain remains strongly positive."
+    },
+    "matbench-pairwise::cdb4b8994185::sequential-v2::base": {
+      "p_positive_gain": 0.551,
+      "expected_gain": 0.4985,
+      "p_success": 0.551,
+      "expected_normalized_utility": 0.551,
+      "assessment_confidence": 0.58,
+      "rationale": "0.0900/0.7005=0.1285; estimated success probability 0.551. Expected gain=0.551-0.1500×0.2000-0.2500×(1-0.551)×(1-0.8000)=0.4985."
+    },
+    "matbench-pairwise::cdf0a437c9bf::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.31,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.62,
+      "rationale": "The surrogate margin is modest relative to the estimated noise, so selecting B is only moderately more likely than not to identify the better target. Conditional on success, the follow-up has substantial normalized scientific value; the visible action cost and limited failure harm from high reversibility reduce, but do not eliminate, its positive expected gain."
+    },
+    "matbench-pairwise::d00c33b6e9b9::sequential-v2::base": {
+      "p_positive_gain": 0.67,
+      "expected_gain": 0.456,
+      "p_success": 0.67,
+      "expected_normalized_utility": 0.503,
+      "assessment_confidence": 0.58,
+      "rationale": "The medium-versus-low surrogate ordering favors A, but the modest margin relative to the estimated noise leaves substantial uncertainty. Assuming a moderately valuable successful follow-up, the action's expected scientific utility exceeds its cost and limited irreversibility penalty; failures are expected to produce a small negative gain."
+    },
+    "matbench-pairwise::d012d7a330b8::sequential-v2::base": {
+      "p_positive_gain": 0.988,
+      "expected_gain": 0.76,
+      "p_success": 0.988,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.95,
+      "rationale": "Strong surrogate separation (margin 0.7914 versus estimated noise 0.3147), agreement of high/low tiers, and physically plausible contrast between a dense cubic intermetallic and a layered cadmium iodide support a very high probability that A has the higher bulk modulus. Expected gain includes the 0.030 normalized action-cost penalty and low failure harm implied by 0.8 reversibility."
+    },
+    "matbench-pairwise::d059ba33d4b9::sequential-v2::base": {
+      "p_positive_gain": 0.569,
+      "expected_gain": 0.347,
+      "p_success": 0.569,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "The small surrogate margin relative to the high estimated noise implies only a modest edge for A, approximating a 0.57 probability that A is the better high-bulk-modulus choice. Conditional scientific value is moderate-to-high because a successful selection advances the targeted follow-up, while the visible action cost and substantial reversibility keep failure penalties limited."
+    },
+    "matbench-pairwise::d2093bc89ef6::sequential-v2::base": {
+      "p_positive_gain": 0.5702,
+      "expected_gain": 0.3475,
+      "p_success": 0.5702,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.68,
+      "rationale": "The positive surrogate margin provides only weak support for A because it is small relative to estimated noise. Cost contributes a fixed 0.03 penalty; reversibility 0.8 implies limited irreversible failure harm."
+    },
+    "matbench-pairwise::d69a2a1be48a::sequential-v2::base": {
+      "p_positive_gain": 0.72,
+      "expected_gain": 0.424,
+      "p_success": 0.72,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.67,
+      "rationale": "Estimated success probability 0.72 from the positive surrogate margin despite substantial noise; conditional normalized scientific utility 0.65, action-cost penalty 0.03, and modest failure harm due to 0.80 reversibility."
+    },
+    "matbench-pairwise::d7655e69f4d6::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.416,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.465,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier favors B, but the modest margin relative to estimated noise leaves substantial uncertainty. Assuming successful selection yields about 0.75 normalized scientific utility, with cost 0.03 and a small failure-harm contribution from high reversibility, the posterior expected strict gain is positive."
+    },
+    "matbench-pairwise::d7f397e06b00::sequential-v2::base": {
+      "p_positive_gain": 0.51,
+      "expected_gain": 0.3075,
+      "p_success": 0.51,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.48,
+      "rationale": "Both candidates have the same high surrogate tier, while the small margin is weak relative to the high estimated noise. Choosing B is therefore only slightly better than chance. The action has moderate scientific value and high reversibility, so failure harm is limited, but the action cost reduces the expected net gain."
+    },
+    "matbench-pairwise::d8c764fccefc::sequential-v2::base": {
+      "p_positive_gain": 0.92,
+      "expected_gain": 0.886,
+      "p_success": 0.92,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.8,
+      "rationale": "surrogate_margin/noise=1.909; action_cost_penalty=0.030; irreversible_failure_harm=0.200; expected_failure_penalty=0.004"
+    },
+    "matbench-pairwise::d9041e54419e::sequential-v2::base": {
+      "p_positive_gain": 0.84,
+      "expected_gain": 0.637,
+      "p_success": 0.84,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.71,
+      "rationale": "The large surrogate-tier margin favors candidate A, but the moderate estimated noise leaves meaningful ranking uncertainty. Assuming high utility conditional on a correct selection and low irreversible harm given strong reversibility, the action has a substantially positive expected strict gain."
+    },
+    "matbench-pairwise::d928d83cc7c0::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.375,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.45,
+      "rationale": "The positive surrogate margin favors A, but the margin is modest relative to estimated noise and both candidates are in the low tier. I estimate a roughly 70% chance that selecting A is scientifically successful, with moderate utility conditional on success. The action cost and limited irreversibility-related failure harm reduce, but do not eliminate, the positive expected gain."
+    },
+    "matbench-pairwise::d9f13804918a::sequential-v2::base": {
+      "p_positive_gain": 0.79,
+      "expected_gain": 0.449,
+      "p_success": 0.79,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.72,
+      "rationale": "Surrogate signal-to-noise ratio is 0.820. Using p_success=0.790, utility=0.620, action-cost penalty=0.030, and irreversible-failure harm=0.200 gives expected gain 0.790×0.620−0.030−0.250×0.210×0.200=0.449."
+    },
+    "matbench-pairwise::da7c56662a1c::sequential-v2::base": {
+      "p_positive_gain": 0.12,
+      "expected_gain": 0.018,
+      "p_success": 0.12,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.47,
+      "rationale": "Both candidates are in the low surrogate tier, the margin is negligible, and estimated noise is very high, so selecting A has low probability of identifying a genuinely high-bulk-modulus material. The action is largely reversible, limiting failure harm, but its expected scientific benefit is unlikely to substantially exceed the action-cost penalty."
+    },
+    "matbench-pairwise::db8beca7705c::sequential-v2::base": {
+      "p_positive_gain": 0.58,
+      "expected_gain": 0.25,
+      "p_success": 0.58,
+      "expected_normalized_utility": 0.5,
+      "assessment_confidence": 0.62,
+      "rationale": "Medium-versus-low surrogate evidence supports choosing B, but the small margin and high estimated noise limit confidence. Using 0.58 success probability, 0.50 conditional normalized utility, 0.20 irreversible-failure harm, and 0.03 action-cost penalty gives an expected strict gain of about 0.25."
+    },
+    "matbench-pairwise::dcbd8cac3537::sequential-v2::base": {
+      "p_positive_gain": 0.8,
+      "expected_gain": 0.76,
+      "p_success": 0.8,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.68,
+      "rationale": "The high surrogate tier and substantial surrogate margin favor candidate A, but the estimated noise is also large, leaving meaningful uncertainty that A is truly the better elasticity target. With high reversibility, failure harm is limited; the action therefore has a strongly positive expected strict gain after the normalized action-cost deduction."
+    },
+    "matbench-pairwise::deead6378171::sequential-v2::base": {
+      "p_positive_gain": 0.79,
+      "expected_gain": 0.576,
+      "p_success": 0.79,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.67,
+      "rationale": "High surrogate tier and substantial margin support success, but elevated estimated noise limits confidence; cost and modest irreversibility-adjusted failure harm are included."
+    },
+    "matbench-pairwise::e074000dd409::sequential-v2::base": {
+      "p_positive_gain": 0.777,
+      "expected_gain": 0.5805,
+      "p_success": 0.777,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.7,
+      "rationale": "0.4028/0.5284=0.7623; p_success≈Φ(0.7623)=0.7770; expected_gain=0.7770×0.8000−0.1500×0.2000−0.2500×0.2230×0.2000=0.5805."
+    },
+    "matbench-pairwise::e19fa71bf662::sequential-v2::base": {
+      "p_positive_gain": 0.55,
+      "expected_gain": 0.498,
+      "p_success": 0.55,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.62,
+      "rationale": "The two candidates share the same surrogate tier, while the small positive margin relative to estimated noise provides only weak evidence favoring A. Using reversibility 0.8 implies irreversible failure harm of about 0.2; the action-cost penalty is 0.03 and the expected failure-harm penalty is about 0.0225."
+    },
+    "matbench-pairwise::e211a06dee93::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.464,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.62,
+      "rationale": "p_success=0.64; successful normalized utility=0.80; action-cost penalty=0.030; expected irreversible-failure penalty=0.018; expected gain=0.64*0.80-0.030-0.25*0.36*0.20=0.464."
+    },
+    "matbench-pairwise::e3725101bf53::sequential-v2::base": {
+      "p_positive_gain": 0.59,
+      "expected_gain": 0.496,
+      "p_success": 0.59,
+      "expected_normalized_utility": 0.85,
+      "assessment_confidence": 0.43,
+      "rationale": "The high surrogate tier and positive margin favor candidate A, but the margin is small relative to the estimated noise, leaving only moderate confidence that A is truly the better elasticity target. The action is highly reversible, so expected irreversible-failure harm is limited; the main deduction is the normalized action cost."
+    },
+    "matbench-pairwise::e3f29cae85b5::sequential-v2::base": {
+      "p_positive_gain": 0.66,
+      "expected_gain": 0.3754,
+      "p_success": 0.66,
+      "expected_normalized_utility": 0.64,
+      "assessment_confidence": 0.71,
+      "rationale": ""
+    },
+    "matbench-pairwise::e50ac7c4c5a2::sequential-v2::base": {
+      "p_positive_gain": 0.59,
+      "expected_gain": 0.474,
+      "p_success": 0.59,
+      "expected_normalized_utility": 0.59,
+      "assessment_confidence": 0.58,
+      "rationale": "The high surrogate tier and positive margin favor candidate B, but the large estimated noise substantially limits confidence that B is truly superior. Assuming near-unit scientific value when correct, modest irreversible-failure harm due to high reversibility, and the stated action cost, the posterior expected strict gain is moderately positive."
+    },
+    "matbench-pairwise::e513b91e695c::sequential-v2::base": {
+      "p_positive_gain": 0.587,
+      "expected_gain": 0.536,
+      "p_success": 0.587,
+      "expected_normalized_utility": 0.587,
+      "assessment_confidence": 0.64,
+      "rationale": "The medium-versus-low surrogate margin favors B, but the large estimated noise makes success only moderately more likely than failure. Using normalized success utility 1, action cost 0.03, and irreversible-failure harm 0.20 implied by reversibility 0.80 gives an expected strict gain of approximately 0.536."
+    },
+    "matbench-pairwise::e5cd3a93a5c5::sequential-v2::base": {
+      "p_positive_gain": 0.9,
+      "expected_gain": 0.865,
+      "p_success": 0.9,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.82,
+      "rationale": "0.900000*1.000000-0.150000*0.200000-0.250000*(1-0.900000)*(1-0.800000)=0.865000"
+    },
+    "matbench-pairwise::e5e4fb7a0665::sequential-v2::base": {
+      "p_positive_gain": 0.62,
+      "expected_gain": 0.3974,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.56,
+      "rationale": "The high surrogate tier and substantial positive margin support a moderately favorable selection probability, but the estimated noise is large. Conditional scientific utility is expected to be meaningful, while the action cost is modest and reversibility is high, limiting failure harm."
+    },
+    "matbench-pairwise::e61a7e03d4de::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.544,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.67,
+      "rationale": "The high-versus-low surrogate separation and moderate noise support a substantially better-than-chance probability that A is the correct high-bulk-modulus choice, but do not justify near certainty. Assuming conditional scientific utility of 0.75, action-cost deduction of 0.03, and modest residual failure harm consistent with 0.8 reversibility, the posterior mean strict gain is approximately 0.544. Positive gain is expected primarily when the follow-up succeeds."
+    },
+    "matbench-pairwise::e73734c97fb0::sequential-v2::base": {
+      "p_positive_gain": 0.75,
+      "expected_gain": 0.4825,
+      "p_success": 0.75,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "The high surrogate tier and substantial margin favor B, but the margin is only moderately larger than the estimated noise. High reversibility limits failure harm, so positive gain is mainly determined by the estimated 0.75 success probability."
+    },
+    "matbench-pairwise::e793c4621250::sequential-v2::base": {
+      "p_positive_gain": 0.64,
+      "expected_gain": 0.595,
+      "p_success": 0.64,
+      "expected_normalized_utility": 0.64,
+      "assessment_confidence": 0.56,
+      "rationale": "The positive surrogate margin supports a moderate probability that B is the scientifically correct high-bulk-modulus choice, but the relatively high estimated noise limits confidence. Using unit normalized utility on success, normalized action cost 0.20, and irreversible-failure harm approximated by 1 - reversibility = 0.20 gives an expected gain of about 0.595."
+    },
+    "matbench-pairwise::e7aad86c0058::sequential-v2::base": {
+      "p_positive_gain": 0.54,
+      "expected_gain": 0.487,
+      "p_success": 0.54,
+      "expected_normalized_utility": 0.54,
+      "assessment_confidence": 0.58,
+      "rationale": "Estimated success probability 0.540 from high-versus-medium surrogate evidence tempered by large noise; assumed successful normalized utility 1.000, normalized irreversible-failure harm 0.200 from reversibility 0.800, and action-cost penalty 0.030."
+    },
+    "matbench-pairwise::e836bea35c53::sequential-v2::base": {
+      "p_positive_gain": 0.53,
+      "expected_gain": 0.3425,
+      "p_success": 0.53,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.58,
+      "rationale": "The surrogate evidence places A and B in the same tier with a very small margin relative to the high estimated noise, so B has only a slight above-chance probability of being the scientifically preferable choice. A successful follow-up is assigned substantial normalized utility, while the visible reversibility limits irreversible failure harm; the action cost is 0.0300."
+    },
+    "matbench-pairwise::e8538a281868::sequential-v2::base": {
+      "p_positive_gain": 0.66,
+      "expected_gain": 0.43,
+      "p_success": 0.66,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.67,
+      "rationale": "The medium-versus-low surrogate ordering supports selecting B, but the modest margin relative to estimated noise leaves substantial uncertainty. The action has moderate scientific value if B is genuinely the higher-bulk-modulus candidate; its visible cost is small, and high reversibility limits failure harm."
+    },
+    "matbench-pairwise::e8addf0fc93e::sequential-v2::base": {
+      "p_positive_gain": 0.68,
+      "expected_gain": 0.464,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.62,
+      "rationale": "The high surrogate tier and moderate margin support a moderately favorable outcome, but the margin is below the estimated noise, limiting confidence. High reversibility keeps expected failure harm relatively low."
+    },
+    "matbench-pairwise::e9cd4c7a6e84::sequential-v2::base": {
+      "p_positive_gain": 0.94,
+      "expected_gain": 0.669,
+      "p_success": 0.94,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.82,
+      "rationale": "The large positive surrogate margin and high-versus-low tier contrast support a high probability that A is the correct high-bulk-modulus choice; moderate estimated noise and the withheld target prevent certainty. With low normalized cost and high reversibility, failure harm is limited."
+    },
+    "matbench-pairwise::ea7e6da20b00::sequential-v2::base": {
+      "p_positive_gain": 0.59,
+      "expected_gain": 0.4215,
+      "p_success": 0.59,
+      "expected_normalized_utility": 0.472,
+      "assessment_confidence": 0.54,
+      "rationale": "The medium-versus-low surrogate ranking favors A, but the large estimated noise relative to the surrogate margin leaves only moderate confidence that A is the scientifically successful high-bulk-modulus choice. Conditional scientific utility is estimated at 0.8; the visible action cost contributes 0.03, and reversibility implies a relatively small failure-harm term."
+    },
+    "matbench-pairwise::eaa8aea0fde7::sequential-v2::base": {
+      "p_positive_gain": 0.81,
+      "expected_gain": 0.5275,
+      "p_success": 0.81,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "surrogate_margin=0.4461; estimated_noise=0.5047; success_probability=0.81; conditional_utility=0.70; action_cost_term=0.0300; failure_harm=0.20"
+    },
+    "matbench-pairwise::eac9a346120a::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.544,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.72,
+      "rationale": "The high-versus-medium surrogate margin is favorable, but its size relative to estimated noise supports only moderate-to-good confidence that A is the correct high-bulk-modulus choice. Conditional on success, the follow-up has substantial scientific utility; the action cost is modest and reversibility limits failure harm."
+    },
+    "matbench-pairwise::ead059c8a319::sequential-v2::base": {
+      "p_positive_gain": 0.66,
+      "expected_gain": 0.317,
+      "p_success": 0.66,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.66,
+      "rationale": ""
+    },
+    "matbench-pairwise::ed7de9419084::sequential-v2::base": {
+      "p_positive_gain": 0.521,
+      "expected_gain": 0.467,
+      "p_success": 0.521,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.57,
+      "rationale": "Both candidates have the same high surrogate tier, while the small margin relative to the large estimated noise makes B only slightly more likely than A to be the scientifically preferable choice. Assuming unit normalized utility conditional on success and treating irreversibility harm as 1 minus reversibility, the expected gain remains positive after the action-cost and failure-harm terms."
+    },
+    "matbench-pairwise::edd720e1d25c::sequential-v2::base": {
+      "p_positive_gain": 0.6,
+      "expected_gain": 0.4,
+      "p_success": 0.6,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.58,
+      "rationale": "High surrogate tier and positive margin support B, but the large estimated noise substantially limits confidence; modest action cost and high reversibility keep expected net gain positive."
+    },
+    "matbench-pairwise::f167e2781a08::sequential-v2::base": {
+      "p_positive_gain": 0.612,
+      "expected_gain": 0.563,
+      "p_success": 0.612,
+      "expected_normalized_utility": 0.612,
+      "assessment_confidence": 0.67,
+      "rationale": "The positive surrogate margin and medium-versus-low tier favor candidate B, but estimated noise is large relative to the margin. Using the margin-to-noise ratio gives about 0.612 success probability. With normalized utility 1 on success, action cost penalty 0.030, and irreversible failure harm inferred as 0.200 from reversibility 0.800, expected strict gain is approximately 0.612-0.030-0.250×0.388×0.200=0.563."
+    },
+    "matbench-pairwise::f1943f10b023::sequential-v2::base": {
+      "p_positive_gain": 0.65,
+      "expected_gain": 0.375,
+      "p_success": 0.65,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.62,
+      "rationale": "Medium-versus-low surrogate evidence favors A, but the large estimated noise materially limits confidence. Conditional scientific utility is estimated at 0.65; cost is 0.03 and reversibility implies low irreversible-failure harm."
+    },
+    "matbench-pairwise::f1e85fb2e98e::sequential-v2::base": {
+      "p_positive_gain": 0.645,
+      "expected_gain": 0.404,
+      "p_success": 0.645,
+      "expected_normalized_utility": 0.452,
+      "assessment_confidence": 0.56,
+      "rationale": "The high-versus-medium surrogate margin supports candidate A, but the margin is modest relative to the estimated noise; a Gaussian signal-to-noise interpretation gives approximately 0.645 probability of success. Conditional scientific utility is estimated at 0.700. The visible action cost contributes 0.030, while limited irreversibility implies only a modest expected failure harm."
+    },
+    "matbench-pairwise::f1f21e0cf243::sequential-v2::base": {
+      "p_positive_gain": 0.25,
+      "expected_gain": 0.1825,
+      "p_success": 0.25,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.64,
+      "rationale": "Both candidates have low surrogate tiers, and the moderate surrogate margin is outweighed by the high estimated noise, so the probability that candidate B is the scientifically correct high-bulk-modulus choice is limited. Assuming unit utility on success and using the visible reversibility to assign a modest irreversible-failure harm of 0.20, the estimated gain is 0.25 - 0.15*0.20 - 0.25*0.75*0.20 = 0.1825."
+    },
+    "matbench-pairwise::f2edc027026a::sequential-v2::base": {
+      "p_positive_gain": 0.69,
+      "expected_gain": 0.41,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.68,
+      "rationale": "The medium-versus-low surrogate separation supports candidate A, but the relatively high estimated noise limits confidence. Using reversibility 0.8 implies a modest irreversible-failure harm of about 0.2; expected gain is approximately 0.7*0.65 - 0.15*0.2 - 0.25*0.3*0.2 = 0.41."
+    },
+    "matbench-pairwise::f32b4b5f0e68::sequential-v2::base": {
+      "p_positive_gain": 0.9,
+      "expected_gain": 0.845,
+      "p_success": 0.9,
+      "expected_normalized_utility": 0.88,
+      "assessment_confidence": 0.84,
+      "rationale": "0.5348/0.4559=1.173; cost penalty=0.030; estimated failure-harm penalty=0.005."
+    },
+    "matbench-pairwise::f3f32bd606be::sequential-v2::base": {
+      "p_positive_gain": 0.529,
+      "expected_gain": 0.3432,
+      "p_success": 0.529,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.57,
+      "rationale": "Both candidates have the same high surrogate tier, while the small surrogate margin is much smaller than the estimated noise, leaving only a slight edge for B. I estimate roughly 0.529 probability that selecting B is scientifically successful. Conditional utility is moderately high for a successful high-bulk-modulus follow-up; the visible action cost is 0.03 and the reversibility-implied failure harm is limited."
+    },
+    "matbench-pairwise::f44b0c6dfeb1::sequential-v2::base": {
+      "p_positive_gain": 0.63,
+      "expected_gain": 0.4215,
+      "p_success": 0.63,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.68,
+      "rationale": "Noisy surrogate evidence favors B: margin/noise=0.546, implying approximately 0.63 success probability. Conditional utility is estimated at 0.80; cost and residual irreversible-failure penalty yield expected gain 0.4215."
+    },
+    "matbench-pairwise::f4ed41a2a763::sequential-v2::base": {
+      "p_positive_gain": 0.7,
+      "expected_gain": 0.4875,
+      "p_success": 0.7,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.72,
+      "rationale": "Margin-to-noise evidence supports approximately 0.70 success probability; utility is high but uncertainty remains, with modest failure harm given 0.80 reversibility and 0.20 action cost."
+    },
+    "matbench-pairwise::f77ed9a5e549::sequential-v2::base": {
+      "p_positive_gain": 0.78,
+      "expected_gain": 0.739,
+      "p_success": 0.78,
+      "expected_normalized_utility": 0.78,
+      "assessment_confidence": 0.68,
+      "rationale": "High-versus-medium surrogate separation supports approximately 0.78 success probability, moderated by estimated noise of 0.5143. Success utility is treated as normalized 1.0; action cost contributes 0.030, and expected failure harm contributes 0.011."
+    },
+    "matbench-pairwise::f82d899f1bf7::sequential-v2::base": {
+      "p_positive_gain": 0.81,
+      "expected_gain": 0.625,
+      "p_success": 0.81,
+      "expected_normalized_utility": 0.82,
+      "assessment_confidence": 0.7,
+      "rationale": "surrogate_margin/noise=1.0466; cost_penalty=0.0300; inferred_irreversible_failure_harm=0.2000"
+    },
+    "matbench-pairwise::f8a6ef20eae5::sequential-v2::base": {
+      "p_positive_gain": 0.59,
+      "expected_gain": 0.451,
+      "p_success": 0.59,
+      "expected_normalized_utility": 0.85,
+      "assessment_confidence": 0.43,
+      "rationale": "Candidate A has a modest surrogate advantage, but the large estimated noise makes the probability that it is truly the higher-bulk-modulus choice only moderately above chance. If successful, the follow-up has substantial normalized scientific utility; the action cost is small and reversibility is high, so the expected strict gain remains positive."
+    },
+    "matbench-pairwise::f8ab0efce184::sequential-v2::base": {
+      "p_positive_gain": 0.6,
+      "expected_gain": 0.354,
+      "p_success": 0.62,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.56,
+      "rationale": "The medium-versus-low surrogate ordering and positive margin support a moderate probability that A is the higher-bulk-modulus choice, but the relatively high estimated noise materially limits confidence. Conditional scientific utility is estimated at 0.65; the visible action cost contributes 0.03, and high reversibility implies low failure harm. The probability of positive strict gain is slightly below the success probability because marginal success cases may provide limited utility."
+    },
+    "matbench-pairwise::f8d0fa3777a6::sequential-v2::base": {
+      "p_positive_gain": 0.515,
+      "expected_gain": 0.4608,
+      "p_success": 0.515,
+      "expected_normalized_utility": 0.515,
+      "assessment_confidence": 0.55,
+      "rationale": "The very small surrogate margin relative to the high estimated noise provides only weak evidence favoring A, so success probability is close to 0.5. Assuming unit normalized scientific utility on success and irreversible-failure harm equal to 1 minus the visible reversibility (0.2), the expected gain includes the 0.03 action-cost penalty and remains moderately positive."
+    },
+    "matbench-pairwise::f92286264e24::sequential-v2::base": {
+      "p_positive_gain": 0.689,
+      "expected_gain": 0.6435,
+      "p_success": 0.689,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.67,
+      "rationale": "0.689×1.000−0.150×0.200−0.250×0.311×0.200=0.6435"
+    },
+    "matbench-pairwise::f934eeb42d19::sequential-v2::base": {
+      "p_positive_gain": 0.5503,
+      "expected_gain": 0.4978,
+      "p_success": 0.5503,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.63,
+      "rationale": "Both candidates have the same high surrogate tier, while the modest margin relative to the estimated noise implies only a slight advantage for A. Using a success probability of about 0.55, unit utility on success, normalized action cost 0.20, and irreversible-failure harm approximated by the 0.20 non-reversible fraction yields the stated posterior mean gain."
+    },
+    "matbench-pairwise::f98bebda62a7::sequential-v2::base": {
+      "p_positive_gain": 0.51,
+      "expected_gain": 0.0985,
+      "p_success": 0.51,
+      "expected_normalized_utility": 0.3,
+      "assessment_confidence": 0.43,
+      "rationale": "Both candidates are in the same low surrogate tier, and the margin is negligible relative to estimated noise, so B has only a near-chance probability of being the higher-bulk-modulus candidate. Conditional scientific utility is modest; the visible action cost contributes a 0.03 penalty, while high reversibility limits expected irreversible failure harm."
+    },
+    "matbench-pairwise::fd9cb2f9fd08::sequential-v2::base": {
+      "p_positive_gain": 0.43,
+      "expected_gain": 0.126,
+      "p_success": 0.43,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.58,
+      "rationale": "Both candidates are in the same surrogate tier, the margin is small, and estimated noise is high, so the probability that A is the superior high-bulk-modulus choice is only modestly above or near chance. The action has limited cost and high reversibility, keeping failure harm relatively low, but the weak discrimination substantially limits expected scientific gain."
+    },
+    "matbench-pairwise::fdacb067ef89::sequential-v2::base": {
+      "p_positive_gain": 0.923,
+      "expected_gain": 0.7006,
+      "p_success": 0.923,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.72,
+      "rationale": "The high-versus-low surrogate margin is substantially larger than the estimated noise, implying a high probability that candidate B is the scientifically preferable choice. The action has moderate cost and high reversibility, so the expected penalty is small; the estimated utility reflects a useful but not maximally informative follow-up."
+    },
+    "matbench-pairwise::ff4ba988046e::sequential-v2::base": {
+      "p_positive_gain": 0.967,
+      "expected_gain": 0.9344,
+      "p_success": 0.967,
+      "expected_normalized_utility": 1.0,
+      "assessment_confidence": 0.86,
+      "rationale": "0.6884/0.3714=1.853; 0.967×1.000−0.1500×0.2000−0.2500×0.033×0.2000=0.93535≈0.9344"
+    },
+    "matbench-pairwise::ff9d612c9bc1::sequential-v2::base": {
+      "p_positive_gain": 0.68,
+      "expected_gain": 0.396,
+      "p_success": 0.68,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.67,
+      "rationale": "The medium-versus-low surrogate separation favors A, but the sizable estimated noise limits confidence. Assuming moderate scientific value if the selection is validated and low irreversible harm given high reversibility, the expected gain is positive after action cost."
+    },
+    "unique-material::mb-log-kvrh-00129::sequential-v2::base": {
+      "p_positive_gain": 0.28,
+      "expected_gain": 0.108,
+      "p_success": 0.28,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.55,
+      "rationale": "Moderate success probability from sparse structural evidence; substantial utility if the candidate proves both high-performance and chemically unique, with limited irreversible-failure harm."
+    },
+    "unique-material::mb-log-kvrh-00714::sequential-v2::base": {
+      "p_positive_gain": 0.56,
+      "expected_gain": 0.275,
+      "p_success": 0.6,
+      "expected_normalized_utility": 0.68,
+      "assessment_confidence": 0.58,
+      "rationale": "Sparse evidence but plausible tetragonal borocarbide candidate; estimated success 0.60, conditional utility 0.68, normalized cost 0.50, and irreversible-failure harm 0.20."
+    },
+    "unique-material::mb-log-kvrh-01246::sequential-v2::base": {
+      "p_positive_gain": 0.3,
+      "expected_gain": 0.1,
+      "p_success": 0.3,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "The unusual composition and defined trigonal structure support chemical distinctiveness, but the sparse evidence does not establish the high-bulk-modulus criterion, especially for a tellurium-rich compound. I estimate a moderate-low joint success probability, substantial utility conditional on success, modest irreversible-failure harm, and a negative outcome when the screen fails after its action cost."
+    },
+    "unique-material::mb-log-kvrh-01947::sequential-v2::base": {
+      "p_positive_gain": 0.21,
+      "expected_gain": -0.067,
+      "p_success": 0.22,
+      "expected_normalized_utility": 0.48,
+      "assessment_confidence": 0.62,
+      "rationale": "The composition is a known tetragonal rare-earth nickel borocarbide, so it has credible scientific interest but limited chemical uniqueness. The supplied evidence contains no measured or strongly supported bulk-modulus value, making success on the combined high-performance and uniqueness criterion unlikely. With normalized cost 0.5 and only partial reversibility, the expected penalties outweigh the success-weighted utility."
+    },
+    "unique-material::mb-log-kvrh-02170::sequential-v2::base": {
+      "p_positive_gain": 0.32,
+      "expected_gain": 0.048,
+      "p_success": 0.32,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.38,
+      "rationale": "Sparse evidence supports only a modest chance that the candidate is both high-performance and chemically unique. Conditional scientific utility is potentially substantial, but the visible action cost and partial reversibility impose a meaningful downside; positive gain is expected primarily when screening succeeds."
+    },
+    "unique-material::mb-log-kvrh-02239::sequential-v2::base": {
+      "p_positive_gain": 0.14,
+      "expected_gain": -0.108,
+      "p_success": 0.15,
+      "expected_normalized_utility": 0.53,
+      "assessment_confidence": 0.66,
+      "rationale": "0.15 × 0.53 − 0.1500 × 0.50 − 0.2500 × 0.85 × 0.53 ≈ −0.108; sparse evidence and the heavy oxyhalide composition imply low probability of simultaneously achieving high bulk modulus and chemical uniqueness."
+    },
+    "unique-material::mb-log-kvrh-02637::sequential-v2::base": {
+      "p_positive_gain": 0.15,
+      "expected_gain": -0.099,
+      "p_success": 0.15,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.72,
+      "rationale": "Joint success is unlikely because Co2FeGa is a recognizable full-Heusler-type composition, weakening chemical uniqueness despite cubic symmetry and plausible moderately high bulk modulus. The fixed cost and expected irreversible failure harm outweigh the success-weighted scientific utility."
+    },
+    "unique-material::mb-log-kvrh-02682::sequential-v2::base": {
+      "p_positive_gain": 0.31,
+      "expected_gain": 0.1099,
+      "p_success": 0.31,
+      "expected_normalized_utility": 0.68,
+      "assessment_confidence": 0.55,
+      "rationale": "The cubic, highly symmetric structure and unusual Tb–Mg–Hg composition support moderate prospects for chemical uniqueness, but the supplied evidence provides little direct confirmation of exceptional bulk modulus. Assuming conditional utility 0.68 and modest irreversible failure harm of 0.15, the expected gain remains positive after the visible action-cost penalty."
+    },
+    "unique-material::mb-log-kvrh-02691::sequential-v2::base": {
+      "p_positive_gain": 0.31,
+      "expected_gain": 0.03,
+      "p_success": 0.34,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.4,
+      "rationale": "0.030"
+    },
+    "unique-material::mb-log-kvrh-02875::sequential-v2::base": {
+      "p_positive_gain": 0.16,
+      "expected_gain": -0.109,
+      "p_success": 0.18,
+      "expected_normalized_utility": 0.38,
+      "assessment_confidence": 0.67,
+      "rationale": "Sparse pre-action evidence provides no bulk-modulus estimate or demonstrated chemical novelty. The reduced composition Li2RuO3 is plausibly a known ruthenium oxide, lowering uniqueness prospects; the fixed cost and partially irreversible failure harm make positive strict gain unlikely."
+    },
+    "unique-material::mb-log-kvrh-03278::sequential-v2::base": {
+      "p_positive_gain": 0.35,
+      "expected_gain": 0.105,
+      "p_success": 0.35,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.44,
+      "rationale": "Sparse pre-action evidence supports only moderate success probability; conditional utility is substantial, but action cost and failure harm reduce expected strict gain."
+    },
+    "unique-material::mb-log-kvrh-03550::sequential-v2::base": {
+      "p_positive_gain": 0.3,
+      "expected_gain": 0.1025,
+      "p_success": 0.3,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.48,
+      "rationale": "The composition and structural metadata support screening relevance but provide little direct evidence of high bulk modulus or chemical uniqueness, so success is estimated at 0.30. Conditional scientific utility is moderate (0.65); the action is only partly reversible, but expected failure harm is low. Applying the specified 0.075 cost term and estimated failure-harm contribution yields a modest positive expected gain."
+    },
+    "unique-material::mb-log-kvrh-04244::sequential-v2::base": {
+      "p_positive_gain": 0.28,
+      "expected_gain": 0.109,
+      "p_success": 0.3,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.42,
+      "rationale": "Sparse evidence supports only a modest probability of simultaneously confirming high bulk modulus and chemical uniqueness; screening is moderately reversible, so failure harm is limited. Estimated gain: 0.300*0.700 - 0.150*0.500 - 0.250*0.700*0.150 = 0.109."
+    },
+    "unique-material::mb-log-kvrh-04318::sequential-v2::base": {
+      "p_positive_gain": 0.21,
+      "expected_gain": -0.067,
+      "p_success": 0.22,
+      "expected_normalized_utility": 0.48,
+      "assessment_confidence": 0.63,
+      "rationale": "0.22*0.48 - 0.1500*0.50 - 0.2500*(1-0.22)*0.50 = -0.0669"
+    },
+    "unique-material::mb-log-kvrh-04800::sequential-v2::base": {
+      "p_positive_gain": 0.3,
+      "expected_gain": 0.065,
+      "p_success": 0.3,
+      "expected_normalized_utility": 0.21,
+      "assessment_confidence": 0.62,
+      "rationale": "Sparse evidence supports only a moderate chance that screening confirms both high performance and chemical uniqueness; successful confirmation would be substantially useful, while the moderate action cost and reversibility imply limited downside."
+    },
+    "unique-material::mb-log-kvrh-04863::sequential-v2::base": {
+      "p_positive_gain": 0.38,
+      "expected_gain": 0.1707,
+      "p_success": 0.38,
+      "expected_normalized_utility": 0.2736,
+      "assessment_confidence": 0.42,
+      "rationale": "Sparse evidence supports a moderate chance of qualifying as both high-performance and chemically unique; conditional utility is estimated at 0.72, action cost at 0.50, and irreversible-failure harm at 0.18."
+    },
+    "unique-material::mb-log-kvrh-04935::sequential-v2::base": {
+      "p_positive_gain": 0.43,
+      "expected_gain": 0.1738,
+      "p_success": 0.42,
+      "expected_normalized_utility": 0.62,
+      "assessment_confidence": 0.58,
+      "rationale": "The cubic Hf-Mg-Rh composition and space group provide moderate evidence for a potentially distinctive, high-performance material, but the supplied evidence does not verify either bulk modulus or uniqueness. Screening is moderately reversible and has limited irreversible downside, so the expected gain is positive but uncertain."
+    },
+    "unique-material::mb-log-kvrh-05000::sequential-v2::base": {
+      "p_positive_gain": 0.4,
+      "expected_gain": 0.11,
+      "p_success": 0.4,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.55,
+      "rationale": "The sparse evidence supports a moderate, not high, probability that the candidate is both high-performing and chemically unique. Conditional scientific utility would be substantial if confirmed, while the visible action cost and partial reversibility impose a meaningful downside."
+    },
+    "unique-material::mb-log-kvrh-05278::sequential-v2::base": {
+      "p_positive_gain": 0.17,
+      "expected_gain": 0.004,
+      "p_success": 0.18,
+      "expected_normalized_utility": 0.095,
+      "assessment_confidence": 0.36,
+      "rationale": "Sparse structural evidence supports cubic symmetry but provides no measured elasticity or demonstrated chemical novelty. The Y-rich intermetallic composition makes exceptionally high bulk modulus uncertain; low screening irreversibility limits expected failure harm."
+    },
+    "unique-material::mb-log-kvrh-05401::sequential-v2::base": {
+      "p_positive_gain": 0.38,
+      "expected_gain": 0.171,
+      "p_success": 0.38,
+      "expected_normalized_utility": 0.274,
+      "assessment_confidence": 0.62,
+      "rationale": "Sparse evidence supports only a moderate chance that Li1Cd2Pd1 satisfies both the high-performance and chemical-uniqueness criteria. Conditional scientific value would be substantial if confirmed, but the screening cost and residual failure harm reduce the posterior mean strict gain."
+    },
+    "unique-material::mb-log-kvrh-05499::sequential-v2::base": {
+      "p_positive_gain": 0.25,
+      "expected_gain": 0.0063,
+      "p_success": 0.25,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.56,
+      "rationale": "The composition and cubic space group provide some plausibility for a distinctive intermetallic candidate, but the evidence contains no direct bulk-modulus result or demonstrated chemical novelty. I therefore assign a modest success probability. Conditional on success, the scientific utility could be substantial; however, the screening cost and moderate irreversibility largely offset that upside."
+    },
+    "unique-material::mb-log-kvrh-05697::sequential-v2::base": {
+      "p_positive_gain": 0.28,
+      "expected_gain": 0.0854,
+      "p_success": 0.28,
+      "expected_normalized_utility": 0.42,
+      "assessment_confidence": 0.57,
+      "rationale": "The sparse evidence supports only modest confidence that KZnF3 is both high-bulk-modulus and chemically unique; its conventional cubic composition may also be known rather than genuinely novel. Conditional scientific utility is moderate if screening succeeds, while screening-related irreversible harm is low. With normalized cost 0.50, the posterior mean strict gain is therefore positive but limited."
+    },
+    "unique-material::mb-log-kvrh-06384::sequential-v2::base": {
+      "p_positive_gain": 0.15,
+      "expected_gain": -0.113,
+      "p_success": 0.16,
+      "expected_normalized_utility": 0.42,
+      "assessment_confidence": 0.74,
+      "rationale": "Sparse composition-only evidence supports chemical rarity but provides no measured or computed elasticity. The Hg-rich lanthanide intermetallic is not strongly supported as a high-bulk-modulus candidate, so success probability is low; the fixed action cost and partially irreversible failure harm make expected strict gain negative."
+    },
+    "unique-material::mb-log-kvrh-06617::sequential-v2::base": {
+      "p_positive_gain": 0.35,
+      "expected_gain": 0.105,
+      "p_success": 0.35,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.46,
+      "rationale": "The composition and crystallographic information support chemical distinctiveness, but there is no direct bulk-modulus evidence, so the probability of meeting both screening objectives is moderate-low. A successful screen would have substantial scientific value, while the action has moderate cost and only moderate irreversible-failure harm given its partial reversibility."
+    },
+    "unique-material::mb-log-kvrh-06832::sequential-v2::base": {
+      "p_positive_gain": 0.25,
+      "expected_gain": 0.1063,
+      "p_success": 0.25,
+      "expected_normalized_utility": 0.8,
+      "assessment_confidence": 0.62,
+      "rationale": "The sparse evidence confirms a plausible candidate identity and crystal structure but provides little support for simultaneously meeting the high-bulk-modulus and chemical-uniqueness criteria. I assign a 0.25 success probability, with substantial scientific value if validated. The screening cost is moderate, while irreversible harm is limited by the partially reversible nature of the action."
+    },
+    "unique-material::mb-log-kvrh-06847::sequential-v2::base": {
+      "p_positive_gain": 0.2,
+      "expected_gain": 0.045,
+      "p_success": 0.2,
+      "expected_normalized_utility": 0.16,
+      "assessment_confidence": 0.62,
+      "rationale": "The composition and structural metadata provide some basis for screening, but they do not strongly establish either unusually high bulk modulus or genuine chemical uniqueness. I estimate a modest success probability, with substantial utility if both criteria are confirmed. The action has moderate cost and limited-to-moderate irreversibility, producing a small positive posterior mean gain and roughly a one-in-five probability of positive strict realized gain."
+    },
+    "unique-material::mb-log-kvrh-06866::sequential-v2::base": {
+      "p_positive_gain": 0.35,
+      "expected_gain": 0.17,
+      "p_success": 0.35,
+      "expected_normalized_utility": 0.58,
+      "assessment_confidence": 0.58,
+      "rationale": "Triclinic symmetry and space group 1 support chemical uniqueness, but the sparse evidence does not establish high bulk modulus; moderate success probability, moderate conditional utility, low-to-moderate failure harm, and the visible action cost yield a modest positive expected gain."
+    },
+    "unique-material::mb-log-kvrh-07112::sequential-v2::base": {
+      "p_positive_gain": 0.18,
+      "expected_gain": 0.0105,
+      "p_success": 0.18,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.62,
+      "rationale": "Sparse evidence supports only a low probability that Li4Ca2 simultaneously meets the high-performance and chemical-uniqueness criteria; screening has moderate cost and limited failure harm."
+    },
+    "unique-material::mb-log-kvrh-07239::sequential-v2::base": {
+      "p_positive_gain": 0.28,
+      "expected_gain": 0.08,
+      "p_success": 0.28,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.58,
+      "rationale": "Estimated success probability 0.28; conditional utility 0.65; action-cost penalty 0.075; expected failure-harm penalty 0.027, yielding expected gain approximately 0.08."
+    },
+    "unique-material::mb-log-kvrh-07543::sequential-v2::base": {
+      "p_positive_gain": 0.24,
+      "expected_gain": 0.0921,
+      "p_success": 0.24,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.62,
+      "rationale": "Sparse evidence supports only a modest probability that the candidate is both high-performance and chemically unique. Conditional scientific utility is substantial if confirmed, while screening is moderately costly and has low irreversible-failure harm."
+    },
+    "unique-material::mb-log-kvrh-07704::sequential-v2::base": {
+      "p_positive_gain": 0.38,
+      "expected_gain": 0.1473,
+      "p_success": 0.42,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.42,
+      "rationale": "Sparse evidence supports only moderate success probability for simultaneously high performance and chemical uniqueness; conditional utility is substantial, while the visible action cost and moderate irreversible-failure exposure reduce net gain."
+    },
+    "unique-material::mb-log-kvrh-07974::sequential-v2::base": {
+      "p_positive_gain": 0.12,
+      "expected_gain": -0.103,
+      "p_success": 0.13,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.68,
+      "rationale": "0.13*0.60 - 0.1500*0.50 - 0.2500*0.87*0.49 = -0.1036"
+    },
+    "unique-material::mb-log-kvrh-08315::sequential-v2::base": {
+      "p_positive_gain": 0.33,
+      "expected_gain": 0.1555,
+      "p_success": 0.38,
+      "expected_normalized_utility": 0.68,
+      "assessment_confidence": 0.48,
+      "rationale": "Sparse pre-action evidence supports only a moderate chance that Tb2 Mg1 is both high-performing and chemically unique. Conditional scientific value could be substantial, but the action cost and moderate irreversibility create a meaningful downside if screening fails or the candidate is uninformative."
+    },
+    "unique-material::mb-log-kvrh-08321::sequential-v2::base": {
+      "p_positive_gain": 0.4,
+      "expected_gain": 0.1225,
+      "p_success": 0.4,
+      "expected_normalized_utility": 0.55,
+      "assessment_confidence": 0.58,
+      "rationale": "Sparse evidence supports moderate potential utility but substantial uncertainty about both high bulk modulus and chemical uniqueness; cost and failure-harm penalties reduce expected net gain."
+    },
+    "unique-material::mb-log-kvrh-09135::sequential-v2::base": {
+      "p_positive_gain": 0.22,
+      "expected_gain": 0.0608,
+      "p_success": 0.22,
+      "expected_normalized_utility": 0.165,
+      "assessment_confidence": 0.43,
+      "rationale": "Estimated success probability 0.22, conditional normalized scientific utility 0.75, normalized action-cost penalty 0.075, and modest failure harm of 0.15; posterior expected strict gain is therefore slightly positive but uncertain."
+    },
+    "unique-material::mb-log-kvrh-09454::sequential-v2::base": {
+      "p_positive_gain": 0.35,
+      "expected_gain": 0.054,
+      "p_success": 0.35,
+      "expected_normalized_utility": 0.6,
+      "assessment_confidence": 0.46,
+      "rationale": "Sparse evidence supports chemical distinctiveness but does not establish high bulk modulus; moderate screening success probability, with a modest cost and partially reversible downside."
+    },
+    "unique-material::mb-log-kvrh-09525::sequential-v2::base": {
+      "p_positive_gain": 0.38,
+      "expected_gain": 0.187,
+      "p_success": 0.38,
+      "expected_normalized_utility": 0.75,
+      "assessment_confidence": 0.52,
+      "rationale": "Sparse evidence supports a moderate chance that Zr6N8 meets both high-bulk-modulus and uniqueness criteria; screening has moderate reversibility, so failure harm is estimated as low."
+    },
+    "unique-material::mb-log-kvrh-09660::sequential-v2::base": {
+      "p_positive_gain": 0.22,
+      "expected_gain": -0.0141,
+      "p_success": 0.22,
+      "expected_normalized_utility": 0.72,
+      "assessment_confidence": 0.42,
+      "rationale": "Sparse evidence supports chemical distinctiveness but does not establish high bulk modulus; the Sn-Pb composition makes performance success uncertain, while moderate reversibility limits but does not eliminate failure harm."
+    },
+    "unique-material::mb-log-kvrh-09690::sequential-v2::base": {
+      "p_positive_gain": 0.26,
+      "expected_gain": -0.026,
+      "p_success": 0.27,
+      "expected_normalized_utility": 0.14,
+      "assessment_confidence": 0.7,
+      "rationale": "Sparse pre-action evidence supports moderate chemical novelty but provides no quantitative elasticity result; the Se-containing tetragonal composition gives only a modest prior probability of simultaneously achieving high bulk modulus and uniqueness. Expected scientific utility is outweighed slightly by the fixed action cost and failure harm."
+    },
+    "unique-material::mb-log-kvrh-09764::sequential-v2::base": {
+      "p_positive_gain": 0.3,
+      "expected_gain": 0.0325,
+      "p_success": 0.3,
+      "expected_normalized_utility": 0.65,
+      "assessment_confidence": 0.56,
+      "rationale": "Sparse evidence supports chemical distinctiveness but provides no direct bulk-modulus result, so success is uncertain; the moderate action cost and partial irreversibility leave only a small positive expected net gain."
+    },
+    "unique-material::mb-log-kvrh-10529::sequential-v2::base": {
+      "p_positive_gain": 0.2,
+      "expected_gain": -0.035,
+      "p_success": 0.2,
+      "expected_normalized_utility": 0.7,
+      "assessment_confidence": 0.58,
+      "rationale": "The unusual quaternary composition supports chemical uniqueness, but the presence of multiple soft halides makes high bulk modulus uncertain. I estimate a 0.20 probability of satisfying both screening objectives. Conditional scientific utility is moderate-high if successful, while the visible cost and partial reversibility impose a negative expected penalty on unsuccessful screening."
+    }
+  }
+}

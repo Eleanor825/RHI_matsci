@@ -1,0 +1,150 @@
+{
+  "aggregate": {
+    "acquisition_fraction": {
+      "maximum": 0.20462576292964985,
+      "mean": 0.15065852875040153,
+      "median": 0.1792483135239319,
+      "minimum": 0.07934468358496627,
+      "population_std": 0.05067065758196188
+    },
+    "coverage": {
+      "maximum": 0.015097976228718278,
+      "mean": 0.0030195952457436554,
+      "median": 0.0,
+      "minimum": 0.0,
+      "population_std": 0.006039190491487311
+    },
+    "delta_vs_no_source": {
+      "maximum": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "population_std": 0.0
+    },
+    "delta_vs_static": {
+      "maximum": 0.0004544482126606259,
+      "mean": -0.00013461630028830526,
+      "median": -0.0002010921940250562,
+      "minimum": -0.0004092515258592997,
+      "population_std": 0.00030904448393308893
+    },
+    "population_net_gain": {
+      "maximum": 0.0004544482126606259,
+      "mean": -0.00013461630028830526,
+      "median": -0.0002010921940250562,
+      "minimum": -0.0004092515258592997,
+      "population_std": 0.00030904448393308893
+    },
+    "selected_mean_gain": {
+      "maximum": 0.055206325234309114,
+      "mean": 0.011041265046861823,
+      "median": 0.0,
+      "minimum": 0.0,
+      "population_std": 0.022082530093723646
+    },
+    "selective_risk": {
+      "maximum": 0.0851063829787234,
+      "mean": 0.01702127659574468,
+      "median": 0.0,
+      "minimum": 0.0,
+      "population_std": 0.03404255319148936
+    }
+  },
+  "confirmatory_criteria": {
+    "audit_pass_seeds": 5,
+    "beats_no_source_seeds": 0,
+    "h10_confirmatory_pass": false,
+    "nonzero_coverage_seeds": 1,
+    "positive_mean_delta_vs_no_source": false,
+    "positive_mean_delta_vs_static": false,
+    "positive_population_net_gain_seeds": 1,
+    "positive_selected_gain_seeds": 1,
+    "risk_at_most_0.20_seeds": 5
+  },
+  "experiment": "h10_real_scientific_tools_five_seeds",
+  "no_source_ablation": "task_sparse_tool_margin_continuous_mean",
+  "paired_inference": {
+    "source_bootstrap_mean_ci_95": [
+      0.0,
+      0.0
+    ],
+    "source_wilcoxon": {
+      "pvalue": 1.0,
+      "statistic": 0.0
+    },
+    "static_bootstrap_mean_ci_95": [
+      -0.0003489881143591391,
+      0.00016923172875281628
+    ],
+    "static_wilcoxon": {
+      "pvalue": 0.625,
+      "statistic": 5.0
+    }
+  },
+  "primary_method": "task_sparse_tool_margin_continuous_sd_worth",
+  "rows": [
+    {
+      "acquisition_fraction": 0.1792483135239319,
+      "audit_passed": true,
+      "coverage": 0.0,
+      "delta_vs_no_source": 0.0,
+      "delta_vs_static": -0.0003584966270478638,
+      "population_net_gain": -0.0003584966270478638,
+      "seed": 1,
+      "selected_mean_gain": 0.0,
+      "selected_tasks": [],
+      "selective_risk": 0.0
+    },
+    {
+      "acquisition_fraction": 0.18952778670093157,
+      "audit_passed": true,
+      "coverage": 0.015097976228718278,
+      "delta_vs_no_source": 0.0,
+      "delta_vs_static": 0.0004544482126606259,
+      "population_net_gain": 0.0004544482126606259,
+      "seed": 7,
+      "selected_mean_gain": 0.055206325234309114,
+      "selected_tasks": [
+        "matbench_pairwise"
+      ],
+      "selective_risk": 0.0851063829787234
+    },
+    {
+      "acquisition_fraction": 0.20462576292964985,
+      "audit_passed": true,
+      "coverage": 0.0,
+      "delta_vs_no_source": 0.0,
+      "delta_vs_static": -0.0004092515258592997,
+      "population_net_gain": -0.0004092515258592997,
+      "seed": 13,
+      "selected_mean_gain": 0.0,
+      "selected_tasks": [],
+      "selective_risk": 0.0
+    },
+    {
+      "acquisition_fraction": 0.1005460970125281,
+      "audit_passed": true,
+      "coverage": 0.0,
+      "delta_vs_no_source": 0.0,
+      "delta_vs_static": -0.0002010921940250562,
+      "population_net_gain": -0.0002010921940250562,
+      "seed": 21,
+      "selected_mean_gain": 0.0,
+      "selected_tasks": [],
+      "selective_risk": 0.0
+    },
+    {
+      "acquisition_fraction": 0.07934468358496627,
+      "audit_passed": true,
+      "coverage": 0.0,
+      "delta_vs_no_source": 0.0,
+      "delta_vs_static": -0.00015868936716993253,
+      "population_net_gain": -0.00015868936716993253,
+      "seed": 42,
+      "selected_mean_gain": 0.0,
+      "selected_tasks": [],
+      "selective_risk": 0.0
+    }
+  ],
+  "static_baseline": "base_mean"
+}

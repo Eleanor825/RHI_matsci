@@ -1,0 +1,12 @@
+[
+  {
+    "record_id": "matbench-pairwise::b7f41b33d5f2",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::b0f8fa2357d7",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  }
+]

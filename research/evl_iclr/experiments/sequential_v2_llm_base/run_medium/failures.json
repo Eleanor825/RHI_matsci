@@ -1,0 +1,112 @@
+[
+  {
+    "record_id": "matbench-pairwise::b24348f8cc6c",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "matbench-pairwise::18415bae0084",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "matbench-pairwise::33a77f1243da",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "matbench-pairwise::a7cf1202138e",
+    "model": "gpt-5.6-sol",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "matbench-pairwise::a5454c47dadc",
+    "model": "gpt-5.6-sol",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "matbench-pairwise::aa5f3d36d58d",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-01565",
+    "model": "gpt-5.6-sol",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "matbench-pairwise::ff522f504429",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "matbench-pairwise::a7cf1202138e",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-05434",
+    "model": "gpt-5.6-sol",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-08652",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-02693",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-01352",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-00510",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-02731",
+    "model": "gpt-5.6-sol",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-03423",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-02291",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-04930",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::28c8c0be6b77",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::80b956172500",
+    "model": "gpt-5.6-sol",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::7e48177156a1",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::f70cde216e95",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  }
+]

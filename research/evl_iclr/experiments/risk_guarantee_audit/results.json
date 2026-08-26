@@ -1,0 +1,45 @@
+{
+  "assumptions": [
+    "harness and selected-set scoring frozen before evaluation",
+    "selection depends only on visible covariates and model outputs, not outcomes",
+    "selected losses are independent conditional on the visible batch",
+    "losses lie in [0,1]"
+  ],
+  "claim": "one-sided bound on average conditional risk of the outcome-blind selected batch; not per-action conditional coverage",
+  "results": [
+    {
+      "alpha": 0.1,
+      "certified": true,
+      "empirical_risk": 0.007874015748031496,
+      "errors": 2,
+      "experiment": "h5_full_acceptance",
+      "gain": 195.78859310716396,
+      "method": "learned_portfolio_kg_mean",
+      "outcome_blind_hoeffding_upper_95": 0.08466666366899188,
+      "selected_count": 254
+    },
+    {
+      "alpha": 0.1,
+      "certified": true,
+      "empirical_risk": 0.0,
+      "errors": 0,
+      "experiment": "h23_primary",
+      "gain": 0.0006919147162038,
+      "method": "source_voi_expected",
+      "outcome_blind_hoeffding_upper_95": 0.06150195317537771,
+      "selected_count": 396
+    },
+    {
+      "alpha": 0.1,
+      "certified": true,
+      "empirical_risk": 0.0,
+      "errors": 0,
+      "experiment": "h23_evolved",
+      "gain": 0.000605460383246682,
+      "method": "fixed_sequence_evolved",
+      "outcome_blind_hoeffding_upper_95": 0.07101633844298416,
+      "selected_count": 297
+    }
+  ],
+  "schema_version": "outcome-blind-selected-batch-risk-v1"
+}

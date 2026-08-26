@@ -1,0 +1,401 @@
+{
+  "alpha": 0.1,
+  "baselines": {
+    "base_numeric": {
+      "budget": 82,
+      "coverage": 0.10110974106041924,
+      "errors": 55,
+      "evidence_cost_penalty": 0.0,
+      "risk_upper_bound_95": 0.7563713415151787,
+      "selected": 82,
+      "selected_total_strict_gain": 4.8370201696041795,
+      "selective_risk": 0.6707317073170732,
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 332,
+          "positive_count": 23,
+          "selected": 63,
+          "selected_gain": -8.39540816326531,
+          "selective_risk": 0.8412698412698413
+        },
+        "extreme_properties": {
+          "count": 199,
+          "positive_count": 7,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 280,
+          "positive_count": 186,
+          "selected": 19,
+          "selected_gain": 13.23242833286947,
+          "selective_risk": 0.10526315789473684
+        }
+      },
+      "trajectory_total_strict_gain": 4.8370201696041795
+    },
+    "real_tool_numeric": {
+      "budget": 82,
+      "coverage": 0.10110974106041924,
+      "errors": 4,
+      "evidence_cost_penalty": 3.0412500000000207,
+      "risk_upper_bound_95": 0.10815610507946984,
+      "selected": 82,
+      "selected_total_strict_gain": 62.73506509150338,
+      "selective_risk": 0.04878048780487805,
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 332,
+          "positive_count": 23,
+          "selected": 6,
+          "selected_gain": 0.4930083144368858,
+          "selective_risk": 0.6666666666666666
+        },
+        "extreme_properties": {
+          "count": 199,
+          "positive_count": 7,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 280,
+          "positive_count": 186,
+          "selected": 76,
+          "selected_gain": 62.2420567770665,
+          "selective_risk": 0.0
+        }
+      },
+      "trajectory_total_strict_gain": 59.69381509150336
+    },
+    "static_reliability": {
+      "budget": 82,
+      "coverage": 0.10110974106041924,
+      "errors": 70,
+      "evidence_cost_penalty": 0.0,
+      "risk_upper_bound_95": 0.9133334492013192,
+      "selected": 82,
+      "selected_total_strict_gain": -12.19173433099002,
+      "selective_risk": 0.8536585365853658,
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 332,
+          "positive_count": 23,
+          "selected": 81,
+          "selected_gain": -13.012868480725615,
+          "selective_risk": 0.8641975308641975
+        },
+        "extreme_properties": {
+          "count": 199,
+          "positive_count": 7,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 280,
+          "positive_count": 186,
+          "selected": 1,
+          "selected_gain": 0.821134149735597,
+          "selective_risk": 0.0
+        }
+      },
+      "trajectory_total_strict_gain": -12.19173433099002
+    }
+  },
+  "budget_fraction": 0.1,
+  "claim_boundary": "Fresh fingerprint-disjoint external test; development trajectories are used only for fitting and calibration.",
+  "evaluation_mode": "fresh_external_test",
+  "input": "/Users/huan/Desktop/harness_matsci/research/evl_iclr/data/live_matbot_tool_trajectories_feedback_all/trajectories.jsonl",
+  "learned_global": {
+    "budget": 82,
+    "coverage": 0.10110974106041924,
+    "errors": 0,
+    "evidence_cost_penalty": 3.0412500000000207,
+    "risk_upper_bound_95": 0.03587403171067115,
+    "selected": 82,
+    "selected_total_strict_gain": 66.98171500223305,
+    "selective_risk": 0.0,
+    "task_breakdown": {
+      "discover_unique": {
+        "count": 332,
+        "positive_count": 23,
+        "selected": 2,
+        "selected_gain": 1.790287226001512,
+        "selective_risk": 0.0
+      },
+      "extreme_properties": {
+        "count": 199,
+        "positive_count": 7,
+        "selected": 0,
+        "selected_gain": 0,
+        "selective_risk": 0.0
+      },
+      "matbench_pairwise": {
+        "count": 280,
+        "positive_count": 186,
+        "selected": 80,
+        "selected_gain": 65.19142777623154,
+        "selective_risk": 0.0
+      }
+    },
+    "trajectory_total_strict_gain": 63.940465002233026
+  },
+  "learned_task_balanced_stress_test": {
+    "budget": 82,
+    "coverage": 0.06781750924784218,
+    "errors": 12,
+    "evidence_cost_penalty": 3.0412500000000207,
+    "risk_upper_bound_95": 0.3294004906689346,
+    "selected": 55,
+    "selected_total_strict_gain": 34.31031608208556,
+    "selective_risk": 0.21818181818181817,
+    "task_breakdown": {
+      "discover_unique": {
+        "count": 332,
+        "positive_count": 23,
+        "selected": 16,
+        "selected_gain": 4.4807256235827655,
+        "selective_risk": 0.5
+      },
+      "extreme_properties": {
+        "count": 199,
+        "positive_count": 7,
+        "selected": 11,
+        "selected_gain": 4.636400923295454,
+        "selective_risk": 0.36363636363636365
+      },
+      "matbench_pairwise": {
+        "count": 280,
+        "positive_count": 186,
+        "selected": 28,
+        "selected_gain": 25.19318953520735,
+        "selective_risk": 0.0
+      }
+    },
+    "trajectory_total_strict_gain": 31.269066082085544
+  },
+  "method": {
+    "calibration": "task-specific Platt scaling plus one-sided normalized split conformal gain",
+    "model": "task-specific ExtraTrees gain and success heads",
+    "output": "numeric probability, expected gain, variance, and conformal lower gain; no route",
+    "target": "strict realized execution gain after observing actually executed tool evidence"
+  },
+  "schema_version": "learned-live-matbot-harness-v1",
+  "sizes": {
+    "calibration": 902,
+    "evaluation": 811,
+    "train": 2699
+  },
+  "task_models": {
+    "discover_unique": {
+      "calibration_positive_rate": 0.07317073170731707,
+      "conformal_quantile": 0.7116837457617304,
+      "feature_count": 18,
+      "residual_scale": 0.18251484336277504,
+      "top_feature_importances": [
+        [
+          "tool::predicted_performance",
+          0.659931069303392
+        ],
+        [
+          "tool::performance_standard_deviation",
+          0.08793637555962905
+        ],
+        [
+          "external::ood_score",
+          0.07865536597146627
+        ],
+        [
+          "tool::predictive_standard_deviation",
+          0.05608477021739763
+        ],
+        [
+          "tool::estimated_discovery_utility",
+          0.03193830244584568
+        ],
+        [
+          "tool::estimated_utility",
+          0.030906428986183208
+        ],
+        [
+          "tool::positive_probability",
+          0.02509014243679285
+        ],
+        [
+          "tool::nearest_training_distance",
+          0.017967971928316447
+        ],
+        [
+          "tool::composition_structure_novelty",
+          0.011489573150976921
+        ],
+        [
+          "cost::normalized_cost",
+          0.0
+        ],
+        [
+          "cost::reversibility",
+          0.0
+        ],
+        [
+          "external::evidence_conflict",
+          0.0
+        ],
+        [
+          "external::evidence_support",
+          0.0
+        ],
+        [
+          "external::source_reliability",
+          0.0
+        ],
+        [
+          "external::source_risk",
+          0.0
+        ]
+      ],
+      "train_positive_rate": 0.10128055878928988
+    },
+    "extreme_properties": {
+      "calibration_positive_rate": 0.0,
+      "conformal_quantile": -5.836485476777079e-14,
+      "feature_count": 36,
+      "residual_scale": 0.05801745311592181,
+      "top_feature_importances": [
+        [
+          "tool::six_descriptor_hit_fraction",
+          0.24938852348687543
+        ],
+        [
+          "tool::estimated_utility",
+          0.22113759232072433
+        ],
+        [
+          "tool::positive_probability",
+          0.13953416433600568
+        ],
+        [
+          "tool::mean_clipped_error_ratio",
+          0.08389459027223689
+        ],
+        [
+          "external::ood_score",
+          0.035206467100589195
+        ],
+        [
+          "tool::candidate_HBA",
+          0.0321271209036243
+        ],
+        [
+          "tool::target_TPSA",
+          0.03073950553192664
+        ],
+        [
+          "tool::candidate_logP",
+          0.02865836170084805
+        ],
+        [
+          "tool::target_HBA",
+          0.025101720024265372
+        ],
+        [
+          "tool::candidate_TPSA",
+          0.02251044742399294
+        ],
+        [
+          "tool::target_QED",
+          0.021354836821073274
+        ],
+        [
+          "tool::target_logP",
+          0.019752570799301795
+        ],
+        [
+          "tool::error_ratio_HBA",
+          0.01628028866043474
+        ],
+        [
+          "tool::predictive_standard_deviation",
+          0.013538840187258283
+        ],
+        [
+          "tool::candidate_QED",
+          0.01162198384315824
+        ]
+      ],
+      "train_positive_rate": 0.015151515151515152
+    },
+    "matbench_pairwise": {
+      "calibration_positive_rate": 0.6699346405228758,
+      "conformal_quantile": 0.7159806816098084,
+      "feature_count": 16,
+      "residual_scale": 0.10907173988316951,
+      "top_feature_importances": [
+        [
+          "tool::positive_probability",
+          0.6082099007546644
+        ],
+        [
+          "tool::estimated_utility",
+          0.17564930344087507
+        ],
+        [
+          "tool::predicted_margin",
+          0.13575356643856523
+        ],
+        [
+          "tool::alternative_property_mean",
+          0.030448216158304002
+        ],
+        [
+          "internal::estimate_agreement",
+          0.009704481442927673
+        ],
+        [
+          "internal::perturbation_stability",
+          0.009660496351229633
+        ],
+        [
+          "tool::chosen_property_mean",
+          0.009056101013486473
+        ],
+        [
+          "tool::predictive_standard_deviation",
+          0.008358477167021542
+        ],
+        [
+          "external::ood_score",
+          0.0055281749499071445
+        ],
+        [
+          "external::evidence_support",
+          0.004014321639931915
+        ],
+        [
+          "internal::verbal_confidence",
+          0.0036169606430870656
+        ],
+        [
+          "cost::normalized_cost",
+          0.0
+        ],
+        [
+          "cost::reversibility",
+          0.0
+        ],
+        [
+          "external::evidence_conflict",
+          0.0
+        ],
+        [
+          "external::source_reliability",
+          0.0
+        ]
+      ],
+      "train_positive_rate": 0.6528384279475983
+    }
+  },
+  "test_input": "/Users/huan/Desktop/harness_matsci/research/evl_iclr/data/round3_live_tool/live_test_811/trajectories.jsonl"
+}

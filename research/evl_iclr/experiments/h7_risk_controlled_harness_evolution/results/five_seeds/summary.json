@@ -1,0 +1,147 @@
+{
+  "experiment": "h7_risk_controlled_recursive_harness_evolution",
+  "rows": [
+    {
+      "seed": 1,
+      "selected_harness": "task_sparse_continuous_mean",
+      "coverage": 0.015419209765499518,
+      "selective_risk": 0.0,
+      "population_net_gain": 0.0005375353202941022,
+      "selected_mean_gain": 0.06981973858490709,
+      "acquisition_fraction": 0.2695149373594603,
+      "accepted_mutations": [
+        "sparse_tool_probability",
+        "task_sparse_continuous_mean"
+      ]
+    },
+    {
+      "seed": 7,
+      "selected_harness": "task_sparse_continuous_sd_worth",
+      "coverage": 0.014134275618374558,
+      "selective_risk": 0.0,
+      "population_net_gain": 0.0006769379668873137,
+      "selected_mean_gain": 0.06298427024818654,
+      "acquisition_fraction": 0.10664953421137166,
+      "accepted_mutations": [
+        "sparse_verification_mean",
+        "task_sparse_continuous_mean",
+        "task_sparse_continuous_sd_worth"
+      ]
+    },
+    {
+      "seed": 13,
+      "selected_harness": "sparse_verification_mean",
+      "coverage": 0.023450048185030516,
+      "selective_risk": 0.0136986301369863,
+      "population_net_gain": 0.01351132577857049,
+      "selected_mean_gain": 0.6614624266943827,
+      "acquisition_fraction": 1.0,
+      "accepted_mutations": [
+        "sparse_verification_mean"
+      ]
+    },
+    {
+      "seed": 21,
+      "selected_harness": "task_sparse_continuous_mean",
+      "coverage": 0.008994539029874718,
+      "selective_risk": 0.07142857142857142,
+      "population_net_gain": 0.00022389519043715094,
+      "selected_mean_gain": 0.06524949027967325,
+      "acquisition_fraction": 0.1814969482814006,
+      "accepted_mutations": [
+        "task_sparse_continuous_mean"
+      ]
+    },
+    {
+      "seed": 42,
+      "selected_harness": "sparse_tool_probability",
+      "coverage": 0.009637006103437198,
+      "selective_risk": 0.06666666666666667,
+      "population_net_gain": 0.00026438184327993075,
+      "selected_mean_gain": 0.03456735593768081,
+      "acquisition_fraction": 0.03437198843559268,
+      "accepted_mutations": [
+        "sparse_verification_mean",
+        "sparse_tool_probability"
+      ]
+    }
+  ],
+  "selection_frequency": {
+    "sparse_tool_probability": 1,
+    "sparse_verification_mean": 1,
+    "task_sparse_continuous_mean": 2,
+    "task_sparse_continuous_sd_worth": 1
+  },
+  "aggregate": {
+    "coverage": {
+      "mean": 0.014327015740443302,
+      "median": 0.014134275618374558,
+      "population_std": 0.005194059217836874,
+      "minimum": 0.008994539029874718,
+      "maximum": 0.023450048185030516
+    },
+    "selective_risk": {
+      "mean": 0.03035877364644488,
+      "median": 0.0136986301369863,
+      "population_std": 0.032018313640229536,
+      "minimum": 0.0,
+      "maximum": 0.07142857142857142
+    },
+    "population_net_gain": {
+      "mean": 0.0030428152198937975,
+      "median": 0.0005375353202941022,
+      "population_std": 0.005236974661567706,
+      "minimum": 0.00022389519043715094,
+      "maximum": 0.01351132577857049
+    },
+    "selected_mean_gain": {
+      "mean": 0.17881665634896607,
+      "median": 0.06524949027967325,
+      "population_std": 0.24164013377845217,
+      "minimum": 0.03456735593768081,
+      "maximum": 0.6614624266943827
+    },
+    "acquisition_fraction": {
+      "mean": 0.318406681657565,
+      "median": 0.1814969482814006,
+      "population_std": 0.3496343592414637,
+      "minimum": 0.03437198843559268,
+      "maximum": 1.0
+    }
+  },
+  "fixed_candidate_summary": {
+    "base_mean": {
+      "mean_population_net_gain": 0.0,
+      "median_population_net_gain": 0.0,
+      "positive_seeds": 0
+    },
+    "sparse_verification_mean": {
+      "mean_population_net_gain": 0.0028053877306483317,
+      "median_population_net_gain": 0.00024779396990986933,
+      "positive_seeds": 3
+    },
+    "sparse_tool_probability": {
+      "mean_population_net_gain": -0.0004458139233286414,
+      "median_population_net_gain": -0.00022036620623193062,
+      "positive_seeds": 1
+    },
+    "task_sparse_continuous_mean": {
+      "mean_population_net_gain": 4.926689252870441e-05,
+      "median_population_net_gain": 0.0003239955453847119,
+      "positive_seeds": 4
+    },
+    "task_sparse_continuous_sd_worth": {
+      "mean_population_net_gain": 0.0014021733641655005,
+      "median_population_net_gain": 0.0006538700502608345,
+      "positive_seeds": 5
+    }
+  },
+  "confirmatory_criteria": {
+    "nonzero_coverage_seeds": 5,
+    "risk_at_most_0.20_seeds": 5,
+    "positive_net_gain_seeds": 5,
+    "mean_net_gain_above_base": true,
+    "median_net_gain_above_base": true,
+    "h7_confirmatory_pass": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "consumed_folds_reused": true,
+  "development_only": true,
+  "methods": {
+    "external_variance": {
+      "certified_folds": 1,
+      "fold_gains": [
+        0.001166403803390823,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_deployed_test_gain": 0.0002332807606781646
+    },
+    "no_source_voi_expected": {
+      "certified_folds": 5,
+      "fold_gains": [
+        0.0010034033506313392,
+        0.0007682862840953177,
+        0.0020825088611876037,
+        0.0008309356643660701,
+        0.0017317649892123635
+      ],
+      "mean_deployed_test_gain": 0.0012833798298985389
+    },
+    "no_source_voi_probability": {
+      "certified_folds": 5,
+      "fold_gains": [
+        0.0010011527506326413,
+        0.0006878985399386485,
+        0.002038543856521876,
+        0.0008673489552172307,
+        0.0017875732339074249
+      ],
+      "mean_deployed_test_gain": 0.0012765034672435644
+    },
+    "source_voi_expected": {
+      "certified_folds": 5,
+      "fold_gains": [
+        0.0010167485815853069,
+        0.0008078789601368285,
+        0.0018490482636682592,
+        0.0011979222735385615,
+        0.001675308896372203
+      ],
+      "mean_deployed_test_gain": 0.0013093813950602318
+    },
+    "source_voi_probability": {
+      "certified_folds": 5,
+      "fold_gains": [
+        0.0010476358230060599,
+        0.0008078789601368285,
+        0.0018505492502193842,
+        0.0009705451791779831,
+        0.0017427713658513828
+      ],
+      "mean_deployed_test_gain": 0.0012838761156783276
+    }
+  }
+}

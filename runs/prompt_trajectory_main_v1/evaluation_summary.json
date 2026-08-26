@@ -1,0 +1,56 @@
+{
+  "overall": {
+    "n_trajectories": 900,
+    "execute_rate": 0.36666666666666664,
+    "executed_success_rate": 0.1606060606060606,
+    "executed_selective_risk": 0.8393939393939394,
+    "mean_realized_utility": 0.06243689393939394,
+    "mean_net_utility_proxy": -0.05185647222222222,
+    "mean_steps": 1.8877777777777778,
+    "terminal_actions": {
+      "abstain": 270,
+      "ask_expert": 300,
+      "execute_candidate": 330
+    }
+  },
+  "by_task": {
+    "discover_unique": {
+      "n_trajectories": 300,
+      "execute_rate": 0.9966666666666667,
+      "executed_success_rate": 0.09698996655518395,
+      "executed_selective_risk": 0.903010033444816,
+      "mean_realized_utility": 0.04841500334448161,
+      "mean_net_utility_proxy": -0.02649638,
+      "mean_steps": 1.6633333333333333,
+      "terminal_actions": {
+        "abstain": 1,
+        "execute_candidate": 299
+      }
+    },
+    "extreme_properties": {
+      "n_trajectories": 300,
+      "execute_rate": 0.0,
+      "executed_success_rate": 0.0,
+      "executed_selective_risk": 0.0,
+      "mean_realized_utility": 0.0,
+      "mean_net_utility_proxy": -0.1464,
+      "mean_steps": 2,
+      "terminal_actions": {
+        "ask_expert": 300
+      }
+    },
+    "matbench_pairwise": {
+      "n_trajectories": 300,
+      "execute_rate": 0.10333333333333333,
+      "executed_success_rate": 0.7741935483870968,
+      "executed_selective_risk": 0.22580645161290325,
+      "mean_realized_utility": 0.19768029032258064,
+      "mean_net_utility_proxy": 0.017326963333333334,
+      "mean_steps": 2,
+      "terminal_actions": {
+        "abstain": 269,
+        "execute_candidate": 31
+      }
+    }
+  }
+}

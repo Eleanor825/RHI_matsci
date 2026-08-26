@@ -1,0 +1,174 @@
+{
+  "active_folds": 3,
+  "audit_pass_folds": 4,
+  "confirmatory_pass": false,
+  "experiment": "h13_powered_acceptance_confirmatory",
+  "folds": 4,
+  "mean_baseline_gains": {
+    "base_ensemble_lcb": -0.00013779337212441783,
+    "base_evidence_heuristic": 0.0,
+    "base_mean": -0.00013779337212441783,
+    "base_verbal_confidence": 0.0
+  },
+  "mean_coverage": 0.011612692151359549,
+  "mean_delta_no_source": 7.097922225227015e-06,
+  "mean_no_source_gain": 0.00041893226558427826,
+  "mean_population_net_gain": 0.0004260301878095053,
+  "mean_risk": 0.06427484787018256,
+  "nonzero_coverage_folds": 3,
+  "positive_gain_folds": 3,
+  "risk_at_most_0.20_folds": 4,
+  "rows": [
+    {
+      "audit": true,
+      "baseline_gains": {
+        "base_ensemble_lcb": -0.0005511734884976713,
+        "base_evidence_heuristic": 0.0,
+        "base_mean": -0.0005511734884976713,
+        "base_verbal_confidence": 0.0
+      },
+      "coverage": 0.0,
+      "delta_no_source": 0.0,
+      "fold": 1,
+      "no_source_gain": 0.0,
+      "policy": "no_op",
+      "population_net_gain": 0.0,
+      "risk": 0.0,
+      "selected_gain": 0.0,
+      "tasks_selected": [],
+      "test_groups_by_task": {
+        "discover_unique": [
+          "discover::matbench_log_kvrh::tetragonal"
+        ],
+        "extreme_properties": [
+          "rlcc_extreme::C2",
+          "rlcc_extreme::C5"
+        ],
+        "matbench_pairwise": [
+          "matbench_pairwise::cross::hexagonal_vs_trigonal",
+          "matbench_pairwise::cross::monoclinic_vs_trigonal",
+          "matbench_pairwise::cross::triclinic_vs_trigonal",
+          "matbench_pairwise::same::cubic_vs_cubic",
+          "matbench_pairwise::same::tetragonal_vs_tetragonal"
+        ]
+      }
+    },
+    {
+      "audit": true,
+      "baseline_gains": {
+        "base_ensemble_lcb": 0.0,
+        "base_evidence_heuristic": 0.0,
+        "base_mean": 0.0,
+        "base_verbal_confidence": 0.0
+      },
+      "coverage": 0.009201623815967524,
+      "delta_no_source": 0.0,
+      "fold": 2,
+      "no_source_gain": 0.0003864976345631089,
+      "policy": "activate_frozen_contract",
+      "population_net_gain": 0.0003864976345631089,
+      "risk": 0.058823529411764705,
+      "selected_gain": 0.07112084587384375,
+      "tasks_selected": [
+        "matbench_pairwise"
+      ],
+      "test_groups_by_task": {
+        "discover_unique": [
+          "discover::matbench_log_kvrh::orthorhombic"
+        ],
+        "extreme_properties": [
+          "rlcc_extreme::C1",
+          "rlcc_extreme::C3"
+        ],
+        "matbench_pairwise": [
+          "matbench_pairwise::cross::cubic_vs_orthorhombic",
+          "matbench_pairwise::cross::hexagonal_vs_tetragonal",
+          "matbench_pairwise::cross::monoclinic_vs_triclinic",
+          "matbench_pairwise::cross::orthorhombic_vs_trigonal",
+          "matbench_pairwise::cross::tetragonal_vs_triclinic",
+          "matbench_pairwise::same::trigonal_vs_trigonal"
+        ]
+      }
+    },
+    {
+      "audit": true,
+      "baseline_gains": {
+        "base_ensemble_lcb": 0.0,
+        "base_evidence_heuristic": 0.0,
+        "base_mean": 0.0,
+        "base_verbal_confidence": 0.0
+      },
+      "coverage": 0.02450014080540693,
+      "delta_no_source": 0.0,
+      "fold": 3,
+      "no_source_gain": 0.000802565797403982,
+      "policy": "activate_frozen_contract",
+      "population_net_gain": 0.000802565797403982,
+      "risk": 0.11494252873563218,
+      "selected_gain": 0.05202196720208667,
+      "tasks_selected": [
+        "matbench_pairwise"
+      ],
+      "test_groups_by_task": {
+        "discover_unique": [
+          "discover::matbench_log_kvrh::hexagonal",
+          "discover::matbench_log_kvrh::triclinic"
+        ],
+        "extreme_properties": [
+          "rlcc_extreme::C7",
+          "rlcc_extreme::C9"
+        ],
+        "matbench_pairwise": [
+          "matbench_pairwise::cross::cubic_vs_hexagonal",
+          "matbench_pairwise::cross::cubic_vs_monoclinic",
+          "matbench_pairwise::cross::hexagonal_vs_monoclinic",
+          "matbench_pairwise::cross::monoclinic_vs_tetragonal",
+          "matbench_pairwise::cross::orthorhombic_vs_triclinic",
+          "matbench_pairwise::same::monoclinic_vs_monoclinic",
+          "matbench_pairwise::same::triclinic_vs_triclinic"
+        ]
+      }
+    },
+    {
+      "audit": true,
+      "baseline_gains": {
+        "base_ensemble_lcb": 0.0,
+        "base_evidence_heuristic": 0.0,
+        "base_mean": 0.0,
+        "base_verbal_confidence": 0.0
+      },
+      "coverage": 0.012749003984063745,
+      "delta_no_source": 2.839168890090806e-05,
+      "fold": 4,
+      "no_source_gain": 0.00048666563037002213,
+      "policy": "activate_frozen_contract",
+      "population_net_gain": 0.0005150573192709302,
+      "risk": 0.08333333333333333,
+      "selected_gain": 0.061108141813646925,
+      "tasks_selected": [
+        "matbench_pairwise"
+      ],
+      "test_groups_by_task": {
+        "discover_unique": [
+          "discover::matbench_log_kvrh::monoclinic",
+          "discover::matbench_log_kvrh::trigonal"
+        ],
+        "extreme_properties": [
+          "rlcc_extreme::C10",
+          "rlcc_extreme::C6"
+        ],
+        "matbench_pairwise": [
+          "matbench_pairwise::cross::cubic_vs_trigonal",
+          "matbench_pairwise::cross::hexagonal_vs_orthorhombic",
+          "matbench_pairwise::cross::orthorhombic_vs_tetragonal",
+          "matbench_pairwise::same::hexagonal_vs_hexagonal",
+          "matbench_pairwise::same::orthorhombic_vs_orthorhombic"
+        ]
+      }
+    }
+  ],
+  "source_wins": 1,
+  "tasks_selected": [
+    "matbench_pairwise"
+  ]
+}

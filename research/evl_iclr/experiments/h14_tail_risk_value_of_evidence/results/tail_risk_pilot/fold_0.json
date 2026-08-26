@@ -1,0 +1,856 @@
+{
+  "development_only": true,
+  "experiment": "h14_tail_risk_real_tool_ranking_pilot",
+  "fold": 0,
+  "methods": {
+    "no_source": {
+      "model": {
+        "beta": 0.1,
+        "gain_bounds": [
+          -1.4,
+          1.0
+        ],
+        "parameters_by_task": {
+          "discover_unique": {
+            "negative_gain": {
+              "base_variance": 9.564089848111266e-07,
+              "external_weight": 2.1269280110429727,
+              "internal_weight": 2.1269280110429727,
+              "mean_bias": -1.025585168317364,
+              "mean_slope": 0.006737946999085467
+            },
+            "positive_gain": {
+              "base_variance": 0.0006943153108041472,
+              "external_weight": 2.1269280110429727,
+              "internal_weight": 2.1269280110429727,
+              "mean_bias": 0.04659003000610373,
+              "mean_slope": 0.03479574450313608
+            },
+            "positive_probability": {
+              "base_variance": 0.08294770402817979,
+              "external_weight": 0.6931471805599453,
+              "internal_weight": 0.6931471805599453,
+              "mean_bias": -0.4748999823370117,
+              "mean_slope": 0.7980734040564212
+            }
+          },
+          "extreme_properties": {
+            "negative_gain": {
+              "base_variance": 0.08672671062741785,
+              "external_weight": 0.6931471805599453,
+              "internal_weight": 0.6931471805599453,
+              "mean_bias": -0.959876991483826,
+              "mean_slope": 0.006737946999085467
+            },
+            "positive_gain": {
+              "base_variance": 0.0007637897751835868,
+              "external_weight": 2.1269280110429727,
+              "internal_weight": 2.1269280110429727,
+              "mean_bias": 0.07068941003738177,
+              "mean_slope": 0.01440616341494189
+            },
+            "positive_probability": {
+              "base_variance": 0.7556890980383861,
+              "external_weight": 0.6931471805599453,
+              "internal_weight": 0.6931471805599453,
+              "mean_bias": -0.2748138313061253,
+              "mean_slope": 0.9272891428645672
+            }
+          },
+          "matbench_pairwise": {
+            "negative_gain": {
+              "base_variance": 0.03299867596422927,
+              "external_weight": 0.018149927917809738,
+              "internal_weight": 0.018149927917809738,
+              "mean_bias": -0.6013862871984694,
+              "mean_slope": 2.242615499681584
+            },
+            "positive_gain": {
+              "base_variance": 0.0006641572113365194,
+              "external_weight": 2.1269280110429727,
+              "internal_weight": 2.1269280110429727,
+              "mean_bias": 0.006320585682748358,
+              "mean_slope": 0.12806979849698075
+            },
+            "positive_probability": {
+              "base_variance": 0.00439509908533412,
+              "external_weight": 2.1269280110429727,
+              "internal_weight": 2.1269280110429727,
+              "mean_bias": -0.265519458073879,
+              "mean_slope": 0.9314778697429794
+            }
+          }
+        },
+        "tail_weight": 0.5,
+        "type": "source_decomposed_hurdle_gain_calibrator",
+        "uses_source_variance": false
+      },
+      "tasks": {
+        "discover_unique": {
+          "mean_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": -0.0008688446240937936,
+              "population_gain_before_tool_cost": -0.0008586065897963787,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": -0.16772879731672258
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": -0.002543781271044355,
+              "population_gain_before_tool_cost": -0.002523817104164396,
+              "precision": 0.717948717948718,
+              "selected_count": 39,
+              "selected_mean_gain": -0.25283470323000756
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": -0.0062038369572189256,
+              "population_gain_before_tool_cost": -0.006163908623459008,
+              "precision": 0.6666666666666666,
+              "selected_count": 78,
+              "selected_mean_gain": -0.30874860245967106
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": -0.0238118680255078,
+              "population_gain_before_tool_cost": -0.023712047191108004,
+              "precision": 0.5128205128205128,
+              "selected_count": 195,
+              "selected_mean_gain": -0.4750921455161998
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.06165583390739366,
+              "population_gain_before_tool_cost": -0.0614556803368792,
+              "precision": 0.3836317135549872,
+              "selected_count": 391,
+              "selected_mean_gain": -0.6140852764096855
+            }
+          },
+          "p_positive_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": -0.0008688446240937936,
+              "population_gain_before_tool_cost": -0.0008586065897963787,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": -0.16772879731672258
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": -0.002543781271044355,
+              "population_gain_before_tool_cost": -0.002523817104164396,
+              "precision": 0.717948717948718,
+              "selected_count": 39,
+              "selected_mean_gain": -0.25283470323000756
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": -0.0062038369572189256,
+              "population_gain_before_tool_cost": -0.006163908623459008,
+              "precision": 0.6666666666666666,
+              "selected_count": 78,
+              "selected_mean_gain": -0.30874860245967106
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": -0.0238118680255078,
+              "population_gain_before_tool_cost": -0.023712047191108004,
+              "precision": 0.5128205128205128,
+              "selected_count": 195,
+              "selected_mean_gain": -0.4750921455161998
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.06165583390739366,
+              "population_gain_before_tool_cost": -0.0614556803368792,
+              "precision": 0.3836317135549872,
+              "selected_count": 391,
+              "selected_mean_gain": -0.6140852764096855
+            }
+          },
+          "tail_risk_score": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": -0.0008688446240937936,
+              "population_gain_before_tool_cost": -0.0008586065897963787,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": -0.16772879731672258
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": -0.002543781271044355,
+              "population_gain_before_tool_cost": -0.002523817104164396,
+              "precision": 0.717948717948718,
+              "selected_count": 39,
+              "selected_mean_gain": -0.25283470323000756
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": -0.0062038369572189256,
+              "population_gain_before_tool_cost": -0.006163908623459008,
+              "precision": 0.6666666666666666,
+              "selected_count": 78,
+              "selected_mean_gain": -0.30874860245967106
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": -0.0238118680255078,
+              "population_gain_before_tool_cost": -0.023712047191108004,
+              "precision": 0.5128205128205128,
+              "selected_count": 195,
+              "selected_mean_gain": -0.4750921455161998
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.06165583390739366,
+              "population_gain_before_tool_cost": -0.0614556803368792,
+              "precision": 0.3836317135549872,
+              "selected_count": 391,
+              "selected_mean_gain": -0.6140852764096855
+            }
+          }
+        },
+        "extreme_properties": {
+          "mean_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.0004807709011943539,
+              "population_gain_before_tool_cost": 0.0004907709011943539,
+              "precision": 1,
+              "selected_count": 2,
+              "selected_mean_gain": 0.09815418023887079
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008231053203040172,
+              "population_gain_before_tool_cost": 0.0008431053203040173,
+              "precision": 1,
+              "selected_count": 4,
+              "selected_mean_gain": 0.08431053203040173
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.001092464712269272,
+              "population_gain_before_tool_cost": 0.0011324647122692721,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.05662323561346361
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0011730727470141134,
+              "population_gain_before_tool_cost": 0.0012730727470141134,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": 0.02546145494028227
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.0005773072747014133,
+              "population_gain_before_tool_cost": -0.0003773072747014133,
+              "precision": 0.4,
+              "selected_count": 40,
+              "selected_mean_gain": -0.0037730727470141334
+            }
+          },
+          "p_positive_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.0004807709011943539,
+              "population_gain_before_tool_cost": 0.0004907709011943539,
+              "precision": 1,
+              "selected_count": 2,
+              "selected_mean_gain": 0.09815418023887079
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008231053203040172,
+              "population_gain_before_tool_cost": 0.0008431053203040173,
+              "precision": 1,
+              "selected_count": 4,
+              "selected_mean_gain": 0.08431053203040173
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.001092464712269272,
+              "population_gain_before_tool_cost": 0.0011324647122692721,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.05662323561346361
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0011730727470141134,
+              "population_gain_before_tool_cost": 0.0012730727470141134,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": 0.02546145494028227
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.0005773072747014133,
+              "population_gain_before_tool_cost": -0.0003773072747014133,
+              "precision": 0.4,
+              "selected_count": 40,
+              "selected_mean_gain": -0.0037730727470141334
+            }
+          },
+          "tail_risk_score": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.0004807709011943539,
+              "population_gain_before_tool_cost": 0.0004907709011943539,
+              "precision": 1,
+              "selected_count": 2,
+              "selected_mean_gain": 0.09815418023887079
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008231053203040172,
+              "population_gain_before_tool_cost": 0.0008431053203040173,
+              "precision": 1,
+              "selected_count": 4,
+              "selected_mean_gain": 0.08431053203040173
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.001092464712269272,
+              "population_gain_before_tool_cost": 0.0011324647122692721,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.05662323561346361
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0011730727470141134,
+              "population_gain_before_tool_cost": 0.0012730727470141134,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": 0.02546145494028227
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.0005773072747014133,
+              "population_gain_before_tool_cost": -0.0003773072747014133,
+              "precision": 0.4,
+              "selected_count": 40,
+              "selected_mean_gain": -0.0037730727470141334
+            }
+          }
+        },
+        "matbench_pairwise": {
+          "mean_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.00043996725970548844,
+              "population_gain_before_tool_cost": 0.00044998604492778023,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.08982846421870813
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008013900359609542,
+              "population_gain_before_tool_cost": 0.0008214276064055378,
+              "precision": 1,
+              "selected_count": 16,
+              "selected_mean_gain": 0.08198874296435274
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.0013246856080828323,
+              "population_gain_before_tool_cost": 0.0013647607489719995,
+              "precision": 0.96875,
+              "selected_count": 32,
+              "selected_mean_gain": 0.06811009112838384
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.002240538452643469,
+              "population_gain_before_tool_cost": 0.002340726304866387,
+              "precision": 0.8875,
+              "selected_count": 80,
+              "selected_mean_gain": 0.04672674886089524
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": 0.001367493022883468,
+              "population_gain_before_tool_cost": 0.0015678687273293038,
+              "precision": 0.6375,
+              "selected_count": 160,
+              "selected_mean_gain": 0.015649289734655614
+            }
+          },
+          "p_positive_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.00043996725970548844,
+              "population_gain_before_tool_cost": 0.00044998604492778023,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.08982846421870813
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008013900359609542,
+              "population_gain_before_tool_cost": 0.0008214276064055378,
+              "precision": 1,
+              "selected_count": 16,
+              "selected_mean_gain": 0.08198874296435274
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.0013246856080828323,
+              "population_gain_before_tool_cost": 0.0013647607489719995,
+              "precision": 0.96875,
+              "selected_count": 32,
+              "selected_mean_gain": 0.06811009112838384
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.002240538452643469,
+              "population_gain_before_tool_cost": 0.002340726304866387,
+              "precision": 0.8875,
+              "selected_count": 80,
+              "selected_mean_gain": 0.04672674886089524
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": 0.001367493022883468,
+              "population_gain_before_tool_cost": 0.0015678687273293038,
+              "precision": 0.6375,
+              "selected_count": 160,
+              "selected_mean_gain": 0.015649289734655614
+            }
+          },
+          "tail_risk_score": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.00043996725970548844,
+              "population_gain_before_tool_cost": 0.00044998604492778023,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.08982846421870813
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008013900359609542,
+              "population_gain_before_tool_cost": 0.0008214276064055378,
+              "precision": 1,
+              "selected_count": 16,
+              "selected_mean_gain": 0.08198874296435274
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.0013246856080828323,
+              "population_gain_before_tool_cost": 0.0013647607489719995,
+              "precision": 0.96875,
+              "selected_count": 32,
+              "selected_mean_gain": 0.06811009112838384
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.002240538452643469,
+              "population_gain_before_tool_cost": 0.002340726304866387,
+              "precision": 0.8875,
+              "selected_count": 80,
+              "selected_mean_gain": 0.04672674886089524
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": 0.001367493022883468,
+              "population_gain_before_tool_cost": 0.0015678687273293038,
+              "precision": 0.6375,
+              "selected_count": 160,
+              "selected_mean_gain": 0.015649289734655614
+            }
+          }
+        }
+      }
+    },
+    "source": {
+      "model": {
+        "beta": 0.1,
+        "gain_bounds": [
+          -1.4,
+          1.0
+        ],
+        "parameters_by_task": {
+          "discover_unique": {
+            "negative_gain": {
+              "base_variance": 9.277142324839931e-07,
+              "external_weight": 0.0005895095757750226,
+              "internal_weight": 0.018148286132262798,
+              "mean_bias": -1.0255911172542558,
+              "mean_slope": 0.006737946999085467
+            },
+            "positive_gain": {
+              "base_variance": 0.0006933850514012467,
+              "external_weight": 0.01815062820881301,
+              "internal_weight": 0.018149717381792232,
+              "mean_bias": 0.04653533448852002,
+              "mean_slope": 0.03495655595710094
+            },
+            "positive_probability": {
+              "base_variance": 0.08293302152879924,
+              "external_weight": 0.007240566597264055,
+              "internal_weight": 0.00669486325838704,
+              "mean_bias": -0.47486571006943135,
+              "mean_slope": 0.798034225593998
+            }
+          },
+          "extreme_properties": {
+            "negative_gain": {
+              "base_variance": 0.08672694784375612,
+              "external_weight": 0.0029269855789721406,
+              "internal_weight": 0.0029269855789721406,
+              "mean_bias": -0.959876779997882,
+              "mean_slope": 0.006737946999085467
+            },
+            "positive_gain": {
+              "base_variance": 0.0007637842881121576,
+              "external_weight": 0.0021353566880749136,
+              "internal_weight": 0.0021353566880749136,
+              "mean_bias": 0.0706885674034375,
+              "mean_slope": 0.014403791383016935
+            },
+            "positive_probability": {
+              "base_variance": 0.7565091969389113,
+              "external_weight": 0.000416240905216843,
+              "internal_weight": 0.000416240905216843,
+              "mean_bias": -0.27518035229385707,
+              "mean_slope": 0.9276677921957907
+            }
+          },
+          "matbench_pairwise": {
+            "negative_gain": {
+              "base_variance": 0.03234205640461044,
+              "external_weight": 1.105884549082528,
+              "internal_weight": 0.0017412609798719782,
+              "mean_bias": -0.601840149817442,
+              "mean_slope": 2.245228249348293
+            },
+            "positive_gain": {
+              "base_variance": 0.0005771067082595863,
+              "external_weight": 0.1221190973663589,
+              "internal_weight": 0.005797817599098499,
+              "mean_bias": -6.698005119978222e-05,
+              "mean_slope": 0.14545115022908214
+            },
+            "positive_probability": {
+              "base_variance": 0.0005101983521083615,
+              "external_weight": 0.6574464211987626,
+              "internal_weight": 0.01795472720950726,
+              "mean_bias": -0.11766967049183552,
+              "mean_slope": 0.4174963789733376
+            }
+          }
+        },
+        "tail_weight": 0.5,
+        "type": "source_decomposed_hurdle_gain_calibrator",
+        "uses_source_variance": true
+      },
+      "tasks": {
+        "discover_unique": {
+          "mean_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": -0.0008688446240937936,
+              "population_gain_before_tool_cost": -0.0008586065897963787,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": -0.16772879731672258
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": -0.002543781271044355,
+              "population_gain_before_tool_cost": -0.002523817104164396,
+              "precision": 0.717948717948718,
+              "selected_count": 39,
+              "selected_mean_gain": -0.25283470323000756
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": -0.0062038369572189256,
+              "population_gain_before_tool_cost": -0.006163908623459008,
+              "precision": 0.6666666666666666,
+              "selected_count": 78,
+              "selected_mean_gain": -0.30874860245967106
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": -0.0238118680255078,
+              "population_gain_before_tool_cost": -0.023712047191108004,
+              "precision": 0.5128205128205128,
+              "selected_count": 195,
+              "selected_mean_gain": -0.4750921455161998
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.06165583390739366,
+              "population_gain_before_tool_cost": -0.0614556803368792,
+              "precision": 0.3836317135549872,
+              "selected_count": 391,
+              "selected_mean_gain": -0.6140852764096855
+            }
+          },
+          "p_positive_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": -0.0008688446240937936,
+              "population_gain_before_tool_cost": -0.0008586065897963787,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": -0.16772879731672258
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": -0.002543781271044355,
+              "population_gain_before_tool_cost": -0.002523817104164396,
+              "precision": 0.717948717948718,
+              "selected_count": 39,
+              "selected_mean_gain": -0.25283470323000756
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": -0.0062038369572189256,
+              "population_gain_before_tool_cost": -0.006163908623459008,
+              "precision": 0.6666666666666666,
+              "selected_count": 78,
+              "selected_mean_gain": -0.30874860245967106
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": -0.0238118680255078,
+              "population_gain_before_tool_cost": -0.023712047191108004,
+              "precision": 0.5128205128205128,
+              "selected_count": 195,
+              "selected_mean_gain": -0.4750921455161998
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.06165583390739366,
+              "population_gain_before_tool_cost": -0.0614556803368792,
+              "precision": 0.3836317135549872,
+              "selected_count": 391,
+              "selected_mean_gain": -0.6140852764096855
+            }
+          },
+          "tail_risk_score": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": -0.0008688446240937936,
+              "population_gain_before_tool_cost": -0.0008586065897963787,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": -0.16772879731672258
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": -0.002543781271044355,
+              "population_gain_before_tool_cost": -0.002523817104164396,
+              "precision": 0.717948717948718,
+              "selected_count": 39,
+              "selected_mean_gain": -0.25283470323000756
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": -0.0062038369572189256,
+              "population_gain_before_tool_cost": -0.006163908623459008,
+              "precision": 0.6666666666666666,
+              "selected_count": 78,
+              "selected_mean_gain": -0.30874860245967106
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": -0.0238118680255078,
+              "population_gain_before_tool_cost": -0.023712047191108004,
+              "precision": 0.5128205128205128,
+              "selected_count": 195,
+              "selected_mean_gain": -0.4750921455161998
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.06165583390739366,
+              "population_gain_before_tool_cost": -0.0614556803368792,
+              "precision": 0.3836317135549872,
+              "selected_count": 391,
+              "selected_mean_gain": -0.6140852764096855
+            }
+          }
+        },
+        "extreme_properties": {
+          "mean_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.0004807709011943539,
+              "population_gain_before_tool_cost": 0.0004907709011943539,
+              "precision": 1,
+              "selected_count": 2,
+              "selected_mean_gain": 0.09815418023887079
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008231053203040172,
+              "population_gain_before_tool_cost": 0.0008431053203040173,
+              "precision": 1,
+              "selected_count": 4,
+              "selected_mean_gain": 0.08431053203040173
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.001092464712269272,
+              "population_gain_before_tool_cost": 0.0011324647122692721,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.05662323561346361
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0011730727470141134,
+              "population_gain_before_tool_cost": 0.0012730727470141134,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": 0.02546145494028227
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.0005773072747014133,
+              "population_gain_before_tool_cost": -0.0003773072747014133,
+              "precision": 0.4,
+              "selected_count": 40,
+              "selected_mean_gain": -0.0037730727470141334
+            }
+          },
+          "p_positive_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.0004807709011943539,
+              "population_gain_before_tool_cost": 0.0004907709011943539,
+              "precision": 1,
+              "selected_count": 2,
+              "selected_mean_gain": 0.09815418023887079
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008231053203040172,
+              "population_gain_before_tool_cost": 0.0008431053203040173,
+              "precision": 1,
+              "selected_count": 4,
+              "selected_mean_gain": 0.08431053203040173
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.001092464712269272,
+              "population_gain_before_tool_cost": 0.0011324647122692721,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.05662323561346361
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0011730727470141134,
+              "population_gain_before_tool_cost": 0.0012730727470141134,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": 0.02546145494028227
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.0005773072747014133,
+              "population_gain_before_tool_cost": -0.0003773072747014133,
+              "precision": 0.4,
+              "selected_count": 40,
+              "selected_mean_gain": -0.0037730727470141334
+            }
+          },
+          "tail_risk_score": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.0004807709011943539,
+              "population_gain_before_tool_cost": 0.0004907709011943539,
+              "precision": 1,
+              "selected_count": 2,
+              "selected_mean_gain": 0.09815418023887079
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008231053203040172,
+              "population_gain_before_tool_cost": 0.0008431053203040173,
+              "precision": 1,
+              "selected_count": 4,
+              "selected_mean_gain": 0.08431053203040173
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.001092464712269272,
+              "population_gain_before_tool_cost": 0.0011324647122692721,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.05662323561346361
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0011730727470141134,
+              "population_gain_before_tool_cost": 0.0012730727470141134,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": 0.02546145494028227
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": -0.0005773072747014133,
+              "population_gain_before_tool_cost": -0.0003773072747014133,
+              "precision": 0.4,
+              "selected_count": 40,
+              "selected_mean_gain": -0.0037730727470141334
+            }
+          }
+        },
+        "matbench_pairwise": {
+          "mean_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.00043996725970548844,
+              "population_gain_before_tool_cost": 0.00044998604492778023,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.08982846421870813
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008344525642508142,
+              "population_gain_before_tool_cost": 0.0008544901346953978,
+              "precision": 1,
+              "selected_count": 16,
+              "selected_mean_gain": 0.0852887965692844
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.001377384257235198,
+              "population_gain_before_tool_cost": 0.0014174593981243651,
+              "precision": 0.96875,
+              "selected_count": 32,
+              "selected_mean_gain": 0.0707400830876441
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.002305656528666137,
+              "population_gain_before_tool_cost": 0.002405844380889055,
+              "precision": 0.9,
+              "selected_count": 80,
+              "selected_mean_gain": 0.04802666845349776
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": 0.0013941780076453354,
+              "population_gain_before_tool_cost": 0.0015945537120911713,
+              "precision": 0.6375,
+              "selected_count": 160,
+              "selected_mean_gain": 0.015915639238810002
+            }
+          },
+          "p_positive_gain": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.00040875086243688963,
+              "population_gain_before_tool_cost": 0.00041876964765918143,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.08359689091396409
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008136416327384152,
+              "population_gain_before_tool_cost": 0.0008336792031829988,
+              "precision": 1,
+              "selected_count": 16,
+              "selected_mean_gain": 0.08321160546770306
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.0013931602859623394,
+              "population_gain_before_tool_cost": 0.0014332354268515065,
+              "precision": 0.96875,
+              "selected_count": 32,
+              "selected_mean_gain": 0.071527405521308
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0022638668355484965,
+              "population_gain_before_tool_cost": 0.0023640546877714145,
+              "precision": 0.9,
+              "selected_count": 80,
+              "selected_mean_gain": 0.047192441704636864
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": 0.0015640220616013677,
+              "population_gain_before_tool_cost": 0.0017643977660472035,
+              "precision": 0.65625,
+              "selected_count": 160,
+              "selected_mean_gain": 0.017610895202358652
+            }
+          },
+          "tail_risk_score": {
+            "top_0.005": {
+              "population_gain_after_selected_only_tool_cost": 0.00043191141524907584,
+              "population_gain_before_tool_cost": 0.00044193020047136763,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.08822031626909677
+            },
+            "top_0.010": {
+              "population_gain_after_selected_only_tool_cost": 0.0008344525642508142,
+              "population_gain_before_tool_cost": 0.0008544901346953978,
+              "precision": 1,
+              "selected_count": 16,
+              "selected_mean_gain": 0.0852887965692844
+            },
+            "top_0.020": {
+              "population_gain_after_selected_only_tool_cost": 0.0013931602859623392,
+              "population_gain_before_tool_cost": 0.0014332354268515063,
+              "precision": 0.96875,
+              "selected_count": 32,
+              "selected_mean_gain": 0.07152740552130799
+            },
+            "top_0.050": {
+              "population_gain_after_selected_only_tool_cost": 0.0022638668355484965,
+              "population_gain_before_tool_cost": 0.0023640546877714145,
+              "precision": 0.9,
+              "selected_count": 80,
+              "selected_mean_gain": 0.047192441704636864
+            },
+            "top_0.100": {
+              "population_gain_after_selected_only_tool_cost": 0.0013941780076453343,
+              "population_gain_before_tool_cost": 0.0015945537120911702,
+              "precision": 0.6375,
+              "selected_count": 160,
+              "selected_mean_gain": 0.01591563923880999
+            }
+          }
+        }
+      }
+    }
+  },
+  "tool_cost_per_acquired_action": 0.002
+}

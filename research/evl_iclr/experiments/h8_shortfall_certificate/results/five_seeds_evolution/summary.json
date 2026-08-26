@@ -1,0 +1,296 @@
+{
+  "alpha": 0.2,
+  "confirmatory_criteria": {
+    "bernstein_nonzero_coverage_seeds": 0,
+    "evolved_nonzero_coverage_seeds": 4,
+    "evolved_positive_population_net_gain_seeds": 4,
+    "evolved_test_shortfall_at_most_0.20_seeds": 5,
+    "fixed_nonzero_coverage_seeds": 4,
+    "fixed_positive_population_net_gain_seeds": 4,
+    "fixed_positive_selected_gain_seeds": 4,
+    "fixed_test_shortfall_at_most_0.20_seeds": 5,
+    "h8_evolved_supportive_pass": true,
+    "h8_fixed_confirmatory_pass": true
+  },
+  "empirical_bernstein_rows": [
+    {
+      "acceptance_empirical_shortfall": 0.0,
+      "acceptance_shortfall_ucb": 0.0,
+      "acquisition_fraction": 0.2695149373594603,
+      "binary_selective_risk": 0.0,
+      "coverage": 0.0,
+      "population_net_gain": -0.0005390298747189207,
+      "seed": 1,
+      "selected_mean_gain": 0.0,
+      "selected_mean_shortfall": 0.0
+    },
+    {
+      "acceptance_empirical_shortfall": 0.0,
+      "acceptance_shortfall_ucb": 0.0,
+      "acquisition_fraction": 0.10664953421137166,
+      "binary_selective_risk": 0.0,
+      "coverage": 0.0,
+      "population_net_gain": -0.00021329906842274335,
+      "seed": 7,
+      "selected_mean_gain": 0.0,
+      "selected_mean_shortfall": 0.0
+    },
+    {
+      "acceptance_empirical_shortfall": 0.0,
+      "acceptance_shortfall_ucb": 0.0,
+      "acquisition_fraction": 0.688082235785416,
+      "binary_selective_risk": 0.0,
+      "coverage": 0.0,
+      "population_net_gain": -0.001376164471570832,
+      "seed": 13,
+      "selected_mean_gain": 0.0,
+      "selected_mean_shortfall": 0.0
+    },
+    {
+      "acceptance_empirical_shortfall": 0.0,
+      "acceptance_shortfall_ucb": 0.0,
+      "acquisition_fraction": 0.1814969482814006,
+      "binary_selective_risk": 0.0,
+      "coverage": 0.0,
+      "population_net_gain": -0.0003629938965628012,
+      "seed": 21,
+      "selected_mean_gain": 0.0,
+      "selected_mean_shortfall": 0.0
+    },
+    {
+      "acceptance_empirical_shortfall": 0.0,
+      "acceptance_shortfall_ucb": 0.0,
+      "acquisition_fraction": 0.15451333119177643,
+      "binary_selective_risk": 0.0,
+      "coverage": 0.0,
+      "population_net_gain": -0.00030902666238355285,
+      "seed": 42,
+      "selected_mean_gain": 0.0,
+      "selected_mean_shortfall": 0.0
+    }
+  ],
+  "evolved_aggregate": {
+    "acquisition_fraction": {
+      "maximum": 0.2695149373594603,
+      "mean": 0.14243495020880179,
+      "median": 0.15451333119177643,
+      "minimum": 0.0,
+      "population_std": 0.08875737845824211
+    },
+    "binary_selective_risk": {
+      "maximum": 0.27450980392156865,
+      "mean": 0.20645189821536222,
+      "median": 0.27007299270072993,
+      "minimum": 0.0,
+      "population_std": 0.10577360548237345
+    },
+    "coverage": {
+      "maximum": 0.04400899453902987,
+      "mean": 0.029039511725024093,
+      "median": 0.03276582075168648,
+      "minimum": 0.0,
+      "population_std": 0.015478790552481964
+    },
+    "population_net_gain": {
+      "maximum": 0.0008545803497127572,
+      "mean": 0.00044096608648882575,
+      "median": 0.00043372595342367284,
+      "minimum": 0.0,
+      "population_std": 0.0002758541843900339
+    },
+    "selected_mean_gain": {
+      "maximum": 0.03168302728045067,
+      "mean": 0.020276385191157095,
+      "median": 0.020739782383757344,
+      "minimum": 0.0,
+      "population_std": 0.011149766848911918
+    },
+    "selected_mean_shortfall": {
+      "maximum": 0.016978806365183317,
+      "mean": 0.010006594279554139,
+      "median": 0.008830904226090192,
+      "minimum": 0.0,
+      "population_std": 0.0060318058229801
+    }
+  },
+  "evolved_rows": [
+    {
+      "acceptance_empirical_shortfall": 0.018268826787169658,
+      "acceptance_shortfall_ucb": 0.19928734668884104,
+      "accepted_mutations": [
+        "task_sparse_continuous_mean"
+      ],
+      "acquisition_fraction": 0.2695149373594603,
+      "binary_selective_risk": 0.27007299270072993,
+      "coverage": 0.04400899453902987,
+      "population_net_gain": 0.00037370709494852423,
+      "seed": 1,
+      "selected_harness": "task_sparse_continuous_mean",
+      "selected_mean_gain": 0.020739782383757344,
+      "selected_mean_shortfall": 0.016978806365183317
+    },
+    {
+      "acceptance_empirical_shortfall": 0.012911486644298725,
+      "acceptance_shortfall_ucb": 0.1921809943220376,
+      "accepted_mutations": [
+        "task_sparse_continuous_mean",
+        "task_sparse_continuous_sd_worth"
+      ],
+      "acquisition_fraction": 0.10664953421137166,
+      "binary_selective_risk": 0.27450980392156865,
+      "coverage": 0.03276582075168648,
+      "population_net_gain": 0.00043372595342367284,
+      "seed": 7,
+      "selected_harness": "task_sparse_continuous_sd_worth",
+      "selected_mean_gain": 0.019746949931449938,
+      "selected_mean_shortfall": 0.015497271828603089
+    },
+    {
+      "acceptance_empirical_shortfall": 0.0,
+      "acceptance_shortfall_ucb": 0.0,
+      "accepted_mutations": [],
+      "acquisition_fraction": 0.0,
+      "binary_selective_risk": 0.0,
+      "coverage": 0.0,
+      "population_net_gain": 0.0,
+      "seed": 13,
+      "selected_harness": "base_mean",
+      "selected_mean_gain": 0.0,
+      "selected_mean_shortfall": 0.0
+    },
+    {
+      "acceptance_empirical_shortfall": 0.015614734930476942,
+      "acceptance_shortfall_ucb": 0.19663325483214833,
+      "accepted_mutations": [
+        "task_sparse_continuous_mean",
+        "task_sparse_continuous_sd_worth"
+      ],
+      "acquisition_fraction": 0.1814969482814006,
+      "binary_selective_risk": 0.21348314606741572,
+      "coverage": 0.028589784773530358,
+      "population_net_gain": 0.0005428170343591744,
+      "seed": 21,
+      "selected_harness": "task_sparse_continuous_sd_worth",
+      "selected_mean_gain": 0.03168302728045067,
+      "selected_mean_shortfall": 0.008725988977894101
+    },
+    {
+      "acceptance_empirical_shortfall": 0.018148409161909265,
+      "acceptance_shortfall_ucb": 0.19406678943236635,
+      "accepted_mutations": [
+        "task_sparse_continuous_sd_worth"
+      ],
+      "acquisition_fraction": 0.15451333119177643,
+      "binary_selective_risk": 0.27419354838709675,
+      "coverage": 0.03983295856087375,
+      "population_net_gain": 0.0008545803497127572,
+      "seed": 42,
+      "selected_harness": "task_sparse_continuous_sd_worth",
+      "selected_mean_gain": 0.029212166360127526,
+      "selected_mean_shortfall": 0.008830904226090192
+    }
+  ],
+  "experiment": "h8_hoeffding_certified_utility_shortfall",
+  "fixed_aggregate": {
+    "acquisition_fraction": {
+      "maximum": 0.688082235785416,
+      "mean": 0.280051397365885,
+      "median": 0.1814969482814006,
+      "minimum": 0.10664953421137166,
+      "population_std": 0.2107800624961242
+    },
+    "binary_selective_risk": {
+      "maximum": 0.27450980392156865,
+      "mean": 0.20061248215696806,
+      "median": 0.24087591240875914,
+      "minimum": 0.0,
+      "population_std": 0.10286608116756453
+    },
+    "coverage": {
+      "maximum": 0.04400899453902987,
+      "mean": 0.029039511725024093,
+      "median": 0.03276582075168648,
+      "minimum": 0.0,
+      "population_std": 0.015478790552481964
+    },
+    "population_net_gain": {
+      "maximum": 0.0008545803497127572,
+      "mean": 0.00020368263118496465,
+      "median": 0.0005428170343591744,
+      "minimum": -0.001376164471570832,
+      "population_std": 0.0008021162544270099
+    },
+    "selected_mean_gain": {
+      "maximum": 0.03168302728045067,
+      "mean": 0.021138696166624837,
+      "median": 0.025051337261096044,
+      "minimum": 0.0,
+      "population_std": 0.011317720911433713
+    },
+    "selected_mean_shortfall": {
+      "maximum": 0.015497271828603089,
+      "mean": 0.009323250200410449,
+      "median": 0.008830904226090192,
+      "minimum": 0.0,
+      "population_std": 0.005359260985774254
+    }
+  },
+  "fixed_rows": [
+    {
+      "acceptance_empirical_shortfall": 0.01830358637952976,
+      "acceptance_shortfall_ucb": 0.17603216025202786,
+      "acquisition_fraction": 0.2695149373594603,
+      "binary_selective_risk": 0.24087591240875914,
+      "coverage": 0.04400899453902987,
+      "population_net_gain": 0.0005634542900000507,
+      "seed": 1,
+      "selected_mean_gain": 0.025051337261096044,
+      "selected_mean_shortfall": 0.013562085969464859
+    },
+    {
+      "acceptance_empirical_shortfall": 0.012911486644298725,
+      "acceptance_shortfall_ucb": 0.16911607720328675,
+      "acquisition_fraction": 0.10664953421137166,
+      "binary_selective_risk": 0.27450980392156865,
+      "coverage": 0.03276582075168648,
+      "population_net_gain": 0.00043372595342367284,
+      "seed": 7,
+      "selected_mean_gain": 0.019746949931449938,
+      "selected_mean_shortfall": 0.015497271828603089
+    },
+    {
+      "acceptance_empirical_shortfall": 0.0,
+      "acceptance_shortfall_ucb": 0.0,
+      "acquisition_fraction": 0.688082235785416,
+      "binary_selective_risk": 0.0,
+      "coverage": 0.0,
+      "population_net_gain": -0.001376164471570832,
+      "seed": 13,
+      "selected_mean_gain": 0.0,
+      "selected_mean_shortfall": 0.0
+    },
+    {
+      "acceptance_empirical_shortfall": 0.015614734930476942,
+      "acceptance_shortfall_ucb": 0.17334330880297505,
+      "acquisition_fraction": 0.1814969482814006,
+      "binary_selective_risk": 0.21348314606741572,
+      "coverage": 0.028589784773530358,
+      "population_net_gain": 0.0005428170343591744,
+      "seed": 21,
+      "selected_mean_gain": 0.03168302728045067,
+      "selected_mean_shortfall": 0.008725988977894101
+    },
+    {
+      "acceptance_empirical_shortfall": 0.018148409161909265,
+      "acceptance_shortfall_ucb": 0.17143303027742424,
+      "acquisition_fraction": 0.15451333119177643,
+      "binary_selective_risk": 0.27419354838709675,
+      "coverage": 0.03983295856087375,
+      "population_net_gain": 0.0008545803497127572,
+      "seed": 42,
+      "selected_mean_gain": 0.029212166360127526,
+      "selected_mean_shortfall": 0.008830904226090192
+    }
+  ],
+  "primary_method": "task_sparse_continuous_sd_worth"
+}

@@ -1,0 +1,18 @@
+{
+  "baseline_method": "learned_portfolio_kg_lcb",
+  "baseline_total_strict_gain": 189.40569962426986,
+  "benchmark_stratified_bootstrap_95_interval": [
+    -6.50946247757473,
+    19.306819510158604
+  ],
+  "bootstrap_draws": 100000,
+  "nonzero_pair_count": 287,
+  "one_sided_sign_flip_p_value": 0.16446835531644682,
+  "paired_gain_difference": 6.382893482893648,
+  "primary_method": "learned_portfolio_kg_mean",
+  "primary_total_strict_gain": 195.78859310716396,
+  "record_count": 2538,
+  "schema_version": "paired-numeric-ablation-significance-v1",
+  "seed": 1729,
+  "superiority_passed": false
+}

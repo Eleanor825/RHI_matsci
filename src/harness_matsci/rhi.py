@@ -1,0 +1,938 @@
+from __future__ import annotations
+
+import copy
+import hashlib
+import json
+from dataclasses import asdict, dataclass, field
+from typing import Any, Protocol
+
+from .harnesses import DEFAULT_HARNESS, deterministic_fallback, harness_text, validate_harness
+from .metrics import action_worthiness_score
+from .schema import ActionRecord
+from .signal_contract import EXTERNAL_UNCERTAINTY_SIGNALS, INTERNAL_UNCERTAINTY_SIGNALS, require_signal_contract, signal_coverage
+from .training import TrainedGate, evaluate_gate, split_records, train_gate_with_features
+
+
+RHI_SEED_FEATURES = list(INTERNAL_UNCERTAINTY_SIGNALS + EXTERNAL_UNCERTAINTY_SIGNALS)
+
+RHI_SEED_HARNESS = {
+    **copy.deepcopy(DEFAULT_HARNESS),
+    "name": "H0_rhi_matsci",
+    "required_features": list(RHI_SEED_FEATURES),
+    "hops": [
+        {"from": "orchestrator", "to": "evidence_auditor", "purpose": "audit visible evidence"},
+        {"from": "evidence_auditor", "to": "uncertainty_gate", "purpose": "estimate action worthiness"},
+        {"from": "uncertainty_gate", "to": "fallback_router", "purpose": "select proceed or fallback route"},
+    ],
+}
+
+
+@dataclass(frozen=True)
+class TrajectoryFeedback:
+    """Feedback extracted from action-level trajectories for one RHI round."""
+
+    round_index: int
+    harness_name: str
+    n_records: int
+    failure_counts: dict[str, int]
+    metric_snapshot: dict[str, float]
+    examples: list[dict[str, Any]] = field(default_factory=list)
+    internal_signal_summary: dict[str, float] = field(default_factory=dict)
+    external_signal_summary: dict[str, float] = field(default_factory=dict)
+    signal_effects: dict[str, float] = field(default_factory=dict)
+    trajectory_failure_counts: dict[str, int] = field(default_factory=dict)
+    trajectory_metric_snapshot: dict[str, float] = field(default_factory=dict)
+    trajectory_signal_effects: dict[str, float] = field(default_factory=dict)
+
+    def to_json(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass(frozen=True)
+class HarnessProposal:
+    """A candidate harness and the evidence that motivated its mutation."""
+
+    candidate: dict[str, Any]
+    proposer: str
+    rationale: list[str]
+    feedback: TrajectoryFeedback
+
+    def to_json(self) -> dict[str, Any]:
+        return {
+            "candidate": self.candidate,
+            "proposer": self.proposer,
+            "rationale": list(self.rationale),
+            "feedback": self.feedback.to_json(),
+        }
+
+
+class HarnessProposer(Protocol):
+    def propose(
+        self,
+        previous: dict[str, Any],
+        feedback: TrajectoryFeedback,
+        *,
+        iteration: int,
+    ) -> HarnessProposal:
+        ...
+
+
+class DeterministicTrajectoryProposer:
+    """Offline proposer used when no external LLM is configured.
+
+    The proposer is deliberately trajectory-conditioned: it counts concrete
+    failure modes and mutates the contracts and hops that address those
+    failures.  This keeps the RHI loop reproducible while exposing the same
+    interface as an LLM proposer.
+    """
+
+    def propose(
+        self,
+        previous: dict[str, Any],
+        feedback: TrajectoryFeedback,
+        *,
+        iteration: int,
+    ) -> HarnessProposal:
+        candidate = copy.deepcopy(previous)
+        candidate["name"] = f"H{iteration}_trajectory_feedback"
+        required_features = list(candidate.get("required_features", []))
+        gates = list(candidate.get("gates", []))
+        roles = copy.deepcopy(candidate.get("roles", []))
+        rationale: list[str] = []
+        counts = feedback.failure_counts
+
+        def add_feature(name: str, reason: str) -> None:
+            if name not in required_features:
+                required_features.append(name)
+                rationale.append(reason)
+
+        def add_gate(text: str) -> None:
+            if text not in gates:
+                gates.append(text)
+
+        if counts.get("confidently_wrong", 0) > 0 or counts.get("evidence_conflict", 0) > 0:
+            rationale.append("Strengthen evidence auditing after confidently wrong or conflicting trajectories.")
+            add_feature("evidence_conflict", "Add conflict-sensitive evidence checking after confidently wrong actions.")
+            add_feature("source_reliability", "Require source reliability before promoting a scientific action.")
+            add_gate("Evidence conflict or weak source reliability must trigger retrieval before proceed.")
+            _upsert_role(
+                roles,
+                "evidence_auditor",
+                "Before a costly action, identify conflicting evidence and downgrade unsupported claims.",
+                ["evidence_conflict", "source_reliability", "evidence_support"],
+            )
+
+        if counts.get("overconfident", 0) > 0 or counts.get("calibration_error", 0) > 0:
+            rationale.append("Add a calibration review contract for overconfident trajectories.")
+            add_feature("verbal_confidence", "Compare verbal confidence with evidence-backed reliability.")
+            add_feature("perturbation_stability", "Expose perturbation stability as an outcome-independent uncertainty signal.")
+            add_gate("Verbal confidence cannot override disagreement or missing evidence.")
+            _upsert_role(
+                roles,
+                "calibration_reviewer",
+                "Check whether confidence tracks observed action reliability on the current discovery regime.",
+                ["verbal_confidence", "perturbation_stability", "calibrated_probability"],
+                kind="reviewer",
+            )
+
+        if counts.get("high_ood", 0) > 0 or counts.get("high_cost", 0) > 0:
+            rationale.append("Add cost, reversibility, and OOD-aware verification hops.")
+            add_feature("ood_score", "Route out-of-distribution candidates to verification before execution.")
+            add_feature("cost", "Use action cost in the promotion decision.")
+            add_feature("reversibility", "Use reversibility to separate cheap probes from irreversible experiments.")
+            add_feature("action_complexity", "Treat unusually complex candidate actions as requiring verification.")
+            add_gate("High OOD, high cost, or low reversibility requires an explicit verification hop.")
+            _upsert_role(
+                roles,
+                "risk_router",
+                "Select verification, simulation, expert review, or abstention based on OOD and action cost.",
+                ["ood_score", "cost", "reversibility", "route_reason"],
+                kind="reviewer",
+            )
+
+        if counts.get("over_abstention", 0) > 0:
+            rationale.append("Recover useful coverage with independent tool agreement.")
+            add_feature("candidate_structure_complexity", "Use a normalized candidate-structure descriptor when confidence alone causes over-abstention.")
+            add_feature("candidate_composition_diversity", "Use candidate diversity to distinguish informative probes from redundant actions.")
+            add_feature("candidate_domain_position", "Use a task-normalized domain-position descriptor to recover useful coverage.")
+            add_gate("Do not abstain when visible evidence is stable and the action is cheap and reversible.")
+
+        candidate["required_features"] = required_features
+        candidate["gates"] = gates[:20]
+        candidate["roles"] = roles
+        candidate["hops"] = _build_hops(candidate, counts)
+        candidate["target_selective_risk"] = _updated_alpha(candidate, feedback)
+        if not any(counts.values()):
+            rationale.append("No new failure slice exceeded the mutation threshold; preserve the current contract.")
+            candidate = deterministic_fallback(previous, iteration)
+        return HarnessProposal(candidate, "deterministic_trajectory_proposer", rationale, feedback)
+
+
+class SignalAwareTrajectoryProposer(DeterministicTrajectoryProposer):
+    """RHI proposer that evolves the contract from internal and external signals.
+
+    Internal signals describe the agent's own epistemic state (confidence,
+    perturbation stability, self-consistency, and disagreement). External
+    signals describe evidence and environment state (source reliability,
+    tool agreement, OOD, and evidence conflict). Only signals observed in the
+    feedback split are eligible for a mutation, so the proposer cannot inspect
+    held-out test outcomes.
+    """
+
+    INTERNAL_SIGNALS = set(INTERNAL_UNCERTAINTY_SIGNALS)
+    EXTERNAL_SIGNALS = set(EXTERNAL_UNCERTAINTY_SIGNALS)
+
+    def propose(
+        self,
+        previous: dict[str, Any],
+        feedback: TrajectoryFeedback,
+        *,
+        iteration: int,
+    ) -> HarnessProposal:
+        proposal = super().propose(previous, feedback, iteration=iteration)
+        candidate = copy.deepcopy(proposal.candidate)
+        required = list(candidate.get("required_features", []))
+        rationale = list(proposal.rationale)
+        signal_effects = feedback.signal_effects
+        available = set(feedback.internal_signal_summary) | set(feedback.external_signal_summary)
+
+        ranked_internal = sorted(
+            (name for name in signal_effects if name in self.INTERNAL_SIGNALS and name in available),
+            key=lambda name: signal_effects[name],
+            reverse=True,
+        )
+        ranked_external = sorted(
+            (name for name in signal_effects if name in self.EXTERNAL_SIGNALS and name in available),
+            key=lambda name: signal_effects[name],
+            reverse=True,
+        )
+        for name in ranked_internal[:2] + ranked_external[:2]:
+            if name not in required and signal_effects.get(name, 0.0) >= 0.05:
+                required.append(name)
+                rationale.append(
+                    f"Promote {name} into the gate because its feedback-split error association was "
+                    f"{signal_effects[name]:.3f}."
+                )
+        candidate["required_features"] = required
+        candidate["signal_contract"] = {
+            "internal": [name for name in required if name in self.INTERNAL_SIGNALS],
+            "external": [name for name in required if name in self.EXTERNAL_SIGNALS],
+            "selection_basis": "feedback_split_abs_error_association",
+        }
+        trajectory_counts = feedback.trajectory_failure_counts
+
+        def add_feature(name: str, reason: str) -> None:
+            if name not in required:
+                required.append(name)
+                rationale.append(reason)
+
+        def add_gate(text: str) -> None:
+            gates = candidate.setdefault("gates", [])
+            if text not in gates:
+                gates.append(text)
+
+        if trajectory_counts.get("wrong_final_commit", 0) or trajectory_counts.get("costly_failure", 0):
+            add_feature("cost", "Use action cost when trajectory outcomes show costly incorrect commitments.")
+            add_feature("reversibility", "Prefer reversible actions after failed trajectory-level commitments.")
+            add_feature("source_reliability", "Require reliable sources before irreversible scientific commitments.")
+            add_gate("Do not commit a costly or irreversible action while trajectory uncertainty remains unresolved.")
+            rationale.append("Trajectory outcomes show incorrect final commitments; strengthen cost-aware commit gating.")
+
+        if trajectory_counts.get("failed_recovery", 0):
+            add_feature("tool_agreement", "Check tool agreement before committing after a recovery hop.")
+            add_feature("perturbation_stability", "Require stable conclusions after retrieval or simulation recovery.")
+            add_gate("After retrieval or simulation, require independent agreement before final execution.")
+            rationale.append("Recovery routes still ended in failure; add a post-recovery agreement checkpoint.")
+
+        if trajectory_counts.get("over_verification", 0):
+            add_gate("Avoid repeated verification when expected information gain is low; preserve cheap probes.")
+            rationale.append("Trajectory traces contain unnecessary verification loops; cap low-value recovery hops.")
+
+        if trajectory_counts.get("missed_good_opportunity", 0) or trajectory_counts.get("unnecessary_abstention", 0):
+            add_feature("reversibility", "Use reversibility to recover safe, low-cost opportunities.")
+            add_gate("Allow cheap reversible actions when evidence is stable even if confidence is not maximal.")
+            rationale.append("Good opportunities were missed; add a coverage recovery rule for safe actions.")
+
+        candidate["required_features"] = required
+        candidate["trajectory_contract"] = {
+            "failure_counts": dict(trajectory_counts),
+            "metric_snapshot": dict(feedback.trajectory_metric_snapshot),
+            "selection_basis": "feedback_split_action_and_trajectory_outcomes",
+        }
+        return HarnessProposal(candidate, "signal_aware_trajectory_outcome_proposer", rationale, feedback)
+
+
+class JSONLLMHarnessProposer:
+    """Optional OpenAI-compatible proposer driven by trajectory feedback.
+
+    The model is only responsible for proposing a declarative harness.  The
+    caller still validates the schema and the held-out gate decides whether
+    the proposal is accepted.  No provider dependency is required unless this
+    class is explicitly used.
+    """
+
+    def __init__(self, client: Any, *, model: str) -> None:
+        self.client = client
+        self.model = model
+
+    def propose(
+        self,
+        previous: dict[str, Any],
+        feedback: TrajectoryFeedback,
+        *,
+        iteration: int,
+    ) -> HarnessProposal:
+        prompt = _proposal_prompt(previous, feedback, iteration)
+        response = self.client.responses.create(
+            model=self.model,
+            input=prompt,
+            temperature=0.2,
+        )
+        text = getattr(response, "output_text", "")
+        if not text:
+            raise ValueError("LLM proposer returned no output_text")
+        candidate = _extract_json(text)
+        return HarnessProposal(
+            candidate=candidate,
+            proposer=f"openai_responses:{self.model}",
+            rationale=["Candidate generated from trajectory-local failure feedback by an external proposer."],
+            feedback=feedback,
+        )
+
+
+def train_rhi(
+    records: list[ActionRecord],
+    *,
+    iterations: int = 3,
+    seed: int = 7,
+    alpha: float = 0.1,
+    train_fraction: float = 0.6,
+    val_fraction: float = 0.2,
+    epochs: int = 700,
+    learning_rate: float = 0.08,
+    l2: float = 0.001,
+    budget_fraction: float = 0.1,
+    min_coverage: float = 0.0,
+    epsilon: float = 0.01,
+    proposer: HarnessProposer | None = None,
+    acceptance_policy: str = "guarded",
+) -> dict[str, Any]:
+    """Run recursive, trajectory-feedback-conditioned harness improvement.
+
+    Each candidate is trained from the same training split, compared only to
+    its immediate predecessor on the same held-out validation split, and
+    accepted only when its composite action-worthiness score improves without
+    violating the coverage guard.  The test split is touched only at the end.
+    """
+    if not records:
+        raise ValueError("records cannot be empty")
+    if iterations < 0:
+        raise ValueError("iterations must be non-negative")
+    train_records, val_records, test_records = split_records(
+        records,
+        seed=seed,
+        train_fraction=train_fraction,
+        val_fraction=val_fraction,
+    )
+    return train_rhi_from_splits(
+        train_records,
+        val_records,
+        test_records,
+        iterations=iterations,
+        seed=seed,
+        alpha=alpha,
+        train_fraction=train_fraction,
+        val_fraction=val_fraction,
+        epochs=epochs,
+        learning_rate=learning_rate,
+        l2=l2,
+        budget_fraction=budget_fraction,
+        min_coverage=min_coverage,
+        epsilon=epsilon,
+        proposer=proposer,
+        acceptance_policy=acceptance_policy,
+    )
+
+
+def train_rhi_from_splits(
+    train_records: list[ActionRecord],
+    val_records: list[ActionRecord],
+    test_records: list[ActionRecord],
+    *,
+    iterations: int = 3,
+    seed: int = 7,
+    alpha: float = 0.1,
+    train_fraction: float | None = None,
+    val_fraction: float | None = None,
+    epochs: int = 700,
+    learning_rate: float = 0.08,
+    l2: float = 0.001,
+    budget_fraction: float = 0.1,
+    min_coverage: float = 0.0,
+    balance_benchmarks: bool = False,
+    macro_acceptance: bool = False,
+    epsilon: float = 0.01,
+    proposer: HarnessProposer | None = None,
+    acceptance_records: list[ActionRecord] | None = None,
+    acceptance_policy: str = "guarded",
+    trajectory_outcomes: dict[str, dict[str, Any]] | None = None,
+    strict_signal_contract: bool = False,
+) -> dict[str, Any]:
+    """Run RHI with externally fixed splits.
+
+    This is the paper-grade entry point for transfer experiments: train and
+    validation records can come from source tasks while test records come from
+    a held-out target task.
+    """
+    if acceptance_policy not in {"guarded", "always_accept"}:
+        raise ValueError("acceptance_policy must be 'guarded' or 'always_accept'")
+    feedback_records = val_records
+    acceptance_records = acceptance_records or val_records
+    if not train_records or not feedback_records:
+        raise ValueError("RHI requires non-empty train and validation splits")
+    if not acceptance_records or not test_records:
+        raise ValueError("RHI requires a non-empty test split")
+    if strict_signal_contract:
+        require_signal_contract(train_records + feedback_records + acceptance_records)
+
+    active_proposer = proposer or SignalAwareTrajectoryProposer()
+    current_harness = copy.deepcopy(RHI_SEED_HARNESS)
+    current_gate = _train_with_features(
+        train_records,
+        feedback_records,
+        feature_names=list(current_harness["required_features"]),
+        alpha=alpha,
+        epochs=epochs,
+        learning_rate=learning_rate,
+        l2=l2,
+        min_coverage=min_coverage,
+        balance_benchmarks=balance_benchmarks,
+    )
+    acceptance_shards = _acceptance_shards(acceptance_records, iterations, seed)
+    reporting_acceptance = acceptance_records
+    first_acceptance = acceptance_shards[0] if acceptance_shards else reporting_acceptance
+    current_eval = evaluate_gate(
+        first_acceptance,
+        current_gate,
+        budget_fraction=budget_fraction,
+        macro_by_benchmark=macro_acceptance,
+    )
+    initial_gate = current_gate
+    initial_harness = copy.deepcopy(current_harness)
+    accepted_revisions = [copy.deepcopy(current_harness)]
+    versions: list[dict[str, Any]] = [_version_report(0, current_harness, current_eval, current_gate)]
+    active_checkpoints: list[dict[str, Any]] = [
+        _active_checkpoint(
+            round_index=0,
+            harness=current_harness,
+            gate=current_gate,
+            acceptance_eval=current_eval,
+            accepted_revision=True,
+            acceptance_policy=acceptance_policy,
+        )
+    ]
+    proposals: list[dict[str, Any]] = []
+    comparisons: list[dict[str, Any]] = []
+
+    for iteration in range(1, iterations + 1):
+        feedback = summarize_trajectory_feedback(
+            feedback_records,
+            current_gate,
+            current_harness,
+            round_index=iteration,
+            budget_fraction=budget_fraction,
+            trajectory_outcomes=trajectory_outcomes,
+        )
+        proposal = active_proposer.propose(current_harness, feedback, iteration=iteration)
+        candidate, validation_status = validate_harness(proposal.candidate, current_harness, iteration)
+        proposal_payload = proposal.to_json()
+        proposal_payload["validation_status"] = validation_status
+        proposal_payload["candidate"] = candidate
+        proposals.append(proposal_payload)
+
+        feature_names = list(candidate.get("required_features", current_gate.model.feature_names))
+        candidate_gate = _train_with_features(
+            train_records,
+            feedback_records,
+            feature_names=feature_names,
+            alpha=float(candidate.get("target_selective_risk", alpha)),
+            epochs=epochs,
+            learning_rate=learning_rate,
+            l2=l2,
+            min_coverage=min_coverage,
+            balance_benchmarks=balance_benchmarks,
+        )
+        round_acceptance = acceptance_shards[iteration - 1]
+        predecessor_eval = evaluate_gate(
+            round_acceptance,
+            current_gate,
+            budget_fraction=budget_fraction,
+            macro_by_benchmark=macro_acceptance,
+        )
+        candidate_eval = evaluate_gate(
+            round_acceptance,
+            candidate_gate,
+            budget_fraction=budget_fraction,
+            macro_by_benchmark=macro_acceptance,
+        )
+        comparison = compare_harnesses(
+            predecessor_eval,
+            candidate_eval,
+            epsilon=epsilon,
+            iteration=iteration,
+            previous_name=str(current_harness.get("name")),
+            candidate_name=str(candidate.get("name")),
+        )
+        comparisons.append(comparison)
+        comparison["acceptance_records"] = len(round_acceptance)
+        comparison["acceptance_record_ids"] = [record.record_id for record in round_acceptance]
+        versions.append(_version_report(iteration, candidate, candidate_eval, candidate_gate))
+        accepted_revision = comparison["winner"] == "candidate" or acceptance_policy == "always_accept"
+        comparison["acceptance_policy"] = acceptance_policy
+        comparison["accepted_revision"] = accepted_revision
+        if accepted_revision:
+            current_harness = candidate
+            current_gate = candidate_gate
+            accepted_revisions.append(copy.deepcopy(current_harness))
+        active_checkpoints.append(
+            _active_checkpoint(
+                round_index=iteration,
+                harness=current_harness,
+                gate=current_gate,
+                acceptance_eval=candidate_eval if accepted_revision else predecessor_eval,
+                accepted_revision=accepted_revision,
+                acceptance_policy=acceptance_policy,
+            )
+        )
+
+    current_eval = evaluate_gate(
+        reporting_acceptance,
+        current_gate,
+        budget_fraction=budget_fraction,
+        macro_by_benchmark=macro_acceptance,
+    )
+    final_test = evaluate_gate(test_records, current_gate, budget_fraction=budget_fraction)
+    initial_test = evaluate_gate(test_records, initial_gate, budget_fraction=budget_fraction)
+    for checkpoint in active_checkpoints:
+        checkpoint_gate = TrainedGate.from_json(checkpoint["gate"])
+        test_eval = evaluate_gate(test_records, checkpoint_gate, budget_fraction=budget_fraction)
+        checkpoint["test"] = test_eval
+        checkpoint["test_score"] = _score(test_eval)
+    return {
+        "method": {
+            "name": "RHI-MatSci",
+            "paper": "Recursive Harness Self-Improvement, arXiv:2607.15524",
+            "loop": [
+                "solve/observe action trajectories",
+                "summarize held-out failure feedback",
+                "propose prompt, contract, and hop mutation",
+                "validate declarative harness schema",
+                "compare consecutive versions on validation",
+                "accept candidate or retain predecessor",
+            ],
+            "proposer": type(active_proposer).__name__,
+            "test_is_used_only_after_selection": True,
+            "acceptance_shards_are_one_shot": True,
+        },
+        "config": {
+            "iterations": iterations,
+            "seed": seed,
+            "alpha": alpha,
+            "train_fraction": train_fraction,
+            "val_fraction": val_fraction,
+            "budget_fraction": budget_fraction,
+            "min_coverage": min_coverage,
+            "balance_benchmarks": balance_benchmarks,
+            "macro_acceptance": macro_acceptance,
+            "epsilon": epsilon,
+            "acceptance_policy": acceptance_policy,
+            "strict_signal_contract": strict_signal_contract,
+            "signal_coverage": signal_coverage(train_records + feedback_records + acceptance_records),
+        },
+        "sizes": {
+            "train": len(train_records),
+            "feedback": len(feedback_records),
+            "acceptance": len(acceptance_records),
+            "val": len(feedback_records),
+            "test": len(test_records),
+        },
+        "initial_harness": initial_harness,
+        "final_harness": current_harness,
+        "initial_gate": initial_gate.to_json(),
+        "final_gate": current_gate.to_json(),
+        "accepted_versions": [revision.get("name", "unknown") for revision in accepted_revisions],
+        "versions": versions,
+        "proposals": proposals,
+        "comparisons": comparisons,
+        "active_checkpoints": active_checkpoints,
+        "acceptance_shards": [[record.record_id for record in shard] for shard in acceptance_shards],
+        "validation": current_eval,
+        "initial_test": initial_test,
+        "test": final_test,
+    }
+
+
+def summarize_trajectory_feedback(
+    records: list[ActionRecord],
+    gate: TrainedGate,
+    harness: dict[str, Any],
+    *,
+    round_index: int,
+    budget_fraction: float,
+    trajectory_outcomes: dict[str, dict[str, Any]] | None = None,
+) -> TrajectoryFeedback:
+    probabilities = gate.predict_proba(records)
+    failure_counts = {
+        "confidently_wrong": 0,
+        "overconfident": 0,
+        "calibration_error": 0,
+        "evidence_conflict": 0,
+        "high_ood": 0,
+        "high_cost": 0,
+        "over_abstention": 0,
+    }
+    examples: list[dict[str, Any]] = []
+    error_indicators: list[float] = []
+    signal_values: dict[str, list[float]] = {}
+    for record, probability in zip(records, probabilities):
+        predicted = int(probability >= gate.threshold)
+        wrong = predicted != record.label
+        error_indicators.append(float(wrong))
+        feature = record.features
+        for name, value in feature.items():
+            if isinstance(value, (int, float)):
+                signal_values.setdefault(name, []).append(float(value))
+        if wrong and probability >= max(gate.threshold, 0.7):
+            failure_counts["confidently_wrong"] += 1
+            if len(examples) < 12:
+                examples.append(_feedback_example(record, probability, "confidently_wrong"))
+        if probability >= 0.8 and abs(probability - record.label) >= 0.3:
+            failure_counts["overconfident"] += 1
+        if abs(probability - record.label) >= 0.35:
+            failure_counts["calibration_error"] += 1
+        if feature.get("evidence_conflict", 0.0) >= 0.45:
+            failure_counts["evidence_conflict"] += 1
+        if feature.get("ood_score", 0.0) >= 0.65:
+            failure_counts["high_ood"] += 1
+        if feature.get("cost", 0.0) >= 0.65:
+            failure_counts["high_cost"] += 1
+        if predicted == 0 and record.label == 1:
+            failure_counts["over_abstention"] += 1
+
+    evaluated = evaluate_gate(records, gate, budget_fraction=budget_fraction)
+    internal_summary, external_summary, signal_effects = _summarize_signal_feedback(
+        records, error_indicators
+    )
+    trajectory_failure_counts, trajectory_metrics, trajectory_signal_effects = _summarize_trajectory_outcomes(
+        records, trajectory_outcomes or {}
+    )
+    return TrajectoryFeedback(
+        round_index=round_index,
+        harness_name=str(harness.get("name", "unknown")),
+        n_records=len(records),
+        failure_counts=failure_counts,
+        metric_snapshot={str(k): float(v) for k, v in evaluated["metrics"].items()},
+        examples=examples,
+        internal_signal_summary=internal_summary,
+        external_signal_summary=external_summary,
+        signal_effects=signal_effects,
+        trajectory_failure_counts=trajectory_failure_counts,
+        trajectory_metric_snapshot=trajectory_metrics,
+        trajectory_signal_effects=trajectory_signal_effects,
+    )
+
+
+def _summarize_trajectory_outcomes(
+    records: list[ActionRecord], outcomes: dict[str, dict[str, Any]]
+) -> tuple[dict[str, int], dict[str, float], dict[str, float]]:
+    """Aggregate complete-route outcomes without exposing them to the gate."""
+    counts = {
+        "wrong_final_commit": 0,
+        "missed_good_opportunity": 0,
+        "failed_recovery": 0,
+        "costly_failure": 0,
+        "over_verification": 0,
+        "unnecessary_abstention": 0,
+    }
+    rows: list[dict[str, Any]] = []
+    for record in records:
+        outcome = outcomes.get(record.record_id)
+        if not outcome:
+            continue
+        executed = bool(outcome.get("executed_candidate", False))
+        label = int(outcome.get("hidden_label", outcome.get("label", record.label)))
+        utility = float(outcome.get("hidden_utility", outcome.get("utility", 0.0)) or 0.0)
+        cost = float(outcome.get("cost", 0.0) or 0.0)
+        steps = list(outcome.get("steps", []))
+        action_ids = [str(step.get("agent_output", {}).get("action_id", "")) for step in steps if isinstance(step, dict)]
+        recovery = {"retrieve_more", "simulate", "ask_expert"}
+        terminal = action_ids[-1] if action_ids else ""
+        if executed and label == 0:
+            counts["wrong_final_commit"] += 1
+            if cost >= 0.65:
+                counts["costly_failure"] += 1
+        if not executed and label == 1:
+            counts["missed_good_opportunity"] += 1
+        if executed and label == 0 and any(action in recovery for action in action_ids[:-1]):
+            counts["failed_recovery"] += 1
+        if len(action_ids) >= 3:
+            counts["over_verification"] += 1
+        if not executed and label == 1 and terminal in {"abstain", "ask_expert"}:
+            counts["unnecessary_abstention"] += 1
+        rows.append({
+            "executed": float(executed),
+            "success": float(executed and label == 1),
+            "utility": utility if executed and label == 1 else 0.0,
+            "net_utility": utility - 0.15 * cost if executed else 0.0,
+            "cost": cost,
+            "steps": float(len(action_ids)),
+        })
+    if not rows:
+        return counts, {}, {}
+    metric_keys = rows[0].keys()
+    metrics = {f"mean_{key}": sum(row[key] for row in rows) / len(rows) for key in metric_keys}
+    metrics["trajectory_count"] = float(len(rows))
+    metrics["trajectory_risk"] = 1.0 - metrics["mean_success"] / max(metrics["mean_executed"], 1e-12)
+    metrics["coverage"] = metrics["mean_executed"]
+    signal_effects = {
+        "cost": metrics["mean_cost"],
+        "trajectory_length": metrics["mean_steps"],
+        "execution_rate": metrics["mean_executed"],
+    }
+    return counts, metrics, signal_effects
+
+
+def _summarize_signal_feedback(
+    records: list[ActionRecord], error_indicators: list[float]
+) -> tuple[dict[str, float], dict[str, float], dict[str, float]]:
+    internal = SignalAwareTrajectoryProposer.INTERNAL_SIGNALS
+    external = SignalAwareTrajectoryProposer.EXTERNAL_SIGNALS
+    summaries: dict[str, float] = {}
+    effects: dict[str, float] = {}
+    for name in sorted(internal | external):
+        values = [float(record.features[name]) for record in records if name in record.features]
+        if not values:
+            continue
+        summaries[name] = sum(values) / len(values)
+        paired = [(float(record.features[name]), error) for record, error in zip(records, error_indicators) if name in record.features]
+        if len(paired) < 2:
+            continue
+        mean_x = sum(x for x, _ in paired) / len(paired)
+        mean_y = sum(y for _, y in paired) / len(paired)
+        covariance = sum((x - mean_x) * (y - mean_y) for x, y in paired)
+        variance_x = sum((x - mean_x) ** 2 for x, _ in paired)
+        variance_y = sum((y - mean_y) ** 2 for _, y in paired)
+        denominator = (variance_x * variance_y) ** 0.5
+        effects[name] = abs(covariance / denominator) if denominator else 0.0
+    return (
+        {name: value for name, value in summaries.items() if name in internal},
+        {name: value for name, value in summaries.items() if name in external},
+        effects,
+    )
+
+
+def compare_harnesses(
+    previous: dict[str, Any],
+    candidate: dict[str, Any],
+    *,
+    epsilon: float,
+    iteration: int,
+    previous_name: str,
+    candidate_name: str,
+) -> dict[str, Any]:
+    previous_metrics = previous.get("macro_metrics", previous["metrics"])
+    candidate_metrics = candidate.get("macro_metrics", candidate["metrics"])
+    score_previous = _score(previous)
+    score_candidate = _score(candidate)
+    coverage_gain = float(candidate_metrics["coverage"]) - float(previous_metrics["coverage"])
+    risk_gain = float(previous_metrics["selective_risk"]) - float(candidate_metrics["selective_risk"])
+    brier_gain = float(previous_metrics["brier"]) - float(candidate_metrics["brier"])
+    aurc_gain = float(previous_metrics["aurc"]) - float(candidate_metrics["aurc"])
+    previous_gain = previous.get("macro_discovery_gain", previous["discovery_gain"])
+    candidate_gain = candidate.get("macro_discovery_gain", candidate["discovery_gain"])
+    utility_gain = float(candidate_gain["mean_utility"]) - float(previous_gain["mean_utility"])
+    hit_rate_gain = float(candidate_gain["hit_rate"]) - float(previous_gain["hit_rate"])
+    candidate_not_worse = (
+        coverage_gain >= -0.05
+        and risk_gain >= -0.01
+        and brier_gain >= -0.01
+        and aurc_gain >= -0.01
+        and utility_gain >= -0.01
+    )
+    winner = "candidate" if candidate_not_worse and score_candidate + epsilon < score_previous else "previous"
+    return {
+        "iteration": iteration,
+        "previous": previous_name,
+        "candidate": candidate_name,
+        "winner": winner,
+        "previous_score": score_previous,
+        "candidate_score": score_candidate,
+        "score_gain": score_previous - score_candidate,
+        "coverage_gain": coverage_gain,
+        "selective_risk_gain": risk_gain,
+        "brier_gain": brier_gain,
+        "aurc_gain": aurc_gain,
+        "mean_utility_gain": utility_gain,
+        "hit_rate_gain": hit_rate_gain,
+        "rationale": "candidate accepted only if fixed-budget action-worthiness improves while risk, coverage, calibration, and utility guards hold",
+    }
+
+
+def _score(report: dict[str, Any]) -> float:
+    metrics = report.get("macro_metrics", report["metrics"])
+    gain = report.get("macro_discovery_gain", report.get("discovery_gain", {}))
+    return action_worthiness_score(metrics, gain)
+
+
+def _feedback_example(record: ActionRecord, probability: float, failure: str) -> dict[str, Any]:
+    return {
+        "record_id": record.record_id,
+        "benchmark": record.benchmark,
+        "failure": failure,
+        "predicted_probability": round(float(probability), 6),
+        "label": record.label,
+        "action_type": record.action_type,
+        "features": dict(record.features),
+        "candidate_action": record.candidate_action[:500],
+    }
+
+
+def _version_report(version: int, harness: dict[str, Any], evaluation: dict[str, Any], gate: TrainedGate) -> dict[str, Any]:
+    return {
+        "version": version,
+        "harness": copy.deepcopy(harness),
+        "gate": gate.to_json(),
+        "validation": evaluation,
+    }
+
+
+def _active_checkpoint(
+    *,
+    round_index: int,
+    harness: dict[str, Any],
+    gate: TrainedGate,
+    acceptance_eval: dict[str, Any],
+    accepted_revision: bool,
+    acceptance_policy: str,
+) -> dict[str, Any]:
+    return {
+        "round": round_index,
+        "name": str(harness.get("name", f"H{round_index}")),
+        "harness": copy.deepcopy(harness),
+        "gate": gate.to_json(),
+        "acceptance": acceptance_eval,
+        "accepted_revision": accepted_revision,
+        "acceptance_policy": acceptance_policy,
+    }
+
+
+def _train_with_features(
+    train_records: list[ActionRecord],
+    val_records: list[ActionRecord],
+    *,
+    feature_names: list[str],
+    alpha: float,
+    epochs: int,
+    learning_rate: float,
+    l2: float,
+    min_coverage: float = 0.0,
+    balance_benchmarks: bool = False,
+) -> TrainedGate:
+    return train_gate_with_features(
+        train_records,
+        val_records,
+        feature_names=feature_names,
+        alpha=alpha,
+        epochs=epochs,
+        learning_rate=learning_rate,
+        l2=l2,
+        min_coverage=min_coverage,
+        balance_benchmarks=balance_benchmarks,
+    )
+
+
+def _acceptance_shards(
+    records: list[ActionRecord],
+    iterations: int,
+    seed: int,
+) -> list[list[ActionRecord]]:
+    if iterations <= 0:
+        return []
+    ordered = sorted(
+        records,
+        key=lambda record: hashlib.sha256(f"{seed}|acceptance|{record.record_id}".encode()).hexdigest(),
+    )
+    shards = [ordered[index::iterations] for index in range(iterations)]
+    if any(not shard for shard in shards):
+        raise ValueError("acceptance split is too small for one-shot RHI iteration shards")
+    return shards
+
+
+def _upsert_role(
+    roles: list[dict[str, Any]],
+    role_id: str,
+    instruction: str,
+    contract: list[str],
+    *,
+    kind: str = "adviser",
+) -> None:
+    for role in roles:
+        if role.get("id") == role_id:
+            role["instruction"] = instruction
+            role["contract"] = list(dict.fromkeys(role.get("contract", []) + contract))
+            return
+    roles.append({"id": role_id, "kind": kind, "instruction": instruction, "contract": contract})
+
+
+def _build_hops(harness: dict[str, Any], failure_counts: dict[str, int]) -> list[dict[str, Any]]:
+    hops = [
+        {"from": "orchestrator", "to": "evidence_auditor", "purpose": "audit evidence before action promotion"},
+        {"from": "evidence_auditor", "to": "uncertainty_gate", "purpose": "pass structured uncertainty contract"},
+        {"from": "uncertainty_gate", "to": "fallback_router", "purpose": "route action by calibrated reliability and cost"},
+    ]
+    if failure_counts.get("evidence_conflict", 0) or failure_counts.get("high_ood", 0):
+        hops.append({"from": "fallback_router", "to": "evidence_auditor", "purpose": "retrieve and re-audit conflicting or OOD evidence"})
+    if failure_counts.get("high_cost", 0):
+        hops.append({"from": "fallback_router", "to": "ask_expert", "purpose": "review irreversible or expensive action"})
+    if failure_counts.get("over_abstention", 0):
+        hops.append({"from": "fallback_router", "to": "uncertainty_gate", "purpose": "recalibrate cheap reversible actions before abstention"})
+    return hops
+
+
+def _updated_alpha(harness: dict[str, Any], feedback: TrajectoryFeedback) -> float:
+    current = float(harness.get("target_selective_risk", 0.1))
+    if feedback.failure_counts.get("confidently_wrong", 0) > 0:
+        return max(0.03, current - 0.02)
+    if feedback.failure_counts.get("over_abstention", 0) > feedback.n_records * 0.3:
+        return min(0.2, current + 0.02)
+    return current
+
+
+def _proposal_prompt(previous: dict[str, Any], feedback: TrajectoryFeedback, iteration: int) -> str:
+    return "\n".join(
+        [
+            "You are the RHI proposer for a materials-science action-worthiness harness.",
+            "Return only a JSON object that preserves the harness schema.",
+            "Modify roles, required_features, gates, target_selective_risk, and hops only when feedback justifies it.",
+            f"Iteration: {iteration}",
+            "Previous harness:",
+            harness_text(previous),
+            "Trajectory feedback:",
+            json.dumps(feedback.to_json(), sort_keys=True, indent=2),
+        ]
+    )
+
+
+def _extract_json(text: str) -> dict[str, Any]:
+    text = text.strip()
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError:
+        start = text.find("{")
+        end = text.rfind("}")
+        if start < 0 or end <= start:
+            raise ValueError("LLM proposer output does not contain a JSON object")
+        payload = json.loads(text[start : end + 1])
+    if not isinstance(payload, dict):
+        raise ValueError("LLM proposer output must be a JSON object")
+    return payload

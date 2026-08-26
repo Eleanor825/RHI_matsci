@@ -1,0 +1,12 @@
+[
+  {
+    "record_id": "unique-material::mb-log-kvrh-00900",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-03819",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  }
+]

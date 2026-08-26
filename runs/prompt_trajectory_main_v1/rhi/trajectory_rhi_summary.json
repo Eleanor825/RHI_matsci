@@ -1,0 +1,262 @@
+{
+  "split_sizes": {
+    "train": 538,
+    "feedback": 124,
+    "acceptance": 88,
+    "test": 150
+  },
+  "accepted_versions": [
+    "H0_rhi_matsci",
+    "H1_trajectory_feedback"
+  ],
+  "proposers": [
+    "signal_aware_deterministic_proposer",
+    "signal_aware_deterministic_proposer",
+    "signal_aware_deterministic_proposer"
+  ],
+  "signal_contracts": [
+    {
+      "internal": [
+        "verbal_confidence",
+        "perturbation_stability"
+      ],
+      "external": [
+        "evidence_support",
+        "evidence_conflict",
+        "ood_score"
+      ],
+      "selection_basis": "feedback_split_abs_error_association"
+    },
+    {
+      "internal": [
+        "verbal_confidence",
+        "perturbation_stability"
+      ],
+      "external": [
+        "evidence_support",
+        "evidence_conflict",
+        "ood_score"
+      ],
+      "selection_basis": "feedback_split_abs_error_association"
+    },
+    {
+      "internal": [
+        "verbal_confidence",
+        "perturbation_stability"
+      ],
+      "external": [
+        "evidence_support",
+        "evidence_conflict",
+        "ood_score"
+      ],
+      "selection_basis": "feedback_split_abs_error_association"
+    }
+  ],
+  "comparisons": [
+    {
+      "iteration": 1,
+      "previous": "H0_rhi_matsci",
+      "candidate": "H1_trajectory_feedback",
+      "winner": "candidate",
+      "previous_score": 0.5669531498223543,
+      "candidate_score": 0.5184557637901471,
+      "score_gain": 0.04849738603220721,
+      "coverage_gain": 0.0,
+      "selective_risk_gain": 0.0,
+      "brier_gain": 0.05609869109553303,
+      "aurc_gain": 0.05279383232494095,
+      "mean_utility_gain": 0.0,
+      "hit_rate_gain": 0.0,
+      "rationale": "candidate accepted only if fixed-budget action-worthiness improves while risk, coverage, calibration, and utility guards hold",
+      "acceptance_records": 30,
+      "acceptance_record_ids": [
+        "extreme-rlcc::C6::289aa70120dd",
+        "matbench-pairwise::d4c3197f899d",
+        "unique-material::mb-log-kvrh-07137",
+        "unique-material::mb-log-kvrh-03146",
+        "matbench-pairwise::9592eb12294e",
+        "unique-material::mb-log-kvrh-08439",
+        "unique-material::mb-log-kvrh-09302",
+        "unique-material::mb-log-kvrh-10005",
+        "extreme-rlcc::C8::f3c7eb35c9e0",
+        "extreme-rlcc::C5::c1c80bc4a52e",
+        "extreme-rlcc::C10::1c9517d1fc37",
+        "matbench-pairwise::399234cb19e7",
+        "matbench-pairwise::965ec921f3ae",
+        "matbench-pairwise::d360c508c26e",
+        "unique-material::mb-log-kvrh-09569",
+        "unique-material::mb-log-kvrh-00003",
+        "extreme-rlcc::C9::6385ecd86a6a",
+        "extreme-rlcc::C8::a8626f59b7fd",
+        "unique-material::mb-log-kvrh-04986",
+        "extreme-rlcc::C6::a3d011aa161b",
+        "matbench-pairwise::b382e04b0999",
+        "unique-material::mb-log-kvrh-02861",
+        "matbench-pairwise::fdd0e386d387",
+        "extreme-rlcc::C7::7e26f42b634a",
+        "matbench-pairwise::64b66f96470e",
+        "unique-material::mb-log-kvrh-02302",
+        "unique-material::mb-log-kvrh-08225",
+        "unique-material::mb-log-kvrh-01697",
+        "extreme-rlcc::C6::8cf5d7869a45",
+        "unique-material::mb-log-kvrh-02281"
+      ],
+      "acceptance_policy": "guarded",
+      "accepted_revision": true
+    },
+    {
+      "iteration": 2,
+      "previous": "H1_trajectory_feedback",
+      "candidate": "H2_trajectory_feedback",
+      "winner": "previous",
+      "previous_score": 0.292969729135907,
+      "candidate_score": 0.292969729135907,
+      "score_gain": 0.0,
+      "coverage_gain": 0.0,
+      "selective_risk_gain": 0.0,
+      "brier_gain": 0.0,
+      "aurc_gain": 0.0,
+      "mean_utility_gain": 0.0,
+      "hit_rate_gain": 0.0,
+      "rationale": "candidate accepted only if fixed-budget action-worthiness improves while risk, coverage, calibration, and utility guards hold",
+      "acceptance_records": 29,
+      "acceptance_record_ids": [
+        "extreme-rlcc::C6::7a342c20fdd8",
+        "unique-material::mb-log-kvrh-10552",
+        "matbench-pairwise::b1ff9b5ad485",
+        "extreme-rlcc::C8::09c94702ba6f",
+        "extreme-rlcc::C4::36b6e714e9b9",
+        "extreme-rlcc::C5::6898bdd489ff",
+        "matbench-pairwise::846820028744",
+        "matbench-pairwise::312ae6155000",
+        "extreme-rlcc::C5::a5856a6de0f9",
+        "matbench-pairwise::978e6c896968",
+        "matbench-pairwise::5277a7e600a9",
+        "matbench-pairwise::27b502fa2c8b",
+        "extreme-rlcc::C9::531e9ca17eb3",
+        "matbench-pairwise::13caac87d8f2",
+        "unique-material::mb-log-kvrh-10334",
+        "matbench-pairwise::8eb32f7b15de",
+        "extreme-rlcc::C3::94bd1bcc35ba",
+        "unique-material::mb-log-kvrh-08868",
+        "matbench-pairwise::b2008acedb05",
+        "extreme-rlcc::C2::fc56191442f2",
+        "matbench-pairwise::3fa9e3009f63",
+        "unique-material::mb-log-kvrh-00657",
+        "matbench-pairwise::ec13913a3d5a",
+        "matbench-pairwise::c7a3e4f9f532",
+        "extreme-rlcc::C1::51f76216bda0",
+        "matbench-pairwise::b2f072432423",
+        "matbench-pairwise::672d96debdde",
+        "unique-material::mb-log-kvrh-05181",
+        "matbench-pairwise::a1499aad6cd3"
+      ],
+      "acceptance_policy": "guarded",
+      "accepted_revision": false
+    },
+    {
+      "iteration": 3,
+      "previous": "H1_trajectory_feedback",
+      "candidate": "H3_trajectory_feedback",
+      "winner": "previous",
+      "previous_score": 0.4521681087584471,
+      "candidate_score": 0.4521681087584471,
+      "score_gain": 0.0,
+      "coverage_gain": 0.0,
+      "selective_risk_gain": 0.0,
+      "brier_gain": 0.0,
+      "aurc_gain": 0.0,
+      "mean_utility_gain": 0.0,
+      "hit_rate_gain": 0.0,
+      "rationale": "candidate accepted only if fixed-budget action-worthiness improves while risk, coverage, calibration, and utility guards hold",
+      "acceptance_records": 29,
+      "acceptance_record_ids": [
+        "extreme-rlcc::C1::8553466cc204",
+        "extreme-rlcc::C10::f5d82d11898a",
+        "matbench-pairwise::1b5241ead8f2",
+        "matbench-pairwise::4c1201c089df",
+        "extreme-rlcc::C8::76ebd34bfc2b",
+        "matbench-pairwise::2114d48d8bcb",
+        "unique-material::mb-log-kvrh-05049",
+        "matbench-pairwise::3e3ef677229f",
+        "matbench-pairwise::e174ad665bfc",
+        "matbench-pairwise::0bd2bcdb0fb8",
+        "extreme-rlcc::C3::6bfeffa336f0",
+        "extreme-rlcc::C5::179971d622be",
+        "extreme-rlcc::C8::0325c9802b73",
+        "unique-material::mb-log-kvrh-10557",
+        "matbench-pairwise::f46b5ba950bf",
+        "extreme-rlcc::C9::7c3b2b30a404",
+        "extreme-rlcc::C6::ee4dcbaa6e07",
+        "matbench-pairwise::b63414e422f0",
+        "matbench-pairwise::84cd404f668c",
+        "extreme-rlcc::C1::97872d56fe57",
+        "unique-material::mb-log-kvrh-08495",
+        "matbench-pairwise::d88d64d4cf31",
+        "extreme-rlcc::C1::66bfa6a86558",
+        "matbench-pairwise::86a26c1d5c4c",
+        "unique-material::mb-log-kvrh-02959",
+        "matbench-pairwise::48b8b24124e0",
+        "extreme-rlcc::C2::10bec6929b3f",
+        "unique-material::mb-log-kvrh-04207",
+        "extreme-rlcc::C1::d881c3216e7d"
+      ],
+      "acceptance_policy": "guarded",
+      "accepted_revision": false
+    }
+  ],
+  "initial_test_metrics": {
+    "n": 150.0,
+    "coverage": 0.0,
+    "selective_accuracy": 0.0,
+    "selective_risk": 0.0,
+    "confidently_wrong_rate": 0.0,
+    "accuracy_at_threshold": 0.88,
+    "ece": 0.28608071417676956,
+    "brier": 0.19213296341726235,
+    "log_loss": 0.5756283791585577,
+    "aurc": 0.8798732288527299,
+    "coverage_at_risk_0.05": 0.006666666666666667,
+    "coverage_at_risk_0.10": 0.006666666666666667
+  },
+  "final_test_metrics": {
+    "n": 150.0,
+    "coverage": 0.0,
+    "selective_accuracy": 0.0,
+    "selective_risk": 0.0,
+    "confidently_wrong_rate": 0.0,
+    "accuracy_at_threshold": 0.88,
+    "ece": 0.21079440533739574,
+    "brier": 0.1521720809710083,
+    "log_loss": 0.49072486087466,
+    "aurc": 0.9082732102736089,
+    "coverage_at_risk_0.05": 0.0,
+    "coverage_at_risk_0.10": 0.0
+  },
+  "active_checkpoints": [
+    {
+      "round": 0,
+      "harness": "H0_rhi_matsci",
+      "accepted_revision": true,
+      "test_score": 0.5268506093737928
+    },
+    {
+      "round": 1,
+      "harness": "H1_trajectory_feedback",
+      "accepted_revision": true,
+      "test_score": 0.523129873624334
+    },
+    {
+      "round": 2,
+      "harness": "H1_trajectory_feedback",
+      "accepted_revision": false,
+      "test_score": 0.523129873624334
+    },
+    {
+      "round": 3,
+      "harness": "H1_trajectory_feedback",
+      "accepted_revision": false,
+      "test_score": 0.523129873624334
+    }
+  ]
+}

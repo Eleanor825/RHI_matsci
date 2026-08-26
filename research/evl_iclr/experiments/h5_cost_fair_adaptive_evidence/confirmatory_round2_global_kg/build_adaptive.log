@@ -1,0 +1,61 @@
+{
+  "all_train_group_overlaps_empty": true,
+  "claim_boundary": {
+    "matbot_runtime": false,
+    "observed_tool_views_are_available_only_after_acquisition": true,
+    "prior_views_use_held_out_outcome": false
+  },
+  "deployment_training_hash": "061d37dd108b95cca7c85e6558e06f9b13db19ca4979258aa4135ad41bbbb130",
+  "environment": "structured",
+  "fold_audits": [
+    {
+      "fit_record_count": 12690,
+      "fold": 0,
+      "group_overlap": [],
+      "held_record_count": 2498,
+      "training_hash": "2defa586174d5770fca3b14a5c47e03b3fb95c0619e30b2d9503f1930cba9b32"
+    },
+    {
+      "fit_record_count": 11859,
+      "fold": 1,
+      "group_overlap": [],
+      "held_record_count": 3329,
+      "training_hash": "6be3dd97bc19c69dd920f76b92bccb30f3f57e5886131aec462a77a38bf3d9e0"
+    },
+    {
+      "fit_record_count": 13196,
+      "fold": 2,
+      "group_overlap": [],
+      "held_record_count": 1992,
+      "training_hash": "ee49164d7f778a51c961566469adadede96fe3ddaf43666f03a29804258b31dd"
+    },
+    {
+      "fit_record_count": 9705,
+      "fold": 3,
+      "group_overlap": [],
+      "held_record_count": 5483,
+      "training_hash": "a65e4e16a15e944f2526cf50c8362ae49606ccc7818c16d2a2243f37139c027e"
+    },
+    {
+      "fit_record_count": 13302,
+      "fold": 4,
+      "group_overlap": [],
+      "held_record_count": 1886,
+      "training_hash": "d939a54fde534c893edaa189285d994dd1e51cfacee0a2d208b50cdc7db55afd"
+    }
+  ],
+  "folds": 5,
+  "output": "research/evl_iclr/data/adaptive_evidence_h5_round2_fresh_24900.jsonl",
+  "replicas": 3,
+  "schema_version": "adaptive-evidence-trajectory-manifest-v1",
+  "seed": 2026082304,
+  "sha256": "1c6e044cc09e5e36e31976455c1f723f6c6ae22c0f70c4112829935dcd4c9a77",
+  "source": "research/evl_iclr/data/sequential_tool_trajectories_h5_round2_fresh.jsonl",
+  "split_counts": {
+    "acceptance": 2538,
+    "feedback": 3799,
+    "test": 3375,
+    "train": 15188
+  },
+  "trajectory_count": 24900
+}

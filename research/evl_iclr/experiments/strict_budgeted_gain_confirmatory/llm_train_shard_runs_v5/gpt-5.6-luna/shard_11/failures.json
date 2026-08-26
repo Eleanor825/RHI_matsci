@@ -1,0 +1,12 @@
+[
+  {
+    "record_id": "unique-material::mb-log-kvrh-02733",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C9::014208c2663b",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  }
+]

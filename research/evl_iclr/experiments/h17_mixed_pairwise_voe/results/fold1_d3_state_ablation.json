@@ -1,0 +1,311 @@
+{
+  "development_only": true,
+  "fold_dir": "benchmarks/external_h17_pairwise/folds/fold_1",
+  "methods": {
+    "d3_boundary": {
+      "acceptance": {
+        "calibration": {
+          "accuracy_at_threshold": 0.9057515708071532,
+          "aurc": 0.749046405517081,
+          "brier": 0.0581521496776269,
+          "confidently_wrong_rate": 0.0,
+          "coverage": 0.0,
+          "coverage_at_risk_0.05": 0.0009666505558240696,
+          "coverage_at_risk_0.10": 0.0009666505558240696,
+          "ece": 0.015764817974980107,
+          "log_loss": 0.21114520518420452,
+          "n": 2069.0,
+          "selective_accuracy": 0.0,
+          "selective_risk": 0.0
+        },
+        "certified": false,
+        "coverage": 0.0,
+        "fixed_coverage": {
+          "risk_at_0.10": {
+            "coverage": 0.1000483325277912,
+            "selective_risk": 0.4927536231884058
+          },
+          "risk_at_0.25": {
+            "coverage": 0.250362493958434,
+            "selective_risk": 0.6621621621621622
+          },
+          "risk_at_0.50": {
+            "coverage": 0.500241662638956,
+            "selective_risk": 0.8173913043478261
+          }
+        },
+        "mean_selected_gain": 0.0,
+        "population_gain": 0.0,
+        "risk_upper_bound": 0.0,
+        "selected_count": 0,
+        "selective_risk": 0.0
+      },
+      "calibrator": {
+        "beta": 0.1,
+        "gain_bounds": [
+          -1.4,
+          1.0
+        ],
+        "parameters_by_task": {
+          "external_pairwise_mixed_log_kvrh": {
+            "negative_gain": {
+              "base_variance": 0.003851849557332692,
+              "external_boundary_weight": 3.059022737137205e-07,
+              "external_weight": 0.6202332494712512,
+              "interaction_weight": 3.059022831876017e-07,
+              "internal_boundary_weight": 3.059022737137205e-07,
+              "internal_weight": 2.88295459846171,
+              "mean_bias": -0.013087682897604053,
+              "mean_slope": 0.9617048014905017
+            },
+            "positive_gain": {
+              "base_variance": 0.00035517350534841684,
+              "external_boundary_weight": 0.0017272146758654286,
+              "external_weight": 0.02439185189596307,
+              "interaction_weight": 0.00038030052360146,
+              "internal_boundary_weight": 0.0019503908328916734,
+              "internal_weight": 0.00154480023849122,
+              "mean_bias": 0.043538981920944686,
+              "mean_slope": 0.08802714686096966
+            },
+            "positive_probability": {
+              "base_variance": 3.059023205018258e-07,
+              "external_boundary_weight": 3.059022737137205e-07,
+              "external_weight": 0.15585041669957667,
+              "interaction_weight": 3.059022737137205e-07,
+              "internal_boundary_weight": 3.059022737137205e-07,
+              "internal_weight": 0.5398840269922415,
+              "mean_bias": 0.02389588965414376,
+              "mean_slope": 0.5316521751481396
+            }
+          }
+        },
+        "tail_weight": 0.5,
+        "type": "source_decomposed_hurdle_gain_calibrator",
+        "uses_decision_instability": true,
+        "uses_source_variance": true
+      },
+      "deployed_test_population_gain": 0.0,
+      "feedback_selection": {
+        "alpha": 0.2,
+        "candidate_prefixes": 8,
+        "delta": 0.05,
+        "empirical_risk": 0.0,
+        "risk_upper_bound": 0.0,
+        "selected_count": 0,
+        "selected_fraction": 0.0,
+        "threshold": 1.000000000001
+      },
+      "raw_state_summary": {
+        "acceptance": {
+          "external_boundary_nonzero_fraction": 0.044465925567907204,
+          "internal_boundary_nonzero_fraction": 0.13388110198163364,
+          "mean_external_boundary_instability": 0.010002117297386611,
+          "mean_internal_boundary_instability": 0.00809959235163451
+        },
+        "feedback": {
+          "external_boundary_nonzero_fraction": 0.050934880722114766,
+          "internal_boundary_nonzero_fraction": 0.08252740167633785,
+          "mean_external_boundary_instability": 0.012284700698974383,
+          "mean_internal_boundary_instability": 0.001658773497608901
+        },
+        "test": {
+          "external_boundary_nonzero_fraction": 0.032771961766044605,
+          "internal_boundary_nonzero_fraction": 0.10650887573964497,
+          "mean_external_boundary_instability": 0.0068648731293427705,
+          "mean_internal_boundary_instability": 0.005649238385925119
+        }
+      },
+      "test": {
+        "calibration": {
+          "accuracy_at_threshold": 0.9157942649066909,
+          "aurc": 0.7555937130507698,
+          "brier": 0.04854695141037162,
+          "confidently_wrong_rate": 0.0,
+          "coverage": 0.0,
+          "coverage_at_risk_0.05": 0.0036413290851160674,
+          "coverage_at_risk_0.10": 0.005461993627674101,
+          "ece": 0.013042436988185736,
+          "log_loss": 0.15650570488269383,
+          "n": 2197.0,
+          "selective_accuracy": 0.0,
+          "selective_risk": 0.0
+        },
+        "certified": false,
+        "coverage": 0.0,
+        "fixed_coverage": {
+          "risk_at_0.10": {
+            "coverage": 0.10013654984069185,
+            "selective_risk": 0.4590909090909091
+          },
+          "risk_at_0.25": {
+            "coverage": 0.2503413746017296,
+            "selective_risk": 0.6872727272727273
+          },
+          "risk_at_0.50": {
+            "coverage": 0.5002275830678198,
+            "selective_risk": 0.8325750682438581
+          }
+        },
+        "mean_selected_gain": 0.0,
+        "population_gain": 0.0,
+        "risk_upper_bound": 0.0,
+        "selected_count": 0,
+        "selective_risk": 0.0
+      }
+    },
+    "variance_only": {
+      "acceptance": {
+        "calibration": {
+          "accuracy_at_threshold": 0.9057515708071532,
+          "aurc": 0.7490521895117548,
+          "brier": 0.058151982057794614,
+          "confidently_wrong_rate": 0.0,
+          "coverage": 0.0,
+          "coverage_at_risk_0.05": 0.0009666505558240696,
+          "coverage_at_risk_0.10": 0.0009666505558240696,
+          "ece": 0.015764350617641486,
+          "log_loss": 0.21114743592929083,
+          "n": 2069.0,
+          "selective_accuracy": 0.0,
+          "selective_risk": 0.0
+        },
+        "certified": false,
+        "coverage": 0.0,
+        "fixed_coverage": {
+          "risk_at_0.10": {
+            "coverage": 0.1000483325277912,
+            "selective_risk": 0.4927536231884058
+          },
+          "risk_at_0.25": {
+            "coverage": 0.250362493958434,
+            "selective_risk": 0.6621621621621622
+          },
+          "risk_at_0.50": {
+            "coverage": 0.500241662638956,
+            "selective_risk": 0.8173913043478261
+          }
+        },
+        "mean_selected_gain": 0.0,
+        "population_gain": 0.0,
+        "risk_upper_bound": 0.0,
+        "selected_count": 0,
+        "selective_risk": 0.0
+      },
+      "calibrator": {
+        "beta": 0.1,
+        "gain_bounds": [
+          -1.4,
+          1.0
+        ],
+        "parameters_by_task": {
+          "external_pairwise_mixed_log_kvrh": {
+            "negative_gain": {
+              "base_variance": 0.003851503846094395,
+              "external_boundary_weight": 0.6931471805599453,
+              "external_weight": 0.6202591667469514,
+              "interaction_weight": 1.0636511322959462e-06,
+              "internal_boundary_weight": 0.6931471805599453,
+              "internal_weight": 2.8830087877019848,
+              "mean_bias": -0.013087704902796928,
+              "mean_slope": 0.9617054380732397
+            },
+            "positive_gain": {
+              "base_variance": 0.0005182605430578632,
+              "external_boundary_weight": 2.1269280110429727,
+              "external_weight": 0.04133978240531676,
+              "interaction_weight": 3.059022737137205e-07,
+              "internal_boundary_weight": 2.1269280110429727,
+              "internal_weight": 3.059022737137205e-07,
+              "mean_bias": 0.04653433945178368,
+              "mean_slope": 0.10649563593506213
+            },
+            "positive_probability": {
+              "base_variance": 3.059023205018258e-07,
+              "external_boundary_weight": 0.6931471805599453,
+              "external_weight": 0.15596061430356115,
+              "interaction_weight": 1.1183636021956892e-06,
+              "internal_boundary_weight": 0.6931471805599453,
+              "internal_weight": 0.5393052094348187,
+              "mean_bias": 0.023887106051556202,
+              "mean_slope": 0.5314158946777068
+            }
+          }
+        },
+        "tail_weight": 0.5,
+        "type": "source_decomposed_hurdle_gain_calibrator",
+        "uses_decision_instability": false,
+        "uses_source_variance": true
+      },
+      "deployed_test_population_gain": 0.0,
+      "feedback_selection": {
+        "alpha": 0.2,
+        "candidate_prefixes": 8,
+        "delta": 0.05,
+        "empirical_risk": 0.0,
+        "risk_upper_bound": 0.0,
+        "selected_count": 0,
+        "selected_fraction": 0.0,
+        "threshold": 1.000000000001
+      },
+      "raw_state_summary": {
+        "acceptance": {
+          "external_boundary_nonzero_fraction": 0.044465925567907204,
+          "internal_boundary_nonzero_fraction": 0.13388110198163364,
+          "mean_external_boundary_instability": 0.010002117297386611,
+          "mean_internal_boundary_instability": 0.00809959235163451
+        },
+        "feedback": {
+          "external_boundary_nonzero_fraction": 0.050934880722114766,
+          "internal_boundary_nonzero_fraction": 0.08252740167633785,
+          "mean_external_boundary_instability": 0.012284700698974383,
+          "mean_internal_boundary_instability": 0.001658773497608901
+        },
+        "test": {
+          "external_boundary_nonzero_fraction": 0.032771961766044605,
+          "internal_boundary_nonzero_fraction": 0.10650887573964497,
+          "mean_external_boundary_instability": 0.0068648731293427705,
+          "mean_internal_boundary_instability": 0.005649238385925119
+        }
+      },
+      "test": {
+        "calibration": {
+          "accuracy_at_threshold": 0.9157942649066909,
+          "aurc": 0.7555922637319972,
+          "brier": 0.048546567481402104,
+          "confidently_wrong_rate": 0.0,
+          "coverage": 0.0,
+          "coverage_at_risk_0.05": 0.0036413290851160674,
+          "coverage_at_risk_0.10": 0.005461993627674101,
+          "ece": 0.013041922244066107,
+          "log_loss": 0.15650520810308727,
+          "n": 2197.0,
+          "selective_accuracy": 0.0,
+          "selective_risk": 0.0
+        },
+        "certified": false,
+        "coverage": 0.0,
+        "fixed_coverage": {
+          "risk_at_0.10": {
+            "coverage": 0.10013654984069185,
+            "selective_risk": 0.4590909090909091
+          },
+          "risk_at_0.25": {
+            "coverage": 0.2503413746017296,
+            "selective_risk": 0.6872727272727273
+          },
+          "risk_at_0.50": {
+            "coverage": 0.5002275830678198,
+            "selective_risk": 0.8325750682438581
+          }
+        },
+        "mean_selected_gain": 0.0,
+        "population_gain": 0.0,
+        "risk_upper_bound": 0.0,
+        "selected_count": 0,
+        "selective_risk": 0.0
+      }
+    }
+  },
+  "task": "external_pairwise_mixed_log_kvrh"
+}

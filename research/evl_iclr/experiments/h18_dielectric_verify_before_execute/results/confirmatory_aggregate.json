@@ -1,0 +1,95 @@
+{
+  "confirmatory_folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "development_fold": 0,
+  "experiment": "h18_dielectric_verify_before_execute_voe",
+  "methods": {
+    "external_variance": {
+      "certified_folds": 0,
+      "fold_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_deployed_test_gain": 0.0,
+      "test_risks": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "no_source_voi_expected": {
+      "certified_folds": 4,
+      "fold_gains": [
+        0.0005371805329832238,
+        0.0005589641569386777,
+        0.0011243806932989108,
+        0.0024658180986641865
+      ],
+      "mean_deployed_test_gain": 0.0011715858704712497,
+      "test_risks": [
+        0.0,
+        0.15328467153284672,
+        0.0,
+        0.07024793388429752
+      ]
+    },
+    "no_source_voi_probability": {
+      "certified_folds": 4,
+      "fold_gains": [
+        0.0005779960267145353,
+        0.0006726537922866479,
+        0.0011157768271563412,
+        0.0024818148393906856
+      ],
+      "mean_deployed_test_gain": 0.0012120603713870527,
+      "test_risks": [
+        0.0,
+        0.14912280701754385,
+        0.0,
+        0.06611570247933884
+      ]
+    },
+    "source_voi_expected": {
+      "certified_folds": 4,
+      "fold_gains": [
+        0.0004395931109176234,
+        0.0007038108156527507,
+        0.0010979719220579214,
+        0.0025249444494035464
+      ],
+      "mean_deployed_test_gain": 0.0011915800745079604,
+      "test_risks": [
+        0.0,
+        0.14634146341463414,
+        0.0,
+        0.06276150627615062
+      ]
+    },
+    "source_voi_probability": {
+      "certified_folds": 4,
+      "fold_gains": [
+        0.0004986750163124555,
+        0.00070959527704969,
+        0.0011563013487990701,
+        0.0024706308537761003
+      ],
+      "mean_deployed_test_gain": 0.001208800623984329,
+      "test_risks": [
+        0.0,
+        0.15517241379310345,
+        0.0,
+        0.072
+      ]
+    }
+  },
+  "preregistered_primary": "source_voi_probability",
+  "primary_confirmatory_pass": false,
+  "primary_minus_matched_mean_gain": -3.2597474027237262e-06
+}

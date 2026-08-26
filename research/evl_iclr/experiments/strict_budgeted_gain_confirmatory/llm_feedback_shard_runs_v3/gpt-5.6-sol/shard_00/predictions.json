@@ -1,0 +1,156 @@
+{
+  "cell_count": 4,
+  "gain_definition": "strict_realized",
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "record_count": 4,
+  "reservation_values": {
+    "extreme_properties": 0.7797663551401869
+  },
+  "rows": [
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2443,
+      "mean_p_positive_gain": 0.001,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.97,
+          "expected_gain": -0.2443,
+          "expected_normalized_utility": 0.6,
+          "p_positive_gain": 0.001,
+          "p_success": 0.001,
+          "rationale": ""
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C5::ee8004673546",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2408,
+      "mean_p_positive_gain": 0.01,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.88,
+          "expected_gain": -0.2408,
+          "expected_normalized_utility": 0.3,
+          "p_positive_gain": 0.01,
+          "p_success": 0.01,
+          "rationale": "The candidate appears exceptionally large and structurally complex, with an apparently truncated or syntactically incomplete molecular specification. Its likelihood of satisfying all requested property constraints and being a viable C2 extrapolation is therefore very low. The substantial action cost and nonzero irreversible-failure exposure dominate the small expected scientific benefit."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C2::19eb398b5c11",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2325,
+      "mean_p_positive_gain": 0.01,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.78,
+          "expected_gain": -0.2325,
+          "expected_normalized_utility": 0.01,
+          "p_positive_gain": 0.01,
+          "p_success": 0.01,
+          "rationale": "The extremely large, structurally complex candidate has a very low estimated probability of simultaneously satisfying the specified MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE criteria. Using normalized action cost 0.80 and a reversibility-implied irreversible-failure harm of approximately 0.50, the expected strict gain is substantially negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C2::16b06c79c718",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.8188629283489096,
+      "worthy": 1
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.24,
+      "mean_p_positive_gain": 0.015,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.93,
+          "expected_gain": -0.24,
+          "expected_normalized_utility": 0.003,
+          "p_positive_gain": 0.015,
+          "p_success": 0.02,
+          "rationale": "The candidate is an extremely large, structurally complex, and apparently truncated molecule, making simultaneous agreement with all requested molecular-property RMSE bounds very unlikely. The high action cost and moderate reversibility further make failure costly; conditional scientific utility is estimated to be low even if advanced."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C10::608dd2f0ed0c",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    }
+  ],
+  "schema_version": "sequential-v2-generic-llm-worthiness-v2",
+  "split": "feedback",
+  "stage": "base",
+  "summary": {
+    "by_model": {
+      "gpt-5.6-sol": {
+        "accuracy_at_threshold": 0.75,
+        "aurc": 0.8541666666666666,
+        "brier": 0.2451065,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.241,
+        "expected_gain_mae": 0.29344073208722743,
+        "log_loss": 1.157833664996306,
+        "n": 4.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      }
+    },
+    "by_task": {
+      "extreme_properties": {
+        "accuracy_at_threshold": 0.75,
+        "aurc": 0.8541666666666666,
+        "brier": 0.2451065,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.241,
+        "log_loss": 1.157833664996306,
+        "n": 4.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      }
+    },
+    "ensemble": {
+      "accuracy_at_threshold": 0.75,
+      "aurc": 0.8541666666666666,
+      "brier": 0.2451065,
+      "confidently_wrong_rate": 0.0,
+      "coverage": 0.0,
+      "coverage_at_risk_0.05": 0.0,
+      "coverage_at_risk_0.10": 0.0,
+      "ece": 0.241,
+      "expected_gain_mae": 0.29344073208722743,
+      "expected_gain_variance_error_correlation": 0.0,
+      "log_loss": 1.157833664996306,
+      "n": 4.0,
+      "probability_variance_error_correlation": 0.0,
+      "selective_accuracy": 0.0,
+      "selective_risk": 0.0
+    }
+  }
+}

@@ -1,0 +1,435 @@
+{
+  "cell_count": 14,
+  "cost_aware": false,
+  "gain_definition": "strict_realized",
+  "models": [
+    "gpt-5.6-terra"
+  ],
+  "record_count": 14,
+  "reservation_values": {
+    "discover_unique": 0.82495517705065,
+    "extreme_properties": 0.7797663551401869,
+    "matbench_pairwise": 0.8699373695198329
+  },
+  "rows": [
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "extreme_properties",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.212,
+      "mean_p_positive_gain": 0.035,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.76,
+          "expected_gain": -0.212,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.035,
+          "p_success": 0.04,
+          "rationale": "The proposed structure appears syntactically incomplete and exceptionally large/complex relative to a conventional RL-CC property-extrapolation candidate, making valid molecular interpretation and simultaneous satisfaction of MW, logP, TPSA, QED, HBA, HBD, and DRD2 bounds unlikely. With action cost 0.8 and partial irreversibility, expected failure penalties dominate the low probability of scientific success."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C6::8cf5d7869a45",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "matbench_pairwise",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.464,
+      "mean_p_positive_gain": 0.68,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.48,
+          "expected_gain": 0.464,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.68,
+          "p_success": 0.68,
+          "rationale": "Candidate A has composition-level plausibility for higher stiffness than Ca-Cl material B, but the equal high surrogate tiers, small margin, and substantial estimated noise leave pairwise correctness only moderately likely. Cost is 0.03; failure harm uses the 0.20 irreversible fraction implied by reversibility."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::3c6c393f2d55",
+      "split": "train",
+      "stage": "base",
+      "target_gain": 0.8337787056367432,
+      "worthy": 1
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "matbench_pairwise",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.3033,
+      "mean_p_positive_gain": 0.511,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.34,
+          "expected_gain": 0.3033,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.511,
+          "p_success": 0.511,
+          "rationale": "The surrogate tiers are tied and the margin is negligible relative to the estimated noise, yielding only a near-chance posterior advantage for B. Conditional scientific utility is estimated as moderately high if the high-bulk-modulus follow-up succeeds; visible cost and limited irreversibility impose fixed and failure-contingent deductions."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::99c1fee732a6",
+      "split": "train",
+      "stage": "base",
+      "target_gain": 0.37803757828810025,
+      "worthy": 1
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.144,
+      "mean_p_positive_gain": 0.38,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.38,
+          "expected_gain": 0.144,
+          "expected_normalized_utility": 0.247,
+          "p_positive_gain": 0.38,
+          "p_success": 0.38,
+          "rationale": "Estimated success probability 0.38, conditional scientific utility 0.65, normalized action cost 0.50, and irreversible failure harm 0.18."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-00900",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.09,
+      "mean_p_positive_gain": 0.4,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.32,
+          "expected_gain": 0.09,
+          "expected_normalized_utility": 0.6,
+          "p_positive_gain": 0.4,
+          "p_success": 0.4,
+          "rationale": "Sparse evidence supports only a moderate probability that the candidate meets both high-bulk-modulus and uniqueness criteria; conditional scientific utility is meaningful, while the stated cost and partial reversibility impose a material penalty."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-00932",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.103,
+      "mean_p_positive_gain": 0.38,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.47,
+          "expected_gain": 0.103,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.38,
+          "p_success": 0.38,
+          "rationale": "The structural and compositional identifiers support screening value, but the evidence does not provide a verified bulk modulus or establish chemical uniqueness. I therefore assign moderate success probability and utility, with limited but nonzero irreversible-failure harm; expected gain remains positive after action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-02482",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.085,
+      "mean_p_positive_gain": 0.25,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.085,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.25,
+          "p_success": 0.25,
+          "rationale": "Sparse evidence supports only a modest chance that the candidate is both high-performance and chemically unique; conditional scientific utility would be substantial if confirmed. Screening cost is moderate, while failure harm is limited by partial reversibility."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-03120",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.21,
+      "mean_p_positive_gain": 0.5,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.42,
+          "expected_gain": 0.21,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.5,
+          "p_success": 0.5,
+          "rationale": "Sparse evidence supports a moderate chance that Ti-Re is both sufficiently high-modulus and chemically distinctive; conditional scientific utility is estimated as substantial, while action cost and failure harm reduce the net expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-03407",
+      "split": "train",
+      "stage": "base",
+      "target_gain": 0.8859293291498581,
+      "worthy": 1
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.13,
+      "mean_p_positive_gain": 0.35,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.13,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.35,
+          "p_success": 0.35,
+          "rationale": "The sparse evidence supports a moderate chance that P12 Ir4 is both high-performing and chemically distinctive, with meaningful scientific value if confirmed. The action has moderate cost and reversibility, so expected gain remains positive, but uncertainty about the property estimate and uniqueness substantially limits confidence."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-03819",
+      "split": "train",
+      "stage": "base",
+      "target_gain": 0.8349805767219484,
+      "worthy": 1
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.1675,
+      "mean_p_positive_gain": 0.4,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.38,
+          "expected_gain": 0.1675,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.4,
+          "p_success": 0.4,
+          "rationale": "Sparse evidence supports a plausible but uncertain chance that SmCu4Ag is both high-performing and chemically unique. Conditional scientific utility is moderately high if confirmed; the action cost and moderate irreversibility make failed screening outcomes net negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-05986",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.138,
+      "mean_p_positive_gain": 0.08,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.55,
+          "expected_gain": -0.138,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.08,
+          "p_success": 0.08,
+          "rationale": "Sparse structural evidence supports chemical specificity but provides little support for high bulk modulus; a potassium copper fluoride is more plausibly mechanically modest than a high-performance bulk-modulus candidate. The visible cost and partial irreversibility dominate the low estimated success probability."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-07344",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.045,
+      "mean_p_positive_gain": 0.28,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.36,
+          "expected_gain": 0.045,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.28,
+          "p_success": 0.28,
+          "rationale": "Sparse evidence supports only a modest probability that Ta4 Cr8 satisfies both high-performance and chemical-uniqueness criteria; conditional scientific value would be substantial, but action cost and failure penalty reduce expected net gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-07723",
+      "split": "train",
+      "stage": "base",
+      "target_gain": 0.8977327058120425,
+      "worthy": 1
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.0425,
+      "mean_p_positive_gain": 0.18,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.48,
+          "expected_gain": -0.0425,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.18,
+          "p_success": 0.18,
+          "rationale": "Sparse evidence provides no bulk-modulus value or demonstrated chemical uniqueness; moderate cost and partial irreversibility make expected strict gain slightly negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-08361",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "acquired_evidence_cost": 0,
+      "benchmark": "discover_unique",
+      "cost_aware": false,
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0928,
+      "mean_p_positive_gain": 0.32,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.55,
+          "expected_gain": 0.0928,
+          "expected_normalized_utility": 0.62,
+          "p_positive_gain": 0.32,
+          "p_success": 0.32,
+          "rationale": "Moderate-low success probability because the sparse structural evidence does not establish high bulk modulus or chemical uniqueness; conditional scientific utility is meaningful if screening confirms both."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-08415",
+      "split": "train",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    }
+  ],
+  "schema_version": "sequential-v2-generic-llm-worthiness-v3",
+  "split": "train",
+  "stage": "base",
+  "summary": {
+    "by_model": {
+      "gpt-5.6-terra": {
+        "accuracy_at_threshold": 0.8571428571428571,
+        "aurc": 0.40457241171526886,
+        "brier": 0.16758185714285712,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.21428571428571427,
+        "coverage_at_risk_0.05": 0.21428571428571427,
+        "coverage_at_risk_0.10": 0.21428571428571427,
+        "ece": 0.236,
+        "expected_gain_mae": 0.34646134968633513,
+        "log_loss": 0.5029650198892653,
+        "n": 14.0,
+        "selective_accuracy": 1.0,
+        "selective_risk": 0.0
+      }
+    },
+    "by_task": {
+      "discover_unique": {
+        "accuracy_at_threshold": 0.8181818181818182,
+        "aurc": 0.6196871310507674,
+        "brier": 0.1821272727272727,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.09090909090909091,
+        "coverage_at_risk_0.05": 0.09090909090909091,
+        "coverage_at_risk_0.10": 0.09090909090909091,
+        "ece": 0.22363636363636363,
+        "log_loss": 0.5408031755651043,
+        "n": 11.0,
+        "selective_accuracy": 1.0,
+        "selective_risk": 0.0
+      },
+      "extreme_properties": {
+        "accuracy_at_threshold": 1.0,
+        "aurc": 1.0,
+        "brier": 0.0012250000000000002,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.035,
+        "log_loss": 0.03562717764315116,
+        "n": 1.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      },
+      "matbench_pairwise": {
+        "accuracy_at_threshold": 1.0,
+        "aurc": 0.0,
+        "brier": 0.17076049999999998,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 1.0,
+        "coverage_at_risk_0.10": 1.0,
+        "ece": 0.40449999999999997,
+        "log_loss": 0.5285240847952086,
+        "n": 2.0,
+        "selective_accuracy": 1.0,
+        "selective_risk": 0.0
+      }
+    },
+    "ensemble": {
+      "accuracy_at_threshold": 0.8571428571428571,
+      "aurc": 0.40457241171526886,
+      "brier": 0.16758185714285712,
+      "confidently_wrong_rate": 0.0,
+      "coverage": 0.21428571428571427,
+      "coverage_at_risk_0.05": 0.21428571428571427,
+      "coverage_at_risk_0.10": 0.21428571428571427,
+      "ece": 0.236,
+      "expected_gain_mae": 0.34646134968633513,
+      "expected_gain_variance_error_correlation": 0.0,
+      "log_loss": 0.5029650198892653,
+      "n": 14.0,
+      "probability_variance_error_correlation": 0.0,
+      "selective_accuracy": 1.0,
+      "selective_risk": 0.0
+    }
+  }
+}

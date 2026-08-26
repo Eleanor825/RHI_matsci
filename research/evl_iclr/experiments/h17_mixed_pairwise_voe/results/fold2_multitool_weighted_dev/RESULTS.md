@@ -1,0 +1,9 @@
+# H17 Numeric Multi-Tool VoE Development
+
+The estimator emits one numeric expected VoE per tool; the contract derives the tool choice.
+
+| method | certified | test gain | selected tools on test | executed tools on test |
+|---|---|---:|---|---|
+| `source_multitool_expected` | `True` | +0.001981 | `{"high_fidelity": 171}` | `{"high_fidelity": 141}` |
+| `no_source_multitool_expected` | `True` | +0.001849 | `{"high_fidelity": 159}` | `{"high_fidelity": 132}` |
+| `fixed_high_fidelity_expected` | `True` | +0.001981 | `{"high_fidelity": 171}` | `{"high_fidelity": 141}` |

@@ -1,0 +1,17 @@
+[
+  {
+    "record_id": "matbench-pairwise::f44b0c6dfeb1",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-04833",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-08357",
+    "model": "gpt-5.6-luna",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  }
+]

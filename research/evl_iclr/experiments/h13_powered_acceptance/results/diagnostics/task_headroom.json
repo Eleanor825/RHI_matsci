@@ -1,0 +1,233 @@
+{
+  "experiment": "h13_task_oracle_headroom",
+  "interpretation": "This is an outcome-aware diagnostic upper bound, never a deployable policy. It tests whether each held-out task contains positive-gain actions under the locked net-scientific-gain definition.",
+  "mean_by_task": {
+    "discover_unique": {
+      "folds_with_positive_headroom": 5,
+      "oracle_population_net_gain": 0.004804188551278895,
+      "positive_fraction": 0.09883573635125795
+    },
+    "extreme_properties": {
+      "folds_with_positive_headroom": 4,
+      "oracle_population_net_gain": 0.004197476545869064,
+      "positive_fraction": 0.115
+    },
+    "matbench_pairwise": {
+      "folds_with_positive_headroom": 5,
+      "oracle_population_net_gain": 0.004945575308491471,
+      "positive_fraction": 0.09983782763267267
+    }
+  },
+  "rows": [
+    {
+      "fold": 0,
+      "reservation_values": {
+        "budget_fraction": 0.1,
+        "outside_option": 0.0,
+        "strategy": "potential_success_slot_value",
+        "values_by_task": {
+          "discover_unique": 0.8249281264973647,
+          "extreme_properties": 0.7796742671009772,
+          "matbench_pairwise": 0.8699195926025194
+        }
+      },
+      "tasks": {
+        "discover_unique": {
+          "maximum_gain": 0.09875419262098706,
+          "oracle_budget_count": 391,
+          "oracle_population_net_gain": 0.00473939554635696,
+          "positive_count": 408,
+          "positive_fraction": 0.10442794983363195,
+          "positive_mean_gain": 0.04547091237069816,
+          "test_count": 3907
+        },
+        "extreme_properties": {
+          "maximum_gain": 0.0997828447339848,
+          "oracle_budget_count": 40,
+          "oracle_population_net_gain": 0.0013610206297502703,
+          "positive_count": 16,
+          "positive_fraction": 0.04,
+          "positive_mean_gain": 0.03402551574375676,
+          "test_count": 400
+        },
+        "matbench_pairwise": {
+          "maximum_gain": 0.09994639506834635,
+          "oracle_budget_count": 160,
+          "oracle_population_net_gain": 0.004275790492324546,
+          "positive_count": 141,
+          "positive_fraction": 0.08829054477144646,
+          "positive_mean_gain": 0.048428634157746786,
+          "test_count": 1597
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "reservation_values": {
+        "budget_fraction": 0.1,
+        "outside_option": 0.0,
+        "strategy": "potential_success_slot_value",
+        "values_by_task": {
+          "discover_unique": 0.8249429766204145,
+          "extreme_properties": 0.7796822033898306,
+          "matbench_pairwise": 0.8699199145755472
+        }
+      },
+      "tasks": {
+        "discover_unique": {
+          "maximum_gain": 0.09939175061775318,
+          "oracle_budget_count": 208,
+          "oracle_population_net_gain": 0.003994548169373715,
+          "positive_count": 172,
+          "positive_fraction": 0.08285163776493257,
+          "positive_mean_gain": 0.048213267439650175,
+          "test_count": 2076
+        },
+        "extreme_properties": {
+          "maximum_gain": 0.0997881355932202,
+          "oracle_budget_count": 40,
+          "oracle_population_net_gain": 0.005492584745762699,
+          "positive_count": 45,
+          "positive_fraction": 0.1125,
+          "positive_mean_gain": 0.04929378531073434,
+          "test_count": 400
+        },
+        "matbench_pairwise": {
+          "maximum_gain": 0.09861185264281902,
+          "oracle_budget_count": 160,
+          "oracle_population_net_gain": 0.003961987189008295,
+          "positive_count": 133,
+          "positive_fraction": 0.08333333333333333,
+          "positive_mean_gain": 0.04754384626809954,
+          "test_count": 1596
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "reservation_values": {
+        "budget_fraction": 0.1,
+        "outside_option": 0.0,
+        "strategy": "potential_success_slot_value",
+        "values_by_task": {
+          "discover_unique": 0.824945652173913,
+          "extreme_properties": 0.7796801705756928,
+          "matbench_pairwise": 0.8701607286364854
+        }
+      },
+      "tasks": {
+        "discover_unique": {
+          "maximum_gain": 0.09978260869565225,
+          "oracle_budget_count": 170,
+          "oracle_population_net_gain": 0.005025946979396059,
+          "positive_count": 171,
+          "positive_fraction": 0.10070671378091872,
+          "positive_mean_gain": 0.049912916348843185,
+          "test_count": 1698
+        },
+        "extreme_properties": {
+          "maximum_gain": 0.0997867803837954,
+          "oracle_budget_count": 40,
+          "oracle_population_net_gain": 0.009299040511727094,
+          "positive_count": 130,
+          "positive_fraction": 0.325,
+          "positive_mean_gain": 0.05431359685091042,
+          "test_count": 400
+        },
+        "matbench_pairwise": {
+          "maximum_gain": 0.09863380658987408,
+          "oracle_budget_count": 160,
+          "oracle_population_net_gain": 0.005296161215753949,
+          "positive_count": 153,
+          "positive_fraction": 0.09580463368816532,
+          "positive_mean_gain": 0.055280846153980795,
+          "test_count": 1597
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "reservation_values": {
+        "budget_fraction": 0.1,
+        "outside_option": 0.0,
+        "strategy": "potential_success_slot_value",
+        "values_by_task": {
+          "discover_unique": 0.8249458092485551,
+          "extreme_properties": 0.7796865203761756,
+          "matbench_pairwise": 0.8699201915403032
+        }
+      },
+      "tasks": {
+        "discover_unique": {
+          "maximum_gain": 0.09833815028901716,
+          "oracle_budget_count": 156,
+          "oracle_population_net_gain": 0.0076738831398517485,
+          "positive_count": 234,
+          "positive_fraction": 0.150096215522771,
+          "positive_mean_gain": 0.060486450768242536,
+          "test_count": 1559
+        },
+        "extreme_properties": {
+          "maximum_gain": -1.0621865203761756,
+          "oracle_budget_count": 40,
+          "oracle_population_net_gain": 0.0,
+          "positive_count": 0,
+          "positive_fraction": 0.0,
+          "positive_mean_gain": 0.0,
+          "test_count": 400
+        },
+        "matbench_pairwise": {
+          "maximum_gain": 0.09994679436020226,
+          "oracle_budget_count": 159,
+          "oracle_population_net_gain": 0.005980838617134632,
+          "positive_count": 183,
+          "positive_fraction": 0.11494974874371859,
+          "positive_mean_gain": 0.0529208587913598,
+          "test_count": 1592
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "reservation_values": {
+        "budget_fraction": 0.1,
+        "outside_option": 0.0,
+        "strategy": "potential_success_slot_value",
+        "values_by_task": {
+          "discover_unique": 0.8249441652707986,
+          "extreme_properties": 0.7796842105263159,
+          "matbench_pairwise": 0.869919828968466
+        }
+      },
+      "tasks": {
+        "discover_unique": {
+          "maximum_gain": 0.09996277684719879,
+          "oracle_budget_count": 175,
+          "oracle_population_net_gain": 0.0025871689214159942,
+          "positive_count": 98,
+          "positive_fraction": 0.05609616485403549,
+          "positive_mean_gain": 0.046120245976670825,
+          "test_count": 1747
+        },
+        "extreme_properties": {
+          "maximum_gain": 0.09978947368421043,
+          "oracle_budget_count": 40,
+          "oracle_population_net_gain": 0.004834736842105254,
+          "positive_count": 39,
+          "positive_fraction": 0.0975,
+          "positive_mean_gain": 0.04958704453441288,
+          "test_count": 400
+        },
+        "matbench_pairwise": {
+          "maximum_gain": 0.09914484233030474,
+          "oracle_budget_count": 162,
+          "oracle_population_net_gain": 0.005213099028235932,
+          "positive_count": 189,
+          "positive_fraction": 0.11681087762669963,
+          "positive_mean_gain": 0.04540621403261708,
+          "test_count": 1618
+        }
+      }
+    }
+  ]
+}

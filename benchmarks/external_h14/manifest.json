@@ -1,0 +1,33 @@
+{
+  "datasets": {
+    "matbench_dielectric": {
+      "bytes": 3608015,
+      "filename": "matbench_dielectric.json.gz",
+      "role": "pairwise_preference_external_confirmation",
+      "rows": 4764,
+      "sha256": "83befa09bc2ec2f4b6143afc413157827a90e5e2e42c1eb507ccfa01bf26a1d6",
+      "source_url": "https://ml.materialsproject.org/projects/matbench_dielectric.json.gz",
+      "target": "n"
+    },
+    "matbench_jdft2d": {
+      "bytes": 267131,
+      "filename": "matbench_jdft2d.json.gz",
+      "role": "unique_discovery_external_confirmation",
+      "rows": 636,
+      "sha256": "26057dc4524e193e32abffb296ce819b58b6e11d1278cae329a2f97817a4eddf",
+      "source_url": "https://ml.materialsproject.org/projects/matbench_jdft2d.json.gz",
+      "target": "exfoliation_en"
+    },
+    "matbench_phonons": {
+      "bytes": 459672,
+      "filename": "matbench_phonons.json.gz",
+      "role": "extreme_property_external_confirmation",
+      "rows": 1265,
+      "sha256": "4db551f21ec5f577e6202725f10e34dfc509aa7df3a6bdaac497da7f6dbbb9b3",
+      "source_url": "https://ml.materialsproject.org/projects/matbench_phonons.json.gz",
+      "target": "last phdos peak"
+    }
+  },
+  "inspection_policy": "Schemas and row counts were inspected before protocol lock; target distributions and method performance were not used to select datasets.",
+  "snapshot_date": "2026-08-22"
+}

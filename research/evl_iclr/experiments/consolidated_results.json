@@ -1,0 +1,188 @@
+{
+  "schema_version": "evl-consolidated-results-v1",
+  "generated_on": "2026-08-23",
+  "h5_round2": {
+    "gate_passed": true,
+    "primary": {
+      "alpha": 0.1,
+      "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+      "certified": true,
+      "coverage": 0.10007880220646179,
+      "errors": 2,
+      "macro_task_population_mean_gain": 0.057570490864718105,
+      "macro_task_selective_risk": 0.167989417989418,
+      "population_mean_strict_gain": 0.07714286568446177,
+      "risk_upper_bound": 0.02457781683509971,
+      "selected_count": 254,
+      "selected_mean_strict_gain": 0.7791184767998546,
+      "selected_total_strict_gain": 197.89609310716307,
+      "selective_risk": 0.007874015748031496,
+      "stage_counts": {
+        "base": 2030,
+        "screening": 254,
+        "verification": 254
+      },
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 85,
+          "coverage": 0.023529411764705882,
+          "errors": 1,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.00836653798738403,
+          "selected": 2,
+          "selective_risk": 0.5,
+          "total_gain": 0.7111557289276427
+        },
+        "extreme_properties": {
+          "count": 1266,
+          "coverage": 0.0,
+          "errors": 0,
+          "evidence_cost": 0.0,
+          "population_mean_gain": 0.0,
+          "selected": 0,
+          "selective_risk": 0.0,
+          "total_gain": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 1187,
+          "coverage": 0.21229991575400167,
+          "errors": 1,
+          "evidence_cost": 31.749999999999993,
+          "population_mean_gain": 0.16434493460677027,
+          "selected": 252,
+          "selective_risk": 0.003968253968253968,
+          "total_gain": 195.0774373782363
+        }
+      },
+      "total_acquired_evidence_cost": 31.749999999999993,
+      "trajectory_total_strict_gain": 195.78859310716396,
+      "worst_task_population_mean_gain": 0.0,
+      "worst_task_selective_risk": 0.5
+    },
+    "baselines": {
+      "base_factorized_lcb": 188.79181117006306,
+      "fixed_full_evidence_lcb": 168.39804085890964,
+      "fixed_screening_lcb": 181.93359367722127,
+      "shadow_price_successive_halving": 182.97366727836797,
+      "static_reliability": 36.060612470809325
+    },
+    "llm_gate_complete": false
+  },
+  "live_tool_round3": {
+    "gate_passed": true,
+    "primary": {
+      "budget": 82,
+      "coverage": 0.10110974106041924,
+      "errors": 0,
+      "evidence_cost_penalty": 3.0412500000000207,
+      "risk_upper_bound_95": 0.03587403171067115,
+      "selected": 82,
+      "selected_total_strict_gain": 66.4679849707765,
+      "selective_risk": 0.0,
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 332,
+          "positive_count": 23,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "extreme_properties": {
+          "count": 199,
+          "positive_count": 7,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 280,
+          "positive_count": 186,
+          "selected": 82,
+          "selected_gain": 66.4679849707765,
+          "selective_risk": 0.0
+        }
+      },
+      "trajectory_total_strict_gain": 63.42673497077648
+    },
+    "baseline_gains": {
+      "base_numeric": 4.8370201696041795,
+      "real_tool_numeric": 59.69381509150336,
+      "static_reliability": -12.19173433099002
+    },
+    "checks": {
+      "all_trajectories_complete": true,
+      "beats_every_baseline": true,
+      "fresh_fingerprint_overlap_zero": true,
+      "frozen_hashes_match": true,
+      "hidden_outcome_absent_pre_action": true,
+      "live_runtime_only": true,
+      "no_higher_empirical_risk_than_best_gain_baseline": true,
+      "numeric_output_no_route": true,
+      "positive_trajectory_gain": true,
+      "risk_ucb_le_0.10": true,
+      "selected_nonempty": true
+    },
+    "multiseed": {
+      "aggregate": {
+        "errors_mean": 0,
+        "errors_std": 0.0,
+        "gain_mean": 63.794645970980746,
+        "gain_std": 0.22582334513165644,
+        "risk_mean": 0.0,
+        "risk_std": 0.0,
+        "risk_ucb_mean": 0.03587403171067115,
+        "risk_ucb_std": 0.0,
+        "selected_mean": 82,
+        "selected_std": 0.0
+      },
+      "runs": [
+        {
+          "errors": 0,
+          "gain": 63.94046500223304,
+          "risk": 0.0,
+          "risk_ucb": 0.03587403171067115,
+          "seed": 1729,
+          "selected": 82
+        },
+        {
+          "errors": 0,
+          "gain": 63.42673497077648,
+          "risk": 0.0,
+          "risk_ucb": 0.03587403171067115,
+          "seed": 20260823,
+          "selected": 82
+        },
+        {
+          "errors": 0,
+          "gain": 63.940465002233026,
+          "risk": 0.0,
+          "risk_ucb": 0.03587403171067115,
+          "seed": 314159,
+          "selected": 82
+        },
+        {
+          "errors": 0,
+          "gain": 63.940465002233054,
+          "risk": 0.0,
+          "risk_ucb": 0.03587403171067115,
+          "seed": 42,
+          "selected": 82
+        },
+        {
+          "errors": 0,
+          "gain": 63.725099877428136,
+          "risk": 0.0,
+          "risk_ucb": 0.03587403171067115,
+          "seed": 7,
+          "selected": 82
+        }
+      ],
+      "schema_version": "live-matbot-round3-multiseed-v1"
+    }
+  },
+  "outstanding": {
+    "same_evidence_llm_judges": "running",
+    "claude_family": "not available on configured router",
+    "uniform_multitask_gain": "not achieved; task-balanced stress test remains weak"
+  }
+}

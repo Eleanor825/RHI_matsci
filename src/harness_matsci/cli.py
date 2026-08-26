@@ -1,0 +1,615 @@
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+from typing import Any
+
+from .benchmarks import BENCHMARK_BUILDERS, make_records
+from .campaign import CampaignConfig, save_campaign_report
+from .experiments import ExperimentSuiteConfig, save_experiment_suite
+from .historical import MAIN_MATERIAL_TASKS
+from .audit_experiments import LabelAuditConfig, run_label_utility_audit, save_label_utility_audit
+from .io import read_json, read_jsonl, write_json, write_jsonl
+from .mechanism_ablation import MechanismAblationConfig, run_mechanism_ablation, save_mechanism_ablation
+from .paper_bootstrap import DEFAULT_PAPER_ACTIONS_PATH, run_paper_bootstrap_experiment
+from .prompt_trajectories import generate_prompt_trajectories
+from .trajectory_baselines import evaluate_prompt_baselines
+from .trajectory_voi import evaluate_trajectory_voi
+from .trajectory_combined_rhi import run_combined_feedback_rhi
+from .rhi import train_rhi
+from .trajectory_dataset import DEFAULT_TASK_FILES, build_dataset
+from .training import TrainedGate, evaluate_gate, split_records, train_gate
+from .voi_experiments import DEFAULT_METHODS, VoIExperimentConfig, save_voi_experiment_suite
+from .evolving_harness import run_evolving_harness
+
+
+def _comma_list(value: str, cast=str) -> list[Any]:
+    if not value:
+        return []
+    return [cast(item) for item in value.split(",") if item]
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="harness-matsci")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    benchmark_parser = subparsers.add_parser("make-benchmark", help="Generate a benchmark JSONL dataset")
+    benchmark_parser.add_argument("--benchmark", choices=sorted(BENCHMARK_BUILDERS), required=True)
+    benchmark_parser.add_argument("--out", required=True)
+    benchmark_parser.add_argument("--n", type=int, default=300)
+    benchmark_parser.add_argument("--seed", type=int, default=0)
+    benchmark_parser.set_defaults(func=_cmd_make_benchmark)
+
+    train_parser = subparsers.add_parser("train", help="Train a gate on a JSONL dataset")
+    train_parser.add_argument("--data", required=True)
+    train_parser.add_argument("--out", required=True)
+    train_parser.add_argument("--alpha", type=float, default=0.1)
+    train_parser.add_argument("--seed", type=int, default=0)
+    train_parser.add_argument("--train-fraction", type=float, default=0.6)
+    train_parser.add_argument("--val-fraction", type=float, default=0.2)
+    train_parser.add_argument("--epochs", type=int, default=700)
+    train_parser.add_argument("--learning-rate", type=float, default=0.08)
+    train_parser.add_argument("--l2", type=float, default=0.001)
+    train_parser.add_argument("--lineage-weight", type=float, default=0.0)
+    train_parser.add_argument("--report", help="Optional training report JSON path")
+    train_parser.set_defaults(func=_cmd_train)
+
+    evaluate_parser = subparsers.add_parser("evaluate", help="Evaluate a saved gate on a JSONL dataset")
+    evaluate_parser.add_argument("--data", required=True)
+    evaluate_parser.add_argument("--model", required=True)
+    evaluate_parser.add_argument("--out", required=True)
+    evaluate_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    evaluate_parser.set_defaults(func=_cmd_evaluate)
+
+    campaign_parser = subparsers.add_parser("campaign", help="Run benchmark/baseline comparisons")
+    campaign_parser.add_argument("--benchmark", action="append", choices=sorted(BENCHMARK_BUILDERS))
+    campaign_parser.add_argument("--benchmarks", help="Comma-separated benchmark list")
+    campaign_parser.add_argument("--seeds", default="0,1,2")
+    campaign_parser.add_argument("--n", type=int, default=300)
+    campaign_parser.add_argument("--alpha", type=float, default=0.1)
+    campaign_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    campaign_parser.add_argument("--lineage-weight", type=float, default=0.0)
+    campaign_parser.add_argument("--out", required=True)
+    campaign_parser.set_defaults(func=_cmd_campaign)
+
+    demo_parser = subparsers.add_parser("run-demo", help="Generate data, train, and evaluate in one shot")
+    demo_parser.add_argument("--benchmark", choices=sorted(BENCHMARK_BUILDERS), default="preferential_bo")
+    demo_parser.add_argument("--n", type=int, default=300)
+    demo_parser.add_argument("--seed", type=int, default=0)
+    demo_parser.add_argument("--alpha", type=float, default=0.1)
+    demo_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    demo_parser.set_defaults(func=_cmd_demo)
+
+    paper_parser = subparsers.add_parser("paper-bootstrap", help="Run the first historical-paper bootstrap experiment")
+    paper_parser.add_argument("--data", default=str(DEFAULT_PAPER_ACTIONS_PATH))
+    paper_parser.add_argument("--workdir", default="runs/paper_bootstrap_v1")
+    paper_parser.add_argument("--seed", type=int, default=7)
+    paper_parser.add_argument("--alpha", type=float, default=0.1)
+    paper_parser.add_argument("--train-fraction", type=float, default=0.6)
+    paper_parser.add_argument("--val-fraction", type=float, default=0.2)
+    paper_parser.add_argument("--epochs", type=int, default=700)
+    paper_parser.add_argument("--learning-rate", type=float, default=0.08)
+    paper_parser.add_argument("--l2", type=float, default=0.001)
+    paper_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    paper_parser.set_defaults(func=_cmd_paper_bootstrap)
+
+    rhi_parser = subparsers.add_parser("rhi", help="Run trajectory-feedback Recursive Harness Self-Improvement")
+    rhi_parser.add_argument("--data", required=True)
+    rhi_parser.add_argument("--out", required=True)
+    rhi_parser.add_argument("--iterations", type=int, default=3)
+    rhi_parser.add_argument("--seed", type=int, default=7)
+    rhi_parser.add_argument("--alpha", type=float, default=0.1)
+    rhi_parser.add_argument("--train-fraction", type=float, default=0.6)
+    rhi_parser.add_argument("--val-fraction", type=float, default=0.2)
+    rhi_parser.add_argument("--epochs", type=int, default=700)
+    rhi_parser.add_argument("--learning-rate", type=float, default=0.08)
+    rhi_parser.add_argument("--l2", type=float, default=0.001)
+    rhi_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    rhi_parser.add_argument("--min-coverage", type=float, default=0.0)
+    rhi_parser.add_argument("--epsilon", type=float, default=0.01)
+    rhi_parser.set_defaults(func=_cmd_rhi)
+
+    evolving_parser = subparsers.add_parser(
+        "evolve-harness",
+        help="Run action-feedback numeric-critic harness evolution with held-out acceptance",
+    )
+    evolving_parser.add_argument("--data", required=True)
+    evolving_parser.add_argument("--out", required=True)
+    evolving_parser.add_argument("--iterations", type=int, default=3)
+    evolving_parser.add_argument("--seed", type=int, default=7)
+    evolving_parser.add_argument("--alpha", type=float, default=0.10)
+    evolving_parser.add_argument("--budget-fraction", type=float, default=0.10)
+    evolving_parser.add_argument("--epochs", type=int, default=300)
+    evolving_parser.add_argument("--epsilon", type=float, default=0.005)
+    evolving_parser.set_defaults(func=_cmd_evolve_harness)
+
+    suite_parser = subparsers.add_parser("experiment-suite", help="Run the paper-grade RHI experiments 1, 2, 3, and 4")
+    suite_parser.add_argument("--tasks", default="preferential_bo,discover_unique,extreme_properties")
+    suite_parser.add_argument("--experiments", default="1,2,3", help="Comma-separated experiment IDs; 4 is self-evolution ablation")
+    suite_parser.add_argument("--seeds", default="1,7,13,21,42")
+    suite_parser.add_argument("--n-per-task", type=int, default=300)
+    suite_parser.add_argument("--data-dir", help="Directory containing historical task JSONL files")
+    suite_parser.add_argument("--train-fraction", type=float, default=0.6)
+    suite_parser.add_argument("--val-fraction", type=float, default=0.2)
+    suite_parser.add_argument("--feedback-fraction", type=float, default=0.15)
+    suite_parser.add_argument("--acceptance-fraction", type=float, default=0.1)
+    suite_parser.add_argument("--alpha", type=float, default=0.1)
+    suite_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    suite_parser.add_argument("--min-coverage", type=float, default=0.1)
+    suite_parser.add_argument("--rhi-iterations", type=int, default=3)
+    suite_parser.add_argument("--epochs", type=int, default=240)
+    suite_parser.add_argument("--learning-rate", type=float, default=0.08)
+    suite_parser.add_argument("--l2", type=float, default=0.001)
+    suite_parser.add_argument("--epsilon", type=float, default=0.01)
+    suite_parser.add_argument(
+        "--direct-judge-model",
+        help="Enable the one-shot LLM direct-as-judge baseline with this model; requires OPENAI_API_KEY",
+    )
+    suite_parser.add_argument(
+        "--direct-judge-base-url",
+        help="OpenAI-compatible Responses API base URL (default: OPENAI_BASE_URL or hi-code.cc)",
+    )
+    suite_parser.add_argument(
+        "--direct-judge-cache",
+        default="runs/direct_judge_cache/scores.json",
+        help="JSON score cache for direct judge calls",
+    )
+    suite_parser.add_argument("--direct-judge-timeout", type=float, default=90.0)
+    suite_parser.add_argument("--direct-judge-retries", type=int, default=3)
+    suite_parser.add_argument("--direct-judge-reasoning-effort", default="xhigh", choices=["minimal", "low", "medium", "high", "xhigh"])
+    suite_parser.add_argument("--out", required=True)
+    suite_parser.add_argument("--markdown-out")
+    suite_parser.set_defaults(func=_cmd_experiment_suite)
+
+    voi_parser = subparsers.add_parser("voi-experiment-suite", help="Run Sci-VoI-RHI held-out-regime experiments")
+    voi_parser.add_argument("--data-dir", required=True, help="Directory containing historical task JSONL files")
+    voi_parser.add_argument("--tasks", default=",".join(MAIN_MATERIAL_TASKS))
+    voi_parser.add_argument("--methods", default=",".join(DEFAULT_METHODS))
+    voi_parser.add_argument("--components", default="utility,uncertainty,routing,features")
+    voi_parser.add_argument("--acceptance-policies", default="mean_guarded,always_accept")
+    voi_parser.add_argument("--seeds", default="1,7,13,21,42")
+    voi_parser.add_argument("--iterations", type=int, default=3)
+    voi_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    voi_parser.add_argument("--alpha", type=float, default=0.1)
+    voi_parser.add_argument("--epochs", type=int, default=90)
+    voi_parser.add_argument("--learning-rate", type=float, default=0.08)
+    voi_parser.add_argument("--l2", type=float, default=0.01)
+    voi_parser.add_argument("--out", required=True)
+    voi_parser.add_argument("--markdown-out", required=True)
+    voi_parser.set_defaults(func=_cmd_voi_experiment_suite)
+
+    audit_parser = subparsers.add_parser("label-audit", help="Audit historical proxy labels and utilities")
+    audit_parser.add_argument("--data-dir", required=True, help="Directory containing historical task JSONL files")
+    audit_parser.add_argument("--tasks", default=",".join(MAIN_MATERIAL_TASKS))
+    audit_parser.add_argument("--sample-per-task", type=int, default=12)
+    audit_parser.add_argument("--seed", type=int, default=1729)
+    audit_parser.add_argument("--out", required=True)
+    audit_parser.add_argument("--markdown-out", required=True)
+    audit_parser.set_defaults(func=_cmd_label_audit)
+
+    mechanism_parser = subparsers.add_parser("mechanism-ablation", help="Run Sci-VoI mechanism ablations without an LLM judge")
+    mechanism_parser.add_argument("--data-dir", required=True, help="Directory containing historical task JSONL files")
+    mechanism_parser.add_argument("--tasks", default=",".join(MAIN_MATERIAL_TASKS))
+    mechanism_parser.add_argument("--seeds", default="1,7,13,21,42")
+    mechanism_parser.add_argument("--iterations", type=int, default=3)
+    mechanism_parser.add_argument("--budget-fraction", type=float, default=0.1)
+    mechanism_parser.add_argument("--alpha", type=float, default=0.1)
+    mechanism_parser.add_argument("--epochs", type=int, default=60)
+    mechanism_parser.add_argument("--learning-rate", type=float, default=0.08)
+    mechanism_parser.add_argument("--l2", type=float, default=0.01)
+    mechanism_parser.add_argument("--out", required=True)
+    mechanism_parser.add_argument("--markdown-out", required=True)
+    mechanism_parser.set_defaults(func=_cmd_mechanism_ablation)
+
+    trajectory_parser = subparsers.add_parser(
+        "build-trajectory-benchmark",
+        help="Package historical action records as complete trajectory/action-level data",
+    )
+    trajectory_parser.add_argument("--data-dir", required=True)
+    trajectory_parser.add_argument("--tasks", default=",".join(DEFAULT_TASK_FILES))
+    trajectory_parser.add_argument("--out-dir", required=True)
+    trajectory_parser.set_defaults(func=_cmd_build_trajectory_benchmark)
+
+    prompt_trajectory_parser = subparsers.add_parser(
+        "generate-prompt-trajectories",
+        help="Generate prompt-conditioned multi-step materials trajectories",
+    )
+    prompt_trajectory_parser.add_argument("--data-dir", required=True)
+    prompt_trajectory_parser.add_argument("--out-dir", required=True)
+    prompt_trajectory_parser.add_argument("--n-per-task", type=int, default=300)
+    prompt_trajectory_parser.add_argument("--seed", type=int, default=1729)
+    prompt_trajectory_parser.add_argument("--max-steps", type=int, default=3)
+    prompt_trajectory_parser.set_defaults(func=_cmd_generate_prompt_trajectories)
+
+    trajectory_baseline_parser = subparsers.add_parser(
+        "evaluate-prompt-baselines",
+        help="Evaluate fixed baselines on prompt-conditioned trajectories",
+    )
+    trajectory_baseline_parser.add_argument("--trajectories", required=True)
+    trajectory_baseline_parser.add_argument("--out-dir", required=True)
+    trajectory_baseline_parser.add_argument("--budget-fraction", type=float, default=0.10)
+    trajectory_baseline_parser.add_argument("--seed", type=int, default=1729)
+    trajectory_baseline_parser.set_defaults(func=_cmd_evaluate_prompt_baselines)
+
+    trajectory_voi_parser = subparsers.add_parser(
+        "evaluate-trajectory-voi",
+        help="Evaluate static Sci-VoI and Sci-VoI-RHI on fixed prompt trajectories",
+    )
+    trajectory_voi_parser.add_argument("--trajectories", required=True)
+    trajectory_voi_parser.add_argument("--data-dir", required=True)
+    trajectory_voi_parser.add_argument("--out-dir", required=True)
+    trajectory_voi_parser.add_argument("--seed", type=int, default=1729)
+    trajectory_voi_parser.add_argument("--epochs", type=int, default=45)
+    trajectory_voi_parser.add_argument("--iterations", type=int, default=2)
+    trajectory_voi_parser.set_defaults(func=_cmd_evaluate_trajectory_voi)
+
+    combined_rhi_parser = subparsers.add_parser(
+        "evaluate-combined-trajectory-rhi",
+        help="Run RHI with action-level and complete-trajectory outcome feedback",
+    )
+    combined_rhi_parser.add_argument("--trajectories", required=True)
+    combined_rhi_parser.add_argument("--out-dir", required=True)
+    combined_rhi_parser.add_argument("--seed", type=int, default=1729)
+    combined_rhi_parser.add_argument("--iterations", type=int, default=3)
+    combined_rhi_parser.add_argument("--epochs", type=int, default=45)
+    combined_rhi_parser.set_defaults(func=_cmd_evaluate_combined_trajectory_rhi)
+
+    return parser
+
+
+def _cmd_make_benchmark(args: argparse.Namespace) -> int:
+    records = make_records(args.benchmark, n=args.n, seed=args.seed)
+    write_jsonl(records, args.out)
+    print(f"wrote {len(records)} records to {args.out}")
+    return 0
+
+
+def _load_dataset(path: str):
+    suffix = Path(path).suffix.lower()
+    if suffix == ".jsonl":
+        return read_jsonl(path)
+    if suffix == ".json":
+        payload = read_json(path)
+        if isinstance(payload, list):
+            from .schema import ActionRecord
+
+            return [ActionRecord.from_json(item) for item in payload]
+    raise ValueError(f"unsupported dataset format: {path}")
+
+
+def _cmd_train(args: argparse.Namespace) -> int:
+    records = _load_dataset(args.data)
+    train_records, val_records, test_records = split_records(records, seed=args.seed, train_fraction=args.train_fraction, val_fraction=args.val_fraction)
+    gate = train_gate(
+        train_records,
+        val_records,
+        alpha=args.alpha,
+        epochs=args.epochs,
+        learning_rate=args.learning_rate,
+        l2=args.l2,
+        lineage_weight=args.lineage_weight,
+    )
+    write_json(gate.to_json(), args.out)
+    report = {
+        "sizes": {"train": len(train_records), "val": len(val_records), "test": len(test_records)},
+        "alpha": args.alpha,
+        "seed": args.seed,
+        "gate": gate.to_json(),
+        "test": evaluate_gate(test_records, gate),
+    }
+    if args.report:
+        write_json(report, args.report)
+    print(f"trained gate on {len(train_records)} train / {len(val_records)} val records; wrote model to {args.out}")
+    return 0
+
+
+def _cmd_evaluate(args: argparse.Namespace) -> int:
+    records = _load_dataset(args.data)
+    gate = TrainedGate.from_json(read_json(args.model))
+    report = evaluate_gate(records, gate, budget_fraction=args.budget_fraction)
+    write_json(report, args.out)
+    print(f"wrote evaluation report to {args.out}")
+    return 0
+
+
+def _cmd_campaign(args: argparse.Namespace) -> int:
+    benchmarks = list(args.benchmark or [])
+    if args.benchmarks:
+        benchmarks.extend(_comma_list(args.benchmarks, str))
+    if not benchmarks:
+        benchmarks = sorted(BENCHMARK_BUILDERS)
+    seeds = _comma_list(args.seeds, int)
+    if not seeds:
+        seeds = [0]
+    config = CampaignConfig(
+        benchmarks=benchmarks,
+        seeds=seeds,
+        n=args.n,
+        alpha=args.alpha,
+        budget_fraction=args.budget_fraction,
+        lineage_weight=args.lineage_weight,
+    )
+    report = save_campaign_report(config, args.out)
+    print(f"wrote campaign report with {report['aggregate']['n_runs']} runs to {args.out}")
+    return 0
+
+
+def _cmd_demo(args: argparse.Namespace) -> int:
+    records = make_records(args.benchmark, n=args.n, seed=args.seed)
+    train_records, val_records, test_records = split_records(records, seed=args.seed)
+    gate = train_gate(train_records, val_records, alpha=args.alpha)
+    report = {
+        "benchmark": args.benchmark,
+        "seed": args.seed,
+        "sizes": {"train": len(train_records), "val": len(val_records), "test": len(test_records)},
+        "test": evaluate_gate(test_records, gate, budget_fraction=args.budget_fraction),
+    }
+    print(report)
+    return 0
+
+
+def _cmd_paper_bootstrap(args: argparse.Namespace) -> int:
+    report = run_paper_bootstrap_experiment(
+        args.data,
+        workdir=args.workdir,
+        seed=args.seed,
+        alpha=args.alpha,
+        train_fraction=args.train_fraction,
+        val_fraction=args.val_fraction,
+        epochs=args.epochs,
+        learning_rate=args.learning_rate,
+        l2=args.l2,
+        budget_fraction=args.budget_fraction,
+    )
+    selected = report["selected_version"]
+    metrics = report["versions"][selected]["test"]["metrics"]
+    print(
+        "wrote paper bootstrap experiment to "
+        f"{args.workdir}; selected={selected}; "
+        f"test_selective_accuracy={metrics['selective_accuracy']:.3f}; "
+        f"test_selective_risk={metrics['selective_risk']:.3f}; "
+        f"coverage={metrics['coverage']:.3f}"
+    )
+    return 0
+
+
+def _cmd_rhi(args: argparse.Namespace) -> int:
+    records = _load_dataset(args.data)
+    report = train_rhi(
+        records,
+        iterations=args.iterations,
+        seed=args.seed,
+        alpha=args.alpha,
+        train_fraction=args.train_fraction,
+        val_fraction=args.val_fraction,
+        epochs=args.epochs,
+        learning_rate=args.learning_rate,
+        l2=args.l2,
+        budget_fraction=args.budget_fraction,
+        min_coverage=args.min_coverage,
+        epsilon=args.epsilon,
+    )
+    write_json(report, args.out)
+    metrics = report["test"]["metrics"]
+    print(
+        f"wrote RHI report to {args.out}; "
+        f"final={report['final_harness']['name']}; "
+        f"risk={metrics['selective_risk']:.3f}; coverage={metrics['coverage']:.3f}"
+    )
+    return 0
+
+
+def _cmd_evolve_harness(args: argparse.Namespace) -> int:
+    records = _load_dataset(args.data)
+    report = run_evolving_harness(
+        records,
+        iterations=args.iterations,
+        seed=args.seed,
+        alpha=args.alpha,
+        budget_fraction=args.budget_fraction,
+        epochs=args.epochs,
+        epsilon=args.epsilon,
+    )
+    write_json(report, args.out)
+    metrics = report["test"]["metrics"]
+    print(
+        f"wrote evolving harness report to {args.out}; "
+        f"risk={metrics['selective_risk']:.3f}; coverage={metrics['coverage']:.3f}; "
+        f"accepted={sum(item['accepted'] for item in report['revisions'])}/{len(report['revisions'])}"
+    )
+    return 0
+
+
+def _cmd_experiment_suite(args: argparse.Namespace) -> int:
+    config = ExperimentSuiteConfig(
+        tasks=tuple(_comma_list(args.tasks, str)),
+        experiments=tuple(_comma_list(args.experiments, int)),
+        seeds=tuple(_comma_list(args.seeds, int)),
+        n_per_task=args.n_per_task,
+        data_dir=args.data_dir,
+        train_fraction=args.train_fraction,
+        val_fraction=args.val_fraction,
+        feedback_fraction=args.feedback_fraction,
+        acceptance_fraction=args.acceptance_fraction,
+        alpha=args.alpha,
+        min_coverage=args.min_coverage,
+        budget_fraction=args.budget_fraction,
+        rhi_iterations=args.rhi_iterations,
+        epochs=args.epochs,
+        learning_rate=args.learning_rate,
+        l2=args.l2,
+        rhi_epsilon=args.epsilon,
+        direct_judge_model=args.direct_judge_model,
+        direct_judge_base_url=args.direct_judge_base_url,
+        direct_judge_cache=args.direct_judge_cache,
+        direct_judge_timeout=args.direct_judge_timeout,
+        direct_judge_retries=args.direct_judge_retries,
+        direct_judge_reasoning_effort=args.direct_judge_reasoning_effort,
+    )
+    report = save_experiment_suite(config, args.out, args.markdown_out)
+    print(
+        f"wrote requested experiments to {args.out}; "
+        f"single={report['summary']['n_single_runs']}; "
+        f"transfer={report['summary']['n_transfer_runs']}; "
+        f"joint={report['summary']['n_joint_runs']}"
+    )
+    return 0
+
+
+def _cmd_voi_experiment_suite(args: argparse.Namespace) -> int:
+    config = VoIExperimentConfig(
+        data_dir=args.data_dir,
+        tasks=tuple(_comma_list(args.tasks, str)),
+        methods=tuple(_comma_list(args.methods, str)),
+        components=tuple(_comma_list(args.components, str)),
+        acceptance_policies=tuple(_comma_list(args.acceptance_policies, str)),
+        iterations=args.iterations,
+        budget_fraction=args.budget_fraction,
+        alpha=args.alpha,
+        epochs=args.epochs,
+        learning_rate=args.learning_rate,
+        l2=args.l2,
+        seeds=tuple(_comma_list(args.seeds, int)),
+    )
+    from .voi_experiments import run_voi_experiment_suite
+
+    report = run_voi_experiment_suite(config)
+    save_voi_experiment_suite(report, args.out, args.markdown_out)
+    primary = report["summary"]["methods"].get("scivoi_rhi", {}).get("oracle_normalized_net_utility", {})
+    print(
+        f"wrote Sci-VoI-RHI suite to {args.out}; "
+        f"fold-runs={len(report['runs'])}; "
+        f"scivoi_utility={primary.get('mean', 0.0):.4f}"
+    )
+    return 0
+
+
+def _cmd_label_audit(args: argparse.Namespace) -> int:
+    config = LabelAuditConfig(
+        data_dir=args.data_dir,
+        tasks=tuple(_comma_list(args.tasks, str)),
+        sample_per_task=args.sample_per_task,
+        seed=args.seed,
+    )
+    report = run_label_utility_audit(config)
+    save_label_utility_audit(report, args.out, args.markdown_out)
+    aggregate = report["aggregate"]
+    print(
+        f"wrote label/utility audit to {args.out}; "
+        f"records={aggregate['total_action_records']}; "
+        f"labels_ok={aggregate['all_label_consistency_passed']}; "
+        f"utilities_ok={aggregate['all_utility_consistency_passed']}"
+    )
+    return 0
+
+
+def _cmd_mechanism_ablation(args: argparse.Namespace) -> int:
+    config = MechanismAblationConfig(
+        data_dir=args.data_dir,
+        tasks=tuple(_comma_list(args.tasks, str)),
+        seeds=tuple(_comma_list(args.seeds, int)),
+        iterations=args.iterations,
+        budget_fraction=args.budget_fraction,
+        alpha=args.alpha,
+        epochs=args.epochs,
+        learning_rate=args.learning_rate,
+        l2=args.l2,
+    )
+    report = run_mechanism_ablation(config)
+    save_mechanism_ablation(report, args.out, args.markdown_out)
+    primary = report["summary"]["methods"].get("scivoi_policy_always_accept", {}).get("oracle_normalized_net_utility", {})
+    print(
+        f"wrote mechanism ablation to {args.out}; "
+        f"fold-runs={len(report['runs'])}; "
+        f"direct_scivoi_utility={primary.get('mean', 0.0):.4f}"
+    )
+    return 0
+
+
+def _cmd_build_trajectory_benchmark(args: argparse.Namespace) -> int:
+    tasks = _comma_list(args.tasks, str)
+    missing_tasks = [task for task in tasks if task not in DEFAULT_TASK_FILES]
+    if missing_tasks:
+        raise ValueError(f"unknown trajectory tasks: {missing_tasks}")
+    input_paths = [Path(args.data_dir) / DEFAULT_TASK_FILES[task] for task in tasks]
+    missing_paths = [str(path) for path in input_paths if not path.exists()]
+    if missing_paths:
+        raise FileNotFoundError(f"missing input files: {missing_paths}")
+    manifest = build_dataset(input_paths, Path(args.out_dir))
+    print(
+        f"wrote trajectory benchmark to {args.out_dir}; "
+        f"actions={manifest['records']}; trajectories={manifest['trajectories']}"
+    )
+    return 0
+
+
+def _cmd_generate_prompt_trajectories(args: argparse.Namespace) -> int:
+    manifest = generate_prompt_trajectories(
+        args.data_dir,
+        args.out_dir,
+        n_per_task=args.n_per_task,
+        seed=args.seed,
+        max_steps=args.max_steps,
+    )
+    print(
+        f"wrote prompt trajectories to {args.out_dir}; "
+        f"trajectories={manifest['trajectory_count']}; "
+        f"backend={manifest['agent_backend']}"
+    )
+    return 0
+
+
+def _cmd_evaluate_prompt_baselines(args: argparse.Namespace) -> int:
+    report = evaluate_prompt_baselines(
+        args.trajectories,
+        args.out_dir,
+        budget_fraction=args.budget_fraction,
+        seed=args.seed,
+    )
+    print(
+        f"wrote prompt baseline results to {args.out_dir}; "
+        f"methods={len(report['results'])}; trajectories={report['n_trajectories']}"
+    )
+    return 0
+
+
+def _cmd_evaluate_trajectory_voi(args: argparse.Namespace) -> int:
+    report = evaluate_trajectory_voi(
+        args.trajectories,
+        args.data_dir,
+        args.out_dir,
+        seed=args.seed,
+        epochs=args.epochs,
+        iterations=args.iterations,
+    )
+    print(
+        f"wrote trajectory VoI results to {args.out_dir}; "
+        f"trajectories={report['n_trajectories']}; methods=static_sci_voi,scivoi_rhi"
+    )
+    return 0
+
+
+def _cmd_evaluate_combined_trajectory_rhi(args: argparse.Namespace) -> int:
+    report = run_combined_feedback_rhi(
+        args.trajectories,
+        args.out_dir,
+        seed=args.seed,
+        iterations=args.iterations,
+        epochs=args.epochs,
+    )
+    print(
+        f"wrote combined trajectory RHI results to {args.out_dir}; "
+        f"trajectories={report['n_trajectories']}; "
+        f"checkpoints={len(report['trajectory_test_checkpoints'])}"
+    )
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    return int(args.func(args))
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

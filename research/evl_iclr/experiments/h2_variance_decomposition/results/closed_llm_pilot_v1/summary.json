@@ -1,0 +1,99 @@
+{
+  "schema_version": "sd-worth-h2.1-closed-llm-pilot-v1",
+  "protocol": "research/evl_iclr/experiments/h2_variance_decomposition/protocol_closed_llm_pilot.md",
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-luna",
+    "gpt-5.6-terra"
+  ],
+  "split_seed": 7,
+  "sample_seed": 260712447,
+  "n_per_task": 10,
+  "n_actions": 30,
+  "n_prediction_cells": 270,
+  "matrix_complete": true,
+  "reservation_values": {
+    "budget_fraction": 0.1,
+    "values_by_task": {
+      "matbench_pairwise": 0.8699373695198329,
+      "discover_unique": 0.82495517705065,
+      "extreme_properties": 0.7797663551401869
+    }
+  },
+  "summary": {
+    "base_ensemble": {
+      "accuracy": 0.7333333333333333,
+      "brier": 0.20334528271296665,
+      "ece": 0.22608965555555555,
+      "aurc": 0.8642540390515178
+    },
+    "all_tool_views_ensemble": {
+      "accuracy": 0.8333333333333334,
+      "brier": 0.1654445743039132,
+      "ece": 0.18219542592592594,
+      "aurc": 0.8653575134086152
+    },
+    "source_components": {
+      "n": 30,
+      "mean_internal_variance": 0.0025321074126630487,
+      "mean_external_variance": 0.019468164645983683,
+      "mean_total_variance": 0.02200027205864673,
+      "internal_variance_error_correlation": 0.09262446812081646,
+      "external_variance_error_correlation": -0.03756127440565235,
+      "mean_nearest_analog_gain_shift": -0.15359392222222223,
+      "mean_task_statistics_gain_shift": -0.17035082777777777
+    },
+    "by_task": {
+      "matbench_pairwise": {
+        "n": 10,
+        "mean_internal_variance": 0.004629355454102506,
+        "mean_external_variance": 0.05235719315307476,
+        "mean_total_variance": 0.056986548607177265,
+        "internal_variance_error_correlation": -0.1975875191936332,
+        "external_variance_error_correlation": 0.006080322975285269,
+        "mean_nearest_analog_gain_shift": -0.45185823333333336,
+        "mean_task_statistics_gain_shift": -0.4476070093333333
+      },
+      "discover_unique": {
+        "n": 10,
+        "mean_internal_variance": 0.002426287179780788,
+        "mean_external_variance": 0.005558396254567422,
+        "mean_total_variance": 0.00798468343434821,
+        "internal_variance_error_correlation": 0.7545614378867722,
+        "external_variance_error_correlation": 0.958023890045831,
+        "mean_nearest_analog_gain_shift": -0.029710999999999998,
+        "mean_task_statistics_gain_shift": -0.10849649733333332
+      },
+      "extreme_properties": {
+        "n": 10,
+        "mean_internal_variance": 0.0005406796041058517,
+        "mean_external_variance": 0.0004889045303088636,
+        "mean_total_variance": 0.0010295841344147153,
+        "internal_variance_error_correlation": 0.6553225857162817,
+        "external_variance_error_correlation": 0.11427100170052702,
+        "mean_nearest_analog_gain_shift": 0.020787466666666643,
+        "mean_task_statistics_gain_shift": 0.045051023333333315
+      }
+    },
+    "by_model": {
+      "gpt-5.6-sol": {
+        "accuracy": 0.6333333333333333,
+        "brier": 0.24929109942333333,
+        "ece": 0.28423766666666667,
+        "aurc": 0.875983018172051
+      },
+      "gpt-5.6-luna": {
+        "accuracy": 0.7,
+        "brier": 0.23467213333333337,
+        "ece": 0.26164000000000004,
+        "aurc": 0.8642165439055768
+      },
+      "gpt-5.6-terra": {
+        "accuracy": 0.7333333333333333,
+        "brier": 0.20422010408670005,
+        "ece": 0.21785130000000003,
+        "aurc": 0.8376585692329022
+      }
+    }
+  }
+}

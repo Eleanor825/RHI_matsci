@@ -1,0 +1,82 @@
+{
+  "baseline_trajectory_gains": {
+    "base_factorized_lcb": 188.79181117006306,
+    "fixed_full_evidence_lcb": 168.39804085890964,
+    "fixed_screening_lcb": 181.93359367722127,
+    "shadow_price_successive_halving": 182.97366727836797,
+    "static_reliability": 36.060612470809325
+  },
+  "checks": {
+    "beats_every_non_llm_baseline": true,
+    "beats_strongest_same_evidence_llm": false,
+    "llm_same_evidence_gate_complete": false,
+    "outcome_blind_hoeffding_ucb_le_0.10": true,
+    "positive_trajectory_gain": true,
+    "risk_ucb_le_0.10": true,
+    "selected_nonempty": true
+  },
+  "full_acceptance_gate_passed": false,
+  "non_llm_acceptance_gate_passed": true,
+  "outcome_blind_hoeffding_risk_upper_bound": 0.08466666366899188,
+  "outcome_blind_hoeffding_scope": "conditional selected-batch average risk under outcome-blind selection, independent bounded losses, and a harness frozen before evaluation",
+  "primary": {
+    "alpha": 0.1,
+    "certificate_scope": "independent held-out batch certificate; batch ranking couples actions and is not an assumption-free action-wise theorem",
+    "certified": true,
+    "coverage": 0.10007880220646179,
+    "errors": 2,
+    "macro_task_population_mean_gain": 0.057570490864718105,
+    "macro_task_selective_risk": 0.167989417989418,
+    "population_mean_strict_gain": 0.07714286568446177,
+    "risk_upper_bound": 0.02457781683509971,
+    "selected_count": 254,
+    "selected_mean_strict_gain": 0.7791184767998546,
+    "selected_total_strict_gain": 197.89609310716307,
+    "selective_risk": 0.007874015748031496,
+    "stage_counts": {
+      "base": 2030,
+      "screening": 254,
+      "verification": 254
+    },
+    "task_breakdown": {
+      "discover_unique": {
+        "count": 85,
+        "coverage": 0.023529411764705882,
+        "errors": 1,
+        "evidence_cost": 0.0,
+        "population_mean_gain": 0.00836653798738403,
+        "selected": 2,
+        "selective_risk": 0.5,
+        "total_gain": 0.7111557289276427
+      },
+      "extreme_properties": {
+        "count": 1266,
+        "coverage": 0.0,
+        "errors": 0,
+        "evidence_cost": 0.0,
+        "population_mean_gain": 0.0,
+        "selected": 0,
+        "selective_risk": 0.0,
+        "total_gain": 0.0
+      },
+      "matbench_pairwise": {
+        "count": 1187,
+        "coverage": 0.21229991575400167,
+        "errors": 1,
+        "evidence_cost": 31.749999999999993,
+        "population_mean_gain": 0.16434493460677027,
+        "selected": 252,
+        "selective_risk": 0.003968253968253968,
+        "total_gain": 195.0774373782363
+      }
+    },
+    "total_acquired_evidence_cost": 31.749999999999993,
+    "trajectory_total_strict_gain": 195.78859310716396,
+    "worst_task_population_mean_gain": 0.0,
+    "worst_task_selective_risk": 0.5
+  },
+  "primary_method": "learned_portfolio_kg_mean",
+  "schema_version": "h5-round2-acceptance-audit-v2",
+  "strongest_same_evidence_llm": null,
+  "test_unlocked": false
+}

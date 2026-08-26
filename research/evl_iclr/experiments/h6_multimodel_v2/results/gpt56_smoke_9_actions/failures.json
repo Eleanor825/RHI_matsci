@@ -1,0 +1,8 @@
+[
+  {
+    "record_id": "extreme-rlcc::C4::e971fbfa2cfa",
+    "view_id": "tool::verification::replica-101",
+    "model": "gpt-5.6-sol",
+    "error": "DirectJudgeError: worthiness response lacks finite numeric p_success"
+  }
+]

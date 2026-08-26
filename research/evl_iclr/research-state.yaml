@@ -1,0 +1,171 @@
+project:
+  title: "SD-Worth: Source-Decomposed Action Worthiness for Scientific Agents"
+  question: "Can a scientific-agent harness estimate calibrated positive net scientific gain with decomposed agent-internal and evidence-external uncertainty while controlling selective risk under held-out scientific regimes?"
+  status: active
+  target: ICLR
+  started: 2026-08-21
+
+objective_requirements:
+  strict_net_scientific_gain: stable_train_only_opportunity_cost_validated_across_true_regime_folds
+  internal_external_variance_decomposition: h17_secondary_probability_score_35_5_percent_above_matched_no_source_but_expected_value_primary_failed
+  calibrated_action_worthiness: h14_extreme_h15_unique_and_h17_pairwise_positive_development_with_h17_secondary_confirmatory_3_of_4
+  selective_risk_guarantee: exact_certificate_respected_on_all_four_true_regime_folds
+  real_matbot_tool_trajectories: instrumentation_ready_live_count_zero
+  multi_model_multi_task_heldout_regime: three_task_development_available_pairwise_secondary_confirmatory_multimodel_final_protocol_pending
+  beat_static_reliability_and_llm_judge: static_baselines_beaten_llm_judge_pending
+
+current_phase: h18_external_voe_confirmed_source_ablation_unresolved_gpt_pilot_positive
+active_hypothesis: calibrated_counterfactual_value_of_evidence_plus_verify_before_execute_beats_success_confidence_for_costly_scientific_actions
+primary_metric: risk_controlled_net_scientific_gain
+secondary_metrics:
+  - selective_risk
+  - coverage
+  - brier_score
+  - expected_calibration_error
+  - worst_regime_risk
+  - normalized_net_gain
+
+known_evidence:
+  action_records: 20987
+  tasks: 3
+  regimes: 45
+  prompt_conditioned_trajectories: 900
+  sequential_tool_trajectories_v2: 900
+  sequential_tool_trajectory_stages: 2700
+  sequential_tool_trajectories_semi_synthetic: true
+  real_matbot_trajectories: 0
+  matbot_uncertainty_event_schema_ready: true
+  matbot_atomic_runtime_logger_ready: true
+  matbot_full_trajectory_importer_ready: true
+  real_api_offline_tool_trajectories: 30
+  full_signal_contract_passes: false
+  current_main_rhi_positive_claim_supported: controlled_benchmark_only
+  h1_nonlinear_capacity_audit_nonzero_coverage: false
+  closed_llm_replica_pilot_actions: 30
+  closed_llm_replica_pilot_cells: 270
+  closed_llm_replica_matrix_complete: true
+  sequential_tool_benchmark_v2_actions: 20987
+  h5_2_seeds: 5
+  h5_2_nonzero_coverage_seeds: 5
+  h5_2_positive_net_gain_seeds: 5
+  h5_2_source_ablation_wins: 3
+  h5_2_mean_population_net_gain: 0.001402
+  h5_2_mean_selective_risk: 0.0495
+  h5_2_mean_coverage: 0.0143
+  h5_2_wilcoxon_pvalue: 0.3125
+  bounded_shortfall_nonzero_coverage: true
+  h8_fixed_nonzero_coverage_seeds: 4
+  h8_fixed_positive_net_gain_seeds: 4
+  h8_fixed_test_shortfall_at_most_0_20_seeds: 5
+  h8_evolved_nonzero_coverage_seeds: 4
+  h8_evolved_positive_net_gain_seeds: 4
+  h8_evolved_test_shortfall_at_most_0_20_seeds: 5
+  h8_empirical_bernstein_nonzero_coverage_seeds: 0
+  h10_real_tool_corruption_audit_pass_seeds: 5
+  h10_real_tool_positive_net_gain_seeds: 1
+  h10_real_tool_nonzero_coverage_seeds: 1
+  h10_real_tool_mean_population_net_gain: -0.000135
+  h10_real_tool_source_ablation_wins: 0
+  h11_1_safe_activation_nonnegative_gain_seeds: 5
+  h11_1_safe_activation_positive_gain_seeds: 1
+  h11_1_safe_activation_mean_population_net_gain: 0.000091
+  legacy_five_seed_pairwise_test_regimes_distinct: false
+  legacy_five_seed_unique_test_regimes_distinct: false
+  h12_group_folds_cover_all_groups_exactly_once: true
+  h12_max_reservation_range_across_folds: 0.00002241
+  h12_fold0_nonzero_coverage: false
+  h12_fold0_top_1pct_errors: 0
+  h12_fold0_top_1pct_selected: 19
+  h12_fold0_top_1pct_exact_ucb: 0.2344
+  h12_fold0_top_2pct_exact_ucb: 0.2213
+  h13_confirmatory_folds: 4
+  h13_audit_pass_folds: 4
+  h13_active_folds: 3
+  h13_positive_net_gain_folds: 3
+  h13_risk_at_most_0_20_folds: 4
+  h13_mean_coverage: 0.011613
+  h13_mean_population_net_gain: 0.000426
+  h13_mean_no_source_gain: 0.000419
+  h13_mean_source_advantage: 0.000007
+  h13_source_ablation_wins: 1
+  h13_selected_tasks: 1
+  h13_selected_task_names:
+    - matbench_pairwise
+  h13_static_base_mean_gain: -0.000138
+  h13_static_ensemble_lcb_gain: -0.000138
+  h13_static_verbal_gain: 0.0
+  h13_static_evidence_gain: 0.0
+  h13_locked_confirmatory_pass: false
+  h14_protocol_amendments: 3
+  h14_external_folds_run_by_method:
+    - 0
+  h14_source_monotonic_calibration_passes: true
+  h14_two_stage_cross_fitted: true
+  h14_fold0_extreme_source_voi_acceptance_acquired: 36
+  h14_fold0_extreme_source_voi_acceptance_executed: 20
+  h14_fold0_extreme_source_voi_acceptance_errors: 0
+  h14_fold0_extreme_source_voi_acceptance_risk_ucb: 0.1851
+  h14_fold0_extreme_source_voi_test_acquired: 48
+  h14_fold0_extreme_source_voi_test_executed: 25
+  h14_fold0_extreme_source_voi_test_errors: 0
+  h14_fold0_extreme_source_voi_test_population_gain: 0.003072
+  h14_fold0_extreme_no_source_certified: false
+  h14_fold0_pairwise_source_voi_certified: false
+  h14_fold0_unique_source_voi_certified: false
+  h15_fold0_unique_source_voi_certified: true
+  h15_fold0_unique_source_voi_test_population_gain: 0.003788
+  h15_fold0_unique_no_source_test_population_gain: 0.003404
+  h16_fold0_pairwise_acquisition_identifiable: false
+  h17_protocol_locked_before_confirmatory: true
+  h17_confirmatory_folds: 4
+  h17_expected_primary_pass: false
+  h17_source_expected_certified_folds: 2
+  h17_source_expected_mean_deployed_gain: 0.000552
+  h17_no_source_expected_mean_deployed_gain: 0.000615
+  h17_source_probability_certified_folds: 3
+  h17_source_probability_mean_deployed_gain: 0.001207
+  h17_no_source_probability_certified_folds: 3
+  h17_no_source_probability_mean_deployed_gain: 0.000890
+  h17_source_probability_relative_advantage: 0.355
+  h17_external_variance_certified_folds: 0
+  h18_protocol_locked_before_confirmatory: true
+  h18_confirmatory_folds: 4
+  h18_source_probability_certified_folds: 4
+  h18_source_probability_mean_deployed_gain: 0.001209
+  h18_no_source_probability_certified_folds: 4
+  h18_no_source_probability_mean_deployed_gain: 0.001212
+  h18_primary_source_advantage_pass: false
+  h18_external_variance_certified_folds: 0
+  h18_source_expected_mean_deployed_gain: 0.001192
+  h18_no_source_expected_mean_deployed_gain: 0.001172
+  h18_gpt_direct_judge_pilot_actions: 100
+  h18_gpt_direct_judge_models: 2
+  h18_gpt_direct_judge_api_failures: 0
+  h18_ours_pilot_population_net_gain: 0.001716
+  h18_gpt56_luna_pilot_population_net_gain: -0.001160
+  h18_gpt56_sol_pilot_population_net_gain: -0.001273
+  h18_claude_models_available: false
+  h7_evolution_nonzero_coverage_seeds: 5
+  h7_evolution_positive_net_gain_seeds: 5
+  h7_evolution_mean_population_net_gain: 0.003043
+  h7_evolution_mean_selective_risk: 0.0304
+  h7_selected_contracts: 4
+  h6_gpt56_balanced_actions: 6
+  h6_gpt56_balanced_cells: 54
+  h6_gpt56_balanced_matrix_complete: true
+  h6_gpt56_raw_brier: 0.3681
+  h6_gpt56_internal_variance_error_correlation: 0.8667
+  h6_gpt56_external_variance_error_correlation: 0.6766
+  h6_gpt56_natural_30_action_matrix_complete: false
+
+next_actions:
+  - expand the GPT direct-judge comparison to a risk-certifiable feedback acceptance and test subset
+  - obtain a Claude-capable endpoint or Anthropic credential for two Claude baselines
+  - capture actual live MatXBot trajectories with the new event contract
+  - test a tail-sensitive hurdle VoE score on development data and freeze it before any new external task
+  - run open-model judge baselines on the final numeric observation contract
+  - freeze a unified three-task protocol before final held-out evaluation
+
+continuity:
+  mechanism: "Active Codex goal plus research-state.yaml"
+  instruction: "Read research-state.yaml, findings.md, and research-log.md; continue the active hypothesis without restarting."

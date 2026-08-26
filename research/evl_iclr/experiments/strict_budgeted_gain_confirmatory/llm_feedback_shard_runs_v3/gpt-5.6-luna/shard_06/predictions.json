@@ -1,0 +1,1726 @@
+{
+  "cell_count": 74,
+  "gain_definition": "strict_realized",
+  "models": [
+    "gpt-5.6-luna"
+  ],
+  "record_count": 74,
+  "reservation_values": {
+    "discover_unique": 0.82495517705065,
+    "extreme_properties": 0.7797663551401869,
+    "matbench_pairwise": 0.8699373695198329
+  },
+  "rows": [
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.544,
+      "mean_p_positive_gain": 0.78,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.68,
+          "expected_gain": 0.544,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.78,
+          "p_success": 0.78,
+          "rationale": "The large surrogate-tier margin supports a relatively high probability that A is the scientifically favorable choice, though the moderate estimated noise leaves meaningful misclassification risk. With high reversibility, irreversible failure harm is limited; the action-cost penalty is 0.03."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::3470f5d188d1",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.9212526096033402,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.456,
+      "mean_p_positive_gain": 0.67,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.456,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.67,
+          "p_success": 0.67,
+          "rationale": "The medium-versus-low surrogate ranking favors A, but the relatively high estimated noise substantially limits confidence. Using the ranking probability as success likelihood, reversibility-adjusted failure harm, and the visible action-cost penalty gives a positive expected strict gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::f1943f10b023",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.4738622129436325,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.414,
+      "mean_p_positive_gain": 0.64,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.64,
+          "expected_gain": 0.414,
+          "expected_normalized_utility": 0.72,
+          "p_positive_gain": 0.64,
+          "p_success": 0.64,
+          "rationale": "The high surrogate tier and substantial margin favor candidate A, but the estimated noise is also high, leaving only moderate confidence that A is truly superior. The action is largely reversible, so failure harm is limited; the main penalty is the visible action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::4536077496d1",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.4,
+      "mean_p_positive_gain": 0.6,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.4,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.6,
+          "p_success": 0.6,
+          "rationale": "Moderate evidence favors A, but the large estimated noise limits confidence; assuming 0.75 utility on success and 0.20 irreversible-failure harm."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::74ae277cc0ef",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.29557411273486434,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.461,
+      "mean_p_positive_gain": 0.69,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.63,
+          "expected_gain": 0.461,
+          "expected_normalized_utility": 0.78,
+          "p_positive_gain": 0.69,
+          "p_success": 0.69,
+          "rationale": "The medium-versus-low surrogate separation favors A, but the estimated noise is larger than the surrogate margin, leaving substantial uncertainty. Given high reversibility, failure harm is modest; the main deductions are the action cost and the probability-weighted loss from an incorrect selection."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::b765e244a057",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.4675991649269311,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.535,
+      "mean_p_positive_gain": 0.72,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.68,
+          "expected_gain": 0.535,
+          "expected_normalized_utility": 0.78,
+          "p_positive_gain": 0.72,
+          "p_success": 0.72,
+          "rationale": "High surrogate tier and substantial margin support B, but the estimated noise materially lowers confidence. The action is largely reversible, so failure harm is limited; the positive expected scientific value comfortably exceeds the action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::8d1476597c98",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.17,
+      "mean_p_positive_gain": 0.53,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.42,
+          "expected_gain": 0.17,
+          "expected_normalized_utility": 0.45,
+          "p_positive_gain": 0.53,
+          "p_success": 0.53,
+          "rationale": "The two candidates have identical surrogate tiers, the margin is small relative to the high estimated noise, and thus A has only a slight success-probability advantage. The action is highly reversible, limiting failure harm, but its weak discriminative evidence makes the expected strict gain modest."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::1b5241ead8f2",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.477,
+      "mean_p_positive_gain": 0.53,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.36,
+          "expected_gain": 0.477,
+          "expected_normalized_utility": 1.0,
+          "p_positive_gain": 0.53,
+          "p_success": 0.53,
+          "rationale": "Both candidates have the same high surrogate tier, and the small margin relative to the estimated noise provides only weak evidence favoring B. Assuming unit normalized scientific utility on a successful selection and irreversible-failure harm of 0.20 implied by reversibility 0.80, the expected gain is approximately 0.53 - 0.1500*0.20 - 0.2500*0.47*0.20 = 0.477."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::cdb4b8994185",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.4237578288100209,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.4025,
+      "mean_p_positive_gain": 0.62,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.62,
+          "expected_gain": 0.4025,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.62,
+          "p_success": 0.62,
+          "rationale": "The high surrogate tier and positive margin favor Candidate B, but the estimated noise is large relative to the margin, leaving substantial uncertainty. The action is highly reversible, so estimated irreversible failure harm is low; after the visible action cost, the posterior expected strict gain remains positive."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::c5404b186de3",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.4225,
+      "mean_p_positive_gain": 0.67,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.4225,
+          "expected_normalized_utility": 0.469,
+          "p_positive_gain": 0.67,
+          "p_success": 0.67,
+          "rationale": "High surrogate tier supports B, but the large estimated noise materially limits confidence. Estimated conditional utility on success is 0.70; action cost is 0.030 and residual irreversible-failure harm is estimated at 0.20."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::369541bb6c40",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.48513569937369516,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.389,
+      "mean_p_positive_gain": 0.7,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.389,
+          "expected_normalized_utility": 0.62,
+          "p_positive_gain": 0.7,
+          "p_success": 0.7,
+          "rationale": "The high surrogate tier and positive margin favor B, but the margin is modest relative to estimated noise, leaving substantial uncertainty. Conditional scientific utility is estimated as moderate, while the action is largely reversible, so failure harm is limited; the main deduction is the normalized action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::9cb997673268",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.6579958246346556,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.4051,
+      "mean_p_positive_gain": 0.63,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.72,
+          "expected_gain": 0.4051,
+          "expected_normalized_utility": 0.72,
+          "p_positive_gain": 0.63,
+          "p_success": 0.63,
+          "rationale": "The high surrogate tier and moderate margin favor candidate B, but the substantial estimated noise leaves meaningful uncertainty. The action is mostly reversible, so the failure-harm contribution is limited; expected scientific value remains positive after action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::d69a2a1be48a",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.7515240083507306,
+      "worthy": 1
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.1932,
+      "mean_p_positive_gain": 0.42,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.55,
+          "expected_gain": 0.1932,
+          "expected_normalized_utility": 0.68,
+          "p_positive_gain": 0.42,
+          "p_success": 0.42,
+          "rationale": "Sparse pre-action evidence supports moderate potential scientific value but leaves high-performance and uniqueness uncertain. Conditional success would likely yield substantial utility relative to cost; failure produces a modest additional irreversible-harm penalty."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-00129",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.225,
+      "mean_p_positive_gain": 0.5,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.62,
+          "expected_gain": 0.225,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.5,
+          "p_success": 0.5,
+          "rationale": "The candidate is chemically distinctive and structurally well specified, but the supplied evidence does not establish high bulk modulus. Screening could yield useful candidate validation, with moderate success probability and limited but nonzero failure harm; expected scientific benefit modestly exceeds the direct action-cost penalty."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-06384",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.1075,
+      "mean_p_positive_gain": 0.32,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.1075,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.32,
+          "p_success": 0.32,
+          "rationale": "Sparse evidence supports moderate chemical distinctiveness but leaves high bulk modulus uncertain; screening is moderately reversible, limiting failure harm."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-09764",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.145,
+      "mean_p_positive_gain": 0.43,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.145,
+          "expected_normalized_utility": 0.62,
+          "p_positive_gain": 0.43,
+          "p_success": 0.43,
+          "rationale": "Sparse evidence supports moderate screening value but weakly supports both high performance and chemical uniqueness; moderate action cost and limited irreversibility reduce net gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-04966",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.0725,
+      "mean_p_positive_gain": 0.18,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.72,
+          "expected_gain": -0.0725,
+          "expected_normalized_utility": 0.24,
+          "p_positive_gain": 0.18,
+          "p_success": 0.18,
+          "rationale": "The candidate has limited evidence for both exceptional bulk modulus and chemical uniqueness, while the screening cost is material and reversibility is only moderate. A successful screen could provide useful discovery value, but the posterior probability of meeting both criteria is low."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-05874",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.094,
+      "mean_p_positive_gain": 0.3,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.68,
+          "expected_gain": 0.094,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.3,
+          "p_success": 0.3,
+          "rationale": "Sparse evidence supports only a modest probability that screening will identify a genuinely high-bulk-modulus and chemically unique candidate. The action has moderate cost and reversibility, while failure carries limited but nonzero irreversible harm."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-01337",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0438,
+      "mean_p_positive_gain": 0.24,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.0438,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.24,
+          "p_success": 0.25,
+          "rationale": "The composition is chemically distinctive and the tetragonal structure is compatible with a plausible screening target, but no direct bulk-modulus value or strong performance evidence is provided. I therefore assign modest success probability and moderate utility conditional on success. The action cost is material, while irreversible-failure harm is limited because this is primarily a screening action."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-06734",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.0006,
+      "mean_p_positive_gain": 0.18,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.62,
+          "expected_gain": -0.0006,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.18,
+          "p_success": 0.18,
+          "rationale": "p_success=0.18; utility=0.55; cost=0.50; irreversible_failure_harm=0.12"
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-01433",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.062,
+      "mean_p_positive_gain": 0.28,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.43,
+          "expected_gain": 0.062,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.28,
+          "p_success": 0.28,
+          "rationale": "Sparse evidence supports a modest chance of identifying a genuinely high-performance and chemically unique candidate; moderate cost and partial reversibility limit net gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-09703",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.2656,
+      "mean_p_positive_gain": 0.55,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.64,
+          "expected_gain": 0.2656,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.55,
+          "p_success": 0.55,
+          "rationale": "Sparse evidence supports moderate success probability; screening is reversible enough that irreversible-failure harm is low."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-06777",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.8539556252801435,
+      "worthy": 1
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.1631,
+      "mean_p_positive_gain": 0.35,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.1631,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.35,
+          "p_success": 0.35,
+          "rationale": "Moderate potential scientific value, but the evidence does not establish high bulk modulus or chemical uniqueness; screening is only partly reversible and incurs moderate cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-00436",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.048,
+      "mean_p_positive_gain": 0.34,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.62,
+          "expected_gain": 0.048,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.34,
+          "p_success": 0.3,
+          "rationale": "The candidate has limited pre-action evidence beyond composition and symmetry, so the probability of confirming both high performance and chemical uniqueness is modest. Successful screening could provide substantial scientific value, while the moderate action cost and partial irreversibility impose a meaningful downside."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-01897",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.11,
+      "mean_p_positive_gain": 0.4,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.34,
+          "expected_gain": 0.11,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.4,
+          "p_success": 0.4,
+          "rationale": "The candidate has some structural and compositional specificity, but the supplied evidence does not establish either a high bulk modulus or chemical uniqueness. A successful screen could provide moderate scientific value, while the stated cost and failure harm make the expected net gain only modestly positive."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-03764",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0735,
+      "mean_p_positive_gain": 0.32,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.34,
+          "expected_gain": 0.0735,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.32,
+          "p_success": 0.32,
+          "rationale": "Sparse evidence supports only a moderate chance that the candidate is both high-performance and chemically unique. Conditional scientific value is substantial, while the visible action cost and moderate irreversibility create a meaningful downside on failure."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-06586",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.094,
+      "mean_p_positive_gain": 0.3,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.094,
+          "expected_normalized_utility": 0.195,
+          "p_positive_gain": 0.3,
+          "p_success": 0.3,
+          "rationale": "Sparse evidence supports only a modest probability that Sc3Sb1 will satisfy both high-performance and chemical-uniqueness criteria. Conditional scientific utility is moderate, while the action cost is certain and irreversible-failure harm is limited but nonzero."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-10480",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.044,
+      "mean_p_positive_gain": 0.25,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.42,
+          "expected_gain": 0.044,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.25,
+          "p_success": 0.25,
+          "rationale": "Sparse evidence supports plausible chemical uniqueness but provides no quantitative bulk-modulus result; moderate utility conditional on success and limited failure harm imply a small positive expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-04088",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.085,
+      "mean_p_positive_gain": 0.3,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.085,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.3,
+          "p_success": 0.3,
+          "rationale": "The candidate has some structural and composition information but limited evidence for simultaneously achieving high bulk modulus and chemical uniqueness, so success is uncertain. If successful, the scientific utility could be substantial; the moderate action cost and partial reversibility impose a modest downside."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-08236",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.035,
+      "mean_p_positive_gain": 0.3,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.38,
+          "expected_gain": 0.035,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.3,
+          "p_success": 0.3,
+          "rationale": "Sparse pre-action evidence supports only a modest probability that the candidate is both high-performance and chemically unique. Assuming moderate utility conditional on success, a 0.500 normalized action cost, and partial irreversibility, the expected scientific gain is slightly positive but uncertain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-05548",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.181,
+      "mean_p_positive_gain": 0.47,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.181,
+          "expected_normalized_utility": 0.6,
+          "p_positive_gain": 0.47,
+          "p_success": 0.47,
+          "rationale": "The composition and cubic space group provide some basis for a chemically distinctive candidate, but the supplied evidence does not establish high bulk modulus or broader performance. Screening has moderate success probability and moderate scientific value; the action cost is material, while irreversible failure harm is limited."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-07718",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0763,
+      "mean_p_positive_gain": 0.3,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.0763,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.3,
+          "p_success": 0.3,
+          "rationale": "Moderate screening success probability; moderate utility if high-performance and chemically unique; cost is certain and failure harm is limited by partial reversibility."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-10633",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.17,
+      "mean_p_positive_gain": 0.4,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.34,
+          "expected_gain": 0.17,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.4,
+          "p_success": 0.4,
+          "rationale": "Sparse evidence supports moderate plausibility of a successful, scientifically useful screen: the cubic structure and unusual composition are suggestive, but no quantitative bulk-modulus evidence is provided. The action has moderate cost and limited implied irreversible harm, so the posterior mean strict gain remains positive but uncertain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-00736",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.18,
+      "mean_p_positive_gain": 0.4,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.62,
+          "expected_gain": 0.18,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.4,
+          "p_success": 0.4,
+          "rationale": "The composition and rare-earth/chalcogenide chemistry support likely uniqueness, but the supplied evidence does not establish a sufficiently high bulk modulus. Screening could yield useful candidate validation, while the moderate action cost and only partial reversibility reduce net value."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-02334",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.1013,
+      "mean_p_positive_gain": 0.35,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.1013,
+          "expected_normalized_utility": 0.5,
+          "p_positive_gain": 0.35,
+          "p_success": 0.35,
+          "rationale": "The limited evidence supports a moderate chance that KCrO2 is a promising, chemically distinctive candidate, but does not strongly establish either high bulk modulus or uniqueness. Screening is relatively reversible, so failure harm is expected to be low; the main penalty is the visible action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-03185",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.107,
+      "mean_p_positive_gain": 0.38,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.62,
+          "expected_gain": 0.107,
+          "expected_normalized_utility": 0.6,
+          "p_positive_gain": 0.38,
+          "p_success": 0.38,
+          "rationale": "The Al-W composition and tungsten content make high bulk modulus plausible, while the monoclinic structure and limited evidence support only moderate confidence in chemical uniqueness. Screening has moderate cost and reversibility, yielding a modest positive expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-06771",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.155,
+      "mean_p_positive_gain": 0.42,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.155,
+          "expected_normalized_utility": 0.72,
+          "p_positive_gain": 0.42,
+          "p_success": 0.42,
+          "rationale": "The unusual cubic actinide-containing composition supports substantial chemical-uniqueness potential, but the evidence does not establish high bulk modulus or successful screening. I estimate moderate success probability and high conditional scientific value; the action is partly reversible, so failure harm is limited but nonzero. After the visible action-cost penalty and failure-harm term, expected strict gain remains positive but modest."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-06496",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.1001,
+      "mean_p_positive_gain": 0.32,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.1001,
+          "expected_normalized_utility": 0.68,
+          "p_positive_gain": 0.32,
+          "p_success": 0.32,
+          "rationale": "Sparse evidence supports moderate novelty potential but leaves high-performance status uncertain; successful screening would have substantial scientific value, while failure incurs modest irreversible harm."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-09842",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.8984797549678769,
+      "worthy": 1
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0325,
+      "mean_p_positive_gain": 0.22,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.61,
+          "expected_gain": 0.0325,
+          "expected_normalized_utility": 0.14,
+          "p_positive_gain": 0.22,
+          "p_success": 0.22,
+          "rationale": "The sparse evidence confirms a structurally defined candidate but provides no convincing bulk-modulus value or chemical-uniqueness signal. I therefore assign a low-to-moderate discovery success probability and modest utility conditional on success. The visible action cost is substantial, while reversibility limits but does not eliminate failure harm, leaving a small positive posterior mean gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-03557",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0945,
+      "mean_p_positive_gain": 0.38,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.55,
+          "expected_gain": 0.0945,
+          "expected_normalized_utility": 0.247,
+          "p_positive_gain": 0.38,
+          "p_success": 0.38,
+          "rationale": "Sparse pre-action evidence supports a modest probability that the candidate is both high-performing and chemically unique. Conditional scientific utility is moderate, while the visible action cost and partial irreversibility impose meaningful penalties."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-05976",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0025,
+      "mean_p_positive_gain": 0.3,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.62,
+          "expected_gain": 0.0025,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.3,
+          "p_success": 0.3,
+          "rationale": "Sparse evidence supports only a modest chance that Fe4 Si2 is both high-performing and chemically unique; the moderate action cost and partial irreversibility largely offset the expected scientific benefit."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-07578",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.1825,
+      "mean_p_positive_gain": 0.4,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.1825,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.4,
+          "p_success": 0.4,
+          "rationale": "Sparse evidence supports a plausible but uncertain high-performance, chemically distinctive candidate. Assuming conditional utility of 0.70 on successful screening, moderate success probability of 0.40, and low-to-moderate irreversible failure harm of 0.15 given the reversible screening setting, the expected gain is 0.40*0.70 - 0.15*0.50 - 0.25*0.60*0.15 = 0.1825."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-07784",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.219,
+      "mean_p_positive_gain": 0.015,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.219,
+          "expected_normalized_utility": 0.42,
+          "p_positive_gain": 0.015,
+          "p_success": 0.04,
+          "rationale": "The candidate is an extremely large, structurally complex extrapolation with no outcome-bearing evidence and substantial uncertainty that it will simultaneously satisfy all listed property targets. The visible action cost is high, while partial reversibility does not eliminate failure harm. A small chance of useful success is outweighed by expected cost and failure penalty."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C9::969f78420886",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.204,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.9,
+          "expected_gain": -0.204,
+          "expected_normalized_utility": 0.3,
+          "p_positive_gain": 0.02,
+          "p_success": 0.02,
+          "rationale": "The candidate is an exceptionally large, structurally complex molecule and is unlikely to match the target molecule-property profile and RMSE bounds simultaneously. With low success probability, the visible action cost and expected irreversible-failure penalty dominate the expected scientific utility."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::6dace1936a01",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.219,
+      "mean_p_positive_gain": 0.01,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.88,
+          "expected_gain": -0.219,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.01,
+          "p_success": 0.03,
+          "rationale": "The candidate is an exceptionally large, structurally complex molecule and is unlikely to fall within the specified RMSE bounds across all seven target properties. Given the high action cost and only partial reversibility, the expected scientific benefit is outweighed by cost and failure harm."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C2::223031be4519",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.205,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.88,
+          "expected_gain": -0.205,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.02,
+          "p_success": 0.04,
+          "rationale": "The very large, highly complex structure is unlikely to satisfy all seven tightly bounded target properties, and no positive empirical outcome evidence is available. The substantial action cost and only partial reversibility further reduce expected strict gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C1::d80959742e11",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.7627881619937694,
+      "worthy": 1
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.145,
+      "mean_p_positive_gain": 0.08,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.82,
+          "expected_gain": -0.145,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.08,
+          "p_success": 0.08,
+          "rationale": "The molecule is exceptionally large and structurally complex relative to the stated clinical-trial-derived extrapolation target, making simultaneous agreement with all seven property constraints unlikely. Conditional scientific value would be substantial if successful, but the visible action cost and estimated irreversible failure harm dominate the posterior expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C3::d98f2145c1ce",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.20375,
+      "mean_p_positive_gain": 0.05,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.82,
+          "expected_gain": -0.20375,
+          "expected_normalized_utility": 0.035,
+          "p_positive_gain": 0.05,
+          "p_success": 0.05,
+          "rationale": "Very low probability of simultaneously matching all extreme-property targets; substantial action cost and failure penalty dominate."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C9::951864490b3d",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.1733,
+      "mean_p_positive_gain": 0.03,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.88,
+          "expected_gain": -0.1733,
+          "expected_normalized_utility": 0.65,
+          "p_positive_gain": 0.03,
+          "p_success": 0.03,
+          "rationale": "The extremely large, structurally complex candidate is unlikely to satisfy the simultaneous MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE constraints. Even conditional on success, the visible action cost is substantial, while failure carries moderate harm given only partial reversibility."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::090e5fcaf88e",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.124,
+      "mean_p_positive_gain": 0.025,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.83,
+          "expected_gain": -0.124,
+          "expected_normalized_utility": 0.24,
+          "p_positive_gain": 0.025,
+          "p_success": 0.08,
+          "rationale": "The candidate is an unusually large, structurally complex molecule with no favorable outcome evidence and appears poorly suited to reliably matching the specified multi-property extrapolation target. Given high action cost, only modest reversibility, and low estimated success probability, the posterior mean strict realized gain is strongly negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C6::5d4499a39e5f",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.191,
+      "mean_p_positive_gain": 0.08,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.78,
+          "expected_gain": -0.191,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.08,
+          "p_success": 0.08,
+          "rationale": "The extremely large, structurally complex candidate has a low estimated probability of simultaneously meeting all stated property and DRD2 RMSE bounds. Conditional on success, scientific utility could be moderate, but the high action cost and substantial residual irreversible-failure harm make the posterior mean strict gain negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C10::59d6adf2d791",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.1573,
+      "mean_p_positive_gain": 0.06,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.82,
+          "expected_gain": -0.1573,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.06,
+          "p_success": 0.06,
+          "rationale": "The highly complex, heavily glycosylated candidate has low estimated probability of meeting the multi-property C3 RMSE target; the substantial action-cost penalty and likely failure harm dominate the expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C3::a116f458b866",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2265,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.88,
+          "expected_gain": -0.2265,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.02,
+          "p_success": 0.02,
+          "rationale": "The extremely large, chemically unusual candidate is unlikely to satisfy all seven extrapolated property constraints simultaneously; conditional scientific utility would be meaningful if successful, but the high action cost and moderate irreversibility make expected strict gain strongly negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C5::272576964b87",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2388,
+      "mean_p_positive_gain": 0.01,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.89,
+          "expected_gain": -0.2388,
+          "expected_normalized_utility": 0.5,
+          "p_positive_gain": 0.01,
+          "p_success": 0.01,
+          "rationale": "The molecule is exceptionally large and structurally complex relative to typical drug-like property distributions, making simultaneous agreement with the stated MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE bounds unlikely. The high action cost and moderate reversibility further dominate the small expected scientific benefit."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C2::71d48b72676d",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.682570093457944,
+      "worthy": 1
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.243,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.82,
+          "expected_gain": -0.243,
+          "expected_normalized_utility": 0.35,
+          "p_positive_gain": 0.02,
+          "p_success": 0.03,
+          "rationale": "The candidate is an extremely large, structurally complex molecule with a low prior probability of simultaneously matching all seven descriptor targets within the stated RMSE bounds. Given the high action cost and only partial reversibility, failure carries substantial expected downside, making positive strict realized gain unlikely."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C6::4dc8ab05e58a",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.21725,
+      "mean_p_positive_gain": 0.03,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.78,
+          "expected_gain": -0.21725,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.03,
+          "p_success": 0.03,
+          "rationale": "The unusually large, highly complex extrapolated structure has low probability of simultaneously matching all seven target properties within the stated RMSE bounds; the high action cost and only partial reversibility dominate expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::b5d7a94ec316",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.1495,
+      "mean_p_positive_gain": 0.08,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.83,
+          "expected_gain": -0.1495,
+          "expected_normalized_utility": 0.35,
+          "p_positive_gain": 0.08,
+          "p_success": 0.08,
+          "rationale": "The very large, highly complex candidate and absence of outcome evidence imply low probability of satisfying all requested property RMSE bounds; the high action cost and moderate irreversible-failure exposure dominate the expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C9::c7960eb09f81",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.1875,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.72,
+          "expected_gain": -0.1875,
+          "expected_normalized_utility": 0.45,
+          "p_positive_gain": 0.02,
+          "p_success": 0.07,
+          "rationale": "The molecule is exceptionally large and highly polar, making simultaneous agreement with MW, logP, TPSA, QED, and related descriptor RMSE bounds unlikely. The substantial action cost and moderate irreversibility dominate the small probability of a successful extrapolation."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C3::5cb476a09ced",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2285,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.2285,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.02,
+          "p_success": 0.02,
+          "rationale": "The extremely large, complex, and visibly truncated candidate is unlikely to satisfy the simultaneous MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE constraints. With low success probability, the substantial action-cost penalty and moderate irreversible-failure exposure dominate the expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::213df3967338",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.155,
+      "mean_p_positive_gain": 0.08,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.155,
+          "expected_normalized_utility": 0.08,
+          "p_positive_gain": 0.08,
+          "p_success": 0.08,
+          "rationale": "The candidate is an exceptionally large and structurally complex molecule, making simultaneous agreement with the specified MW, logP, TPSA, QED, HBA, HBD, and DRD2 targets unlikely, especially for an extrapolation target with withheld outcomes. Assuming unit utility conditional on success and moderate irreversible-failure harm consistent with partial reversibility, the high action cost and failure penalty dominate the low success probability."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C10::43788824c481",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2265,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.87,
+          "expected_gain": -0.2265,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.02,
+          "p_success": 0.02,
+          "rationale": "The candidate is an unusually large, highly complex polyheterocycle and appears poorly matched to the C8 property-targeting setting, making simultaneous attainment of MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE bounds very unlikely. Even conditional on success, the visible action cost is substantial; with moderate reversibility, expected failure harm further lowers the strict realized gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::d497f879ab01",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.212,
+      "mean_p_positive_gain": 0.008,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.91,
+          "expected_gain": -0.212,
+          "expected_normalized_utility": 0.72,
+          "p_positive_gain": 0.008,
+          "p_success": 0.008,
+          "rationale": "The molecule is exceptionally large and structurally complex, making simultaneous compliance with the MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE bounds very unlikely. Conditional success would be scientifically useful, but the high action cost and nontrivial failure harm dominate the posterior expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C2::b64b29bb2dd7",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2429,
+      "mean_p_positive_gain": 0.005,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.2429,
+          "expected_normalized_utility": 0.3,
+          "p_positive_gain": 0.005,
+          "p_success": 0.005,
+          "rationale": "The highly oversized, structurally complex candidate is unlikely to satisfy the simultaneous Table 1 property bounds for C8. With low success probability, the substantial action cost and moderate irreversibility dominate the expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::5d04da07bd14",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2415,
+      "mean_p_positive_gain": 0.001,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.83,
+          "expected_gain": -0.2415,
+          "expected_normalized_utility": 0.15,
+          "p_positive_gain": 0.001,
+          "p_success": 0.01,
+          "rationale": "The candidate is an extremely large, highly heteroatom-rich structure with no supportive outcome evidence and appears poorly aligned with the requested compact drug-like property profile. Success probability is therefore very low; the visible action cost and moderate irreversibility dominate the expected gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C5::3b063b07fe51",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.236,
+      "mean_p_positive_gain": 0.01,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.74,
+          "expected_gain": -0.236,
+          "expected_normalized_utility": 0.005,
+          "p_positive_gain": 0.01,
+          "p_success": 0.01,
+          "rationale": "Very large, structurally complex molecule with no supportive evidence; substantial risk of missing multiple property targets, while action cost is high."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C1::8e452ec7c60f",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.242,
+      "mean_p_positive_gain": 0.01,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.9,
+          "expected_gain": -0.242,
+          "expected_normalized_utility": 0.01,
+          "p_positive_gain": 0.01,
+          "p_success": 0.01,
+          "rationale": "The candidate appears to be an extremely large, highly heteroatom-rich polycyclic molecule, making simultaneous agreement with the stated MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE bounds very unlikely. With high normalized action cost and only partial reversibility, the expected cost and failure-harm terms dominate."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::082a41c08788",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.219,
+      "mean_p_positive_gain": 0.03,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.219,
+          "expected_normalized_utility": 0.023,
+          "p_positive_gain": 0.03,
+          "p_success": 0.03,
+          "rationale": "The highly elaborate candidate is unlikely to satisfy all seven tightly bounded target properties, while the visible action cost is high and reversibility is only partial. Conditional scientific value would be substantial if successful, but the low success probability and failure penalty make expected strict gain strongly negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C6::9ee6a65c2cc4",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2436,
+      "mean_p_positive_gain": 0.003,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.96,
+          "expected_gain": -0.2436,
+          "expected_normalized_utility": 0.35,
+          "p_positive_gain": 0.003,
+          "p_success": 0.003,
+          "rationale": "The very large, highly polar molecule is unlikely to satisfy the simultaneous MW, logP, TPSA, QED, and DRD2 bounds; execution cost and failure harm dominate."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C3::bd9adee2d103",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.214,
+      "mean_p_positive_gain": 0.03,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.88,
+          "expected_gain": -0.214,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.03,
+          "p_success": 0.03,
+          "rationale": "The candidate appears structurally extreme and the supplied evidence provides no positive validation of meeting all seven target properties. With low estimated success probability, the visible action cost and moderate irreversibility dominate the expected strict gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::7bb054f0dc1d",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.154,
+      "mean_p_positive_gain": 0.1,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.84,
+          "expected_gain": -0.154,
+          "expected_normalized_utility": 0.08,
+          "p_positive_gain": 0.1,
+          "p_success": 0.1,
+          "rationale": "The candidate provides no validating outcome evidence, appears unusually large and structurally complex for the target set, and the supplied SMILES is truncated or malformed. The probability of simultaneously meeting all seven RMSE-bounded properties is therefore low. Conditional scientific utility is estimated at 0.8 if successful; the 0.12 normalized action-cost penalty and expected failure harm dominate the posterior mean."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C10::65ed96b171f7",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2375,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.2375,
+          "expected_normalized_utility": 0.45,
+          "p_positive_gain": 0.02,
+          "p_success": 0.02,
+          "rationale": "The extremely large, highly fused polyaromatic/heteroaromatic structure is unlikely to simultaneously satisfy the stated MW, logP, TPSA, QED, HBA, HBD, and DRD2 RMSE constraints; the visible action cost and partial irreversibility dominate the low probability of a successful match."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C1::f9a100bde024",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.8764953271028038,
+      "worthy": 1
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.224,
+      "mean_p_positive_gain": 0.02,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.88,
+          "expected_gain": -0.224,
+          "expected_normalized_utility": 0.018,
+          "p_positive_gain": 0.02,
+          "p_success": 0.02,
+          "rationale": "The candidate is a very large, structurally complex, and apparently out-of-distribution molecule relative to the PubChem clinical-trial reference set. With outcomes withheld and seven simultaneous property constraints, the probability of satisfying all RMSE bounds is very low. The high action cost and substantial residual failure harm dominate the small expected scientific benefit."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C6::ba07e13e23be",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.231,
+      "mean_p_positive_gain": 0.03,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.231,
+          "expected_normalized_utility": 0.011,
+          "p_positive_gain": 0.03,
+          "p_success": 0.03,
+          "rationale": "The highly complex, apparently truncated candidate is unlikely to satisfy the full set of C8 property constraints, while the visible action cost is high. Conditional utility if successful is modest, but expected failure-related harm and cost dominate."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::ddc22e882a49",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.211,
+      "mean_p_positive_gain": 0.005,
+      "models": {
+        "gpt-5.6-luna": {
+          "assessment_confidence": 0.86,
+          "expected_gain": -0.211,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.005,
+          "p_success": 0.01,
+          "rationale": "The candidate is an exceptionally large, structurally complex molecule and is unlikely to simultaneously fall within the requested RMSE bounds for all seven properties. Given the high normalized action cost and partial reversibility, the expected strict realized gain is strongly negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C7::b79a16a16a64",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    }
+  ],
+  "schema_version": "sequential-v2-generic-llm-worthiness-v2",
+  "split": "feedback",
+  "stage": "base",
+  "summary": {
+    "by_model": {
+      "gpt-5.6-luna": {
+        "accuracy_at_threshold": 0.8783783783783784,
+        "aurc": 0.6441845613458513,
+        "brier": 0.1288374864864865,
+        "confidently_wrong_rate": 0.06756756756756757,
+        "coverage": 0.1891891891891892,
+        "coverage_at_risk_0.05": 0.013513513513513514,
+        "coverage_at_risk_0.10": 0.013513513513513514,
+        "ece": 0.1524054054054054,
+        "expected_gain_mae": 0.24395711542014376,
+        "log_loss": 0.46230318630770517,
+        "n": 74.0,
+        "selective_accuracy": 0.6428571428571429,
+        "selective_risk": 0.3571428571428571
+      }
+    },
+    "by_task": {
+      "discover_unique": {
+        "accuracy_at_threshold": 0.9333333333333333,
+        "aurc": 0.8483192753599994,
+        "brier": 0.13398000000000002,
+        "confidently_wrong_rate": 0.03333333333333333,
+        "coverage": 0.06666666666666667,
+        "coverage_at_risk_0.05": 0.03333333333333333,
+        "coverage_at_risk_0.10": 0.03333333333333333,
+        "ece": 0.2766666666666666,
+        "log_loss": 0.44802287420671444,
+        "n": 30.0,
+        "selective_accuracy": 0.5,
+        "selective_risk": 0.5
+      },
+      "extreme_properties": {
+        "accuracy_at_threshold": 0.90625,
+        "aurc": 0.951555455473436,
+        "brier": 0.09222418749999996,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.06993749999999999,
+        "log_loss": 0.4177384860332285,
+        "n": 32.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      },
+      "matbench_pairwise": {
+        "accuracy_at_threshold": 0.6666666666666666,
+        "aurc": 0.2763347763347764,
+        "brier": 0.2136166666666666,
+        "confidently_wrong_rate": 0.3333333333333333,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.08333333333333333,
+        "coverage_at_risk_0.10": 0.08333333333333333,
+        "ece": 0.06166666666666666,
+        "log_loss": 0.61684316729212,
+        "n": 12.0,
+        "selective_accuracy": 0.6666666666666666,
+        "selective_risk": 0.33333333333333337
+      }
+    },
+    "ensemble": {
+      "accuracy_at_threshold": 0.8783783783783784,
+      "aurc": 0.6441845613458513,
+      "brier": 0.1288374864864865,
+      "confidently_wrong_rate": 0.06756756756756757,
+      "coverage": 0.1891891891891892,
+      "coverage_at_risk_0.05": 0.013513513513513514,
+      "coverage_at_risk_0.10": 0.013513513513513514,
+      "ece": 0.1524054054054054,
+      "expected_gain_mae": 0.24395711542014376,
+      "expected_gain_variance_error_correlation": 0.0,
+      "log_loss": 0.46230318630770517,
+      "n": 74.0,
+      "probability_variance_error_correlation": 0.0,
+      "selective_accuracy": 0.6428571428571429,
+      "selective_risk": 0.3571428571428571
+    }
+  }
+}

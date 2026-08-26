@@ -1,0 +1,31 @@
+{
+  "expected_cells": 342,
+  "expected_cells_per_record": 18,
+  "held_batch_retrieval_leaks": [],
+  "observed_cells": 342,
+  "passed": true,
+  "per_record_cell_counts": {
+    "matbot-lfp-choice::batch_1_legacy_minus20_202604::1a-g-1b-g::2a-h-1b-g": 18,
+    "matbot-lfp-choice::batch_1_legacy_minus20_202604::2a-h-1b-g::4a-j-1b-g": 18,
+    "matbot-lfp-choice::batch_1_legacy_minus20_202604::3a-i-3b-i::1a-g-1b-g": 18,
+    "matbot-lfp-choice::batch_1_legacy_minus20_202604::3a-i-3b-i::2a-h-1b-g": 18,
+    "matbot-lfp-choice::batch_1_legacy_minus20_202604::4a-j-1b-g::1a-g-1b-g": 18,
+    "matbot-lfp-choice::batch_1_legacy_minus20_202604::4a-j-1b-g::3a-i-3b-i": 18,
+    "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l2a-lfp-l2b": 18,
+    "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l3a-lfp-l3b": 18,
+    "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l3a-lfp-l3b::lfp-l2a-lfp-l2b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba03a-aba03b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba04a-aba03b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba02a-aba02b::aba01a-aba01b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba02a-aba02b::aba04a-aba03b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba03a-aba03b::aba02a-aba02b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba03a-aba03b::aba04a-aba03b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba03a-aba03b::aba05a-aba05b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba04a-aba03b::aba05a-aba05b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba05a-aba05b::aba01a-aba01b": 18,
+    "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba05a-aba05b::aba02a-aba02b": 18
+  },
+  "prompt_leaks": [],
+  "records": 19,
+  "unique_cells": 342
+}

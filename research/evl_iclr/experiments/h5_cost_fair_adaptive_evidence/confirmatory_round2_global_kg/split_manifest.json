@@ -1,0 +1,23 @@
+{
+  "schema_version": "h5-round2-split-manifest-v1",
+  "fit_acceptance": {
+    "path": "research/evl_iclr/data/adaptive_evidence_h5_round2_fit_acceptance_20769.jsonl",
+    "sha256": "436e43c503bbebad475cc656be8be24da960e5e3c947755a961273dda259d228",
+    "train": 14630,
+    "feedback": 3601,
+    "acceptance": 2538,
+    "test": 0
+  },
+  "locked_test": {
+    "path": "research/evl_iclr/data/adaptive_evidence_h5_round2_locked_test_3375.jsonl",
+    "sha256": "03fe14f10277a3469d7551f1cb317c294a99f5a79925ac50aa695672ad1e6ef2",
+    "test": 3375
+  },
+  "scientific_fingerprint_overlap_with_prior_30000": 0,
+  "record_id_overlaps": {
+    "fit_acceptance": 0,
+    "fit_test": 0,
+    "acceptance_test": 0
+  },
+  "test_inspected": false
+}

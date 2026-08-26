@@ -1,0 +1,410 @@
+{
+  "alpha": 0.1,
+  "confirmatory_gate": {
+    "beats_external_variance_gain": true,
+    "certified_in_at_least_three_folds": false,
+    "passed": false,
+    "pooled_empirical_test_risk_at_most_alpha": true,
+    "positive_aggregate_deployed_test_gain": true
+  },
+  "delta": 0.05,
+  "evolution_gate": {
+    "beats_external_variance_gain": true,
+    "deploys_in_at_least_three_folds": false,
+    "passed": false,
+    "pooled_empirical_test_risk_at_most_alpha": true,
+    "positive_pooled_test_gain": true
+  },
+  "evolved_contract": {
+    "candidate_delta": 0.0125,
+    "candidate_sequence": [
+      "external_variance",
+      "no_source_voi_expected",
+      "source_voi_expected",
+      "source_voi_probability"
+    ],
+    "deployed_fold_count": 1,
+    "familywise_delta": 0.05,
+    "folds": [
+      {
+        "fold": 1,
+        "selected_contract": "source_voi_expected",
+        "test_count": 2198,
+        "test_errors": 2,
+        "test_executed": 104,
+        "test_population_gain": 0.001724181755570061,
+        "test_selective_risk": 0.019230769230769232,
+        "trace": [
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 0,
+            "acceptance_population_gain": 0.0,
+            "accepted": false,
+            "candidate": "external_variance",
+            "cycle": 0,
+            "familywise_risk_upper_bound": 0.0,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 11,
+            "acceptance_executed": 147,
+            "acceptance_population_gain": 0.0006534178578121496,
+            "accepted": false,
+            "candidate": "no_source_voi_expected",
+            "cycle": 1,
+            "familywise_risk_upper_bound": 0.1383984581994767,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 1,
+            "acceptance_executed": 95,
+            "acceptance_population_gain": 0.0021338728540024055,
+            "accepted": true,
+            "candidate": "source_voi_expected",
+            "cycle": 2,
+            "familywise_risk_upper_bound": 0.06529656215999478,
+            "feasible": true,
+            "incumbent_after_cycle": "source_voi_expected"
+          },
+          {
+            "acceptance_errors": 9,
+            "acceptance_executed": 151,
+            "acceptance_population_gain": 0.0012453661657203742,
+            "accepted": false,
+            "candidate": "source_voi_probability",
+            "cycle": 3,
+            "familywise_risk_upper_bound": 0.11796800646928433,
+            "feasible": false,
+            "incumbent_after_cycle": "source_voi_expected"
+          }
+        ]
+      },
+      {
+        "fold": 2,
+        "selected_contract": "no_op",
+        "test_count": 2197,
+        "test_errors": 0,
+        "test_executed": 0,
+        "test_population_gain": 0.0,
+        "test_selective_risk": 0.0,
+        "trace": [
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 0,
+            "acceptance_population_gain": 0.0,
+            "accepted": false,
+            "candidate": "external_variance",
+            "cycle": 0,
+            "familywise_risk_upper_bound": 0.0,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 8,
+            "acceptance_executed": 154,
+            "acceptance_population_gain": 0.0008460290558078104,
+            "accepted": false,
+            "candidate": "no_source_voi_expected",
+            "cycle": 1,
+            "familywise_risk_upper_bound": 0.10726721517468729,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 8,
+            "acceptance_executed": 146,
+            "acceptance_population_gain": 0.0007427694324133925,
+            "accepted": false,
+            "candidate": "source_voi_expected",
+            "cycle": 2,
+            "familywise_risk_upper_bound": 0.11296079698199091,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 8,
+            "acceptance_executed": 156,
+            "acceptance_population_gain": 0.0008039348292272709,
+            "accepted": false,
+            "candidate": "source_voi_probability",
+            "cycle": 3,
+            "familywise_risk_upper_bound": 0.10593232164476765,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          }
+        ]
+      },
+      {
+        "fold": 3,
+        "selected_contract": "no_op",
+        "test_count": 2198,
+        "test_errors": 0,
+        "test_executed": 0,
+        "test_population_gain": 0.0,
+        "test_selective_risk": 0.0,
+        "trace": [
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 0,
+            "acceptance_population_gain": 0.0,
+            "accepted": false,
+            "candidate": "external_variance",
+            "cycle": 0,
+            "familywise_risk_upper_bound": 0.0,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 0,
+            "acceptance_population_gain": 0.0,
+            "accepted": false,
+            "candidate": "no_source_voi_expected",
+            "cycle": 1,
+            "familywise_risk_upper_bound": 0.0,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 0,
+            "acceptance_population_gain": 0.0,
+            "accepted": false,
+            "candidate": "source_voi_expected",
+            "cycle": 2,
+            "familywise_risk_upper_bound": 0.0,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 0,
+            "acceptance_population_gain": 0.0,
+            "accepted": false,
+            "candidate": "source_voi_probability",
+            "cycle": 3,
+            "familywise_risk_upper_bound": 0.0,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          }
+        ]
+      },
+      {
+        "fold": 4,
+        "selected_contract": "no_op",
+        "test_count": 2197,
+        "test_errors": 0,
+        "test_executed": 0,
+        "test_population_gain": 0.0,
+        "test_selective_risk": 0.0,
+        "trace": [
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 0,
+            "acceptance_population_gain": 0.0,
+            "accepted": false,
+            "candidate": "external_variance",
+            "cycle": 0,
+            "familywise_risk_upper_bound": 0.0,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 4,
+            "acceptance_executed": 20,
+            "acceptance_population_gain": -0.00010525987999582608,
+            "accepted": false,
+            "candidate": "no_source_voi_expected",
+            "cycle": 1,
+            "familywise_risk_upper_bound": 0.46861021745140896,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 4,
+            "acceptance_executed": 22,
+            "acceptance_population_gain": -6.494428270742219e-05,
+            "accepted": false,
+            "candidate": "source_voi_expected",
+            "cycle": 2,
+            "familywise_risk_upper_bound": 0.4333756829722744,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          },
+          {
+            "acceptance_errors": 5,
+            "acceptance_executed": 29,
+            "acceptance_population_gain": 0.00015731167196016092,
+            "accepted": false,
+            "candidate": "source_voi_probability",
+            "cycle": 3,
+            "familywise_risk_upper_bound": 0.384029046329928,
+            "feasible": false,
+            "incumbent_after_cycle": "no_op"
+          }
+        ]
+      }
+    ],
+    "pooled_error_count": 2,
+    "pooled_executed_count": 104,
+    "pooled_population_gain_after_cost": 0.00043114351521535767,
+    "pooled_risk_upper_bound_95": 0.059298263223977535,
+    "pooled_selective_risk": 0.019230769230769232,
+    "pooled_test_count": 8790,
+    "source_feature_selected_fold_count": 1
+  },
+  "folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "methods": {
+    "external_variance": {
+      "certified_fold_count": 0,
+      "folds": [
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 1,
+          "test_count": 2198,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 2,
+          "test_count": 2197,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 3,
+          "test_count": 2198,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 4,
+          "test_count": 2197,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        }
+      ],
+      "pooled_error_count": 0,
+      "pooled_executed_count": 0,
+      "pooled_population_gain_after_cost": 0.0,
+      "pooled_risk_upper_bound_95": 0.0,
+      "pooled_selective_risk": 0.0,
+      "pooled_test_count": 8790
+    },
+    "no_source_voi_expected": {
+      "certified_fold_count": 1,
+      "folds": [
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 1,
+          "test_count": 2198,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        },
+        {
+          "acceptance_certified": true,
+          "deployed_test_population_gain": 0.001297326693359298,
+          "fold": 2,
+          "test_count": 2197,
+          "test_errors": 9,
+          "test_executed": 192,
+          "test_selective_risk": 0.046875
+        },
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 3,
+          "test_count": 2198,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 4,
+          "test_count": 2197,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        }
+      ],
+      "pooled_error_count": 9,
+      "pooled_executed_count": 192,
+      "pooled_population_gain_after_cost": 0.0003242578777372444,
+      "pooled_risk_upper_bound_95": 0.08037106821239434,
+      "pooled_selective_risk": 0.046875,
+      "pooled_test_count": 8790
+    },
+    "source_voi_expected": {
+      "certified_fold_count": 2,
+      "folds": [
+        {
+          "acceptance_certified": true,
+          "deployed_test_population_gain": 0.001724181755570061,
+          "fold": 1,
+          "test_count": 2198,
+          "test_errors": 2,
+          "test_executed": 104,
+          "test_selective_risk": 0.019230769230769232
+        },
+        {
+          "acceptance_certified": true,
+          "deployed_test_population_gain": 0.0013621170092970578,
+          "fold": 2,
+          "test_count": 2197,
+          "test_errors": 10,
+          "test_executed": 183,
+          "test_selective_risk": 0.0546448087431694
+        },
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 3,
+          "test_count": 2198,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "deployed_test_population_gain": 0.0,
+          "fold": 4,
+          "test_count": 2197,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_selective_risk": 0.0
+        }
+      ],
+      "pooled_error_count": 12,
+      "pooled_executed_count": 287,
+      "pooled_population_gain_after_cost": 0.0007715952864810728,
+      "pooled_risk_upper_bound_95": 0.06686490815275267,
+      "pooled_selective_risk": 0.041811846689895474,
+      "pooled_test_count": 8790
+    }
+  },
+  "primary_method": "source_voi_expected",
+  "schema_version": "h21-unique-alpha10-confirmatory-v1",
+  "source_ablation_gain_delta": 0.00044733740874382846
+}

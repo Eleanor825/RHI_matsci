@@ -1,0 +1,91 @@
+{
+  "acceptance_candidate_ids": [
+    "AEA02",
+    "AEA03",
+    "AEA08",
+    "AEA10",
+    "AEA14",
+    "AEA19"
+  ],
+  "acceptance_count": 75,
+  "audit": {
+    "candidate_counts": {
+      "acceptance": 6,
+      "feedback": 3,
+      "test": 5,
+      "train": 6
+    },
+    "candidate_overlap": {
+      "acceptance::test": [],
+      "feedback::acceptance": [],
+      "feedback::test": [],
+      "train::acceptance": [],
+      "train::feedback": [],
+      "train::test": []
+    },
+    "passed": true,
+    "record_overlap": {
+      "acceptance::test": 0,
+      "feedback::acceptance": 0,
+      "feedback::test": 0,
+      "train::acceptance": 0,
+      "train::feedback": 0,
+      "train::test": 0
+    },
+    "tasks": {
+      "acceptance": [
+        "conductivity",
+        "first_efficiency",
+        "formation_gas",
+        "internal_resistance",
+        "specific_capacity"
+      ],
+      "feedback": [
+        "conductivity",
+        "first_efficiency",
+        "formation_gas",
+        "internal_resistance",
+        "specific_capacity"
+      ],
+      "test": [
+        "conductivity",
+        "first_efficiency",
+        "formation_gas",
+        "internal_resistance",
+        "specific_capacity"
+      ],
+      "train": [
+        "conductivity",
+        "first_efficiency",
+        "formation_gas",
+        "internal_resistance",
+        "specific_capacity"
+      ]
+    }
+  },
+  "excluded_cross_edges": 735,
+  "feedback_candidate_ids": [
+    "AEA05",
+    "AEA15",
+    "AEA17"
+  ],
+  "feedback_count": 15,
+  "fold": 2,
+  "held_candidate_ids": [
+    "AEA06",
+    "AEA13",
+    "AEA16",
+    "AEA18",
+    "AEA20"
+  ],
+  "test_count": 50,
+  "train_candidate_ids": [
+    "AEA01",
+    "AEA04",
+    "AEA07",
+    "AEA09",
+    "AEA11",
+    "AEA12"
+  ],
+  "train_count": 75
+}

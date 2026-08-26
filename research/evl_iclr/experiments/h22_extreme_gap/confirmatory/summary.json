@@ -1,0 +1,289 @@
+{
+  "alpha": 0.1,
+  "delta": 0.05,
+  "evolution_gate": {
+    "beats_static_variance": true,
+    "deploys_at_least_three_folds": false,
+    "passed": false,
+    "pooled_test_risk_at_most_alpha": true,
+    "positive_pooled_test_gain": true
+  },
+  "evolved_contract": {
+    "candidate_sequence": [
+      "no_source_voi_expected",
+      "source_voi_expected",
+      "source_voi_probability"
+    ],
+    "certified_fold_count": 1,
+    "deployed_fold_count": 1,
+    "folds": [
+      {
+        "deployed": false,
+        "fold": 1,
+        "selected_contract": "no_op",
+        "test_count": 920,
+        "test_errors": 0,
+        "test_executed": 0,
+        "test_population_gain": 0.0,
+        "trace": [
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 28,
+            "acceptance_population_gain": 0.001069323322991017,
+            "accepted": false,
+            "candidate": "no_source_voi_expected",
+            "certified": false,
+            "cycle": 0,
+            "incumbent_after_cycle": "no_op",
+            "risk_upper_bound": 0.10146573557272467
+          }
+        ]
+      },
+      {
+        "deployed": true,
+        "fold": 2,
+        "selected_contract": "source_voi_probability",
+        "test_count": 921,
+        "test_errors": 0,
+        "test_executed": 40,
+        "test_population_gain": 0.001238857264254512,
+        "trace": [
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 39,
+            "acceptance_population_gain": 0.0009440975011031059,
+            "accepted": true,
+            "candidate": "no_source_voi_expected",
+            "certified": true,
+            "cycle": 0,
+            "incumbent_after_cycle": "no_source_voi_expected",
+            "risk_upper_bound": 0.07393758892668655
+          },
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 41,
+            "acceptance_population_gain": 0.0014533404230065241,
+            "accepted": true,
+            "candidate": "source_voi_expected",
+            "certified": true,
+            "cycle": 1,
+            "incumbent_after_cycle": "source_voi_expected",
+            "risk_upper_bound": 0.07046111727016405
+          },
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 41,
+            "acceptance_population_gain": 0.001522544575255659,
+            "accepted": true,
+            "candidate": "source_voi_probability",
+            "certified": true,
+            "cycle": 2,
+            "incumbent_after_cycle": "source_voi_probability",
+            "risk_upper_bound": 0.07046111727016405
+          }
+        ]
+      },
+      {
+        "deployed": false,
+        "fold": 3,
+        "selected_contract": "no_op",
+        "test_count": 921,
+        "test_errors": 0,
+        "test_executed": 0,
+        "test_population_gain": 0.0,
+        "trace": [
+          {
+            "acceptance_errors": 0,
+            "acceptance_executed": 25,
+            "acceptance_population_gain": 0.00019788278513446656,
+            "accepted": false,
+            "candidate": "no_source_voi_expected",
+            "certified": false,
+            "cycle": 0,
+            "incumbent_after_cycle": "no_op",
+            "risk_upper_bound": 0.1129281450068432
+          }
+        ]
+      },
+      {
+        "deployed": false,
+        "fold": 4,
+        "selected_contract": "no_op",
+        "test_count": 921,
+        "test_errors": 0,
+        "test_executed": 0,
+        "test_population_gain": 0.0,
+        "trace": [
+          {
+            "acceptance_errors": 1,
+            "acceptance_executed": 42,
+            "acceptance_population_gain": 0.0009608170475769199,
+            "accepted": false,
+            "candidate": "no_source_voi_expected",
+            "certified": false,
+            "cycle": 0,
+            "incumbent_after_cycle": "no_op",
+            "risk_upper_bound": 0.10803769616121207
+          }
+        ]
+      }
+    ],
+    "pooled_error_count": 0,
+    "pooled_executed_count": 40,
+    "pooled_population_gain": 0.00030979840900852715,
+    "pooled_risk_upper_bound_95": 0.07215752450551455,
+    "pooled_selective_risk": 0.0,
+    "pooled_test_count": 3683,
+    "source_feature_selected_fold_count": 1
+  },
+  "folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "methods": {
+    "external_variance": {
+      "certified_fold_count": 0,
+      "deployed_fold_count": 0,
+      "folds": [
+        {
+          "acceptance_certified": false,
+          "fold": 1,
+          "test_count": 920,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "fold": 2,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "fold": 3,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "fold": 4,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        }
+      ],
+      "pooled_error_count": 0,
+      "pooled_executed_count": 0,
+      "pooled_population_gain": 0.0,
+      "pooled_risk_upper_bound_95": 0.0,
+      "pooled_selective_risk": 0.0,
+      "pooled_test_count": 3683
+    },
+    "no_source_voi_expected": {
+      "certified_fold_count": 1,
+      "deployed_fold_count": 1,
+      "folds": [
+        {
+          "acceptance_certified": false,
+          "fold": 1,
+          "test_count": 920,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        },
+        {
+          "acceptance_certified": true,
+          "fold": 2,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 38,
+          "test_population_gain": 0.0005591823257459284
+        },
+        {
+          "acceptance_certified": false,
+          "fold": 3,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "fold": 4,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        }
+      ],
+      "pooled_error_count": 0,
+      "pooled_executed_count": 38,
+      "pooled_population_gain": 0.0001398335384230247,
+      "pooled_risk_upper_bound_95": 0.07580765168296455,
+      "pooled_selective_risk": 0.0,
+      "pooled_test_count": 3683
+    },
+    "source_voi_expected": {
+      "certified_fold_count": 2,
+      "deployed_fold_count": 2,
+      "folds": [
+        {
+          "acceptance_certified": true,
+          "fold": 1,
+          "test_count": 920,
+          "test_errors": 0,
+          "test_executed": 63,
+          "test_population_gain": 0.001662642387293442
+        },
+        {
+          "acceptance_certified": true,
+          "fold": 2,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 42,
+          "test_population_gain": 0.0012339970748674624
+        },
+        {
+          "acceptance_certified": false,
+          "fold": 3,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        },
+        {
+          "acceptance_certified": false,
+          "fold": 4,
+          "test_count": 921,
+          "test_errors": 0,
+          "test_executed": 0,
+          "test_population_gain": 0.0
+        }
+      ],
+      "pooled_error_count": 0,
+      "pooled_executed_count": 105,
+      "pooled_population_gain": 0.0007239050508452077,
+      "pooled_risk_upper_bound_95": 0.028127624003676396,
+      "pooled_selective_risk": 0.0,
+      "pooled_test_count": 3683
+    }
+  },
+  "primary_gate": {
+    "beats_static_variance": true,
+    "certifies_at_least_three_folds": false,
+    "passed": false,
+    "pooled_test_risk_at_most_alpha": true,
+    "positive_pooled_test_gain": true
+  },
+  "primary_method": "source_voi_expected",
+  "primary_minus_no_source_gain": 0.0005840715124221829,
+  "schema_version": "h22-extreme-gap-confirmatory-v1"
+}

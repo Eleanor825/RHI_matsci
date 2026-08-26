@@ -1,0 +1,113 @@
+{
+  "schema_version": "sd-worth-h2.1-closed-llm-pilot-v1",
+  "protocol": "research/evl_iclr/experiments/h2_variance_decomposition/protocol_closed_llm_pilot.md",
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-luna",
+    "gpt-5.6-terra"
+  ],
+  "split_seed": 7,
+  "sample_seed": 260712447,
+  "n_per_task": 10,
+  "n_actions": 30,
+  "n_prediction_cells": 270,
+  "matrix_complete": true,
+  "evidence_mode": "candidate_simulator",
+  "evidence_view_ids": [
+    "tool::base_evidence",
+    "tool::nearest_analogs",
+    "tool::candidate_simulator"
+  ],
+  "reservation_values": {
+    "budget_fraction": 0.1,
+    "values_by_task": {
+      "matbench_pairwise": 0.8699373695198329,
+      "discover_unique": 0.82495517705065,
+      "extreme_properties": 0.7797663551401869
+    }
+  },
+  "summary": {
+    "base_ensemble": {
+      "accuracy": 0.7333333333333333,
+      "brier": 0.20334528271296665,
+      "ece": 0.22608965555555555,
+      "aurc": 0.8642540390515178
+    },
+    "all_tool_views_ensemble": {
+      "accuracy": 0.8333333333333334,
+      "brier": 0.15987095676454283,
+      "ece": 0.15084762592592593,
+      "aurc": 0.8540816596327615
+    },
+    "source_components": {
+      "n": 30,
+      "mean_internal_variance": 0.0019134367563950615,
+      "mean_external_variance": 0.015464892623330864,
+      "mean_total_variance": 0.017378329379725926,
+      "internal_variance_error_correlation": 0.06774356908309835,
+      "external_variance_error_correlation": -0.10894107723921967,
+      "mean_tool_gain_shifts": {
+        "tool::nearest_analogs": -0.15359392222222223,
+        "tool::candidate_simulator": -0.046122544444444455
+      }
+    },
+    "by_task": {
+      "matbench_pairwise": {
+        "n": 10,
+        "mean_internal_variance": 0.0032472736696074075,
+        "mean_external_variance": 0.041819324893261726,
+        "mean_total_variance": 0.04506659856286913,
+        "internal_variance_error_correlation": -0.1656073751786863,
+        "external_variance_error_correlation": -0.27804590913900434,
+        "mean_tool_gain_shifts": {
+          "tool::nearest_analogs": -0.45185823333333336,
+          "tool::candidate_simulator": -0.16691023333333332
+        }
+      },
+      "discover_unique": {
+        "n": 10,
+        "mean_internal_variance": 0.002402901652585185,
+        "mean_external_variance": 0.0036634477766617278,
+        "mean_total_variance": 0.006066349429246913,
+        "internal_variance_error_correlation": 0.7385500015388833,
+        "external_variance_error_correlation": 0.8489603746925697,
+        "mean_tool_gain_shifts": {
+          "tool::nearest_analogs": -0.029710999999999998,
+          "tool::candidate_simulator": 0.0028941333333333376
+        }
+      },
+      "extreme_properties": {
+        "n": 10,
+        "mean_internal_variance": 9.01349469925926e-05,
+        "mean_external_variance": 0.0009119052000691354,
+        "mean_total_variance": 0.0010020401470617279,
+        "internal_variance_error_correlation": -0.1215480288180604,
+        "external_variance_error_correlation": -0.2935966410724315,
+        "mean_tool_gain_shifts": {
+          "tool::nearest_analogs": 0.020787466666666643,
+          "tool::candidate_simulator": 0.025648466666666626
+        }
+      }
+    },
+    "by_model": {
+      "gpt-5.6-sol": {
+        "accuracy": 0.6333333333333333,
+        "brier": 0.24929109942333333,
+        "ece": 0.28423766666666667,
+        "aurc": 0.875983018172051
+      },
+      "gpt-5.6-luna": {
+        "accuracy": 0.7,
+        "brier": 0.23467213333333337,
+        "ece": 0.26164000000000004,
+        "aurc": 0.8642165439055768
+      },
+      "gpt-5.6-terra": {
+        "accuracy": 0.7333333333333333,
+        "brier": 0.20422010408670005,
+        "ece": 0.21785130000000003,
+        "aurc": 0.8376585692329022
+      }
+    }
+  }
+}

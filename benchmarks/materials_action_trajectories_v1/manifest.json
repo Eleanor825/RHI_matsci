@@ -1,0 +1,78 @@
+{
+  "schema_version": "materials-action-trajectory-v1",
+  "description": "Complete offline material-science benchmark trajectories with action-level decision units.",
+  "decision_unit_definition": "Each action is independently labeled for uncertainty gating; grouped trajectories preserve benchmark-regime order.",
+  "input_files": [
+    "matbench_pairwise_actions.jsonl",
+    "unique_materials_actions.jsonl",
+    "extreme_properties_actions.jsonl"
+  ],
+  "records": 20987,
+  "trajectories": 45,
+  "task_counts": {
+    "extreme_property_discovery": 2000,
+    "materials_pairwise_preference": 8000,
+    "unique_materials_screening": 10987
+  },
+  "action_count_distribution": {
+    "1": 1,
+    "12": 1,
+    "15": 1,
+    "22": 1,
+    "26": 1,
+    "31": 1,
+    "41": 1,
+    "59": 1,
+    "61": 1,
+    "100": 1,
+    "114": 1,
+    "138": 1,
+    "151": 1,
+    "177": 1,
+    "184": 1,
+    "191": 1,
+    "200": 10,
+    "216": 1,
+    "217": 1,
+    "264": 1,
+    "286": 1,
+    "325": 1,
+    "398": 1,
+    "408": 1,
+    "467": 1,
+    "497": 1,
+    "748": 1,
+    "788": 1,
+    "879": 1,
+    "959": 1,
+    "1011": 1,
+    "1075": 1,
+    "1445": 1,
+    "1698": 1,
+    "2076": 1,
+    "3907": 1
+  },
+  "created_online_count": 0,
+  "label_sources": [
+    "matbench_log_kvrh_pairwise_property_comparison",
+    "rlcc_table1_target_hit_bounds",
+    "top_decile_discover_unique_score_proxy"
+  ],
+  "artifacts": {
+    "actions": "actions.jsonl.gz",
+    "trajectories": "trajectories.jsonl.gz"
+  },
+  "leakage_contract": {
+    "model_input_excludes": [
+      "outcome",
+      "raw_record.metric_value",
+      "raw_record.tool_outputs",
+      "raw_record.outcome_success"
+    ],
+    "outcomes_retained_for_training_and_audit": true
+  },
+  "sha256": {
+    "actions.jsonl.gz": "79ad20a3d97aa87f386473239fe07a35141f618acdba98d8b5433c768c27eeb9",
+    "trajectories.jsonl.gz": "748e0092535082feb6fefc5b3d197ec624f20afbada4140b05f5b035f1538e2f"
+  }
+}

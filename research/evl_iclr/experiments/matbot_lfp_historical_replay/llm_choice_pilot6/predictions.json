@@ -1,0 +1,647 @@
+{
+  "development_only": true,
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-luna",
+    "gpt-5.6-terra"
+  ],
+  "record_count": 6,
+  "replicas": 2,
+  "rows": [
+    {
+      "choice_entropy": 1.0,
+      "choice_flip": true,
+      "choice_positive_fraction": 0.5,
+      "label_a_better": 0,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.465,
+      "mean_self_reported_uncertainty": 0.39,
+      "model": "gpt-5.6-sol",
+      "record_id": "matbot-lfp-choice::batch_1_legacy_minus20_202604::1a-g-1b-g::2a-h-1b-g",
+      "replicas": [
+        {
+          "assessment_confidence": 0.58,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.57,
+          "p_a_better": 0.54,
+          "p_success_selected": 0.56,
+          "rationale": "Candidate A is the more conservative and interpretable formulation: it retains the established EC/DMC/EA/PC solvent balance and additive package without introducing ES and MMDS interactions. Its simpler composition reduces uncertainty around viscosity, low-temperature impedance, gas generation, and additive competition, which is valuable under the combined -20°C DCR and 45°C cycling protocol. Candidate B could improve interphase robustness through the added sulfate/disulfonate additives, but those benefits are less certain in an already heavily passivated LiFSI/FEC/VC/DTD/TMSP system and may be offset by compatibility or impedance penalties. The estimated advantage for A is therefore modest rather than decisive."
+        },
+        {
+          "assessment_confidence": 0.64,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.71,
+          "p_a_better": 0.39,
+          "p_success_selected": 0.67,
+          "rationale": "Candidate B adds low-level ES and MMDS, both plausible SEI/CEI-forming additives that may improve graphite compatibility and 45C cycling retention, while retaining the same LiPF6/LiFSI, DTD, FEC, VC, and TMSP framework. The small dilution of the base solvents is unlikely to dominate. These additives could increase -20C impedance, especially on top of the already additive-rich formulation, so the advantage is probabilistic rather than decisive; nevertheless B offers greater expected formulation-learning value and a modestly higher chance of improved overall protocol performance."
+        }
+      ],
+      "source_batch": "batch_1_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 1.0,
+      "choice_flip": true,
+      "choice_positive_fraction": 0.5,
+      "label_a_better": 0,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.5,
+      "mean_self_reported_uncertainty": 0.33,
+      "model": "gpt-5.6-luna",
+      "record_id": "matbot-lfp-choice::batch_1_legacy_minus20_202604::1a-g-1b-g::2a-h-1b-g",
+      "replicas": [
+        {
+          "assessment_confidence": 0.72,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.74,
+          "p_a_better": 0.43,
+          "p_success_selected": 0.68,
+          "rationale": "Candidate B adds low-level ES and MMDS, plausible film-forming additives that may improve graphite/LFP interphase stability and 45C cycling while only slightly reducing the principal solvent fractions. The main downside is added interphase resistance that could hurt -20C DCR, so the advantage is credible but not decisive. B offers greater formulation-learning value than the otherwise very similar baseline A."
+        },
+        {
+          "assessment_confidence": 0.62,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.57,
+          "p_a_better": 0.57,
+          "p_success_selected": 0.57,
+          "rationale": "Candidate A is slightly preferable because the baseline already contains a high loading of film-forming and interphase-modifying additives (DTD, FEC, VC, and TMSP). Adding ES and MMDS in B may improve high-temperature interphase stability, but it also increases formulation complexity and could raise viscosity or low-temperature impedance, with uncertain incremental benefit under the combined -20°C DCR and 45°C cycling protocol."
+        }
+      ],
+      "source_batch": "batch_1_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 0,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.405,
+      "mean_self_reported_uncertainty": 0.43,
+      "model": "gpt-5.6-terra",
+      "record_id": "matbot-lfp-choice::batch_1_legacy_minus20_202604::1a-g-1b-g::2a-h-1b-g",
+      "replicas": [
+        {
+          "assessment_confidence": 0.56,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.64,
+          "p_a_better": 0.38,
+          "p_success_selected": 0.62,
+          "rationale": "Candidate B preserves the baseline electrolyte and adds low-level ES and MMDS, additives plausibly complementary to DTD/FEC/VC for graphite interphase formation and elevated-temperature cycling stability. The small additive loading limits formulation disruption while offering a mechanistically informative comparison against A under the shared low-temperature DCR and 45C cycling protocol. Benefits are uncertain because the baseline already contains a substantial additive package and additional sulfur-containing additives can increase impedance."
+        },
+        {
+          "assessment_confidence": 0.58,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.57,
+          "p_a_better": 0.43,
+          "p_success_selected": 0.57,
+          "rationale": "Candidate B adds low-level ES and MMDS, which plausibly provide complementary graphite-SEI and high-temperature cycling benefits while only slightly reducing the solvent fractions. The main downside is potential added interfacial resistance or low-temperature transport penalty, especially alongside substantial VC, LiFSI, DTD, and FEC. Given the registered emphasis on both -20°C DCR and 45°C cycling, I assign B a modest overall advantage but with substantial uncertainty."
+        }
+      ],
+      "source_batch": "batch_1_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 1.0,
+      "label_a_better": 1,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.595,
+      "mean_self_reported_uncertainty": 0.38,
+      "model": "gpt-5.6-sol",
+      "record_id": "matbot-lfp-choice::batch_1_legacy_minus20_202604::2a-h-1b-g::4a-j-1b-g",
+      "replicas": [
+        {
+          "assessment_confidence": 0.62,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.61,
+          "p_a_better": 0.57,
+          "p_success_selected": 0.6,
+          "rationale": "Candidate A is slightly preferred because its lower FEC loading should reduce low-temperature impedance relative to B, while the ES/MMDS co-additives may provide additional SEI and high-temperature cycling stabilization alongside the shared VC and salt package. Candidate B's higher FEC could improve graphite passivation, but may impose a low-temperature DCR penalty. Provenance differences do not provide a defensible basis for preference, so the advantage is modest rather than decisive."
+        },
+        {
+          "assessment_confidence": 0.62,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.67,
+          "p_a_better": 0.62,
+          "p_success_selected": 0.64,
+          "rationale": "Candidate A is modestly favored because its lower FEC loading should reduce low-temperature impedance and possible gas-generation penalties, while the small ES and MMDS additions may provide complementary SEI/CEI stabilization and acid-scavenging benefits during 45C cycling. Candidate B's higher FEC could improve graphite passivation, but at this already highly additive-rich formulation it also creates a plausible DCR and high-temperature compatibility risk. The formulation differences are small and the measured outcomes are hidden, so the preference is only moderate rather than strong."
+        }
+      ],
+      "source_batch": "batch_1_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 1.0,
+      "label_a_better": 1,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.62,
+      "mean_self_reported_uncertainty": 0.33999999999999997,
+      "model": "gpt-5.6-luna",
+      "record_id": "matbot-lfp-choice::batch_1_legacy_minus20_202604::2a-h-1b-g::4a-j-1b-g",
+      "replicas": [
+        {
+          "assessment_confidence": 0.64,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.67,
+          "p_a_better": 0.62,
+          "p_success_selected": 0.68,
+          "rationale": "Candidate A is modestly favored because its lower FEC loading combined with ES and MMDS should provide a more balanced graphite SEI and reduce the low-temperature impedance penalty associated with high FEC. The sulfur-containing additives may also support 45C cycling stability. Candidate B's higher FEC could improve passivation, but at this loading it may increase resistance and gas-related risk; the absent ES/MMDS package reduces formulation diversity. The advantage is uncertain because provenance and measured outcomes are hidden."
+        },
+        {
+          "assessment_confidence": 0.68,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.63,
+          "p_a_better": 0.62,
+          "p_success_selected": 0.62,
+          "rationale": "Candidate A provides a more balanced additive package: lower FEC should reduce low-temperature impedance risk, while ES and MMDS add complementary sulfur-containing film-forming chemistry that may support 45°C cycling. Candidate B's higher FEC may strengthen passivation but can increase interfacial resistance, with no clear compensating benefit from the otherwise similar formulation."
+        }
+      ],
+      "source_batch": "batch_1_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 1.0,
+      "label_a_better": 1,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.56,
+      "mean_self_reported_uncertainty": 0.43999999999999995,
+      "model": "gpt-5.6-terra",
+      "record_id": "matbot-lfp-choice::batch_1_legacy_minus20_202604::2a-h-1b-g::4a-j-1b-g",
+      "replicas": [
+        {
+          "assessment_confidence": 0.56,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.57,
+          "p_a_better": 0.56,
+          "p_success_selected": 0.59,
+          "rationale": "Candidate A is modestly preferred because it combines lower FEC with DTD, ES, and MMDS film-forming chemistry. Relative to the higher-FEC formulation in B, this diversified additive package may limit cold-temperature impedance while supporting graphite interphase stability and high-temperature cycling. The difference is small and involves a tradeoff: B's higher FEC could improve graphite passivation, so the preference and success probability remain only moderately confident."
+        },
+        {
+          "assessment_confidence": 0.56,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.65,
+          "p_a_better": 0.56,
+          "p_success_selected": 0.6,
+          "rationale": "A retains lower FEC, which may avoid excessive low-temperature interfacial resistance, while adding ES and MMDS to a DTD/VC/TMSP-containing dual-salt electrolyte. These sulfur-containing film-forming additives plausibly improve interphase robustness and 45C cycling stability. The competing effects on -20C DCR leave the advantage modest rather than decisive."
+        }
+      ],
+      "source_batch": "batch_1_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 1,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.34,
+      "mean_self_reported_uncertainty": 0.29000000000000004,
+      "model": "gpt-5.6-sol",
+      "record_id": "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l2a-lfp-l2b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.7,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.72,
+          "p_a_better": 0.34,
+          "p_success_selected": 0.8,
+          "rationale": "Candidate B is more promising for the combined low-temperature DCR and elevated-temperature cycling protocol. Its EMC-rich, DMC-lean solvent blend should remain more fluid at -20 °C, while the higher LiFSI fraction can improve low-temperature ionic transport and interphase behavior. The shared EA-rich solvent system and identical additive package limit other differences. B does carry greater LiFSI-related aluminum-corrosion and high-temperature interfacial risk, but the LFP voltage range and retained LiPF6 reduce that concern enough to favor B, with moderate uncertainty."
+        },
+        {
+          "assessment_confidence": 0.72,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.74,
+          "p_a_better": 0.34,
+          "p_success_selected": 0.78,
+          "rationale": "Candidate B is favored for the combined low-temperature DCR and 45°C cycling protocol. Its slightly lower total salt loading, greater LiFSI fraction, and inclusion of EMC should reduce viscosity and improve low-temperature transport while limiting LiPF6-driven thermal degradation. The 4% LiPF6 may still provide aluminum-current-collector passivation against LiFSI corrosion. Candidate A has more LiPF6 and includes PC, increasing concerns about high-temperature side reactions and graphite compatibility, although its lower LiFSI content reduces aluminum-corrosion risk."
+        }
+      ],
+      "source_batch": "batch_2_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 1,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.38,
+      "mean_self_reported_uncertainty": 0.33999999999999997,
+      "model": "gpt-5.6-luna",
+      "record_id": "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l2a-lfp-l2b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.64,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.66,
+          "p_a_better": 0.38,
+          "p_success_selected": 0.66,
+          "rationale": "Candidate B is favored for the combined low-temperature DCR and elevated-temperature cycling protocol. Its lower EC content, inclusion of EMC, and higher EA fraction should reduce low-temperature viscosity and improve transport relative to A. The absence of PC also reduces graphite co-intercalation risk, while the higher LiFSI fraction may strengthen the graphite-side interphase and improve cycling stability. Uncertainty remains because the 10% LiFSI level can increase aluminum-current-collector and interphase risks, and the hidden cell data prevent confident ranking."
+        },
+        {
+          "assessment_confidence": 0.68,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.66,
+          "p_a_better": 0.38,
+          "p_success_selected": 0.64,
+          "rationale": "Candidate B is more likely to benefit the registered -20°C DCR condition because its lower EC content and greater EMC fraction should reduce viscosity and improve low-temperature transport. Its higher LiFSI fraction may also support interphase stability during 45°C cycling, although the reduced LiPF6 content introduces some uncertainty. Candidate A remains plausible, particularly for conventional high-temperature stability, but B has the stronger overall chemistry-based expectation."
+        }
+      ],
+      "source_batch": "batch_2_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 1,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.35,
+      "mean_self_reported_uncertainty": 0.355,
+      "model": "gpt-5.6-terra",
+      "record_id": "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l2a-lfp-l2b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.61,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.66,
+          "p_a_better": 0.36,
+          "p_success_selected": 0.64,
+          "rationale": "B is more likely to provide the stronger joint low-temperature DCR/high-temperature cycling tradeoff: it uses substantially more LiFSI and less LiPF6, lower EC, and EMC in place of PC, a combination generally favorable for low-temperature transport and graphite interphase behavior. Its retained LiPF6 fraction and identical DTD/FEC/VC/TMSP additive package provide some mitigation for high-temperature interphase and aluminum-current-collector concerns. A's higher LiPF6 and EC may be more conservative for 45C durability, but its PC-containing solvent blend and lower LiFSI loading are less compelling for the registered -20C DCR component."
+        },
+        {
+          "assessment_confidence": 0.68,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.7,
+          "p_a_better": 0.34,
+          "p_success_selected": 0.64,
+          "rationale": "Candidate B is more favorable for the registered combination of -20 °C DCR and 45 °C cycling: its lower EC content, inclusion of EMC, and higher LiFSI fraction should reduce low-temperature transport limitations while maintaining useful interphase formation. The LFP chemistry reduces concern about LiFSI-driven aluminum corrosion relative to higher-voltage cathodes, though Candidate A's higher PF6 and total salt content could provide stronger high-temperature robustness."
+        }
+      ],
+      "source_batch": "batch_2_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 1.0,
+      "label_a_better": 1,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.615,
+      "mean_self_reported_uncertainty": 0.33,
+      "model": "gpt-5.6-sol",
+      "record_id": "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l3a-lfp-l3b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.72,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.68,
+          "p_a_better": 0.64,
+          "p_success_selected": 0.69,
+          "rationale": "Candidate A is more likely to perform robustly across the registered low-temperature DCR and elevated-temperature cycling protocol. Its ethyl-acetate-containing mixed-solvent system and LiFSI co-salt should improve low-temperature transport and interfacial kinetics, while the additive package supports graphite and high-temperature stability. Candidate B's high methyl-acetate fraction may provide low viscosity, but its graphite compatibility and 45C durability are less certain, and the absence of LiFSI reduces the expected low-temperature/interfacial advantage."
+        },
+        {
+          "assessment_confidence": 0.62,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.67,
+          "p_a_better": 0.59,
+          "p_success_selected": 0.7,
+          "rationale": "Candidate A offers the more balanced formulation for the joint -20 °C DCR and 45 °C cycling protocol. Its ethyl-acetate fraction should retain useful low-temperature transport while being less volatile and generally less aggressive at elevated temperature than Candidate B's larger methyl-acetate fraction. The LiPF6/LiFSI dual-salt system may also improve conductivity and graphite interphase formation relative to B's high LiPF6-only loading, although LiFSI-related compatibility risks and B's likely stronger low-temperature transport advantage keep the preference moderate rather than decisive."
+        }
+      ],
+      "source_batch": "batch_2_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 1.0,
+      "label_a_better": 1,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.66,
+      "mean_self_reported_uncertainty": 0.295,
+      "model": "gpt-5.6-luna",
+      "record_id": "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l3a-lfp-l3b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.73,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.76,
+          "p_a_better": 0.68,
+          "p_success_selected": 0.78,
+          "rationale": "Candidate A is more likely to perform well under the low-temperature DCR and elevated-temperature cycling protocol. Its mixed LiPF6/LiFSI salt system and ester-containing solvent blend should improve low-temperature transport and interphase robustness relative to Candidate B, while retaining substantial carbonate content for graphite compatibility. Candidate B's high methyl-acetate fraction may reduce viscosity and aid low-temperature kinetics, but the absence of LiFSI and high LiPF6 concentration create greater uncertainty for graphite interphase stability and sustained cycling."
+        },
+        {
+          "assessment_confidence": 0.68,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.64,
+          "p_a_better": 0.64,
+          "p_success_selected": 0.67,
+          "rationale": "Candidate A is more likely to balance low-temperature transport with graphite compatibility and 45\bC cycling stability. The EA fraction should reduce viscosity and improve cold performance, while LiFSI plus the additive package may support more robust interphases. Candidate B has attractive low-viscosity MA content and higher LiPF6, but its high MA fraction, lower EC content, and absence of LiFSI create greater uncertainty for graphite interphase formation, volatility, and long-term cycling."
+        }
+      ],
+      "source_batch": "batch_2_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 1.0,
+      "label_a_better": 1,
+      "majority_choice_a": 1,
+      "mean_p_a_better": 0.655,
+      "mean_self_reported_uncertainty": 0.275,
+      "model": "gpt-5.6-terra",
+      "record_id": "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l3a-lfp-l3b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.76,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.72,
+          "p_a_better": 0.67,
+          "p_success_selected": 0.68,
+          "rationale": "Candidate A offers a more balanced low-temperature/high-temperature formulation: the EA fraction and LiFSI should support low-temperature transport and graphite interphase formation, while its reduced reliance on highly volatile MA is favorable for 45°C cycling. Candidate B may provide strong low-temperature fluidity, but its high MA content creates volatility and retention risks, and the absence of LiFSI reduces interphase robustness. A therefore has the higher expected overall utility, though B remains scientifically informative as a low-temperature-focused comparator."
+        },
+        {
+          "assessment_confidence": 0.69,
+          "choice": "A",
+          "expected_scientific_utility_selected": 0.74,
+          "p_a_better": 0.64,
+          "p_success_selected": 0.78,
+          "rationale": "Candidate A combines low-viscosity ester content with LiFSI, which should support lower-temperature conductivity and a more robust graphite interphase than the predominantly methyl-acetate, LiPF6-only formulation in B. Candidate B may offer excellent low-temperature fluidity, but its high methyl acetate fraction and absence of LiFSI increase uncertainty around graphite compatibility, interphase stability, and 45°C cycling durability."
+        }
+      ],
+      "source_batch": "batch_2_legacy_minus20_202604"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 0,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.295,
+      "mean_self_reported_uncertainty": 0.29000000000000004,
+      "model": "gpt-5.6-sol",
+      "record_id": "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba03a-aba03b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.7,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.74,
+          "p_a_better": 0.3,
+          "p_success_selected": 0.76,
+          "rationale": "Candidate B replaces about 8 wt% DMC with EA while keeping the salt system and most additives essentially constant. EA has a much lower melting point and favorable low-temperature transport characteristics, making the higher-EA formulation more likely to reduce -15 °C DCR across SOC. Its slightly lower DTD level could modestly weaken interphase stabilization, and elevated EA may introduce stability tradeoffs at 25 °C, so the preference is meaningful but not decisive."
+        },
+        {
+          "assessment_confidence": 0.72,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.76,
+          "p_a_better": 0.29,
+          "p_success_selected": 0.74,
+          "rationale": "Candidate B replaces about 8 wt% DMC with ethyl acetate while holding EC, salts, and most additives essentially constant. The higher EA fraction should generally lower viscosity and improve low-temperature ionic transport, making B more promising for the registered -15 °C DCR measurements. Its modestly lower DTD level may weaken interphase protection, but that concern is less likely to dominate short-term DCR performance than the solvent-transport advantage; room-temperature DCR should remain acceptable."
+        }
+      ],
+      "source_batch": "batch_3_ABA_minus15_multisoc_20260507"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 0,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.33999999999999997,
+      "mean_self_reported_uncertainty": 0.33,
+      "model": "gpt-5.6-luna",
+      "record_id": "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba03a-aba03b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.62,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.64,
+          "p_a_better": 0.38,
+          "p_success_selected": 0.68,
+          "rationale": "Candidate B replaces about 8 percentage points of DMC with EA while keeping the salt package and most additives nearly unchanged. The higher-EA, lower-DMC formulation is plausibly more favorable for low-temperature transport and therefore the registered -15\u000b\u000bC DCR measurement, although it carries uncertainty from EA volatility and interphase effects. Candidate B is therefore the better risk-adjusted choice, but the chemistry does not make the outcome certain."
+        },
+        {
+          "assessment_confidence": 0.72,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.68,
+          "p_a_better": 0.3,
+          "p_success_selected": 0.78,
+          "rationale": "Candidate B is more likely to be useful for the registered low-temperature DCR protocol because its substantially higher ethyl acetate fraction and lower DMC fraction should reduce electrolyte viscosity and improve cold-temperature transport. The small additive differences are unlikely to offset that primary formulation advantage, while the shared protocol preserves comparability."
+        }
+      ],
+      "source_batch": "batch_3_ABA_minus15_multisoc_20260507"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 0,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.29500000000000004,
+      "mean_self_reported_uncertainty": 0.33999999999999997,
+      "model": "gpt-5.6-terra",
+      "record_id": "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba03a-aba03b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.66,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.69,
+          "p_a_better": 0.31,
+          "p_success_selected": 0.68,
+          "rationale": "B’s substantially higher EA fraction (24.09% versus 16.06%) replaces DMC, favoring lower-temperature fluidity and transport at -15 C, the protocol’s most discriminating condition. A’s higher DTD may offer stronger interphase support, but the larger EA-driven low-temperature transport advantage makes B the higher-value choice for DCR screening."
+        },
+        {
+          "assessment_confidence": 0.66,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.72,
+          "p_a_better": 0.28,
+          "p_success_selected": 0.74,
+          "rationale": "Candidate B replaces roughly 8 wt% DMC with ethyl acetate while retaining essentially identical EC, EMC, salt, and primary additive levels. The higher EA fraction should lower viscosity and improve low-temperature transport, which is directly relevant to the -15C multi-SOC DCR objective. Candidate A's moderately higher DTD could offer some interphase benefit, but the expected cold-temperature transport advantage of B is more consequential under this protocol."
+        }
+      ],
+      "source_batch": "batch_3_ABA_minus15_multisoc_20260507"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 0,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.33499999999999996,
+      "mean_self_reported_uncertainty": 0.325,
+      "model": "gpt-5.6-sol",
+      "record_id": "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba04a-aba03b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.71,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.74,
+          "p_a_better": 0.31,
+          "p_success_selected": 0.73,
+          "rationale": "Candidate B is more promising for the registered low-temperature DCR protocol because its substantially higher ethyl acetate fraction and lower DMC fraction should reduce electrolyte viscosity and improve transport at -15 °C. Its added LiFSO3 and ES also provide a distinct interphase-forming package worth testing, while retaining the same primary salts, FEC, VC, TMSP, and LiODFB levels as A. The lower DTD concentration introduces some interphase uncertainty, and high EA can compromise stability, so the preference is moderate rather than decisive."
+        },
+        {
+          "assessment_confidence": 0.64,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.71,
+          "p_a_better": 0.36,
+          "p_success_selected": 0.73,
+          "rationale": "Candidate B is more promising for the registered low-temperature DCR protocol because its substantially higher ethyl acetate fraction and lower DMC fraction should improve electrolyte fluidity and ionic transport at -15 °C. Its LiFSO3/ES additive package may also support interphase formation, while retaining the same salt loading and nearly identical EC, EMC, FEC, VC, TMSP, and LiODFB levels. The benefit is uncertain because the added sulfite additives and reduced DTD could increase interfacial resistance or introduce compatibility tradeoffs, but overall the transport advantage favors B."
+        }
+      ],
+      "source_batch": "batch_3_ABA_minus15_multisoc_20260507"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 0,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.32,
+      "mean_self_reported_uncertainty": 0.24,
+      "model": "gpt-5.6-luna",
+      "record_id": "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba04a-aba03b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.78,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.72,
+          "p_a_better": 0.32,
+          "p_success_selected": 0.68,
+          "rationale": "Candidate B is more compelling for the registered low-temperature DCR protocol: it substantially replaces DMC with EA, which should reduce low-temperature viscosity and improve transport, while retaining similar EC, EMC, salt, and major additive levels. LiFSO3 and ES also provide plausible graphite-SEI benefits. Candidate A has a stronger DTD package and less volatile solvent balance, so it remains plausible, but its higher DMC fraction is less favorable for -15°C performance."
+        },
+        {
+          "assessment_confidence": 0.74,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.66,
+          "p_a_better": 0.32,
+          "p_success_selected": 0.68,
+          "rationale": "Candidate B is more likely to perform favorably in the registered low-temperature DCR protocol because its substantially higher ethyl-acetate fraction and lower DMC fraction should reduce low-temperature transport and phase-related penalties. Its complementary LiFSO3/DTD/ES additive package also provides a plausible interphase benefit, though the comparison remains uncertain because measured outcomes are withheld."
+        }
+      ],
+      "source_batch": "batch_3_ABA_minus15_multisoc_20260507"
+    },
+    {
+      "choice_entropy": 0.0,
+      "choice_flip": false,
+      "choice_positive_fraction": 0,
+      "label_a_better": 0,
+      "majority_choice_a": 0,
+      "mean_p_a_better": 0.35,
+      "mean_self_reported_uncertainty": 0.28,
+      "model": "gpt-5.6-terra",
+      "record_id": "matbot-lfp-choice::batch_3_ABA_minus15_multisoc_20260507::aba01a-aba01b::aba04a-aba03b",
+      "replicas": [
+        {
+          "assessment_confidence": 0.82,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.68,
+          "p_a_better": 0.28,
+          "p_success_selected": 0.74,
+          "rationale": "Candidate B is more compelling for the registered -15\u000b0C DCR protocol because its substantially higher ethyl-acetate fraction and lower DMC fraction should reduce low-temperature viscosity and solvent crystallization risk. Its LiFSO3/DTD/ES additive combination also provides a distinct interphase-formulation comparison, whereas A is more DMC-rich and likely less favorable for cold-temperature transport. B therefore has higher expected performance and useful formulation contrast, though additive interactions leave meaningful uncertainty."
+        },
+        {
+          "assessment_confidence": 0.62,
+          "choice": "B",
+          "expected_scientific_utility_selected": 0.64,
+          "p_a_better": 0.42,
+          "p_success_selected": 0.64,
+          "rationale": "Candidate B is more plausibly advantageous for the registered -15\u0003C DCR measurement because it replaces substantial DMC with lower-viscosity ethyl acetate, which should improve low-temperature transport. Its added LiFSO3 and ES also provide chemically distinct interphase-forming variables alongside the existing LiFSI/DTD/FEC/VC package, increasing scientific informativeness. This benefit is uncertain because the higher ester content may worsen graphite interphase stability, volatility, or room-temperature performance; therefore B is preferred modestly rather than decisively."
+        }
+      ],
+      "source_batch": "batch_3_ABA_minus15_multisoc_20260507"
+    }
+  ],
+  "selection": "first records per source batch after record-id sort; outcomes unused",
+  "summary": {
+    "all_models": {
+      "calibration": {
+        "accuracy_at_threshold": 0.8333333333333334,
+        "aurc": 0.24722222222222223,
+        "brier": 0.1874490740740741,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.3333333333333333,
+        "coverage_at_risk_0.05": 0.3333333333333333,
+        "coverage_at_risk_0.10": 0.3333333333333333,
+        "ece": 0.20388888888888887,
+        "log_loss": 0.5643203308754824,
+        "n": 6.0,
+        "selective_accuracy": 1.0,
+        "selective_risk": 0.0
+      },
+      "choice_flip_fraction": 0.5,
+      "majority_accuracy": 0.6666666666666666,
+      "mean_choice_entropy": 0.15304930567575023,
+      "mean_self_reported_uncertainty": 0.3333333333333333,
+      "n": 6,
+      "self_uncertainty_choice_entropy_correlation": 0.5671155190187056,
+      "self_uncertainty_error_correlation": 0.40350976571871844
+    },
+    "gpt-5.6-luna": {
+      "calibration": {
+        "accuracy_at_threshold": 0.6666666666666666,
+        "aurc": 0.24722222222222223,
+        "brier": 0.18539999999999998,
+        "confidently_wrong_rate": 0.16666666666666666,
+        "coverage": 0.5,
+        "coverage_at_risk_0.05": 0.3333333333333333,
+        "coverage_at_risk_0.10": 0.3333333333333333,
+        "ece": 0.21000000000000002,
+        "log_loss": 0.5592433960833278,
+        "n": 6.0,
+        "selective_accuracy": 0.6666666666666666,
+        "selective_risk": 0.33333333333333337
+      },
+      "choice_flip_fraction": 0.16666666666666666,
+      "majority_accuracy": 0.6666666666666666,
+      "mean_choice_entropy": 0.16666666666666666,
+      "mean_self_reported_uncertainty": 0.31249999999999994,
+      "n": 6,
+      "self_uncertainty_choice_entropy_correlation": 0.21864326664404876,
+      "self_uncertainty_error_correlation": 0.4444783184923153
+    },
+    "gpt-5.6-sol": {
+      "calibration": {
+        "accuracy_at_threshold": 0.8333333333333334,
+        "aurc": 0.24722222222222223,
+        "brier": 0.1938875,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.3333333333333333,
+        "coverage_at_risk_0.05": 0.3333333333333333,
+        "coverage_at_risk_0.10": 0.3333333333333333,
+        "ece": 0.3125,
+        "log_loss": 0.5778584654277231,
+        "n": 6.0,
+        "selective_accuracy": 1.0,
+        "selective_risk": 0.0
+      },
+      "choice_flip_fraction": 0.16666666666666666,
+      "majority_accuracy": 0.6666666666666666,
+      "mean_choice_entropy": 0.16666666666666666,
+      "mean_self_reported_uncertainty": 0.3341666666666667,
+      "n": 6,
+      "self_uncertainty_choice_entropy_correlation": 0.6369408359953992,
+      "self_uncertainty_error_correlation": 0.10521855548970575
+    },
+    "gpt-5.6-terra": {
+      "calibration": {
+        "accuracy_at_threshold": 0.8333333333333334,
+        "aurc": 0.24722222222222223,
+        "brier": 0.18477916666666663,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.3333333333333333,
+        "coverage_at_risk_0.05": 0.3333333333333333,
+        "coverage_at_risk_0.10": 0.3333333333333333,
+        "ece": 0.2975,
+        "log_loss": 0.5587158214662225,
+        "n": 6.0,
+        "selective_accuracy": 1.0,
+        "selective_risk": 0.0
+      },
+      "choice_flip_fraction": 0.0,
+      "majority_accuracy": 0.8333333333333334,
+      "mean_choice_entropy": 0.0,
+      "mean_self_reported_uncertainty": 0.35333333333333333,
+      "n": 6,
+      "self_uncertainty_choice_entropy_correlation": 0.0,
+      "self_uncertainty_error_correlation": 0.011527808354084656
+    }
+  }
+}

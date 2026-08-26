@@ -1,0 +1,8 @@
+[
+  {
+    "record_id": "matbot-lfp-choice::batch_2_legacy_minus20_202604::lfp-l1a-lfp-l1b::lfp-l2a-lfp-l2b",
+    "model": "gpt-5.6-sol",
+    "replica": 0,
+    "error": "DirectJudgeError: action-choice response lacks required fields"
+  }
+]

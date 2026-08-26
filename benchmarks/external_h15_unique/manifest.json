@@ -1,0 +1,11 @@
+{
+  "bytes": 206279,
+  "dataset": "matbench_log_kvrh",
+  "inspection_policy": "Added after H14 fold-0 power analysis proved the 636-row unique task cannot satisfy the locked finite-sample risk certificate even under oracle ranking.",
+  "role": "powered_discover_unique_external_confirmation",
+  "rows": 10987,
+  "sha256": "c61c243695d00ba290e1787b3a6c9d849a7da0b3f2339f847d1dfa173eec9d75",
+  "snapshot_date": "2026-08-22",
+  "source": "/Users/huan/matsci_uncertainty/data/raw/material_discovery_tasks/cache/matbench_log_kvrh.json.bz2",
+  "target": "log10(K_VRH)"
+}

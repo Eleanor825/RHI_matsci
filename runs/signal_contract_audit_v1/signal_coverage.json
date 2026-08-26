@@ -1,0 +1,291 @@
+{
+  "schema_version": "uncertainty-signal-coverage-v1",
+  "n_records": 20987,
+  "internal_contract": [
+    "verbal_confidence",
+    "perturbation_stability",
+    "self_consistency",
+    "semantic_entropy",
+    "model_disagreement",
+    "calibrated_probability",
+    "answer_logit_margin",
+    "answer_logit_execute_probability",
+    "answer_logit_confidence",
+    "answer_logit_uncertainty"
+  ],
+  "external_contract": [
+    "evidence_support",
+    "evidence_conflict",
+    "source_reliability",
+    "tool_agreement",
+    "ood_score",
+    "source_risk"
+  ],
+  "overall": {
+    "verbal_confidence": {
+      "count": 20987,
+      "fraction": 1.0
+    },
+    "perturbation_stability": {
+      "count": 20987,
+      "fraction": 1.0
+    },
+    "self_consistency": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "semantic_entropy": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "model_disagreement": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "calibrated_probability": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "answer_logit_margin": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "answer_logit_execute_probability": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "answer_logit_confidence": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "answer_logit_uncertainty": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "evidence_support": {
+      "count": 20987,
+      "fraction": 1.0
+    },
+    "evidence_conflict": {
+      "count": 20987,
+      "fraction": 1.0
+    },
+    "source_reliability": {
+      "count": 20987,
+      "fraction": 1.0
+    },
+    "tool_agreement": {
+      "count": 0,
+      "fraction": 0.0
+    },
+    "ood_score": {
+      "count": 20987,
+      "fraction": 1.0
+    },
+    "source_risk": {
+      "count": 20987,
+      "fraction": 1.0
+    }
+  },
+  "by_task": {
+    "matbench_pairwise": {
+      "verbal_confidence": {
+        "count": 8000,
+        "fraction": 1.0
+      },
+      "perturbation_stability": {
+        "count": 8000,
+        "fraction": 1.0
+      },
+      "self_consistency": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "semantic_entropy": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "model_disagreement": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "calibrated_probability": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_margin": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_execute_probability": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_confidence": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_uncertainty": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "evidence_support": {
+        "count": 8000,
+        "fraction": 1.0
+      },
+      "evidence_conflict": {
+        "count": 8000,
+        "fraction": 1.0
+      },
+      "source_reliability": {
+        "count": 8000,
+        "fraction": 1.0
+      },
+      "tool_agreement": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "ood_score": {
+        "count": 8000,
+        "fraction": 1.0
+      },
+      "source_risk": {
+        "count": 8000,
+        "fraction": 1.0
+      }
+    },
+    "discover_unique": {
+      "verbal_confidence": {
+        "count": 10987,
+        "fraction": 1.0
+      },
+      "perturbation_stability": {
+        "count": 10987,
+        "fraction": 1.0
+      },
+      "self_consistency": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "semantic_entropy": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "model_disagreement": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "calibrated_probability": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_margin": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_execute_probability": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_confidence": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_uncertainty": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "evidence_support": {
+        "count": 10987,
+        "fraction": 1.0
+      },
+      "evidence_conflict": {
+        "count": 10987,
+        "fraction": 1.0
+      },
+      "source_reliability": {
+        "count": 10987,
+        "fraction": 1.0
+      },
+      "tool_agreement": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "ood_score": {
+        "count": 10987,
+        "fraction": 1.0
+      },
+      "source_risk": {
+        "count": 10987,
+        "fraction": 1.0
+      }
+    },
+    "extreme_properties": {
+      "verbal_confidence": {
+        "count": 2000,
+        "fraction": 1.0
+      },
+      "perturbation_stability": {
+        "count": 2000,
+        "fraction": 1.0
+      },
+      "self_consistency": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "semantic_entropy": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "model_disagreement": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "calibrated_probability": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_margin": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_execute_probability": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_confidence": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "answer_logit_uncertainty": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "evidence_support": {
+        "count": 2000,
+        "fraction": 1.0
+      },
+      "evidence_conflict": {
+        "count": 2000,
+        "fraction": 1.0
+      },
+      "source_reliability": {
+        "count": 2000,
+        "fraction": 1.0
+      },
+      "tool_agreement": {
+        "count": 0,
+        "fraction": 0.0
+      },
+      "ood_score": {
+        "count": 2000,
+        "fraction": 1.0
+      },
+      "source_risk": {
+        "count": 2000,
+        "fraction": 1.0
+      }
+    }
+  },
+  "strict_contract_passes": false
+}

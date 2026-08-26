@@ -1,0 +1,677 @@
+[
+  {
+    "record_id": "unique-material::mb-log-kvrh-07351",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C7::f39047160766",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-09498",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-01038",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-09413",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C10::3ca60d5fee46",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C8::68457f11b404",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::06c084cf3605",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C8::67d95751e1ed",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-10744",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::048077ef485f",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C8::8d0af0b34996",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::30f0737b2eed",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C10::509fa754095d",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C8::b2c67b708243",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::ec248fc10732",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::b7686dee01c8",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C8::de55bf7bd2de",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::4460e8a251e4",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-10365",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::0a6805935ef1",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::03d840c7449c",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::3943c107b420",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::e9cc232f6a00",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::5951ab77bc77",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::051968cfef80",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::082ca6785a56",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C10::fbd0eb831b93",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::12ff4f2d6af6",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::3bc3251f3cc4",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::099cbb349da2",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::5776546ab473",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::ddde9ffad195",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C8::ed2012269e87",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::94561bfc1dc3",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::0eeb9cf76e81",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::4e4e845494df",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::1d361007508b",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::1a6c6a62ac04",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::63f34d77e329",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::c3a7bc05c687",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::f32ab7b2f2ee",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::aa80fc2b24fe",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C4::2a5d52249b75",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::06507f0cae04",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::db706e56ec73",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::bad5661c379d",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::8633c5b08664",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-10360",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::03ab4839c038",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::48008d21635a",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::cc8e0fdcab49",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::03d1964706c7",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C2::9996ca3d1ec6",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::03badc5426bb",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::8093fdffd844",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C9::d378b3e78430",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::0883544a3892",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C1::7d8ecbd85807",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "extreme-rlcc::C9::a977d506e802",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::035080ebcf1a",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-10293",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "unique-material::mb-log-kvrh-09711",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::0b08e4b8159c",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::0c18536fdded",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::0b0aeeaa2128",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::223fa8313e65",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::0d3da41e08dc",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::1cd3b3e4a5b1",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::2514c16b1fd6",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::13de9858d9da",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::226539617183",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::22e05ec79ff0",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::2998c8e781bc",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::26fc87b2635e",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::20aa34e3018d",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::1a11cb470645",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::249dc6988a7c",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::3292d68b3cb9",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::339d61a24d0c",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::a138ffbb307e",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::a6a409183726",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::b6c3ca8299fa",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::4aa80ba3a186",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::a3efd5427095",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::c3e8a69bd1ee",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::319da432b507",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::db471921c7fc",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::649920c76e4e",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::753c31ec503c",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::a7187acbc432",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::463dadd0b066",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::dbddc58c1ca6",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::4de0158e4ccb",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::4e3c9df6c2c5",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::c8b2e74abc9a",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::4ace60052386",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::d9d79dd529bf",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::48f87fd5f0a2",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::cf8a99b9bee1",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::544f5fa43ca9",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::d5d4349ab72f",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::3710bc696fe8",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::ca2e33c462de",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::653c16c28707",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::d071723f01e2",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::cc4411d589c4",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::4ad228c3358d",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::c61476d1bbfc",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::b93866d7ed5d",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::ccad7fdb62da",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::bd3b73b763aa",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::bc3a0dc28782",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::a5b9b844c837",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::36660f466ed5",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::dabca9ed0542",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::db4a8fb8d326",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::6a1c3ea4c6f7",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::bb737c91290a",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::ded9d849f19b",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::dbe18b6a02b0",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::e05f7c917c70",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::e5d503b1c426",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::e4016ba1c5f6",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::e683d41a855b",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::de0762ce1cba",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::de63d7282a41",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::ea6692dec68f",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::fa64859cd5fb",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::f492e2947977",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::f1f17c38ceb5",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::f668ee5915bf",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::eadd2c2cdf96",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::ffb01937ee71",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  },
+  {
+    "record_id": "matbench-pairwise::ff8260592157",
+    "model": "gpt-5.6-terra",
+    "error": "DirectJudgeError: worthiness request failed after retries: timed out"
+  }
+]

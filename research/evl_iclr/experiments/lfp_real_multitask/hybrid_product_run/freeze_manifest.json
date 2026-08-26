@@ -1,0 +1,8 @@
+{
+  "frozen_date": "2026-08-22",
+  "test_direct_results_opened": true,
+  "method_changes_after_opening_allowed": false,
+  "calibration_unique_records": 310,
+  "models": ["gpt-5.6-sol", "gpt-5.6-luna", "gpt-5.6-terra"],
+  "reasoning_effort": "medium"
+}

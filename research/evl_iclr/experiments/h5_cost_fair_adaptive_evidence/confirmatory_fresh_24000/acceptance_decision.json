@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "beats_base_total_gain": false,
+    "beats_static_total_gain": true,
+    "llm_same_evidence_gate_complete": false,
+    "positive_trajectory_gain": true,
+    "risk_ucb_le_0.10": false,
+    "selected_nonempty": true
+  },
+  "full_acceptance_gate_passed": false,
+  "locked_test_sha256": "06b08e5b67e9b0b5646b13616b233ccb81a7508419d6bf05a6e9ed37d9dffb84",
+  "non_llm_acceptance_gate_passed": false,
+  "primary_method": "shadow_price_successive_halving",
+  "reason": "non-LLM acceptance gate failed",
+  "schema_version": "h5-fresh-acceptance-decision-v1",
+  "test_unlocked": false
+}

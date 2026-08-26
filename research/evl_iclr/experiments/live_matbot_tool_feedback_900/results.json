@@ -1,0 +1,143 @@
+{
+  "alpha": 0.1,
+  "budget_fraction": 0.1,
+  "claim_boundary": "Development evaluation on a deterministic outcome-blind split of live local tool executions over historical candidates; not the final confirmatory test.",
+  "input": "/Users/huan/Desktop/harness_matsci/research/evl_iclr/data/live_matbot_tool_trajectories_feedback_900/trajectories.jsonl",
+  "methods": {
+    "base_numeric": {
+      "budget": 30,
+      "calibrator": {
+        "calibration_brier": 0.1787275842640683,
+        "calibration_ece": 1.9434261265438568e-05,
+        "conformal_quantile": 1.6905777118520298,
+        "logistic_coefficient": -0.4657430538592451,
+        "logistic_intercept": -1.0727437496033088
+      },
+      "coverage": 0.0,
+      "errors": 0,
+      "evaluation_brier": 0.1823947016286511,
+      "evaluation_ece": 0.006358374523371263,
+      "evidence_cost_penalty": 0.0,
+      "risk_upper_bound_95": 1.0,
+      "selected": 0,
+      "selected_total_strict_gain": 0,
+      "selective_risk": 0.0,
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "extreme_properties": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        }
+      },
+      "trajectory_total_strict_gain": 0.0
+    },
+    "real_tool_numeric": {
+      "budget": 30,
+      "calibrator": {
+        "calibration_brier": 0.060934876655028274,
+        "calibration_ece": 0.045828256079859464,
+        "conformal_quantile": 0.8159111468070805,
+        "logistic_coefficient": 7.16539116225879,
+        "logistic_intercept": -1.802427838554833
+      },
+      "coverage": 0.1,
+      "errors": 1,
+      "evaluation_brier": 0.08124427184235418,
+      "evaluation_ece": 0.029027468710179992,
+      "evidence_cost_penalty": 1.125,
+      "risk_upper_bound_95": 0.14859606865911312,
+      "selected": 30,
+      "selected_total_strict_gain": 21.344590371621614,
+      "selective_risk": 0.03333333333333333,
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 1,
+          "selected_gain": -0.325,
+          "selective_risk": 1.0
+        },
+        "extreme_properties": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 29,
+          "selected_gain": 21.669590371621613,
+          "selective_risk": 0.0
+        }
+      },
+      "trajectory_total_strict_gain": 20.219590371621614
+    },
+    "static_reliability": {
+      "budget": 30,
+      "calibrator": {
+        "calibration_brier": 0.1734407743948672,
+        "calibration_ece": 0.002847099628122818,
+        "conformal_quantile": 1.04,
+        "logistic_coefficient": -2.8519470200041583,
+        "logistic_intercept": 0.688439768314617
+      },
+      "coverage": 0.0,
+      "errors": 0,
+      "evaluation_brier": 0.17812825294101978,
+      "evaluation_ece": 0.005520071021271084,
+      "evidence_cost_penalty": 0.0,
+      "risk_upper_bound_95": 1.0,
+      "selected": 0,
+      "selected_total_strict_gain": 0,
+      "selective_risk": 0.0,
+      "task_breakdown": {
+        "discover_unique": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "extreme_properties": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        },
+        "matbench_pairwise": {
+          "count": 100,
+          "parse_failure_count": 0,
+          "selected": 0,
+          "selected_gain": 0,
+          "selective_risk": 0.0
+        }
+      },
+      "trajectory_total_strict_gain": 0.0
+    }
+  },
+  "schema_version": "live-matbot-tool-evaluation-v1",
+  "sizes": {
+    "calibration": 600,
+    "evaluation": 300,
+    "total": 900
+  }
+}

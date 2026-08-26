@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_sequential_llm_worthiness.py", line 263, in <module>
+    main()
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_sequential_llm_worthiness.py", line 39, in main
+    report = run_baseline(
+             ^^^^^^^^^^^^^
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_sequential_llm_worthiness.py", line 111, in run_baseline
+    raise RuntimeError(f"sequential LLM baseline has {len(failures)} failed cells")
+RuntimeError: sequential LLM baseline has 1 failed cells

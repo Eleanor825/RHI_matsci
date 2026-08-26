@@ -1,0 +1,56 @@
+{
+  "active_seeds": 1,
+  "experiment": "h11_1_safe_activation_five_seeds",
+  "mean_population_net_gain": 9.088964253212518e-05,
+  "nonnegative_gain_seeds": 5,
+  "nonzero_coverage_seeds": 1,
+  "positive_gain_seeds": 1,
+  "risk_at_most_0.20_seeds": 5,
+  "rows": [
+    {
+      "coverage": 0.0,
+      "population_net_gain": 0.0,
+      "provenance": "deterministic_zero_certificate_replay",
+      "seed": 1,
+      "selected_count": 0,
+      "selected_policy": "no_op",
+      "selective_risk": 0.0
+    },
+    {
+      "coverage": 0.015097976228718278,
+      "population_net_gain": 0.0004544482126606259,
+      "provenance": "direct_h11_1_rerun",
+      "seed": 7,
+      "selected_count": 47,
+      "selected_policy": "activate_frozen_contract",
+      "selective_risk": 0.0851063829787234
+    },
+    {
+      "coverage": 0.0,
+      "population_net_gain": 0.0,
+      "provenance": "deterministic_zero_certificate_replay",
+      "seed": 13,
+      "selected_count": 0,
+      "selected_policy": "no_op",
+      "selective_risk": 0.0
+    },
+    {
+      "coverage": 0.0,
+      "population_net_gain": 0.0,
+      "provenance": "deterministic_zero_certificate_replay",
+      "seed": 21,
+      "selected_count": 0,
+      "selected_policy": "no_op",
+      "selective_risk": 0.0
+    },
+    {
+      "coverage": 0.0,
+      "population_net_gain": 0.0,
+      "provenance": "deterministic_zero_certificate_replay",
+      "seed": 42,
+      "selected_count": 0,
+      "selected_policy": "no_op",
+      "selective_risk": 0.0
+    }
+  ]
+}

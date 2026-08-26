@@ -1,0 +1,1506 @@
+{
+  "alpha": 0.1,
+  "budget_fraction": 0.1,
+  "claim_boundary": {
+    "development_only": true,
+    "matbot_runtime": false,
+    "observed_tools": "controlled noisy task-native measurements",
+    "pre_acquisition_priors": "train-only structured surrogate replicas",
+    "selective_risk_certificate": false,
+    "test_inspected": true
+  },
+  "evidence_calibrators": {
+    "discover_unique::base->screening": {
+      "alpha": 0.1,
+      "calibration_count": 104,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.0,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "discover_unique::screening->verification": {
+      "alpha": 0.1,
+      "calibration_count": 104,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.17518677246970807,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "extreme_properties::base->screening": {
+      "alpha": 0.1,
+      "calibration_count": 93,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.28324814620786276,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "extreme_properties::screening->verification": {
+      "alpha": 0.1,
+      "calibration_count": 93,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 8.216099867670764e-18,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "matbench_pairwise::base->screening": {
+      "alpha": 0.1,
+      "calibration_count": 99,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.07798898621226484,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "matbench_pairwise::screening->verification": {
+      "alpha": 0.1,
+      "calibration_count": 99,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.06897932804762284,
+      "type": "one_sided_normalized_split_conformal_gain"
+    }
+  },
+  "gain_calibrators": {
+    "discover_unique::base": {
+      "alpha": 0.1,
+      "calibration_count": 90,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.9652245511433267,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "discover_unique::screening": {
+      "alpha": 0.1,
+      "calibration_count": 90,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.7346723624698119,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "discover_unique::verification": {
+      "alpha": 0.1,
+      "calibration_count": 90,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.6753265851915107,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "extreme_properties::base": {
+      "alpha": 0.1,
+      "calibration_count": 92,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.4933134263257575,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "extreme_properties::screening": {
+      "alpha": 0.1,
+      "calibration_count": 92,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.23812100393614152,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "extreme_properties::verification": {
+      "alpha": 0.1,
+      "calibration_count": 92,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 3.161398797180978e-05,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "matbench_pairwise::base": {
+      "alpha": 0.1,
+      "calibration_count": 98,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 1.0995118745163746,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "matbench_pairwise::screening": {
+      "alpha": 0.1,
+      "calibration_count": 98,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 1.0466247211078508,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "matbench_pairwise::verification": {
+      "alpha": 0.1,
+      "calibration_count": 98,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.9023822888823697,
+      "type": "one_sided_normalized_split_conformal_gain"
+    }
+  },
+  "input": "research/evl_iclr/data/adaptive_evidence_trajectories_v2_structured_6000.jsonl",
+  "method": {
+    "calibration": "task-stage Platt action-worthiness plus one-sided normalized split conformal gain and evidence-value bounds",
+    "evidence_value": "crossed counterfactual improvement over execute-or-abstain value, with incremental evidence cost charged",
+    "output": "numeric action-worthiness and numeric evidence value only",
+    "route_output": false,
+    "strict_gain": "S*U - 0.15*(action_cost + acquired_evidence_cost) - 0.25*(1-S)*failure_harm",
+    "uncertainty": "balanced model-replica x evidence-replica ANOVA plus factorized aleatoric variance"
+  },
+  "models": {
+    "base": {
+      "cost_weight": 0.15,
+      "failure_harm_weight": 0.25,
+      "features_by_task": {
+        "discover_unique": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__composition_stoichiometry",
+          "base__context_space_group",
+          "base__cost",
+          "base__crystal_cubic",
+          "base__crystal_hexagonal",
+          "base__crystal_monoclinic",
+          "base__crystal_orthorhombic",
+          "base__crystal_tetragonal",
+          "base__crystal_triclinic",
+          "base__crystal_trigonal",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__source_reliability",
+          "base__source_risk",
+          "forecast_screening__predicted_task_native_margin",
+          "forecast_screening__probability_positive_margin",
+          "forecast_screening__train_residual_scale",
+          "prior_screening__predicted_task_native_margin__mean",
+          "prior_screening__predicted_task_native_margin__variance",
+          "prior_screening__probability_positive_margin__mean",
+          "prior_screening__probability_positive_margin__variance",
+          "prior_screening__train_residual_scale__mean",
+          "prior_screening__train_residual_scale__variance",
+          "prior_verification__predicted_task_native_margin__mean",
+          "prior_verification__predicted_task_native_margin__variance",
+          "prior_verification__probability_positive_margin__mean",
+          "prior_verification__probability_positive_margin__variance",
+          "prior_verification__train_residual_scale__mean",
+          "prior_verification__train_residual_scale__variance",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error"
+        ],
+        "extreme_properties": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__cost",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__smiles_atom_count",
+          "base__smiles_branch_density",
+          "base__smiles_ring_density",
+          "base__source_reliability",
+          "base__source_risk",
+          "forecast_screening__predicted_task_native_margin",
+          "forecast_screening__probability_positive_margin",
+          "forecast_screening__train_residual_scale",
+          "prior_screening__predicted_task_native_margin__mean",
+          "prior_screening__predicted_task_native_margin__variance",
+          "prior_screening__probability_positive_margin__mean",
+          "prior_screening__probability_positive_margin__variance",
+          "prior_screening__train_residual_scale__mean",
+          "prior_screening__train_residual_scale__variance",
+          "prior_verification__predicted_task_native_margin__mean",
+          "prior_verification__predicted_task_native_margin__variance",
+          "prior_verification__probability_positive_margin__mean",
+          "prior_verification__probability_positive_margin__variance",
+          "prior_verification__train_residual_scale__mean",
+          "prior_verification__train_residual_scale__variance",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error"
+        ],
+        "matbench_pairwise": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__context_left_space_group_norm",
+          "base__context_left_surrogate_score",
+          "base__context_right_space_group_norm",
+          "base__context_right_surrogate_score",
+          "base__context_same_crystal_system",
+          "base__context_surrogate_margin",
+          "base__context_surrogate_uncertainty",
+          "base__cost",
+          "base__estimate_agreement",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__pair_same_crystal_system",
+          "base__pair_surrogate_margin",
+          "base__pair_surrogate_uncertainty",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__source_reliability",
+          "base__source_risk",
+          "base__surrogate_margin",
+          "base__surrogate_uncertainty",
+          "forecast_screening__predicted_task_native_margin",
+          "forecast_screening__probability_positive_margin",
+          "forecast_screening__train_residual_scale",
+          "prior_screening__predicted_task_native_margin__mean",
+          "prior_screening__predicted_task_native_margin__variance",
+          "prior_screening__probability_positive_margin__mean",
+          "prior_screening__probability_positive_margin__variance",
+          "prior_screening__train_residual_scale__mean",
+          "prior_screening__train_residual_scale__variance",
+          "prior_verification__predicted_task_native_margin__mean",
+          "prior_verification__predicted_task_native_margin__variance",
+          "prior_verification__probability_positive_margin__mean",
+          "prior_verification__probability_positive_margin__variance",
+          "prior_verification__train_residual_scale__mean",
+          "prior_verification__train_residual_scale__variance",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error"
+        ]
+      },
+      "replicas_by_task": {
+        "discover_unique": 2,
+        "extreme_properties": 2,
+        "matbench_pairwise": 2
+      },
+      "type": "adaptive_factorized_gain_bootstrap_ensemble",
+      "utility_residual_variance_by_task": {
+        "discover_unique": 0.00040564633782773173,
+        "extreme_properties": 0.001117904344623662,
+        "matbench_pairwise": 0.01608304188864905
+      }
+    },
+    "screening": {
+      "cost_weight": 0.15,
+      "failure_harm_weight": 0.25,
+      "features_by_task": {
+        "discover_unique": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__composition_stoichiometry",
+          "base__context_space_group",
+          "base__cost",
+          "base__crystal_cubic",
+          "base__crystal_hexagonal",
+          "base__crystal_monoclinic",
+          "base__crystal_orthorhombic",
+          "base__crystal_tetragonal",
+          "base__crystal_triclinic",
+          "base__crystal_trigonal",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__source_reliability",
+          "base__source_risk",
+          "forecast_verification__predicted_task_native_margin",
+          "forecast_verification__probability_positive_margin",
+          "forecast_verification__train_residual_scale",
+          "observed_screening__declared_composite_standard_error",
+          "observed_screening__estimated_composite_score",
+          "observed_screening__estimated_performance_percentile",
+          "observed_screening__estimated_train_library_novelty",
+          "observed_screening__probability_above_advancement_threshold",
+          "observed_screening__tool_estimated_margin",
+          "observed_screening__tool_estimated_primary",
+          "observed_screening__tool_estimated_secondary",
+          "observed_screening__tool_fidelity",
+          "observed_screening__tool_positive_probability",
+          "observed_screening__tool_uncertainty",
+          "observed_screening__training_only_advancement_threshold",
+          "prior_verification__predicted_task_native_margin__mean",
+          "prior_verification__predicted_task_native_margin__variance",
+          "prior_verification__probability_positive_margin__mean",
+          "prior_verification__probability_positive_margin__variance",
+          "prior_verification__train_residual_scale__mean",
+          "prior_verification__train_residual_scale__variance",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error",
+          "signal_verification__margin",
+          "signal_verification__positive_probability",
+          "signal_verification__standard_error"
+        ],
+        "extreme_properties": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__cost",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__smiles_atom_count",
+          "base__smiles_branch_density",
+          "base__smiles_ring_density",
+          "base__source_reliability",
+          "base__source_risk",
+          "forecast_verification__predicted_task_native_margin",
+          "forecast_verification__probability_positive_margin",
+          "forecast_verification__train_residual_scale",
+          "observed_screening__declared_ratio_standard_error",
+          "observed_screening__estimated_mean_normalized_error",
+          "observed_screening__estimated_worst_constraint_slack",
+          "observed_screening__probability_all_constraints_hit",
+          "observed_screening__tool_estimated_margin",
+          "observed_screening__tool_estimated_primary",
+          "observed_screening__tool_estimated_secondary",
+          "observed_screening__tool_fidelity",
+          "observed_screening__tool_positive_probability",
+          "observed_screening__tool_uncertainty",
+          "prior_verification__predicted_task_native_margin__mean",
+          "prior_verification__predicted_task_native_margin__variance",
+          "prior_verification__probability_positive_margin__mean",
+          "prior_verification__probability_positive_margin__variance",
+          "prior_verification__train_residual_scale__mean",
+          "prior_verification__train_residual_scale__variance",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error",
+          "signal_verification__margin",
+          "signal_verification__positive_probability",
+          "signal_verification__standard_error"
+        ],
+        "matbench_pairwise": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__context_left_space_group_norm",
+          "base__context_left_surrogate_score",
+          "base__context_right_space_group_norm",
+          "base__context_right_surrogate_score",
+          "base__context_same_crystal_system",
+          "base__context_surrogate_margin",
+          "base__context_surrogate_uncertainty",
+          "base__cost",
+          "base__estimate_agreement",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__pair_same_crystal_system",
+          "base__pair_surrogate_margin",
+          "base__pair_surrogate_uncertainty",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__source_reliability",
+          "base__source_risk",
+          "base__surrogate_margin",
+          "base__surrogate_uncertainty",
+          "forecast_verification__predicted_task_native_margin",
+          "forecast_verification__probability_positive_margin",
+          "forecast_verification__train_residual_scale",
+          "observed_screening__declared_margin_standard_error",
+          "observed_screening__estimated_alternative_bulk_modulus_percentile",
+          "observed_screening__estimated_chosen_bulk_modulus_percentile",
+          "observed_screening__estimated_pairwise_margin",
+          "observed_screening__probability_chosen_is_better",
+          "observed_screening__tool_estimated_margin",
+          "observed_screening__tool_estimated_primary",
+          "observed_screening__tool_estimated_secondary",
+          "observed_screening__tool_fidelity",
+          "observed_screening__tool_positive_probability",
+          "observed_screening__tool_uncertainty",
+          "prior_verification__predicted_task_native_margin__mean",
+          "prior_verification__predicted_task_native_margin__variance",
+          "prior_verification__probability_positive_margin__mean",
+          "prior_verification__probability_positive_margin__variance",
+          "prior_verification__train_residual_scale__mean",
+          "prior_verification__train_residual_scale__variance",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error",
+          "signal_verification__margin",
+          "signal_verification__positive_probability",
+          "signal_verification__standard_error"
+        ]
+      },
+      "replicas_by_task": {
+        "discover_unique": 2,
+        "extreme_properties": 2,
+        "matbench_pairwise": 2
+      },
+      "type": "adaptive_factorized_gain_bootstrap_ensemble",
+      "utility_residual_variance_by_task": {
+        "discover_unique": 0.00038117304222728054,
+        "extreme_properties": 0.000796188430617479,
+        "matbench_pairwise": 0.012727613439533969
+      }
+    },
+    "verification": {
+      "cost_weight": 0.15,
+      "failure_harm_weight": 0.25,
+      "features_by_task": {
+        "discover_unique": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__composition_stoichiometry",
+          "base__context_space_group",
+          "base__cost",
+          "base__crystal_cubic",
+          "base__crystal_hexagonal",
+          "base__crystal_monoclinic",
+          "base__crystal_orthorhombic",
+          "base__crystal_tetragonal",
+          "base__crystal_triclinic",
+          "base__crystal_trigonal",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__source_reliability",
+          "base__source_risk",
+          "observed_screening__declared_composite_standard_error",
+          "observed_screening__estimated_composite_score",
+          "observed_screening__estimated_performance_percentile",
+          "observed_screening__estimated_train_library_novelty",
+          "observed_screening__probability_above_advancement_threshold",
+          "observed_screening__tool_estimated_margin",
+          "observed_screening__tool_estimated_primary",
+          "observed_screening__tool_estimated_secondary",
+          "observed_screening__tool_fidelity",
+          "observed_screening__tool_positive_probability",
+          "observed_screening__tool_uncertainty",
+          "observed_screening__training_only_advancement_threshold",
+          "observed_verification__declared_composite_standard_error",
+          "observed_verification__estimated_composite_score",
+          "observed_verification__estimated_performance_percentile",
+          "observed_verification__estimated_train_library_novelty",
+          "observed_verification__probability_above_advancement_threshold",
+          "observed_verification__tool_estimated_margin",
+          "observed_verification__tool_estimated_primary",
+          "observed_verification__tool_estimated_secondary",
+          "observed_verification__tool_fidelity",
+          "observed_verification__tool_positive_probability",
+          "observed_verification__tool_uncertainty",
+          "observed_verification__training_only_advancement_threshold",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error",
+          "signal_verification__margin",
+          "signal_verification__positive_probability",
+          "signal_verification__standard_error"
+        ],
+        "extreme_properties": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__cost",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__smiles_atom_count",
+          "base__smiles_branch_density",
+          "base__smiles_ring_density",
+          "base__source_reliability",
+          "base__source_risk",
+          "observed_screening__declared_ratio_standard_error",
+          "observed_screening__estimated_mean_normalized_error",
+          "observed_screening__estimated_worst_constraint_slack",
+          "observed_screening__probability_all_constraints_hit",
+          "observed_screening__tool_estimated_margin",
+          "observed_screening__tool_estimated_primary",
+          "observed_screening__tool_estimated_secondary",
+          "observed_screening__tool_fidelity",
+          "observed_screening__tool_positive_probability",
+          "observed_screening__tool_uncertainty",
+          "observed_verification__declared_ratio_standard_error",
+          "observed_verification__estimated_mean_normalized_error",
+          "observed_verification__estimated_worst_constraint_slack",
+          "observed_verification__probability_all_constraints_hit",
+          "observed_verification__tool_estimated_margin",
+          "observed_verification__tool_estimated_primary",
+          "observed_verification__tool_estimated_secondary",
+          "observed_verification__tool_fidelity",
+          "observed_verification__tool_positive_probability",
+          "observed_verification__tool_uncertainty",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error",
+          "signal_verification__margin",
+          "signal_verification__positive_probability",
+          "signal_verification__standard_error"
+        ],
+        "matbench_pairwise": [
+          "base__action_complexity",
+          "base__candidate_composition_diversity",
+          "base__candidate_domain_position",
+          "base__candidate_structure_complexity",
+          "base__context_left_space_group_norm",
+          "base__context_left_surrogate_score",
+          "base__context_right_space_group_norm",
+          "base__context_right_surrogate_score",
+          "base__context_same_crystal_system",
+          "base__context_surrogate_margin",
+          "base__context_surrogate_uncertainty",
+          "base__cost",
+          "base__estimate_agreement",
+          "base__evidence_count",
+          "base__extraction_confidence",
+          "base__pair_same_crystal_system",
+          "base__pair_surrogate_margin",
+          "base__pair_surrogate_uncertainty",
+          "base__perturbation_stability",
+          "base__reversibility",
+          "base__source_reliability",
+          "base__source_risk",
+          "base__surrogate_margin",
+          "base__surrogate_uncertainty",
+          "observed_screening__declared_margin_standard_error",
+          "observed_screening__estimated_alternative_bulk_modulus_percentile",
+          "observed_screening__estimated_chosen_bulk_modulus_percentile",
+          "observed_screening__estimated_pairwise_margin",
+          "observed_screening__probability_chosen_is_better",
+          "observed_screening__tool_estimated_margin",
+          "observed_screening__tool_estimated_primary",
+          "observed_screening__tool_estimated_secondary",
+          "observed_screening__tool_fidelity",
+          "observed_screening__tool_positive_probability",
+          "observed_screening__tool_uncertainty",
+          "observed_verification__declared_margin_standard_error",
+          "observed_verification__estimated_alternative_bulk_modulus_percentile",
+          "observed_verification__estimated_chosen_bulk_modulus_percentile",
+          "observed_verification__estimated_pairwise_margin",
+          "observed_verification__probability_chosen_is_better",
+          "observed_verification__tool_estimated_margin",
+          "observed_verification__tool_estimated_primary",
+          "observed_verification__tool_estimated_secondary",
+          "observed_verification__tool_fidelity",
+          "observed_verification__tool_positive_probability",
+          "observed_verification__tool_uncertainty",
+          "signal_screening__margin",
+          "signal_screening__positive_probability",
+          "signal_screening__standard_error",
+          "signal_verification__margin",
+          "signal_verification__positive_probability",
+          "signal_verification__standard_error"
+        ]
+      },
+      "replicas_by_task": {
+        "discover_unique": 2,
+        "extreme_properties": 2,
+        "matbench_pairwise": 2
+      },
+      "type": "adaptive_factorized_gain_bootstrap_ensemble",
+      "utility_residual_variance_by_task": {
+        "discover_unique": 0.0003264709715352814,
+        "extreme_properties": 0.0006367063975128094,
+        "matbench_pairwise": 0.007105504808801086
+      }
+    }
+  },
+  "platt_calibrators": {
+    "discover_unique::base": {
+      "coefficient": 0.0985088722417284,
+      "intercept": -2.5447624206823227
+    },
+    "discover_unique::screening": {
+      "coefficient": 0.07064116806894011,
+      "intercept": -2.130651456521498
+    },
+    "discover_unique::verification": {
+      "coefficient": 0.15318518861146427,
+      "intercept": -2.510804784964036
+    },
+    "extreme_properties::base": {
+      "coefficient": -0.3411652167065697,
+      "intercept": -6.618600495676626
+    },
+    "extreme_properties::screening": {
+      "coefficient": 0.48412237942035957,
+      "intercept": -5.100950545422304
+    },
+    "extreme_properties::verification": {
+      "coefficient": 0.4622233506369424,
+      "intercept": -4.121243284983217
+    },
+    "matbench_pairwise::base": {
+      "coefficient": 0.19777390718613988,
+      "intercept": -1.8527710754097262
+    },
+    "matbench_pairwise::screening": {
+      "coefficient": 0.24577741336324616,
+      "intercept": -2.2692085014398953
+    },
+    "matbench_pairwise::verification": {
+      "coefficient": 0.258742504777427,
+      "intercept": -1.7862259451442506
+    }
+  },
+  "primary_ltt_candidates": [
+    {
+      "certified": false,
+      "empirical_risk": 0.45925925925925926,
+      "errors": 62,
+      "population_gain": 0.15062743858663002,
+      "selected_count": 135,
+      "selected_mean_gain": 0.30125487717326005,
+      "selected_total_gain": 40.669408418390105,
+      "simultaneous_risk_upper_bound": 0.5626937911530476,
+      "threshold": -0.20003318129048692
+    },
+    {
+      "certified": false,
+      "empirical_risk": 0.3425925925925926,
+      "errors": 37,
+      "population_gain": 0.1634142049981356,
+      "selected_count": 108,
+      "selected_mean_gain": 0.40853551249533904,
+      "selected_total_gain": 44.121835349496614,
+      "simultaneous_risk_upper_bound": 0.45778519326795825,
+      "threshold": -0.16076899805149758
+    },
+    {
+      "certified": false,
+      "empirical_risk": 0.20987654320987653,
+      "errors": 17,
+      "population_gain": 0.1587825530446925,
+      "selected_count": 81,
+      "selected_mean_gain": 0.5292751768156416,
+      "selected_total_gain": 42.87128932206697,
+      "simultaneous_risk_upper_bound": 0.3343099480497006,
+      "threshold": 0.010474502413041972
+    },
+    {
+      "certified": false,
+      "empirical_risk": 0.1111111111111111,
+      "errors": 6,
+      "population_gain": 0.1255805253408311,
+      "selected_count": 54,
+      "selected_mean_gain": 0.6279026267041556,
+      "selected_total_gain": 33.9067418420244,
+      "simultaneous_risk_upper_bound": 0.2489779428949667,
+      "threshold": 0.14034571665211037
+    },
+    {
+      "certified": false,
+      "empirical_risk": 0.037037037037037035,
+      "errors": 1,
+      "population_gain": 0.07604348113395908,
+      "selected_count": 27,
+      "selected_mean_gain": 0.7604348113395908,
+      "selected_total_gain": 20.53173990616895,
+      "simultaneous_risk_upper_bound": 0.22170305571461518,
+      "threshold": 0.3825507707797183
+    }
+  ],
+  "primary_ltt_policy": null,
+  "replicas": 2,
+  "schema_version": "h5-cost-fair-adaptive-evidence-v1",
+  "seed": 1729,
+  "sizes": {
+    "acceptance": 620,
+    "feedback": 846,
+    "test": 812,
+    "train": 3722
+  },
+  "summary": {
+    "acceptance": {
+      "adaptive_ambiguity_voi": {
+        "coverage": 0.1,
+        "errors": 7,
+        "population_mean_strict_gain": 0.06182251241313317,
+        "selected_count": 62,
+        "selected_mean_strict_gain": 0.6490114144539104,
+        "selected_total_strict_gain": 40.23870769614245,
+        "selective_risk": 0.11290322580645161,
+        "stage_counts": {
+          "base": 399,
+          "screening": 92,
+          "verification": 129
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.005319148936170213,
+            "errors": 0,
+            "evidence_cost": 2.875,
+            "selected": 1,
+            "selective_risk": 0.0,
+            "total_gain": 0.4134422157477958
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.041666666666666664,
+            "errors": 2,
+            "evidence_cost": 0.9500000000000005,
+            "selected": 10,
+            "selective_risk": 0.2,
+            "total_gain": 5.599633956386292
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.265625,
+            "errors": 5,
+            "evidence_cost": 11.374999999999982,
+            "selected": 51,
+            "selective_risk": 0.09803921568627451,
+            "total_gain": 32.31688152400831
+          }
+        },
+        "total_acquired_evidence_cost": 15.199999999999996,
+        "trajectory_total_strict_gain": 38.329957696142564
+      },
+      "adaptive_conservative_ltt": {
+        "available": false,
+        "certified": false,
+        "reason": "no simultaneously certified LTT threshold on policy feedback"
+      },
+      "adaptive_conservative_voi": {
+        "coverage": 0.1,
+        "errors": 10,
+        "population_mean_strict_gain": 0.0634024028128567,
+        "selected_count": 62,
+        "selected_mean_strict_gain": 0.6355966087737275,
+        "selected_total_strict_gain": 39.4069897439711,
+        "selective_risk": 0.16129032258064516,
+        "stage_counts": {
+          "base": 581,
+          "screening": 38,
+          "verification": 1
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.026595744680851064,
+            "errors": 2,
+            "evidence_cost": 0.05,
+            "selected": 5,
+            "selective_risk": 0.4,
+            "total_gain": 2.252230315254744
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.05,
+            "errors": 3,
+            "evidence_cost": 0.6000000000000002,
+            "selected": 12,
+            "selective_risk": 0.25,
+            "total_gain": 6.1775934579439244
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.234375,
+            "errors": 5,
+            "evidence_cost": 0.40000000000000013,
+            "selected": 45,
+            "selective_risk": 0.1111111111111111,
+            "total_gain": 30.879665970772436
+          }
+        },
+        "total_acquired_evidence_cost": 1.0500000000000005,
+        "trajectory_total_strict_gain": 39.30948974397115
+      },
+      "adaptive_mean_voi": {
+        "coverage": 0.1,
+        "errors": 9,
+        "population_mean_strict_gain": 0.06459805291492002,
+        "selected_count": 62,
+        "selected_mean_strict_gain": 0.655476496891134,
+        "selected_total_strict_gain": 40.63954280725031,
+        "selective_risk": 0.14516129032258066,
+        "stage_counts": {
+          "base": 439,
+          "screening": 175,
+          "verification": 6
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.0,
+            "errors": 0,
+            "evidence_cost": 0.05,
+            "selected": 0,
+            "selective_risk": 0.0,
+            "total_gain": -0.0075
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.15833333333333333,
+            "errors": 6,
+            "evidence_cost": 3.7499999999999907,
+            "selected": 38,
+            "selective_risk": 0.15789473684210525,
+            "total_gain": 23.101098130841105
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.125,
+            "errors": 3,
+            "evidence_cost": 1.1750000000000003,
+            "selected": 24,
+            "selective_risk": 0.125,
+            "total_gain": 16.957194676409177
+          }
+        },
+        "total_acquired_evidence_cost": 4.975000000000004,
+        "trajectory_total_strict_gain": 40.05079280725041
+      },
+      "base_factorized_lcb": {
+        "coverage": 0.1,
+        "errors": 14,
+        "population_mean_strict_gain": 0.05728256399168534,
+        "selected_count": 62,
+        "selected_mean_strict_gain": 0.5728256399168534,
+        "selected_total_strict_gain": 35.51518967484491,
+        "selective_risk": 0.22580645161290322,
+        "stage_counts": {
+          "base": 620,
+          "screening": 0,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.0425531914893617,
+            "errors": 4,
+            "evidence_cost": 0.0,
+            "selected": 8,
+            "selective_risk": 0.5,
+            "total_gain": 2.7420738084565963
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.004166666666666667,
+            "errors": 1,
+            "evidence_cost": 0.0,
+            "selected": 1,
+            "selective_risk": 1.0,
+            "total_gain": -0.2825
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.2760416666666667,
+            "errors": 9,
+            "evidence_cost": 0.0,
+            "selected": 53,
+            "selective_risk": 0.16981132075471697,
+            "total_gain": 33.05561586638832
+          }
+        },
+        "total_acquired_evidence_cost": 0.0,
+        "trajectory_total_strict_gain": 35.51518967484491
+      },
+      "fixed_full_evidence_lcb": {
+        "coverage": 0.1,
+        "errors": 1,
+        "population_mean_strict_gain": 0.06649977030617428,
+        "selected_count": 62,
+        "selected_mean_strict_gain": 0.7999977030617472,
+        "selected_total_strict_gain": 49.599857589828325,
+        "selective_risk": 0.016129032258064516,
+        "stage_counts": {
+          "base": 0,
+          "screening": 0,
+          "verification": 620
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.005319148936170213,
+            "errors": 0,
+            "evidence_cost": 18.799999999999997,
+            "selected": 1,
+            "selective_risk": 0.0,
+            "total_gain": -1.9524480800836617
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.15,
+            "errors": 1,
+            "evidence_cost": 24.00000000000007,
+            "selected": 36,
+            "selective_risk": 0.027777777777777776,
+            "total_gain": 23.967733644859756
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.13020833333333334,
+            "errors": 0,
+            "evidence_cost": 19.200000000000003,
+            "selected": 25,
+            "selective_risk": 0.0,
+            "total_gain": 19.21457202505214
+          }
+        },
+        "total_acquired_evidence_cost": 62.00000000000061,
+        "trajectory_total_strict_gain": 41.22985758982805
+      },
+      "fixed_screening_lcb": {
+        "coverage": 0.1,
+        "errors": 6,
+        "population_mean_strict_gain": 0.06648136167324316,
+        "selected_count": 62,
+        "selected_mean_strict_gain": 0.6985636167324274,
+        "selected_total_strict_gain": 43.310944237410496,
+        "selective_risk": 0.0967741935483871,
+        "stage_counts": {
+          "base": 0,
+          "screening": 620,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.005319148936170213,
+            "errors": 1,
+            "evidence_cost": 4.699999999999999,
+            "selected": 1,
+            "selective_risk": 1.0,
+            "total_gain": -0.9050000000000024
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.14583333333333334,
+            "errors": 5,
+            "evidence_cost": 6.000000000000018,
+            "selected": 35,
+            "selective_risk": 0.14285714285714285,
+            "total_gain": 21.650584112149506
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.13541666666666666,
+            "errors": 0,
+            "evidence_cost": 4.800000000000001,
+            "selected": 26,
+            "selective_risk": 0.0,
+            "total_gain": 20.472860125260933
+          }
+        },
+        "total_acquired_evidence_cost": 15.500000000000153,
+        "trajectory_total_strict_gain": 41.21844423741076
+      },
+      "oracle_stage_and_execution": {
+        "coverage": 0.1,
+        "errors": 0,
+        "population_mean_strict_gain": 0.08802927292526669,
+        "selected_count": 62,
+        "selected_mean_strict_gain": 0.8802927292526669,
+        "selected_total_strict_gain": 54.57814921366535,
+        "selective_risk": 0.0,
+        "stage_counts": {
+          "base": 620,
+          "screening": 0,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.10106382978723404,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 19,
+            "selective_risk": 0.0,
+            "total_gain": 16.692361422381595
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.07083333333333333,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 17,
+            "selective_risk": 0.0,
+            "total_gain": 14.296059190031153
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.13541666666666666,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 26,
+            "selective_risk": 0.0,
+            "total_gain": 23.589728601252606
+          }
+        },
+        "total_acquired_evidence_cost": 0.0,
+        "trajectory_total_strict_gain": 54.57814921366535
+      },
+      "static_reliability": {
+        "coverage": 0.1,
+        "errors": 55,
+        "population_mean_strict_gain": -0.007746496098475549,
+        "selected_count": 62,
+        "selected_mean_strict_gain": -0.07746496098475548,
+        "selected_total_strict_gain": -4.80282758105484,
+        "selective_risk": 0.8870967741935484,
+        "stage_counts": {
+          "base": 620,
+          "screening": 0,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 188,
+            "coverage": 0.32978723404255317,
+            "errors": 55,
+            "evidence_cost": 0.0,
+            "selected": 62,
+            "selective_risk": 0.8870967741935484,
+            "total_gain": -4.80282758105484
+          },
+          "extreme_properties": {
+            "count": 240,
+            "coverage": 0.0,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 0,
+            "selective_risk": 0.0,
+            "total_gain": 0.0
+          },
+          "matbench_pairwise": {
+            "count": 192,
+            "coverage": 0.0,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 0,
+            "selective_risk": 0.0,
+            "total_gain": 0.0
+          }
+        },
+        "total_acquired_evidence_cost": 0.0,
+        "trajectory_total_strict_gain": -4.80282758105484
+      }
+    },
+    "calibration": {
+      "acceptance": {
+        "base": {
+          "brier": 0.14539453629788648,
+          "ece_10": 0.04316841374353806,
+          "positive_rate": 0.2903225806451613
+        },
+        "screening": {
+          "brier": 0.10511230313196097,
+          "ece_10": 0.02837323092506941,
+          "positive_rate": 0.2903225806451613
+        },
+        "verification": {
+          "brier": 0.07849866785295723,
+          "ece_10": 0.033969182880137706,
+          "positive_rate": 0.2903225806451613
+        }
+      },
+      "feedback": {
+        "base": {
+          "brier": 0.13422694082434722,
+          "ece_10": 0.014913768671762546,
+          "positive_rate": 0.30141843971631205
+        },
+        "screening": {
+          "brier": 0.10373099739333012,
+          "ece_10": 0.02123183478239978,
+          "positive_rate": 0.30141843971631205
+        },
+        "verification": {
+          "brier": 0.06639409898909113,
+          "ece_10": 0.016338771580024627,
+          "positive_rate": 0.30141843971631205
+        }
+      },
+      "test": {
+        "base": {
+          "brier": 0.14654403414106879,
+          "ece_10": 0.04306666631625658,
+          "positive_rate": 0.32142857142857145
+        },
+        "screening": {
+          "brier": 0.09762337062837163,
+          "ece_10": 0.016470354282909664,
+          "positive_rate": 0.32142857142857145
+        },
+        "verification": {
+          "brier": 0.07775439814012595,
+          "ece_10": 0.02277757829049765,
+          "positive_rate": 0.32142857142857145
+        }
+      }
+    },
+    "feedback_partition": {
+      "evidence_calibration": 296,
+      "gain_calibration": 280,
+      "policy_ltt": 270
+    },
+    "test": {
+      "adaptive_ambiguity_voi": {
+        "coverage": 0.10098522167487685,
+        "errors": 8,
+        "population_mean_strict_gain": 0.0613654460379756,
+        "selected_count": 82,
+        "selected_mean_strict_gain": 0.6439785632053164,
+        "selected_total_strict_gain": 52.80624218283595,
+        "selective_risk": 0.0975609756097561,
+        "stage_counts": {
+          "base": 499,
+          "screening": 122,
+          "verification": 191
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.024096385542168676,
+            "errors": 5,
+            "evidence_cost": 6.600000000000001,
+            "selected": 8,
+            "selective_risk": 0.625,
+            "total_gain": 0.5941289406842969
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.015,
+            "errors": 0,
+            "evidence_cost": 0.22499999999999998,
+            "selected": 3,
+            "selective_risk": 0.0,
+            "total_gain": 2.3083528037383174
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.25357142857142856,
+            "errors": 3,
+            "evidence_cost": 15.324999999999978,
+            "selected": 71,
+            "selective_risk": 0.04225352112676056,
+            "total_gain": 46.92626043841335
+          }
+        },
+        "total_acquired_evidence_cost": 22.149999999999935,
+        "trajectory_total_strict_gain": 49.82874218283619
+      },
+      "adaptive_conservative_ltt": {
+        "available": false,
+        "certified": false,
+        "reason": "no simultaneously certified LTT threshold on policy feedback"
+      },
+      "adaptive_conservative_voi": {
+        "coverage": 0.10098522167487685,
+        "errors": 6,
+        "population_mean_strict_gain": 0.06990204948308824,
+        "selected_count": 82,
+        "selected_mean_strict_gain": 0.6931611485398488,
+        "selected_total_strict_gain": 56.8392141802676,
+        "selective_risk": 0.07317073170731707,
+        "stage_counts": {
+          "base": 784,
+          "screening": 28,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.030120481927710843,
+            "errors": 5,
+            "evidence_cost": 0.27499999999999997,
+            "selected": 10,
+            "selective_risk": 0.5,
+            "total_gain": 3.416933923502167
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.015,
+            "errors": 0,
+            "evidence_cost": 0.19999999999999998,
+            "selected": 3,
+            "selective_risk": 0.0,
+            "total_gain": 2.312102803738317
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.24642857142857144,
+            "errors": 1,
+            "evidence_cost": 0.22499999999999998,
+            "selected": 69,
+            "selective_risk": 0.014492753623188406,
+            "total_gain": 51.03142745302713
+          }
+        },
+        "total_acquired_evidence_cost": 0.7000000000000003,
+        "trajectory_total_strict_gain": 56.760464180267654
+      },
+      "adaptive_mean_voi": {
+        "coverage": 0.10098522167487685,
+        "errors": 8,
+        "population_mean_strict_gain": 0.06770154435190774,
+        "selected_count": 82,
+        "selected_mean_strict_gain": 0.6798768782164487,
+        "selected_total_strict_gain": 55.7499040137488,
+        "selective_risk": 0.0975609756097561,
+        "stage_counts": {
+          "base": 568,
+          "screening": 238,
+          "verification": 6
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.0,
+            "errors": 0,
+            "evidence_cost": 0.27499999999999997,
+            "selected": 0,
+            "selective_risk": 0.0,
+            "total_gain": -0.04125000000000001
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.275,
+            "errors": 8,
+            "evidence_cost": 5.0000000000000036,
+            "selected": 55,
+            "selective_risk": 0.14545454545454545,
+            "total_gain": 33.55989096573212
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.09642857142857143,
+            "errors": 0,
+            "evidence_cost": 1.2749999999999997,
+            "selected": 27,
+            "selective_risk": 0.0,
+            "total_gain": 21.4550130480167
+          }
+        },
+        "total_acquired_evidence_cost": 6.5500000000000265,
+        "trajectory_total_strict_gain": 54.97365401374908
+      },
+      "base_factorized_lcb": {
+        "coverage": 0.10098522167487685,
+        "errors": 8,
+        "population_mean_strict_gain": 0.06709828592318931,
+        "selected_count": 82,
+        "selected_mean_strict_gain": 0.6644366849954844,
+        "selected_total_strict_gain": 54.48380816962972,
+        "selective_risk": 0.0975609756097561,
+        "stage_counts": {
+          "base": 812,
+          "screening": 0,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.03614457831325301,
+            "errors": 6,
+            "evidence_cost": 0.0,
+            "selected": 12,
+            "selective_risk": 0.5,
+            "total_gain": 4.128275810548334
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.0,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 0,
+            "selective_risk": 0.0,
+            "total_gain": 0.0
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.25,
+            "errors": 2,
+            "evidence_cost": 0.0,
+            "selected": 70,
+            "selective_risk": 0.02857142857142857,
+            "total_gain": 50.3555323590814
+          }
+        },
+        "total_acquired_evidence_cost": 0.0,
+        "trajectory_total_strict_gain": 54.48380816962972
+      },
+      "fixed_full_evidence_lcb": {
+        "coverage": 0.10098522167487685,
+        "errors": 3,
+        "population_mean_strict_gain": 0.0629076766211524,
+        "selected_count": 82,
+        "selected_mean_strict_gain": 0.7564760172728795,
+        "selected_total_strict_gain": 62.03103341637612,
+        "selective_risk": 0.036585365853658534,
+        "stage_counts": {
+          "base": 0,
+          "screening": 0,
+          "verification": 812
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.009036144578313253,
+            "errors": 1,
+            "evidence_cost": 33.2000000000002,
+            "selected": 3,
+            "selective_risk": 0.3333333333333333,
+            "total_gain": -3.3763170476617375
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.235,
+            "errors": 2,
+            "evidence_cost": 20.000000000000014,
+            "selected": 47,
+            "selective_risk": 0.0425531914893617,
+            "total_gain": 31.481651090342613
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.11428571428571428,
+            "errors": 0,
+            "evidence_cost": 28.000000000000128,
+            "selected": 32,
+            "selective_risk": 0.0,
+            "total_gain": 22.97569937369509
+          }
+        },
+        "total_acquired_evidence_cost": 81.19999999999966,
+        "trajectory_total_strict_gain": 51.081033416375746
+      },
+      "fixed_screening_lcb": {
+        "coverage": 0.10098522167487685,
+        "errors": 9,
+        "population_mean_strict_gain": 0.0650428825560334,
+        "selected_count": 82,
+        "selected_mean_strict_gain": 0.6774673248231577,
+        "selected_total_strict_gain": 55.55232063549894,
+        "selective_risk": 0.10975609756097561,
+        "stage_counts": {
+          "base": 0,
+          "screening": 812,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.006024096385542169,
+            "errors": 1,
+            "evidence_cost": 8.30000000000005,
+            "selected": 2,
+            "selective_risk": 0.5,
+            "total_gain": -0.59089496488869
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.275,
+            "errors": 8,
+            "evidence_cost": 5.0000000000000036,
+            "selected": 55,
+            "selective_risk": 0.14545454545454545,
+            "total_gain": 33.55989096573212
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.08928571428571429,
+            "errors": 0,
+            "evidence_cost": 7.000000000000032,
+            "selected": 25,
+            "selective_risk": 0.0,
+            "total_gain": 19.845824634655504
+          }
+        },
+        "total_acquired_evidence_cost": 20.299999999999915,
+        "trajectory_total_strict_gain": 52.81482063549912
+      },
+      "oracle_stage_and_execution": {
+        "coverage": 0.10098522167487685,
+        "errors": 0,
+        "population_mean_strict_gain": 0.08788971063496642,
+        "selected_count": 82,
+        "selected_mean_strict_gain": 0.8703225004340577,
+        "selected_total_strict_gain": 71.36644503559273,
+        "selective_risk": 0.0,
+        "stage_counts": {
+          "base": 812,
+          "screening": 0,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.06927710843373494,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 23,
+            "selective_risk": 0.0,
+            "total_gain": 20.135376512774545
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.065,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 13,
+            "selective_risk": 0.0,
+            "total_gain": 10.768271028037384
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.16428571428571428,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 46,
+            "selective_risk": 0.0,
+            "total_gain": 40.4627974947808
+          }
+        },
+        "total_acquired_evidence_cost": 0.0,
+        "trajectory_total_strict_gain": 71.36644503559273
+      },
+      "static_reliability": {
+        "coverage": 0.10098522167487685,
+        "errors": 71,
+        "population_mean_strict_gain": -0.005518747437768605,
+        "selected_count": 82,
+        "selected_mean_strict_gain": -0.05464905999351351,
+        "selected_total_strict_gain": -4.481222919468108,
+        "selective_risk": 0.8658536585365854,
+        "stage_counts": {
+          "base": 812,
+          "screening": 0,
+          "verification": 0
+        },
+        "task_breakdown": {
+          "discover_unique": {
+            "count": 332,
+            "coverage": 0.2469879518072289,
+            "errors": 71,
+            "evidence_cost": 0.0,
+            "selected": 82,
+            "selective_risk": 0.8658536585365854,
+            "total_gain": -4.481222919468108
+          },
+          "extreme_properties": {
+            "count": 200,
+            "coverage": 0.0,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 0,
+            "selective_risk": 0.0,
+            "total_gain": 0.0
+          },
+          "matbench_pairwise": {
+            "count": 280,
+            "coverage": 0.0,
+            "errors": 0,
+            "evidence_cost": 0.0,
+            "selected": 0,
+            "selective_risk": 0.0,
+            "total_gain": 0.0
+          }
+        },
+        "total_acquired_evidence_cost": 0.0,
+        "trajectory_total_strict_gain": -4.481222919468108
+      }
+    }
+  },
+  "trees": 24
+}

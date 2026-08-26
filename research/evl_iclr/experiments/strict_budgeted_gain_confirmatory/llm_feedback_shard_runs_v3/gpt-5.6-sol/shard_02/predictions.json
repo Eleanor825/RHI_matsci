@@ -1,0 +1,90 @@
+{
+  "cell_count": 1,
+  "gain_definition": "strict_realized",
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "record_count": 1,
+  "reservation_values": {
+    "extreme_properties": 0.7797663551401869
+  },
+  "rows": [
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2448,
+      "mean_p_positive_gain": 0.0002,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.98,
+          "expected_gain": -0.2448,
+          "expected_normalized_utility": 0.85,
+          "p_positive_gain": 0.0002,
+          "p_success": 0.0002,
+          "rationale": ""
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C7::b79a16a16a64",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    }
+  ],
+  "schema_version": "sequential-v2-generic-llm-worthiness-v2",
+  "split": "feedback",
+  "stage": "base",
+  "summary": {
+    "by_model": {
+      "gpt-5.6-sol": {
+        "accuracy_at_threshold": 1.0,
+        "aurc": 1.0,
+        "brier": 4e-08,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.0002,
+        "expected_gain_mae": 0.037699999999999984,
+        "log_loss": 0.0002000200026670447,
+        "n": 1.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      }
+    },
+    "by_task": {
+      "extreme_properties": {
+        "accuracy_at_threshold": 1.0,
+        "aurc": 1.0,
+        "brier": 4e-08,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.0002,
+        "log_loss": 0.0002000200026670447,
+        "n": 1.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      }
+    },
+    "ensemble": {
+      "accuracy_at_threshold": 1.0,
+      "aurc": 1.0,
+      "brier": 4e-08,
+      "confidently_wrong_rate": 0.0,
+      "coverage": 0.0,
+      "coverage_at_risk_0.05": 0.0,
+      "coverage_at_risk_0.10": 0.0,
+      "ece": 0.0002,
+      "expected_gain_mae": 0.037699999999999984,
+      "expected_gain_variance_error_correlation": 0.0,
+      "log_loss": 0.0002000200026670447,
+      "n": 1.0,
+      "probability_variance_error_correlation": 0.0,
+      "selective_accuracy": 0.0,
+      "selective_risk": 0.0
+    }
+  }
+}

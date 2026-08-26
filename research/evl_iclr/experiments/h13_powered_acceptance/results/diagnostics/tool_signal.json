@@ -1,0 +1,139 @@
+{
+  "experiment": "real_tool_signal_identifiability",
+  "rows": [
+    {
+      "fold": 0,
+      "tasks": {
+        "discover_unique": {
+          "absolute_tool_error_mean": 0.3360389838841976,
+          "average_precision_worthiness": 0.35258672463702034,
+          "count": 3907,
+          "external_variance_error_pearson": -0.12233896051552955,
+          "external_variance_error_spearman": -0.13160117612557518,
+          "external_variance_mean": 2.4109821162442473e-05,
+          "gain_score_pearson": 0.2256334164243829,
+          "roc_auc_worthiness": 0.7323881753330084,
+          "selection_grid": {
+            "top_0.005": {
+              "population_gain_before_tool_cost": -0.0008586065897963787,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": -0.16772879731672258
+            },
+            "top_0.010": {
+              "population_gain_before_tool_cost": -0.002523817104164396,
+              "precision": 0.717948717948718,
+              "selected_count": 39,
+              "selected_mean_gain": -0.2528347032300075
+            },
+            "top_0.020": {
+              "population_gain_before_tool_cost": -0.006163908623459008,
+              "precision": 0.6666666666666666,
+              "selected_count": 78,
+              "selected_mean_gain": -0.308748602459671
+            },
+            "top_0.050": {
+              "population_gain_before_tool_cost": -0.023712047191108004,
+              "precision": 0.5128205128205128,
+              "selected_count": 195,
+              "selected_mean_gain": -0.47509214551619916
+            },
+            "top_0.100": {
+              "population_gain_before_tool_cost": -0.0614556803368792,
+              "precision": 0.3836317135549872,
+              "selected_count": 391,
+              "selected_mean_gain": -0.6140852764096827
+            }
+          },
+          "worthy_fraction": 0.10442794983363195
+        },
+        "extreme_properties": {
+          "absolute_tool_error_mean": 12.503549933046678,
+          "average_precision_worthiness": 0.04030226700251889,
+          "count": 400,
+          "external_variance_error_pearson": 0.0,
+          "external_variance_error_spearman": 0.0,
+          "external_variance_mean": 0.0,
+          "gain_score_pearson": 0.03069284788441704,
+          "roc_auc_worthiness": 0.50390625,
+          "selection_grid": {
+            "top_0.005": {
+              "population_gain_before_tool_cost": 0.0004907709011943539,
+              "precision": 1,
+              "selected_count": 2,
+              "selected_mean_gain": 0.09815418023887079
+            },
+            "top_0.010": {
+              "population_gain_before_tool_cost": 0.0008431053203040173,
+              "precision": 1,
+              "selected_count": 4,
+              "selected_mean_gain": 0.08431053203040173
+            },
+            "top_0.020": {
+              "population_gain_before_tool_cost": 0.0011324647122692721,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.05662323561346361
+            },
+            "top_0.050": {
+              "population_gain_before_tool_cost": 0.0012730727470141134,
+              "precision": 0.8,
+              "selected_count": 20,
+              "selected_mean_gain": 0.02546145494028227
+            },
+            "top_0.100": {
+              "population_gain_before_tool_cost": -0.0003773072747014133,
+              "precision": 0.4,
+              "selected_count": 40,
+              "selected_mean_gain": -0.0037730727470141334
+            }
+          },
+          "worthy_fraction": 0.04
+        },
+        "matbench_pairwise": {
+          "absolute_tool_error_mean": 0.03910962993084586,
+          "average_precision_worthiness": 0.7736734219306357,
+          "count": 1597,
+          "external_variance_error_pearson": 0.3884265681482791,
+          "external_variance_error_spearman": 0.40062297682744624,
+          "external_variance_mean": 0.00034443251118978374,
+          "gain_score_pearson": 0.8726662209868346,
+          "roc_auc_worthiness": 0.9536133193048087,
+          "selection_grid": {
+            "top_0.005": {
+              "population_gain_before_tool_cost": 0.00044998604492778023,
+              "precision": 1,
+              "selected_count": 8,
+              "selected_mean_gain": 0.08982846421870813
+            },
+            "top_0.010": {
+              "population_gain_before_tool_cost": 0.0008214276064055378,
+              "precision": 1,
+              "selected_count": 16,
+              "selected_mean_gain": 0.08198874296435274
+            },
+            "top_0.020": {
+              "population_gain_before_tool_cost": 0.0013647607489719995,
+              "precision": 0.96875,
+              "selected_count": 32,
+              "selected_mean_gain": 0.06811009112838384
+            },
+            "top_0.050": {
+              "population_gain_before_tool_cost": 0.002340726304866387,
+              "precision": 0.8875,
+              "selected_count": 80,
+              "selected_mean_gain": 0.04672674886089523
+            },
+            "top_0.100": {
+              "population_gain_before_tool_cost": 0.0015678687273293038,
+              "precision": 0.6375,
+              "selected_count": 160,
+              "selected_mean_gain": 0.015649289734655607
+            }
+          },
+          "worthy_fraction": 0.08829054477144646
+        }
+      }
+    }
+  ]
+}

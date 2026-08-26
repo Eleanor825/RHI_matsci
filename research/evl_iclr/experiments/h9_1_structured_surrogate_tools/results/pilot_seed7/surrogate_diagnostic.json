@@ -1,0 +1,88 @@
+{
+  "audit": {
+    "audited_records": 3,
+    "mutations": "nontraining labels and hidden task-native margins",
+    "passed": true,
+    "task_passes": {
+      "discover_unique": true,
+      "extreme_properties": true,
+      "matbench_pairwise": true
+    }
+  },
+  "environment_kind": "structured",
+  "experiment": "h9_train_only_surrogate_diagnostic",
+  "replicas": [
+    101,
+    211,
+    307
+  ],
+  "seed": 7,
+  "tasks": {
+    "discover_unique": {
+      "screening": {
+        "base_worthy_rate": 0.10070671378091872,
+        "external_replica_variance_mean": 2.4792142736430666e-05,
+        "margin_mae": 0.05138281286186469,
+        "margin_pearson": 0.4287070610275027,
+        "margin_sign_accuracy": 0.8992932862190812,
+        "n": 1698,
+        "top10_worthy_rate": 0.3764705882352941,
+        "worthiness_auc": 0.7924034053700065
+      },
+      "verification": {
+        "base_worthy_rate": 0.10070671378091872,
+        "external_replica_variance_mean": 9.411356965109691e-05,
+        "margin_mae": 0.02869814049867512,
+        "margin_pearson": 0.8383049545343892,
+        "margin_sign_accuracy": 0.9193168433451119,
+        "n": 1698,
+        "top10_worthy_rate": 0.6647058823529411,
+        "worthiness_auc": 0.9281471524259239
+      }
+    },
+    "extreme_properties": {
+      "screening": {
+        "base_worthy_rate": 0.11,
+        "external_replica_variance_mean": 1.377386566929318,
+        "margin_mae": 13.078211126556285,
+        "margin_pearson": -0.19257307879587568,
+        "margin_sign_accuracy": 0.755,
+        "n": 200,
+        "top10_worthy_rate": 0.25,
+        "worthiness_auc": 0.5993360572012257
+      },
+      "verification": {
+        "base_worthy_rate": 0.11,
+        "external_replica_variance_mean": 2.355867546369995,
+        "margin_mae": 13.285120143504546,
+        "margin_pearson": 0.3219689895620002,
+        "margin_sign_accuracy": 0.755,
+        "n": 200,
+        "top10_worthy_rate": 0.1,
+        "worthiness_auc": 0.4558222676200204
+      }
+    },
+    "matbench_pairwise": {
+      "screening": {
+        "base_worthy_rate": 0.10781893004115227,
+        "external_replica_variance_mean": 0.0001973871906664959,
+        "margin_mae": 0.11922324387413298,
+        "margin_pearson": 0.46350442007298287,
+        "margin_sign_accuracy": 0.6674897119341564,
+        "n": 1215,
+        "top10_worthy_rate": 0.4098360655737705,
+        "worthiness_auc": 0.7759358891298838
+      },
+      "verification": {
+        "base_worthy_rate": 0.10781893004115227,
+        "external_replica_variance_mean": 0.0006722663334879751,
+        "margin_mae": 0.09337043426740503,
+        "margin_pearson": 0.7342710168375348,
+        "margin_sign_accuracy": 0.7909465020576132,
+        "n": 1215,
+        "top10_worthy_rate": 0.5081967213114754,
+        "worthiness_auc": 0.8953339342553732
+      }
+    }
+  }
+}

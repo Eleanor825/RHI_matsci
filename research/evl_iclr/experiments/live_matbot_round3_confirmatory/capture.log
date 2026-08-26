@@ -1,0 +1,38 @@
+{
+  "adaptive_data": "/Users/huan/Desktop/harness_matsci/research/evl_iclr/data/adaptive_evidence_h5_round2_fit_acceptance_20769.jsonl",
+  "adaptive_data_sha256": "436e43c503bbebad475cc656be8be24da960e5e3c947755a961273dda259d228",
+  "claim_boundary": "Scientific tools were executed live over historical benchmark candidates; terminal outcomes are historical held-out outcomes, not new wet-lab measurements.",
+  "counts": {
+    "discover_unique": 332,
+    "extreme_properties": 199,
+    "matbench_pairwise": 280
+  },
+  "created_at": "2026-08-23T07:21:59.343641+00:00",
+  "evaluation_sequential_data": "/Users/huan/Desktop/harness_matsci/research/evl_iclr/data/round3_live_tool/sequential_fresh_6000.jsonl",
+  "evaluation_sequential_data_sha256": "72ac8648ee5ef93b300a735679e526f40ea70ef820d23ef0fae0fed036a7bac4",
+  "events_sha256": "c6f1d716e3d85b7300bb9e026cb32a540c6fbc1fdf09dd5e42435c2d13b75e06",
+  "raw_data_dirs": [
+    "/Users/huan/matsci_uncertainty/data/raw/material_discovery_tasks_full",
+    "/Users/huan/matsci_uncertainty/data/raw/material_discovery_tasks_round2_pool"
+  ],
+  "requested_counts": {
+    "discover_unique": 332,
+    "extreme_properties": 199,
+    "matbench_pairwise": 280
+  },
+  "schema_version": "live-matbot-scientific-tools-v1",
+  "seed": 1729,
+  "split": "test",
+  "trajectories_sha256": "bff6c5d105302efe3a0ac83efd955075bba27476d2015bbbb29900b28e1531f6",
+  "trajectory_summary": {
+    "capture_modes": {
+      "live_runtime": 811,
+      "offline_replay": 0,
+      "synthetic_smoke": 0
+    },
+    "complete_count": 811,
+    "live_runtime_count": 811,
+    "step_count": 1622,
+    "trajectory_count": 811
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "candidates": [
+    {
+      "acquisition_head": "source_voi_expected",
+      "certification_rate": 0.6,
+      "contract_family": "joint",
+      "fold_certified": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "fold_deployed_gains": [
+        0.0009115581067439004,
+        0.0005488312458568737,
+        0.0016597022415729627,
+        0.0,
+        0.0
+      ],
+      "mean_deployed_gain": 0.0006240183188347473,
+      "name": "joint_expected",
+      "worst_deployed_gain": 0.0
+    },
+    {
+      "acquisition_head": "source_voi_probability",
+      "certification_rate": 0.6,
+      "contract_family": "joint",
+      "fold_certified": [
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "fold_deployed_gains": [
+        0.0,
+        0.0008078789601368285,
+        0.002038072268719177,
+        0.0,
+        0.001981334403456417
+      ],
+      "mean_deployed_gain": 0.0009654571264624846,
+      "name": "joint_probability",
+      "worst_deployed_gain": 0.0
+    },
+    {
+      "acquisition_head": "source_voi_expected",
+      "certification_rate": 1.0,
+      "contract_family": "verify_before_execute",
+      "fold_certified": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fold_deployed_gains": [
+        0.0010167485815853069,
+        0.0008078789601368285,
+        0.0018490482636682592,
+        0.0011979222735385615,
+        0.001675308896372203
+      ],
+      "mean_deployed_gain": 0.0013093813950602318,
+      "name": "verify_expected",
+      "worst_deployed_gain": 0.0008078789601368285
+    },
+    {
+      "acquisition_head": "source_voi_probability",
+      "certification_rate": 1.0,
+      "contract_family": "verify_before_execute",
+      "fold_certified": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "fold_deployed_gains": [
+        0.0010476358230060599,
+        0.0008078789601368285,
+        0.0018505492502193842,
+        0.0009705451791779831,
+        0.0017427713658513828
+      ],
+      "mean_deployed_gain": 0.0012838761156783276,
+      "name": "verify_probability",
+      "worst_deployed_gain": 0.0008078789601368285
+    }
+  ],
+  "required_certification_rate": 1.0,
+  "selected": {
+    "acquisition_head": "source_voi_expected",
+    "certification_rate": 1.0,
+    "contract_family": "verify_before_execute",
+    "fold_certified": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "fold_deployed_gains": [
+      0.0010167485815853069,
+      0.0008078789601368285,
+      0.0018490482636682592,
+      0.0011979222735385615,
+      0.001675308896372203
+    ],
+    "mean_deployed_gain": 0.0013093813950602318,
+    "name": "verify_expected",
+    "worst_deployed_gain": 0.0008078789601368285
+  },
+  "trace": [
+    {
+      "accepted": false,
+      "candidate": "joint_expected",
+      "certification_rate": 0.6,
+      "cycle": 0,
+      "feasible": false,
+      "incumbent_after_cycle": null,
+      "mean_deployed_gain": 0.0006240183188347473
+    },
+    {
+      "accepted": false,
+      "candidate": "joint_probability",
+      "certification_rate": 0.6,
+      "cycle": 1,
+      "feasible": false,
+      "incumbent_after_cycle": null,
+      "mean_deployed_gain": 0.0009654571264624846
+    },
+    {
+      "accepted": true,
+      "candidate": "verify_expected",
+      "certification_rate": 1.0,
+      "cycle": 2,
+      "feasible": true,
+      "incumbent_after_cycle": "verify_expected",
+      "mean_deployed_gain": 0.0013093813950602318
+    },
+    {
+      "accepted": false,
+      "candidate": "verify_probability",
+      "certification_rate": 1.0,
+      "cycle": 3,
+      "feasible": true,
+      "incumbent_after_cycle": "verify_expected",
+      "mean_deployed_gain": 0.0012838761156783276
+    }
+  ]
+}

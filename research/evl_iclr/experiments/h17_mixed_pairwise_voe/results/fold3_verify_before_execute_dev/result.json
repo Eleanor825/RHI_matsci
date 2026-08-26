@@ -1,0 +1,353 @@
+{
+  "base_execution_coverages": [
+    0.0
+  ],
+  "base_sources": [
+    "agent_prior",
+    "composition",
+    "structure"
+  ],
+  "consumed_folds_reused_for_contract_diagnosis": true,
+  "cross_fitted_provisional_execution_thresholds": [
+    {
+      "base": {
+        "population_gain": 0.0,
+        "selective_risk": 0.0,
+        "target_coverage": 0.0,
+        "threshold": Infinity
+      },
+      "fold": 0,
+      "held_count": 325,
+      "tool": {
+        "population_gain": 0.006764214003335315,
+        "selective_risk": 0.0,
+        "target_coverage": 0.1,
+        "threshold": 0.027634886869077502
+      },
+      "train_count": 1227
+    },
+    {
+      "base": {
+        "population_gain": 0.0,
+        "selective_risk": 0.0,
+        "target_coverage": 0.0,
+        "threshold": Infinity
+      },
+      "fold": 1,
+      "held_count": 312,
+      "tool": {
+        "population_gain": 0.006408178988278295,
+        "selective_risk": 0.0,
+        "target_coverage": 0.1,
+        "threshold": 0.019319280603364852
+      },
+      "train_count": 1240
+    },
+    {
+      "base": {
+        "population_gain": 0.0,
+        "selective_risk": 0.0,
+        "target_coverage": 0.0,
+        "threshold": Infinity
+      },
+      "fold": 2,
+      "held_count": 317,
+      "tool": {
+        "population_gain": 0.006745592243256335,
+        "selective_risk": 0.0,
+        "target_coverage": 0.1,
+        "threshold": 0.024540707793463512
+      },
+      "train_count": 1235
+    },
+    {
+      "base": {
+        "population_gain": 0.0,
+        "selective_risk": 0.0,
+        "target_coverage": 0.0,
+        "threshold": Infinity
+      },
+      "fold": 3,
+      "held_count": 300,
+      "tool": {
+        "population_gain": 0.006881335637491707,
+        "selective_risk": 0.0,
+        "target_coverage": 0.1,
+        "threshold": 0.030052214271900968
+      },
+      "train_count": 1252
+    },
+    {
+      "base": {
+        "population_gain": 0.0,
+        "selective_risk": 0.0,
+        "target_coverage": 0.0,
+        "threshold": Infinity
+      },
+      "fold": 4,
+      "held_count": 298,
+      "tool": {
+        "population_gain": 0.006531240814541401,
+        "selective_risk": 0.0,
+        "target_coverage": 0.1,
+        "threshold": 0.02115644942951067
+      },
+      "train_count": 1254
+    }
+  ],
+  "crossfit_folds": 5,
+  "development_only": true,
+  "evidence_value_model_family": "regularized_linear",
+  "evidence_value_target_mode": "cross_fitted_policy_conditioned",
+  "experiment": "h17_verify_before_execute_development",
+  "feedback_realized_voe": {
+    "count": 1552,
+    "mean": -0.013364236912040958,
+    "positive_fraction": 0.09858247422680412
+  },
+  "gain_projector": {
+    "config": {
+      "cost_weight": 0.15,
+      "failure_harm_weight": 0.25,
+      "utility_mode": "continuous_realized",
+      "worthiness_margin": 0.0
+    },
+    "normalizer": {
+      "external_pairwise_mixed_log_kvrh": {
+        "count": 5170,
+        "maximum": 0.9959388899632566,
+        "minimum": 0.0
+      }
+    },
+    "reservations": {
+      "budget_fraction": 0.1,
+      "outside_option": 0.0,
+      "strategy": "potential_success_slot_value",
+      "values_by_task": {
+        "external_pairwise_mixed_log_kvrh": 0.8474419841423323
+      }
+    },
+    "type": "train_only_scientific_utility_to_gain_projector"
+  },
+  "policies": {
+    "external_variance": {
+      "acceptance_certificate": {
+        "acquired_count": 0,
+        "acquisition_coverage": 0.0,
+        "alpha": 0.2,
+        "certified": false,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 0,
+        "execution_coverage": 0.0,
+        "population_gain_after_cost": 0.0,
+        "risk_upper_bound": 0.0,
+        "selective_risk": 0.0
+      },
+      "deployed": false,
+      "deployed_test_population_gain": 0.0,
+      "feedback_policy": {
+        "acquisition_threshold": Infinity,
+        "base_execution_threshold": Infinity,
+        "feedback_population_gain": 0.0,
+        "feedback_selective_risk": 0.0,
+        "target_acquisition_coverage": 0.0,
+        "target_base_execution_coverage": 0.0,
+        "target_tool_execution_coverage": 0.0,
+        "tool_execution_threshold": Infinity
+      },
+      "test_evaluation": {
+        "acquired_count": 0,
+        "acquisition_coverage": 0.0,
+        "alpha": 0.2,
+        "certified": false,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 0,
+        "execution_coverage": 0.0,
+        "population_gain_after_cost": 0.0,
+        "risk_upper_bound": 0.0,
+        "selective_risk": 0.0
+      }
+    },
+    "no_source_voi_expected": {
+      "acceptance_certificate": {
+        "acquired_count": 239,
+        "acquisition_coverage": 0.1155705996131528,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 106,
+        "execution_coverage": 0.05125725338491296,
+        "population_gain_after_cost": 0.0008624781037829224,
+        "risk_upper_bound": 0.027866001245290182,
+        "selective_risk": 0.0
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0008309356643660701,
+      "feedback_policy": {
+        "acquisition_threshold": 0.0045820080736609994,
+        "base_execution_threshold": Infinity,
+        "feedback_population_gain": 0.0026335137274291383,
+        "feedback_selective_risk": 0.0,
+        "target_acquisition_coverage": 0.1,
+        "target_base_execution_coverage": 0.0,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.023863856120672933
+      },
+      "test_evaluation": {
+        "acquired_count": 220,
+        "acquisition_coverage": 0.10013654984069185,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 96,
+        "execution_coverage": 0.04369594902139281,
+        "population_gain_after_cost": 0.0008309356643660701,
+        "risk_upper_bound": 0.030723676833532842,
+        "selective_risk": 0.0
+      }
+    },
+    "no_source_voi_probability": {
+      "acceptance_certificate": {
+        "acquired_count": 236,
+        "acquisition_coverage": 0.11411992263056092,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 105,
+        "execution_coverage": 0.05077369439071567,
+        "population_gain_after_cost": 0.0008886020721872844,
+        "risk_upper_bound": 0.02812762400367641,
+        "selective_risk": 0.0
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0008673489552172307,
+      "feedback_policy": {
+        "acquisition_threshold": 0.8177131775397177,
+        "base_execution_threshold": Infinity,
+        "feedback_population_gain": 0.002668141319452058,
+        "feedback_selective_risk": 0.0,
+        "target_acquisition_coverage": 0.1,
+        "target_base_execution_coverage": 0.0,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.023863856120672933
+      },
+      "test_evaluation": {
+        "acquired_count": 216,
+        "acquisition_coverage": 0.09831588529813381,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 96,
+        "execution_coverage": 0.04369594902139281,
+        "population_gain_after_cost": 0.0008673489552172307,
+        "risk_upper_bound": 0.030723676833532842,
+        "selective_risk": 0.0
+      }
+    },
+    "source_voi_expected": {
+      "acceptance_certificate": {
+        "acquired_count": 177,
+        "acquisition_coverage": 0.08558994197292069,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 87,
+        "execution_coverage": 0.04206963249516441,
+        "population_gain_after_cost": 0.0009975061784457044,
+        "risk_upper_bound": 0.033847610681619594,
+        "selective_risk": 0.0
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0011979222735385615,
+      "feedback_policy": {
+        "acquisition_threshold": 0.003785213983342181,
+        "base_execution_threshold": Infinity,
+        "feedback_population_gain": 0.002555424083957517,
+        "feedback_selective_risk": 0.0,
+        "target_acquisition_coverage": 0.1,
+        "target_base_execution_coverage": 0.0,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.023863856120672933
+      },
+      "test_evaluation": {
+        "acquired_count": 164,
+        "acquisition_coverage": 0.07464724624487938,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 89,
+        "execution_coverage": 0.04050978607191625,
+        "population_gain_after_cost": 0.0011979222735385615,
+        "risk_upper_bound": 0.03309972123627415,
+        "selective_risk": 0.0
+      }
+    },
+    "source_voi_probability": {
+      "acceptance_certificate": {
+        "acquired_count": 193,
+        "acquisition_coverage": 0.09332688588007737,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 91,
+        "execution_coverage": 0.044003868471953575,
+        "population_gain_after_cost": 0.0009711241124153536,
+        "risk_upper_bound": 0.03238416473643445,
+        "selective_risk": 0.0
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0009705451791779831,
+      "feedback_policy": {
+        "acquisition_threshold": 0.8242731822458242,
+        "base_execution_threshold": Infinity,
+        "feedback_population_gain": 0.0026554441203619694,
+        "feedback_selective_risk": 0.0,
+        "target_acquisition_coverage": 0.1,
+        "target_base_execution_coverage": 0.0,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.023863856120672933
+      },
+      "test_evaluation": {
+        "acquired_count": 177,
+        "acquisition_coverage": 0.08056440600819299,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 86,
+        "execution_coverage": 0.03914428766499772,
+        "population_gain_after_cost": 0.0009705451791779831,
+        "risk_upper_bound": 0.03423437284912021,
+        "selective_risk": 0.0
+      }
+    }
+  },
+  "task": "external_pairwise_mixed_log_kvrh",
+  "tool_cost": 0.02,
+  "tool_decision_mode": "direct_high_fidelity_gain",
+  "tool_execution_coverages": [
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    1.0
+  ],
+  "tool_sources": [
+    "agent_prior",
+    "composition",
+    "structure",
+    "high_fidelity"
+  ]
+}

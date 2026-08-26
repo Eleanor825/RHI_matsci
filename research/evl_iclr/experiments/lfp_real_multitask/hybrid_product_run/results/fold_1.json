@@ -1,0 +1,4791 @@
+{
+  "evaluation": {
+    "calibrator": {
+      "parameters_by_task": {
+        "lfp_real_hybrid_product_gain": {
+          "base_variance": 0.16554302531076853,
+          "external_weight": 0.6557560618260059,
+          "interaction_weight": 4.291039466070183e-05,
+          "internal_weight": 2.394151194568443e-06,
+          "mean_bias": 0.08473526207712131,
+          "mean_slope": 0.8121897555205413
+        }
+      },
+      "type": "continuous_source_decomposed_gaussian_gain_calibrator",
+      "uses_source_variance": true
+    },
+    "certificate": {
+      "alpha": 0.1,
+      "certified": false,
+      "delta": 0.05,
+      "empirical_risk": 0.0,
+      "errors": 0,
+      "policy": "lower_gain_bound > 0",
+      "risk_upper_bound": 0.0,
+      "selected_count": 0
+    },
+    "component_ablation_metrics": {
+      "full": {
+        "accuracy_at_threshold": 0.7,
+        "aurc": 0.23737540697021103,
+        "brier": 0.21634494870822898,
+        "confidently_wrong_rate": 0.3,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.24,
+        "ece": 0.0964359826990413,
+        "log_loss": 0.6248204275296498,
+        "n": 50.0,
+        "selective_accuracy": 0.7,
+        "selective_risk": 0.30000000000000004
+      },
+      "internal_external": {
+        "accuracy_at_threshold": 0.7,
+        "aurc": 0.23737540697021103,
+        "brier": 0.2163467755081653,
+        "confidently_wrong_rate": 0.3,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.24,
+        "ece": 0.0964396137358756,
+        "log_loss": 0.6248242654519433,
+        "n": 50.0,
+        "selective_accuracy": 0.7,
+        "selective_risk": 0.30000000000000004
+      },
+      "internal_only": {
+        "accuracy_at_threshold": 0.7,
+        "aurc": 0.23651826411306814,
+        "brier": 0.21655033793997802,
+        "confidently_wrong_rate": 0.3,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.24,
+        "ece": 0.09699702781662292,
+        "log_loss": 0.6252507932917267,
+        "n": 50.0,
+        "selective_accuracy": 0.7,
+        "selective_risk": 0.30000000000000004
+      },
+      "mean_only": {
+        "accuracy_at_threshold": 0.7,
+        "aurc": 0.23651826411306814,
+        "brier": 0.2165500311960737,
+        "confidently_wrong_rate": 0.3,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.24,
+        "ece": 0.09699642383837345,
+        "log_loss": 0.6252501491523721,
+        "n": 50.0,
+        "selective_accuracy": 0.7,
+        "selective_risk": 0.30000000000000004
+      }
+    },
+    "conformal": {
+      "alpha": 0.1,
+      "calibration_count": 44,
+      "guarantee": "marginal_lower_gain_coverage_under_exchangeability",
+      "minimum_scale": 1e-06,
+      "normalized_radius": 0.9832076097857868,
+      "type": "one_sided_normalized_split_conformal_gain"
+    },
+    "deployed": {
+      "coverage": 0.0,
+      "population_net_gain": 0.0,
+      "selected_count": 0,
+      "selected_mean_net_gain": 0.0,
+      "selective_risk": 0.0
+    },
+    "direct_llm_ensemble_metrics": {
+      "accuracy_at_threshold": 0.7,
+      "aurc": 0.2617227106822688,
+      "brier": 0.2202113333333333,
+      "confidently_wrong_rate": 0.3,
+      "coverage": 1.0,
+      "coverage_at_risk_0.05": 0.0,
+      "coverage_at_risk_0.10": 0.0,
+      "ece": 0.14220000000000008,
+      "log_loss": 0.6332047510677898,
+      "n": 50.0,
+      "selective_accuracy": 0.7,
+      "selective_risk": 0.30000000000000004
+    },
+    "direct_llm_model_metrics": {
+      "gpt-5.6-luna": {
+        "accuracy_at_threshold": 0.74,
+        "aurc": 0.23541216014393704,
+        "brier": 0.206974,
+        "confidently_wrong_rate": 0.26,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.1378,
+        "log_loss": 0.6062123329539949,
+        "n": 50.0,
+        "selective_accuracy": 0.74,
+        "selective_risk": 0.26
+      },
+      "gpt-5.6-sol": {
+        "accuracy_at_threshold": 0.7,
+        "aurc": 0.2988822092877715,
+        "brier": 0.22065599999999996,
+        "confidently_wrong_rate": 0.3,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.11319999999999994,
+        "log_loss": 0.6347123971609334,
+        "n": 50.0,
+        "selective_accuracy": 0.7,
+        "selective_risk": 0.30000000000000004
+      },
+      "gpt-5.6-terra": {
+        "accuracy_at_threshold": 0.56,
+        "aurc": 0.367442575872403,
+        "brier": 0.2411079999999999,
+        "confidently_wrong_rate": 0.44,
+        "coverage": 1.0,
+        "coverage_at_risk_0.05": 0.02,
+        "coverage_at_risk_0.10": 0.02,
+        "ece": 0.04200000000000017,
+        "log_loss": 0.6749245370763226,
+        "n": 50.0,
+        "selective_accuracy": 0.56,
+        "selective_risk": 0.43999999999999995
+      }
+    },
+    "hybrid_metrics": {
+      "accuracy_at_threshold": 0.7,
+      "aurc": 0.23737540697021103,
+      "brier": 0.21634494870822898,
+      "confidently_wrong_rate": 0.3,
+      "coverage": 1.0,
+      "coverage_at_risk_0.05": 0.0,
+      "coverage_at_risk_0.10": 0.24,
+      "ece": 0.0964359826990413,
+      "log_loss": 0.6248204275296498,
+      "n": 50.0,
+      "selective_accuracy": 0.7,
+      "selective_risk": 0.30000000000000004
+    },
+    "test_conformal_coverage": 0.88,
+    "test_rows": [
+      {
+        "action_worthiness": 0.5883600386148635,
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.09089413738781263,
+        "calibrated_variance": 0.16564709456955448,
+        "external_variance": 0.00015870102027512224,
+        "interaction_variance": 2.159197554763548e-06,
+        "internal_variance": 4.206307999964678e-06,
+        "lower_gain_bound": -0.30926905827276496,
+        "mean_success_probability": 0.57,
+        "mean_value_magnitude": 0.1255932123956852,
+        "model_probabilities_a": [
+          0.57,
+          0.56,
+          0.58
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.007583049735395924,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA01::AEA08",
+        "success_probabilities": [
+          0.57,
+          0.56,
+          0.58
+        ]
+      },
+      {
+        "action_worthiness": 0.5985890205160599,
+        "actual_net_gain": 0.21500000000000008,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.1016699128215232,
+        "calibrated_variance": 0.1657904518880658,
+        "external_variance": 0.00037731440441577237,
+        "interaction_variance": 7.5462880883154216e-06,
+        "internal_variance": 1.903520108531341e-05,
+        "lower_gain_bound": -0.29866640364284036,
+        "mean_success_probability": 0.6333333333333333,
+        "mean_value_magnitude": 0.1156897824490609,
+        "model_probabilities_a": [
+          0.38,
+          0.34,
+          0.38
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.0208506086530829,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA01::AEA15",
+        "success_probabilities": [
+          0.62,
+          0.6599999999999999,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6030988798027969,
+        "actual_net_gain": 0.4650000000000001,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.10644738523746596,
+        "calibrated_variance": 0.1658582925469379,
+        "external_variance": 0.0004807673539573222,
+        "interaction_variance": 2.2758217938808098e-05,
+        "internal_variance": 6.387219508871592e-05,
+        "lower_gain_bound": -0.2939708307011951,
+        "mean_success_probability": 0.63,
+        "mean_value_magnitude": 0.1412800798599143,
+        "model_probabilities_a": [
+          0.41,
+          0.35,
+          0.35
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.026732820763577726,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA08::AEA11",
+        "success_probabilities": [
+          0.5900000000000001,
+          0.65,
+          0.65
+        ]
+      },
+      {
+        "action_worthiness": 0.6016078953099466,
+        "actual_net_gain": -0.059999999999999935,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.10488334813362098,
+        "calibrated_variance": 0.16589030675461172,
+        "external_variance": 0.0005295870157778364,
+        "interaction_variance": 3.1991378912293725e-05,
+        "internal_variance": 7.318662665725094e-05,
+        "lower_gain_bound": -0.2955735105921909,
+        "mean_success_probability": 0.6166666666666667,
+        "mean_value_magnitude": 0.14917335733192333,
+        "model_probabilities_a": [
+          0.42,
+          0.38,
+          0.35
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.024807116710782118,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA08::AEA17",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.62,
+          0.65
+        ]
+      },
+      {
+        "action_worthiness": 0.5941834051753735,
+        "actual_net_gain": 0.21500000000000008,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.09703613946357684,
+        "calibrated_variance": 0.16578580859735403,
+        "external_variance": 0.0003702333183762667,
+        "interaction_variance": 1.1569791199258359e-05,
+        "internal_variance": 1.975897947468564e-05,
+        "lower_gain_bound": -0.3032945708549134,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.11786870849864402,
+        "model_probabilities_a": [
+          0.62,
+          0.58,
+          0.62
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.015145324479710719,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA11::AEA01",
+        "success_probabilities": [
+          0.62,
+          0.58,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6084147159071573,
+        "actual_net_gain": 0.4650000000000001,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.11212188519782271,
+        "calibrated_variance": 0.1660032971220174,
+        "external_variance": 0.0007018908438213092,
+        "interaction_variance": 5.332114518438004e-05,
+        "internal_variance": 0.00014520448660671202,
+        "lower_gain_bound": -0.2884713288894708,
+        "mean_success_probability": 0.6233333333333334,
+        "mean_value_magnitude": 0.17724116959264133,
+        "model_probabilities_a": [
+          0.61,
+          0.67,
+          0.59
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.033719488499518196,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA15::AEA08",
+        "success_probabilities": [
+          0.61,
+          0.67,
+          0.59
+        ]
+      },
+      {
+        "action_worthiness": 0.595778498549293,
+        "actual_net_gain": -0.01,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.09867551254479547,
+        "calibrated_variance": 0.16566379925625344,
+        "external_variance": 0.00018417340490935465,
+        "interaction_variance": 2.1309319576288923e-05,
+        "internal_variance": 8.537353003438056e-05,
+        "lower_gain_bound": -0.3015078598424269,
+        "mean_success_probability": 0.5733333333333334,
+        "mean_value_magnitude": 0.18520762604697605,
+        "model_probabilities_a": [
+          0.42,
+          0.46,
+          0.4
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.017163785153556495,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA15::AEA11",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.54,
+          0.6
+        ]
+      },
+      {
+        "action_worthiness": 0.6107174400757452,
+        "actual_net_gain": -0.30999999999999994,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.11493745928660608,
+        "calibrated_variance": 0.16708029632083365,
+        "external_variance": 0.002344269433516006,
+        "interaction_variance": 4.68853886703202e-05,
+        "internal_variance": 4.453062513308315e-05,
+        "lower_gain_bound": -0.2869531418562052,
+        "mean_success_probability": 0.6333333333333333,
+        "mean_value_magnitude": 0.1769480030876275,
+        "model_probabilities_a": [
+          0.66,
+          0.62,
+          0.62
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.03718613415670067,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA17::AEA01",
+        "success_probabilities": [
+          0.66,
+          0.62,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6223179292383392,
+        "actual_net_gain": 0.515,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.12747155746406003,
+        "calibrated_variance": 0.16738001292130494,
+        "external_variance": 0.0028013196186004326,
+        "interaction_variance": 0.00011433957626940531,
+        "internal_variance": 0.00016004449898265248,
+        "lower_gain_bound": -0.27477934742812343,
+        "mean_success_probability": 0.6399999999999999,
+        "mean_value_magnitude": 0.22363789019770106,
+        "model_probabilities_a": [
+          0.34,
+          0.4,
+          0.34
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.05261860925535627,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA17::AEA11",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.6,
+          0.6599999999999999
+        ]
+      },
+      {
+        "action_worthiness": 0.6183326367635495,
+        "actual_net_gain": 0.515,
+        "benchmark": "lfp_real_pair_conductivity",
+        "calibrated_mean_gain": 0.1228650855188117,
+        "calibrated_variance": 0.16650304015438866,
+        "external_variance": 0.0014639578749965827,
+        "interaction_variance": 0.00032340943549041714,
+        "internal_variance": 0.0007164153557541873,
+        "lower_gain_bound": -0.27833065643873983,
+        "mean_success_probability": 0.6566666666666666,
+        "mean_value_magnitude": 0.18174555209379833,
+        "model_probabilities_a": [
+          0.25,
+          0.35,
+          0.43
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.04694693965605682,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA17::AEA15",
+        "success_probabilities": [
+          0.75,
+          0.65,
+          0.5700000000000001
+        ]
+      },
+      {
+        "action_worthiness": 0.5973679226017183,
+        "actual_net_gain": 0.59,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.1004006391105609,
+        "calibrated_variance": 0.16584323636273876,
+        "external_variance": 0.0004578080041840386,
+        "interaction_variance": 1.4306500130751237e-05,
+        "internal_variance": 2.6805528790254383e-05,
+        "lower_gain_bound": -0.2999994019537887,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.1372866979377375,
+        "model_probabilities_a": [
+          0.62,
+          0.62,
+          0.58
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.019287828893384,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA01::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.62,
+          0.58
+        ]
+      },
+      {
+        "action_worthiness": 0.5982256188825864,
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.10125370974036367,
+        "calibrated_variance": 0.16568046340946152,
+        "external_variance": 0.0002095338846876969,
+        "interaction_variance": 0.0006547933896490532,
+        "internal_variance": 0.0028762629260824014,
+        "lower_gain_bound": -0.29894978940166356,
+        "mean_success_probability": 0.5533333333333333,
+        "mean_value_magnitude": 0.28442027845438084,
+        "model_probabilities_a": [
+          0.62,
+          0.62,
+          0.42
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.02033816303513395,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA11::AEA01",
+        "success_probabilities": [
+          0.62,
+          0.62,
+          0.42
+        ]
+      },
+      {
+        "action_worthiness": 0.6036868382573707,
+        "actual_net_gain": 0.94,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.107149337051438,
+        "calibrated_variance": 0.16610858988416588,
+        "external_variance": 0.000862461522442525,
+        "interaction_variance": 4.312307612212538e-06,
+        "internal_variance": 7.067706435119138e-06,
+        "lower_gain_bound": -0.29357090125897267,
+        "mean_success_probability": 0.5666666666666665,
+        "mean_value_magnitude": 0.28197818602702573,
+        "model_probabilities_a": [
+          0.56,
+          0.57,
+          0.57
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.02759709147027009,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA11::AEA08",
+        "success_probabilities": [
+          0.56,
+          0.57,
+          0.57
+        ]
+      },
+      {
+        "action_worthiness": 0.6075399460696783,
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.11116690680627647,
+        "calibrated_variance": 0.1659214969446294,
+        "external_variance": 0.0005771526625335368,
+        "interaction_variance": 5.490156123981338e-06,
+        "internal_variance": 1.7217263604322515e-05,
+        "lower_gain_bound": -0.28932759648936845,
+        "mean_success_probability": 0.5966666666666667,
+        "mean_value_magnitude": 0.22005352505051354,
+        "model_probabilities_a": [
+          0.61,
+          0.59,
+          0.59
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.032543681509765936,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA15::AEA01",
+        "success_probabilities": [
+          0.61,
+          0.59,
+          0.59
+        ]
+      },
+      {
+        "action_worthiness": 0.5798657379465189,
+        "actual_net_gain": -0.86,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.08200866118805114,
+        "calibrated_variance": 0.16555937079365377,
+        "external_variance": 2.4891036945398685e-05,
+        "interaction_variance": 0.0004884866000534455,
+        "internal_variance": 0.0008660147929600762,
+        "lower_gain_bound": -0.31804856075951393,
+        "mean_success_probability": 0.5133333333333333,
+        "mean_value_magnitude": 0.2491088118322785,
+        "model_probabilities_a": [
+          0.44,
+          0.57,
+          0.45
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": -0.003357098351139215,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA15::AEA08",
+        "success_probabilities": [
+          0.56,
+          0.43000000000000005,
+          0.55
+        ]
+      },
+      {
+        "action_worthiness": 0.5806304639078718,
+        "actual_net_gain": -0.10999999999999997,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.08280705888047638,
+        "calibrated_variance": 0.16556847109341905,
+        "external_variance": 3.879261454323989e-05,
+        "interaction_variance": 0.00015678681711226138,
+        "internal_variance": 0.0002350417536380433,
+        "lower_gain_bound": -0.3172611578860415,
+        "mean_success_probability": 0.54,
+        "mean_value_magnitude": 0.09532400397292126,
+        "model_probabilities_a": [
+          0.57,
+          0.43,
+          0.62
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": -0.002374079682166303,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA15::AEA11",
+        "success_probabilities": [
+          0.57,
+          0.43,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6228916928584586,
+        "actual_net_gain": 0.29000000000000004,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.12784773838890628,
+        "calibrated_variance": 0.16674910473835095,
+        "external_variance": 0.0018392171806686523,
+        "interaction_variance": 3.352739652260554e-05,
+        "internal_variance": 7.253951829739825e-05,
+        "lower_gain_bound": -0.27364434535643417,
+        "mean_success_probability": 0.66,
+        "mean_value_magnitude": 0.19713055630913534,
+        "model_probabilities_a": [
+          0.64,
+          0.65,
+          0.69
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.05308177801892331,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA01",
+        "success_probabilities": [
+          0.64,
+          0.65,
+          0.69
+        ]
+      },
+      {
+        "action_worthiness": 0.6082498837296596,
+        "actual_net_gain": 0.89,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.11208109859992305,
+        "calibrated_variance": 0.16640106564416784,
+        "external_variance": 0.0013084654110631217,
+        "interaction_variance": 0.00013380264607779874,
+        "internal_variance": 0.0001950088531565674,
+        "lower_gain_bound": -0.2889917687084585,
+        "mean_success_probability": 0.5966666666666667,
+        "mean_value_magnitude": 0.22587553673049213,
+        "model_probabilities_a": [
+          0.58,
+          0.64,
+          0.57
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.0336692704345618,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA08",
+        "success_probabilities": [
+          0.58,
+          0.64,
+          0.57
+        ]
+      },
+      {
+        "action_worthiness": 0.5863498501582871,
+        "actual_net_gain": -0.059999999999999935,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.08879499930493012,
+        "calibrated_variance": 0.16565538530182555,
+        "external_variance": 0.00017134339410579085,
+        "interaction_variance": 1.1328488866498519e-05,
+        "internal_variance": 1.4873074445697343e-05,
+        "lower_gain_bound": -0.3113782104292933,
+        "mean_success_probability": 0.5733333333333334,
+        "mean_value_magnitude": 0.10226255653772295,
+        "model_probabilities_a": [
+          0.56,
+          0.6,
+          0.56
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.004998508292199373,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA11",
+        "success_probabilities": [
+          0.56,
+          0.6,
+          0.56
+        ]
+      },
+      {
+        "action_worthiness": 0.5903329583689639,
+        "actual_net_gain": 0.04000000000000004,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "calibrated_mean_gain": 0.09300075974560609,
+        "calibrated_variance": 0.16579632229568117,
+        "external_variance": 0.00038626579228144667,
+        "interaction_variance": 1.8711837688374614e-05,
+        "internal_variance": 1.9721277054032168e-05,
+        "lower_gain_bound": -0.30734264433004843,
+        "mean_success_probability": 0.6133333333333333,
+        "mean_value_magnitude": 0.08901532108452324,
+        "model_probabilities_a": [
+          0.58,
+          0.64,
+          0.62
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.010176806112491934,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA15",
+        "success_probabilities": [
+          0.58,
+          0.64,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6083800034485743,
+        "actual_net_gain": -0.41000000000000003,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.11201402703300198,
+        "calibrated_variance": 0.16579293923620889,
+        "external_variance": 0.00038110536529924996,
+        "interaction_variance": 3.230824031083602e-05,
+        "internal_variance": 0.00016105566546963348,
+        "lower_gain_bound": -0.2883252925357236,
+        "mean_success_probability": 0.6133333333333334,
+        "mean_value_magnitude": 0.1922942174161813,
+        "model_probabilities_a": [
+          0.43,
+          0.35,
+          0.38
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.0335866892810011,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA01::AEA08",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.65,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6079243211718344,
+        "actual_net_gain": 0.74,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.11148149113838655,
+        "calibrated_variance": 0.165645537426037,
+        "external_variance": 0.00015628195871707253,
+        "interaction_variance": 0.0004114610944347927,
+        "internal_variance": 0.004852462026453543,
+        "lower_gain_bound": -0.28867982367727774,
+        "mean_success_probability": 0.5533333333333333,
+        "mean_value_magnitude": 0.40247821990798904,
+        "model_probabilities_a": [
+          0.35,
+          0.43,
+          0.56
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.03293101012351884,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA08::AEA15",
+        "success_probabilities": [
+          0.65,
+          0.5700000000000001,
+          0.43999999999999995
+        ]
+      },
+      {
+        "action_worthiness": 0.5823056220472435,
+        "actual_net_gain": 0.59,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.08455171485565617,
+        "calibrated_variance": 0.1655667600184763,
+        "external_variance": 3.614859996460089e-05,
+        "interaction_variance": 0.0006101883674024593,
+        "internal_variance": 0.001612567676261279,
+        "lower_gain_bound": -0.31551443464387174,
+        "mean_success_probability": 0.5166666666666667,
+        "mean_value_magnitude": 0.29322028306005193,
+        "model_probabilities_a": [
+          0.44,
+          0.43,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": -0.00022599056466490568,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA11::AEA01",
+        "success_probabilities": [
+          0.56,
+          0.5700000000000001,
+          0.42000000000000004
+        ]
+      },
+      {
+        "action_worthiness": 0.5964991397711294,
+        "actual_net_gain": -0.20999999999999996,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.09946440645189662,
+        "calibrated_variance": 0.16576900014079374,
+        "external_variance": 0.0003446009305541971,
+        "interaction_variance": 1.4065344104252974e-05,
+        "internal_variance": 3.230955046441188e-05,
+        "lower_gain_bound": -0.30084600927088656,
+        "mean_success_probability": 0.5933333333333333,
+        "mean_value_magnitude": 0.1507237627923665,
+        "model_probabilities_a": [
+          0.62,
+          0.58,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.018135102387908407,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA11::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.58,
+          0.58
+        ]
+      },
+      {
+        "action_worthiness": 0.6043957868206474,
+        "actual_net_gain": -0.96,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.10780599170994108,
+        "calibrated_variance": 0.16582155565826442,
+        "external_variance": 0.0004245313169046902,
+        "interaction_variance": 0.002759453559880486,
+        "internal_variance": 0.009587430998703943,
+        "lower_gain_bound": -0.2925678763283439,
+        "mean_success_probability": 0.54,
+        "mean_value_magnitude": 0.48006988169952786,
+        "model_probabilities_a": [
+          0.64,
+          0.4,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.028405590535962227,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA11::AEA15",
+        "success_probabilities": [
+          0.64,
+          0.4,
+          0.58
+        ]
+      },
+      {
+        "action_worthiness": 0.6133257942127692,
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.11730334005760651,
+        "calibrated_variance": 0.16589846673605632,
+        "external_variance": 0.0005420321070906373,
+        "interaction_variance": 1.0840642141812769e-05,
+        "internal_variance": 5.019839581142925e-05,
+        "lower_gain_bound": -0.2831633675871009,
+        "mean_success_probability": 0.6,
+        "mean_value_magnitude": 0.2504954984910636,
+        "model_probabilities_a": [
+          0.59,
+          0.62,
+          0.59
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.04009909969821271,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA15::AEA01",
+        "success_probabilities": [
+          0.59,
+          0.62,
+          0.59
+        ]
+      },
+      {
+        "action_worthiness": 0.6649150994331985,
+        "actual_net_gain": -0.20999999999999996,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.17418698911226893,
+        "calibrated_variance": 0.16725749977754295,
+        "external_variance": 0.0026144931187282276,
+        "interaction_variance": 8.472894366248902e-05,
+        "internal_variance": 0.00046772884153601876,
+        "lower_gain_bound": -0.22791667584623365,
+        "mean_success_probability": 0.7399999999999999,
+        "mean_value_magnitude": 0.2502843494165377,
+        "model_probabilities_a": [
+          0.22,
+          0.24,
+          0.32
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.1101364877199381,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA15::AEA17",
+        "success_probabilities": [
+          0.78,
+          0.76,
+          0.6799999999999999
+        ]
+      },
+      {
+        "action_worthiness": 0.5999783061877364,
+        "actual_net_gain": 0.14,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.10318500241836823,
+        "calibrated_variance": 0.16595632364162693,
+        "external_variance": 0.0006302611449303499,
+        "interaction_variance": 1.6274965008613746e-05,
+        "internal_variance": 2.76389261775229e-05,
+        "lower_gain_bound": -0.2973515302982309,
+        "mean_success_probability": 0.6633333333333332,
+        "mean_value_magnitude": 0.10015116308685318,
+        "model_probabilities_a": [
+          0.64,
+          0.7,
+          0.65
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.022716046608372037,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA17::AEA01",
+        "success_probabilities": [
+          0.64,
+          0.7,
+          0.65
+        ]
+      },
+      {
+        "action_worthiness": 0.6145172143684129,
+        "actual_net_gain": 0.54,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.11857327700865788,
+        "calibrated_variance": 0.16590255453711616,
+        "external_variance": 0.0005482637564766489,
+        "interaction_variance": 3.5637144170982245e-05,
+        "internal_variance": 0.00017348722070726578,
+        "lower_gain_bound": -0.2818983644313402,
+        "mean_success_probability": 0.6333333333333333,
+        "mean_value_magnitude": 0.19373511024457002,
+        "model_probabilities_a": [
+          0.68,
+          0.6,
+          0.62
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.04166269606521867,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA17::AEA08",
+        "success_probabilities": [
+          0.68,
+          0.6,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.5845379056817642,
+        "actual_net_gain": 0.74,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "calibrated_mean_gain": 0.08688694332901789,
+        "calibrated_variance": 0.16559472905052383,
+        "external_variance": 7.871093696273442e-05,
+        "interaction_variance": 0.001853722882755007,
+        "internal_variance": 0.0037682371570381627,
+        "lower_gain_bound": -0.31321299613668097,
+        "mean_success_probability": 0.5233333333333334,
+        "mean_value_magnitude": 0.2710550284569241,
+        "model_probabilities_a": [
+          0.56,
+          0.64,
+          0.37
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.0026492346613231355,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA17::AEA11",
+        "success_probabilities": [
+          0.56,
+          0.64,
+          0.37
+        ]
+      },
+      {
+        "action_worthiness": 0.5968316787694286,
+        "actual_net_gain": -0.51,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.0998554342252797,
+        "calibrated_variance": 0.16590631813193618,
+        "external_variance": 0.0005540044415661619,
+        "interaction_variance": 2.2612426186373847e-05,
+        "internal_variance": 3.342477555921151e-05,
+        "lower_gain_bound": -0.30062074965365665,
+        "mean_success_probability": 0.5933333333333334,
+        "mean_value_magnitude": 0.15330295272782804,
+        "model_probabilities_a": [
+          0.38,
+          0.42,
+          0.42
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.01861655117586125,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.5800000000000001,
+          0.5800000000000001
+        ]
+      },
+      {
+        "action_worthiness": 0.5962306155222685,
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.09920541287000129,
+        "calibrated_variance": 0.165846996383147,
+        "external_variance": 0.00046354111653134185,
+        "interaction_variance": 2.5056276569261605e-05,
+        "internal_variance": 4.182389490943882e-05,
+        "lower_gain_bound": -0.3011991671307128,
+        "mean_success_probability": 0.6233333333333334,
+        "mean_value_magnitude": 0.11276845659822451,
+        "model_probabilities_a": [
+          0.41,
+          0.34,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.017816219294228712,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA11",
+        "success_probabilities": [
+          0.5900000000000001,
+          0.6599999999999999,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6569502144992676,
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.16542348244067984,
+        "calibrated_variance": 0.16753317846581345,
+        "external_variance": 0.003034883873086766,
+        "interaction_variance": 0.0001845209394836754,
+        "internal_variance": 0.0007269649264679563,
+        "lower_gain_bound": -0.23701142557575555,
+        "mean_success_probability": 0.6666666666666666,
+        "mean_value_magnitude": 0.32803953995397755,
+        "model_probabilities_a": [
+          0.34,
+          0.28,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.0993465133179925,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA15",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.72,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6270945269254682,
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.13321169948722128,
+        "calibrated_variance": 0.16886700638890434,
+        "external_variance": 0.005068926824959241,
+        "interaction_variance": 3.5079078373420174e-05,
+        "internal_variance": 3.360659007646681e-05,
+        "lower_gain_bound": -0.27082204033407975,
+        "mean_success_probability": 0.6699999999999999,
+        "mean_value_magnitude": 0.20495911200916087,
+        "model_probabilities_a": [
+          0.32,
+          0.35,
+          0.32
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.05968609808311467,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA17",
+        "success_probabilities": [
+          0.6799999999999999,
+          0.65,
+          0.6799999999999999
+        ]
+      },
+      {
+        "action_worthiness": 0.5936400818169687,
+        "actual_net_gain": 0.94,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.09640116376487741,
+        "calibrated_variance": 0.16556393828383995,
+        "external_variance": 3.186414217384547e-05,
+        "interaction_variance": 0.00020419062535892812,
+        "internal_variance": 0.003803763832521164,
+        "lower_gain_bound": -0.30366157658017817,
+        "mean_success_probability": 0.5233333333333333,
+        "mean_value_magnitude": 0.5220753729161115,
+        "model_probabilities_a": [
+          0.43,
+          0.56,
+          0.44
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.014363517402751892,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA08::AEA15",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.43999999999999995,
+          0.56
+        ]
+      },
+      {
+        "action_worthiness": 0.6322471829390747,
+        "actual_net_gain": 0.59,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.13780831186419493,
+        "calibrated_variance": 0.16641914998908325,
+        "external_variance": 0.001336047685459572,
+        "interaction_variance": 6.234889198811315e-05,
+        "internal_variance": 0.0002649249721029854,
+        "lower_gain_bound": -0.26328634900357506,
+        "mean_success_probability": 0.6000000000000001,
+        "mean_value_magnitude": 0.3767281409690923,
+        "model_probabilities_a": [
+          0.43,
+          0.39,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.06534562819381848,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA08::AEA17",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.61,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.6046108346931717,
+        "actual_net_gain": 0.84,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.1080669554415127,
+        "calibrated_variance": 0.16592475635214776,
+        "external_variance": 0.0005821217636993241,
+        "interaction_variance": 2.3760071987727566e-05,
+        "internal_variance": 6.121521361998226e-05,
+        "lower_gain_bound": -0.29243148154689785,
+        "mean_success_probability": 0.5933333333333333,
+        "mean_value_magnitude": 0.2074655322615059,
+        "model_probabilities_a": [
+          0.62,
+          0.58,
+          0.58
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.02872689935548109,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA11::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.58,
+          0.58
+        ]
+      },
+      {
+        "action_worthiness": 0.5911415229101906,
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.09381250696261545,
+        "calibrated_variance": 0.16567082168857095,
+        "external_variance": 0.0001948030413497206,
+        "interaction_variance": 0.0010966689735243545,
+        "internal_variance": 0.0025245175595028885,
+        "lower_gain_bound": -0.30637934715350285,
+        "mean_success_probability": 0.5299999999999999,
+        "mean_value_magnitude": 0.3529376873609307,
+        "model_probabilities_a": [
+          0.57,
+          0.59,
+          0.43
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.011176261241655818,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA11::AEA17",
+        "success_probabilities": [
+          0.57,
+          0.59,
+          0.43
+        ]
+      },
+      {
+        "action_worthiness": 0.583935502675863,
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.08625630493339528,
+        "calibrated_variance": 0.16558664755387642,
+        "external_variance": 6.648268202942322e-05,
+        "interaction_variance": 0.0005380942076756454,
+        "internal_variance": 0.0011409161752379874,
+        "lower_gain_bound": -0.3138338714021943,
+        "mean_success_probability": 0.5266666666666666,
+        "mean_value_magnitude": 0.22261439704981079,
+        "model_probabilities_a": [
+          0.57,
+          0.59,
+          0.42
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.00187276784265656,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA15::AEA11",
+        "success_probabilities": [
+          0.57,
+          0.59,
+          0.42
+        ]
+      },
+      {
+        "action_worthiness": 0.5895765666982243,
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "calibrated_mean_gain": 0.0921490431666388,
+        "calibrated_variance": 0.16558250064699714,
+        "external_variance": 6.0139587175991614e-05,
+        "interaction_variance": 0.0006687522093970259,
+        "internal_variance": 0.004068649057742563,
+        "lower_gain_bound": -0.30793612326290776,
+        "mean_success_probability": 0.5333333333333333,
+        "mean_value_magnitude": 0.2869220869715213,
+        "model_probabilities_a": [
+          0.36,
+          0.62,
+          0.42
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.009128139131434768,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA17::AEA15",
+        "success_probabilities": [
+          0.64,
+          0.38,
+          0.5800000000000001
+        ]
+      },
+      {
+        "action_worthiness": 0.5782511754113295,
+        "actual_net_gain": -0.41000000000000003,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.08032530085970868,
+        "calibrated_variance": 0.16554478604032122,
+        "external_variance": 2.6744841181372924e-06,
+        "interaction_variance": 0.0001123283329617653,
+        "internal_variance": 0.000877274113064567,
+        "lower_gain_bound": -0.3197142994202344,
+        "mean_success_probability": 0.5100000000000001,
+        "mean_value_magnitude": 0.22851410723678353,
+        "model_probabilities_a": [
+          0.58,
+          0.46,
+          0.43
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.005429717855264309,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA01::AEA08",
+        "success_probabilities": [
+          0.42000000000000004,
+          0.54,
+          0.5700000000000001
+        ]
+      },
+      {
+        "action_worthiness": 0.5773774841638861,
+        "actual_net_gain": -0.26,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.07941694615859723,
+        "calibrated_variance": 0.16554494495274344,
+        "external_variance": 2.8850946092786945e-06,
+        "interaction_variance": 0.0005250872188887216,
+        "internal_variance": 0.002168616645335086,
+        "lower_gain_bound": -0.32062284612753383,
+        "mean_success_probability": 0.5066666666666667,
+        "mean_value_magnitude": 0.25889100585408925,
+        "model_probabilities_a": [
+          0.58,
+          0.38,
+          0.56
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.006548119921945474,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA01::AEA15",
+        "success_probabilities": [
+          0.58,
+          0.38,
+          0.56
+        ]
+      },
+      {
+        "action_worthiness": 0.6551450246341852,
+        "actual_net_gain": 0.2899999999999999,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.16361705738058618,
+        "calibrated_variance": 0.16794616795939615,
+        "external_variance": 0.0036646752922114825,
+        "interaction_variance": 0.0001906698903335833,
+        "internal_variance": 0.0005970448757820333,
+        "lower_gain_bound": -0.23931357061746023,
+        "mean_success_probability": 0.6033333333333334,
+        "mean_value_magnitude": 0.5183340564750841,
+        "model_probabilities_a": [
+          0.38,
+          0.43,
+          0.38
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.09712237167151741,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA01::AEA17",
+        "success_probabilities": [
+          0.62,
+          0.5700000000000001,
+          0.62
+        ]
+      },
+      {
+        "action_worthiness": 0.5894297385198295,
+        "actual_net_gain": 0.69,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.0920124963800309,
+        "calibrated_variance": 0.16564406336015045,
+        "external_variance": 0.00015401855379279533,
+        "interaction_variance": 0.0008134104872182003,
+        "internal_variance": 0.0018985156750809678,
+        "lower_gain_bound": -0.3081470379305117,
+        "mean_success_probability": 0.5266666666666667,
+        "mean_value_magnitude": 0.3555003253575925,
+        "model_probabilities_a": [
+          0.56,
+          0.43,
+          0.43
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.008960017352404951,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA08::AEA17",
+        "success_probabilities": [
+          0.43999999999999995,
+          0.5700000000000001,
+          0.5700000000000001
+        ]
+      },
+      {
+        "action_worthiness": 0.626570564172523,
+        "actual_net_gain": 0.39,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.1319552816793086,
+        "calibrated_variance": 0.16712049063086737,
+        "external_variance": 0.0024055666117976634,
+        "interaction_variance": 9.094769798856976e-06,
+        "internal_variance": 1.7553661082233913e-05,
+        "lower_gain_bound": -0.2699836577307143,
+        "mean_success_probability": 0.5766666666666667,
+        "mean_value_magnitude": 0.44438574141744375,
+        "model_probabilities_a": [
+          0.58,
+          0.58,
+          0.57
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.05813914701734133,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA01",
+        "success_probabilities": [
+          0.58,
+          0.58,
+          0.57
+        ]
+      },
+      {
+        "action_worthiness": 0.5863649459787078,
+        "actual_net_gain": 0.79,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.08879303685908946,
+        "calibrated_variance": 0.16558923313836724,
+        "external_variance": 7.039711966325944e-05,
+        "interaction_variance": 0.0008799639957907459,
+        "internal_variance": 0.0028110347102604724,
+        "lower_gain_bound": -0.31130026310673226,
+        "mean_success_probability": 0.5199999999999999,
+        "mean_value_magnitude": 0.37490230129064783,
+        "model_probabilities_a": [
+          0.57,
+          0.57,
+          0.42
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.004996092051625885,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA08",
+        "success_probabilities": [
+          0.57,
+          0.57,
+          0.42
+        ]
+      },
+      {
+        "action_worthiness": 0.5901769861878202,
+        "actual_net_gain": -0.16000000000000003,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.09278894271774286,
+        "calibrated_variance": 0.16562340735709805,
+        "external_variance": 0.00012253490824715312,
+        "interaction_variance": 0.0005731798187428802,
+        "internal_variance": 0.0018553919726772216,
+        "lower_gain_bound": -0.30734564064045045,
+        "mean_success_probability": 0.5366666666666667,
+        "mean_value_magnitude": 0.27158193612693565,
+        "model_probabilities_a": [
+          0.38,
+          0.44,
+          0.57
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.009916008649308633,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA15",
+        "success_probabilities": [
+          0.62,
+          0.56,
+          0.43000000000000005
+        ]
+      },
+      {
+        "action_worthiness": 0.5983453638554002,
+        "actual_net_gain": -0.11000000000000008,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.10150301470934892,
+        "calibrated_variance": 0.16608366955358245,
+        "external_variance": 0.0008244578600504571,
+        "interaction_variance": 2.1985542934678763e-05,
+        "internal_variance": 2.5043285433049504e-05,
+        "lower_gain_bound": -0.29918716358013203,
+        "mean_success_probability": 0.6000000000000001,
+        "mean_value_magnitude": 0.15322558563596356,
+        "model_probabilities_a": [
+          0.38,
+          0.42,
+          0.4
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.02064511712719272,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA17",
+        "success_probabilities": [
+          0.62,
+          0.5800000000000001,
+          0.6
+        ]
+      },
+      {
+        "action_worthiness": 0.5888582935433695,
+        "actual_net_gain": 0.64,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.09140122434919262,
+        "calibrated_variance": 0.16559585813863192,
+        "external_variance": 8.055829531798983e-05,
+        "interaction_variance": 0.00011821572330687284,
+        "internal_variance": 0.0004864750958060253,
+        "lower_gain_bound": -0.3087000791312796,
+        "mean_success_probability": 0.5433333333333333,
+        "mean_value_magnitude": 0.21008532882052305,
+        "model_probabilities_a": [
+          0.57,
+          0.59,
+          0.47
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.008207395164445316,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA15::AEA08",
+        "success_probabilities": [
+          0.57,
+          0.59,
+          0.47
+        ]
+      },
+      {
+        "action_worthiness": 0.6221019952534137,
+        "actual_net_gain": 0.03999999999999993,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "calibrated_mean_gain": 0.12695395821312372,
+        "calibrated_variance": 0.16663060455122672,
+        "external_variance": 0.001658508083065901,
+        "interaction_variance": 5.182837759580952e-05,
+        "internal_variance": 0.00012005262854475361,
+        "lower_gain_bound": -0.2743954400804529,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.29053744069487797,
+        "model_probabilities_a": [
+          0.58,
+          0.62,
+          0.62
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.051981320681573955,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA17::AEA15",
+        "success_probabilities": [
+          0.58,
+          0.62,
+          0.62
+        ]
+      }
+    ]
+  },
+  "fold": "fold_1",
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-luna",
+    "gpt-5.6-terra"
+  ],
+  "source_fuser": {
+    "parameters_by_task": {
+      "lfp_real_multitask_shared_source_fusion": {
+        "source_biases": {
+          "additive": 0.0,
+          "full": 0.0,
+          "historical_analog": 0.0,
+          "solvent_salt": 0.0
+        },
+        "source_slopes": {
+          "additive": 1.0,
+          "full": 1.0,
+          "historical_analog": 1.0,
+          "solvent_salt": 1.0
+        },
+        "source_weights": {
+          "additive": 0.43047148497529125,
+          "full": 0.0008260067756233057,
+          "historical_analog": 0.5656153802770416,
+          "solvent_salt": 0.003087127972043837
+        }
+      }
+    },
+    "type": "task_conditional_reliability_weighted_source_fusion"
+  },
+  "split_counts": {
+    "acceptance": 75,
+    "feedback": 15,
+    "test": 50,
+    "train": 75
+  },
+  "states": {
+    "acceptance": [
+      {
+        "actual_net_gain": 0.74,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0008816448475988577,
+        "interaction_variance": 0.00015524501778064372,
+        "internal_variance": 0.00013624683726002018,
+        "mean_success_probability": 0.6366666666666666,
+        "mean_value_magnitude": 0.1017673857639962,
+        "model_probabilities_a": [
+          0.71,
+          0.57,
+          0.63
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.01781641877549229,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA03::AEA05",
+        "success_probabilities": [
+          0.71,
+          0.57,
+          0.63
+        ]
+      },
+      {
+        "actual_net_gain": 0.5399999999999999,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0005537352832611088,
+        "interaction_variance": 7.247373637057249e-05,
+        "internal_variance": 7.911953143143217e-05,
+        "mean_success_probability": 0.6433333333333334,
+        "mean_value_magnitude": 0.08576802890266291,
+        "model_probabilities_a": [
+          0.57,
+          0.68,
+          0.68
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.014586834952096702,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA03::AEA12",
+        "success_probabilities": [
+          0.57,
+          0.68,
+          0.68
+        ]
+      },
+      {
+        "actual_net_gain": -0.10999999999999997,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0006982086110883211,
+        "interaction_variance": 2.137626933200271e-05,
+        "internal_variance": 5.4701074192147384e-05,
+        "mean_success_probability": 0.6766666666666666,
+        "mean_value_magnitude": 0.11962996092230041,
+        "model_probabilities_a": [
+          0.34,
+          0.28,
+          0.35
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.0322692528592128,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA05::AEA16",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.72,
+          0.65
+        ]
+      },
+      {
+        "actual_net_gain": 0.39,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0004141102273803804,
+        "interaction_variance": 1.226993266312227e-06,
+        "internal_variance": 2.2807060538989623e-06,
+        "mean_success_probability": 0.6499999999999999,
+        "mean_value_magnitude": 0.09248052606966067,
+        "model_probabilities_a": [
+          0.34,
+          0.36,
+          0.35
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.0177441578208982,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA05::AEA19",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.64,
+          0.65
+        ]
+      },
+      {
+        "actual_net_gain": 0.19000000000000006,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0002434228310148534,
+        "interaction_variance": 0.0013545569780282314,
+        "internal_variance": 0.003149918771249591,
+        "mean_success_probability": 0.5700000000000001,
+        "mean_value_magnitude": 0.16994314734795293,
+        "model_probabilities_a": [
+          0.72,
+          0.65,
+          0.34
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.013792040628713411,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA12::AEA05",
+        "success_probabilities": [
+          0.72,
+          0.65,
+          0.34
+        ]
+      },
+      {
+        "actual_net_gain": 0.2899999999999999,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.000606087455042998,
+        "interaction_variance": 1.6040121683557574e-05,
+        "internal_variance": 4.110225044755149e-05,
+        "mean_success_probability": 0.6533333333333333,
+        "mean_value_magnitude": 0.12850796494700176,
+        "model_probabilities_a": [
+          0.32,
+          0.34,
+          0.38
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.02940910925041386,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA12::AEA14",
+        "success_probabilities": [
+          0.6799999999999999,
+          0.6599999999999999,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.31000000000000005,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.00011062342330693043,
+        "interaction_variance": 0.00024115906280910846,
+        "internal_variance": 0.0006033446711519373,
+        "mean_success_probability": 0.5666666666666667,
+        "mean_value_magnitude": 0.1247716037301104,
+        "model_probabilities_a": [
+          0.56,
+          0.42,
+          0.32
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.0066362138306813815,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA12::AEA16",
+        "success_probabilities": [
+          0.43999999999999995,
+          0.5800000000000001,
+          0.6799999999999999
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0014723289797336713,
+        "interaction_variance": 5.6784037785871725e-05,
+        "internal_variance": 7.923566502373882e-05,
+        "mean_success_probability": 0.7200000000000001,
+        "mean_value_magnitude": 0.103014170980609,
+        "model_probabilities_a": [
+          0.3,
+          0.32,
+          0.22
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.03532623523146795,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA14::AEA03",
+        "success_probabilities": [
+          0.7,
+          0.6799999999999999,
+          0.78
+        ]
+      },
+      {
+        "actual_net_gain": 0.49,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.001600487246173992,
+        "interaction_variance": 4.900032152757676e-05,
+        "internal_variance": 0.00012749806127869425,
+        "mean_success_probability": 0.6766666666666667,
+        "mean_value_magnitude": 0.182639127560163,
+        "model_probabilities_a": [
+          0.66,
+          0.65,
+          0.72
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.05453249173792426,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA14::AEA05",
+        "success_probabilities": [
+          0.66,
+          0.65,
+          0.72
+        ]
+      },
+      {
+        "actual_net_gain": 0.59,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0007011285219994706,
+        "interaction_variance": 9.419593716613391e-05,
+        "internal_variance": 0.0001984427747750637,
+        "mean_success_probability": 0.6266666666666666,
+        "mean_value_magnitude": 0.15170784511785732,
+        "model_probabilities_a": [
+          0.69,
+          0.58,
+          0.61
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.02843265409652384,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA14::AEA16",
+        "success_probabilities": [
+          0.69,
+          0.58,
+          0.61
+        ]
+      },
+      {
+        "actual_net_gain": 0.84,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0007991202695998136,
+        "interaction_variance": 2.497250842499407e-05,
+        "internal_variance": 3.869574150798563e-05,
+        "mean_success_probability": 0.6066666666666668,
+        "mean_value_magnitude": 0.1649483047739579,
+        "model_probabilities_a": [
+          0.42,
+          0.38,
+          0.38
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.02518897168511102,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA16::AEA03",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.62,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.00012907966601844915,
+        "interaction_variance": 0.00023357272898576545,
+        "internal_variance": 0.00036423833490455484,
+        "mean_success_probability": 0.57,
+        "mean_value_magnitude": 0.10134040587964029,
+        "model_probabilities_a": [
+          0.34,
+          0.56,
+          0.39
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.00418765682314963,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA19::AEA03",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.43999999999999995,
+          0.61
+        ]
+      },
+      {
+        "actual_net_gain": -0.20999999999999996,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 6.484679328838889e-05,
+        "interaction_variance": 0.0001889307956706692,
+        "internal_variance": 0.0005574296931064284,
+        "mean_success_probability": 0.5566666666666666,
+        "mean_value_magnitude": 0.12204788639509115,
+        "model_probabilities_a": [
+          0.37,
+          0.58,
+          0.38
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.0038320937914436658,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA19::AEA12",
+        "success_probabilities": [
+          0.63,
+          0.42000000000000004,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 2.2954056062900457e-05,
+        "interaction_variance": 0.00030345262115154405,
+        "internal_variance": 0.0009190697400746293,
+        "mean_success_probability": 0.5333333333333333,
+        "mean_value_magnitude": 0.12506902527390454,
+        "model_probabilities_a": [
+          0.34,
+          0.63,
+          0.43
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": -0.0016620649817396995,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA19::AEA14",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.37,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.51,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 1.873801208683247e-05,
+        "interaction_variance": 0.00014990409669465908,
+        "internal_variance": 0.0003008608944371282,
+        "mean_success_probability": 0.5266666666666667,
+        "mean_value_magnitude": 0.11498445992858822,
+        "model_probabilities_a": [
+          0.42,
+          0.58,
+          0.42
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": -0.0038674954704752814,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA19::AEA16",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.42000000000000004,
+          0.5800000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.20999999999999996,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0008740662858263999,
+        "interaction_variance": 9.200697745541027e-05,
+        "internal_variance": 0.0005125847592162262,
+        "mean_success_probability": 0.6266666666666666,
+        "mean_value_magnitude": 0.2754560462879924,
+        "model_probabilities_a": [
+          0.42,
+          0.32,
+          0.38
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.059782198392958084,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA03::AEA05",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.6799999999999999,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.14,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0010451480262994178,
+        "interaction_variance": 0.00010567286138484389,
+        "internal_variance": 0.00023460456941191556,
+        "mean_success_probability": 0.6266666666666667,
+        "mean_value_magnitude": 0.19014419207336744,
+        "model_probabilities_a": [
+          0.34,
+          0.35,
+          0.43
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.038169861991919754,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA03::AEA14",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.65,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": 0.19000000000000006,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0008419738845108616,
+        "interaction_variance": 5.086209588065622e-05,
+        "internal_variance": 8.719621623083585e-05,
+        "mean_success_probability": 0.6166666666666667,
+        "mean_value_magnitude": 0.1628261743183801,
+        "model_probabilities_a": [
+          0.58,
+          0.65,
+          0.62
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.027992774007622012,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA12::AEA03",
+        "success_probabilities": [
+          0.58,
+          0.65,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.41000000000000003,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0001297136201277805,
+        "interaction_variance": 3.4328746347616777e-06,
+        "internal_variance": 1.205269033549343e-05,
+        "mean_success_probability": 0.5766666666666668,
+        "mean_value_magnitude": 0.1391775670934184,
+        "model_probabilities_a": [
+          0.44,
+          0.42,
+          0.41
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.011340560287657503,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA12::AEA05",
+        "success_probabilities": [
+          0.56,
+          0.5800000000000001,
+          0.5900000000000001
+        ]
+      },
+      {
+        "actual_net_gain": 0.04000000000000004,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.00025080667801743,
+        "interaction_variance": 2.077688456949122e-05,
+        "internal_variance": 1.608490654622441e-05,
+        "mean_success_probability": 0.5866666666666668,
+        "mean_value_magnitude": 0.08039083073270076,
+        "model_probabilities_a": [
+          0.62,
+          0.56,
+          0.58
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.003934410660334798,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA12::AEA14",
+        "success_probabilities": [
+          0.62,
+          0.56,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": -0.36,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 3.6708912483058285e-05,
+        "interaction_variance": 0.00018966271449580077,
+        "internal_variance": 0.0008331568365233982,
+        "mean_success_probability": 0.54,
+        "mean_value_magnitude": 0.15873334652204193,
+        "model_probabilities_a": [
+          0.36,
+          0.58,
+          0.44
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.002698667721763366,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA14::AEA05",
+        "success_probabilities": [
+          0.64,
+          0.42000000000000004,
+          0.56
+        ]
+      },
+      {
+        "actual_net_gain": 0.18999999999999995,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 4.832831465800564e-05,
+        "interaction_variance": 0.00021837238475098873,
+        "internal_variance": 0.000510583994476906,
+        "mean_success_probability": 0.5299999999999999,
+        "mean_value_magnitude": 0.17716760515456334,
+        "model_probabilities_a": [
+          0.58,
+          0.44,
+          0.57
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.0006300563092737892,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA14::AEA19",
+        "success_probabilities": [
+          0.58,
+          0.44,
+          0.57
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0006192697943142391,
+        "interaction_variance": 1.651386118171308e-05,
+        "internal_variance": 3.2337222702541066e-05,
+        "mean_success_probability": 0.6,
+        "mean_value_magnitude": 0.17411532466624582,
+        "model_probabilities_a": [
+          0.62,
+          0.6,
+          0.58
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.024823064933249157,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA16::AEA03",
+        "success_probabilities": [
+          0.62,
+          0.6,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0005741752214144011,
+        "interaction_variance": 2.226718310194357e-05,
+        "internal_variance": 8.710390532928271e-05,
+        "mean_success_probability": 0.6266666666666666,
+        "mean_value_magnitude": 0.18707513148412064,
+        "model_probabilities_a": [
+          0.6,
+          0.66,
+          0.62
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.0373923666426439,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA16::AEA05",
+        "success_probabilities": [
+          0.6,
+          0.66,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.03999999999999993,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0007658894395065972,
+        "interaction_variance": 0.00011709879860224841,
+        "internal_variance": 0.00025970473468977075,
+        "mean_success_probability": 0.6466666666666666,
+        "mean_value_magnitude": 0.1405029158411466,
+        "model_probabilities_a": [
+          0.72,
+          0.58,
+          0.64
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.031214188646736328,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA16::AEA12",
+        "success_probabilities": [
+          0.72,
+          0.58,
+          0.64
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0005082268772146025,
+        "interaction_variance": 4.210163479884288e-05,
+        "internal_variance": 4.4372873371572384e-05,
+        "mean_success_probability": 0.63,
+        "mean_value_magnitude": 0.08901532108452324,
+        "model_probabilities_a": [
+          0.68,
+          0.59,
+          0.62
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.013143983481976046,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA16::AEA14",
+        "success_probabilities": [
+          0.68,
+          0.59,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.059999999999999935,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0016209567973652465,
+        "interaction_variance": 3.33133360194048e-05,
+        "internal_variance": 2.7721799914228244e-05,
+        "mean_success_probability": 0.6433333333333334,
+        "mean_value_magnitude": 0.12811800667128953,
+        "model_probabilities_a": [
+          0.64,
+          0.62,
+          0.67
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.026727161912436334,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA19::AEA03",
+        "success_probabilities": [
+          0.64,
+          0.62,
+          0.67
+        ]
+      },
+      {
+        "actual_net_gain": -0.16000000000000003,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0005476032674504892,
+        "interaction_variance": 4.050320025521355e-05,
+        "internal_variance": 8.291766252432854e-05,
+        "mean_success_probability": 0.5866666666666667,
+        "mean_value_magnitude": 0.19316559770297595,
+        "model_probabilities_a": [
+          0.38,
+          0.43,
+          0.43
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.023482036935182513,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA19::AEA05",
+        "success_probabilities": [
+          0.62,
+          0.5700000000000001,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.26,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 5.819532348678983e-05,
+        "interaction_variance": 0.00033986068916285313,
+        "internal_variance": 0.0005170110776119986,
+        "mean_success_probability": 0.5333333333333333,
+        "mean_value_magnitude": 0.14113501045141072,
+        "model_probabilities_a": [
+          0.6,
+          0.42,
+          0.58
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": -0.0005909993032392931,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA19::AEA12",
+        "success_probabilities": [
+          0.6,
+          0.42,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.2899999999999999,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0005627877404283867,
+        "interaction_variance": 5.582854385049579e-05,
+        "internal_variance": 0.00013076262064766112,
+        "mean_success_probability": 0.5833333333333334,
+        "mean_value_magnitude": 0.21783979629062647,
+        "model_probabilities_a": [
+          0.38,
+          0.44,
+          0.43
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.026306632715104424,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA19::AEA16",
+        "success_probabilities": [
+          0.62,
+          0.56,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.060000000000000046,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 2.1869023129217354e-06,
+        "interaction_variance": 0.0006965283866655752,
+        "internal_variance": 0.0007823418040799919,
+        "mean_success_probability": 0.5066666666666667,
+        "mean_value_magnitude": 0.11754517683167262,
+        "model_probabilities_a": [
+          0.34,
+          0.57,
+          0.61
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": -0.008432730975577701,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA03::AEA05",
+        "success_probabilities": [
+          0.34,
+          0.57,
+          0.61
+        ]
+      },
+      {
+        "actual_net_gain": 0.19000000000000006,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00034029254894406177,
+        "interaction_variance": 4.253656861800762e-05,
+        "internal_variance": 0.00011327746775572164,
+        "mean_success_probability": 0.5933333333333334,
+        "mean_value_magnitude": 0.16126866367242965,
+        "model_probabilities_a": [
+          0.43,
+          0.36,
+          0.43
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.020103483885520218,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA03::AEA14",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.64,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": 0.44000000000000006,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0018036163718955125,
+        "interaction_variance": 2.331544709744897e-05,
+        "internal_variance": 4.5942382018190446e-05,
+        "mean_success_probability": 0.69,
+        "mean_value_magnitude": 0.15688209065055098,
+        "model_probabilities_a": [
+          0.29,
+          0.34,
+          0.3
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.049615194447209354,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA03::AEA16",
+        "success_probabilities": [
+          0.71,
+          0.6599999999999999,
+          0.7
+        ]
+      },
+      {
+        "actual_net_gain": 0.03999999999999993,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 5.4996624527681875e-06,
+        "interaction_variance": 0.00046563808766770896,
+        "internal_variance": 0.00034596328516691425,
+        "mean_success_probability": 0.5099999999999999,
+        "mean_value_magnitude": 0.10107151593633455,
+        "model_probabilities_a": [
+          0.57,
+          0.58,
+          0.38
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": -0.007978569681273315,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA03::AEA19",
+        "success_probabilities": [
+          0.57,
+          0.58,
+          0.38
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00012611061424486742,
+        "interaction_variance": 0.0003448739246696377,
+        "internal_variance": 0.0008122424663650431,
+        "mean_success_probability": 0.5466666666666667,
+        "mean_value_magnitude": 0.18465101964111302,
+        "model_probabilities_a": [
+          0.42,
+          0.56,
+          0.38
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.007234095166503881,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA05::AEA12",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.43999999999999995,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.14,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00016379214003137962,
+        "interaction_variance": 0.00047299158804980056,
+        "internal_variance": 0.0008906246008020923,
+        "mean_success_probability": 0.5466666666666667,
+        "mean_value_magnitude": 0.18816133554593367,
+        "model_probabilities_a": [
+          0.37,
+          0.43,
+          0.56
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.007561724650953809,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA05::AEA14",
+        "success_probabilities": [
+          0.63,
+          0.5700000000000001,
+          0.43999999999999995
+        ]
+      },
+      {
+        "actual_net_gain": 0.39,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0006461832648733794,
+        "interaction_variance": 7.647139229270773e-06,
+        "internal_variance": 1.8161728747639054e-05,
+        "mean_success_probability": 0.63,
+        "mean_value_magnitude": 0.15067236287570718,
+        "model_probabilities_a": [
+          0.35,
+          0.38,
+          0.38
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.029174814347683868,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA05::AEA16",
+        "success_probabilities": [
+          0.65,
+          0.62,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.39,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00028299273073905626,
+        "interaction_variance": 0.0010410280794294964,
+        "internal_variance": 0.0014514958195078536,
+        "mean_success_probability": 0.5766666666666667,
+        "mean_value_magnitude": 0.1295471120240636,
+        "model_probabilities_a": [
+          0.66,
+          0.37,
+          0.7
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.009863890510356419,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA12::AEA03",
+        "success_probabilities": [
+          0.66,
+          0.37,
+          0.7
+        ]
+      },
+      {
+        "actual_net_gain": 0.18999999999999995,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 9.926344292271476e-05,
+        "interaction_variance": 0.0005332333710724351,
+        "internal_variance": 0.00039165908033692595,
+        "mean_success_probability": 0.5366666666666666,
+        "mean_value_magnitude": 0.11643637620593711,
+        "model_probabilities_a": [
+          0.42,
+          0.62,
+          0.57
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": -0.0014613324115646167,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA12::AEA14",
+        "success_probabilities": [
+          0.42,
+          0.62,
+          0.57
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00017166327806403373,
+        "interaction_variance": 3.4332655612806827e-06,
+        "internal_variance": 1.788957156134284e-05,
+        "mean_success_probability": 0.6,
+        "mean_value_magnitude": 0.14953917363580188,
+        "model_probabilities_a": [
+          0.61,
+          0.61,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.019907834727160366,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA14::AEA19",
+        "success_probabilities": [
+          0.61,
+          0.61,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.04000000000000004,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0009488555683465889,
+        "interaction_variance": 1.283606678432549e-05,
+        "internal_variance": 0.0001403323815656914,
+        "mean_success_probability": 0.6766666666666667,
+        "mean_value_magnitude": 0.2882560350045216,
+        "model_probabilities_a": [
+          0.68,
+          0.65,
+          0.7
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.09185046570159765,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA16::AEA12",
+        "success_probabilities": [
+          0.68,
+          0.65,
+          0.7
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0010086861224534282,
+        "interaction_variance": 0.00012832397415827638,
+        "internal_variance": 0.0017696345217716217,
+        "mean_success_probability": 0.6733333333333333,
+        "mean_value_magnitude": 0.3402152906781605,
+        "model_probabilities_a": [
+          0.76,
+          0.62,
+          0.64
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.10794130076842898,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA16::AEA14",
+        "success_probabilities": [
+          0.76,
+          0.62,
+          0.64
+        ]
+      },
+      {
+        "actual_net_gain": -0.10999999999999997,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 1.0819095222042807e-05,
+        "interaction_variance": 8.78775489463885e-05,
+        "internal_variance": 0.00012499191795091685,
+        "mean_success_probability": 0.5233333333333333,
+        "mean_value_magnitude": 0.08406025228854086,
+        "model_probabilities_a": [
+          0.43,
+          0.56,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": -0.0060771882265347596,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA19::AEA05",
+        "success_probabilities": [
+          0.43,
+          0.56,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00011594758155900357,
+        "interaction_variance": 0.0007607581116575435,
+        "internal_variance": 0.0022567329101866106,
+        "mean_success_probability": 0.5466666666666667,
+        "mean_value_magnitude": 0.19870594277614295,
+        "model_probabilities_a": [
+          0.61,
+          0.43,
+          0.32
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.008545887992440009,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA19::AEA12",
+        "success_probabilities": [
+          0.39,
+          0.5700000000000001,
+          0.6799999999999999
+        ]
+      },
+      {
+        "actual_net_gain": 0.49,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0003250802887801975,
+        "interaction_variance": 0.0004161027696386532,
+        "internal_variance": 0.0008050811665823313,
+        "mean_success_probability": 0.6,
+        "mean_value_magnitude": 0.12539633780462314,
+        "model_probabilities_a": [
+          0.32,
+          0.32,
+          0.56
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.015079267560924611,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA19::AEA16",
+        "success_probabilities": [
+          0.6799999999999999,
+          0.6799999999999999,
+          0.43999999999999995
+        ]
+      },
+      {
+        "actual_net_gain": 0.79,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.00048591778563612564,
+        "interaction_variance": 1.5184930801128864e-05,
+        "internal_variance": 4.9863810970296864e-05,
+        "mean_success_probability": 0.6066666666666668,
+        "mean_value_magnitude": 0.18724447144973363,
+        "model_probabilities_a": [
+          0.38,
+          0.42,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.02994548724260985,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA05::AEA03",
+        "success_probabilities": [
+          0.62,
+          0.5800000000000001,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.4600000000000001,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 5.508871093504901e-07,
+        "interaction_variance": 0.0012042392210401824,
+        "internal_variance": 0.0020036173405661713,
+        "mean_success_probability": 0.5033333333333333,
+        "mean_value_magnitude": 0.1436063258901001,
+        "model_probabilities_a": [
+          0.43,
+          0.36,
+          0.72
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": -0.009042624494066004,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA12::AEA03",
+        "success_probabilities": [
+          0.43,
+          0.36,
+          0.72
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0002828424504202311,
+        "interaction_variance": 1.1544589813070685e-05,
+        "internal_variance": 2.9510085611914876e-05,
+        "mean_success_probability": 0.5933333333333333,
+        "mean_value_magnitude": 0.14404610007173957,
+        "model_probabilities_a": [
+          0.58,
+          0.58,
+          0.62
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.016888605346724712,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA12::AEA05",
+        "success_probabilities": [
+          0.58,
+          0.58,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.001025342402813693,
+        "interaction_variance": 2.9658664544197675e-05,
+        "internal_variance": 6.954907029071104e-05,
+        "mean_success_probability": 0.6466666666666666,
+        "mean_value_magnitude": 0.16716405978756543,
+        "model_probabilities_a": [
+          0.36,
+          0.38,
+          0.32
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.03903479087101918,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA12::AEA16",
+        "success_probabilities": [
+          0.64,
+          0.62,
+          0.6799999999999999
+        ]
+      },
+      {
+        "actual_net_gain": -0.059999999999999935,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 7.787774396033915e-05,
+        "interaction_variance": 0.00023859497180092796,
+        "internal_variance": 0.0006169510037087255,
+        "mean_success_probability": 0.5633333333333334,
+        "mean_value_magnitude": 0.1120312116782468,
+        "model_probabilities_a": [
+          0.31,
+          0.42,
+          0.58
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.004190620145911265,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA12::AEA19",
+        "success_probabilities": [
+          0.69,
+          0.5800000000000001,
+          0.42000000000000004
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 1.731122064293837e-05,
+        "interaction_variance": 0.00021639025803672847,
+        "internal_variance": 0.0003973661808843734,
+        "mean_success_probability": 0.52,
+        "mean_value_magnitude": 0.1409549894264785,
+        "model_probabilities_a": [
+          0.43,
+          0.43,
+          0.58
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": -0.0043618004229408446,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA14::AEA03",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.5700000000000001,
+          0.42000000000000004
+        ]
+      },
+      {
+        "actual_net_gain": 0.54,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0003491532781933184,
+        "interaction_variance": 4.039789995625166e-05,
+        "internal_variance": 9.147017927559458e-05,
+        "mean_success_probability": 0.61,
+        "mean_value_magnitude": 0.12780438405988903,
+        "model_probabilities_a": [
+          0.65,
+          0.62,
+          0.56
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.018116964493175597,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA14::AEA05",
+        "success_probabilities": [
+          0.65,
+          0.62,
+          0.56
+        ]
+      },
+      {
+        "actual_net_gain": 0.19000000000000006,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0003773814487127411,
+        "interaction_variance": 1.1793170272273185e-05,
+        "internal_variance": 3.359459477243291e-05,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.15369189780000392,
+        "model_probabilities_a": [
+          0.62,
+          0.62,
+          0.58
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.022787604864000825,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA14::AEA12",
+        "success_probabilities": [
+          0.62,
+          0.62,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": -0.3600000000000001,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0008577685108941795,
+        "interaction_variance": 9.029142219938745e-05,
+        "internal_variance": 0.0002199391827624353,
+        "mean_success_probability": 0.6266666666666666,
+        "mean_value_magnitude": 0.180434993618397,
+        "model_probabilities_a": [
+          0.68,
+          0.58,
+          0.62
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.03571019838332724,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA16::AEA03",
+        "success_probabilities": [
+          0.68,
+          0.58,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.00043191885493299863,
+        "interaction_variance": 1.3497464216656236e-05,
+        "internal_variance": 5.089737113811088e-05,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.1891750884273195,
+        "model_probabilities_a": [
+          0.62,
+          0.62,
+          0.58
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.030357352197828154,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA16::AEA05",
+        "success_probabilities": [
+          0.62,
+          0.62,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.0900000000000001,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 2.4055834870396918e-06,
+        "interaction_variance": 0.0005821512038635985,
+        "internal_variance": 0.0035417736401931687,
+        "mean_success_probability": 0.5066666666666667,
+        "mean_value_magnitude": 0.2869220869715213,
+        "model_probabilities_a": [
+          0.42,
+          0.42,
+          0.64
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": -0.006174372173713026,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA16::AEA14",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.5800000000000001,
+          0.36
+        ]
+      },
+      {
+        "actual_net_gain": 0.49,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 2.414174995062367e-05,
+        "interaction_variance": 0.00023747598931021544,
+        "internal_variance": 0.0006101774891014738,
+        "mean_success_probability": 0.5233333333333334,
+        "mean_value_magnitude": 0.1687702254963029,
+        "model_probabilities_a": [
+          0.42,
+          0.43,
+          0.58
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": -0.0021240561435058453,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA19::AEA03",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.5700000000000001,
+          0.42000000000000004
+        ]
+      },
+      {
+        "actual_net_gain": 0.29000000000000004,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.00042170794054447196,
+        "interaction_variance": 3.2945932855036944e-06,
+        "internal_variance": 8.302186942011134e-06,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.15280674322295557,
+        "model_probabilities_a": [
+          0.6,
+          0.6,
+          0.62
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.022598771887563845,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA19::AEA05",
+        "success_probabilities": [
+          0.6,
+          0.6,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.26,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 3.927313118444124e-05,
+        "interaction_variance": 0.00025895720874740996,
+        "internal_variance": 0.0009206492602266697,
+        "mean_success_probability": 0.5266666666666666,
+        "mean_value_magnitude": 0.2215552970629122,
+        "model_probabilities_a": [
+          0.58,
+          0.57,
+          0.43
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.001816282510021968,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA19::AEA14",
+        "success_probabilities": [
+          0.58,
+          0.57,
+          0.43
+        ]
+      },
+      {
+        "actual_net_gain": 0.1399999999999999,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0006187288465492284,
+        "interaction_variance": 1.0299885673827754e-05,
+        "internal_variance": 1.8767696425861277e-05,
+        "mean_success_probability": 0.5966666666666667,
+        "mean_value_magnitude": 0.17367316792138235,
+        "model_probabilities_a": [
+          0.39,
+          0.42,
+          0.4
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.02357681246480059,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA19::AEA16",
+        "success_probabilities": [
+          0.61,
+          0.5800000000000001,
+          0.6
+        ]
+      },
+      {
+        "actual_net_gain": -0.059999999999999935,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 1.7597045509342278e-05,
+        "interaction_variance": 0.00017309746807148976,
+        "internal_variance": 0.0006433074183556227,
+        "mean_success_probability": 0.5233333333333333,
+        "mean_value_magnitude": 0.17329140373338478,
+        "model_probabilities_a": [
+          0.42,
+          0.57,
+          0.58
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.0019130678257753882,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA03::AEA12",
+        "success_probabilities": [
+          0.42,
+          0.57,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0004023243872353014,
+        "interaction_variance": 6.960629536942945e-05,
+        "internal_variance": 0.00036053201601119985,
+        "mean_success_probability": 0.6133333333333333,
+        "mean_value_magnitude": 0.20139476607215967,
+        "model_probabilities_a": [
+          0.58,
+          0.68,
+          0.58
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.03564948030968952,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA05::AEA03",
+        "success_probabilities": [
+          0.58,
+          0.68,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 9.70708299776064e-05,
+        "interaction_variance": 4.0446179157335814e-06,
+        "internal_variance": 1.1783696507742317e-05,
+        "mean_success_probability": 0.5800000000000001,
+        "mean_value_magnitude": 0.1051057347436783,
+        "model_probabilities_a": [
+          0.4,
+          0.44,
+          0.42
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.0068169175589885365,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA05::AEA14",
+        "success_probabilities": [
+          0.6,
+          0.56,
+          0.5800000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.31000000000000005,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 3.649322967955649e-05,
+        "interaction_variance": 0.0006160057169909138,
+        "internal_variance": 0.0024210707677580455,
+        "mean_success_probability": 0.5166666666666667,
+        "mean_value_magnitude": 0.3592847432287619,
+        "model_probabilities_a": [
+          0.42,
+          0.57,
+          0.56
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.001976158107625395,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA05::AEA16",
+        "success_probabilities": [
+          0.42,
+          0.57,
+          0.56
+        ]
+      },
+      {
+        "actual_net_gain": -0.20999999999999996,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.00034092260504774787,
+        "interaction_variance": 8.417842099944337e-06,
+        "internal_variance": 5.067064788885475e-05,
+        "mean_success_probability": 0.59,
+        "mean_value_magnitude": 0.251671035006154,
+        "model_probabilities_a": [
+          0.42,
+          0.39,
+          0.42
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.03530078630110774,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA05::AEA19",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.61,
+          0.5800000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.060000000000000046,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 7.500632198249194e-05,
+        "interaction_variance": 0.0004167017887916225,
+        "internal_variance": 0.0005110958242048798,
+        "mean_success_probability": 0.5299999999999999,
+        "mean_value_magnitude": 0.15985866010399313,
+        "model_probabilities_a": [
+          0.58,
+          0.43,
+          0.58
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.0004084803937604211,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA12::AEA05",
+        "success_probabilities": [
+          0.58,
+          0.43,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.29000000000000004,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.00039687444479346293,
+        "interaction_variance": 9.799369007245935e-06,
+        "internal_variance": 1.0195710195720163e-05,
+        "mean_success_probability": 0.59,
+        "mean_value_magnitude": 0.11289215094350127,
+        "model_probabilities_a": [
+          0.42,
+          0.42,
+          0.39
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.010320587169830238,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA12::AEA14",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.5800000000000001,
+          0.61
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 1.4658068540692965e-05,
+        "interaction_variance": 0.00018566886818211092,
+        "internal_variance": 0.0005608235748605457,
+        "mean_success_probability": 0.52,
+        "mean_value_magnitude": 0.16634967948520235,
+        "model_probabilities_a": [
+          0.56,
+          0.58,
+          0.42
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.003346012820591906,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA14::AEA03",
+        "success_probabilities": [
+          0.56,
+          0.58,
+          0.42
+        ]
+      },
+      {
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 3.9908569841018554e-05,
+        "interaction_variance": 0.0003925700135381835,
+        "internal_variance": 0.001232393598895759,
+        "mean_success_probability": 0.5233333333333333,
+        "mean_value_magnitude": 0.23985150997319218,
+        "model_probabilities_a": [
+          0.58,
+          0.42,
+          0.57
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.0011930704654156184,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA14::AEA19",
+        "success_probabilities": [
+          0.58,
+          0.42,
+          0.57
+        ]
+      },
+      {
+        "actual_net_gain": 0.39,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0005492520021766352,
+        "interaction_variance": 1.464672005804364e-05,
+        "internal_variance": 6.225592813585286e-05,
+        "mean_success_probability": 0.6,
+        "mean_value_magnitude": 0.24158835366664913,
+        "model_probabilities_a": [
+          0.58,
+          0.62,
+          0.6
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.03831767073332981,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA16::AEA03",
+        "success_probabilities": [
+          0.58,
+          0.62,
+          0.6
+        ]
+      },
+      {
+        "actual_net_gain": 0.3400000000000001,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0006946467632281335,
+        "interaction_variance": 3.7803905481803046e-05,
+        "internal_variance": 0.00010627281293541153,
+        "mean_success_probability": 0.57,
+        "mean_value_magnitude": 0.31564340976321476,
+        "model_probabilities_a": [
+          0.57,
+          0.55,
+          0.59
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.03419007736685006,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA16::AEA12",
+        "success_probabilities": [
+          0.57,
+          0.55,
+          0.59
+        ]
+      },
+      {
+        "actual_net_gain": 0.04000000000000004,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0007839042111366173,
+        "interaction_variance": 1.2957094398952237e-05,
+        "internal_variance": 3.0013157136188073e-05,
+        "mean_success_probability": 0.5733333333333334,
+        "mean_value_magnitude": 0.29053744069487797,
+        "model_probabilities_a": [
+          0.56,
+          0.58,
+          0.58
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.03261215796858209,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA16::AEA14",
+        "success_probabilities": [
+          0.56,
+          0.58,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0001456846068560626,
+        "interaction_variance": 0.00035881579096030193,
+        "internal_variance": 0.00042270949124441863,
+        "mean_success_probability": 0.56,
+        "mean_value_magnitude": 0.10917188600084608,
+        "model_probabilities_a": [
+          0.35,
+          0.57,
+          0.4
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.0031006263201015342,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA19::AEA03",
+        "success_probabilities": [
+          0.65,
+          0.43000000000000005,
+          0.6
+        ]
+      },
+      {
+        "actual_net_gain": 0.1399999999999999,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 2.5844960514145745e-06,
+        "interaction_variance": 0.00023389689265301602,
+        "internal_variance": 0.0005801120814033086,
+        "mean_success_probability": 0.5066666666666667,
+        "mean_value_magnitude": 0.18988599248620427,
+        "model_probabilities_a": [
+          0.43,
+          0.47,
+          0.58
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.007468186766850593,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA19::AEA12",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.53,
+          0.42000000000000004
+        ]
+      },
+      {
+        "actual_net_gain": 0.49,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 5.5118648777328135e-05,
+        "interaction_variance": 0.0002227712054750341,
+        "internal_variance": 0.001655007049511225,
+        "mean_success_probability": 0.54,
+        "mean_value_magnitude": 0.2529470918898596,
+        "model_probabilities_a": [
+          0.57,
+          0.38,
+          0.43
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.010235767351188784,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA19::AEA16",
+        "success_probabilities": [
+          0.43000000000000005,
+          0.62,
+          0.5700000000000001
+        ]
+      }
+    ],
+    "feedback": [
+      {
+        "actual_net_gain": 0.8400000000000001,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0006732485937062364,
+        "interaction_variance": 8.415607421327954e-05,
+        "internal_variance": 0.00014591966505123882,
+        "mean_success_probability": 0.66,
+        "mean_value_magnitude": 0.10677065997795478,
+        "model_probabilities_a": [
+          0.62,
+          0.74,
+          0.62
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.024166611192945525,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA02::AEA04",
+        "success_probabilities": [
+          0.62,
+          0.74,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.060000000000000046,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0005534806041768236,
+        "interaction_variance": 0.0008788880353525831,
+        "internal_variance": 0.0012616887834744329,
+        "mean_success_probability": 0.6033333333333333,
+        "mean_value_magnitude": 0.13639238175536378,
+        "model_probabilities_a": [
+          0.29,
+          0.58,
+          0.32
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.018187758896108512,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA02::AEA18",
+        "success_probabilities": [
+          0.71,
+          0.42000000000000004,
+          0.6799999999999999
+        ]
+      },
+      {
+        "actual_net_gain": 0.79,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0014840760016742907,
+        "interaction_variance": 0.0001338695387893501,
+        "internal_variance": 0.00020428088325453295,
+        "mean_success_probability": 0.6966666666666667,
+        "mean_value_magnitude": 0.12098744306622808,
+        "model_probabilities_a": [
+          0.22,
+          0.35,
+          0.34
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.037588394272716374,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA04::AEA18",
+        "success_probabilities": [
+          0.78,
+          0.65,
+          0.6599999999999999
+        ]
+      },
+      {
+        "actual_net_gain": -0.36,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 9.779776771419385e-06,
+        "interaction_variance": 0.00032938288166140553,
+        "internal_variance": 0.000961038016138681,
+        "mean_success_probability": 0.5166666666666666,
+        "mean_value_magnitude": 0.16025275227521638,
+        "model_probabilities_a": [
+          0.59,
+          0.58,
+          0.38
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": -0.004658241590826128,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA02::AEA18",
+        "success_probabilities": [
+          0.59,
+          0.58,
+          0.38
+        ]
+      },
+      {
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0001731563692391242,
+        "interaction_variance": 0.0008441373000407314,
+        "internal_variance": 0.0027195007526616406,
+        "mean_success_probability": 0.5399999999999999,
+        "mean_value_magnitude": 0.29523462815569596,
+        "model_probabilities_a": [
+          0.63,
+          0.57,
+          0.42
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.013618770252455665,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA04::AEA02",
+        "success_probabilities": [
+          0.63,
+          0.57,
+          0.42
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 4.4366297612150204e-05,
+        "interaction_variance": 0.0005920127837621296,
+        "internal_variance": 0.0010623447256421575,
+        "mean_success_probability": 0.5266666666666667,
+        "mean_value_magnitude": 0.1672996593746438,
+        "model_probabilities_a": [
+          0.61,
+          0.39,
+          0.58
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": -0.0010773515000190009,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA04::AEA18",
+        "success_probabilities": [
+          0.61,
+          0.39,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": -0.4099999999999999,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.004849367706597096,
+        "interaction_variance": 0.00014127171083427913,
+        "internal_variance": 0.00035180055873061563,
+        "mean_success_probability": 0.6933333333333334,
+        "mean_value_magnitude": 0.2842015771301308,
+        "model_probabilities_a": [
+          0.3,
+          0.27,
+          0.35
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.09989127649031723,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA02::AEA04",
+        "success_probabilities": [
+          0.7,
+          0.73,
+          0.65
+        ]
+      },
+      {
+        "actual_net_gain": -0.30999999999999994,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0002233893852493485,
+        "interaction_variance": 4.1368404675805355e-06,
+        "internal_variance": 1.7221182643267335e-05,
+        "mean_success_probability": 0.62,
+        "mean_value_magnitude": 0.12706242059737055,
+        "model_probabilities_a": [
+          0.4,
+          0.36,
+          0.38
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.020494980943368928,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA02::AEA18",
+        "success_probabilities": [
+          0.6,
+          0.64,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.10999999999999997,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 5.757112776573592e-07,
+        "interaction_variance": 0.00039493793647294773,
+        "internal_variance": 0.0021159047230810946,
+        "mean_success_probability": 0.5033333333333333,
+        "mean_value_magnitude": 0.26343729308829084,
+        "model_probabilities_a": [
+          0.57,
+          0.38,
+          0.56
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": -0.008243751379411393,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA04::AEA18",
+        "success_probabilities": [
+          0.57,
+          0.38,
+          0.56
+        ]
+      },
+      {
+        "actual_net_gain": 0.39,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 9.175717035533635e-05,
+        "interaction_variance": 0.0004282001283249028,
+        "internal_variance": 0.0008870311310526614,
+        "mean_success_probability": 0.56,
+        "mean_value_magnitude": 0.11489067856713608,
+        "model_probabilities_a": [
+          0.68,
+          0.62,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.003786881428056334,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA02::AEA04",
+        "success_probabilities": [
+          0.68,
+          0.62,
+          0.38
+        ]
+      },
+      {
+        "actual_net_gain": -0.51,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.00013938466458830113,
+        "interaction_variance": 0.00029340471895837356,
+        "internal_variance": 0.0006554112917085462,
+        "mean_success_probability": 0.5666666666666668,
+        "mean_value_magnitude": 0.13234031772403917,
+        "model_probabilities_a": [
+          0.36,
+          0.57,
+          0.37
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.007645375696538564,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA02::AEA18",
+        "success_probabilities": [
+          0.64,
+          0.43000000000000005,
+          0.63
+        ]
+      },
+      {
+        "actual_net_gain": -0.10999999999999997,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0004719747255617697,
+        "interaction_variance": 1.820288197758895e-05,
+        "internal_variance": 2.3021326934464386e-05,
+        "mean_success_probability": 0.61,
+        "mean_value_magnitude": 0.11105338227578489,
+        "model_probabilities_a": [
+          0.58,
+          0.63,
+          0.62
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.014431744100672673,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA18::AEA04",
+        "success_probabilities": [
+          0.58,
+          0.63,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.2899999999999999,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.000374977357268904,
+        "interaction_variance": 0.0034274789846232066,
+        "internal_variance": 0.013596245052478409,
+        "mean_success_probability": 0.5366666666666666,
+        "mean_value_magnitude": 0.5259242391420523,
+        "model_probabilities_a": [
+          0.38,
+          0.62,
+          0.39
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.02856777753708383,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA02::AEA04",
+        "success_probabilities": [
+          0.62,
+          0.38,
+          0.61
+        ]
+      },
+      {
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0007182759438132285,
+        "interaction_variance": 0.00012928966988638068,
+        "internal_variance": 0.0006440620005083071,
+        "mean_success_probability": 0.6,
+        "mean_value_magnitude": 0.29908703687414145,
+        "model_probabilities_a": [
+          0.34,
+          0.43,
+          0.43
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.0498174073748283,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA02::AEA18",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.5700000000000001,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": 0.14,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0007908295056647375,
+        "interaction_variance": 0.0,
+        "internal_variance": 0.0,
+        "mean_success_probability": 0.58,
+        "mean_value_magnitude": 0.34198138442806664,
+        "model_probabilities_a": [
+          0.58,
+          0.58,
+          0.58
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.044717021508490634,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA18::AEA04",
+        "success_probabilities": [
+          0.58,
+          0.58,
+          0.58
+        ]
+      }
+    ],
+    "test": [
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.00015870102027512224,
+        "interaction_variance": 2.159197554763548e-06,
+        "internal_variance": 4.206307999964678e-06,
+        "mean_success_probability": 0.57,
+        "mean_value_magnitude": 0.1255932123956852,
+        "model_probabilities_a": [
+          0.57,
+          0.56,
+          0.58
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.007583049735395924,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA01::AEA08",
+        "success_probabilities": [
+          0.57,
+          0.56,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.21500000000000008,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.00037731440441577237,
+        "interaction_variance": 7.5462880883154216e-06,
+        "internal_variance": 1.903520108531341e-05,
+        "mean_success_probability": 0.6333333333333333,
+        "mean_value_magnitude": 0.1156897824490609,
+        "model_probabilities_a": [
+          0.38,
+          0.34,
+          0.38
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.0208506086530829,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA01::AEA15",
+        "success_probabilities": [
+          0.62,
+          0.6599999999999999,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.4650000000000001,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0004807673539573222,
+        "interaction_variance": 2.2758217938808098e-05,
+        "internal_variance": 6.387219508871592e-05,
+        "mean_success_probability": 0.63,
+        "mean_value_magnitude": 0.1412800798599143,
+        "model_probabilities_a": [
+          0.41,
+          0.35,
+          0.35
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.026732820763577726,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA08::AEA11",
+        "success_probabilities": [
+          0.5900000000000001,
+          0.65,
+          0.65
+        ]
+      },
+      {
+        "actual_net_gain": -0.059999999999999935,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0005295870157778364,
+        "interaction_variance": 3.1991378912293725e-05,
+        "internal_variance": 7.318662665725094e-05,
+        "mean_success_probability": 0.6166666666666667,
+        "mean_value_magnitude": 0.14917335733192333,
+        "model_probabilities_a": [
+          0.42,
+          0.38,
+          0.35
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.024807116710782118,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA08::AEA17",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.62,
+          0.65
+        ]
+      },
+      {
+        "actual_net_gain": 0.21500000000000008,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0003702333183762667,
+        "interaction_variance": 1.1569791199258359e-05,
+        "internal_variance": 1.975897947468564e-05,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.11786870849864402,
+        "model_probabilities_a": [
+          0.62,
+          0.58,
+          0.62
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.015145324479710719,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA11::AEA01",
+        "success_probabilities": [
+          0.62,
+          0.58,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.4650000000000001,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0007018908438213092,
+        "interaction_variance": 5.332114518438004e-05,
+        "internal_variance": 0.00014520448660671202,
+        "mean_success_probability": 0.6233333333333334,
+        "mean_value_magnitude": 0.17724116959264133,
+        "model_probabilities_a": [
+          0.61,
+          0.67,
+          0.59
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.033719488499518196,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA15::AEA08",
+        "success_probabilities": [
+          0.61,
+          0.67,
+          0.59
+        ]
+      },
+      {
+        "actual_net_gain": -0.01,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.00018417340490935465,
+        "interaction_variance": 2.1309319576288923e-05,
+        "internal_variance": 8.537353003438056e-05,
+        "mean_success_probability": 0.5733333333333334,
+        "mean_value_magnitude": 0.18520762604697605,
+        "model_probabilities_a": [
+          0.42,
+          0.46,
+          0.4
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.017163785153556495,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA15::AEA11",
+        "success_probabilities": [
+          0.5800000000000001,
+          0.54,
+          0.6
+        ]
+      },
+      {
+        "actual_net_gain": -0.30999999999999994,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.002344269433516006,
+        "interaction_variance": 4.68853886703202e-05,
+        "internal_variance": 4.453062513308315e-05,
+        "mean_success_probability": 0.6333333333333333,
+        "mean_value_magnitude": 0.1769480030876275,
+        "model_probabilities_a": [
+          0.66,
+          0.62,
+          0.62
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.03718613415670067,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA17::AEA01",
+        "success_probabilities": [
+          0.66,
+          0.62,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.515,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0028013196186004326,
+        "interaction_variance": 0.00011433957626940531,
+        "internal_variance": 0.00016004449898265248,
+        "mean_success_probability": 0.6399999999999999,
+        "mean_value_magnitude": 0.22363789019770106,
+        "model_probabilities_a": [
+          0.34,
+          0.4,
+          0.34
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.05261860925535627,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA17::AEA11",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.6,
+          0.6599999999999999
+        ]
+      },
+      {
+        "actual_net_gain": 0.515,
+        "benchmark": "lfp_real_pair_conductivity",
+        "external_variance": 0.0014639578749965827,
+        "interaction_variance": 0.00032340943549041714,
+        "internal_variance": 0.0007164153557541873,
+        "mean_success_probability": 0.6566666666666666,
+        "mean_value_magnitude": 0.18174555209379833,
+        "model_probabilities_a": [
+          0.25,
+          0.35,
+          0.43
+        ],
+        "objective": "conductivity",
+        "predicted_mean_net_gain": 0.04694693965605682,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::conductivity::AEA17::AEA15",
+        "success_probabilities": [
+          0.75,
+          0.65,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": 0.59,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0004578080041840386,
+        "interaction_variance": 1.4306500130751237e-05,
+        "internal_variance": 2.6805528790254383e-05,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.1372866979377375,
+        "model_probabilities_a": [
+          0.62,
+          0.62,
+          0.58
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.019287828893384,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA01::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.62,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0002095338846876969,
+        "interaction_variance": 0.0006547933896490532,
+        "internal_variance": 0.0028762629260824014,
+        "mean_success_probability": 0.5533333333333333,
+        "mean_value_magnitude": 0.28442027845438084,
+        "model_probabilities_a": [
+          0.62,
+          0.62,
+          0.42
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.02033816303513395,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA11::AEA01",
+        "success_probabilities": [
+          0.62,
+          0.62,
+          0.42
+        ]
+      },
+      {
+        "actual_net_gain": 0.94,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.000862461522442525,
+        "interaction_variance": 4.312307612212538e-06,
+        "internal_variance": 7.067706435119138e-06,
+        "mean_success_probability": 0.5666666666666665,
+        "mean_value_magnitude": 0.28197818602702573,
+        "model_probabilities_a": [
+          0.56,
+          0.57,
+          0.57
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.02759709147027009,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA11::AEA08",
+        "success_probabilities": [
+          0.56,
+          0.57,
+          0.57
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0005771526625335368,
+        "interaction_variance": 5.490156123981338e-06,
+        "internal_variance": 1.7217263604322515e-05,
+        "mean_success_probability": 0.5966666666666667,
+        "mean_value_magnitude": 0.22005352505051354,
+        "model_probabilities_a": [
+          0.61,
+          0.59,
+          0.59
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.032543681509765936,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA15::AEA01",
+        "success_probabilities": [
+          0.61,
+          0.59,
+          0.59
+        ]
+      },
+      {
+        "actual_net_gain": -0.86,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 2.4891036945398685e-05,
+        "interaction_variance": 0.0004884866000534455,
+        "internal_variance": 0.0008660147929600762,
+        "mean_success_probability": 0.5133333333333333,
+        "mean_value_magnitude": 0.2491088118322785,
+        "model_probabilities_a": [
+          0.44,
+          0.57,
+          0.45
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": -0.003357098351139215,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA15::AEA08",
+        "success_probabilities": [
+          0.56,
+          0.43000000000000005,
+          0.55
+        ]
+      },
+      {
+        "actual_net_gain": -0.10999999999999997,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 3.879261454323989e-05,
+        "interaction_variance": 0.00015678681711226138,
+        "internal_variance": 0.0002350417536380433,
+        "mean_success_probability": 0.54,
+        "mean_value_magnitude": 0.09532400397292126,
+        "model_probabilities_a": [
+          0.57,
+          0.43,
+          0.62
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": -0.002374079682166303,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA15::AEA11",
+        "success_probabilities": [
+          0.57,
+          0.43,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.29000000000000004,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0018392171806686523,
+        "interaction_variance": 3.352739652260554e-05,
+        "internal_variance": 7.253951829739825e-05,
+        "mean_success_probability": 0.66,
+        "mean_value_magnitude": 0.19713055630913534,
+        "model_probabilities_a": [
+          0.64,
+          0.65,
+          0.69
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.05308177801892331,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA01",
+        "success_probabilities": [
+          0.64,
+          0.65,
+          0.69
+        ]
+      },
+      {
+        "actual_net_gain": 0.89,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.0013084654110631217,
+        "interaction_variance": 0.00013380264607779874,
+        "internal_variance": 0.0001950088531565674,
+        "mean_success_probability": 0.5966666666666667,
+        "mean_value_magnitude": 0.22587553673049213,
+        "model_probabilities_a": [
+          0.58,
+          0.64,
+          0.57
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.0336692704345618,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA08",
+        "success_probabilities": [
+          0.58,
+          0.64,
+          0.57
+        ]
+      },
+      {
+        "actual_net_gain": -0.059999999999999935,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.00017134339410579085,
+        "interaction_variance": 1.1328488866498519e-05,
+        "internal_variance": 1.4873074445697343e-05,
+        "mean_success_probability": 0.5733333333333334,
+        "mean_value_magnitude": 0.10226255653772295,
+        "model_probabilities_a": [
+          0.56,
+          0.6,
+          0.56
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.004998508292199373,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA11",
+        "success_probabilities": [
+          0.56,
+          0.6,
+          0.56
+        ]
+      },
+      {
+        "actual_net_gain": 0.04000000000000004,
+        "benchmark": "lfp_real_pair_first_efficiency",
+        "external_variance": 0.00038626579228144667,
+        "interaction_variance": 1.8711837688374614e-05,
+        "internal_variance": 1.9721277054032168e-05,
+        "mean_success_probability": 0.6133333333333333,
+        "mean_value_magnitude": 0.08901532108452324,
+        "model_probabilities_a": [
+          0.58,
+          0.64,
+          0.62
+        ],
+        "objective": "first_efficiency",
+        "predicted_mean_net_gain": 0.010176806112491934,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::first_efficiency::AEA17::AEA15",
+        "success_probabilities": [
+          0.58,
+          0.64,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": -0.41000000000000003,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00038110536529924996,
+        "interaction_variance": 3.230824031083602e-05,
+        "internal_variance": 0.00016105566546963348,
+        "mean_success_probability": 0.6133333333333334,
+        "mean_value_magnitude": 0.1922942174161813,
+        "model_probabilities_a": [
+          0.43,
+          0.35,
+          0.38
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.0335866892810011,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA01::AEA08",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.65,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.74,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.00015628195871707253,
+        "interaction_variance": 0.0004114610944347927,
+        "internal_variance": 0.004852462026453543,
+        "mean_success_probability": 0.5533333333333333,
+        "mean_value_magnitude": 0.40247821990798904,
+        "model_probabilities_a": [
+          0.35,
+          0.43,
+          0.56
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.03293101012351884,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA08::AEA15",
+        "success_probabilities": [
+          0.65,
+          0.5700000000000001,
+          0.43999999999999995
+        ]
+      },
+      {
+        "actual_net_gain": 0.59,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 3.614859996460089e-05,
+        "interaction_variance": 0.0006101883674024593,
+        "internal_variance": 0.001612567676261279,
+        "mean_success_probability": 0.5166666666666667,
+        "mean_value_magnitude": 0.29322028306005193,
+        "model_probabilities_a": [
+          0.44,
+          0.43,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": -0.00022599056466490568,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA11::AEA01",
+        "success_probabilities": [
+          0.56,
+          0.5700000000000001,
+          0.42000000000000004
+        ]
+      },
+      {
+        "actual_net_gain": -0.20999999999999996,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0003446009305541971,
+        "interaction_variance": 1.4065344104252974e-05,
+        "internal_variance": 3.230955046441188e-05,
+        "mean_success_probability": 0.5933333333333333,
+        "mean_value_magnitude": 0.1507237627923665,
+        "model_probabilities_a": [
+          0.62,
+          0.58,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.018135102387908407,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA11::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.58,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": -0.96,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0004245313169046902,
+        "interaction_variance": 0.002759453559880486,
+        "internal_variance": 0.009587430998703943,
+        "mean_success_probability": 0.54,
+        "mean_value_magnitude": 0.48006988169952786,
+        "model_probabilities_a": [
+          0.64,
+          0.4,
+          0.58
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.028405590535962227,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA11::AEA15",
+        "success_probabilities": [
+          0.64,
+          0.4,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0005420321070906373,
+        "interaction_variance": 1.0840642141812769e-05,
+        "internal_variance": 5.019839581142925e-05,
+        "mean_success_probability": 0.6,
+        "mean_value_magnitude": 0.2504954984910636,
+        "model_probabilities_a": [
+          0.59,
+          0.62,
+          0.59
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.04009909969821271,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA15::AEA01",
+        "success_probabilities": [
+          0.59,
+          0.62,
+          0.59
+        ]
+      },
+      {
+        "actual_net_gain": -0.20999999999999996,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0026144931187282276,
+        "interaction_variance": 8.472894366248902e-05,
+        "internal_variance": 0.00046772884153601876,
+        "mean_success_probability": 0.7399999999999999,
+        "mean_value_magnitude": 0.2502843494165377,
+        "model_probabilities_a": [
+          0.22,
+          0.24,
+          0.32
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.1101364877199381,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA15::AEA17",
+        "success_probabilities": [
+          0.78,
+          0.76,
+          0.6799999999999999
+        ]
+      },
+      {
+        "actual_net_gain": 0.14,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0006302611449303499,
+        "interaction_variance": 1.6274965008613746e-05,
+        "internal_variance": 2.76389261775229e-05,
+        "mean_success_probability": 0.6633333333333332,
+        "mean_value_magnitude": 0.10015116308685318,
+        "model_probabilities_a": [
+          0.64,
+          0.7,
+          0.65
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.022716046608372037,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA17::AEA01",
+        "success_probabilities": [
+          0.64,
+          0.7,
+          0.65
+        ]
+      },
+      {
+        "actual_net_gain": 0.54,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 0.0005482637564766489,
+        "interaction_variance": 3.5637144170982245e-05,
+        "internal_variance": 0.00017348722070726578,
+        "mean_success_probability": 0.6333333333333333,
+        "mean_value_magnitude": 0.19373511024457002,
+        "model_probabilities_a": [
+          0.68,
+          0.6,
+          0.62
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.04166269606521867,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA17::AEA08",
+        "success_probabilities": [
+          0.68,
+          0.6,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.74,
+        "benchmark": "lfp_real_pair_formation_gas",
+        "external_variance": 7.871093696273442e-05,
+        "interaction_variance": 0.001853722882755007,
+        "internal_variance": 0.0037682371570381627,
+        "mean_success_probability": 0.5233333333333334,
+        "mean_value_magnitude": 0.2710550284569241,
+        "model_probabilities_a": [
+          0.56,
+          0.64,
+          0.37
+        ],
+        "objective": "formation_gas",
+        "predicted_mean_net_gain": 0.0026492346613231355,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::formation_gas::AEA17::AEA11",
+        "success_probabilities": [
+          0.56,
+          0.64,
+          0.37
+        ]
+      },
+      {
+        "actual_net_gain": -0.51,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0005540044415661619,
+        "interaction_variance": 2.2612426186373847e-05,
+        "internal_variance": 3.342477555921151e-05,
+        "mean_success_probability": 0.5933333333333334,
+        "mean_value_magnitude": 0.15330295272782804,
+        "model_probabilities_a": [
+          0.38,
+          0.42,
+          0.42
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.01861655117586125,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.5800000000000001,
+          0.5800000000000001
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.00046354111653134185,
+        "interaction_variance": 2.5056276569261605e-05,
+        "internal_variance": 4.182389490943882e-05,
+        "mean_success_probability": 0.6233333333333334,
+        "mean_value_magnitude": 0.11276845659822451,
+        "model_probabilities_a": [
+          0.41,
+          0.34,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.017816219294228712,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA11",
+        "success_probabilities": [
+          0.5900000000000001,
+          0.6599999999999999,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.43999999999999995,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.003034883873086766,
+        "interaction_variance": 0.0001845209394836754,
+        "internal_variance": 0.0007269649264679563,
+        "mean_success_probability": 0.6666666666666666,
+        "mean_value_magnitude": 0.32803953995397755,
+        "model_probabilities_a": [
+          0.34,
+          0.28,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.0993465133179925,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA15",
+        "success_probabilities": [
+          0.6599999999999999,
+          0.72,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.005068926824959241,
+        "interaction_variance": 3.5079078373420174e-05,
+        "internal_variance": 3.360659007646681e-05,
+        "mean_success_probability": 0.6699999999999999,
+        "mean_value_magnitude": 0.20495911200916087,
+        "model_probabilities_a": [
+          0.32,
+          0.35,
+          0.32
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.05968609808311467,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA01::AEA17",
+        "success_probabilities": [
+          0.6799999999999999,
+          0.65,
+          0.6799999999999999
+        ]
+      },
+      {
+        "actual_net_gain": 0.94,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 3.186414217384547e-05,
+        "interaction_variance": 0.00020419062535892812,
+        "internal_variance": 0.003803763832521164,
+        "mean_success_probability": 0.5233333333333333,
+        "mean_value_magnitude": 0.5220753729161115,
+        "model_probabilities_a": [
+          0.43,
+          0.56,
+          0.44
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.014363517402751892,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA08::AEA15",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.43999999999999995,
+          0.56
+        ]
+      },
+      {
+        "actual_net_gain": 0.59,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.001336047685459572,
+        "interaction_variance": 6.234889198811315e-05,
+        "internal_variance": 0.0002649249721029854,
+        "mean_success_probability": 0.6000000000000001,
+        "mean_value_magnitude": 0.3767281409690923,
+        "model_probabilities_a": [
+          0.43,
+          0.39,
+          0.38
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.06534562819381848,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA08::AEA17",
+        "success_probabilities": [
+          0.5700000000000001,
+          0.61,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.84,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0005821217636993241,
+        "interaction_variance": 2.3760071987727566e-05,
+        "internal_variance": 6.121521361998226e-05,
+        "mean_success_probability": 0.5933333333333333,
+        "mean_value_magnitude": 0.2074655322615059,
+        "model_probabilities_a": [
+          0.62,
+          0.58,
+          0.58
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.02872689935548109,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA11::AEA08",
+        "success_probabilities": [
+          0.62,
+          0.58,
+          0.58
+        ]
+      },
+      {
+        "actual_net_gain": 0.24,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 0.0001948030413497206,
+        "interaction_variance": 0.0010966689735243545,
+        "internal_variance": 0.0025245175595028885,
+        "mean_success_probability": 0.5299999999999999,
+        "mean_value_magnitude": 0.3529376873609307,
+        "model_probabilities_a": [
+          0.57,
+          0.59,
+          0.43
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.011176261241655818,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA11::AEA17",
+        "success_probabilities": [
+          0.57,
+          0.59,
+          0.43
+        ]
+      },
+      {
+        "actual_net_gain": 0.08999999999999998,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 6.648268202942322e-05,
+        "interaction_variance": 0.0005380942076756454,
+        "internal_variance": 0.0011409161752379874,
+        "mean_success_probability": 0.5266666666666666,
+        "mean_value_magnitude": 0.22261439704981079,
+        "model_probabilities_a": [
+          0.57,
+          0.59,
+          0.42
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.00187276784265656,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA15::AEA11",
+        "success_probabilities": [
+          0.57,
+          0.59,
+          0.42
+        ]
+      },
+      {
+        "actual_net_gain": 0.33999999999999997,
+        "benchmark": "lfp_real_pair_internal_resistance",
+        "external_variance": 6.0139587175991614e-05,
+        "interaction_variance": 0.0006687522093970259,
+        "internal_variance": 0.004068649057742563,
+        "mean_success_probability": 0.5333333333333333,
+        "mean_value_magnitude": 0.2869220869715213,
+        "model_probabilities_a": [
+          0.36,
+          0.62,
+          0.42
+        ],
+        "objective": "internal_resistance",
+        "predicted_mean_net_gain": 0.009128139131434768,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::internal_resistance::AEA17::AEA15",
+        "success_probabilities": [
+          0.64,
+          0.38,
+          0.5800000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.41000000000000003,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 2.6744841181372924e-06,
+        "interaction_variance": 0.0001123283329617653,
+        "internal_variance": 0.000877274113064567,
+        "mean_success_probability": 0.5100000000000001,
+        "mean_value_magnitude": 0.22851410723678353,
+        "model_probabilities_a": [
+          0.58,
+          0.46,
+          0.43
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.005429717855264309,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA01::AEA08",
+        "success_probabilities": [
+          0.42000000000000004,
+          0.54,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": -0.26,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 2.8850946092786945e-06,
+        "interaction_variance": 0.0005250872188887216,
+        "internal_variance": 0.002168616645335086,
+        "mean_success_probability": 0.5066666666666667,
+        "mean_value_magnitude": 0.25889100585408925,
+        "model_probabilities_a": [
+          0.58,
+          0.38,
+          0.56
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": -0.006548119921945474,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA01::AEA15",
+        "success_probabilities": [
+          0.58,
+          0.38,
+          0.56
+        ]
+      },
+      {
+        "actual_net_gain": 0.2899999999999999,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0036646752922114825,
+        "interaction_variance": 0.0001906698903335833,
+        "internal_variance": 0.0005970448757820333,
+        "mean_success_probability": 0.6033333333333334,
+        "mean_value_magnitude": 0.5183340564750841,
+        "model_probabilities_a": [
+          0.38,
+          0.43,
+          0.38
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.09712237167151741,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA01::AEA17",
+        "success_probabilities": [
+          0.62,
+          0.5700000000000001,
+          0.62
+        ]
+      },
+      {
+        "actual_net_gain": 0.69,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.00015401855379279533,
+        "interaction_variance": 0.0008134104872182003,
+        "internal_variance": 0.0018985156750809678,
+        "mean_success_probability": 0.5266666666666667,
+        "mean_value_magnitude": 0.3555003253575925,
+        "model_probabilities_a": [
+          0.56,
+          0.43,
+          0.43
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.008960017352404951,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA08::AEA17",
+        "success_probabilities": [
+          0.43999999999999995,
+          0.5700000000000001,
+          0.5700000000000001
+        ]
+      },
+      {
+        "actual_net_gain": 0.39,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0024055666117976634,
+        "interaction_variance": 9.094769798856976e-06,
+        "internal_variance": 1.7553661082233913e-05,
+        "mean_success_probability": 0.5766666666666667,
+        "mean_value_magnitude": 0.44438574141744375,
+        "model_probabilities_a": [
+          0.58,
+          0.58,
+          0.57
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.05813914701734133,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA01",
+        "success_probabilities": [
+          0.58,
+          0.58,
+          0.57
+        ]
+      },
+      {
+        "actual_net_gain": 0.79,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 7.039711966325944e-05,
+        "interaction_variance": 0.0008799639957907459,
+        "internal_variance": 0.0028110347102604724,
+        "mean_success_probability": 0.5199999999999999,
+        "mean_value_magnitude": 0.37490230129064783,
+        "model_probabilities_a": [
+          0.57,
+          0.57,
+          0.42
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.004996092051625885,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA08",
+        "success_probabilities": [
+          0.57,
+          0.57,
+          0.42
+        ]
+      },
+      {
+        "actual_net_gain": -0.16000000000000003,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.00012253490824715312,
+        "interaction_variance": 0.0005731798187428802,
+        "internal_variance": 0.0018553919726772216,
+        "mean_success_probability": 0.5366666666666667,
+        "mean_value_magnitude": 0.27158193612693565,
+        "model_probabilities_a": [
+          0.38,
+          0.44,
+          0.57
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.009916008649308633,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA15",
+        "success_probabilities": [
+          0.62,
+          0.56,
+          0.43000000000000005
+        ]
+      },
+      {
+        "actual_net_gain": -0.11000000000000008,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.0008244578600504571,
+        "interaction_variance": 2.1985542934678763e-05,
+        "internal_variance": 2.5043285433049504e-05,
+        "mean_success_probability": 0.6000000000000001,
+        "mean_value_magnitude": 0.15322558563596356,
+        "model_probabilities_a": [
+          0.38,
+          0.42,
+          0.4
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.02064511712719272,
+        "proposal_sign": -1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA11::AEA17",
+        "success_probabilities": [
+          0.62,
+          0.5800000000000001,
+          0.6
+        ]
+      },
+      {
+        "actual_net_gain": 0.64,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 8.055829531798983e-05,
+        "interaction_variance": 0.00011821572330687284,
+        "internal_variance": 0.0004864750958060253,
+        "mean_success_probability": 0.5433333333333333,
+        "mean_value_magnitude": 0.21008532882052305,
+        "model_probabilities_a": [
+          0.57,
+          0.59,
+          0.47
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.008207395164445316,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA15::AEA08",
+        "success_probabilities": [
+          0.57,
+          0.59,
+          0.47
+        ]
+      },
+      {
+        "actual_net_gain": 0.03999999999999993,
+        "benchmark": "lfp_real_pair_specific_capacity",
+        "external_variance": 0.001658508083065901,
+        "interaction_variance": 5.182837759580952e-05,
+        "internal_variance": 0.00012005262854475361,
+        "mean_success_probability": 0.6066666666666666,
+        "mean_value_magnitude": 0.29053744069487797,
+        "model_probabilities_a": [
+          0.58,
+          0.62,
+          0.62
+        ],
+        "objective": "specific_capacity",
+        "predicted_mean_net_gain": 0.051981320681573955,
+        "proposal_sign": 1.0,
+        "record_id": "lfp-real-pair::AEA::specific_capacity::AEA17::AEA15",
+        "success_probabilities": [
+          0.58,
+          0.62,
+          0.62
+        ]
+      }
+    ]
+  }
+}

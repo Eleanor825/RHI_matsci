@@ -1,0 +1,171 @@
+{
+  "action_similarity": {
+    "character_bigram_mean_jaccard": 0.20833811573409852,
+    "character_bigram_min_jaccard": 0.1711229946524064,
+    "pair_count": 3,
+    "token_mean_jaccard": 0.20835114437167865,
+    "token_min_jaccard": 0.1592356687898089
+  },
+  "complete_count": 0,
+  "interpretation": {
+    "between_model_dispersion": "Descriptive disagreement across different model backends; it is not an estimate of within-model internal variance.",
+    "reported_external_uncertainty": "A model self-report until linked to controlled evidence perturbations or source interventions.",
+    "reported_internal_uncertainty": "A model self-report until repeated sampling and observed outcomes are available for calibration."
+  },
+  "model_count": 2,
+  "numeric_outputs": {
+    "expected_net_scientific_gain": {
+      "mean": 0.2840666666666667,
+      "population_variance": 0.012646142222222231,
+      "range": 0.26980000000000015,
+      "values": [
+        0.2520000000000001,
+        0.16519999999999993,
+        0.43500000000000005
+      ]
+    },
+    "expected_scientific_utility": {
+      "mean": 0.9266666666666667,
+      "population_variance": 0.0002888888888888877,
+      "range": 0.039999999999999925,
+      "values": [
+        0.92,
+        0.95,
+        0.91
+      ]
+    },
+    "expected_value_of_evidence": {
+      "mean": 0.9433333333333334,
+      "population_variance": 2.222222222222226e-05,
+      "range": 0.010000000000000009,
+      "values": [
+        0.95,
+        0.94,
+        0.94
+      ]
+    },
+    "irreversible_risk": {
+      "mean": 0.08,
+      "population_variance": 0.0010666666666666665,
+      "range": 0.07999999999999999,
+      "values": [
+        0.12,
+        0.08,
+        0.04
+      ]
+    },
+    "p_success": {
+      "mean": 0.8466666666666667,
+      "population_variance": 0.0016888888888888884,
+      "range": 0.09999999999999998,
+      "values": [
+        0.8,
+        0.84,
+        0.9
+      ]
+    },
+    "reported_external_uncertainty": {
+      "mean": 0.7799999999999999,
+      "population_variance": 0.0096,
+      "range": 0.24,
+      "values": [
+        0.9,
+        0.66,
+        0.78
+      ]
+    },
+    "reported_internal_uncertainty": {
+      "mean": 0.3633333333333333,
+      "population_variance": 0.007622222222222222,
+      "range": 0.19,
+      "values": [
+        0.24,
+        0.43,
+        0.42
+      ]
+    }
+  },
+  "outcome_validation_available": false,
+  "reported_internal_uncertainty_is_calibrated": false,
+  "tool_error_rate": 0.1864406779661017,
+  "total_tool_calls": 59,
+  "total_tool_errors": 11,
+  "trajectory_count": 3,
+  "within_model_action_similarity": {
+    "mimorouter-openai/gpt-5.6-luna": {
+      "character_bigram_mean_jaccard": 0.19207317073170732,
+      "character_bigram_min_jaccard": 0.19207317073170732,
+      "pair_count": 1,
+      "token_mean_jaccard": 0.1791044776119403,
+      "token_min_jaccard": 0.1791044776119403
+    }
+  },
+  "within_model_numeric_dispersion": {
+    "mimorouter-openai/gpt-5.6-luna": {
+      "expected_net_scientific_gain": {
+        "mean": 0.3001,
+        "population_variance": 0.018198010000000018,
+        "range": 0.26980000000000015,
+        "values": [
+          0.16519999999999993,
+          0.43500000000000005
+        ]
+      },
+      "expected_scientific_utility": {
+        "mean": 0.9299999999999999,
+        "population_variance": 0.0003999999999999985,
+        "range": 0.039999999999999925,
+        "values": [
+          0.95,
+          0.91
+        ]
+      },
+      "expected_value_of_evidence": {
+        "mean": 0.94,
+        "population_variance": 0.0,
+        "range": 0.0,
+        "values": [
+          0.94,
+          0.94
+        ]
+      },
+      "irreversible_risk": {
+        "mean": 0.06,
+        "population_variance": 0.0004,
+        "range": 0.04,
+        "values": [
+          0.08,
+          0.04
+        ]
+      },
+      "p_success": {
+        "mean": 0.87,
+        "population_variance": 0.0009000000000000016,
+        "range": 0.06000000000000005,
+        "values": [
+          0.84,
+          0.9
+        ]
+      },
+      "reported_external_uncertainty": {
+        "mean": 0.72,
+        "population_variance": 0.0036,
+        "range": 0.12,
+        "values": [
+          0.66,
+          0.78
+        ]
+      },
+      "reported_internal_uncertainty": {
+        "mean": 0.425,
+        "population_variance": 2.5000000000000045e-05,
+        "range": 0.010000000000000009,
+        "values": [
+          0.43,
+          0.42
+        ]
+      }
+    }
+  },
+  "within_model_replication_available": true
+}

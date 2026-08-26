@@ -1,0 +1,3503 @@
+{
+  "budget_fraction": 0.1,
+  "continuous_source_calibrator": {
+    "parameters_by_task": {
+      "discover_unique": {
+        "base_variance": 3.059023205018258e-07,
+        "external_weight": 7.966172014027422,
+        "internal_weight": 5.104197388634983,
+        "mean_bias": -0.02047920950210501,
+        "mean_slope": 0.9800498511566138
+      },
+      "extreme_properties": {
+        "base_variance": 3.059023205018258e-07,
+        "external_weight": 5.733944136027431,
+        "internal_weight": 2.0604102983014845,
+        "mean_bias": 0.006926134623823926,
+        "mean_slope": 1.0065618250224728
+      },
+      "matbench_pairwise": {
+        "base_variance": 0.010004834968495396,
+        "external_weight": 1.0324786296652588,
+        "internal_weight": 0.563552423715694,
+        "mean_bias": 0.054729834541028415,
+        "mean_slope": 1.120187055400443
+      }
+    },
+    "type": "continuous_source_decomposed_gaussian_gain_calibrator",
+    "uses_source_variance": true
+  },
+  "experiment": "h4_sequential_tool_benchmark_v2",
+  "label_margin_consistency": {
+    "discover_unique": 0.9997269500318559,
+    "extreme_properties": 1.0,
+    "matbench_pairwise": 0.995125
+  },
+  "methods": {
+    "base_mean": {
+      "calibration": {
+        "accuracy_at_threshold": 0.8975265017667845,
+        "aurc": 0.8354801945097282,
+        "brier": 0.08943198439776068,
+        "confidently_wrong_rate": 0.0016061676839061998,
+        "coverage": 0.004818503051718599,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.02741997788795,
+        "log_loss": 0.32213802472871783,
+        "n": 3113.0,
+        "selective_accuracy": 0.6666666666666666,
+        "selective_risk": 0.33333333333333337
+      },
+      "method_metadata": {
+        "acquisition_counts": {
+          "acceptance": 0,
+          "feedback": 0,
+          "test": 0
+        },
+        "acquisition_policy": "none"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 0,
+            "acquisition_fraction": 0.0,
+            "break_even_tool_cost_per_acquired_action": null,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": 0.0,
+              "cost_0.0010": 0.0,
+              "cost_0.0020": 0.0,
+              "cost_0.0050": 0.0,
+              "cost_0.0100": 0.0
+            },
+            "coverage": 0.0,
+            "population_net_gain": 0.0,
+            "population_net_gain_all_actions_acquire_tool": 0.0,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.0,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 0,
+            "acquisition_fraction": 0.0,
+            "break_even_tool_cost_per_acquired_action": null,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": 0.0,
+              "cost_0.0010": 0.0,
+              "cost_0.0020": 0.0,
+              "cost_0.0050": 0.0,
+              "cost_0.0100": 0.0
+            },
+            "coverage": 0.0,
+            "population_net_gain": 0.0,
+            "population_net_gain_all_actions_acquire_tool": 0.0,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.0,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 0,
+            "acquisition_fraction": 0.0,
+            "break_even_tool_cost_per_acquired_action": null,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": 0.0,
+              "cost_0.0010": 0.0,
+              "cost_0.0020": 0.0,
+              "cost_0.0050": 0.0,
+              "cost_0.0100": 0.0
+            },
+            "coverage": 0.0,
+            "population_net_gain": 0.0,
+            "population_net_gain_all_actions_acquire_tool": 0.0,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.0,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 0,
+            "acquisition_fraction": 0.0,
+            "break_even_tool_cost_per_acquired_action": null,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": 0.0,
+              "cost_0.0010": 0.0,
+              "cost_0.0020": 0.0,
+              "cost_0.0050": 0.0,
+              "cost_0.0100": 0.0
+            },
+            "coverage": 0.0,
+            "population_net_gain": 0.0,
+            "population_net_gain_all_actions_acquire_tool": 0.0,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.0,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 0,
+            "acquisition_fraction": 0.0,
+            "break_even_tool_cost_per_acquired_action": null,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": 0.0,
+              "cost_0.0010": 0.0,
+              "cost_0.0020": 0.0,
+              "cost_0.0050": 0.0,
+              "cost_0.0100": 0.0
+            },
+            "coverage": 0.0,
+            "population_net_gain": 0.0,
+            "population_net_gain_all_actions_acquire_tool": 0.0,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.0,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 0,
+            "acquisition_fraction": 0.0,
+            "break_even_tool_cost_per_acquired_action": null,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": 0.0,
+              "cost_0.0010": 0.0,
+              "cost_0.0020": 0.0,
+              "cost_0.0050": 0.0,
+              "cost_0.0100": 0.0
+            },
+            "coverage": 0.0,
+            "population_net_gain": 0.0,
+            "population_net_gain_all_actions_acquire_tool": 0.0,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.0,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "stage": "base",
+      "tool_cost": 0.0
+    },
+    "continuous_mean": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9302923225184709,
+        "aurc": 0.714169321889154,
+        "brier": 0.06280526058090985,
+        "confidently_wrong_rate": 0.004176035978156119,
+        "coverage": 0.04272406039190491,
+        "coverage_at_risk_0.05": 0.03437198843559268,
+        "coverage_at_risk_0.10": 0.043045293928686154,
+        "ece": 0.05397502849428534,
+        "log_loss": 0.3171280568551276,
+        "n": 3113.0,
+        "selective_accuracy": 0.9022556390977443,
+        "selective_risk": 0.09774436090225569
+      },
+      "method_metadata": {
+        "acquisition_counts": {
+          "acceptance": 2080,
+          "feedback": 3030,
+          "test": 3113
+        },
+        "acquisition_policy": "all_actions",
+        "continuous_gain_calibrator": {
+          "parameters_by_task": {
+            "discover_unique": {
+              "base_variance": 0.0483740310425274,
+              "external_weight": 0.0,
+              "internal_weight": 0.0,
+              "mean_bias": 0.22718937973486722,
+              "mean_slope": 1.2554619048061528
+            },
+            "extreme_properties": {
+              "base_variance": 0.005429772222756937,
+              "external_weight": 0.0,
+              "internal_weight": 0.0,
+              "mean_bias": 0.004006364699819504,
+              "mean_slope": 1.0081732421025211
+            },
+            "matbench_pairwise": {
+              "base_variance": 0.022076938403622175,
+              "external_weight": 0.0,
+              "internal_weight": 0.0,
+              "mean_bias": 0.07050526960163903,
+              "mean_slope": 1.1566615759193544
+            }
+          },
+          "type": "continuous_source_decomposed_gaussian_gain_calibrator",
+          "uses_source_variance": false
+        }
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.1138220231916951,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.7376948130087223
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.001150407436676768,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.001150407436676768,
+              "cost_0.0005": 0.0006504074366767681,
+              "cost_0.0010": 0.00015040743667676815,
+              "cost_0.0020": -0.0008495925633232318,
+              "cost_0.0050": -0.0038495925633232316,
+              "cost_0.0100": -0.008849592563323232
+            },
+            "coverage": 0.014776742691937038,
+            "population_net_gain": -0.07384959256332323,
+            "population_net_gain_all_actions_acquire_tool": -0.07384959256332323,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 46,
+            "selected_mean_gain": 0.07785257283423433,
+            "selected_mean_gain_after_tool_cost": 0.002852572834234332,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {
+              "discover_unique": 0.0,
+              "extreme_properties": 0.0,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.7376948130087223,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.11538461538461539,
+            "risk_upper_bound": 0.21539191130251215,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.46575785319315355
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0016424643727408937,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0016424643727408937,
+              "cost_0.0005": 0.0011424643727408936,
+              "cost_0.0010": 0.0006424643727408936,
+              "cost_0.0020": -0.0003575356272591064,
+              "cost_0.0050": -0.0033575356272591062,
+              "cost_0.0100": -0.008357535627259107
+            },
+            "coverage": 0.048506264053967234,
+            "population_net_gain": -0.07335753562725911,
+            "population_net_gain_all_actions_acquire_tool": -0.07335753562725911,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 151,
+            "selected_mean_gain": 0.03386087147246624,
+            "selected_mean_gain_after_tool_cost": -0.04113912852753376,
+            "selected_mean_shortfall": 0.010428385791157712,
+            "selective_risk": 0.1456953642384106,
+            "task_risks": {
+              "discover_unique": 0.1,
+              "extreme_properties": 0.2727272727272727,
+              "matbench_pairwise": 0.12605042016806722
+            },
+            "threshold": 0.46575785319315355,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.2727272727272727,
+            "worst_task_risk": 0.2727272727272727
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.11646398614721355,
+            "risk_upper_bound": 0.1926462626831396,
+            "selected_count": 416,
+            "selected_fraction": 0.2,
+            "threshold": 0.010667432534834626
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.02391446962977392,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.02391446962977392,
+              "cost_0.0005": -0.02441446962977392,
+              "cost_0.0010": -0.024914469629773922,
+              "cost_0.0020": -0.02591446962977392,
+              "cost_0.0050": -0.02891446962977392,
+              "cost_0.0100": -0.033914469629773916
+            },
+            "coverage": 0.19916479280436877,
+            "population_net_gain": -0.09891446962977392,
+            "population_net_gain_all_actions_acquire_tool": -0.09891446962977392,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 620,
+            "selected_mean_gain": -0.12007378057659067,
+            "selected_mean_gain_after_tool_cost": -0.19507378057659067,
+            "selected_mean_shortfall": 0.143415316173578,
+            "selective_risk": 0.6129032258064516,
+            "task_risks": {
+              "discover_unique": 0.25210084033613445,
+              "extreme_properties": 0.5652173913043478,
+              "matbench_pairwise": 0.7120879120879121
+            },
+            "threshold": 0.010667432534834626,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.7303370786516854,
+            "worst_task_risk": 0.7120879120879121
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.11646398614721355,
+            "risk_upper_bound": 0.1926462626831396,
+            "selected_count": 416,
+            "selected_fraction": 0.2,
+            "threshold": 0.010667432534834626
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.02391446962977392,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.02391446962977392,
+              "cost_0.0005": -0.02441446962977392,
+              "cost_0.0010": -0.024914469629773922,
+              "cost_0.0020": -0.02591446962977392,
+              "cost_0.0050": -0.02891446962977392,
+              "cost_0.0100": -0.033914469629773916
+            },
+            "coverage": 0.19916479280436877,
+            "population_net_gain": -0.09891446962977392,
+            "population_net_gain_all_actions_acquire_tool": -0.09891446962977392,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 620,
+            "selected_mean_gain": -0.12007378057659067,
+            "selected_mean_gain_after_tool_cost": -0.19507378057659067,
+            "selected_mean_shortfall": 0.143415316173578,
+            "selective_risk": 0.6129032258064516,
+            "task_risks": {
+              "discover_unique": 0.25210084033613445,
+              "extreme_properties": 0.5652173913043478,
+              "matbench_pairwise": 0.7120879120879121
+            },
+            "threshold": 0.010667432534834626,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.7303370786516854,
+            "worst_task_risk": 0.7120879120879121
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.075
+    },
+    "continuous_sd_worth": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9270799871506585,
+        "aurc": 0.7108520526185054,
+        "brier": 0.05706839107043983,
+        "confidently_wrong_rate": 0.0028911018310311598,
+        "coverage": 0.0369418567298426,
+        "coverage_at_risk_0.05": 0.032123353678123995,
+        "coverage_at_risk_0.10": 0.040154192097654993,
+        "ece": 0.03977405162675559,
+        "log_loss": 0.29133810128716386,
+        "n": 3113.0,
+        "selective_accuracy": 0.9217391304347826,
+        "selective_risk": 0.07826086956521738
+      },
+      "method_metadata": {
+        "acquisition_counts": {
+          "acceptance": 2080,
+          "feedback": 3030,
+          "test": 3113
+        },
+        "acquisition_policy": "all_actions",
+        "continuous_gain_calibrator": {
+          "parameters_by_task": {
+            "discover_unique": {
+              "base_variance": 3.059023205018258e-07,
+              "external_weight": 7.966172014027422,
+              "internal_weight": 5.104197388634983,
+              "mean_bias": -0.02047920950210501,
+              "mean_slope": 0.9800498511566138
+            },
+            "extreme_properties": {
+              "base_variance": 3.059023205018258e-07,
+              "external_weight": 5.733944136027431,
+              "internal_weight": 2.0604102983014845,
+              "mean_bias": 0.006926134623823926,
+              "mean_slope": 1.0065618250224728
+            },
+            "matbench_pairwise": {
+              "base_variance": 0.010004834968495396,
+              "external_weight": 1.0324786296652588,
+              "internal_weight": 0.563552423715694,
+              "mean_bias": 0.054729834541028415,
+              "mean_slope": 1.120187055400443
+            }
+          },
+          "type": "continuous_source_decomposed_gaussian_gain_calibrator",
+          "uses_source_variance": true
+        }
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.1138220231916951,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.7693034633047477
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0011205063456342023,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0011205063456342023,
+              "cost_0.0005": 0.0006205063456342023,
+              "cost_0.0010": 0.00012050634563420229,
+              "cost_0.0020": -0.0008794936543657977,
+              "cost_0.0050": -0.0038794936543657976,
+              "cost_0.0100": -0.008879493654365796
+            },
+            "coverage": 0.0176678445229682,
+            "population_net_gain": -0.07387949365436579,
+            "population_net_gain_all_actions_acquire_tool": -0.07387949365436579,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 55,
+            "selected_mean_gain": 0.06342065916289585,
+            "selected_mean_gain_after_tool_cost": -0.011579340837104143,
+            "selected_mean_shortfall": 0.00032792457734721035,
+            "selective_risk": 0.03636363636363636,
+            "task_risks": {
+              "discover_unique": 0.0,
+              "extreme_properties": 0.11764705882352941,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.7693034633047477,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.11764705882352941,
+            "worst_task_risk": 0.11764705882352941
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.15384615384615385,
+            "risk_upper_bound": 0.26165993553717887,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.3981649170513798
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.001803136250142631,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.001803136250142631,
+              "cost_0.0005": 0.0013031362501426313,
+              "cost_0.0010": 0.0008031362501426312,
+              "cost_0.0020": -0.00019686374985736883,
+              "cost_0.0050": -0.0031968637498573683,
+              "cost_0.0100": -0.00819686374985737
+            },
+            "coverage": 0.047542563443623516,
+            "population_net_gain": -0.07319686374985737,
+            "population_net_gain_all_actions_acquire_tool": -0.07319686374985737,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 148,
+            "selected_mean_gain": 0.037926778018202774,
+            "selected_mean_gain_after_tool_cost": -0.03707322198179722,
+            "selected_mean_shortfall": 0.003834467840212121,
+            "selective_risk": 0.13513513513513514,
+            "task_risks": {
+              "discover_unique": 0.0,
+              "extreme_properties": 0.21739130434782608,
+              "matbench_pairwise": 0.12096774193548387
+            },
+            "threshold": 0.3981649170513798,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.21739130434782608,
+            "worst_task_risk": 0.21739130434782608
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0062952377312870825,
+            "risk_upper_bound": 0.19283975092825958,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.3981649170513798
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.001803136250142631,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.001803136250142631,
+              "cost_0.0005": 0.0013031362501426313,
+              "cost_0.0010": 0.0008031362501426312,
+              "cost_0.0020": -0.00019686374985736883,
+              "cost_0.0050": -0.0031968637498573683,
+              "cost_0.0100": -0.00819686374985737
+            },
+            "coverage": 0.047542563443623516,
+            "population_net_gain": -0.07319686374985737,
+            "population_net_gain_all_actions_acquire_tool": -0.07319686374985737,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 148,
+            "selected_mean_gain": 0.037926778018202774,
+            "selected_mean_gain_after_tool_cost": -0.03707322198179722,
+            "selected_mean_shortfall": 0.003834467840212121,
+            "selective_risk": 0.13513513513513514,
+            "task_risks": {
+              "discover_unique": 0.0,
+              "extreme_properties": 0.21739130434782608,
+              "matbench_pairwise": 0.12096774193548387
+            },
+            "threshold": 0.3981649170513798,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.21739130434782608,
+            "worst_task_risk": 0.21739130434782608
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.08199169492263048,
+            "risk_upper_bound": 0.23227713175927314,
+            "selected_count": 208,
+            "selected_fraction": 0.1,
+            "threshold": 0.21827536264879105
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.0057029749606712,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.0057029749606712,
+              "cost_0.0005": -0.0062029749606712,
+              "cost_0.0010": -0.0067029749606712,
+              "cost_0.0020": -0.007702974960671199,
+              "cost_0.0050": -0.0107029749606712,
+              "cost_0.0100": -0.015702974960671197
+            },
+            "coverage": 0.09476389335046578,
+            "population_net_gain": -0.08070297496067119,
+            "population_net_gain_all_actions_acquire_tool": -0.08070297496067119,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 295,
+            "selected_mean_gain": -0.06018088492396422,
+            "selected_mean_gain_after_tool_cost": -0.1351808849239642,
+            "selected_mean_shortfall": 0.09065956794343408,
+            "selective_risk": 0.34915254237288135,
+            "task_risks": {
+              "discover_unique": 0.30303030303030304,
+              "extreme_properties": 0.4166666666666667,
+              "matbench_pairwise": 0.35233160621761656
+            },
+            "threshold": 0.21827536264879105,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.4166666666666667,
+            "worst_task_risk": 0.4166666666666667
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.075
+    },
+    "screening_mean": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9074847414070029,
+        "aurc": 0.7507419671094644,
+        "brier": 0.07157825832590121,
+        "confidently_wrong_rate": 0.012528107934468359,
+        "coverage": 0.03662062319306136,
+        "coverage_at_risk_0.05": 0.0057822036620623195,
+        "coverage_at_risk_0.10": 0.006424670735624799,
+        "ece": 0.010843249065797735,
+        "log_loss": 0.2471254249903622,
+        "n": 3113.0,
+        "selective_accuracy": 0.6578947368421053,
+        "selective_risk": 0.3421052631578947
+      },
+      "method_metadata": {
+        "acquisition_counts": {
+          "acceptance": 2080,
+          "feedback": 3030,
+          "test": 3113
+        },
+        "acquisition_policy": "all_actions"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.025,
+            "population_net_gain_all_actions_acquire_tool": -0.025,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 77.825,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.025,
+            "population_net_gain_all_actions_acquire_tool": -0.025,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 77.825,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.025,
+            "population_net_gain_all_actions_acquire_tool": -0.025,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 77.825,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.025,
+            "population_net_gain_all_actions_acquire_tool": -0.025,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 77.825,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.025,
+            "population_net_gain_all_actions_acquire_tool": -0.025,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 77.825,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.025,
+            "population_net_gain_all_actions_acquire_tool": -0.025,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 77.825,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "stage": "screening",
+      "tool_cost": 0.025
+    },
+    "sd_worth": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9367169932540957,
+        "aurc": 0.6874016254382612,
+        "brier": 0.045941151781913186,
+        "confidently_wrong_rate": 0.004176035978156119,
+        "coverage": 0.04914873112752972,
+        "coverage_at_risk_0.05": 0.032123353678123995,
+        "coverage_at_risk_0.10": 0.055894635399935756,
+        "ece": 0.027648713014606655,
+        "log_loss": 0.14606258400053346,
+        "n": 3113.0,
+        "selective_accuracy": 0.9150326797385621,
+        "selective_risk": 0.08496732026143794
+      },
+      "method_metadata": {
+        "acquisition_counts": {
+          "acceptance": 2080,
+          "feedback": 3030,
+          "test": 3113
+        },
+        "acquisition_policy": "all_actions"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.019230769230769232,
+            "risk_upper_bound": 0.08364645302788168,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.5160714487345821
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.00022067189809651946,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.00022067189809651946,
+              "cost_0.0005": -0.0007206718980965193,
+              "cost_0.0010": -0.0012206718980965195,
+              "cost_0.0020": -0.0022206718980965195,
+              "cost_0.0050": -0.005220671898096519,
+              "cost_0.0100": -0.01022067189809652
+            },
+            "coverage": 0.045936395759717315,
+            "population_net_gain": -0.07522067189809652,
+            "population_net_gain_all_actions_acquire_tool": -0.07522067189809652,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 143,
+            "selected_mean_gain": -0.004803857473947308,
+            "selected_mean_gain_after_tool_cost": -0.0798038574739473,
+            "selected_mean_shortfall": 0.06311343262844418,
+            "selective_risk": 0.08391608391608392,
+            "task_risks": {
+              "discover_unique": 0.12,
+              "extreme_properties": 0.15789473684210525,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.5160714487345821,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.15789473684210525,
+            "worst_task_risk": 0.15789473684210525
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.019230769230769232,
+            "risk_upper_bound": 0.08364645302788168,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.5160714487345821
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.00022067189809651946,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.00022067189809651946,
+              "cost_0.0005": -0.0007206718980965193,
+              "cost_0.0010": -0.0012206718980965195,
+              "cost_0.0020": -0.0022206718980965195,
+              "cost_0.0050": -0.005220671898096519,
+              "cost_0.0100": -0.01022067189809652
+            },
+            "coverage": 0.045936395759717315,
+            "population_net_gain": -0.07522067189809652,
+            "population_net_gain_all_actions_acquire_tool": -0.07522067189809652,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 143,
+            "selected_mean_gain": -0.004803857473947308,
+            "selected_mean_gain_after_tool_cost": -0.0798038574739473,
+            "selected_mean_shortfall": 0.06311343262844418,
+            "selective_risk": 0.08391608391608392,
+            "task_risks": {
+              "discover_unique": 0.12,
+              "extreme_properties": 0.15789473684210525,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.5160714487345821,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.15789473684210525,
+            "worst_task_risk": 0.15789473684210525
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.019230769230769232,
+            "risk_upper_bound": 0.08364645302788168,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.5160714487345821
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.00022067189809651946,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.00022067189809651946,
+              "cost_0.0005": -0.0007206718980965193,
+              "cost_0.0010": -0.0012206718980965195,
+              "cost_0.0020": -0.0022206718980965195,
+              "cost_0.0050": -0.005220671898096519,
+              "cost_0.0100": -0.01022067189809652
+            },
+            "coverage": 0.045936395759717315,
+            "population_net_gain": -0.07522067189809652,
+            "population_net_gain_all_actions_acquire_tool": -0.07522067189809652,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 143,
+            "selected_mean_gain": -0.004803857473947308,
+            "selected_mean_gain_after_tool_cost": -0.0798038574739473,
+            "selected_mean_shortfall": 0.06311343262844418,
+            "selective_risk": 0.08391608391608392,
+            "task_risks": {
+              "discover_unique": 0.12,
+              "extreme_properties": 0.15789473684210525,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.5160714487345821,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.15789473684210525,
+            "worst_task_risk": 0.15789473684210525
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.019230769230769232,
+            "risk_upper_bound": 0.24660015401503688,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.5160714487345821
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.00022067189809651946,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.00022067189809651946,
+              "cost_0.0005": -0.0007206718980965193,
+              "cost_0.0010": -0.0012206718980965195,
+              "cost_0.0020": -0.0022206718980965195,
+              "cost_0.0050": -0.005220671898096519,
+              "cost_0.0100": -0.01022067189809652
+            },
+            "coverage": 0.045936395759717315,
+            "population_net_gain": -0.07522067189809652,
+            "population_net_gain_all_actions_acquire_tool": -0.07522067189809652,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 143,
+            "selected_mean_gain": -0.004803857473947308,
+            "selected_mean_gain_after_tool_cost": -0.0798038574739473,
+            "selected_mean_shortfall": 0.06311343262844418,
+            "selective_risk": 0.08391608391608392,
+            "task_risks": {
+              "discover_unique": 0.12,
+              "extreme_properties": 0.15789473684210525,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.5160714487345821,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.15789473684210525,
+            "worst_task_risk": 0.15789473684210525
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.075
+    },
+    "sparse_continuous_mean": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9168005139736588,
+        "aurc": 0.7787990963268138,
+        "brier": 0.0780152112674558,
+        "confidently_wrong_rate": 0.00256986829424992,
+        "coverage": 0.026019916479280435,
+        "coverage_at_risk_0.05": 0.0224863475746868,
+        "coverage_at_risk_0.10": 0.026341150016061677,
+        "ece": 0.07444369088366953,
+        "log_loss": 1.4128547569974335,
+        "n": 3113.0,
+        "selective_accuracy": 0.9012345679012346,
+        "selective_risk": 0.09876543209876543
+      },
+      "method_metadata": {
+        "acquisition": {
+          "base_score_threshold": 0.08222265709367524,
+          "feedback_acquired_count": 909.0,
+          "feedback_executed_count": 116.0,
+          "feedback_total_net_gain": 4.823769384256682,
+          "requested_fraction": 0.3
+        },
+        "acquisition_counts": {
+          "acceptance": 606,
+          "feedback": 909,
+          "test": 1131
+        },
+        "acquisition_policy": "feedback_selected_base_score_threshold",
+        "primary_tool_cost": 0.002,
+        "source_method": "continuous_mean"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001816575650497912,
+              "cost_0.0010": -0.0003633151300995824,
+              "cost_0.0020": -0.0007266302601991648,
+              "cost_0.0050": -0.001816575650497912,
+              "cost_0.0100": -0.003633151300995824
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0007266302601991648,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.1138220231916951,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.6625937855021105
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0029130684558799887,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0010583618450370278,
+              "cost_0.0005": 0.0008767042799872365,
+              "cost_0.0010": 0.0006950467149374452,
+              "cost_0.0020": 0.00033173158483786297,
+              "cost_0.0050": -0.0007582138054608843,
+              "cost_0.0100": -0.0025747894559587964
+            },
+            "coverage": 0.015419209765499518,
+            "population_net_gain": 0.00033173158483786297,
+            "population_net_gain_all_actions_acquire_tool": -0.0009416381549629722,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 48,
+            "selected_mean_gain": 0.06863917549167224,
+            "selected_mean_gain_after_tool_cost": 0.06663917549167224,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {
+              "discover_unique": 0.0,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.6625937855021105,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.1138220231916951,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.6625937855021105
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0029130684558799887,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0010583618450370278,
+              "cost_0.0005": 0.0008767042799872365,
+              "cost_0.0010": 0.0006950467149374452,
+              "cost_0.0020": 0.00033173158483786297,
+              "cost_0.0050": -0.0007582138054608843,
+              "cost_0.0100": -0.0025747894559587964
+            },
+            "coverage": 0.015419209765499518,
+            "population_net_gain": 0.00033173158483786297,
+            "population_net_gain_all_actions_acquire_tool": -0.0009416381549629722,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 48,
+            "selected_mean_gain": 0.06863917549167224,
+            "selected_mean_gain_after_tool_cost": 0.06663917549167224,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {
+              "discover_unique": 0.0,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.6625937855021105,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001816575650497912,
+              "cost_0.0010": -0.0003633151300995824,
+              "cost_0.0020": -0.0007266302601991648,
+              "cost_0.0050": -0.001816575650497912,
+              "cost_0.0100": -0.003633151300995824
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0007266302601991648,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.010188179627512438,
+            "risk_upper_bound": 0.1973643959733905,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.3372150688141065
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0019483838980558705,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0007078773494061001,
+              "cost_0.0005": 0.0005262197843563088,
+              "cost_0.0010": 0.0003445622193065177,
+              "cost_0.0020": -1.8752910793064723e-05,
+              "cost_0.0050": -0.001108698301091812,
+              "cost_0.0100": -0.002925273951589724
+            },
+            "coverage": 0.039190491487311276,
+            "population_net_gain": -1.8752910793064723e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.0012921226505938999,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 122,
+            "selected_mean_gain": 0.01806247695656713,
+            "selected_mean_gain_after_tool_cost": 0.01606247695656713,
+            "selected_mean_shortfall": 0.02190427947321357,
+            "selective_risk": 0.27049180327868855,
+            "task_risks": {
+              "discover_unique": 0.07142857142857142,
+              "matbench_pairwise": 0.2962962962962963
+            },
+            "threshold": 0.3372150688141065,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.35,
+            "worst_task_risk": 0.2962962962962963
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.07651526405645201,
+            "risk_upper_bound": 0.20226201243380665,
+            "selected_count": 208,
+            "selected_fraction": 0.1,
+            "threshold": 0.028709151401806243
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": -0.014481385590759718,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.005261306489929085,
+              "cost_0.0005": -0.005442964054978876,
+              "cost_0.0010": -0.005624621620028667,
+              "cost_0.0020": -0.00598793675012825,
+              "cost_0.0050": -0.007077882140426997,
+              "cost_0.0100": -0.00889445779092491
+            },
+            "coverage": 0.08416318663668487,
+            "population_net_gain": -0.00598793675012825,
+            "population_net_gain_all_actions_acquire_tool": -0.007261306489929085,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 262,
+            "selected_mean_gain": -0.06251315688224901,
+            "selected_mean_gain_after_tool_cost": -0.06451315688224901,
+            "selected_mean_shortfall": 0.09423157643267754,
+            "selective_risk": 0.46564885496183206,
+            "task_risks": {
+              "discover_unique": 0.13043478260869565,
+              "matbench_pairwise": 0.5854922279792746
+            },
+            "threshold": 0.028709151401806243,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.6306306306306306,
+            "worst_task_risk": 0.5854922279792746
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.002
+    },
+    "sparse_continuous_sd_worth": {
+      "calibration": {
+        "accuracy_at_threshold": 0.911660777385159,
+        "aurc": 0.796674968855957,
+        "brier": 0.0805125555047712,
+        "confidently_wrong_rate": 0.0016061676839061998,
+        "coverage": 0.018952778670093158,
+        "coverage_at_risk_0.05": 0.0176678445229682,
+        "coverage_at_risk_0.10": 0.02055894635399936,
+        "ece": 0.07410561278262724,
+        "log_loss": 1.6689913357241044,
+        "n": 3113.0,
+        "selective_accuracy": 0.9152542372881356,
+        "selective_risk": 0.0847457627118644
+      },
+      "method_metadata": {
+        "acquisition": {
+          "base_score_threshold": 0.10976943109634542,
+          "feedback_acquired_count": 606.0,
+          "feedback_executed_count": 93.0,
+          "feedback_total_net_gain": 4.152915094400982,
+          "requested_fraction": 0.2
+        },
+        "acquisition_counts": {
+          "acceptance": 395,
+          "feedback": 608,
+          "test": 881
+        },
+        "acquisition_policy": "feedback_selected_base_score_threshold",
+        "primary_tool_cost": 0.002,
+        "source_method": "continuous_sd_worth"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 881,
+            "acquisition_fraction": 0.2830067459042724,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001415033729521362,
+              "cost_0.0010": -0.0002830067459042724,
+              "cost_0.0020": -0.0005660134918085448,
+              "cost_0.0050": -0.0014150337295213622,
+              "cost_0.0100": -0.0028300674590427243
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0005660134918085448,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 1.762,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.1138220231916951,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.6556131187197508
+          },
+          "test": {
+            "acquired_count": 881,
+            "acquisition_fraction": 0.2830067459042724,
+            "break_even_tool_cost_per_acquired_action": 0.00306209256420039,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0008665928522520218,
+              "cost_0.0005": 0.0007250894792998855,
+              "cost_0.0010": 0.0005835861063477494,
+              "cost_0.0020": 0.00030057936044347697,
+              "cost_0.0050": -0.0005484408772693403,
+              "cost_0.0100": -0.0019634746067907025
+            },
+            "coverage": 0.012849341471249599,
+            "population_net_gain": 0.00030057936044347697,
+            "population_net_gain_all_actions_acquire_tool": -0.0011334071477479783,
+            "regimes_with_min5_selected": 2,
+            "selected_count": 40,
+            "selected_mean_gain": 0.0674425887265136,
+            "selected_mean_gain_after_tool_cost": 0.0654425887265136,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.6556131187197508,
+            "total_acquisition_cost": 1.762,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.1138220231916951,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.6556131187197508
+          },
+          "test": {
+            "acquired_count": 881,
+            "acquisition_fraction": 0.2830067459042724,
+            "break_even_tool_cost_per_acquired_action": 0.00306209256420039,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0008665928522520218,
+              "cost_0.0005": 0.0007250894792998855,
+              "cost_0.0010": 0.0005835861063477494,
+              "cost_0.0020": 0.00030057936044347697,
+              "cost_0.0050": -0.0005484408772693403,
+              "cost_0.0100": -0.0019634746067907025
+            },
+            "coverage": 0.012849341471249599,
+            "population_net_gain": 0.00030057936044347697,
+            "population_net_gain_all_actions_acquire_tool": -0.0011334071477479783,
+            "regimes_with_min5_selected": 2,
+            "selected_count": 40,
+            "selected_mean_gain": 0.0674425887265136,
+            "selected_mean_gain_after_tool_cost": 0.0654425887265136,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.6556131187197508,
+            "total_acquisition_cost": 1.762,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 881,
+            "acquisition_fraction": 0.2830067459042724,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001415033729521362,
+              "cost_0.0010": -0.0002830067459042724,
+              "cost_0.0020": -0.0005660134918085448,
+              "cost_0.0050": -0.0014150337295213622,
+              "cost_0.0100": -0.0028300674590427243
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0005660134918085448,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 1.762,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 881,
+            "acquisition_fraction": 0.2830067459042724,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001415033729521362,
+              "cost_0.0010": -0.0002830067459042724,
+              "cost_0.0020": -0.0005660134918085448,
+              "cost_0.0050": -0.0014150337295213622,
+              "cost_0.0100": -0.0028300674590427243
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0005660134918085448,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 1.762,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.03303030834234447,
+            "risk_upper_bound": 0.26087077520452706,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.24909738448174001
+          },
+          "test": {
+            "acquired_count": 881,
+            "acquisition_fraction": 0.2830067459042724,
+            "break_even_tool_cost_per_acquired_action": -0.002616305033245308,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.000740431973751724,
+              "cost_0.0005": -0.0008819353467038602,
+              "cost_0.0010": -0.0010234387196559965,
+              "cost_0.0020": -0.001306445465560269,
+              "cost_0.0050": -0.002155465703273086,
+              "cost_0.0100": -0.0035704994327944483
+            },
+            "coverage": 0.04111789270799872,
+            "population_net_gain": -0.001306445465560269,
+            "population_net_gain_all_actions_acquire_tool": -0.0027404319737517244,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 128,
+            "selected_mean_gain": -0.018007536986633724,
+            "selected_mean_gain_after_tool_cost": -0.020007536986633725,
+            "selected_mean_shortfall": 0.05482829051470264,
+            "selective_risk": 0.2890625,
+            "task_risks": {
+              "discover_unique": 0.17857142857142858,
+              "matbench_pairwise": 0.32
+            },
+            "threshold": 0.24909738448174001,
+            "total_acquisition_cost": 1.762,
+            "worst_regime_risk_min5": 0.34545454545454546,
+            "worst_task_risk": 0.32
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.002
+    },
+    "sparse_sd_worth": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9257950530035336,
+        "aurc": 0.7690456493877623,
+        "brier": 0.06783418737921734,
+        "confidently_wrong_rate": 0.00256986829424992,
+        "coverage": 0.035014455509155155,
+        "coverage_at_risk_0.05": 0.026341150016061677,
+        "coverage_at_risk_0.10": 0.039190491487311276,
+        "ece": 0.05854149972457886,
+        "log_loss": 1.3392681088630078,
+        "n": 3113.0,
+        "selective_accuracy": 0.926605504587156,
+        "selective_risk": 0.07339449541284404
+      },
+      "method_metadata": {
+        "acquisition": {
+          "base_score_threshold": 0.08222265709367524,
+          "feedback_acquired_count": 909.0,
+          "feedback_executed_count": 120.0,
+          "feedback_total_net_gain": 2.319483661504552,
+          "requested_fraction": 0.3
+        },
+        "acquisition_counts": {
+          "acceptance": 606,
+          "feedback": 909,
+          "test": 1131
+        },
+        "acquisition_policy": "feedback_selected_base_score_threshold",
+        "primary_tool_cost": 0.002,
+        "source_method": "sd_worth"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001816575650497912,
+              "cost_0.0010": -0.0003633151300995824,
+              "cost_0.0020": -0.0007266302601991648,
+              "cost_0.0050": -0.001816575650497912,
+              "cost_0.0100": -0.003633151300995824
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0007266302601991648,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.038461538461538464,
+            "risk_upper_bound": 0.11344856733979423,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.4269119364473545
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": -0.009751199587134881,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.0035427583466269034,
+              "cost_0.0005": -0.0037244159116766947,
+              "cost_0.0010": -0.003906073476726486,
+              "cost_0.0020": -0.004269388606826068,
+              "cost_0.0050": -0.005359333997124816,
+              "cost_0.0100": -0.007175909647622728
+            },
+            "coverage": 0.043366527465467396,
+            "population_net_gain": -0.004269388606826068,
+            "population_net_gain_all_actions_acquire_tool": -0.005542758346626903,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 135,
+            "selected_mean_gain": -0.08169338320777444,
+            "selected_mean_gain_after_tool_cost": -0.08369338320777445,
+            "selected_mean_shortfall": 0.13333333333333333,
+            "selective_risk": 0.13333333333333333,
+            "task_risks": {
+              "discover_unique": 0.21686746987951808,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.4269119364473545,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.21686746987951808,
+            "worst_task_risk": 0.21686746987951808
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.038461538461538464,
+            "risk_upper_bound": 0.11344856733979423,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.4269119364473545
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": -0.009751199587134881,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.0035427583466269034,
+              "cost_0.0005": -0.0037244159116766947,
+              "cost_0.0010": -0.003906073476726486,
+              "cost_0.0020": -0.004269388606826068,
+              "cost_0.0050": -0.005359333997124816,
+              "cost_0.0100": -0.007175909647622728
+            },
+            "coverage": 0.043366527465467396,
+            "population_net_gain": -0.004269388606826068,
+            "population_net_gain_all_actions_acquire_tool": -0.005542758346626903,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 135,
+            "selected_mean_gain": -0.08169338320777444,
+            "selected_mean_gain_after_tool_cost": -0.08369338320777445,
+            "selected_mean_shortfall": 0.13333333333333333,
+            "selective_risk": 0.13333333333333333,
+            "task_risks": {
+              "discover_unique": 0.21686746987951808,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.4269119364473545,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.21686746987951808,
+            "worst_task_risk": 0.21686746987951808
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001816575650497912,
+              "cost_0.0010": -0.0003633151300995824,
+              "cost_0.0020": -0.0007266302601991648,
+              "cost_0.0050": -0.001816575650497912,
+              "cost_0.0100": -0.003633151300995824
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0007266302601991648,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0001816575650497912,
+              "cost_0.0010": -0.0003633151300995824,
+              "cost_0.0020": -0.0007266302601991648,
+              "cost_0.0050": -0.001816575650497912,
+              "cost_0.0100": -0.003633151300995824
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.0007266302601991648,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.038461538461538464,
+            "risk_upper_bound": 0.284864390165247,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.4269119364473545
+          },
+          "test": {
+            "acquired_count": 1131,
+            "acquisition_fraction": 0.3633151300995824,
+            "break_even_tool_cost_per_acquired_action": -0.009751199587134881,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.0035427583466269034,
+              "cost_0.0005": -0.0037244159116766947,
+              "cost_0.0010": -0.003906073476726486,
+              "cost_0.0020": -0.004269388606826068,
+              "cost_0.0050": -0.005359333997124816,
+              "cost_0.0100": -0.007175909647622728
+            },
+            "coverage": 0.043366527465467396,
+            "population_net_gain": -0.004269388606826068,
+            "population_net_gain_all_actions_acquire_tool": -0.005542758346626903,
+            "regimes_with_min5_selected": 3,
+            "selected_count": 135,
+            "selected_mean_gain": -0.08169338320777444,
+            "selected_mean_gain_after_tool_cost": -0.08369338320777445,
+            "selected_mean_shortfall": 0.13333333333333333,
+            "selective_risk": 0.13333333333333333,
+            "task_risks": {
+              "discover_unique": 0.21686746987951808,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.4269119364473545,
+            "total_acquisition_cost": 2.262,
+            "worst_regime_risk_min5": 0.21686746987951808,
+            "worst_task_risk": 0.21686746987951808
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.002
+    },
+    "sparse_tool_probability": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9029874718920655,
+        "aurc": 0.857813517001171,
+        "brier": 0.09611865311290706,
+        "confidently_wrong_rate": 0.00032123353678124,
+        "coverage": 0.007709604882749759,
+        "coverage_at_risk_0.05": 0.007709604882749759,
+        "coverage_at_risk_0.10": 0.008352071956312239,
+        "ece": 0.09585769935824273,
+        "log_loss": 2.590986353004701,
+        "n": 3113.0,
+        "selective_accuracy": 0.9583333333333334,
+        "selective_risk": 0.04166666666666663
+      },
+      "method_metadata": {
+        "acquisition": {
+          "base_score_threshold": 0.3183688572518726,
+          "feedback_acquired_count": 152.0,
+          "feedback_executed_count": 57.0,
+          "feedback_total_net_gain": 1.2574572316041792,
+          "requested_fraction": 0.05
+        },
+        "acquisition_counts": {
+          "acceptance": 97,
+          "feedback": 152,
+          "test": 62
+        },
+        "acquisition_policy": "feedback_selected_base_score_threshold",
+        "primary_tool_cost": 0.002,
+        "source_method": "tool_probability"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.09523809523809523,
+            "risk_upper_bound": 0.2647592360475969,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.4059926506162904
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.02479762946999799,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0004938814735431659,
+              "cost_0.0005": 0.0004839232339029475,
+              "cost_0.0010": 0.000473964994262729,
+              "cost_0.0020": 0.0004540485149822921,
+              "cost_0.0050": 0.0003942990771409815,
+              "cost_0.0100": 0.00029471668073879713
+            },
+            "coverage": 0.008994539029874718,
+            "population_net_gain": 0.0004540485149822921,
+            "population_net_gain_all_actions_acquire_tool": -0.0015061185264568342,
+            "regimes_with_min5_selected": 2,
+            "selected_count": 28,
+            "selected_mean_gain": 0.05490903668356698,
+            "selected_mean_gain_after_tool_cost": 0.05290903668356698,
+            "selected_mean_shortfall": 0.00392133469800385,
+            "selective_risk": 0.10714285714285714,
+            "task_risks": {
+              "matbench_pairwise": 0.10714285714285714
+            },
+            "threshold": 0.4059926506162904,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.125,
+            "worst_task_risk": 0.10714285714285714
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.002
+    },
+    "sparse_verification_mean": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9039511725024093,
+        "aurc": 0.8575818468155288,
+        "brier": 0.0953896797778484,
+        "confidently_wrong_rate": 0.00128493414712496,
+        "coverage": 0.01060070671378092,
+        "coverage_at_risk_0.05": 0.009637006103437198,
+        "coverage_at_risk_0.10": 0.01027947317699968,
+        "ece": 0.09569746297418949,
+        "log_loss": 2.5893041920570643,
+        "n": 3113.0,
+        "selective_accuracy": 0.8787878787878788,
+        "selective_risk": 0.12121212121212122
+      },
+      "method_metadata": {
+        "acquisition": {
+          "base_score_threshold": 0.3183688572518726,
+          "feedback_acquired_count": 152.0,
+          "feedback_executed_count": 71.0,
+          "feedback_total_net_gain": 0.4695622282880723,
+          "requested_fraction": 0.05
+        },
+        "acquisition_counts": {
+          "acceptance": 97,
+          "feedback": 152,
+          "test": 62
+        },
+        "acquisition_policy": "feedback_selected_base_score_threshold",
+        "primary_tool_cost": 0.002,
+        "source_method": "verification_mean"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.023809523809523808,
+            "risk_upper_bound": 0.1588359626330766,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.7441312785055307
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.022995487911643894,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0004579891585357923,
+              "cost_0.0005": 0.0004480309188955739,
+              "cost_0.0010": 0.00043807267925535543,
+              "cost_0.0020": 0.00041815619997491855,
+              "cost_0.0050": 0.00035840676213360793,
+              "cost_0.0100": 0.00025882436573142355
+            },
+            "coverage": 0.006103437198843559,
+            "population_net_gain": 0.00041815619997491855,
+            "population_net_gain_all_actions_acquire_tool": -0.0015420108414642077,
+            "regimes_with_min5_selected": 2,
+            "selected_count": 19,
+            "selected_mean_gain": 0.0750379079222064,
+            "selected_mean_gain_after_tool_cost": 0.0730379079222064,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.7441312785055307,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.023809523809523808,
+            "risk_upper_bound": 0.1588359626330766,
+            "selected_count": 42,
+            "selected_fraction": 0.020192307692307693,
+            "threshold": 0.7441312785055307
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.022995487911643894,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0004579891585357923,
+              "cost_0.0005": 0.0004480309188955739,
+              "cost_0.0010": 0.00043807267925535543,
+              "cost_0.0020": 0.00041815619997491855,
+              "cost_0.0050": 0.00035840676213360793,
+              "cost_0.0100": 0.00025882436573142355
+            },
+            "coverage": 0.006103437198843559,
+            "population_net_gain": 0.00041815619997491855,
+            "population_net_gain_all_actions_acquire_tool": -0.0015420108414642077,
+            "regimes_with_min5_selected": 2,
+            "selected_count": 19,
+            "selected_mean_gain": 0.0750379079222064,
+            "selected_mean_gain_after_tool_cost": 0.0730379079222064,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.7441312785055307,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 62,
+            "acquisition_fraction": 0.019916479280436876,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -9.95823964021844e-06,
+              "cost_0.0010": -1.991647928043688e-05,
+              "cost_0.0020": -3.983295856087376e-05,
+              "cost_0.0050": -9.958239640218439e-05,
+              "cost_0.0100": -0.00019916479280436878
+            },
+            "coverage": 0.0,
+            "population_net_gain": -3.983295856087376e-05,
+            "population_net_gain_all_actions_acquire_tool": -0.002,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 0.124,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.002
+    },
+    "tool_probability": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9408930292322518,
+        "aurc": 0.6865816757319634,
+        "brier": 0.04095814993225669,
+        "confidently_wrong_rate": 0.019274012206874396,
+        "coverage": 0.08352071956312239,
+        "coverage_at_risk_0.05": 0.027947317699967878,
+        "coverage_at_risk_0.10": 0.055894635399935756,
+        "ece": 0.010767143613589852,
+        "log_loss": 0.13382333815844374,
+        "n": 3113.0,
+        "selective_accuracy": 0.7692307692307693,
+        "selective_risk": 0.23076923076923073
+      },
+      "method_metadata": {
+        "acquisition_counts": {
+          "acceptance": 2080,
+          "feedback": 3030,
+          "test": 3113
+        },
+        "acquisition_policy": "all_actions"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.028846153846153848,
+            "risk_upper_bound": 0.09896838143953571,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.7653775038651587
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0012586881703077727,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0012586881703077727,
+              "cost_0.0005": 0.0007586881703077726,
+              "cost_0.0010": 0.00025868817030777274,
+              "cost_0.0020": -0.0007413118296922273,
+              "cost_0.0050": -0.0037413118296922275,
+              "cost_0.0100": -0.008741311829692226
+            },
+            "coverage": 0.050112431737873435,
+            "population_net_gain": -0.07374131182969224,
+            "population_net_gain_all_actions_acquire_tool": -0.07374131182969224,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 156,
+            "selected_mean_gain": 0.02511728380876985,
+            "selected_mean_gain_after_tool_cost": -0.04988271619123015,
+            "selected_mean_shortfall": 0.033187912841326044,
+            "selective_risk": 0.0641025641025641,
+            "task_risks": {
+              "discover_unique": 0.07246376811594203,
+              "extreme_properties": 0.23529411764705882,
+              "matbench_pairwise": 0.014285714285714285
+            },
+            "threshold": 0.7653775038651587,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.23529411764705882,
+            "worst_task_risk": 0.23529411764705882
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.028846153846153848,
+            "risk_upper_bound": 0.09896838143953571,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.7653775038651587
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0012586881703077727,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0012586881703077727,
+              "cost_0.0005": 0.0007586881703077726,
+              "cost_0.0010": 0.00025868817030777274,
+              "cost_0.0020": -0.0007413118296922273,
+              "cost_0.0050": -0.0037413118296922275,
+              "cost_0.0100": -0.008741311829692226
+            },
+            "coverage": 0.050112431737873435,
+            "population_net_gain": -0.07374131182969224,
+            "population_net_gain_all_actions_acquire_tool": -0.07374131182969224,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 156,
+            "selected_mean_gain": 0.02511728380876985,
+            "selected_mean_gain_after_tool_cost": -0.04988271619123015,
+            "selected_mean_shortfall": 0.033187912841326044,
+            "selective_risk": 0.0641025641025641,
+            "task_risks": {
+              "discover_unique": 0.07246376811594203,
+              "extreme_properties": 0.23529411764705882,
+              "matbench_pairwise": 0.014285714285714285
+            },
+            "threshold": 0.7653775038651587,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.23529411764705882,
+            "worst_task_risk": 0.23529411764705882
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.21634615384615385,
+            "risk_upper_bound": 0.2958730445944906,
+            "selected_count": 208,
+            "selected_fraction": 0.1,
+            "threshold": 0.34204482501826083
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.014475014071697387,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.014475014071697387,
+              "cost_0.0005": -0.014975014071697386,
+              "cost_0.0010": -0.015475014071697386,
+              "cost_0.0020": -0.016475014071697387,
+              "cost_0.0050": -0.019475014071697386,
+              "cost_0.0100": -0.024475014071697387
+            },
+            "coverage": 0.11114680372630903,
+            "population_net_gain": -0.08947501407169738,
+            "population_net_gain_all_actions_acquire_tool": -0.08947501407169738,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 346,
+            "selected_mean_gain": -0.13023329134449121,
+            "selected_mean_gain_after_tool_cost": -0.2052332913444912,
+            "selected_mean_shortfall": 0.164012664888536,
+            "selective_risk": 0.30057803468208094,
+            "task_risks": {
+              "discover_unique": 0.32,
+              "extreme_properties": 0.5581395348837209,
+              "matbench_pairwise": 0.1875
+            },
+            "threshold": 0.34204482501826083,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.5581395348837209,
+            "worst_task_risk": 0.5581395348837209
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.1288272309392374,
+            "risk_upper_bound": 0.2988138587433457,
+            "selected_count": 208,
+            "selected_fraction": 0.1,
+            "threshold": 0.34204482501826083
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.014475014071697387,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.014475014071697387,
+              "cost_0.0005": -0.014975014071697386,
+              "cost_0.0010": -0.015475014071697386,
+              "cost_0.0020": -0.016475014071697387,
+              "cost_0.0050": -0.019475014071697386,
+              "cost_0.0100": -0.024475014071697387
+            },
+            "coverage": 0.11114680372630903,
+            "population_net_gain": -0.08947501407169738,
+            "population_net_gain_all_actions_acquire_tool": -0.08947501407169738,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 346,
+            "selected_mean_gain": -0.13023329134449121,
+            "selected_mean_gain_after_tool_cost": -0.2052332913444912,
+            "selected_mean_shortfall": 0.164012664888536,
+            "selective_risk": 0.30057803468208094,
+            "task_risks": {
+              "discover_unique": 0.32,
+              "extreme_properties": 0.5581395348837209,
+              "matbench_pairwise": 0.1875
+            },
+            "threshold": 0.34204482501826083,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.5581395348837209,
+            "worst_task_risk": 0.5581395348837209
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.075
+    },
+    "verification_mean": {
+      "calibration": {
+        "accuracy_at_threshold": 0.9383231609380019,
+        "aurc": 0.6880772623208833,
+        "brier": 0.041586600407065244,
+        "confidently_wrong_rate": 0.022165114037905557,
+        "coverage": 0.08673305493093479,
+        "coverage_at_risk_0.05": 0.0224863475746868,
+        "coverage_at_risk_0.10": 0.05075489881143591,
+        "ece": 0.012503251056422216,
+        "log_loss": 0.13647343459666092,
+        "n": 3113.0,
+        "selective_accuracy": 0.7444444444444445,
+        "selective_risk": 0.25555555555555554
+      },
+      "method_metadata": {
+        "acquisition_counts": {
+          "acceptance": 2080,
+          "feedback": 3030,
+          "test": 3113
+        },
+        "acquisition_policy": "all_actions"
+      },
+      "risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.038461538461538464,
+            "risk_upper_bound": 0.11344856733979423,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.7538339449729953
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.0008159555748185777,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.0008159555748185777,
+              "cost_0.0005": -0.0013159555748185777,
+              "cost_0.0010": -0.0018159555748185775,
+              "cost_0.0020": -0.0028159555748185775,
+              "cost_0.0050": -0.005815955574818578,
+              "cost_0.0100": -0.010815955574818577
+            },
+            "coverage": 0.04529392868615483,
+            "population_net_gain": -0.07581595557481857,
+            "population_net_gain_all_actions_acquire_tool": -0.07581595557481857,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 141,
+            "selected_mean_gain": -0.0180146787546825,
+            "selected_mean_gain_after_tool_cost": -0.0930146787546825,
+            "selected_mean_shortfall": 0.07804954269501466,
+            "selective_risk": 0.0851063829787234,
+            "task_risks": {
+              "discover_unique": 0.13253012048192772,
+              "extreme_properties": 0.07142857142857142,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.7538339449729953,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.13253012048192772,
+            "worst_task_risk": 0.13253012048192772
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.038461538461538464,
+            "risk_upper_bound": 0.11344856733979423,
+            "selected_count": 104,
+            "selected_fraction": 0.05,
+            "threshold": 0.7538339449729953
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.0008159555748185777,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.0008159555748185777,
+              "cost_0.0005": -0.0013159555748185777,
+              "cost_0.0010": -0.0018159555748185775,
+              "cost_0.0020": -0.0028159555748185775,
+              "cost_0.0050": -0.005815955574818578,
+              "cost_0.0100": -0.010815955574818577
+            },
+            "coverage": 0.04529392868615483,
+            "population_net_gain": -0.07581595557481857,
+            "population_net_gain_all_actions_acquire_tool": -0.07581595557481857,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 141,
+            "selected_mean_gain": -0.0180146787546825,
+            "selected_mean_gain_after_tool_cost": -0.0930146787546825,
+            "selected_mean_shortfall": 0.07804954269501466,
+            "selective_risk": 0.0851063829787234,
+            "task_risks": {
+              "discover_unique": 0.13253012048192772,
+              "extreme_properties": 0.07142857142857142,
+              "matbench_pairwise": 0.0
+            },
+            "threshold": 0.7538339449729953,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.13253012048192772,
+            "worst_task_risk": 0.13253012048192772
+          }
+        }
+      },
+      "shortfall_risk_control": {
+        "alpha_0.10": {
+          "acceptance": {
+            "alpha": 0.1,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.20": {
+          "acceptance": {
+            "alpha": 0.2,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "threshold": 1.000000000001
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": 0.0,
+            "cost_sensitivity": {
+              "cost_0.0000": 0.0,
+              "cost_0.0005": -0.0005,
+              "cost_0.0010": -0.001,
+              "cost_0.0020": -0.002,
+              "cost_0.0050": -0.005,
+              "cost_0.0100": -0.01
+            },
+            "coverage": 0.0,
+            "population_net_gain": -0.075,
+            "population_net_gain_all_actions_acquire_tool": -0.075,
+            "regimes_with_min5_selected": 0,
+            "selected_count": 0,
+            "selected_mean_gain": 0.0,
+            "selected_mean_gain_after_tool_cost": 0.0,
+            "selected_mean_shortfall": 0.0,
+            "selective_risk": 0.0,
+            "task_risks": {},
+            "threshold": 1.000000000001,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.0,
+            "worst_task_risk": 0.0
+          }
+        },
+        "alpha_0.30": {
+          "acceptance": {
+            "alpha": 0.3,
+            "candidate_prefixes": 8,
+            "delta": 0.05,
+            "empirical_risk": 0.10035361975709521,
+            "risk_upper_bound": 0.2615804624665559,
+            "selected_count": 208,
+            "selected_fraction": 0.1,
+            "threshold": 0.38580198033173496
+          },
+          "test": {
+            "acquired_count": 3113,
+            "acquisition_fraction": 1.0,
+            "break_even_tool_cost_per_acquired_action": -0.012471763614080379,
+            "cost_sensitivity": {
+              "cost_0.0000": -0.012471763614080379,
+              "cost_0.0005": -0.01297176361408038,
+              "cost_0.0010": -0.01347176361408038,
+              "cost_0.0020": -0.014471763614080379,
+              "cost_0.0050": -0.017471763614080378,
+              "cost_0.0100": -0.02247176361408038
+            },
+            "coverage": 0.1037584323803405,
+            "population_net_gain": -0.08747176361408038,
+            "population_net_gain_all_actions_acquire_tool": -0.08747176361408038,
+            "regimes_with_min5_selected": 4,
+            "selected_count": 323,
+            "selected_mean_gain": -0.12020000040443411,
+            "selected_mean_gain_after_tool_cost": -0.1952000004044341,
+            "selected_mean_shortfall": 0.15570192364209276,
+            "selective_risk": 0.2786377708978328,
+            "task_risks": {
+              "discover_unique": 0.3141025641025641,
+              "extreme_properties": 0.5416666666666666,
+              "matbench_pairwise": 0.12605042016806722
+            },
+            "threshold": 0.38580198033173496,
+            "total_acquisition_cost": 233.475,
+            "worst_regime_risk_min5": 0.5416666666666666,
+            "worst_task_risk": 0.5416666666666666
+          }
+        }
+      },
+      "stage": "verification",
+      "tool_cost": 0.075
+    }
+  },
+  "replica_contract": {
+    "complete_matrix": true,
+    "external_replica_ids": [
+      101,
+      211,
+      307
+    ],
+    "external_replicas": 3,
+    "internal_replicas": 3
+  },
+  "reservation_values": {
+    "budget_fraction": 0.1,
+    "outside_option": 0.0,
+    "values_by_task": {
+      "discover_unique": 0.82495517705065,
+      "extreme_properties": 0.7797663551401869,
+      "matbench_pairwise": 0.8699373695198329
+    }
+  },
+  "seed": 7,
+  "shortfall_scales": {
+    "lower_quantile": 0.05,
+    "lower_references_by_task": {
+      "discover_unique": -0.2,
+      "extreme_properties": -0.2825,
+      "matbench_pairwise": -0.07999999999999999
+    },
+    "scales_by_task": {
+      "discover_unique": 1.02495517705065,
+      "extreme_properties": 1.0622663551401867,
+      "matbench_pairwise": 0.9499373695198329
+    }
+  },
+  "source_calibrator": {
+    "parameters_by_task": {
+      "discover_unique": {
+        "base_variance": 0.04000000000000001,
+        "bias": 0.5,
+        "external_weight": 1.0,
+        "internal_weight": 0.0
+      },
+      "extreme_properties": {
+        "base_variance": 0.0025000000000000005,
+        "bias": 0.0,
+        "external_weight": 4.0,
+        "internal_weight": 0.0
+      },
+      "matbench_pairwise": {
+        "base_variance": 0.010000000000000002,
+        "bias": 0.0,
+        "external_weight": 0.0,
+        "internal_weight": 0.0
+      }
+    },
+    "type": "source_decomposed_heteroscedastic_gain_calibrator"
+  },
+  "split_sizes": {
+    "acceptance": 2080,
+    "feedback": 3030,
+    "test": 3113,
+    "train": 12764
+  },
+  "task_split_sizes": {
+    "discover_unique": {
+      "acceptance": 1046,
+      "feedback": 1551,
+      "test": 1698,
+      "train": 6692
+    },
+    "extreme_properties": {
+      "acceptance": 240,
+      "feedback": 277,
+      "test": 200,
+      "train": 1283
+    },
+    "matbench_pairwise": {
+      "acceptance": 794,
+      "feedback": 1202,
+      "test": 1215,
+      "train": 4789
+    }
+  },
+  "tasks": [
+    "matbench_pairwise",
+    "discover_unique",
+    "extreme_properties"
+  ],
+  "unique_training_threshold": 0.47576600757884985
+}

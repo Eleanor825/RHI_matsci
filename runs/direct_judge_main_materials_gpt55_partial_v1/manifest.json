@@ -1,0 +1,18 @@
+{
+  "schema": "partial-main-materials-subset-v1",
+  "source_records": 500,
+  "scored_records": 474,
+  "missing_records": 26,
+  "split_counts": {
+    "validation": 235,
+    "test": 239
+  },
+  "task_counts": {
+    "discover_unique": 162,
+    "extreme_properties": 153,
+    "matbench_pairwise": 159
+  },
+  "judge_cache": "runs/direct_judge_cache/main_materials_gpt55_hicode_scores.json",
+  "model": "gpt-5.5",
+  "provider": "hi-code (historical cache; current mimorouter has no gpt-5.5 channel)"
+}

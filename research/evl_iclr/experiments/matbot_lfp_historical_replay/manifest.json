@@ -1,0 +1,19 @@
+{
+  "capture_type": "real_historical_outcome_retrospective_replay",
+  "complete_choice_trajectory_count": 19,
+  "complete_trajectory_count": 12,
+  "confirmation_status": "development_only_source_inspected_before_protocol_lock",
+  "hidden_outcome_contract": true,
+  "pairwise_choice_count": 19,
+  "pairwise_positive_labels": 8,
+  "positive_labels": 4,
+  "record_count": 12,
+  "source_batches": {
+    "batch_1_legacy_minus20_202604": 4,
+    "batch_2_legacy_minus20_202604": 3,
+    "batch_3_ABA_minus15_multisoc_20260507": 5
+  },
+  "source_sha256": "53cc83047261313cf532505e0e6fbf09a8fabe2f6fe73cfbf6f533e60640fdd4",
+  "task": "matbot_lfp_historical_action",
+  "warning": "This dataset validates a real-outcome replay path but is too small and was inspected before construction; it is not untouched confirmatory evidence."
+}

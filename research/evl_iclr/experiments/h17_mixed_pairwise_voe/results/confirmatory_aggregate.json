@@ -1,0 +1,100 @@
+{
+  "confirmatory_folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "development_fold": 0,
+  "experiment": "h17_mixed_regime_pairwise_two_stage_voe",
+  "methods": {
+    "external_variance": {
+      "certified_folds": 0,
+      "deployed_test_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fold_count": 4,
+      "mean_deployed_test_gain": 0.0,
+      "test_selective_risks": [
+        0.16666666666666666,
+        0.11764705882352941,
+        0.4467005076142132,
+        0.0
+      ]
+    },
+    "no_source_voi_expected": {
+      "certified_folds": 2,
+      "deployed_test_gains": [
+        0.0007002076546955288,
+        0.0,
+        0.0,
+        0.001759173542938032
+      ],
+      "fold_count": 4,
+      "mean_deployed_test_gain": 0.0006148452994083902,
+      "test_selective_risks": [
+        0.12698412698412698,
+        0.1610738255033557,
+        0.39634146341463417,
+        0.0916030534351145
+      ]
+    },
+    "no_source_voi_probability": {
+      "certified_folds": 3,
+      "deployed_test_gains": [
+        0.0006664755397274817,
+        0.0,
+        0.0010841826731077073,
+        0.001810950341295385
+      ],
+      "fold_count": 4,
+      "mean_deployed_test_gain": 0.0008904021385326435,
+      "test_selective_risks": [
+        0.12962962962962962,
+        0.14965986394557823,
+        0.0,
+        0.0948905109489051
+      ]
+    },
+    "source_voi_expected": {
+      "certified_folds": 2,
+      "deployed_test_gains": [
+        0.0005488312458568737,
+        0.0016597022415729627,
+        0.0,
+        0.0
+      ],
+      "fold_count": 4,
+      "mean_deployed_test_gain": 0.0005521333718574591,
+      "test_selective_risks": [
+        0.07692307692307693,
+        0.14173228346456693,
+        0.43147208121827413,
+        0.11428571428571428
+      ]
+    },
+    "source_voi_probability": {
+      "certified_folds": 3,
+      "deployed_test_gains": [
+        0.0008078789601368285,
+        0.002038072268719177,
+        0.0,
+        0.001981334403456417
+      ],
+      "fold_count": 4,
+      "mean_deployed_test_gain": 0.0012068214080781057,
+      "test_selective_risks": [
+        0.07017543859649122,
+        0.088,
+        0.4117647058823529,
+        0.12337662337662338
+      ]
+    }
+  },
+  "preregistered_primary": "source_voi_expected",
+  "primary_confirmatory_pass": false,
+  "secondary_source_probability_relative_gain_over_no_source": 0.35536669989013264
+}

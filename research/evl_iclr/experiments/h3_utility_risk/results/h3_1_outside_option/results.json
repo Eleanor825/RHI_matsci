@@ -1,0 +1,4134 @@
+{
+  "schema_version": "sd-worth-h3-utility-shortfall-v1",
+  "protocol": "research/evl_iclr/experiments/h3_utility_risk/protocol.md",
+  "seeds": [
+    1,
+    7,
+    13,
+    21,
+    42
+  ],
+  "alphas": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "coverage_grid": [
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "runs": [
+    {
+      "seed": 1,
+      "shortfall_scales": {
+        "lower_quantile": 0.05,
+        "scales_by_task": {
+          "discover_unique": 1.02495496171746,
+          "extreme_properties": 1.0622635933806146,
+          "matbench_pairwise": 0.9499376299376299
+        },
+        "lower_references_by_task": {
+          "discover_unique": -0.2,
+          "extreme_properties": -0.2825,
+          "matbench_pairwise": -0.07999999999999999
+        }
+      },
+      "methods": {
+        "static_reliability": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22704928392872079,
+              "ece": 0.31903143805637857,
+              "aurc": 0.8534828067998017
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22704928392872079,
+              "ece": 0.31903143805637857,
+              "aurc": 0.8534828067998017
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22704928392872079,
+              "ece": 0.31903143805637857,
+              "aurc": 0.8534828067998017
+            }
+          }
+        },
+        "binary_budget_worthiness": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09732988460090586,
+              "ece": 0.030470456330993205,
+              "aurc": 0.8307164747485906
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09732988460090586,
+              "ece": 0.030470456330993205,
+              "aurc": 0.8307164747485906
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09732988460090586,
+              "ece": 0.030470456330993205,
+              "aurc": 0.8307164747485906
+            }
+          }
+        },
+        "sd_worth_gain_distribution": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10008103305075645,
+              "ece": 0.07288707308638766,
+              "aurc": 0.8438627918519366
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10008103305075645,
+              "ece": 0.07288707308638766,
+              "aurc": 0.8438627918519366
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10008103305075645,
+              "ece": 0.07288707308638766,
+              "aurc": 0.8438627918519366
+            }
+          }
+        },
+        "extra_trees_classifier": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09452042549026045,
+              "ece": 0.027386974390071938,
+              "aurc": 0.8183901757260909
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09452042549026045,
+              "ece": 0.027386974390071938,
+              "aurc": 0.8183901757260909
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09452042549026045,
+              "ece": 0.027386974390071938,
+              "aurc": 0.8183901757260909
+            }
+          }
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09569899425206199,
+              "ece": 0.03857315678299973,
+              "aurc": 0.8230879133811712
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09569899425206199,
+              "ece": 0.03857315678299973,
+              "aurc": 0.8230879133811712
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09569899425206199,
+              "ece": 0.03857315678299973,
+              "aurc": 0.8230879133811712
+            }
+          }
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09853295733318128,
+              "ece": 0.05326738997963495,
+              "aurc": 0.8438229468661941
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09853295733318128,
+              "ece": 0.05326738997963495,
+              "aurc": 0.8438229468661941
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09853295733318128,
+              "ece": 0.05326738997963495,
+              "aurc": 0.8438229468661941
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "shortfall_scales": {
+        "lower_quantile": 0.05,
+        "scales_by_task": {
+          "discover_unique": 1.02495517705065,
+          "extreme_properties": 1.0622663551401867,
+          "matbench_pairwise": 0.9499373695198329
+        },
+        "lower_references_by_task": {
+          "discover_unique": -0.2,
+          "extreme_properties": -0.2825,
+          "matbench_pairwise": -0.07999999999999999
+        }
+      },
+      "methods": {
+        "static_reliability": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22463626435601586,
+              "ece": 0.336118233566581,
+              "aurc": 0.8551309850561929
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22463626435601586,
+              "ece": 0.336118233566581,
+              "aurc": 0.8551309850561929
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22463626435601586,
+              "ece": 0.336118233566581,
+              "aurc": 0.8551309850561929
+            }
+          }
+        },
+        "binary_budget_worthiness": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09010137256340606,
+              "ece": 0.022591769429118128,
+              "aurc": 0.8330704322125121
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09010137256340606,
+              "ece": 0.022591769429118128,
+              "aurc": 0.8330704322125121
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09010137256340606,
+              "ece": 0.022591769429118128,
+              "aurc": 0.8330704322125121
+            }
+          }
+        },
+        "sd_worth_gain_distribution": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09344968938932698,
+              "ece": 0.061701410121153225,
+              "aurc": 0.8468546088335088
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09344968938932698,
+              "ece": 0.061701410121153225,
+              "aurc": 0.8468546088335088
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09344968938932698,
+              "ece": 0.061701410121153225,
+              "aurc": 0.8468546088335088
+            }
+          }
+        },
+        "extra_trees_classifier": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08785939239299088,
+              "ece": 0.029071120441712568,
+              "aurc": 0.8222638528804751
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08785939239299088,
+              "ece": 0.029071120441712568,
+              "aurc": 0.8222638528804751
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08785939239299088,
+              "ece": 0.029071120441712568,
+              "aurc": 0.8222638528804751
+            }
+          }
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08719247464435556,
+              "ece": 0.03857403696150627,
+              "aurc": 0.8162436101281084
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08719247464435556,
+              "ece": 0.03857403696150627,
+              "aurc": 0.8162436101281084
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08719247464435556,
+              "ece": 0.03857403696150627,
+              "aurc": 0.8162436101281084
+            }
+          }
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09186388251651595,
+              "ece": 0.04224983371361546,
+              "aurc": 0.8482806515236969
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09186388251651595,
+              "ece": 0.04224983371361546,
+              "aurc": 0.8482806515236969
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09186388251651595,
+              "ece": 0.04224983371361546,
+              "aurc": 0.8482806515236969
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 13,
+      "shortfall_scales": {
+        "lower_quantile": 0.05,
+        "scales_by_task": {
+          "discover_unique": 0.2,
+          "extreme_properties": 1.0622632202052091,
+          "matbench_pairwise": 0.949979338842975
+        },
+        "lower_references_by_task": {
+          "discover_unique": -0.2,
+          "extreme_properties": -0.2825,
+          "matbench_pairwise": -0.07999999999999999
+        }
+      },
+      "methods": {
+        "static_reliability": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22990259560615722,
+              "ece": 0.32195235450896986,
+              "aurc": 0.8629687625227057
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22990259560615722,
+              "ece": 0.32195235450896986,
+              "aurc": 0.8629687625227057
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22990259560615722,
+              "ece": 0.32195235450896986,
+              "aurc": 0.8629687625227057
+            }
+          }
+        },
+        "binary_budget_worthiness": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09998664708416061,
+              "ece": 0.01871695373613768,
+              "aurc": 0.8356790825619171
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09998664708416061,
+              "ece": 0.01871695373613768,
+              "aurc": 0.8356790825619171
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09998664708416061,
+              "ece": 0.01871695373613768,
+              "aurc": 0.8356790825619171
+            }
+          }
+        },
+        "sd_worth_gain_distribution": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.12678467615302813,
+              "ece": 0.13610845313426143,
+              "aurc": 0.8653719723651718
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.12678467615302813,
+              "ece": 0.13610845313426143,
+              "aurc": 0.8653719723651718
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.12678467615302813,
+              "ece": 0.13610845313426143,
+              "aurc": 0.8653719723651718
+            }
+          }
+        },
+        "extra_trees_classifier": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09769210917432371,
+              "ece": 0.0341655248050895,
+              "aurc": 0.8212164867717153
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09769210917432371,
+              "ece": 0.0341655248050895,
+              "aurc": 0.8212164867717153
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09769210917432371,
+              "ece": 0.0341655248050895,
+              "aurc": 0.8212164867717153
+            }
+          }
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10182719156790684,
+              "ece": 0.06143602846991534,
+              "aurc": 0.8282744885878538
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10182719156790684,
+              "ece": 0.06143602846991534,
+              "aurc": 0.8282744885878538
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10182719156790684,
+              "ece": 0.06143602846991534,
+              "aurc": 0.8282744885878538
+            }
+          }
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10265703081774605,
+              "ece": 0.02579791868099575,
+              "aurc": 0.8676577304769977
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10265703081774605,
+              "ece": 0.02579791868099575,
+              "aurc": 0.8676577304769977
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.10265703081774605,
+              "ece": 0.02579791868099575,
+              "aurc": 0.8676577304769977
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 21,
+      "shortfall_scales": {
+        "lower_quantile": 0.05,
+        "scales_by_task": {
+          "discover_unique": 1.024953696558111,
+          "extreme_properties": 1.0622704667176741,
+          "matbench_pairwise": 0.9499370409233997
+        },
+        "lower_references_by_task": {
+          "discover_unique": -0.2,
+          "extreme_properties": -0.2825,
+          "matbench_pairwise": -0.07999999999999999
+        }
+      },
+      "methods": {
+        "static_reliability": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22312774219417436,
+              "ece": 0.3294843174206348,
+              "aurc": 0.8572912151175367
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22312774219417436,
+              "ece": 0.3294843174206348,
+              "aurc": 0.8572912151175367
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22312774219417436,
+              "ece": 0.3294843174206348,
+              "aurc": 0.8572912151175367
+            }
+          }
+        },
+        "binary_budget_worthiness": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08924774695903803,
+              "ece": 0.007103463475220545,
+              "aurc": 0.8360648549868692
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08924774695903803,
+              "ece": 0.007103463475220545,
+              "aurc": 0.8360648549868692
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08924774695903803,
+              "ece": 0.007103463475220545,
+              "aurc": 0.8360648549868692
+            }
+          }
+        },
+        "sd_worth_gain_distribution": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09317164940499485,
+              "ece": 0.056861492483394706,
+              "aurc": 0.849783549026532
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09317164940499485,
+              "ece": 0.056861492483394706,
+              "aurc": 0.849783549026532
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09317164940499485,
+              "ece": 0.056861492483394706,
+              "aurc": 0.849783549026532
+            }
+          }
+        },
+        "extra_trees_classifier": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08805352291237326,
+              "ece": 0.025068126859890447,
+              "aurc": 0.831696327547619
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08805352291237326,
+              "ece": 0.025068126859890447,
+              "aurc": 0.831696327547619
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.08805352291237326,
+              "ece": 0.025068126859890447,
+              "aurc": 0.831696327547619
+            }
+          }
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09165147370799268,
+              "ece": 0.048989649619795225,
+              "aurc": 0.8402952954661278
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09165147370799268,
+              "ece": 0.048989649619795225,
+              "aurc": 0.8402952954661278
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09165147370799268,
+              "ece": 0.048989649619795225,
+              "aurc": 0.8402952954661278
+            }
+          }
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09123686726450927,
+              "ece": 0.045188436097756496,
+              "aurc": 0.8519859824323841
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09123686726450927,
+              "ece": 0.045188436097756496,
+              "aurc": 0.8519859824323841
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09123686726450927,
+              "ece": 0.045188436097756496,
+              "aurc": 0.8519859824323841
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "shortfall_scales": {
+        "lower_quantile": 0.05,
+        "scales_by_task": {
+          "discover_unique": 1.0249542682926829,
+          "extreme_properties": 1.0622601918465229,
+          "matbench_pairwise": 0.9499372384937237
+        },
+        "lower_references_by_task": {
+          "discover_unique": -0.2,
+          "extreme_properties": -0.2825,
+          "matbench_pairwise": -0.07999999999999999
+        }
+      },
+      "methods": {
+        "static_reliability": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22870773438018607,
+              "ece": 0.32593695931254363,
+              "aurc": 0.8650332644407878
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22870773438018607,
+              "ece": 0.32593695931254363,
+              "aurc": 0.8650332644407878
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.22870773438018607,
+              "ece": 0.32593695931254363,
+              "aurc": 0.8650332644407878
+            }
+          }
+        },
+        "binary_budget_worthiness": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09371336398632246,
+              "ece": 0.02526581108367838,
+              "aurc": 0.8404375004540495
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09371336398632246,
+              "ece": 0.02526581108367838,
+              "aurc": 0.8404375004540495
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09371336398632246,
+              "ece": 0.02526581108367838,
+              "aurc": 0.8404375004540495
+            }
+          }
+        },
+        "sd_worth_gain_distribution": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09733589402270909,
+              "ece": 0.07079052762878886,
+              "aurc": 0.8586787512547973
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09733589402270909,
+              "ece": 0.07079052762878886,
+              "aurc": 0.8586787512547973
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09733589402270909,
+              "ece": 0.07079052762878886,
+              "aurc": 0.8586787512547973
+            }
+          }
+        },
+        "extra_trees_classifier": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.0913069604005159,
+              "ece": 0.028314410061944725,
+              "aurc": 0.8274514526308827
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.0913069604005159,
+              "ece": 0.028314410061944725,
+              "aurc": 0.8274514526308827
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.0913069604005159,
+              "ece": 0.028314410061944725,
+              "aurc": 0.8274514526308827
+            }
+          }
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09066780799379541,
+              "ece": 0.024595112146580285,
+              "aurc": 0.8209470520150898
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09066780799379541,
+              "ece": 0.024595112146580285,
+              "aurc": 0.8209470520150898
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.09066780799379541,
+              "ece": 0.024595112146580285,
+              "aurc": 0.8209470520150898
+            }
+          }
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.1,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.0953355327481625,
+              "ece": 0.03753733713789583,
+              "aurc": 0.8571352450833771
+            }
+          },
+          "0.2": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.2,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.0953355327481625,
+              "ece": 0.03753733713789583,
+              "aurc": 0.8571352450833771
+            }
+          },
+          "0.3": {
+            "selection": {
+              "threshold": 1.000000000001,
+              "selected_count": 0,
+              "selected_fraction": 0.0,
+              "empirical_risk": 0.0,
+              "risk_upper_bound": 0.0,
+              "alpha": 0.3,
+              "delta": 0.05,
+              "candidate_prefixes": 8
+            },
+            "test": {
+              "n": 3113,
+              "selected": 0,
+              "coverage": 0.0,
+              "mean_shortfall_risk": 0.0,
+              "binary_selective_risk": 0.0,
+              "mean_selected_gain": 0.0,
+              "net_gain_per_action": 0.0,
+              "positive_total_gain": false,
+              "brier": 0.0953355327481625,
+              "ece": 0.03753733713789583,
+              "aurc": 0.8571352450833771
+            }
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "static_reliability": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.22668472409305085,
+          "std": 0.002507128999221563,
+          "values": [
+            0.22704928392872079,
+            0.22463626435601586,
+            0.22990259560615722,
+            0.22312774219417436,
+            0.22870773438018607
+          ]
+        },
+        "ece": {
+          "mean": 0.3265046605730216,
+          "std": 0.005969823626159042,
+          "values": [
+            0.31903143805637857,
+            0.336118233566581,
+            0.32195235450896986,
+            0.3294843174206348,
+            0.32593695931254363
+          ]
+        },
+        "aurc": {
+          "mean": 0.858781406787405,
+          "std": 0.004477523512599269,
+          "values": [
+            0.8534828067998017,
+            0.8551309850561929,
+            0.8629687625227057,
+            0.8572912151175367,
+            0.8650332644407878
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.22668472409305085,
+          "std": 0.002507128999221563,
+          "values": [
+            0.22704928392872079,
+            0.22463626435601586,
+            0.22990259560615722,
+            0.22312774219417436,
+            0.22870773438018607
+          ]
+        },
+        "ece": {
+          "mean": 0.3265046605730216,
+          "std": 0.005969823626159042,
+          "values": [
+            0.31903143805637857,
+            0.336118233566581,
+            0.32195235450896986,
+            0.3294843174206348,
+            0.32593695931254363
+          ]
+        },
+        "aurc": {
+          "mean": 0.858781406787405,
+          "std": 0.004477523512599269,
+          "values": [
+            0.8534828067998017,
+            0.8551309850561929,
+            0.8629687625227057,
+            0.8572912151175367,
+            0.8650332644407878
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.22668472409305085,
+          "std": 0.002507128999221563,
+          "values": [
+            0.22704928392872079,
+            0.22463626435601586,
+            0.22990259560615722,
+            0.22312774219417436,
+            0.22870773438018607
+          ]
+        },
+        "ece": {
+          "mean": 0.3265046605730216,
+          "std": 0.005969823626159042,
+          "values": [
+            0.31903143805637857,
+            0.336118233566581,
+            0.32195235450896986,
+            0.3294843174206348,
+            0.32593695931254363
+          ]
+        },
+        "aurc": {
+          "mean": 0.858781406787405,
+          "std": 0.004477523512599269,
+          "values": [
+            0.8534828067998017,
+            0.8551309850561929,
+            0.8629687625227057,
+            0.8572912151175367,
+            0.8650332644407878
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      }
+    },
+    "binary_budget_worthiness": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.0940758030387666,
+          "std": 0.004117395033786282,
+          "values": [
+            0.09732988460090586,
+            0.09010137256340606,
+            0.09998664708416061,
+            0.08924774695903803,
+            0.09371336398632246
+          ]
+        },
+        "ece": {
+          "mean": 0.02082969081102959,
+          "std": 0.00785622579566784,
+          "values": [
+            0.030470456330993205,
+            0.022591769429118128,
+            0.01871695373613768,
+            0.007103463475220545,
+            0.02526581108367838
+          ]
+        },
+        "aurc": {
+          "mean": 0.8351936689927877,
+          "std": 0.0032571693996132664,
+          "values": [
+            0.8307164747485906,
+            0.8330704322125121,
+            0.8356790825619171,
+            0.8360648549868692,
+            0.8404375004540495
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.0940758030387666,
+          "std": 0.004117395033786282,
+          "values": [
+            0.09732988460090586,
+            0.09010137256340606,
+            0.09998664708416061,
+            0.08924774695903803,
+            0.09371336398632246
+          ]
+        },
+        "ece": {
+          "mean": 0.02082969081102959,
+          "std": 0.00785622579566784,
+          "values": [
+            0.030470456330993205,
+            0.022591769429118128,
+            0.01871695373613768,
+            0.007103463475220545,
+            0.02526581108367838
+          ]
+        },
+        "aurc": {
+          "mean": 0.8351936689927877,
+          "std": 0.0032571693996132664,
+          "values": [
+            0.8307164747485906,
+            0.8330704322125121,
+            0.8356790825619171,
+            0.8360648549868692,
+            0.8404375004540495
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.0940758030387666,
+          "std": 0.004117395033786282,
+          "values": [
+            0.09732988460090586,
+            0.09010137256340606,
+            0.09998664708416061,
+            0.08924774695903803,
+            0.09371336398632246
+          ]
+        },
+        "ece": {
+          "mean": 0.02082969081102959,
+          "std": 0.00785622579566784,
+          "values": [
+            0.030470456330993205,
+            0.022591769429118128,
+            0.01871695373613768,
+            0.007103463475220545,
+            0.02526581108367838
+          ]
+        },
+        "aurc": {
+          "mean": 0.8351936689927877,
+          "std": 0.0032571693996132664,
+          "values": [
+            0.8307164747485906,
+            0.8330704322125121,
+            0.8356790825619171,
+            0.8360648549868692,
+            0.8404375004540495
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      }
+    },
+    "sd_worth_gain_distribution": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.1021645884041631,
+          "std": 0.012574805205517594,
+          "values": [
+            0.10008103305075645,
+            0.09344968938932698,
+            0.12678467615302813,
+            0.09317164940499485,
+            0.09733589402270909
+          ]
+        },
+        "ece": {
+          "mean": 0.07966979129079718,
+          "std": 0.028821000525471593,
+          "values": [
+            0.07288707308638766,
+            0.061701410121153225,
+            0.13610845313426143,
+            0.056861492483394706,
+            0.07079052762878886
+          ]
+        },
+        "aurc": {
+          "mean": 0.8529103346663893,
+          "std": 0.007960825068460273,
+          "values": [
+            0.8438627918519366,
+            0.8468546088335088,
+            0.8653719723651718,
+            0.849783549026532,
+            0.8586787512547973
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.1021645884041631,
+          "std": 0.012574805205517594,
+          "values": [
+            0.10008103305075645,
+            0.09344968938932698,
+            0.12678467615302813,
+            0.09317164940499485,
+            0.09733589402270909
+          ]
+        },
+        "ece": {
+          "mean": 0.07966979129079718,
+          "std": 0.028821000525471593,
+          "values": [
+            0.07288707308638766,
+            0.061701410121153225,
+            0.13610845313426143,
+            0.056861492483394706,
+            0.07079052762878886
+          ]
+        },
+        "aurc": {
+          "mean": 0.8529103346663893,
+          "std": 0.007960825068460273,
+          "values": [
+            0.8438627918519366,
+            0.8468546088335088,
+            0.8653719723651718,
+            0.849783549026532,
+            0.8586787512547973
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.1021645884041631,
+          "std": 0.012574805205517594,
+          "values": [
+            0.10008103305075645,
+            0.09344968938932698,
+            0.12678467615302813,
+            0.09317164940499485,
+            0.09733589402270909
+          ]
+        },
+        "ece": {
+          "mean": 0.07966979129079718,
+          "std": 0.028821000525471593,
+          "values": [
+            0.07288707308638766,
+            0.061701410121153225,
+            0.13610845313426143,
+            0.056861492483394706,
+            0.07079052762878886
+          ]
+        },
+        "aurc": {
+          "mean": 0.8529103346663893,
+          "std": 0.007960825068460273,
+          "values": [
+            0.8438627918519366,
+            0.8468546088335088,
+            0.8653719723651718,
+            0.849783549026532,
+            0.8586787512547973
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      }
+    },
+    "extra_trees_classifier": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.09188648207409283,
+          "std": 0.0037917762737719935,
+          "values": [
+            0.09452042549026045,
+            0.08785939239299088,
+            0.09769210917432371,
+            0.08805352291237326,
+            0.0913069604005159
+          ]
+        },
+        "ece": {
+          "mean": 0.028801231311741834,
+          "std": 0.0030007222878309257,
+          "values": [
+            0.027386974390071938,
+            0.029071120441712568,
+            0.0341655248050895,
+            0.025068126859890447,
+            0.028314410061944725
+          ]
+        },
+        "aurc": {
+          "mean": 0.8242036591113566,
+          "std": 0.004757538836669323,
+          "values": [
+            0.8183901757260909,
+            0.8222638528804751,
+            0.8212164867717153,
+            0.831696327547619,
+            0.8274514526308827
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.09188648207409283,
+          "std": 0.0037917762737719935,
+          "values": [
+            0.09452042549026045,
+            0.08785939239299088,
+            0.09769210917432371,
+            0.08805352291237326,
+            0.0913069604005159
+          ]
+        },
+        "ece": {
+          "mean": 0.028801231311741834,
+          "std": 0.0030007222878309257,
+          "values": [
+            0.027386974390071938,
+            0.029071120441712568,
+            0.0341655248050895,
+            0.025068126859890447,
+            0.028314410061944725
+          ]
+        },
+        "aurc": {
+          "mean": 0.8242036591113566,
+          "std": 0.004757538836669323,
+          "values": [
+            0.8183901757260909,
+            0.8222638528804751,
+            0.8212164867717153,
+            0.831696327547619,
+            0.8274514526308827
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.09188648207409283,
+          "std": 0.0037917762737719935,
+          "values": [
+            0.09452042549026045,
+            0.08785939239299088,
+            0.09769210917432371,
+            0.08805352291237326,
+            0.0913069604005159
+          ]
+        },
+        "ece": {
+          "mean": 0.028801231311741834,
+          "std": 0.0030007222878309257,
+          "values": [
+            0.027386974390071938,
+            0.029071120441712568,
+            0.0341655248050895,
+            0.025068126859890447,
+            0.028314410061944725
+          ]
+        },
+        "aurc": {
+          "mean": 0.8242036591113566,
+          "std": 0.004757538836669323,
+          "values": [
+            0.8183901757260909,
+            0.8222638528804751,
+            0.8212164867717153,
+            0.831696327547619,
+            0.8274514526308827
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      }
+    },
+    "hist_gradient_boosting": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.0934075884332225,
+          "std": 0.005007159529417816,
+          "values": [
+            0.09569899425206199,
+            0.08719247464435556,
+            0.10182719156790684,
+            0.09165147370799268,
+            0.09066780799379541
+          ]
+        },
+        "ece": {
+          "mean": 0.04243359679615937,
+          "std": 0.012264460623670393,
+          "values": [
+            0.03857315678299973,
+            0.03857403696150627,
+            0.06143602846991534,
+            0.048989649619795225,
+            0.024595112146580285
+          ]
+        },
+        "aurc": {
+          "mean": 0.8257696719156702,
+          "std": 0.008227553595257037,
+          "values": [
+            0.8230879133811712,
+            0.8162436101281084,
+            0.8282744885878538,
+            0.8402952954661278,
+            0.8209470520150898
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.0934075884332225,
+          "std": 0.005007159529417816,
+          "values": [
+            0.09569899425206199,
+            0.08719247464435556,
+            0.10182719156790684,
+            0.09165147370799268,
+            0.09066780799379541
+          ]
+        },
+        "ece": {
+          "mean": 0.04243359679615937,
+          "std": 0.012264460623670393,
+          "values": [
+            0.03857315678299973,
+            0.03857403696150627,
+            0.06143602846991534,
+            0.048989649619795225,
+            0.024595112146580285
+          ]
+        },
+        "aurc": {
+          "mean": 0.8257696719156702,
+          "std": 0.008227553595257037,
+          "values": [
+            0.8230879133811712,
+            0.8162436101281084,
+            0.8282744885878538,
+            0.8402952954661278,
+            0.8209470520150898
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.0934075884332225,
+          "std": 0.005007159529417816,
+          "values": [
+            0.09569899425206199,
+            0.08719247464435556,
+            0.10182719156790684,
+            0.09165147370799268,
+            0.09066780799379541
+          ]
+        },
+        "ece": {
+          "mean": 0.04243359679615937,
+          "std": 0.012264460623670393,
+          "values": [
+            0.03857315678299973,
+            0.03857403696150627,
+            0.06143602846991534,
+            0.048989649619795225,
+            0.024595112146580285
+          ]
+        },
+        "aurc": {
+          "mean": 0.8257696719156702,
+          "std": 0.008227553595257037,
+          "values": [
+            0.8230879133811712,
+            0.8162436101281084,
+            0.8282744885878538,
+            0.8402952954661278,
+            0.8209470520150898
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      }
+    },
+    "extra_trees_gain_regression": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.09592525413602301,
+          "std": 0.0042647488897021675,
+          "values": [
+            0.09853295733318128,
+            0.09186388251651595,
+            0.10265703081774605,
+            0.09123686726450927,
+            0.0953355327481625
+          ]
+        },
+        "ece": {
+          "mean": 0.040808183121979695,
+          "std": 0.009082987175173965,
+          "values": [
+            0.05326738997963495,
+            0.04224983371361546,
+            0.02579791868099575,
+            0.045188436097756496,
+            0.03753733713789583
+          ]
+        },
+        "aurc": {
+          "mean": 0.85377651127653,
+          "std": 0.008203087854118414,
+          "values": [
+            0.8438229468661941,
+            0.8482806515236969,
+            0.8676577304769977,
+            0.8519859824323841,
+            0.8571352450833771
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.09592525413602301,
+          "std": 0.0042647488897021675,
+          "values": [
+            0.09853295733318128,
+            0.09186388251651595,
+            0.10265703081774605,
+            0.09123686726450927,
+            0.0953355327481625
+          ]
+        },
+        "ece": {
+          "mean": 0.040808183121979695,
+          "std": 0.009082987175173965,
+          "values": [
+            0.05326738997963495,
+            0.04224983371361546,
+            0.02579791868099575,
+            0.045188436097756496,
+            0.03753733713789583
+          ]
+        },
+        "aurc": {
+          "mean": 0.85377651127653,
+          "std": 0.008203087854118414,
+          "values": [
+            0.8438229468661941,
+            0.8482806515236969,
+            0.8676577304769977,
+            0.8519859824323841,
+            0.8571352450833771
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_shortfall_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "binary_selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.09592525413602301,
+          "std": 0.0042647488897021675,
+          "values": [
+            0.09853295733318128,
+            0.09186388251651595,
+            0.10265703081774605,
+            0.09123686726450927,
+            0.0953355327481625
+          ]
+        },
+        "ece": {
+          "mean": 0.040808183121979695,
+          "std": 0.009082987175173965,
+          "values": [
+            0.05326738997963495,
+            0.04224983371361546,
+            0.02579791868099575,
+            0.045188436097756496,
+            0.03753733713789583
+          ]
+        },
+        "aurc": {
+          "mean": 0.85377651127653,
+          "std": 0.008203087854118414,
+          "values": [
+            0.8438229468661941,
+            0.8482806515236969,
+            0.8676577304769977,
+            0.8519859824323841,
+            0.8571352450833771
+          ]
+        },
+        "positive_gain_seeds": 0,
+        "acceptance_upper": {
+          "mean": 0.0
+        }
+      }
+    }
+  }
+}

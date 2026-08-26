@@ -1,0 +1,238 @@
+{
+  "crossfit_folds": 5,
+  "development_only": true,
+  "experiment": "h15_powered_unique_two_stage_voe",
+  "feedback_realized_voe": {
+    "count": 1551,
+    "mean": -0.01407012911489566,
+    "positive_fraction": 0.09671179883945841
+  },
+  "gain_projector": {
+    "config": {
+      "cost_weight": 0.15,
+      "failure_harm_weight": 0.25,
+      "utility_mode": "continuous_realized",
+      "worthiness_margin": 0.0
+    },
+    "normalizer": {
+      "external_unique_log_kvrh": {
+        "count": 5170,
+        "maximum": 0.9972925933088377,
+        "minimum": 0.013923805840263006
+      }
+    },
+    "reservations": {
+      "budget_fraction": 0.1,
+      "outside_option": 0.0,
+      "strategy": "potential_success_slot_value",
+      "values_by_task": {
+        "external_unique_log_kvrh": 0.8249419841423323
+      }
+    },
+    "type": "train_only_scientific_utility_to_gain_projector"
+  },
+  "policies": {
+    "external_variance": {
+      "acceptance_certificate": {
+        "acquired_count": 0,
+        "acquisition_coverage": 0.0,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 31,
+        "executed_count": 224,
+        "execution_coverage": 0.1082648622522958,
+        "population_gain_after_cost": 0.0031911747757855753,
+        "risk_upper_bound": 0.18217590738399478,
+        "selective_risk": 0.13839285714285715
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0036839882570481822,
+      "feedback_policy": {
+        "acquisition_threshold": Infinity,
+        "base_execution_threshold": -0.21414563287530247,
+        "feedback_population_gain": 0.0032691072353243085,
+        "feedback_selective_risk": 0.16666666666666666,
+        "target_acquisition_coverage": 0.0,
+        "target_base_execution_coverage": 0.1,
+        "target_tool_execution_coverage": 0.0,
+        "tool_execution_threshold": Infinity
+      },
+      "test_evaluation": {
+        "acquired_count": 0,
+        "acquisition_coverage": 0.0,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 23,
+        "executed_count": 214,
+        "execution_coverage": 0.0974055530268548,
+        "population_gain_after_cost": 0.0036839882570481822,
+        "risk_upper_bound": 0.14882075140019543,
+        "selective_risk": 0.10747663551401869
+      }
+    },
+    "no_source_voi_expected": {
+      "acceptance_certificate": {
+        "acquired_count": 204,
+        "acquisition_coverage": 0.0985983566940551,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 6,
+        "executed_count": 191,
+        "execution_coverage": 0.09231512808119864,
+        "population_gain_after_cost": 0.003261374944982146,
+        "risk_upper_bound": 0.06105681662984492,
+        "selective_risk": 0.031413612565445025
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.003404117638308323,
+      "feedback_policy": {
+        "acquisition_threshold": -0.0013617515495245027,
+        "base_execution_threshold": -0.21414563287530247,
+        "feedback_population_gain": 0.0037581514274980738,
+        "feedback_selective_risk": 0.015625,
+        "target_acquisition_coverage": 0.1,
+        "target_base_execution_coverage": 0.1,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.033876401344782744
+      },
+      "test_evaluation": {
+        "acquired_count": 218,
+        "acquisition_coverage": 0.09922621756941284,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 6,
+        "executed_count": 189,
+        "execution_coverage": 0.08602639963586708,
+        "population_gain_after_cost": 0.003404117638308323,
+        "risk_upper_bound": 0.06169284401351332,
+        "selective_risk": 0.031746031746031744
+      }
+    },
+    "no_source_voi_probability": {
+      "acceptance_certificate": {
+        "acquired_count": 96,
+        "acquisition_coverage": 0.04639922667955534,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 5,
+        "executed_count": 155,
+        "execution_coverage": 0.0749154180763654,
+        "population_gain_after_cost": 0.003991615554231834,
+        "risk_upper_bound": 0.0666254873829743,
+        "selective_risk": 0.03225806451612903
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0035685236288967395,
+      "feedback_policy": {
+        "acquisition_threshold": 0.9348678942276709,
+        "base_execution_threshold": -0.0726208395637902,
+        "feedback_population_gain": 0.003807679052734332,
+        "feedback_selective_risk": 0.02830188679245283,
+        "target_acquisition_coverage": 0.05,
+        "target_base_execution_coverage": 0.05,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.033876401344782744
+      },
+      "test_evaluation": {
+        "acquired_count": 111,
+        "acquisition_coverage": 0.050523441055985434,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 135,
+        "execution_coverage": 0.06144742831133364,
+        "population_gain_after_cost": 0.0035685236288967395,
+        "risk_upper_bound": 0.0219462089964865,
+        "selective_risk": 0.0
+      }
+    },
+    "source_voi_expected": {
+      "acceptance_certificate": {
+        "acquired_count": 207,
+        "acquisition_coverage": 0.1000483325277912,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 179,
+        "execution_coverage": 0.08651522474625423,
+        "population_gain_after_cost": 0.00424899654624786,
+        "risk_upper_bound": 0.016596666745133153,
+        "selective_risk": 0.0
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0037878043819005018,
+      "feedback_policy": {
+        "acquisition_threshold": -0.0017970443522512592,
+        "base_execution_threshold": -0.0726208395637902,
+        "feedback_population_gain": 0.0037958062502267743,
+        "feedback_selective_risk": 0.015625,
+        "target_acquisition_coverage": 0.1,
+        "target_base_execution_coverage": 0.05,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.033876401344782744
+      },
+      "test_evaluation": {
+        "acquired_count": 222,
+        "acquisition_coverage": 0.10104688211197087,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 177,
+        "execution_coverage": 0.08056440600819299,
+        "population_gain_after_cost": 0.0037878043819005018,
+        "risk_upper_bound": 0.016782617227451304,
+        "selective_risk": 0.0
+      }
+    },
+    "source_voi_probability": {
+      "acceptance_certificate": {
+        "acquired_count": 101,
+        "acquisition_coverage": 0.04881585306911552,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 5,
+        "executed_count": 158,
+        "execution_coverage": 0.0763653939101015,
+        "population_gain_after_cost": 0.0039986817679255405,
+        "risk_upper_bound": 0.06538270653990874,
+        "selective_risk": 0.03164556962025317
+      },
+      "deployed": true,
+      "deployed_test_population_gain": 0.0036341270558725913,
+      "feedback_policy": {
+        "acquisition_threshold": 0.9212432471257128,
+        "base_execution_threshold": -0.0726208395637902,
+        "feedback_population_gain": 0.003724272685253934,
+        "feedback_selective_risk": 0.037037037037037035,
+        "target_acquisition_coverage": 0.05,
+        "target_base_execution_coverage": 0.05,
+        "target_tool_execution_coverage": 0.1,
+        "tool_execution_threshold": 0.033876401344782744
+      },
+      "test_evaluation": {
+        "acquired_count": 121,
+        "acquisition_coverage": 0.05507510241238052,
+        "alpha": 0.2,
+        "certified": true,
+        "delta": 0.05,
+        "errors": 0,
+        "executed_count": 140,
+        "execution_coverage": 0.06372325898953118,
+        "population_gain_after_cost": 0.0036341270558725913,
+        "risk_upper_bound": 0.02117077284486881,
+        "selective_risk": 0.0
+      }
+    }
+  },
+  "task": "external_unique_log_kvrh",
+  "tool_cost": 0.02
+}

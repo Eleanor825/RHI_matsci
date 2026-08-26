@@ -1,0 +1,134 @@
+{
+  "cell_count": 3,
+  "gain_definition": "strict_realized",
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "record_count": 3,
+  "reservation_values": {
+    "extreme_properties": 0.7797663551401869
+  },
+  "rows": [
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.1175,
+      "mean_p_positive_gain": 0.1,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.68,
+          "expected_gain": -0.1175,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.1,
+          "p_success": 0.1,
+          "rationale": "Limited evidence, withheld outcomes, and a highly complex visibly truncated candidate imply low confidence of meeting all seven target-property bounds; the substantial action cost and moderate failure irreversibility make expected strict gain negative."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C9::09bcde7f9c61",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.244,
+      "mean_p_positive_gain": 0.005,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.91,
+          "expected_gain": -0.244,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.005,
+          "p_success": 0.005,
+          "rationale": "The candidate appears to be an unusually large, highly complex, charged, and visibly truncated molecular structure, making simultaneous agreement with all seven target properties and the stated RMSE bounds very unlikely. Conditional on a valid and successful advance, its scientific utility could be substantial, but the high action cost and failure penalty dominate at the estimated success probability."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C7::b7a5946e2ff1",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    },
+    {
+      "benchmark": "extreme_properties",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": -0.2404,
+      "mean_p_positive_gain": 0.005,
+      "models": {
+        "gpt-5.6-sol": {
+          "assessment_confidence": 0.95,
+          "expected_gain": -0.2404,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.005,
+          "p_success": 0.005,
+          "rationale": "The candidate is an extremely large, highly heteroatom-rich molecule with a very high probability of missing the stated MW and related property bounds. Given the visible action cost and partial reversibility, the expected scientific benefit is unlikely to offset cost and failure harm."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "extreme-rlcc::C8::d487cf2c1d47",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2825,
+      "worthy": 0
+    }
+  ],
+  "schema_version": "sequential-v2-generic-llm-worthiness-v2",
+  "split": "feedback",
+  "stage": "base",
+  "summary": {
+    "by_model": {
+      "gpt-5.6-sol": {
+        "accuracy_at_threshold": 1.0,
+        "aurc": 1.0,
+        "brier": 0.003350000000000001,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.03666666666666667,
+        "expected_gain_mae": 0.08186666666666664,
+        "log_loss": 0.03846186643497162,
+        "n": 3.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      }
+    },
+    "by_task": {
+      "extreme_properties": {
+        "accuracy_at_threshold": 1.0,
+        "aurc": 1.0,
+        "brier": 0.003350000000000001,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.03666666666666667,
+        "log_loss": 0.03846186643497162,
+        "n": 3.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      }
+    },
+    "ensemble": {
+      "accuracy_at_threshold": 1.0,
+      "aurc": 1.0,
+      "brier": 0.003350000000000001,
+      "confidently_wrong_rate": 0.0,
+      "coverage": 0.0,
+      "coverage_at_risk_0.05": 0.0,
+      "coverage_at_risk_0.10": 0.0,
+      "ece": 0.03666666666666667,
+      "expected_gain_mae": 0.08186666666666664,
+      "expected_gain_variance_error_correlation": 0.0,
+      "log_loss": 0.03846186643497162,
+      "n": 3.0,
+      "probability_variance_error_correlation": 0.0,
+      "selective_accuracy": 0.0,
+      "selective_risk": 0.0
+    }
+  }
+}

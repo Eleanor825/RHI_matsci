@@ -1,0 +1,412 @@
+{
+  "schema_version": "sd-worth-h1-v1",
+  "method": "Source-Decomposed Worthiness H1 base without variance replicas",
+  "confirmatory_protocol": "research/evl_iclr/experiments/h1_gain_risk/protocol.md",
+  "data_dir": "/Users/huan/matsci_uncertainty/data/raw/material_discovery_tasks",
+  "tasks": [
+    "matbench_pairwise",
+    "discover_unique",
+    "extreme_properties"
+  ],
+  "seeds": [
+    7
+  ],
+  "alpha": 0.1,
+  "delta": 0.05,
+  "gain_config": {
+    "cost_weight": 0.15,
+    "failure_harm_weight": 0.25,
+    "worthiness_margin": 0.0
+  },
+  "runs": [
+    {
+      "seed": 7,
+      "sizes": {
+        "train": 12764,
+        "feedback": 3030,
+        "acceptance": 2080,
+        "test": 3113
+      },
+      "utility_normalizer": {
+        "matbench_pairwise": {
+          "count": 4789,
+          "minimum": 0.0,
+          "maximum": 0.818098
+        },
+        "discover_unique": {
+          "count": 6692,
+          "minimum": 0.046231,
+          "maximum": 0.738414
+        },
+        "extreme_properties": {
+          "count": 1283,
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      },
+      "feature_count": 43,
+      "temperatures": {
+        "static_reliability": 0.85,
+        "binary_worthiness": 0.85,
+        "sd_worth_gain_distribution": 1.4
+      },
+      "methods": {
+        "static_reliability": {
+          "selection": {
+            "threshold": 1.000000000001,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "alpha": 0.1,
+            "delta": 0.05,
+            "candidate_prefixes": 2080
+          },
+          "test": {
+            "n": 3113,
+            "selected": 0,
+            "coverage": 0.0,
+            "selective_risk": 0.0,
+            "mean_selected_gain": 0.0,
+            "net_gain_per_action": 0.0,
+            "oracle_gain_efficiency": 0.0,
+            "worst_regime_risk": 0.0,
+            "brier": 0.15322200854569826,
+            "ece": 0.07783767278541416,
+            "aurc": 0.423262578487961,
+            "by_task": {
+              "discover_unique": {
+                "n": 1698,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              },
+              "extreme_properties": {
+                "n": 200,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              },
+              "matbench_pairwise": {
+                "n": 1215,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              }
+            },
+            "regime_risks": {}
+          }
+        },
+        "binary_worthiness": {
+          "selection": {
+            "threshold": 1.000000000001,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "alpha": 0.1,
+            "delta": 0.05,
+            "candidate_prefixes": 2080
+          },
+          "test": {
+            "n": 3113,
+            "selected": 0,
+            "coverage": 0.0,
+            "selective_risk": 0.0,
+            "mean_selected_gain": 0.0,
+            "net_gain_per_action": 0.0,
+            "oracle_gain_efficiency": 0.0,
+            "worst_regime_risk": 0.0,
+            "brier": 0.15322200854569826,
+            "ece": 0.07783767278541416,
+            "aurc": 0.423262578487961,
+            "by_task": {
+              "discover_unique": {
+                "n": 1698,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              },
+              "extreme_properties": {
+                "n": 200,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              },
+              "matbench_pairwise": {
+                "n": 1215,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              }
+            },
+            "regime_risks": {}
+          }
+        },
+        "sd_worth_gain_distribution": {
+          "selection": {
+            "threshold": 1.000000000001,
+            "selected_count": 0,
+            "selected_fraction": 0.0,
+            "empirical_risk": 0.0,
+            "risk_upper_bound": 0.0,
+            "alpha": 0.1,
+            "delta": 0.05,
+            "candidate_prefixes": 2080
+          },
+          "test": {
+            "n": 3113,
+            "selected": 0,
+            "coverage": 0.0,
+            "selective_risk": 0.0,
+            "mean_selected_gain": 0.0,
+            "net_gain_per_action": 0.0,
+            "oracle_gain_efficiency": 0.0,
+            "worst_regime_risk": 0.0,
+            "brier": 0.22570586721862845,
+            "ece": 0.2566861054613922,
+            "aurc": 0.42189521875827013,
+            "by_task": {
+              "discover_unique": {
+                "n": 1698,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              },
+              "extreme_properties": {
+                "n": 200,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              },
+              "matbench_pairwise": {
+                "n": 1215,
+                "selected": 0,
+                "coverage": 0.0,
+                "selective_risk": 0.0,
+                "net_gain_per_action": 0.0
+              }
+            },
+            "regime_risks": {}
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "methods": {
+      "binary_worthiness": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "oracle_gain_efficiency": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "worst_regime_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.15322200854569826,
+          "std": 0.0,
+          "values": [
+            0.15322200854569826
+          ]
+        },
+        "ece": {
+          "mean": 0.07783767278541416,
+          "std": 0.0,
+          "values": [
+            0.07783767278541416
+          ]
+        },
+        "aurc": {
+          "mean": 0.423262578487961,
+          "std": 0.0,
+          "values": [
+            0.423262578487961
+          ]
+        },
+        "calibration_risk_upper_bound": {
+          "mean": 0.0
+        }
+      },
+      "sd_worth_gain_distribution": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "oracle_gain_efficiency": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "worst_regime_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.22570586721862845,
+          "std": 0.0,
+          "values": [
+            0.22570586721862845
+          ]
+        },
+        "ece": {
+          "mean": 0.2566861054613922,
+          "std": 0.0,
+          "values": [
+            0.2566861054613922
+          ]
+        },
+        "aurc": {
+          "mean": 0.42189521875827013,
+          "std": 0.0,
+          "values": [
+            0.42189521875827013
+          ]
+        },
+        "calibration_risk_upper_bound": {
+          "mean": 0.0
+        }
+      },
+      "static_reliability": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "selective_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "mean_selected_gain": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "oracle_gain_efficiency": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "worst_regime_risk": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0
+          ]
+        },
+        "brier": {
+          "mean": 0.15322200854569826,
+          "std": 0.0,
+          "values": [
+            0.15322200854569826
+          ]
+        },
+        "ece": {
+          "mean": 0.07783767278541416,
+          "std": 0.0,
+          "values": [
+            0.07783767278541416
+          ]
+        },
+        "aurc": {
+          "mean": 0.423262578487961,
+          "std": 0.0,
+          "values": [
+            0.423262578487961
+          ]
+        },
+        "calibration_risk_upper_bound": {
+          "mean": 0.0
+        }
+      }
+    }
+  }
+}

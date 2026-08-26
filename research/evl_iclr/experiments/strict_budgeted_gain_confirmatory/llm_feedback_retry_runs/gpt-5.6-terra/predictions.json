@@ -1,0 +1,369 @@
+{
+  "cell_count": 13,
+  "gain_definition": "strict_realized",
+  "models": [
+    "gpt-5.6-terra"
+  ],
+  "record_count": 13,
+  "reservation_values": {
+    "discover_unique": 0.82495517705065,
+    "matbench_pairwise": 0.8699373695198329
+  },
+  "rows": [
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.3308,
+      "mean_p_positive_gain": 0.59,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.62,
+          "expected_gain": 0.3308,
+          "expected_normalized_utility": 0.72,
+          "p_positive_gain": 0.59,
+          "p_success": 0.59,
+          "rationale": "The high surrogate tier and positive margin favor B, but the large estimated noise substantially limits confidence. Assuming conditional scientific utility of 0.72, normalized action cost of 0.20, and low irreversible-failure harm due to 0.80 reversibility, the posterior mean strict gain is approximately 0.331."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::e50ac7c4c5a2",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.395,
+      "mean_p_positive_gain": 0.56,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.55,
+          "expected_gain": 0.395,
+          "expected_normalized_utility": 0.8,
+          "p_positive_gain": 0.56,
+          "p_success": 0.56,
+          "rationale": "The small surrogate margin relative to estimated noise implies only modestly better-than-chance success probability; high-tier selection has substantial utility, while cost and limited irreversibility impose modest penalties."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::73402433dd9e",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.208,
+      "mean_p_positive_gain": 0.48,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.38,
+          "expected_gain": 0.208,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.48,
+          "p_success": 0.48,
+          "rationale": "The two candidates have essentially indistinguishable surrogate tiers, the margin is small relative to the high estimated noise, and reversibility limits failure harm. Selection success is therefore near chance, with moderate utility conditional on being correct."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::b7f41b33d5f2",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.33920668058455117,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.585,
+      "mean_p_positive_gain": 0.633,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.72,
+          "expected_gain": 0.585,
+          "expected_normalized_utility": 1.0,
+          "p_positive_gain": 0.633,
+          "p_success": 0.633,
+          "rationale": "The high surrogate tier and positive margin favor candidate B, but the large estimated noise substantially limits confidence. Assuming a normalized utility of 1 for correctly identifying the higher-elasticity candidate and an irreversible-failure harm consistent with the 0.8 reversibility, the expected gain remains positive after action cost and failure-risk penalties."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::f44b0c6dfeb1",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.5972442588726513,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.286,
+      "mean_p_positive_gain": 0.61,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.286,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.61,
+          "p_success": 0.61,
+          "rationale": "The medium-versus-low surrogate margin supports A, but the high estimated noise materially limits confidence. Assuming moderate utility from a correct high-bulk-modulus selection, low-to-moderate irreversible harm, and the stated action cost, the posterior mean strict gain is positive but uncertain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::f1943f10b023",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.4738622129436325,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.276,
+      "mean_p_positive_gain": 0.53,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.276,
+          "expected_normalized_utility": 0.62,
+          "p_positive_gain": 0.53,
+          "p_success": 0.53,
+          "rationale": "Both candidates have the same high surrogate tier, while the small margin and relatively high estimated noise provide only weak support for selecting A. Assuming success yields moderate scientific utility and failure harm is limited by the stated reversibility, the expected net gain is positive but modest."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::454f6aac0925",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.3225052192066806,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.326,
+      "mean_p_positive_gain": 0.58,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.58,
+          "expected_gain": 0.326,
+          "expected_normalized_utility": 0.377,
+          "p_positive_gain": 0.58,
+          "p_success": 0.58,
+          "rationale": "The positive surrogate margin supports choosing B, but the high estimated noise makes success only moderately likely. Conditional scientific utility is estimated at 0.65; the action cost is modest and reversibility is high, so failure harm is limited."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::b0f8fa2357d7",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.284,
+      "mean_p_positive_gain": 0.59,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.284,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.59,
+          "p_success": 0.59,
+          "rationale": "The medium-versus-low surrogate ranking favors A, but the large estimated noise relative to the margin makes the probability that A is truly the higher-bulk-modulus choice only moderate. The action is fairly reversible, so failure harm is limited; the main downside is the normalized action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::b765e244a057",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.4675991649269311,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.293,
+      "mean_p_positive_gain": 0.51,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.45,
+          "expected_gain": 0.293,
+          "expected_normalized_utility": 0.6,
+          "p_positive_gain": 0.51,
+          "p_success": 0.51,
+          "rationale": "Both candidates have the same surrogate tier, the margin is small, and estimated noise is high, so selecting B has only slightly better than chance of being scientifically correct. The action is largely reversible, limiting failure harm, but its expected benefit is reduced by uncertainty and action cost."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::626e173dce32",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.297,
+      "mean_p_positive_gain": 0.58,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.297,
+          "expected_normalized_utility": 0.6,
+          "p_positive_gain": 0.58,
+          "p_success": 0.58,
+          "rationale": "Both candidates have high surrogate tiers; the modest margin relative to estimated noise supports only a slight success-probability advantage for A. The action is mostly reversible, so failure harm is limited."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::6b9b6dfaa660",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": 0.3433820459290188,
+      "worthy": 1
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.31999999999999995,
+      "mean_p_positive_gain": 0.5,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.56,
+          "expected_gain": 0.31999999999999995,
+          "expected_normalized_utility": 0.75,
+          "p_positive_gain": 0.5,
+          "p_success": 0.5,
+          "rationale": "The surrogate tie, very small margin, and high estimated noise provide little basis for preferring B; the follow-up has moderate scientific value if B is correct, with limited failure harm given high reversibility."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::d7f397e06b00",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "matbench_pairwise",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.227,
+      "mean_p_positive_gain": 0.52,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.36,
+          "expected_gain": 0.227,
+          "expected_normalized_utility": 0.55,
+          "p_positive_gain": 0.52,
+          "p_success": 0.52,
+          "rationale": "The positive surrogate margin is very small relative to the high estimated noise, so selecting A has only slightly better than chance success probability. Conditional scientific utility is moderate, while the action cost is modest and reversibility limits failure harm."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "matbench-pairwise::1b5241ead8f2",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.07999999999999999,
+      "worthy": 0
+    },
+    {
+      "benchmark": "discover_unique",
+      "expected_gain_variance": 0.0,
+      "mean_expected_gain": 0.0888,
+      "mean_p_positive_gain": 0.35,
+      "models": {
+        "gpt-5.6-terra": {
+          "assessment_confidence": 0.63,
+          "expected_gain": 0.0888,
+          "expected_normalized_utility": 0.7,
+          "p_positive_gain": 0.35,
+          "p_success": 0.35,
+          "rationale": "Sparse evidence supports moderate potential for a successful high-performance, chemically unique discovery; the screening cost and partial irreversibility materially reduce expected net gain."
+        }
+      },
+      "probability_variance": 0.0,
+      "record_id": "unique-material::mb-log-kvrh-08417",
+      "split": "feedback",
+      "stage": "base",
+      "target_gain": -0.2,
+      "worthy": 0
+    }
+  ],
+  "schema_version": "sequential-v2-generic-llm-worthiness-v2",
+  "split": "feedback",
+  "stage": "base",
+  "summary": {
+    "by_model": {
+      "gpt-5.6-terra": {
+        "accuracy_at_threshold": 0.46153846153846156,
+        "aurc": 0.3575845095075864,
+        "brier": 0.23259146153846155,
+        "confidently_wrong_rate": 0.46153846153846156,
+        "coverage": 0.8461538461538461,
+        "coverage_at_risk_0.05": 0.15384615384615385,
+        "coverage_at_risk_0.10": 0.15384615384615385,
+        "ece": 0.2759230769230769,
+        "expected_gain_mae": 0.25141535249718966,
+        "log_loss": 0.6572397647970275,
+        "n": 13.0,
+        "selective_accuracy": 0.45454545454545453,
+        "selective_risk": 0.5454545454545454
+      }
+    },
+    "by_task": {
+      "discover_unique": {
+        "accuracy_at_threshold": 1.0,
+        "aurc": 1.0,
+        "brier": 0.12249999999999998,
+        "confidently_wrong_rate": 0.0,
+        "coverage": 0.0,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0,
+        "ece": 0.35,
+        "log_loss": 0.4307829160924542,
+        "n": 1.0,
+        "selective_accuracy": 0.0,
+        "selective_risk": 0.0
+      },
+      "matbench_pairwise": {
+        "accuracy_at_threshold": 0.4166666666666667,
+        "aurc": 0.34251142376142374,
+        "brier": 0.24176575,
+        "confidently_wrong_rate": 0.5,
+        "coverage": 0.9166666666666666,
+        "coverage_at_risk_0.05": 0.16666666666666666,
+        "coverage_at_risk_0.10": 0.16666666666666666,
+        "ece": 0.26974999999999993,
+        "log_loss": 0.676111168855742,
+        "n": 12.0,
+        "selective_accuracy": 0.45454545454545453,
+        "selective_risk": 0.5454545454545454
+      }
+    },
+    "ensemble": {
+      "accuracy_at_threshold": 0.46153846153846156,
+      "aurc": 0.3575845095075864,
+      "brier": 0.23259146153846155,
+      "confidently_wrong_rate": 0.46153846153846156,
+      "coverage": 0.8461538461538461,
+      "coverage_at_risk_0.05": 0.15384615384615385,
+      "coverage_at_risk_0.10": 0.15384615384615385,
+      "ece": 0.2759230769230769,
+      "expected_gain_mae": 0.25141535249718966,
+      "expected_gain_variance_error_correlation": 0.0,
+      "log_loss": 0.6572397647970275,
+      "n": 13.0,
+      "probability_variance_error_correlation": 0.0,
+      "selective_accuracy": 0.45454545454545453,
+      "selective_risk": 0.5454545454545454
+    }
+  }
+}

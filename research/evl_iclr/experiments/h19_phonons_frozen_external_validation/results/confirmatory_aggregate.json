@@ -1,0 +1,154 @@
+{
+  "confirmatory_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "experiment": "h19_phonons_frozen_external_validation",
+  "methods": {
+    "external_variance": {
+      "certified_folds": 1,
+      "deployed_test_gains": [
+        0.0,
+        0.0,
+        0.0,
+        0.002450051000892523,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0004900102001785046,
+      "test_selective_risks": [
+        0.0,
+        0.0,
+        0.0,
+        0.013333333333333334,
+        0.0
+      ]
+    },
+    "no_source_voi_expected": {
+      "certified_folds": 3,
+      "deployed_test_gains": [
+        0.0017734710357431324,
+        0.0,
+        0.0025136958646776444,
+        0.0030637511156445343,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.001470183603213062,
+      "test_selective_risks": [
+        0.0,
+        0.05,
+        0.036036036036036036,
+        0.02040816326530612,
+        0.047619047619047616
+      ]
+    },
+    "no_source_voi_probability": {
+      "certified_folds": 3,
+      "deployed_test_gains": [
+        0.0017116112031960622,
+        0.0,
+        0.0025040056950996767,
+        0.0030795613923243763,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0014590356581240232,
+      "test_selective_risks": [
+        0.0,
+        0.05,
+        0.03636363636363636,
+        0.02040816326530612,
+        0.05263157894736842
+      ]
+    },
+    "no_source_voi_tail": {
+      "certified_folds": 3,
+      "deployed_test_gains": [
+        0.0016947065323643221,
+        0.0,
+        0.0025295061413574864,
+        0.002997131199796008,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0014442687747035633,
+      "test_selective_risks": [
+        0.0,
+        0.0,
+        0.036036036036036036,
+        0.02830188679245283,
+        0.05555555555555555
+      ]
+    },
+    "source_voi_expected": {
+      "certified_folds": 3,
+      "deployed_test_gains": [
+        0.0017176356836244699,
+        0.0,
+        0.0024922861150070254,
+        0.0028199562242339363,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0014059756045730863,
+      "test_selective_risks": [
+        0.0,
+        0.05263157894736842,
+        0.035398230088495575,
+        0.042735042735042736,
+        0.12
+      ]
+    },
+    "source_voi_probability": {
+      "certified_folds": 3,
+      "deployed_test_gains": [
+        0.0015905265842152295,
+        0.0,
+        0.002555144715032526,
+        0.002900133877342865,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.001409161035318124,
+      "test_selective_risks": [
+        0.0,
+        0.0625,
+        0.036036036036036036,
+        0.045871559633027525,
+        0.1111111111111111
+      ]
+    },
+    "source_voi_tail": {
+      "certified_folds": 2,
+      "deployed_test_gains": [
+        0.0016710548684602043,
+        0.0,
+        0.0,
+        0.0028956287985039855,
+        0.0
+      ],
+      "fold_count": 5,
+      "mean_deployed_test_gain": 0.0009133367333928379,
+      "test_selective_risks": [
+        0.0,
+        0.14285714285714285,
+        0.04878048780487805,
+        0.01680672268907563,
+        0.10714285714285714
+      ]
+    }
+  },
+  "preregistered_primary": "source_voi_expected",
+  "primary_confirmatory_pass": false,
+  "protocol_hash": "1404b7c7163b7f8480c16a330e4de352ab638ce59bb9bdce2416f554c7cf4ef6",
+  "success_criteria": {
+    "beats_no_source_expected": false,
+    "beats_static_external_variance": true,
+    "certifies_at_least_four_of_five": false,
+    "positive_mean_gain": true
+  }
+}

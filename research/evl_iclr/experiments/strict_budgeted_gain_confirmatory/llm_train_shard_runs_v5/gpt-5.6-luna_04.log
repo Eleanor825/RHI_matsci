@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_sequential_llm_worthiness.py", line 263, in <module>
+    for model in models:
+    ^^^^^^
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_sequential_llm_worthiness.py", line 39, in main
+    selected = [row for row in trajectories if row["split"] == args.split]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huan/Desktop/harness_matsci/experiments/sd_worth/run_sequential_llm_worthiness.py", line 111, in run_baseline
+    "error": f"{type(error).__name__}: {error}",
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: sequential LLM baseline has 4 failed cells

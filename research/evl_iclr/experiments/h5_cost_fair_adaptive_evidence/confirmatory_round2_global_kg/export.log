@@ -1,0 +1,43 @@
+{
+  "benchmark_version": "sequential_tool_observation_v2",
+  "duplicate_source_records_by_task": {
+    "discover_unique": 5,
+    "extreme_properties": 160,
+    "matbench_pairwise": 0
+  },
+  "excluded_scientific_fingerprints": 29995,
+  "excluded_source_records_by_task": {
+    "discover_unique": 10063,
+    "extreme_properties": 9829,
+    "matbench_pairwise": 0
+  },
+  "hidden_outcomes_separated": true,
+  "matbot_runtime": false,
+  "note": "Benchmark trajectories contain observations and outcomes, not evaluated H5.2 model outputs.",
+  "online": false,
+  "path": "research/evl_iclr/data/sequential_tool_trajectories_h5_round2_fresh.jsonl",
+  "per_task": 900,
+  "requested_task_counts": {
+    "discover_unique": 900,
+    "extreme_properties": 12000,
+    "matbench_pairwise": 12000
+  },
+  "route_in_harness_output": false,
+  "scientific_fingerprint_overlap": 0,
+  "seed": 2026082303,
+  "semi_synthetic_observation_channel": true,
+  "sha256": "a06835405d60d5bd65f920e260e5d6f0aec519c6d4969ff896661d81313eada6",
+  "split_counts": {
+    "acceptance": 2538,
+    "feedback": 3799,
+    "test": 3375,
+    "train": 15188
+  },
+  "stages_per_trajectory": 3,
+  "task_counts": {
+    "discover_unique": 900,
+    "extreme_properties": 12000,
+    "matbench_pairwise": 12000
+  },
+  "total_trajectories": 24900
+}

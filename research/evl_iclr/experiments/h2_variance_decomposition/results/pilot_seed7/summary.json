@@ -1,0 +1,72 @@
+{
+  "schema_version": "sd-worth-h2-pilot-v1",
+  "protocol": "research/evl_iclr/experiments/h2_variance_decomposition/protocol_pilot.md",
+  "split_seed": 7,
+  "agent_bootstrap_seeds": [
+    101,
+    202,
+    303
+  ],
+  "evidence_views": [
+    "full",
+    "dropout",
+    "conflict"
+  ],
+  "n_actions": 3113,
+  "summary": {
+    "overall": {
+      "n": 3113,
+      "mean_internal_variance": 0.03313875940093663,
+      "mean_external_variance": 0.0658936487530634,
+      "mean_total_variance": 0.09903240815400004,
+      "mean_dropout_shift": 0.2427729233682956,
+      "mean_absolute_dropout_shift": 0.2427729233682956,
+      "mean_conflict_shift": 0.6178615297855944,
+      "mean_absolute_conflict_shift": 0.6178615297855944,
+      "external_exceeds_permutation_fraction": 0.9738274975907485,
+      "external_variance_error_correlation": 0.027194658167631662,
+      "internal_variance_error_correlation": -0.13737678822372873
+    },
+    "by_task": {
+      "matbench_pairwise": {
+        "n": 1215,
+        "mean_internal_variance": 0.027672019526078225,
+        "mean_external_variance": 0.07011256795801225,
+        "mean_total_variance": 0.09778458748409048,
+        "mean_dropout_shift": 0.22939738484460612,
+        "mean_absolute_dropout_shift": 0.22939738484460612,
+        "mean_conflict_shift": 0.6294340165153357,
+        "mean_absolute_conflict_shift": 0.6294340165153357,
+        "external_exceeds_permutation_fraction": 0.9739094650205761,
+        "external_variance_error_correlation": 0.0345075749144794,
+        "internal_variance_error_correlation": -0.0005833248940159963
+      },
+      "discover_unique": {
+        "n": 1698,
+        "mean_internal_variance": 0.03680145548542989,
+        "mean_external_variance": 0.06514157658853673,
+        "mean_total_variance": 0.10194303207396661,
+        "mean_dropout_shift": 0.26823771771654364,
+        "mean_absolute_dropout_shift": 0.26823771771654364,
+        "mean_conflict_shift": 0.6231725264082454,
+        "mean_absolute_conflict_shift": 0.6231725264082454,
+        "external_exceeds_permutation_fraction": 0.9740724381625442,
+        "external_variance_error_correlation": -0.0666816980806643,
+        "internal_variance_error_correlation": -0.028878758522835047
+      },
+      "extreme_properties": {
+        "n": 200,
+        "mean_internal_variance": 0.035252914383353685,
+        "mean_external_variance": 0.04664880725983073,
+        "mean_total_variance": 0.0819017216431844,
+        "mean_dropout_shift": 0.10783321588308337,
+        "mean_absolute_dropout_shift": 0.10783321588308337,
+        "mean_conflict_shift": 0.5024683115761088,
+        "mean_absolute_conflict_shift": 0.5024683115761088,
+        "external_exceeds_permutation_fraction": 0.97125,
+        "external_variance_error_correlation": 0.042286216610726415,
+        "internal_variance_error_correlation": -0.08477318269337718
+      }
+    }
+  }
+}

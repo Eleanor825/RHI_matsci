@@ -1,0 +1,1224 @@
+{
+  "protocol": "research/evl_iclr/experiments/h1_gain_risk/protocol_h1_3_capacity_audit.md",
+  "seeds": [
+    1,
+    7,
+    13,
+    21,
+    42
+  ],
+  "runs": [
+    {
+      "seed": 1,
+      "methods": {
+        "extra_trees_classifier": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09452042549026045,
+            "ece": 0.02738697439007193,
+            "aurc": 0.8183901757260909,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09452042549026045,
+            "ece": 0.02738697439007193,
+            "aurc": 0.8183901757260909,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09452042549026045,
+            "ece": 0.02738697439007193,
+            "aurc": 0.8183901757260909,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.38095238095238093
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.4878048780487805
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5588235294117647
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6470588235294118
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.6918032786885245
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7321867321867321
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7754098360655738
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8336614173228346
+            }
+          ]
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09569899425206199,
+            "ece": 0.03857315678299973,
+            "aurc": 0.8230879133811712,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09569899425206199,
+            "ece": 0.03857315678299973,
+            "aurc": 0.8230879133811712,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09569899425206199,
+            "ece": 0.03857315678299973,
+            "aurc": 0.8230879133811712,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.3333333333333333
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.5121951219512195
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5588235294117647
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6323529411764706
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.6983606557377049
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7272727272727273
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7688524590163934
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8336614173228346
+            }
+          ]
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09853295733318129,
+            "ece": 0.053267389979634955,
+            "aurc": 0.8438229468661941,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09853295733318129,
+            "ece": 0.053267389979634955,
+            "aurc": 0.8438229468661941,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09853295733318129,
+            "ece": 0.053267389979634955,
+            "aurc": 0.8438229468661941,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.38095238095238093
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.5365853658536586
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.6764705882352942
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.7696078431372549
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.8065573770491803
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.8452088452088452
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.8819672131147541
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8631889763779528
+            }
+          ]
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "methods": {
+        "extra_trees_classifier": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08785939239299088,
+            "ece": 0.029071120441712554,
+            "aurc": 0.8222638528804751,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08785939239299088,
+            "ece": 0.029071120441712554,
+            "aurc": 0.8222638528804751,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08785939239299088,
+            "ece": 0.029071120441712554,
+            "aurc": 0.8222638528804751,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.47619047619047616
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.4523809523809524
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6298076923076923
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.6730769230769231
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7067307692307693
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7788461538461539
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8278846153846153
+            }
+          ]
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08719247464435556,
+            "ece": 0.03857403696150627,
+            "aurc": 0.8162436101281084,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08719247464435556,
+            "ece": 0.03857403696150627,
+            "aurc": 0.8162436101281084,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08719247464435556,
+            "ece": 0.03857403696150627,
+            "aurc": 0.8162436101281084,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.47619047619047616
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.4523809523809524
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5480769230769231
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6346153846153846
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.7083333333333334
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7331730769230769
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7660256410256411
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8278846153846153
+            }
+          ]
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09186388251651598,
+            "ece": 0.042249833713615445,
+            "aurc": 0.8482806515236969,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09186388251651598,
+            "ece": 0.042249833713615445,
+            "aurc": 0.8482806515236969,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09186388251651598,
+            "ece": 0.042249833713615445,
+            "aurc": 0.8482806515236969,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.47619047619047616
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.5714285714285714
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.7019230769230769
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.7836538461538461
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.8333333333333334
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.8557692307692307
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.8782051282051282
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8490384615384615
+            }
+          ]
+        }
+      }
+    },
+    {
+      "seed": 13,
+      "methods": {
+        "extra_trees_classifier": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09769210917432371,
+            "ece": 0.034165524805089484,
+            "aurc": 0.8212164867717153,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09769210917432371,
+            "ece": 0.034165524805089484,
+            "aurc": 0.8212164867717153,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09769210917432371,
+            "ece": 0.034165524805089484,
+            "aurc": 0.8212164867717153,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.4090909090909091
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.38636363636363635
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.4909090909090909
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6529680365296804
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.6859756097560976
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7299771167048055
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7774390243902439
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8325709057639524
+            }
+          ]
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.10182719156790684,
+            "ece": 0.06143602846991534,
+            "aurc": 0.8282744885878538,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.10182719156790684,
+            "ece": 0.06143602846991534,
+            "aurc": 0.8282744885878538,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.10182719156790684,
+            "ece": 0.06143602846991534,
+            "aurc": 0.8282744885878538,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.3181818181818182
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.38636363636363635
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5727272727272728
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6255707762557078
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.7103658536585366
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7391304347826086
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7835365853658537
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8371454711802379
+            }
+          ]
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.10256820732307201,
+            "ece": 0.023526349486626446,
+            "aurc": 0.8793620410715005,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.10256820732307201,
+            "ece": 0.023526349486626446,
+            "aurc": 0.8793620410715005,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.10256820732307201,
+            "ece": 0.023526349486626446,
+            "aurc": 0.8793620410715005,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.3181818181818182
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.4772727272727273
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.6363636363636364
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.730593607305936
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.7804878048780488
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.8077803203661327
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.8475609756097561
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.9002744739249772
+            }
+          ]
+        }
+      }
+    },
+    {
+      "seed": 21,
+      "methods": {
+        "extra_trees_classifier": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08805352291237326,
+            "ece": 0.025068126859890426,
+            "aurc": 0.831696327547619,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08805352291237326,
+            "ece": 0.025068126859890426,
+            "aurc": 0.831696327547619,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.08805352291237326,
+            "ece": 0.025068126859890426,
+            "aurc": 0.831696327547619,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.3333333333333333
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.36585365853658536
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5490196078431373
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6813725490196079
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.7254901960784313
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7592137592137592
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7839607201309329
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8388998035363457
+            }
+          ]
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09165147370799268,
+            "ece": 0.048989649619795225,
+            "aurc": 0.8402952954661278,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09165147370799268,
+            "ece": 0.048989649619795225,
+            "aurc": 0.8402952954661278,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09165147370799268,
+            "ece": 0.048989649619795225,
+            "aurc": 0.8402952954661278,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.23809523809523808
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.34146341463414637
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5588235294117647
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6715686274509803
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.7222222222222222
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7592137592137592
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.8003273322422259
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8477406679764243
+            }
+          ]
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09123686726450927,
+            "ece": 0.045188436097756496,
+            "aurc": 0.8519859824323841,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09123686726450927,
+            "ece": 0.045188436097756496,
+            "aurc": 0.8519859824323841,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09123686726450927,
+            "ece": 0.045188436097756496,
+            "aurc": 0.8519859824323841,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.38095238095238093
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.4878048780487805
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.6274509803921569
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.7352941176470589
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.8071895424836601
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.8427518427518428
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.8887070376432079
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8791748526522594
+            }
+          ]
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "methods": {
+        "extra_trees_classifier": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09130696040051589,
+            "ece": 0.028314410061944725,
+            "aurc": 0.8274514526308827,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09130696040051589,
+            "ece": 0.028314410061944725,
+            "aurc": 0.8274514526308827,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09130696040051589,
+            "ece": 0.028314410061944725,
+            "aurc": 0.8274514526308827,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.36363636363636365
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.32558139534883723
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5462962962962963
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6325581395348837
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.6832298136645962
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7202797202797203
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.7744945567651633
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.835820895522388
+            }
+          ]
+        },
+        "hist_gradient_boosting": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09066780799379541,
+            "ece": 0.024595112146580285,
+            "aurc": 0.8209470520150898,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09066780799379541,
+            "ece": 0.024595112146580285,
+            "aurc": 0.8209470520150898,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.09066780799379541,
+            "ece": 0.024595112146580285,
+            "aurc": 0.8209470520150898,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.3181818181818182
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.37209302325581395
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.5833333333333334
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.6790697674418604
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.7298136645962733
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.7365967365967366
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.776049766718507
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.8376865671641791
+            }
+          ]
+        },
+        "extra_trees_gain_regression": {
+          "0.1": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.0953355327481625,
+            "ece": 0.03753733713789582,
+            "aurc": 0.8571352450833771,
+            "acceptance_upper": 0.0
+          },
+          "0.2": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.0953355327481625,
+            "ece": 0.03753733713789582,
+            "aurc": 0.8571352450833771,
+            "acceptance_upper": 0.0
+          },
+          "0.3": {
+            "coverage": 0.0,
+            "risk": 0.0,
+            "net_gain_per_action": 0.0,
+            "brier": 0.0953355327481625,
+            "ece": 0.03753733713789582,
+            "aurc": 0.8571352450833771,
+            "acceptance_upper": 0.0
+          },
+          "acceptance_grid": [
+            {
+              "coverage": 0.01,
+              "risk": 0.36363636363636365
+            },
+            {
+              "coverage": 0.02,
+              "risk": 0.4186046511627907
+            },
+            {
+              "coverage": 0.05,
+              "risk": 0.6574074074074074
+            },
+            {
+              "coverage": 0.1,
+              "risk": 0.7767441860465116
+            },
+            {
+              "coverage": 0.15,
+              "risk": 0.8291925465838509
+            },
+            {
+              "coverage": 0.2,
+              "risk": 0.8508158508158508
+            },
+            {
+              "coverage": 0.3,
+              "risk": 0.8818040435458787
+            },
+            {
+              "coverage": 0.5,
+              "risk": 0.855410447761194
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "extra_trees_classifier": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.09188648207409283,
+          "std": 0.003791776273771994
+        },
+        "ece": {
+          "mean": 0.028801231311741823,
+          "std": 0.003000722287830926
+        },
+        "aurc": {
+          "mean": 0.8242036591113566,
+          "std": 0.004757538836669323
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.09188648207409283,
+          "std": 0.003791776273771994
+        },
+        "ece": {
+          "mean": 0.028801231311741823,
+          "std": 0.003000722287830926
+        },
+        "aurc": {
+          "mean": 0.8242036591113566,
+          "std": 0.004757538836669323
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.09188648207409283,
+          "std": 0.003791776273771994
+        },
+        "ece": {
+          "mean": 0.028801231311741823,
+          "std": 0.003000722287830926
+        },
+        "aurc": {
+          "mean": 0.8242036591113566,
+          "std": 0.004757538836669323
+        }
+      }
+    },
+    "hist_gradient_boosting": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.0934075884332225,
+          "std": 0.005007159529417816
+        },
+        "ece": {
+          "mean": 0.04243359679615937,
+          "std": 0.012264460623670393
+        },
+        "aurc": {
+          "mean": 0.8257696719156702,
+          "std": 0.008227553595257037
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.0934075884332225,
+          "std": 0.005007159529417816
+        },
+        "ece": {
+          "mean": 0.04243359679615937,
+          "std": 0.012264460623670393
+        },
+        "aurc": {
+          "mean": 0.8257696719156702,
+          "std": 0.008227553595257037
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.0934075884332225,
+          "std": 0.005007159529417816
+        },
+        "ece": {
+          "mean": 0.04243359679615937,
+          "std": 0.012264460623670393
+        },
+        "aurc": {
+          "mean": 0.8257696719156702,
+          "std": 0.008227553595257037
+        }
+      }
+    },
+    "extra_trees_gain_regression": {
+      "0.1": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.09590748943708821,
+          "std": 0.004236764031455432
+        },
+        "ece": {
+          "mean": 0.04035386928310583,
+          "std": 0.009847080887376443
+        },
+        "aurc": {
+          "mean": 0.8561173733954306,
+          "std": 0.012417617829610464
+        }
+      },
+      "0.2": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.09590748943708821,
+          "std": 0.004236764031455432
+        },
+        "ece": {
+          "mean": 0.04035386928310583,
+          "std": 0.009847080887376443
+        },
+        "aurc": {
+          "mean": 0.8561173733954306,
+          "std": 0.012417617829610464
+        }
+      },
+      "0.3": {
+        "coverage": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "risk": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "net_gain_per_action": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "brier": {
+          "mean": 0.09590748943708821,
+          "std": 0.004236764031455432
+        },
+        "ece": {
+          "mean": 0.04035386928310583,
+          "std": 0.009847080887376443
+        },
+        "aurc": {
+          "mean": 0.8561173733954306,
+          "std": 0.012417617829610464
+        }
+      }
+    }
+  }
+}

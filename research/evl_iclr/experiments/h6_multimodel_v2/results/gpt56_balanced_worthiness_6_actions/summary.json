@@ -1,0 +1,76 @@
+{
+  "schema_version": "sd-worth-h6-closed-llm-sequential-v2",
+  "models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-luna",
+    "gpt-5.6-terra"
+  ],
+  "split_seed": 7,
+  "n_per_task": 2,
+  "selection_mode": "label_balanced_diagnostic",
+  "n_actions": 6,
+  "n_prediction_cells": 54,
+  "matrix_complete": true,
+  "evidence_view_ids": [
+    "tool::verification::replica-101",
+    "tool::verification::replica-211",
+    "tool::verification::replica-307"
+  ],
+  "summary": {
+    "label_counts": {
+      "negative": 3,
+      "positive": 3
+    },
+    "discrimination_metrics_valid": true,
+    "ensemble": {
+      "brier": 0.3680697864525637,
+      "ece": 0.4918946666666666,
+      "aurc": 0.5027777777777778,
+      "accuracy": 0.5,
+      "expected_gain_mae": 0.18704109123199816
+    },
+    "source_components": {
+      "mean_internal_variance": 0.00229375333208642,
+      "mean_external_variance": 0.00977523350125916,
+      "internal_variance_error_correlation": 0.8666738103681768,
+      "external_variance_error_correlation": 0.67655903099636
+    },
+    "by_task": {
+      "matbench_pairwise": {
+        "n": 2,
+        "mean_internal_variance": 0.0034852592031851854,
+        "mean_external_variance": 0.0057514093360246914,
+        "expected_gain_mae": 0.15168846102992342
+      },
+      "discover_unique": {
+        "n": 2,
+        "mean_internal_variance": 0.003328930461888889,
+        "mean_external_variance": 0.023537197948382715,
+        "expected_gain_mae": 0.3834302425170576
+      },
+      "extreme_properties": {
+        "n": 2,
+        "mean_internal_variance": 6.707033118518521e-05,
+        "mean_external_variance": 3.709321937007407e-05,
+        "expected_gain_mae": 0.02600457014901344
+      }
+    },
+    "by_model": {
+      "gpt-5.6-sol": {
+        "brier": 0.4687150075925926,
+        "ece": 0.6130499999999999,
+        "aurc": 0.5027777777777778
+      },
+      "gpt-5.6-luna": {
+        "brier": 0.3704348807408149,
+        "ece": 0.4420776666666666,
+        "aurc": 0.33055555555555555
+      },
+      "gpt-5.6-terra": {
+        "brier": 0.33233159903151854,
+        "ece": 0.42034377777777776,
+        "aurc": 0.33055555555555555
+      }
+    }
+  }
+}

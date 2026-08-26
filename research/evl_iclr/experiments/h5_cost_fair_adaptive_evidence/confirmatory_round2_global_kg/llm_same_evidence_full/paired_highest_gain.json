@@ -1,0 +1,23 @@
+{
+  "benchmark_stratified_bootstrap_95_interval": [
+    22.195328792914914,
+    62.55088669356029
+  ],
+  "bootstrap_draws": 100000,
+  "llm_method": "screening::ensemble::platt_p",
+  "llm_risk_upper_bound": 0.1347529721627471,
+  "llm_selective_risk": 0.0984251968503937,
+  "llm_total_strict_gain": 153.4501095491939,
+  "nonzero_pair_count": 2315,
+  "numeric_method": "learned_portfolio_kg_mean",
+  "numeric_risk_upper_bound": 0.02457781683509971,
+  "numeric_selective_risk": 0.007874015748031496,
+  "numeric_total_strict_gain": 195.78859310716396,
+  "one_sided_sign_flip_p_value": 1.999980000199998e-05,
+  "paired_gain_difference": 42.33848355797103,
+  "paired_gain_difference_per_record": 0.016681829613069753,
+  "record_count": 2538,
+  "schema_version": "paired-same-evidence-significance-v1",
+  "seed": 1729,
+  "superiority_passed": true
+}

@@ -1,0 +1,31 @@
+{
+  "files": {
+    "fit_acceptance": {
+      "contains": [
+        "train",
+        "feedback",
+        "acceptance"
+      ],
+      "count": 20678,
+      "path": "research/evl_iclr/data/adaptive_evidence_h5_fresh_fit_acceptance_20678.jsonl",
+      "sha256": "65ae5ace32a03f13a658a19949d719f53dd4dc21b4ec3ec33d199edb8a449f01"
+    },
+    "locked_test": {
+      "contains": [
+        "test"
+      ],
+      "count": 3322,
+      "path": "research/evl_iclr/data/adaptive_evidence_h5_fresh_locked_test_3322.jsonl",
+      "sha256": "06b08e5b67e9b0b5646b13616b233ccb81a7508419d6bf05a6e9ed37d9dffb84"
+    }
+  },
+  "source": "research/evl_iclr/data/adaptive_evidence_h5_fresh_24000.jsonl",
+  "source_sha256": "ce82cbea42a2134ab0a7a35c841234bd2cbc33ae90521b4c078abc65fc6c7750",
+  "split_counts": {
+    "acceptance": 2447,
+    "feedback": 3601,
+    "test": 3322,
+    "train": 14630
+  },
+  "test_physically_excluded_from_acceptance_input": true
+}

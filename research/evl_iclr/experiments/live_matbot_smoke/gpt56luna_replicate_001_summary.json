@@ -1,0 +1,19 @@
+{
+  "action_id": "proposed-experiment::809e1bfc05f58241",
+  "agent_backend": "mimorouter-openai/gpt-5.6-luna",
+  "capture_mode": "live_runtime",
+  "complete": false,
+  "step_count": 1,
+  "tool_call_count": 17,
+  "tool_error_count": 3,
+  "trajectory_count": 1,
+  "uncertainty_output": {
+    "expected_net_scientific_gain": 0.43500000000000005,
+    "expected_scientific_utility": 0.91,
+    "expected_value_of_evidence": 0.94,
+    "irreversible_risk": 0.04,
+    "p_success": 0.9,
+    "reported_external_uncertainty": 0.78,
+    "reported_internal_uncertainty": 0.42
+  }
+}
