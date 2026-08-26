@@ -56,3 +56,21 @@ PYTHONPATH=src python3 -m harness_matsci experiment-suite \
 The cache is ignored by Git. The generated report records the model name,
 protocol, calibration split, and method-level metrics without storing the API
 key.
+
+## Paired Comparison With Current Task-Conditional RHI
+
+A paired comparison was run using the existing real GPT-5.5 judge cache and the
+same 500-record subset. The current task-conditioned RHI was evaluated on its
+trajectory-safe test split; both methods used the same fixed top-10% action
+budget. This run made no new LLM calls.
+
+| Method | Test actions | Budget | Risk@10% ↓ | Hit rate ↑ | Mean utility ↑ | Mutation accepted |
+| --- | ---: | ---: | ---: | ---: | ---: | :---: |
+| `task_conditional_rhi` | 74 | 8 | 0.7500 | 0.2500 | 0.007865 | no |
+| `gpt-5.5_direct_judge` | 74 | 8 | 0.6250 | 0.3750 | 0.008380 | n/a |
+
+The direct judge selects 3/8 positive actions, versus 2/8 for the current RHI.
+The RHI mutation was rejected on this small paired split, so this comparison
+is a fixed-harness control and not evidence of positive self-improvement. The
+full paired artifact is stored in
+`runs/direct_judge_subset500_v2/paired_summary.json`.

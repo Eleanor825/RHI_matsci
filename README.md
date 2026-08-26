@@ -348,3 +348,15 @@ For presentation-ready summaries, use
 This repository reuses the harness idea from recursive self-improvement systems,
 but the task layer is scientific: the model learns whether a materials action is
 worth executing, verifying, or stopping, not whether code changes are good.
+
+## Latest Direct-Judge Comparison
+
+The latest paired control reuses 500 records with real cached GPT-5.5
+one-shot-judge scores and evaluates both methods under the same top-10% action
+budget. On the RHI-held-out split (74 test actions, 8 selected actions),
+GPT-5.5 direct judge obtains Risk@10% `0.6250`, hit rate `0.3750`, and mean
+utility `0.008380`; task-conditioned RHI obtains Risk@10% `0.7500`, hit rate
+`0.2500`, and mean utility `0.007865`. The mutation is not accepted on this
+small split. This is a negative/neutral control, not a claim that RHI beats the
+LLM judge. Details are in `runs/direct_judge_baseline_v1/README.md` and
+`runs/direct_judge_subset500_v2/paired_summary.json`.
