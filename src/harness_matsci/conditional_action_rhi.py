@@ -576,6 +576,7 @@ def _score(report: dict[str, Any]) -> float:
 def run_conditional_action_rhi(records: list[ActionRecord], *, iterations: int = 3, seed: int = 1729, alpha: float = 0.10, budget_fraction: float = 0.10, epochs: int = 120) -> dict[str, Any]:
     splits = _split_trajectories(records, seed)
     active_signals = {"verbal_confidence", "cost", "reversibility"}
+    active_policy = "global_score"
     versions = []
     patterns_by_round = []
     accepted_rounds = [0]
@@ -584,11 +585,15 @@ def run_conditional_action_rhi(records: list[ActionRecord], *, iterations: int =
     for round_index in range(iterations + 1):
         prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
         names = _feature_names(prepared["train"] + prepared["feedback"], active_signals)
-        gate = train_gate_with_features(prepared["train"], prepared["feedback"], feature_names=names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
+        gate = (
+            _train_task_conditional_gate(prepared["train"], prepared["feedback"], active_signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+            if active_policy == "task_conditional_score_heads"
+            else train_gate_with_features(prepared["train"], prepared["feedback"], feature_names=names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
+        )
         acceptance = _report(prepared["acceptance"], gate, budget_fraction)
         feedback_probabilities = _predict(prepared["feedback"], gate)
         patterns = _stable_failure_patterns(prepared["feedback"], feedback_probabilities, gate.threshold) if round_index < iterations else []
-        versions.append({"round": round_index, "active_signals": sorted(active_signals), "feature_count": len(names), "acceptance": acceptance, "patterns": patterns})
+        versions.append({"round": round_index, "active_signals": sorted(active_signals), "policy": active_policy, "feature_count": len(names), "acceptance": acceptance, "patterns": patterns})
         final_gate = gate
         patterns_by_round.append(patterns)
         if not patterns:
@@ -602,16 +607,24 @@ def run_conditional_action_rhi(records: list[ActionRecord], *, iterations: int =
             continue
         candidate_prepared = {name: add_policy_features(rows, candidate) for name, rows in splits.items()}
         candidate_names = _feature_names(candidate_prepared["train"] + candidate_prepared["feedback"], candidate)
-        candidate_gate = train_gate_with_features(candidate_prepared["train"], candidate_prepared["feedback"], feature_names=candidate_names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
+        candidate_gate = _train_task_conditional_gate(candidate_prepared["train"], candidate_prepared["feedback"], candidate, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
         candidate_acceptance = _report(candidate_prepared["acceptance"], candidate_gate, budget_fraction)
+        predecessor_ids = _top_budget_ids(prepared["acceptance"], _predict(prepared["acceptance"], gate), budget_fraction)
+        candidate_ids = _top_budget_ids(candidate_prepared["acceptance"], _predict(candidate_prepared["acceptance"], candidate_gate), budget_fraction)
+        rank_overlap = len(predecessor_ids & candidate_ids) / max(1, len(predecessor_ids))
         accepted = _score(candidate_acceptance) >= _score(acceptance) and candidate_acceptance["metrics"]["selective_risk"] <= alpha + 0.05
-        mutations.append({"round": round_index + 1, "candidate_signals": sorted(candidate - active_signals), "accepted": accepted, "predecessor_score": _score(acceptance), "candidate_score": _score(candidate_acceptance), "predecessor_risk": acceptance["metrics"]["selective_risk"], "candidate_risk": candidate_acceptance["metrics"]["selective_risk"]})
+        mutations.append({"round": round_index + 1, "candidate_signals": sorted(candidate - active_signals), "policy": "task_conditional_score_heads", "accepted": accepted, "predecessor_score": _score(acceptance), "candidate_score": _score(candidate_acceptance), "predecessor_risk": acceptance["metrics"]["selective_risk"], "candidate_risk": candidate_acceptance["metrics"]["selective_risk"], "top_budget_rank_overlap": rank_overlap, "top_budget_rank_displacement": 1.0 - rank_overlap})
         if accepted:
             active_signals = candidate
+            active_policy = "task_conditional_score_heads"
             accepted_rounds.append(round_index + 1)
     final_prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
     final_names = _feature_names(final_prepared["train"] + final_prepared["feedback"], active_signals)
-    final_gate = train_gate_with_features(final_prepared["train"], final_prepared["feedback"], feature_names=final_names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
+    final_gate = (
+        _train_task_conditional_gate(final_prepared["train"], final_prepared["feedback"], active_signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+        if active_policy == "task_conditional_score_heads"
+        else train_gate_with_features(final_prepared["train"], final_prepared["feedback"], feature_names=final_names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction)
+    )
     final_test = _report(final_prepared["test"], final_gate, budget_fraction)
     for version in versions:
         version["accepted"] = version["round"] in accepted_rounds
@@ -619,7 +632,7 @@ def run_conditional_action_rhi(records: list[ActionRecord], *, iterations: int =
     for task in sorted({str(row.metadata["task"]) for row in final_prepared["test"]}):
         task_rows = [row for row in final_prepared["test"] if str(row.metadata["task"]) == task]
         by_task[task] = _report(task_rows, final_gate, budget_fraction)
-    return {"method": "Conditional Action-Worthiness RHI", "single_agent": True, "split_sizes": {name: len(rows) for name, rows in splits.items()}, "iterations": iterations, "budget_fraction": budget_fraction, "alpha": alpha, "versions": versions, "stable_failure_patterns": patterns_by_round, "mutations": mutations, "accepted_rounds": accepted_rounds, "final_test": final_test, "final_test_by_task": by_task, "final_signals": sorted(active_signals)}
+    return {"method": "Conditional Action-Worthiness RHI", "single_agent": True, "split_sizes": {name: len(rows) for name, rows in splits.items()}, "iterations": iterations, "budget_fraction": budget_fraction, "alpha": alpha, "versions": versions, "stable_failure_patterns": patterns_by_round, "mutations": mutations, "accepted_rounds": accepted_rounds, "final_test": final_test, "final_test_by_task": by_task, "final_signals": sorted(active_signals), "final_policy": active_policy}
 
 
 def run_experiment(input_path: str | Path, out_dir: str | Path, *, seed: int = 1729, iterations: int = 3, epochs: int = 120) -> dict[str, Any]:

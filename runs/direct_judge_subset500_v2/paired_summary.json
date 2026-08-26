@@ -1,0 +1,186 @@
+{
+  "protocol": {
+    "records": 500,
+    "split_seed": 20260816,
+    "budget_fraction": 0.1,
+    "rhi_epochs": 60,
+    "rhi_iterations": 3,
+    "judge_model": "gpt-5.5 cached",
+    "judge_cache": "runs/direct_judge_cache/subset500_gpt55_scores.json"
+  },
+  "rhi": {
+    "accepted_rounds": [
+      0
+    ],
+    "final_policy": "global_score",
+    "final_signals": [
+      "cost",
+      "reversibility",
+      "verbal_confidence"
+    ],
+    "test": {
+      "metrics": {
+        "n": 74.0,
+        "coverage": 0.10810810810810811,
+        "selective_accuracy": 0.25,
+        "selective_risk": 0.75,
+        "confidently_wrong_rate": 0.08108108108108109,
+        "accuracy_at_threshold": 0.7297297297297297,
+        "ece": 0.17043021025711017,
+        "brier": 0.13288585051831012,
+        "log_loss": 0.4322325574521552,
+        "aurc": 0.6305819002786783,
+        "coverage_at_risk_0.05": 0.0,
+        "coverage_at_risk_0.10": 0.0
+      },
+      "fixed_budget": {
+        "budget": 8.0,
+        "coverage": 0.10810810810810811,
+        "risk": 0.75,
+        "hit_rate": 0.25,
+        "mean_utility": 0.0078648156172796
+      },
+      "discovery_gain": {
+        "budget": 7.0,
+        "hit_rate": 0.2857142857142857,
+        "mean_utility": 0.0089883607054624,
+        "best_utility": 0.060163938706631725,
+        "random_hit_rate": 0.21621621621621623,
+        "random_mean_utility": 0.3691360316047358,
+        "hit_rate_lift": 0.06949806949806947,
+        "mean_utility_lift": -0.3601476708992734,
+        "normalized_hit_lift": 1.0,
+        "normalized_utility_lift": -0.691825007491571,
+        "oracle_hit_rate": 0.2857142857142857,
+        "oracle_mean_utility": 0.8897122857142857,
+        "hit_efficiency": 1.0,
+        "utility_efficiency": 0.010102547587331891
+      },
+      "macro_metrics": {
+        "coverage": 0.1111111111111111,
+        "selective_risk": 0.25,
+        "ece": 0.170348759147107,
+        "brier": 0.13470793133404313,
+        "aurc": 0.8263926905151072
+      },
+      "macro_discovery_gain": {
+        "hit_efficiency": 0.0,
+        "utility_efficiency": 0.49927947203237233,
+        "hit_rate": 0.0,
+        "mean_utility": 0.3664235
+      },
+      "by_task": {
+        "extreme_property_discovery": {
+          "metrics": {
+            "n": 25.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 0.92,
+            "ece": 0.15247221310531694,
+            "brier": 0.09684777576923315,
+            "log_loss": 0.3601329140626651,
+            "aurc": 0.8964376314940055,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 2.0,
+            "hit_rate": 0.0,
+            "mean_utility": 0.759749,
+            "best_utility": 0.840994,
+            "random_hit_rate": 0.08,
+            "random_mean_utility": 0.6671232400000001,
+            "hit_rate_lift": -0.08,
+            "mean_utility_lift": 0.09262575999999989,
+            "normalized_hit_lift": -0.08695652173913043,
+            "normalized_utility_lift": 0.30135550137726025,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.9744870000000001,
+            "hit_efficiency": 0.0,
+            "utility_efficiency": 0.7796399541502349
+          },
+          "n": 25
+        },
+        "materials_pairwise_preference": {
+          "metrics": {
+            "n": 24.0,
+            "coverage": 0.3333333333333333,
+            "selective_accuracy": 0.25,
+            "selective_risk": 0.75,
+            "confidently_wrong_rate": 0.25,
+            "accuracy_at_threshold": 0.25,
+            "ece": 0.16432137700687396,
+            "brier": 0.2695419116983075,
+            "log_loss": 0.7325941276185697,
+            "aurc": 0.5827404400513163,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 2.0,
+            "hit_rate": 0.0,
+            "mean_utility": 0.0,
+            "best_utility": 0.0,
+            "random_hit_rate": 0.5833333333333334,
+            "random_mean_utility": 0.060729305781268256,
+            "hit_rate_lift": -0.5833333333333334,
+            "mean_utility_lift": -0.060729305781268256,
+            "normalized_hit_lift": -1.4000000000000001,
+            "normalized_utility_lift": -0.21636077858175623,
+            "oracle_hit_rate": 1.0,
+            "oracle_mean_utility": 0.34141467851540486,
+            "hit_efficiency": 0.0,
+            "utility_efficiency": 0.0
+          },
+          "n": 24
+        },
+        "unique_materials_screening": {
+          "metrics": {
+            "n": 25.0,
+            "coverage": 0.0,
+            "selective_accuracy": 0.0,
+            "selective_risk": 0.0,
+            "confidently_wrong_rate": 0.0,
+            "accuracy_at_threshold": 1.0,
+            "ece": 0.19425268732913012,
+            "brier": 0.03773410653458877,
+            "log_loss": 0.21598509348188796,
+            "aurc": 1.0,
+            "coverage_at_risk_0.05": 0.0,
+            "coverage_at_risk_0.10": 0.0
+          },
+          "discovery_gain": {
+            "budget": 2.0,
+            "hit_rate": 0.0,
+            "mean_utility": 0.33952150000000003,
+            "best_utility": 0.371325,
+            "random_hit_rate": 0.0,
+            "random_mean_utility": 0.36721928,
+            "hit_rate_lift": 0.0,
+            "mean_utility_lift": -0.02769777999999995,
+            "normalized_hit_lift": 0.0,
+            "normalized_utility_lift": -0.2624854034098539,
+            "oracle_hit_rate": 0.0,
+            "oracle_mean_utility": 0.4727405,
+            "hit_efficiency": 0.0,
+            "utility_efficiency": 0.7181984619468821
+          },
+          "n": 25
+        }
+      },
+      "threshold": 0.5242028073721227,
+      "n": 74
+    }
+  },
+  "llm_direct_judge": {
+    "test": {
+      "budget": 8,
+      "coverage": 0.10810810810810811,
+      "risk": 0.625,
+      "hit_rate": 0.375,
+      "mean_utility": 0.008379791015902985
+    }
+  }
+}
