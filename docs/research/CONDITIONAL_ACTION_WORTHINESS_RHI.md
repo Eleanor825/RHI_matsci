@@ -75,18 +75,20 @@ feedback, acceptance, and test partitions; they are not complete multi-step
 MatBot trajectories.
 
 The task-balanced five-fold run is stored in
-`runs/conditional_action_rhi_external_five_fold_v4/summary.json`. The active
+`runs/conditional_action_rhi_external_five_fold_v6/summary.json`. The active
 mutation was reproducibly proposed and accepted in all five folds:
 
 - pairwise verification added `agent_prior_margin`, `agent_prior_uncertainty`,
   `evidence_support`, and `perturbation_stability` as task-specific signals;
-- pooled selective risk was `0.5417`, coverage `0.9519`, and ECE `0.0994`;
-- the same-protocol static-full baseline had pooled selective risk `0.4457`,
-  coverage `0.7965`, and ECE `0.0733`;
+- threshold-based pooled selective risk was `0.5417`, coverage `0.9519`, and
+  ECE `0.0994`;
+- under the strict top-10% budget, both methods had risk `0.0034`, coverage
+  `0.1000`, and hit rate `0.9966`;
 - mutation acceptance rate was `1.0`.
 
-Because the pooled risk remains high and static-full is stronger on this
-protocol, this result demonstrates that RHI mutations are executable and
-repeatable, not that the current mutation policy is superior. The test is an
-action-level validation of signal evolution, while the trajectory benchmark is
-used to audit the no-single-trajectory mutation rule.
+The strict top-10% result is identical between RHI and static-full, so the
+accepted mutation changes the score calibration but not the selected ranking
+on this benchmark. The threshold-based risk remains high, and this result
+demonstrates executable, repeatable signal evolution rather than a performance
+win. The test is an action-level validation of signal evolution, while the
+trajectory benchmark is used to audit the no-single-trajectory mutation rule.

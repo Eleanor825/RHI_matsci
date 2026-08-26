@@ -1,6 +1,7 @@
 import unittest
 
 from harness_matsci.conditional_action_rhi import _stable_failure_patterns, add_policy_features, feature_policy
+from harness_matsci.conditional_action_rhi import _fixed_budget_report
 from harness_matsci.schema import ActionRecord
 
 
@@ -44,3 +45,9 @@ class ConditionalActionRHITests(unittest.TestCase):
         records = [_record("a", "materials_pairwise_preference", "commit", label=0)]
         patterns = _stable_failure_patterns(records, [0.9], threshold=0.7, min_group=20)
         self.assertEqual(patterns, [])
+
+    def test_fixed_budget_report_selects_exact_top_k(self):
+        report = _fixed_budget_report([1, 0, 1, 0], [0.9, 0.1, 0.8, 0.2], [0.9, 0.8, 0.7, 0.1], 0.5)
+        self.assertEqual(report["budget"], 2.0)
+        self.assertEqual(report["coverage"], 0.5)
+        self.assertEqual(report["risk"], 0.5)

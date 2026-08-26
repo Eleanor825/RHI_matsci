@@ -234,8 +234,8 @@ def run_external_three_task_experiment(roots: dict[str, str | Path], *, fold: in
         candidate_names = _feature_names(candidate_prepared["train"] + candidate_prepared["feedback"], candidate)
         candidate_gate = _train_external_gate(candidate_prepared["train"], candidate_prepared["feedback"], candidate_names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
         candidate_acceptance = _report(candidate_prepared["acceptance"], candidate_gate, budget_fraction)
-        predecessor_risk = float(acceptance["metrics"]["selective_risk"])
-        candidate_risk = float(candidate_acceptance["metrics"]["selective_risk"])
+        predecessor_risk = float(acceptance["fixed_budget"]["risk"])
+        candidate_risk = float(candidate_acceptance["fixed_budget"]["risk"])
         risk_guard = candidate_risk <= predecessor_risk + 0.01
         if predecessor_risk <= alpha:
             risk_guard = risk_guard and candidate_risk <= alpha
@@ -279,18 +279,20 @@ def run_external_fold_suite(roots: dict[str, str | Path], *, folds: int = 5, ite
         gate = train_gate_with_features(prepared["train"], prepared["feedback"], feature_names=names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction, balance_benchmarks=True)
         static_results.append(_report(prepared["test"], gate, budget_fraction))
     def avg_reports(reports: list[dict[str, Any]], key: str) -> float:
-        return sum(float(report["metrics"][key]) for report in reports) / len(reports)
+        return sum(float(report["fixed_budget"].get(key, 0.0)) for report in reports) / len(reports)
     summary = {
         "method": "Conditional Action-Worthiness RHI",
         "folds": common_folds,
         "results": results,
         "aggregate": {
-            "rhi_risk_mean": avg_reports([result["final_test"] for result in results], "selective_risk"),
-            "rhi_coverage_mean": avg_reports([result["final_test"] for result in results], "coverage"),
-            "rhi_ece_mean": avg_reports([result["final_test"] for result in results], "ece"),
-            "static_full_risk_mean": avg_reports(static_results, "selective_risk"),
-            "static_full_coverage_mean": avg_reports(static_results, "coverage"),
-            "static_full_ece_mean": avg_reports(static_results, "ece"),
+            "rhi_budget_risk_mean": avg_reports([result["final_test"] for result in results], "risk"),
+            "rhi_budget_coverage_mean": avg_reports([result["final_test"] for result in results], "coverage"),
+            "rhi_budget_hit_rate_mean": avg_reports([result["final_test"] for result in results], "hit_rate"),
+            "static_full_budget_risk_mean": avg_reports(static_results, "risk"),
+            "static_full_budget_coverage_mean": avg_reports(static_results, "coverage"),
+            "static_full_budget_hit_rate_mean": avg_reports(static_results, "hit_rate"),
+            "rhi_threshold_risk_mean": sum(float(result["final_test"]["metrics"]["selective_risk"]) for result in results) / len(results),
+            "static_full_threshold_risk_mean": sum(float(report["metrics"]["selective_risk"]) for report in static_results) / len(static_results),
             "accepted_mutation_rate": sum(len(result["accepted_rounds"]) > 1 for result in results) / len(results),
         },
     }
@@ -414,6 +416,7 @@ def _report(records: list[ActionRecord], gate: TrainedGate, budget_fraction: flo
     labels = [record.label for record in records]
     budget = max(1, int(len(records) * budget_fraction))
     metrics = binary_metrics(labels, probabilities, gate.threshold)
+    fixed = _fixed_budget_report(labels, [record.utility for record in records], probabilities, budget_fraction)
     gain = discovery_gain(labels, [record.utility for record in records], probabilities, budget)
     by_task = {}
     for task in sorted({str(record.metadata.get("task", record.benchmark)) for record in records}):
@@ -437,7 +440,21 @@ def _report(records: list[ActionRecord], gate: TrainedGate, budget_fraction: flo
         }
     else:
         macro_metrics, macro_gain = {}, {}
-    return {"metrics": metrics, "discovery_gain": gain, "macro_metrics": macro_metrics, "macro_discovery_gain": macro_gain, "by_task": by_task, "threshold": gate.threshold, "n": len(records)}
+    return {"metrics": metrics, "fixed_budget": fixed, "discovery_gain": gain, "macro_metrics": macro_metrics, "macro_discovery_gain": macro_gain, "by_task": by_task, "threshold": gate.threshold, "n": len(records)}
+
+
+def _fixed_budget_report(labels: list[int], utilities: list[float], probabilities: list[float], budget_fraction: float) -> dict[str, float]:
+    if not labels:
+        return {"budget": 0.0, "coverage": 0.0, "risk": 0.0, "hit_rate": 0.0, "mean_utility": 0.0}
+    budget = max(1, min(len(labels), math.ceil(len(labels) * budget_fraction)))
+    selected = sorted(range(len(labels)), key=lambda index: probabilities[index], reverse=True)[:budget]
+    return {
+        "budget": float(budget),
+        "coverage": budget / len(labels),
+        "risk": sum(1 - labels[index] for index in selected) / budget,
+        "hit_rate": sum(labels[index] for index in selected) / budget,
+        "mean_utility": sum(utilities[index] for index in selected) / budget,
+    }
 
 
 def _stable_failure_patterns(records: list[ActionRecord], probabilities: list[float], threshold: float, min_group: int = 20) -> list[dict[str, Any]]:
@@ -465,7 +482,8 @@ def _stable_failure_patterns(records: list[ActionRecord], probabilities: list[fl
 def _score(report: dict[str, Any]) -> float:
     metrics = report.get("macro_metrics", report["metrics"])
     gain = report.get("macro_discovery_gain", report["discovery_gain"])
-    return 0.35 * gain.get("utility_efficiency", 0.0) + 0.25 * gain.get("hit_efficiency", 0.0) + 0.20 * (1.0 - metrics.get("selective_risk", 1.0)) + 0.20 * (1.0 - metrics.get("brier", 1.0))
+    fixed = report.get("fixed_budget", {})
+    return 0.45 * gain.get("utility_efficiency", 0.0) + 0.25 * gain.get("hit_efficiency", 0.0) + 0.20 * (1.0 - fixed.get("risk", metrics.get("selective_risk", 1.0))) + 0.10 * (1.0 - metrics.get("brier", 1.0))
 
 
 def run_conditional_action_rhi(records: list[ActionRecord], *, iterations: int = 3, seed: int = 1729, alpha: float = 0.10, budget_fraction: float = 0.10, epochs: int = 120) -> dict[str, Any]:
