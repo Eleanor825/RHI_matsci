@@ -316,11 +316,17 @@ def run_external_fold_suite(roots: dict[str, str | Path], *, folds: int = 5, ite
     if not common_folds:
         raise ValueError("the supplied external roots have no common fold")
     results = [run_external_three_task_experiment(roots, fold=fold, iterations=iterations, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs) for fold in common_folds]
+    fixed_results = []
     static_results = []
     for fold in common_folds:
-        signals = set(ALL_CANDIDATE_SIGNALS)
         loaded = {name: load_external_split_records(root, fold=fold) for name, root in roots.items()}
         rows = {split: [item for name in loaded for item in loaded[name][split]] for split in ("train", "feedback", "acceptance", "test")}
+        initial_signals = {"verbal_confidence", "cost", "reversibility"}
+        fixed_prepared = {split: add_policy_features(items, initial_signals) for split, items in rows.items()}
+        fixed_names = _feature_names(fixed_prepared["train"] + fixed_prepared["feedback"], initial_signals)
+        fixed_gate = _train_external_gate(fixed_prepared["train"], fixed_prepared["feedback"], fixed_names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+        fixed_results.append(_report(fixed_prepared["test"], fixed_gate, budget_fraction))
+        signals = set(ALL_CANDIDATE_SIGNALS)
         prepared = {split: add_policy_features(items, signals) for split, items in rows.items()}
         names = _feature_names(prepared["train"] + prepared["feedback"], signals)
         gate = train_gate_with_features(prepared["train"], prepared["feedback"], feature_names=names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction, balance_benchmarks=True)
@@ -335,6 +341,9 @@ def run_external_fold_suite(roots: dict[str, str | Path], *, folds: int = 5, ite
             "rhi_budget_risk_mean": avg_reports([result["final_test"] for result in results], "risk"),
             "rhi_budget_coverage_mean": avg_reports([result["final_test"] for result in results], "coverage"),
             "rhi_budget_hit_rate_mean": avg_reports([result["final_test"] for result in results], "hit_rate"),
+            "fixed_h0_budget_risk_mean": avg_reports(fixed_results, "risk"),
+            "fixed_h0_budget_coverage_mean": avg_reports(fixed_results, "coverage"),
+            "fixed_h0_budget_hit_rate_mean": avg_reports(fixed_results, "hit_rate"),
             "static_full_budget_risk_mean": avg_reports(static_results, "risk"),
             "static_full_budget_coverage_mean": avg_reports(static_results, "coverage"),
             "static_full_budget_hit_rate_mean": avg_reports(static_results, "hit_rate"),

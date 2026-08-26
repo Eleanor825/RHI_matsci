@@ -123,3 +123,25 @@ task-conditioned ranking policy, but it is not a positive performance claim.
 The next decisive test is trajectory-level online evaluation where evidence
 collection changes later action states; the current external files are still
 action-level historical proxies.
+
+## H0 fixed versus evolved RHI control (v8)
+
+The key self-evolution control uses the same five common folds and the same
+three external task datasets as v7. `H0 fixed` trains the initial harness with
+only `verbal_confidence`, `cost`, and `reversibility` and disables all RHI
+mutations. The evolved condition uses three RHI rounds and the held-out
+acceptance protocol. Both select the top 10% of test actions.
+
+| Method | Top-10% risk | Top-10% hit rate | Coverage |
+|---|---:|---:|---:|
+| H0 fixed, no evolution | 0.0082 | 0.9918 | 0.1000 |
+| Task-conditional RHI | 0.0112 | 0.9888 | 0.1000 |
+| Static-full reference | 0.0034 | 0.9966 | 0.1000 |
+
+The H0-versus-RHI comparison is the relevant test of the value of evolution.
+Although the mutation was accepted in all five folds and changed the ranking
+policy, RHI is `0.0030` risk points worse than H0 on average. The current
+acceptance score is therefore not yet aligned with held-out top-budget
+scientific utility. This is a negative result for the present evolution rule,
+not evidence that RHI itself improves performance. The result is stored in
+`runs/conditional_action_rhi_external_five_fold_v8/summary.json`.
