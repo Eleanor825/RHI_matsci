@@ -21,6 +21,7 @@ from .trajectory_dataset import DEFAULT_TASK_FILES, build_dataset
 from .training import TrainedGate, evaluate_gate, split_records, train_gate
 from .voi_experiments import DEFAULT_METHODS, VoIExperimentConfig, save_voi_experiment_suite
 from .evolving_harness import run_evolving_harness
+from .graph_rhi import run_external_graph_suite, save_graph_suite
 
 
 def _comma_list(value: str, cast=str) -> list[Any]:
@@ -122,6 +123,20 @@ def build_parser() -> argparse.ArgumentParser:
     evolving_parser.add_argument("--epochs", type=int, default=300)
     evolving_parser.add_argument("--epsilon", type=float, default=0.005)
     evolving_parser.set_defaults(func=_cmd_evolve_harness)
+
+    graph_parser = subparsers.add_parser(
+        "graph-rhi-external",
+        help="Run branching and merge Graph-RHI on external material benchmarks",
+    )
+    graph_parser.add_argument("--pairwise-root", required=True)
+    graph_parser.add_argument("--unique-root", required=True)
+    graph_parser.add_argument("--extreme-root", required=True)
+    graph_parser.add_argument("--folds", type=int, default=5)
+    graph_parser.add_argument("--alpha", type=float, default=0.10)
+    graph_parser.add_argument("--budget-fraction", type=float, default=0.10)
+    graph_parser.add_argument("--epochs", type=int, default=80)
+    graph_parser.add_argument("--out-dir", required=True)
+    graph_parser.set_defaults(func=_cmd_graph_rhi_external)
 
     suite_parser = subparsers.add_parser("experiment-suite", help="Run the paper-grade RHI experiments 1, 2, 3, and 4")
     suite_parser.add_argument("--tasks", default="preferential_bo,discover_unique,extreme_properties")
@@ -416,6 +431,29 @@ def _cmd_evolve_harness(args: argparse.Namespace) -> int:
         f"wrote evolving harness report to {args.out}; "
         f"risk={metrics['selective_risk']:.3f}; coverage={metrics['coverage']:.3f}; "
         f"accepted={sum(item['accepted'] for item in report['revisions'])}/{len(report['revisions'])}"
+    )
+    return 0
+
+
+def _cmd_graph_rhi_external(args: argparse.Namespace) -> int:
+    roots = {
+        "external_h17_pairwise": args.pairwise_root,
+        "external_h15_unique": args.unique_root,
+        "external_h14": args.extreme_root,
+    }
+    report = run_external_graph_suite(
+        roots,
+        folds=args.folds,
+        alpha=args.alpha,
+        budget_fraction=args.budget_fraction,
+        epochs=args.epochs,
+    )
+    save_graph_suite(report, args.out_dir)
+    aggregate = report["aggregate"]
+    print(
+        f"wrote Graph-RHI results to {args.out_dir}; "
+        f"folds={len(report['folds'])}; "
+        f"merge_acceptance={aggregate['merge_acceptance_rate']:.3f}"
     )
     return 0
 

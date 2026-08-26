@@ -145,3 +145,30 @@ acceptance score is therefore not yet aligned with held-out top-budget
 scientific utility. This is a negative result for the present evolution rule,
 not evidence that RHI itself improves performance. The result is stored in
 `runs/conditional_action_rhi_external_five_fold_v8/summary.json`.
+
+## Graph-RHI branching and merge pilot
+
+We implemented a graph-structured evolution protocol in
+`src/harness_matsci/graph_rhi.py`. `H0` is the fixed initial harness. `H1`
+and `H2` are independently trained mutation branches targeting complementary
+failure modes: evidence/source reliability and OOD/perturbation stability.
+Each branch is evaluated against `H0` on the held-out acceptance split. A true
+`H3` merge is allowed only if at least two independent branches pass acceptance;
+otherwise the best accepted branch, or `H0`, remains active.
+
+The five-fold result is stored in
+`runs/graph_rhi_external_five_fold_v1/summary.json`.
+
+| Node | Top-10% risk | Top-10% hit rate | Mean utility | Acceptance rate |
+|---|---:|---:|---:|---:|
+| H0 fixed | 0.0082 | 0.9918 | 0.6865 | n/a |
+| H1 evidence/source | 0.0112 | 0.9888 | 0.7456 | 1.00 |
+| H2 OOD/stability | 0.0146 | 0.9854 | 0.6207 | 0.00 |
+| H3 true merge | not activated | not activated | not activated | 0.00 |
+
+This is an implementation and protocol pilot, not evidence that graph merging
+improves performance. The current data accepts only H1 in all five folds, so
+there is no genuine two-parent merge yet. The result is useful because it
+exposes the required next experiment: construct trajectory-level feedback in
+which the two failure modes are complementary, then test whether a two-parent
+merge improves the Pareto frontier over linear RHI and branch-only selection.

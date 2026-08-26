@@ -3,6 +3,7 @@ import unittest
 from harness_matsci.conditional_action_rhi import _stable_failure_patterns, add_policy_features, feature_policy
 from harness_matsci.conditional_action_rhi import _fixed_budget_report
 from harness_matsci.schema import ActionRecord
+from harness_matsci.graph_rhi import BRANCHES
 
 
 def _record(record_id: str, task: str, stage: str, label: int = 1) -> ActionRecord:
@@ -51,3 +52,7 @@ class ConditionalActionRHITests(unittest.TestCase):
         self.assertEqual(report["budget"], 2.0)
         self.assertEqual(report["coverage"], 0.5)
         self.assertEqual(report["risk"], 0.5)
+
+    def test_graph_has_two_disjoint_mutation_branches(self):
+        self.assertEqual(set(BRANCHES), {"H1_evidence_source", "H2_ood_stability"})
+        self.assertTrue(set(BRANCHES["H1_evidence_source"]).isdisjoint(BRANCHES["H2_ood_stability"]))

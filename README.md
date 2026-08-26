@@ -360,3 +360,22 @@ utility `0.008380`; task-conditioned RHI obtains Risk@10% `0.7500`, hit rate
 small split. This is a negative/neutral control, not a claim that RHI beats the
 LLM judge. Details are in `runs/direct_judge_baseline_v1/README.md` and
 `runs/direct_judge_subset500_v2/paired_summary.json`.
+
+## Graph-RHI experiment
+
+A graph-structured variant is implemented in `src/harness_matsci/graph_rhi.py`.
+It keeps a fixed seed harness `H0`, evaluates two independent mutations (`H1`
+evidence/source and `H2` OOD/stability), and permits a true `H1+H2 -> H3`
+merge only when both branches independently pass the held-out acceptance rule.
+The five-fold result is in `runs/graph_rhi_external_five_fold_v1/README.md`.
+
+Reproduce the external Graph-RHI branching/merge pilot:
+
+```bash
+PYTHONPATH=src python3 -m harness_matsci.cli graph-rhi-external \
+  --pairwise-root benchmarks/external_h17_pairwise \
+  --unique-root benchmarks/external_h15_unique \
+  --extreme-root benchmarks/external_h14 \
+  --folds 5 --epochs 80 \
+  --out-dir runs/graph_rhi_external_five_fold_v1
+```
