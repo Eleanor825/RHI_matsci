@@ -184,3 +184,25 @@ components. H3 reuses the compatible shared components and combines only
 non-conflicting parent modifications; any conflict is explicitly recorded and
 blocks activation. The v2 implementation and result artifact reflect this
 component-level definition.
+
+## Full materials benchmark Graph-RHI run
+
+We ran the component-level Graph-RHI protocol on the complete
+`materials_action_trajectories_v1` benchmark rather than the external fold
+subset. The benchmark contains `20,987` action records and `45` grouped
+trajectories. Trajectory-disjoint splitting produced `13,148` train, `2,648`
+feedback, `2,622` acceptance, and `2,569` test actions. The fixed top-10%
+action budget was used for every node.
+
+| Harness | Top-10% risk | Hit rate | Mean utility | Acceptance | Active |
+|---|---:|---:|---:|:---:|:---:|
+| H0 fixed | 0.2996 | 0.7004 | 0.1387 | n/a | no |
+| H1 evidence/source | 0.2957 | 0.7043 | 0.1471 | no | no |
+| H2 OOD/stability | 0.2879 | 0.7121 | 0.1541 | yes | yes |
+| H3 component merge | not activated | not activated | not activated | no | no |
+
+The full machine-readable result is stored in
+`runs/graph_rhi_full_v2/summary.json`. On the complete benchmark, H2 improves
+over H0 by `0.0117` absolute risk and `0.0154` mean utility, while H1 is not
+accepted. Since only one branch passes acceptance, the protocol correctly does
+not activate a two-parent H3 merge.

@@ -14,6 +14,8 @@ from .conditional_action_rhi import (
     _train_task_conditional_gate,
     add_policy_features,
     load_external_split_records,
+    load_action_records,
+    _split_trajectories,
 )
 
 
@@ -182,6 +184,76 @@ def run_external_graph_suite(
     aggregate["merge_acceptance_rate"] = sum(result["merge_accepted"] for result in results) / len(results)
     aggregate["active_merge_rate"] = sum(result["active_node"] == "H3_merge" for result in results) / len(results)
     return {"method": "Graph-RHI", "folds": list(range(folds)), "results": results, "aggregate": aggregate}
+
+
+def run_action_graph_rhi(
+    actions_path: str | Path,
+    *,
+    seed: int = 1729,
+    alpha: float = 0.10,
+    budget_fraction: float = 0.10,
+    epochs: int = 80,
+) -> dict[str, Any]:
+    """Run Graph-RHI on the complete grouped action-trajectory benchmark."""
+    records = load_action_records(actions_path)
+    rows = _split_trajectories(records, seed)
+    nodes: dict[str, dict[str, Any]] = {}
+    _, h0 = _fit_node(rows, INITIAL_SIGNALS, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs, conditional=False)
+    nodes["H0"] = {key: value for key, value in h0.items() if key not in {"gate", "prepared"}}
+    branches: dict[str, dict[str, Any]] = {}
+    for node_id, additions in BRANCHES.items():
+        signals = INITIAL_SIGNALS | additions
+        _, node = _fit_node(rows, signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs, conditional=True)
+        accepted = _accept(node, h0, alpha=alpha)
+        branches[node_id] = {key: value for key, value in node.items() if key not in {"gate", "prepared"}}
+        branches[node_id].update({"parent_ids": ["H0"], "mutation": sorted(additions), "modified_components": BRANCH_COMPONENTS[node_id], "shared_components": sorted(SHARED_COMPONENTS), "accepted": accepted})
+        nodes[node_id] = branches[node_id]
+    accepted_branches = [node_id for node_id, node in branches.items() if node["accepted"]]
+    merge_contract, merge_conflicts = _merge_harness_contracts(accepted_branches, [branches[node_id]["components"] for node_id in accepted_branches])
+    _, merged = _fit_node(rows, set(merge_contract["active_signals"]), alpha=alpha, budget_fraction=budget_fraction, epochs=epochs, conditional=True, components={key: value for key, value in merge_contract.items() if key != "active_signals"})
+    merge_accepted = len(accepted_branches) >= 2 and not merge_conflicts and _accept(merged, h0, alpha=alpha)
+    merge_node = {key: value for key, value in merged.items() if key not in {"gate", "prepared"}}
+    merge_node.update({"parent_ids": accepted_branches, "mutation": "componentwise_merge", "shared_components": sorted(SHARED_COMPONENTS), "conflicts": merge_conflicts, "accepted": merge_accepted})
+    nodes["H3_merge"] = merge_node
+    active_id = "H3_merge" if merge_accepted else (accepted_branches[0] if accepted_branches else "H0")
+    return {
+        "method": "Graph-RHI",
+        "dataset": str(actions_path),
+        "seed": seed,
+        "records": len(records),
+        "trajectory_count": len({record.metadata["trajectory_id"] for record in records}),
+        "split_sizes": {split: len(items) for split, items in rows.items()},
+        "nodes": nodes,
+        "edges": [{"parent": "H0", "child": node_id, "type": "mutation"} for node_id in BRANCHES] + [{"parent": node_id, "child": "H3_merge", "type": "merge"} for node_id in accepted_branches],
+        "accepted_branches": accepted_branches,
+        "merge_accepted": merge_accepted,
+        "merge_conflicts": merge_conflicts,
+        "active_node": active_id,
+        "final_test": nodes[active_id]["test"],
+    }
+
+
+def save_action_graph_rhi(report: dict[str, Any], out_dir: str | Path) -> None:
+    destination = Path(out_dir)
+    destination.mkdir(parents=True, exist_ok=True)
+    (destination / "summary.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    lines = [
+        "# Graph-RHI on complete materials action trajectories",
+        "",
+        f"Records: `{report['records']}`; trajectories: `{report['trajectory_count']}`.",
+        f"Split sizes: `{report['split_sizes']}`.",
+        "All splits are trajectory-disjoint; the test split is untouched until final evaluation.",
+        "",
+        "| Harness | Top-10% risk ↓ | Hit rate ↑ | Mean utility ↑ | Coverage | Accepted |",
+        "|---|---:|---:|---:|---:|:---:|",
+    ]
+    for node_id, label in (("H0", "H0 fixed"), ("H1_evidence_source", "H1 evidence/source"), ("H2_ood_stability", "H2 OOD/stability"), ("H3_merge", "H3 component merge")):
+        fixed = report["nodes"][node_id]["test"]["fixed_budget"]
+        accepted = report["nodes"][node_id].get("accepted", "n/a")
+        active = " (active)" if report["active_node"] == node_id else ""
+        lines.append(f"| {label}{active} | {fixed['risk']:.4f} | {fixed['hit_rate']:.4f} | {fixed['mean_utility']:.4f} | {fixed['coverage']:.4f} | {accepted} |")
+    lines += ["", f"Accepted branches: `{report['accepted_branches']}`.", f"True merge accepted: `{report['merge_accepted']}`.", "", "H3 is a true merge only when at least two complete parent harnesses pass acceptance and their modified components do not conflict."]
+    (destination / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def save_graph_suite(report: dict[str, Any], out_dir: str | Path) -> None:

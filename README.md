@@ -385,3 +385,16 @@ H0/H1/H2 share the agent interface, action unit, calibration, acceptance rule,
 and budget. Each branch modifies a different harness component; H3 performs a
 conflict-checked component-wise merge only when both parent harnesses pass
 acceptance. The current pilot is in `runs/graph_rhi_external_five_fold_v2/`.
+
+## Full-data Graph-RHI result
+
+The complete `materials_action_trajectories_v1` benchmark was evaluated with
+Graph-RHI: `20,987` action records across `45` grouped trajectories. The
+trajectory-disjoint split contains `13,148` train, `2,648` feedback, `2,622`
+acceptance, and `2,569` test actions. Under the fixed top-10% action budget,
+H0 obtains risk `0.2996`, hit rate `0.7004`, and mean utility `0.1387`; H1
+evidence/source obtains risk `0.2957`, hit rate `0.7043`, and mean utility
+`0.1471`; H2 OOD/stability obtains risk `0.2879`, hit rate `0.7121`, and mean
+utility `0.1541`. H2 passes acceptance and becomes active, H1 is rejected, and
+no true two-parent H3 merge is activated. Full output is in
+`runs/graph_rhi_full_v2/`.
