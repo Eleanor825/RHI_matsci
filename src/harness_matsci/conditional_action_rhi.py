@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from .metrics import binary_metrics, discovery_gain
+from .calibration import threshold_for_grouped_selective_risk
 from .schema import ActionRecord
 from .training import TrainedGate, train_gate_with_features
 
@@ -30,19 +31,26 @@ ALL_CANDIDATE_SIGNALS = BASE_SIGNALS + (
     "candidate_novelty",
     "candidate_diversity",
     "tail_score",
+    "agent_prior_margin",
+    "agent_prior_uncertainty",
+    "surrogate_margin",
+    "surrogate_uncertainty",
 )
 TASK_SIGNAL_PRIORS = {
-    "materials_pairwise_preference": ("preference_margin", "tool_agreement", "evidence_support"),
-    "unique_materials_screening": ("candidate_novelty", "candidate_diversity", "ood_score"),
-    "extreme_property_discovery": ("tail_score", "ood_score", "tool_agreement"),
+    "materials_pairwise_preference": ("agent_prior_margin", "agent_prior_uncertainty", "evidence_support", "perturbation_stability"),
+    "unique_materials_screening": ("evidence_support", "ood_score", "perturbation_stability", "source_reliability"),
+    "extreme_property_discovery": ("surrogate_margin", "surrogate_uncertainty", "ood_score", "evidence_support"),
 }
 STAGES = ("proposal", "verification", "commit")
 ROUTES = ("execute", "verify", "abstain")
 
 
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:
-    opener = gzip.open if path.suffix == ".gz" else path.open
-    with opener(path, "rt", encoding="utf-8") as handle:
+    if path.suffix == ".gz":
+        handle = gzip.open(path, "rt", encoding="utf-8")
+    else:
+        handle = path.open("r", encoding="utf-8")
+    with handle:
         return [json.loads(line) for line in handle if line.strip()]
 
 
@@ -128,6 +136,167 @@ def load_action_records(path: str | Path) -> list[ActionRecord]:
     return records
 
 
+def load_external_split_records(root: str | Path, *, fold: int = 0) -> dict[str, list[ActionRecord]]:
+    """Load the repository's richer external train/feedback/acceptance/test fold."""
+    root = Path(root)
+    fold_dir = root / "folds" / f"fold_{fold}"
+    if not fold_dir.exists():
+        fold_dir = root / f"fold_{fold}"
+    root_name = root.name.lower()
+    preferred_prefix = {
+        "external_h14": "external_extreme_phonons",
+        "external_h15_unique": "external_unique_log_kvrh",
+        "external_h16_pairwise": "external_pairwise_log_kvrh",
+        "external_h17_pairwise": "external_pairwise_mixed_log_kvrh",
+    }.get(root_name)
+    if preferred_prefix is None:
+        candidates = sorted(fold_dir.glob("*.train.jsonl"))
+        if not candidates:
+            raise FileNotFoundError(f"no train split in {fold_dir}")
+        preferred_prefix = candidates[0].name.removesuffix(".train.jsonl")
+    files = {
+        split: fold_dir / f"{preferred_prefix}.{split}.jsonl"
+        for split in ("train", "feedback", "acceptance", "test")
+    }
+    files = {split: path if path.exists() else None for split, path in files.items()}
+    if any(path is None for path in files.values()):
+        raise FileNotFoundError(f"missing external split in {fold_dir}: {files}")
+    aliases = {
+        "external_pairwise_log_kvrh": "materials_pairwise_preference",
+        "external_pairwise_mixed_log_kvrh": "materials_pairwise_preference",
+        "external_pairwise_dielectric": "materials_pairwise_preference",
+        "external_pairwise_mixed_dielectric": "materials_pairwise_preference",
+        "external_unique_log_kvrh": "unique_materials_screening",
+        "external_unique_jdft2d": "unique_materials_screening",
+        "external_extreme_phonons": "extreme_property_discovery",
+        "external_extreme_expt_gap": "extreme_property_discovery",
+        "external_extreme_superconductivity": "extreme_property_discovery",
+    }
+    output: dict[str, list[ActionRecord]] = {}
+    for split, path in files.items():
+        rows = _read_jsonl(path)
+        converted = []
+        for index, row in enumerate(rows):
+            benchmark = str(row.get("benchmark", path.stem))
+            task = aliases.get(benchmark, _task(row))
+            metadata = dict(row.get("metadata", {}))
+            group_id = str(metadata.get("group_id", row.get("record_id", index)))
+            metadata.update({"task": task, "stage": str(metadata.get("stage", "proposal")), "trajectory_id": f"{task}::{group_id}", "action_index": 0, "action_count": 1})
+            features = {str(key): _scalar(value) for key, value in dict(row.get("features", {})).items() if isinstance(value, (int, float))}
+            converted.append(ActionRecord(
+                record_id=str(row.get("record_id", f"{benchmark}-{split}-{index}")),
+                benchmark=task,
+                split=split,
+                visible_context=str(row.get("visible_context", ""))[:1200],
+                candidate_action=str(row.get("candidate_action", ""))[:1200],
+                action_type=str(row.get("action_type", "choose_candidate")),
+                evidence=[str(item)[:500] for item in row.get("evidence", [])],
+                features=features,
+                label=int(row.get("label", 0)),
+                utility=_scalar(row.get("utility", 0.0)),
+                metadata=metadata,
+            ))
+        output[split] = converted
+    return output
+
+
+def run_external_three_task_experiment(roots: dict[str, str | Path], *, fold: int = 0, iterations: int = 3, alpha: float = 0.10, budget_fraction: float = 0.10, epochs: int = 100) -> dict[str, Any]:
+    """Run conditional RHI on pre-split external pairwise/unique/extreme tasks."""
+    splits = {name: [] for name in ("train", "feedback", "acceptance", "test")}
+    task_counts = {}
+    for task_name, root in roots.items():
+        loaded = load_external_split_records(root, fold=fold)
+        task_counts[task_name] = {split: len(rows) for split, rows in loaded.items()}
+        for split in splits:
+            splits[split].extend(loaded[split])
+    active_signals = {"verbal_confidence", "cost", "reversibility"}
+    versions = []
+    mutations = []
+    accepted_rounds = [0]
+    for round_index in range(iterations + 1):
+        prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
+        names = _feature_names(prepared["train"] + prepared["feedback"], active_signals)
+        gate = _train_external_gate(prepared["train"], prepared["feedback"], names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+        acceptance = _report(prepared["acceptance"], gate, budget_fraction)
+        patterns = _stable_failure_patterns(prepared["feedback"], _predict(prepared["feedback"], gate), gate.threshold) if round_index < iterations else []
+        versions.append({"round": round_index, "signals": sorted(active_signals), "features": len(names), "acceptance": acceptance, "patterns": patterns})
+        if not patterns:
+            mutations.append({"round": round_index + 1, "added": [], "accepted": False, "reason": "no_stable_pattern"})
+            continue
+        candidate = set(active_signals)
+        for pattern in patterns:
+            candidate.update(pattern["candidate_signals"])
+        added = sorted(candidate - active_signals)
+        if not added:
+            mutations.append({"round": round_index + 1, "added": [], "accepted": False, "reason": "no_new_observed_signal"})
+            continue
+        candidate_prepared = {name: add_policy_features(rows, candidate) for name, rows in splits.items()}
+        candidate_names = _feature_names(candidate_prepared["train"] + candidate_prepared["feedback"], candidate)
+        candidate_gate = _train_external_gate(candidate_prepared["train"], candidate_prepared["feedback"], candidate_names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+        candidate_acceptance = _report(candidate_prepared["acceptance"], candidate_gate, budget_fraction)
+        predecessor_risk = float(acceptance["metrics"]["selective_risk"])
+        candidate_risk = float(candidate_acceptance["metrics"]["selective_risk"])
+        risk_guard = candidate_risk <= predecessor_risk + 0.01
+        if predecessor_risk <= alpha:
+            risk_guard = risk_guard and candidate_risk <= alpha
+        accepted = _score(candidate_acceptance) > _score(acceptance) + 1e-4 and risk_guard
+        mutations.append({"round": round_index + 1, "added": added, "accepted": accepted, "predecessor_score": _score(acceptance), "candidate_score": _score(candidate_acceptance), "predecessor_risk": predecessor_risk, "candidate_risk": candidate_risk, "risk_guard": risk_guard})
+        if accepted:
+            active_signals = candidate
+            accepted_rounds.append(round_index + 1)
+    final_prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
+    names = _feature_names(final_prepared["train"] + final_prepared["feedback"], active_signals)
+    final_gate = _train_external_gate(final_prepared["train"], final_prepared["feedback"], names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+    final_test = _report(final_prepared["test"], final_gate, budget_fraction)
+    per_task = {}
+    for task in sorted({str(row.metadata["task"]) for row in final_prepared["test"]}):
+        per_task[task] = _report([row for row in final_prepared["test"] if row.metadata["task"] == task], final_gate, budget_fraction)
+    return {"method": "Conditional Action-Worthiness RHI", "fold": fold, "task_counts": task_counts, "split_sizes": {name: len(rows) for name, rows in splits.items()}, "versions": versions, "mutations": mutations, "accepted_rounds": accepted_rounds, "final_signals": sorted(active_signals), "final_test": final_test, "final_test_by_task": per_task}
+
+
+def run_external_fold_suite(roots: dict[str, str | Path], *, folds: int = 5, iterations: int = 3, alpha: float = 0.10, budget_fraction: float = 0.10, epochs: int = 80) -> dict[str, Any]:
+    available = None
+    for root in roots.values():
+        root = Path(root)
+        fold_ids = set()
+        for path in (root / "folds").glob("fold_*") if (root / "folds").exists() else root.glob("fold_*"):
+            try:
+                fold_ids.add(int(path.name.removeprefix("fold_")))
+            except ValueError:
+                continue
+        available = fold_ids if available is None else available & fold_ids
+    common_folds = sorted(available or set())[:folds]
+    if not common_folds:
+        raise ValueError("the supplied external roots have no common fold")
+    results = [run_external_three_task_experiment(roots, fold=fold, iterations=iterations, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs) for fold in common_folds]
+    static_results = []
+    for fold in common_folds:
+        signals = set(ALL_CANDIDATE_SIGNALS)
+        loaded = {name: load_external_split_records(root, fold=fold) for name, root in roots.items()}
+        rows = {split: [item for name in loaded for item in loaded[name][split]] for split in ("train", "feedback", "acceptance", "test")}
+        prepared = {split: add_policy_features(items, signals) for split, items in rows.items()}
+        names = _feature_names(prepared["train"] + prepared["feedback"], signals)
+        gate = train_gate_with_features(prepared["train"], prepared["feedback"], feature_names=names, alpha=alpha, epochs=epochs, learning_rate=0.08, l2=0.01, min_coverage=budget_fraction, balance_benchmarks=True)
+        static_results.append(_report(prepared["test"], gate, budget_fraction))
+    def avg_reports(reports: list[dict[str, Any]], key: str) -> float:
+        return sum(float(report["metrics"][key]) for report in reports) / len(reports)
+    summary = {
+        "method": "Conditional Action-Worthiness RHI",
+        "folds": common_folds,
+        "results": results,
+        "aggregate": {
+            "rhi_risk_mean": avg_reports([result["final_test"] for result in results], "selective_risk"),
+            "rhi_coverage_mean": avg_reports([result["final_test"] for result in results], "coverage"),
+            "rhi_ece_mean": avg_reports([result["final_test"] for result in results], "ece"),
+            "static_full_risk_mean": avg_reports(static_results, "selective_risk"),
+            "static_full_coverage_mean": avg_reports(static_results, "coverage"),
+            "static_full_ece_mean": avg_reports(static_results, "ece"),
+            "accepted_mutation_rate": sum(len(result["accepted_rounds"]) > 1 for result in results) / len(results),
+        },
+    }
+    return summary
+
+
 def _split_trajectories(records: list[ActionRecord], seed: int) -> dict[str, list[ActionRecord]]:
     groups: dict[str, list[ActionRecord]] = defaultdict(list)
     for record in records:
@@ -205,13 +374,70 @@ def _predict(records: list[ActionRecord], gate: TrainedGate) -> list[float]:
     return gate.predict_proba(records)
 
 
+def _train_external_gate(
+    train_records: list[ActionRecord],
+    feedback_records: list[ActionRecord],
+    feature_names: list[str],
+    *,
+    alpha: float,
+    budget_fraction: float,
+    epochs: int,
+) -> TrainedGate:
+    gate = train_gate_with_features(
+        train_records,
+        feedback_records,
+        feature_names=feature_names,
+        alpha=alpha,
+        epochs=epochs,
+        learning_rate=0.08,
+        l2=0.01,
+        min_coverage=budget_fraction,
+        balance_benchmarks=True,
+    )
+    probabilities = gate.predict_proba(feedback_records)
+    labels = [record.label for record in feedback_records]
+    groups = [str(record.metadata.get("task", record.benchmark)) for record in feedback_records]
+    calibration = threshold_for_grouped_selective_risk(
+        labels,
+        probabilities,
+        groups,
+        alpha=alpha,
+        min_coverage=budget_fraction,
+    )
+    gate.threshold = float(calibration["threshold"])
+    gate.calibration = {str(key): float(value) for key, value in calibration.items()}
+    return gate
+
+
 def _report(records: list[ActionRecord], gate: TrainedGate, budget_fraction: float) -> dict[str, Any]:
     probabilities = _predict(records, gate)
     labels = [record.label for record in records]
     budget = max(1, int(len(records) * budget_fraction))
     metrics = binary_metrics(labels, probabilities, gate.threshold)
     gain = discovery_gain(labels, [record.utility for record in records], probabilities, budget)
-    return {"metrics": metrics, "discovery_gain": gain, "threshold": gate.threshold, "n": len(records)}
+    by_task = {}
+    for task in sorted({str(record.metadata.get("task", record.benchmark)) for record in records}):
+        task_records = [record for record in records if str(record.metadata.get("task", record.benchmark)) == task]
+        task_probabilities = _predict(task_records, gate)
+        task_labels = [record.label for record in task_records]
+        task_budget = max(1, int(len(task_records) * budget_fraction))
+        by_task[task] = {
+            "metrics": binary_metrics(task_labels, task_probabilities, gate.threshold),
+            "discovery_gain": discovery_gain(task_labels, [record.utility for record in task_records], task_probabilities, task_budget),
+            "n": len(task_records),
+        }
+    if by_task:
+        macro_metrics = {
+            key: sum(float(item["metrics"].get(key, 0.0)) for item in by_task.values()) / len(by_task)
+            for key in ("coverage", "selective_risk", "ece", "brier", "aurc")
+        }
+        macro_gain = {
+            key: sum(float(item["discovery_gain"].get(key, 0.0)) for item in by_task.values()) / len(by_task)
+            for key in ("hit_efficiency", "utility_efficiency", "hit_rate", "mean_utility")
+        }
+    else:
+        macro_metrics, macro_gain = {}, {}
+    return {"metrics": metrics, "discovery_gain": gain, "macro_metrics": macro_metrics, "macro_discovery_gain": macro_gain, "by_task": by_task, "threshold": gate.threshold, "n": len(records)}
 
 
 def _stable_failure_patterns(records: list[ActionRecord], probabilities: list[float], threshold: float, min_group: int = 20) -> list[dict[str, Any]]:
@@ -237,8 +463,8 @@ def _stable_failure_patterns(records: list[ActionRecord], probabilities: list[fl
 
 
 def _score(report: dict[str, Any]) -> float:
-    metrics = report["metrics"]
-    gain = report["discovery_gain"]
+    metrics = report.get("macro_metrics", report["metrics"])
+    gain = report.get("macro_discovery_gain", report["discovery_gain"])
     return 0.35 * gain.get("utility_efficiency", 0.0) + 0.25 * gain.get("hit_efficiency", 0.0) + 0.20 * (1.0 - metrics.get("selective_risk", 1.0)) + 0.20 * (1.0 - metrics.get("brier", 1.0))
 
 

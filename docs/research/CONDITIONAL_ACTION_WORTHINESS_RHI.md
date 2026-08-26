@@ -23,6 +23,7 @@ PYTHONPATH=src python3 -m harness_matsci.conditional_action_rhi \
   --actions benchmarks/materials_action_trajectories_v1/actions.jsonl.gz \
   --out-dir runs/conditional_action_rhi_v6_seed_suite \
   --iterations 3 --epochs 120
+```
 
 For the confirmatory five-seed run:
 
@@ -31,7 +32,6 @@ PYTHONPATH=src python3 -m harness_matsci.conditional_action_rhi \
   --actions benchmarks/materials_action_trajectories_v1/actions.jsonl.gz \
   --out-dir runs/conditional_action_rhi_v6_seed_suite \
   --iterations 3 --epochs 60 --seeds 1,7,13,21,42
-```
 ```
 
 The benchmark contains 20,987 reconstructed action records from three task
@@ -64,3 +64,29 @@ benchmark-derived signals and trajectory split are not sufficient to support a
 strong runtime risk guarantee. The next required experiment is to add real
 task-stage trajectory variation and a policy that learns evidence value, then
 retest the same frozen acceptance protocol.
+
+## External action-level validation
+
+To test the signal contract with non-constant scientific features, we also ran
+five common folds from the repository's external benchmarks: H17 mixed-log-KVRH
+pairwise preference, H15 unique-material screening, and H14 extreme-phonon
+discovery. These records are action-level scientific decisions with train,
+feedback, acceptance, and test partitions; they are not complete multi-step
+MatBot trajectories.
+
+The task-balanced five-fold run is stored in
+`runs/conditional_action_rhi_external_five_fold_v4/summary.json`. The active
+mutation was reproducibly proposed and accepted in all five folds:
+
+- pairwise verification added `agent_prior_margin`, `agent_prior_uncertainty`,
+  `evidence_support`, and `perturbation_stability` as task-specific signals;
+- pooled selective risk was `0.5417`, coverage `0.9519`, and ECE `0.0994`;
+- the same-protocol static-full baseline had pooled selective risk `0.4457`,
+  coverage `0.7965`, and ECE `0.0733`;
+- mutation acceptance rate was `1.0`.
+
+Because the pooled risk remains high and static-full is stronger on this
+protocol, this result demonstrates that RHI mutations are executable and
+repeatable, not that the current mutation policy is superior. The test is an
+action-level validation of signal evolution, while the trajectory benchmark is
+used to audit the no-single-trajectory mutation rule.
