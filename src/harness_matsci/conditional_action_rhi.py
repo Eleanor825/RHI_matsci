@@ -45,6 +45,35 @@ STAGES = ("proposal", "verification", "commit")
 ROUTES = ("execute", "verify", "abstain")
 
 
+class TaskConditionalGate:
+    """A collection of task-specific ranking heads with a global fallback."""
+
+    def __init__(self, fallback: TrainedGate, task_gates: dict[str, TrainedGate]):
+        self.fallback = fallback
+        self.task_gates = task_gates
+        self.threshold = fallback.threshold
+        self.calibration = {"mode": "task_conditional", "n_task_heads": len(task_gates)}
+
+    def predict_proba(self, records: list[ActionRecord]) -> list[float]:
+        probabilities = [0.0] * len(records)
+        grouped: dict[str, list[int]] = defaultdict(list)
+        for index, record in enumerate(records):
+            grouped[str(record.metadata.get("task", record.benchmark))].append(index)
+        for task, indices in grouped.items():
+            gate = self.task_gates.get(task, self.fallback)
+            task_records = [records[index] for index in indices]
+            task_probabilities = gate.predict_proba(task_records)
+            for index, probability in zip(indices, task_probabilities):
+                probabilities[index] = probability
+        return probabilities
+
+
+def _top_budget_ids(records: list[ActionRecord], probabilities: list[float], budget_fraction: float) -> set[str]:
+    budget = max(1, min(len(records), math.ceil(len(records) * budget_fraction))) if records else 0
+    selected = sorted(range(len(records)), key=lambda index: (-probabilities[index], str(records[index].record_id)))[:budget]
+    return {str(records[index].record_id) for index in selected}
+
+
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:
     if path.suffix == ".gz":
         handle = gzip.open(path, "rt", encoding="utf-8")
@@ -210,16 +239,20 @@ def run_external_three_task_experiment(roots: dict[str, str | Path], *, fold: in
         for split in splits:
             splits[split].extend(loaded[split])
     active_signals = {"verbal_confidence", "cost", "reversibility"}
+    active_policy = "global_score"
     versions = []
     mutations = []
     accepted_rounds = [0]
     for round_index in range(iterations + 1):
         prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
         names = _feature_names(prepared["train"] + prepared["feedback"], active_signals)
-        gate = _train_external_gate(prepared["train"], prepared["feedback"], names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+        if active_policy == "task_conditional_score_heads":
+            gate = _train_task_conditional_gate(prepared["train"], prepared["feedback"], active_signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+        else:
+            gate = _train_external_gate(prepared["train"], prepared["feedback"], names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
         acceptance = _report(prepared["acceptance"], gate, budget_fraction)
         patterns = _stable_failure_patterns(prepared["feedback"], _predict(prepared["feedback"], gate), gate.threshold) if round_index < iterations else []
-        versions.append({"round": round_index, "signals": sorted(active_signals), "features": len(names), "acceptance": acceptance, "patterns": patterns})
+        versions.append({"round": round_index, "signals": sorted(active_signals), "policy": active_policy, "features": len(names), "acceptance": acceptance, "patterns": patterns})
         if not patterns:
             mutations.append({"round": round_index + 1, "added": [], "accepted": False, "reason": "no_stable_pattern"})
             continue
@@ -232,26 +265,40 @@ def run_external_three_task_experiment(roots: dict[str, str | Path], *, fold: in
             continue
         candidate_prepared = {name: add_policy_features(rows, candidate) for name, rows in splits.items()}
         candidate_names = _feature_names(candidate_prepared["train"] + candidate_prepared["feedback"], candidate)
-        candidate_gate = _train_external_gate(candidate_prepared["train"], candidate_prepared["feedback"], candidate_names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+        candidate_gate = _train_task_conditional_gate(
+            candidate_prepared["train"],
+            candidate_prepared["feedback"],
+            candidate,
+            alpha=alpha,
+            budget_fraction=budget_fraction,
+            epochs=epochs,
+        )
         candidate_acceptance = _report(candidate_prepared["acceptance"], candidate_gate, budget_fraction)
         predecessor_risk = float(acceptance["fixed_budget"]["risk"])
         candidate_risk = float(candidate_acceptance["fixed_budget"]["risk"])
+        predecessor_ids = _top_budget_ids(prepared["acceptance"], _predict(prepared["acceptance"], gate), budget_fraction)
+        candidate_ids = _top_budget_ids(candidate_prepared["acceptance"], _predict(candidate_prepared["acceptance"], candidate_gate), budget_fraction)
+        rank_overlap = len(predecessor_ids & candidate_ids) / max(1, len(predecessor_ids))
         risk_guard = candidate_risk <= predecessor_risk + 0.01
         if predecessor_risk <= alpha:
             risk_guard = risk_guard and candidate_risk <= alpha
         accepted = _score(candidate_acceptance) > _score(acceptance) + 1e-4 and risk_guard
-        mutations.append({"round": round_index + 1, "added": added, "accepted": accepted, "predecessor_score": _score(acceptance), "candidate_score": _score(candidate_acceptance), "predecessor_risk": predecessor_risk, "candidate_risk": candidate_risk, "risk_guard": risk_guard})
+        mutations.append({"round": round_index + 1, "added": added, "policy": "task_conditional_score_heads", "task_heads": sorted(candidate_gate.task_gates), "accepted": accepted, "predecessor_score": _score(acceptance), "candidate_score": _score(candidate_acceptance), "predecessor_risk": predecessor_risk, "candidate_risk": candidate_risk, "risk_guard": risk_guard, "top_budget_rank_overlap": rank_overlap, "top_budget_rank_displacement": 1.0 - rank_overlap})
         if accepted:
             active_signals = candidate
+            active_policy = "task_conditional_score_heads"
             accepted_rounds.append(round_index + 1)
     final_prepared = {name: add_policy_features(rows, active_signals) for name, rows in splits.items()}
     names = _feature_names(final_prepared["train"] + final_prepared["feedback"], active_signals)
-    final_gate = _train_external_gate(final_prepared["train"], final_prepared["feedback"], names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+    if active_policy == "task_conditional_score_heads":
+        final_gate = _train_task_conditional_gate(final_prepared["train"], final_prepared["feedback"], active_signals, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
+    else:
+        final_gate = _train_external_gate(final_prepared["train"], final_prepared["feedback"], names, alpha=alpha, budget_fraction=budget_fraction, epochs=epochs)
     final_test = _report(final_prepared["test"], final_gate, budget_fraction)
     per_task = {}
     for task in sorted({str(row.metadata["task"]) for row in final_prepared["test"]}):
         per_task[task] = _report([row for row in final_prepared["test"] if row.metadata["task"] == task], final_gate, budget_fraction)
-    return {"method": "Conditional Action-Worthiness RHI", "fold": fold, "task_counts": task_counts, "split_sizes": {name: len(rows) for name, rows in splits.items()}, "versions": versions, "mutations": mutations, "accepted_rounds": accepted_rounds, "final_signals": sorted(active_signals), "final_test": final_test, "final_test_by_task": per_task}
+    return {"method": "Conditional Action-Worthiness RHI", "fold": fold, "task_counts": task_counts, "split_sizes": {name: len(rows) for name, rows in splits.items()}, "versions": versions, "mutations": mutations, "accepted_rounds": accepted_rounds, "final_signals": sorted(active_signals), "final_policy": active_policy, "final_test": final_test, "final_test_by_task": per_task}
 
 
 def run_external_fold_suite(roots: dict[str, str | Path], *, folds: int = 5, iterations: int = 3, alpha: float = 0.10, budget_fraction: float = 0.10, epochs: int = 80) -> dict[str, Any]:
@@ -372,7 +419,7 @@ def _feature_names(records: list[ActionRecord], active_signals: set[str]) -> lis
     return sorted(names)
 
 
-def _predict(records: list[ActionRecord], gate: TrainedGate) -> list[float]:
+def _predict(records: list[ActionRecord], gate: TrainedGate | TaskConditionalGate) -> list[float]:
     return gate.predict_proba(records)
 
 
@@ -411,7 +458,47 @@ def _train_external_gate(
     return gate
 
 
-def _report(records: list[ActionRecord], gate: TrainedGate, budget_fraction: float) -> dict[str, Any]:
+def _train_task_conditional_gate(
+    train_records: list[ActionRecord],
+    feedback_records: list[ActionRecord],
+    active_signals: set[str],
+    *,
+    alpha: float,
+    budget_fraction: float,
+    epochs: int,
+) -> TaskConditionalGate:
+    fallback_names = _feature_names(train_records + feedback_records, active_signals)
+    fallback = _train_external_gate(
+        train_records,
+        feedback_records,
+        fallback_names,
+        alpha=alpha,
+        budget_fraction=budget_fraction,
+        epochs=epochs,
+    )
+    task_gates: dict[str, TrainedGate] = {}
+    tasks = sorted({str(record.metadata.get("task", record.benchmark)) for record in train_records + feedback_records})
+    for task in tasks:
+        task_train = [record for record in train_records if str(record.metadata.get("task", record.benchmark)) == task]
+        task_feedback = [record for record in feedback_records if str(record.metadata.get("task", record.benchmark)) == task]
+        if len(task_train) < 8 or len(task_feedback) < 8:
+            continue
+        names = _feature_names(task_train + task_feedback, active_signals)
+        task_gates[task] = train_gate_with_features(
+            task_train,
+            task_feedback,
+            feature_names=names,
+            alpha=alpha,
+            epochs=epochs,
+            learning_rate=0.08,
+            l2=0.01,
+            min_coverage=budget_fraction,
+            balance_benchmarks=False,
+        )
+    return TaskConditionalGate(fallback, task_gates)
+
+
+def _report(records: list[ActionRecord], gate: TrainedGate | TaskConditionalGate, budget_fraction: float) -> dict[str, Any]:
     probabilities = _predict(records, gate)
     labels = [record.label for record in records]
     budget = max(1, int(len(records) * budget_fraction))

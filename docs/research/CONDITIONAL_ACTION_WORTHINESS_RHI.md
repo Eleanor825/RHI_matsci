@@ -92,3 +92,34 @@ on this benchmark. The threshold-based risk remains high, and this result
 demonstrates executable, repeatable signal evolution rather than a performance
 win. The test is an action-level validation of signal evolution, while the
 trajectory benchmark is used to audit the no-single-trajectory mutation rule.
+
+## v7 task-conditional ranking-head experiment
+
+This follow-up implements a substantive harness mutation rather than only
+adding interaction features. After a mutation is accepted, the harness fits
+one score head per task (`pairwise`, `unique`, and `extreme`) and uses that
+head for ranking actions from the corresponding task; unseen or data-poor
+tasks use the pooled fallback head. Threshold calibration remains grouped by
+task and is fit only on feedback data. The mutation is accepted only when its
+acceptance-split score improves while respecting the predecessor risk guard.
+
+The confirmatory run uses the three reusable external datasets, common folds
+`0--4`, three RHI rounds, 80 training epochs, target risk `alpha=0.10`, and a
+fixed top-10% action budget. Results are in
+`runs/conditional_action_rhi_external_five_fold_v7/summary.json`; per-fold
+artifacts and the static baseline are in the same directory.
+
+| Method | Top-10% risk | Top-10% hit rate | Top-10% mean utility | Coverage | Accepted mutation rate |
+|---|---:|---:|---:|---:|---:|
+| Task-conditional RHI heads | 0.0112 ± 0.0076 | 0.9888 ± 0.0076 | 0.7456 ± 0.0237 | 0.1000 | 1.00 |
+| Static-full pooled head | 0.0034 | 0.9966 | not retained | 0.1000 | n/a |
+
+The accepted mutation changes the decision policy materially: mean top-budget
+rank displacement is `0.4966` (about half of selected actions are replaced
+relative to the predecessor). However, it does not yet improve held-out
+scientific utility on these external records: static-full has lower error and
+higher hit rate. Thus v7 validates that RHI can learn and deploy a genuinely
+task-conditioned ranking policy, but it is not a positive performance claim.
+The next decisive test is trajectory-level online evaluation where evidence
+collection changes later action states; the current external files are still
+action-level historical proxies.
